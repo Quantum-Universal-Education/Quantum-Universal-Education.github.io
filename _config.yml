@@ -27,7 +27,9 @@ repository: "the-legend-of-lia/the-legend-of-lia.github.io"
 minimal_mistakes_skin: dirt
 search: true
 logo: "/assets/images/FSQC-small.png"
-
+# Open Graph default image
+og_image: "/assets/images/FSQC-small.png"
+ 
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
@@ -92,9 +94,7 @@ footer:
       url: "https://instagram.com/"
 
 defaults:
-  # Open Graph default image
-    og_image: "/assets/images/FSQC-small.png"
-  # _posts
+ # _posts
   - scope:
       path: ""
       type: posts
