@@ -1,0 +1,13 @@
+# /_data/authors.yml
+
+Lia Yeh:
+  name: "Lia Yeh"
+  avatar: "assets/images/biopics/lia_yeh.jpeg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:lia@fullstackquantumcomputation.tech"
+
+Vincent Pisani:
+  name: "Vincent Pisani"
+  avatar: "/assets/images/bio-photo.jpg"
