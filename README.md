@@ -1,27 +1,14 @@
-# Minimal Mistakes remote theme starter
+  The ECL-2.0 license (boilerplate notice below) consists of the Apache 2.0 license, modified to be specific to the needs of the education communities using this license.  Therefore this site will abide by the Apache code of conduct at: http://apache.org/foundation/policies/conduct.html
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+  Copyright 2020 Lia Yeh Licensed under the
+  Educational Community License, Version 2.0 (the "License"); you may
+  not use this file except in compliance with the License. You may
+  obtain a copy of the License at
+  
+  http://www.osedu.org/licenses/ECL-2.0
 
-Contains basic configuration to get you a site with:
-
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
-
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
-
----
-
-## Troubleshooting
-
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
-
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an "AS IS"
+  BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+  or implied. See the License for the specific language governing
+  permissions and limitations under the License.
