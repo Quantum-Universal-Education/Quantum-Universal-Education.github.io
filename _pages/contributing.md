@@ -22,7 +22,8 @@ Limit one t-shirt per contributor.
 Logo and t-shirt design contest kicks off August 1.
 
 ## Contributors
-Vincent Pisani, University of California, Santa Barbara
+Lia Yeh, just finished undergrad at UC Santa Barbara
+Vincent Pisani, Undergraduate at UC Santa Barbara
 
 ## Reviewers
 
