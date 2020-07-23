@@ -23,6 +23,7 @@ Logo and t-shirt design contest kicks off August 1.
 
 ## Contributors
 Lia Yeh, just finished undergrad at UC Santa Barbara
+
 Vincent Pisani, Undergraduate at UC Santa Barbara
 
 ## Reviewers
