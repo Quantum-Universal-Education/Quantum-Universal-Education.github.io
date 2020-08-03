@@ -1,4 +1,6 @@
 main:
+  - title: "Design Contest"
+    url: /t-shirt-contest/
   - title: "Posts"
     url: /posts/
     #  - title: "Categories"
