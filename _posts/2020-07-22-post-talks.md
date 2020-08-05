@@ -1,5 +1,5 @@
 ---
-title: "Guide to free future and recorded conference, workshop, and school talks"
+title: "Guide to recorded conference, workshop, and school talks"
 categories:
   - Blog
 tags:
