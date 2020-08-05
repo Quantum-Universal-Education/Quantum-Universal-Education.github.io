@@ -1,5 +1,5 @@
 ---
-title: "Guide to recorded conference, workshop, and school talks"
+title: "Guide to free future and recorded conference, workshop, and school talks"
 categories:
   - Blog
 tags:
@@ -14,8 +14,12 @@ author: Lia Yeh
 Hello!  This is a guide to free recorded talks/papers/resources from recent conferences, workshops, and schools for which videos were recorded, from most to least recent.  It's certainly not an exhaustive list, but includes all the ones I can think of with online talks or lessons.  The quantum schools (aka bootcamps) here are accessible to students of the undergraduate level.  While the conference talks' intended audiences are researchers in the field, I think for undergrads, listening to the first few minutes of a talk can give quite a bit of insight.
 
 **2020 Qiskit Global Summer School**
-[[Website](https://qisk.it/globalsummerschool)]
-A free 2-week online summer school July 20-31 by IBM, introducing quantum computing preliminaries before focusing on superconducting devices and quantum chemistry applications.  It says no prerequisites are needed except knowing how to multiple two matrices and a bit of Python - you just have to be age 14 and up.  I think registration linked above for the lectures (which may be available after) is open until July 20, although I think registration has closed for the real-time online labs.  On the site it says it's &quot;based on premium training provided to our IBM Quantum interns&quot; - which, having been one of the interns, I can say I learned a lot :)
+[[Website](https://qiskit.org/events/summer-school/)]
+A free 2-week online summer school July 20-31 by IBM, introducing quantum computing preliminaries before focusing on superconducting devices and quantum chemistry applications.  It says no prerequisites are needed except knowing how to multiple two matrices and a bit of Python - you just have to be age 14 and up.  Should the summer school materials be made publicly available in the coming weeks, the link above will be updated).
+
+**International Conference on Signal Processing and Communications**
+[[Program](https://ece.iisc.ac.in/~spcom/2020/thematic_workshop.html)]
+Talk recordings of the Current Trends in Quantum Information Processing workshop will be at the link above soon.
 
 **STAQ Quantum Ideas Summer School**
 [[Curriculum](https://staq.pratt.duke.edu/summer-school)]
