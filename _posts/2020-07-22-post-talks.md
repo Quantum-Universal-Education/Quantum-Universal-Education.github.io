@@ -19,7 +19,7 @@ A free 2-week online summer school July 20-31 by IBM, introducing quantum comput
 
 **International Conference on Signal Processing and Communications**
 [[Program](https://ece.iisc.ac.in/~spcom/2020/thematic_workshop.html)]
-Talk recordings of the Current Trends in Quantum Information Processing workshop will be at the link above soon.
+Talk recordings of the Current Trends in Quantum Information Processing workshop are now available at the link above.
 
 **STAQ Quantum Ideas Summer School**
 [[Curriculum](https://staq.pratt.duke.edu/summer-school)]
