@@ -11,9 +11,7 @@ I want to...
 
 ![tshirt](/assets/images/t-shirt.png "t-shirt") [Review contributions and help make them accessible](https://forms.gle/EDaQ8VMx37qrxjQa7)
 
- $ [Join the site development team](mailto:lia@fullstackquantumcomputation.tech) ($15/hr while funds last)
-
-If you have an idea not exactly one of the options above, [email us](mailto:ideas@fullstackquantumcomputation.tech) - we would love to hear it!
+If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) - we would love to hear it!
 
 ![tshirt](/assets/images/t-shirt.png "t-shirt") This symbol means you get a free t-shirt shipped to you!
 

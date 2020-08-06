@@ -2,7 +2,7 @@
 
 Lia Yeh:
   name: "Lia Yeh"
-  avatar: "assets/images/biopics/lia_yeh.jpeg"
+  avatar: "assets/images/biopics/lia_y.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -10,4 +10,4 @@ Lia Yeh:
 
 Vincent Pisani:
   name: "Vincent Pisani"
-  avatar: "/assets/images/bio-photo.jpg"
+  avatar: "/assets/images/biopics/vincent_p.jpg"

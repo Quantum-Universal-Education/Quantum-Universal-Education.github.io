@@ -5,8 +5,12 @@ title: "About"
 
 The educational materials hosted on this website are under the <a href="https://opensource.org/licenses/ECL-2.0">Educational Community License, Version 2.0</a>; it is a modification of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> specific to the needs of the education communities using this license, and therefore abides by the <a href="https://www.apache.org/foundation/policies/conduct.html">Apache Code of Conduct</a>.
 
-This project was inspired and started from a <a href="https://www.ccs.ucsb.edu/courses/2020/spring/full-stack-quantum-computation">student-led seminar, Full-Stack Quantum Computation</a>, taught/run by Lia Yeh in the College of Creative Studies at the University of California, Santa Barbara in Spring 2020.  Lia is about to start a CS PhD researching in the Quantum Group at the University of Oxford.  She is very passionate about STEM education and outreach, and is the co-founder of <a href="https://www.womxnhacks.com">WomxnHacks</a>, an annual weekend-long hackathon for ~200 female-identifying and non-gender-conforming college students of all levels of programming experience especially none.
+You could say this project had three parts to its origin story:
 
-This project is funded by the <a href="https://unitary.fund">Unitary Fund</a>, a non-profit working to create a quantum technology ecosystem that benefits the most people.
+- an undergraduate student-led seminar taught/ran by Lia Yeh at the University of California, Santa Barbara in Spring 2020, <a href="https://www.ccs.ucsb.edu/courses/2020/spring/full-stack-quantum-computation">Full-Stack Quantum Computation</a>
+- a grant to build a community-driven open-source quantum education website from the <a href="https://unitary.fund">Unitary Fund</a>, a non-profit working to create a quantum technology ecosystem that benefits the most people
+- a quantum education channel and online meet-up at the 2020 Qiskit Global Summer School Discord server
 
-This website domain name is paid for by <a href="https://mlh.io">Major League Hacking</a> as a gift to their <a href="https://top.mlh.io/2020">2020 Top 50 Hackers</a>.
+We have a Discord server open to all people interested in quantum universal education (PIQUE).  In other words, we are an international online group of people passionate about community-driven open-source, universal quantum education!  We give you the warmest welcome at our join link https://discord.gg/NDm9e9W
+
+This website .tech domain name is thanks to <a href="https://mlh.io">Major League Hacking</a>'s gift to their <a href="https://top.mlh.io/2020">2020 Top 50 Hackers</a>.
