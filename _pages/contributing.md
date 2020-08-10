@@ -24,5 +24,7 @@ Lia Yeh, just finished undergrad at UC Santa Barbara
 
 Vincent Pisani, Undergraduate at UC Santa Barbara
 
+Yipeng Huang, Assistant Professor of Computer Science at Rutgers University
+
 ## Reviewers
 
