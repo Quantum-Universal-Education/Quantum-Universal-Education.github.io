@@ -19,3 +19,5 @@ author: Yipeng Huang
 
 On May 25, 2020, Professor Yipeng Huang from Rutgers University gave this guest lecture on variational algorithms, quantum noise, and quantum circuit simulation to a Full-Stack Quantum Computation undergraduate student-led seminar course at the University of California, Santa Barbara.
 
+He is sharing material on research in quantum computer engineering tools. These include simulators and debuggers for quantum algorithms, at https://yipenghuang.com/teaching/
+
