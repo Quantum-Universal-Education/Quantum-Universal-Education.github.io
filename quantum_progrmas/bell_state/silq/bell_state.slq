@@ -1,0 +1,20 @@
+def cnot(const x:B,y:B):B{ // generate the Cnot gate
+  if x{
+    y := X(y);
+  }
+  return y;
+}
+
+
+
+def main(){
+
+  x := false:B;
+  y := false:B;
+  x := H(x);
+  //y := H(y);
+  y := cnot(x,y);
+  return  measure(x,y);
+  
+  
+}
