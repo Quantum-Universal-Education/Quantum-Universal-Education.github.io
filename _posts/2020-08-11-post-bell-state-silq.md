@@ -69,7 +69,7 @@ sq.plot_hitogram()
 
 ```
 
-![png](/assets/quantum_programs/bell_state/cirq/Bell_state_cirq_files/Bell_state_cirq/Bell_state_cirq_5_0.png){: .center-image }
+![png](/assets/quantum_programs/bell_state/silq/Bell_state_silq_files/Bell_state_silq/Bell_state_silq_8_0.png){: .center-image }
 
 The previous silq code is in the file called bell_state.sql in the github repo
 
