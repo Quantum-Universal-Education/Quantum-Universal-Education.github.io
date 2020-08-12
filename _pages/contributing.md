@@ -26,5 +26,7 @@ Vincent Pisani, Undergraduate at UC Santa Barbara
 
 Yipeng Huang, Assistant Professor of Computer Science at Rutgers University
 
+Alberto Maldonado Romo, Master's student in computer science at the Center for Computing Research, IPN, Mexico
+
 ## Reviewers
 

@@ -1,5 +1,9 @@
 # /_data/authors.yml
 
+Alberto Maldonado Romo:
+  name: "Alberto Maldonado Romo"
+  avatar: "assets/images/biopics/alberto_r.png"
+
 Lia Yeh:
   name: "Lia Yeh"
   avatar: "assets/images/biopics/lia_y.jpeg"
