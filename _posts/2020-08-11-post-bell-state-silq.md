@@ -1,4 +1,4 @@
-----
+---
 title: Bell State in Silq
 categories:
   - Blog
