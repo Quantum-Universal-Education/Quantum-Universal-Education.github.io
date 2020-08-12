@@ -20,9 +20,9 @@ def init_variables(n=50,filename="bell_state.slq"):
 def counts():
 	return state_values
 
-def plot_hitogram():
+def plot_histogram():
 	plt.bar(state_values.keys(),state_values.values(), align='edge', width=-0.5)
-	plt.ylabel('Porcentage (%)')
+	plt.ylabel('Percentage (%)')
 	plt.xlabel('State values')
 	plt.title('Probability')
 	plt.show()
@@ -30,7 +30,7 @@ def plot_hitogram():
 
 #init_variables()
 #init_variables(n=5,filename="peres_gate.slq")
-#plot_hitogram()
+#plot_histogram()
 
 
 

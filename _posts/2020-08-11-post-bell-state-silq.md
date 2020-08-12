@@ -65,7 +65,7 @@ A Python file was generated in order to plot the results obtained from the code 
 import silq as sq
 
 sq.init_variables(n=50,filename="bell_state.sql")
-sq.plot_hitogram()
+sq.plot_histogram()
 
 ```
 
