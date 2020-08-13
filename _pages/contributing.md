@@ -3,6 +3,12 @@ permalink: /contributing/
 title: "Contributing"
 ---
 
+<div style="border: 0px solid black; width: 65vw">
+<img src="/assets/images/jayantis_qontributing_infographic.png"/>
+</div>
+<br>
+<br>
+
 I want to...
 
 &#9679; [Share an online learning resource to recommend](https://forms.gle/c1jaS3XEVXH3Savx6)
