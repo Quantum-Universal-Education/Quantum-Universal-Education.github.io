@@ -55,7 +55,7 @@ Jayanti Singh is an undergraduate student at Raksha Shakti University, Gandhinag
 Praveen J is a senior undergraduate at Indian Institute of Science, Bangalore pursuing a physics major. With interests varying from Quantum computing to quantum networks and cryptography, Praveen has explored and is exploring various aspects of Quantum computing and currently working in the field of entanglement assisted QECCs. In his free time he reads thrillers and writes poems. Praveen has organised various national level events at IISc, designed his college magazine and is extremely passionate about teaching science.
 </div>
 
-<div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both">
+<div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both" markdown="1">
 <img style="float: right; padding: 20px" src="/assets/images/biopics/vincent_p.png" width="250" height="250"/>
 
 Vincent Pisani is an undergraduate studying Computing in the College of Creative Studies at the University of California, Santa Barbara. They also have a strong passion for mathematics and have explored various areas including hyperbolic geometry and cellular automata. They have studied quantum computing through Lia's course as well as IBM's Qiskit Global Summer School in 2020 and hope to pursue it in future college courses. Their favorite quantum game is Quantum Game; check it out at [https://quantumgame.io](https://quantumgame.io/).
