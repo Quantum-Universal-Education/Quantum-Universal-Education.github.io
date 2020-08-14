@@ -2,7 +2,7 @@
 
   The ECL-2.0 license (boilerplate notice below) consists of the Apache 2.0 license, modified to be specific to the needs of the education communities using this license.  Therefore this site abides by the Apache code of conduct at: http://apache.org/foundation/policies/conduct.html
 
-  Copyright 2020 Lia Yeh Licensed under the
+  Copyright 2020 fullstackquantumcomputation.tech Licensed under the
   Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may
   obtain a copy of the License at
