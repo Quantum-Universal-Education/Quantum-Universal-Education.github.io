@@ -1,6 +1,6 @@
 ---
-permalink: /about-us/
-title: "About Us"
+permalink: /our-team/
+title: "Our Team"
 ---
 
 <div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both">
