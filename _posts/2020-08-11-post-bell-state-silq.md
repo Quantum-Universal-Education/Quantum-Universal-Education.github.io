@@ -18,6 +18,46 @@ Silq is a new high-level programming language for quantum computing with a stron
 # Installation
 The official link https://silq.ethz.ch/install has the comands to install in vscode or in linux/Mac Os distributions.
 
+# Introduction to Silq
+
+
+For this first example we must take into account the following properties of the silq language:
+
+
+### B type variables are Boolean variables.
+
+```python
+x := false:B; // variable boolean x with the value in False
+
+// x, means variable name
+// :=, means  assignment 
+// false, means value in false;
+// :B, indicates the type of false value
+```
+
+### Apply pre-defined functions
+
+
+```python
+x := H(x); // the Hadamard gate is applied to the boolean variable x and assigned to the same variable x
+
+// x, means variable name
+//H(booleam argument) // function that apply the Hadamard function on a boolean variable
+```
+
+### Generate a function
+
+```python
+def classicalExample(x:𝔹,f:𝔹->𝔹){ // generate a examle function that has a boolean variable x 
+                                    //and function f that  Boolean mapping to another Boolean
+  return f(x);              // return the function f
+}
+```
+
+To know more about the documentation  check the following link : https://silq.ethz.ch/documentation
+
+
+
 # Bell State
 
 The simplest example for quantum computation is to generate a Bell state from the controlled-not gate to or Cnot with a previous superposition of the qubit and control with the Hadamard gate.
@@ -28,19 +68,29 @@ The simplest example for quantum computation is to generate a Bell state from th
 
 The silq code to perform the previously mentioned state of bell is described.
 
+## Generate cnot function
+
+To generate the denied controlled gate it is necessary to indicate two boolean variables: x,y where x represents the control qubit and if it is true it denies the variable y.
+
+
+
 ```python
 // B means the boolean type 
 // const mens constant value in this case in the boolean variable x
 
-def cnot(const x:B,y:B):B{ // generate the function Cnot gate
+def cnot(const x:B,y:B):B{ //generate the function Cnot gate
   if x{  // if x is true  apply the sentence inside the {} 
     y := X(y);  // apply X gate in the boolean variable x
   }
   return y; // return the only 
 }
+```
 
+## Define main function
 
+We initialize the boolean variables x,y in false or zero state, to the variable x we apply the Hadamard gate, followed by the cnot function where x is the control qubit over the qubit y. Finally, we measure and return the values of the qubits (obtaining their classic values from the two qubits used in the program).
 
+```python
 def main(){ // main function
 
   x := false:B;    // A boolean (B type) variable x is initialized in false or zero state (|0>)
