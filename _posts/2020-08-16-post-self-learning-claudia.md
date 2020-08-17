@@ -1,4 +1,14 @@
-# A learning journey to Quantum Computing
+---
+title: A Learning Journey to Quantum Computing
+categories:
+  - Blog
+tags:
+  - MOOCs
+  - quantum computing 
+  - online courses
+  - online learning
+author: Claudia Zendejas-Morales
+---
 
 *Study what you like, there is no reason to stop, internet access gives us a lot of freedom for it.*
 
@@ -19,7 +29,7 @@ So, I searched for MOOCs to satisfy this growing curiosity, I found some and too
 * [The Quantum Internet and Quantum Computers: How Will They Change the World?](https://www.edx.org/course/the-quantum-internet-and-quantum-computers-how-w-2)
 * [Quantum Information Science I, Part 1](https://www.edx.org/course/quantum-information-science-i-part-1)
 
-My experience in these online courses was extremely interesting. Platforms such as *Coursea* or *edX* provide forums within each course, which allows you to have an approach with other people who have the same interest, at least because they are studying the same course as you, with whom you can debate and share ideas about the topics covered in the courses, and although this is the idea of these forums, it is not always the solution to clarify the doubts that arise, in that sense it is important to arm yourself with patience and do internet searches (thanks Google) to respond to our own doubts and fill in the gaps that we naturally have when we learn new things.
+My experience in these online courses was extremely interesting. Platforms such as *Coursera* or *edX* provide forums within each course, which allows you to have an approach with other people who have the same interest, at least because they are studying the same course as you, with whom you can debate and share ideas about the topics covered in the courses, and although this is the idea of these forums, it is not always the solution to clarify the doubts that arise, in that sense it is important to arm yourself with patience and do internet searches (thanks Google) to respond to our own doubts and fill in the gaps that we naturally have when we learn new things.
 
 A great way to keep aware of events on a topic that interests you is to search for groups on social networks, which allow people with similar interests to share information, and these people should not even be physically located in the same city or country. Thanks to one of these groups, I found out about a course on quantum computing that would be taught in my city, I could not believe it! And it was free! I applied as soon as possible, they gave me the pleasant news of being selected and that is how I spent my summer vacations on that occasion, learning even more. The intention of the teacher, the organizer of the course, was altruistic, to give a free course to as many people as possible, this caused the class to lose dynamism, but it did not matter, it was excellent to learn more and realize that there were more people interested in QC.
 
