@@ -288,5 +288,12 @@ Yipeng Huang, Assistant Professor of Computer Science at Rutgers University
 
 Alberto Maldonado Romo, Master's student in computer science at the Center for Computing Research, IPN, Mexico
 
+Claudia Zendejas-Morales
+
 ## Reviewers
 
+Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
+
+Hirmay Sandesara, Ahmedabad University
+
+Harshit Garg, CompSci 3rd year Undergrad at BITS Pilani India
