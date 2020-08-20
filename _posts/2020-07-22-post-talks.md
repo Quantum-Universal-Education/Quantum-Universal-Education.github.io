@@ -11,11 +11,15 @@ tags:
 author: Lia Yeh
 ---
 
-Hello!  This is a guide to free recorded talks/papers/resources from recent conferences, workshops, and schools for which videos were recorded, from most to least recent.  It's certainly not an exhaustive list, but includes all the ones I can think of with online talks or lessons.  The quantum schools (aka bootcamps) here are accessible to students of the undergraduate level.  While the conference talks' intended audiences are researchers in the field, I think for undergrads, listening to the first few minutes of a talk can give quite a bit of insight.
+Hello!  This is a guide to free recorded talks/papers/resources from recent conferences, workshops, and schools for which videos were recorded, from most to least recent.  It's certainly not an exhaustive list, but includes all the ones I can think of with online talks or lessons.  The quantum schools (aka bootcamps) here are accessible to students of the undergraduate level.  While the conference talks' intended audiences are researchers in the field, I think for undergrads, listening to the first few minutes of a talk can give quite a bit of insight.  All are welcome to add to this listing by pull requesting this post on our Github repo at [https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io/blob/master/_posts/2020-07-22-post-talks.md](https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io/blob/master/_posts/2020-07-22-post-talks.md).
+
+**QCrypt 2020**
+[[Website](https://2020.qcrypt.net/)]
+The biggest annual conference for quantum cryptography.  Talks from their 2020 conference and past years as well are on their [YouTube channel](https://www.youtube.com/channel/UClpn9CxuZPHw3nzhdv0m3Hw/playlists).
 
 **2020 Qiskit Global Summer School**
 [[Website](https://qiskit.org/events/summer-school/)]
-A free 2-week online summer school July 20-31 by IBM, introducing quantum computing preliminaries before focusing on superconducting devices and quantum chemistry applications.  It says no prerequisites are needed except knowing how to multiple two matrices and a bit of Python - you just have to be age 14 and up.  Should the summer school materials be made publicly available in the coming weeks, the link above will be updated).
+A free 2-week online summer school July 20-31 by IBM Q, introducing quantum computing preliminaries before focusing on superconducting devices and quantum chemistry applications.  It says no prerequisites are needed except knowing how to multiple two matrices and a bit of Python - you just have to be age 14 and up.  The summer school materials are available for its 4000+ participants to view, and Qiskit's YouTube channel (where you can view their [How to Get a Job in Quantum Computing Career Panel](https://www.youtube.com/watch?v=7dfw8k2p1to)) said to stay tuned about the Qiskit Global Summer School recordings becoming publicly available.
 
 **International Conference on Signal Processing and Communications**
 [[Program](https://ece.iisc.ac.in/~spcom/2020/thematic_workshop.html)]
