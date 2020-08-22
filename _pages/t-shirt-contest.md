@@ -17,7 +17,7 @@ Full rules:
 - The t-shirt design must have the text fullstackquantumcomputation.tech (can break that up into multiple lines) and be themed around quantum universal education.
 - All of the design must be either original or open-source art (aka no stealing art).
 - No limit on the number of submissions per person.
-- Upon winning, the winner will be notified via the email below, and admin team of fullstackquantumcomputation.tech have rights to use the design and make any modifications to it.
+- Upon winning, the winners will be notified via the email below, and admin team of fullstackquantumcomputation.tech have rights to use the design and make any modifications to it.
 
 The link below is the Google form for submissions.  Note that sign-in to a Google account is required to upload images of your designs to the Google form.
 
