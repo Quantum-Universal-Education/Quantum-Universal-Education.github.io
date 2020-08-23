@@ -275,11 +275,12 @@ If you have an idea not exactly one of the options above, suggest it via [our Di
 
 ![tshirt](/assets/images/t-shirt.png "t-shirt") This symbol means you get a free t-shirt shipped to you!
 
-Limit one t-shirt per contributor.
+Limit one t-shirt per contributor or curator.
 
-Logo and t-shirt design contest kicks off August 1.
+Logo and t-shirt design contest is throughout the month of August, anyone can submit and view details [here](https://fullstackquantumcomputation.tech/t-shirt-contest/)!
 
-## Contributors
+## Qontributors
+
 Lia Yeh, just finished undergrad at UC Santa Barbara
 
 Vincent Pisani, Undergraduate at UC Santa Barbara
@@ -288,5 +289,12 @@ Yipeng Huang, Assistant Professor of Computer Science at Rutgers University
 
 Alberto Maldonado Romo, Master's student in computer science at the Center for Computing Research, IPN, Mexico
 
-## Reviewers
+Claudia Zendejas-Morales
 
+## Qurators
+
+Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
+
+Hirmay Sandesara, Ahmedabad University
+
+Harshit Garg, CompSci 3rd year Undergrad at BITS Pilani India
