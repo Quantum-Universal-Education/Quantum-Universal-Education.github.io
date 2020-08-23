@@ -24,6 +24,7 @@ There are different frameworks or  programming languages or tools to perform qua
     <li>Cirq</li>
     <li>QDK</li>
     <li>Silq</li>
+    <li>Strawberry Fields</li>
 </ul>
 
 # Installation Guide
