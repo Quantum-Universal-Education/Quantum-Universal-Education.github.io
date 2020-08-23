@@ -1,5 +1,5 @@
 ---
-title: Bell State in Silq
+title: Tutorial Hello world
 categories:
   - Blog
 tags:
