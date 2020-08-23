@@ -335,12 +335,7 @@ import strawberryfields as sf
 from strawberryfields import ops
 ```
 
-There are different gates in this library to make quantum circuits such as Sgate and BSgate:
-
-<ul>
-    <li>Sgate is $S(z)=\exp \left(\frac{1}{2}\left(z^{*} a^{2}-z a^{\dagger^{2}}\right)\right)$<li>
-    <li>BSgate is $B(\theta, \phi)=\exp \left(\theta\left(e^{i \phi} a_{1} a_{2}^{\dagger}-e^{-i \phi} a_{1}^{\dagger} a_{2}\right)\right)$</li>
-</ul>
+There are different gates in this library to make quantum circuits such as Sgate and BSgate.
 
 For more information about the gates it uses you can find the following link https://strawberryfields.readthedocs.io/en/stable/introduction/ops.html
 
