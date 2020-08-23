@@ -1,3 +1,20 @@
+---
+title: Bell State in Silq
+categories:
+  - Blog
+tags:
+  - jupyter notebook
+  - Qiskit
+  - Cirq
+  - QDK
+  - Silq
+  - Strawberry Fields
+  - Hello, World!
+  - Python
+  - quantum programming
+author: Alberto Maldonado Romo
+---
+
 # Programming Languages
 
 There are different frameworks or  programming languages or tools to perform quantum algorithms, of these we will highlight four:
@@ -296,7 +313,7 @@ It is a new high-level language that is based on any program following the quant
 
 Silq is based on a mixture between c++ and python, where a main function must be defined and this must return the measurement of the qubits used in the program that was performed.
 
-To represent the state |0> is the value false and |1> is true for this example so you can initialize the qubit in false, also, the basic gates of the quantum computation already come predefined as it is the case of Hadamard's gate (which generates the overlap between the states |0> and |1>).
+To represent the state 0 is the value false and 1 is true for this example so you can initialize the qubit in false, also, the basic gates of the quantum computation already come predefined as it is the case of Hadamard's gate (which generates the superposition between the states 0 and 1).
 
 
 ":= " is the symbol that is represented to assign a value to a variable.
