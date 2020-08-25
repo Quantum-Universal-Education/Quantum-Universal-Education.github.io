@@ -1,5 +1,5 @@
 ---
-title: Tutorial Hello world
+title: Tutorial 0: Hello world
 categories:
   - Blog
 tags:
@@ -9,13 +9,13 @@ tags:
   - QDK
   - Silq
   - Strawberry Fields
-  - Hello, World!
+  - Hello World
   - Python
   - quantum programming
 author: Alberto Maldonado Romo
 ---
 
-# Programming Languages
+# Hello, Word! in 5 quantum enviroments
 
 There are different frameworks or  programming languages or tools to perform quantum algorithms, of these we will highlight four:
 
