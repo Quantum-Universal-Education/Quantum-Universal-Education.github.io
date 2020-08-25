@@ -1,20 +1,3 @@
----
-title: Tutorial 1: Bell State
-categories:
-  - Blog
-tags:
-  - jupyter notebook
-  - Qiskit
-  - Cirq
-  - QDK
-  - Silq
-  - Strawberry Fields
-  - Hello World
-  - Python
-  - quantum programming
-author: Alberto Maldonado Romo
----
-
 # Quantum Entanglement between Two Qubits
 
 
