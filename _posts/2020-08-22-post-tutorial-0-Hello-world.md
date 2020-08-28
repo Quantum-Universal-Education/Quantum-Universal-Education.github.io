@@ -1,3 +1,20 @@
+---
+title: "Tutorial 0: Hello, World! in quantum computing"
+categories:
+  - Blog
+tags:
+  - Qiskit
+  - Cirq
+  - QDK
+  - Q#
+  - Silq
+  - strawberry fields
+  - jupyter notebook
+  - quantum computing
+author: Alberto Maldonado Romo
+---
+
+
 # Hello, Word! in 5 quantum enviroments
 
 There are different frameworks or  programming languages or tools to perform quantum algorithms, of these we will highlight four:
