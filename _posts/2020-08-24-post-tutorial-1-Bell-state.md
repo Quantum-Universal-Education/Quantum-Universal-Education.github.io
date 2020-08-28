@@ -1,7 +1,7 @@
 # Quantum Entanglement between Two Qubits
 
 
-"The Bell state, $\left|x_{1} x_{2}\right\rangle=\frac{1}{\sqrt{2}}|00\rangle+\frac{1}{\sqrt{2}}|11\rangle$, is of particular interest: if we pick any of the two qubits to measure, we would obtain outcome j0i or j1i with equal probability; and the other qubit is guaranteed to be measured in the same state as the first. This “correlation” between the two qubits are called quantum entanglement. However, this is not to be confused with two correlated random bits each with equal probability of being observed |0> or |1> . 
+"The Bell state, ![formula](https://render.githubusercontent.com/render/math?math=|%20x_{1}%20x_{2}%20\rangle%20=%20=%20\frac{%201}%20{%20\sqrt{%202}}%20|%200%200%20\rangle%20+%20\frac{%201}%20{%20\sqrt{%202}}%20|%201%201%20\rangle), is of particular interest: if we pick any of the two qubits to measure, we would obtain outcome j0i or j1i with equal probability; and the other qubit is guaranteed to be measured in the same state as the first. This “correlation” between the two qubits are called quantum entanglement. However, this is not to be confused with two correlated random bits each with equal probability of being observed |0> or |1> . 
 Proof of the distinction is omitted for the sake of brevity; we refer the interested reader to
 the studies on “local hidden variables” theory, Bell’s inequality, and the CHSH
 game. In essence, the measurement of one qubit intrinsically alters and determines the
