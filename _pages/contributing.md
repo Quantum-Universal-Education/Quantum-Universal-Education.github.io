@@ -289,7 +289,7 @@ Yipeng Huang, Assistant Professor of Computer Science at Rutgers University
 
 Alberto Maldonado Romo, Master's student in computer science at the Center for Computing Research, IPN, Mexico
 
-Claudia Zendejas-Morales
+Claudia Zendejas-Morales, undergraduate at the National Autonomous University of Mexico
 
 Rodrigo Pires Ferreira, Undergraduate at the Aeronautics Institute of Technology
 
