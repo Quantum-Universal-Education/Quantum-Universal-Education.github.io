@@ -1,8 +1,3 @@
----
-permalink: /hardware/
-title: "Quantum Hardware"
----
-
 var hardware_strs = ["Trapped Ion", "Quantum Dot", "Superconducting", "Diamond NV and SiV", "Topological", "NMR", "Adiabatic"];
 var hardware_ext = [
 "jpg", //  src: https://en.wikipedia.org/wiki/File:Quantum_Computing;_Ion_Trapping_(5941055642).jpg | public domain
