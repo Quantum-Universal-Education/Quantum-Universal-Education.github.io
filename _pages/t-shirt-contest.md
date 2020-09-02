@@ -3,7 +3,9 @@ permalink: /t-shirt-contest/
 title: "T-shirt and Logo Design Contest"
 ---
 
-September 1 Update: There is a 24 hour grace period for late submissions or resubmissions currently ongoing.  At noon GMT on Wednesday, September 2, one week of public voting starts on a dedicated channel of our [public Discord server](https://discord.gg/NDm9e9W) --- how to vote will be posted both here and as an announcement on the server.  During that week, new submissions or updating existing submissions is allowed.
+One week of public voting for our new Discord server image, website logo, and t-shirt design is currently on a dedicated channel (#design-voting) of our [public Discord server](https://discord.gg/NDm9e9W).
+The shirts are a gift to our qontributors, qurators, and all who've submitted their beautiful designs!  Thank you for supporting this initiative and thank you to the [Unitary Fund](https://unitary.fund) nonprofit for funding!
+You can vote, change vote, submit, resubmit, and make suggestions until 11:59PM GMT on Wednesday, Sept 9.
 
 ![contestposter](/assets/images/TSHIRTLOGOPOSTER.png "contestposter")
 
