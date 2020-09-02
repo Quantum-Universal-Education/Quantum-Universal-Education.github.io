@@ -3,6 +3,8 @@ permalink: /t-shirt-contest/
 title: "T-shirt and Logo Design Contest"
 ---
 
+September 1 Update: There is a 24 hour grace period for late submissions or resubmissions currently ongoing.  At noon GMT on Wednesday, September 2, one week of public voting starts on a dedicated channel of our [public Discord server](https://discord.gg/NDm9e9W) --- how to vote will be posted both here and as an announcement on the server.  During that week, new submissions or updating existing submissions is allowed.
+
 ![contestposter](/assets/images/TSHIRTLOGOPOSTER.png "contestposter")
 
 Announcing our t-shirt and logo design contest!  Anyone can enter, so feel free to spread the word!
