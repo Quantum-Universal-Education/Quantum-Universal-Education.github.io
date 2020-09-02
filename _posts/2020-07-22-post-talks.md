@@ -11,12 +11,11 @@ tags:
 author: Lia Yeh
 ---
 
-Hello!  This is a guide to free recorded talks/papers/resources from recent conferences, workshops, and schools for which videos were recorded, from most to least recent.  It's certainly not an exhaustive list, but includes all the ones I can think of with online talks or lessons.  The quantum schools (aka bootcamps) here are accessible to students of the undergraduate level.  While the conference talks' intended audiences are researchers in the field, I think for undergrads, listening to the first few minutes of a talk can give quite a bit of insight.  All are welcome to add to this listing by pull requesting this post on our Github repo at [https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io/blob/master/_posts/2020-07-22-post-talks.md](https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io/blob/master/_posts/2020-07-22-post-talks.md).
+Hello!  This is a guide to free recorded talks/papers/resources from recent conferences, workshops, and schools for which videos were recorded, from most to least recent.  It's certainly not an exhaustive list, but includes all the ones I can think of with publicly viewable online talks, workshops, or papers.  The quantum schools (aka bootcamps) here are accessible to students of the undergraduate level.  While the conference talks' intended audiences are researchers in the field, regardless of experience, I think listening to the first few minutes of a talk can give quite a bit of insight.  All are welcome to add to this listing by pull requesting this post on our Github repo at [https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io/blob/master/_posts/2020-07-22-post-talks.md](https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io/blob/master/_posts/2020-07-22-post-talks.md).
 
 **OSA Quantum 2.0 Conference**
 [[Website](https://www.osa.org/en-us/meetings/topical_meetings/quantum/)]
 This is a fully online conference, Sept 14-17, free for anyone to register.  It is co-located with the OSA Frontiers in Optics + Laser Science APS/DLS Conference.
-
 
 **QCrypt 2020**
 [[Website](https://2020.qcrypt.net/)]
