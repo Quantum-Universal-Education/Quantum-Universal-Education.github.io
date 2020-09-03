@@ -4,6 +4,10 @@ Alberto Maldonado Romo:
   name: "Alberto Maldonado Romo"
   avatar: "assets/images/biopics/alberto_r.png"
 
+Bavithra Govintharajah:
+  name: "Bavithra Govintharajah"
+  avatar: "assets/images/biopics/bavithra_g.jpg"
+
 Claudia Zendejas-Morales:
   name: "Claudia Zendejas-Morales"
   avatar: "assets/images/biopics/claudia_z.jpg"
@@ -20,9 +24,13 @@ Rodrigo Pires Ferreira:
   name: "Rodrigo Pires Ferreira"
   avatar: "assets/images/biopics/rodrigo_f.jpg"
 
+Samanvay Sharma:
+  name: "Samanvay Sharma"
+  avatar: "assets/images/biopics/samanvay_s.jpg"
+
 Vincent Pisani:
   name: "Vincent Pisani"
-  avatar: "/assets/images/biopics/vincent_p.jpg"
+  avatar: "/assets/images/biopics/vincent_p.png"
 
 Yipeng Huang:
   name: "Yipeng Huang"
