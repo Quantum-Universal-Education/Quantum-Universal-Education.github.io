@@ -18,10 +18,15 @@ tags:
   - India
   - What is grad school?
   - Our application timelines
-  - Reaching out: Rec letters and PIs
-  - Application essays: SoP, diversity, proposals
+  - Reaching out
+  - cold email
+  - Rec letters and PIs
+  - Application essays
+  - Statement of Purpose
+  - diversity essay
+  - research proposal
   - Funding and fellowships
-  - Being prepared for: Interviews and testing
+  - Interviews and testing
   - Applying internationally
   - Q & A 
 author:
