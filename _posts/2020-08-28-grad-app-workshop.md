@@ -16,7 +16,14 @@ tags:
   - Germany
   - Japan
   - India
-  - 
+  - What is grad school?
+  - Our application timelines
+  - Reaching out: Rec letters and PIs
+  - Application essays: SoP, diversity, proposals
+  - Funding and fellowships
+  - Being prepared for: Interviews and testing
+  - Applying internationally
+  - Q & A 
 author:
  - Alberto Maldonado Romo
  - Bavithra Govintharajah
