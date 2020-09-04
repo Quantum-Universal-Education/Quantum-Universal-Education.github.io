@@ -293,6 +293,10 @@ Claudia Zendejas-Morales, undergraduate at the National Autonomous University of
 
 Rodrigo Pires Ferreira, Undergraduate at the Aeronautics Institute of Technology
 
+Bavithra Govintharajah, Graduate student at RWTH Aachen, Germany
+
+Samanvay Sharma, grad student at Keio University
+
 ## Qurators
 
 Sanskruti Wathare, CSE undergrad student
