@@ -265,13 +265,13 @@ title: "Contributing"
 
 I want to...
 
-&#9679; [Share an online learning resource to recommend](https://forms.gle/c1jaS3XEVXH3Savx6)
+&#9679; Share an online learning resource to recommend by submitting a pull request on the [Github repo](https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io)
 
-![tshirt](/assets/images/t-shirt.png "t-shirt") [Contribute a new or newly open-source learning resource](https://forms.gle/oGJQP6mkaK3uqpFy5)
+![tshirt](/assets/images/t-shirt.png "t-shirt") [Contribute a new or newly open-source learning resource](https://quantumuniversaled.typeform.com/to/TYDeLwCr)
 
-![tshirt](/assets/images/t-shirt.png "t-shirt") [Review contributions and help make them accessible](https://forms.gle/EDaQ8VMx37qrxjQa7)
+![tshirt](/assets/images/t-shirt.png "t-shirt") [Review contributions and help make them accessible](https://quantumuniversaled.typeform.com/to/TYDeLwCr)
 
-If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) - we would love to hear it!
+If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) after accepting the code of conduct in the &#35;improve-discord-or-site channel - we would love to hear it!
 
 ![tshirt](/assets/images/t-shirt.png "t-shirt") This symbol means you get a free t-shirt shipped to you!
 
