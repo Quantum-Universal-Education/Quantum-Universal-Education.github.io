@@ -271,7 +271,7 @@ I want to...
 
 ![tshirt](/assets/images/t-shirt.png "t-shirt") [Review contributions and help make them accessible](https://quantumuniversaled.typeform.com/to/TYDeLwCr)
 
-If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) after accepting the code of conduct in the &#35;improve-discord-or-site channel - we would love to hear it!
+If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!
 
 ![tshirt](/assets/images/t-shirt.png "t-shirt") This symbol means you get a free t-shirt shipped to you!
 
