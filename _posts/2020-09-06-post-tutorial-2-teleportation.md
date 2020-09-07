@@ -9,7 +9,7 @@ Synthesis Lectures on Computer Architecture)*".
 
 
 
-![quantum_teleportation.png](Images/quantum_teleportation.png)
+![quantum_teleportation.png](/assets/quantum_programs/2_quantum_teleportation/quantum_teleportation.png)
 
 # Qiskit Program
 The qiskit program is generated to pass the information from one qubit to another
