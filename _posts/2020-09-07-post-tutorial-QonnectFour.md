@@ -12,14 +12,13 @@ author:
  - Praveen J
 ---
 
-# Qonnect four - Making a quantum game for the first time  
 This post will elaborate on my thought process/journey and resources used for creating the Quantum game Qonnect four with Qiskit, which also is the first ever game I’ve made. This post is written with an aim of giving a beginner perspective. By reading this, you:  
 1) Get an idea of the issues faced and how I tackled them.  
 2) Will know the nuances of making a quantum game in an interactive ipython notebook.  
 3) Will know the code structuring, learn from my mistakes.  
 4) Should be able to make your own first simple quantum game.  
 
-The game can be found at https://github.com/Praveen91299/QonnectFour  
+The game can be found at [https://github.com/Praveen91299/QonnectFour](https://github.com/Praveen91299/QonnectFour)  
 
 ## Introduction:  
 ### Why make a quantum game?  
@@ -665,9 +664,9 @@ The entire code can be found in the github repository shared. Only parts of the 
 All the very best!
 
 ### References and links  
-1) My code: https://github.com/Praveen91299/QonnectFour  
-2) Quantum Dojo: https://github.com/amirebrahimi/quantumdojo  
-3) List of Quantum games: https://github.com/HuangJunye/Awesome-Quantum-Games  
-4) Creating a Conda environment: https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/  
-5) Conda documentation: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html  
-6) Network game tutorials by Tech with Tim: https://github.com/techwithtim/Network-Game-Tutorial  
+1) My code: [https://github.com/Praveen91299/QonnectFour](https://github.com/Praveen91299/QonnectFour)  
+2) Quantum Dojo: [https://github.com/amirebrahimi/quantumdojo](https://github.com/amirebrahimi/quantumdojo)  
+3) List of Quantum games: [https://github.com/HuangJunye/Awesome-Quantum-Games](https://github.com/HuangJunye/Awesome-Quantum-Games)  
+4) Creating a Conda environment: [https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)  
+5) Conda documentation: [https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)  
+6) Network game tutorials by Tech with Tim: [https://github.com/techwithtim/Network-Game-Tutorial](https://github.com/techwithtim/Network-Game-Tutorial)  
