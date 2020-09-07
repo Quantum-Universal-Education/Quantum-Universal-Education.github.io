@@ -46,7 +46,7 @@ Below is the workshop poster:
 
 <img src="/assets/images/grad_app_workshop/grad_app_workshop_flyer.png" alt="flyer for workshop on applying to graduate programs internationally by People Interested in Quantum Universal Education">
 
-The info, links, and guide mentioned in and accompanying this workshop are publicly viewable on this site linked below.  For anyone who thought of questions after or are watching from YouTube, we will try our best to answer all questions in the {% raw %}#{% raw %}ask-anything channel of our Discord server with join link [https://discord.gg/NDm9e9W](https://discord.gg/NDm9e9W).  Best of luck to all applying!
+The info, links, and guide mentioned in and accompanying this workshop are publicly viewable on this site linked below.  For anyone who thought of questions after or are watching from YouTube, we will try our best to answer all questions in the {% raw %}#{% endraw %}ask-anything channel of our Discord server with join link [https://discord.gg/NDm9e9W](https://discord.gg/NDm9e9W).  Best of luck to all applying!
 
 We would greatly appreciate if anyone who attended or later watched this recording to fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSdDFfOKnYxj7eGETu0RQIzP1GjJ__NahVQG8IgCmSTFchCXFQ/viewform?usp=sf_link) made by our admin Jayanti, as part of QCery, a project to survey people's exposure and understanding of quantum computing; also as we are open to suggestions/feedback and what future events you are interested in.
 
