@@ -37,7 +37,7 @@ The simplest example for quantum computation is to generate a Bell state from th
 ![bell_state.png](/assets/quantum_programs/1_bell_state/bell_state.png)
 
 # Qiskit Program
-The cirq code to perform the previously mentioned state of bell is described.
+The qiskit code to perform the previously mentioned state of bell is described.
 
 
 ```python
