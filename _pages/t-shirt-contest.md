@@ -3,10 +3,10 @@ permalink: /t-shirt-contest/
 title: "T-shirt and Logo Design Contest"
 ---
 
-One week of public voting for our new Discord server image, website logo, and t-shirt design is currently on a dedicated channel (#design-voting) of our [public Discord server](https://discord.gg/NDm9e9W).
+Congratulations to Hemant Chaurasia, the artist of the design in the first row below, second from the left, which received the most votes in public voting!  After a week or two for modifications, we'll unveil the official t-shirt with Hemant's design, a new Discord server image, website logo and 404 page, and social media banners!
+
 The shirts are a gift to our qontributors, qurators, and all who've submitted their beautiful designs!  Thank you for supporting this initiative and thank you to the [Unitary Fund](https://unitary.fund) nonprofit for funding!
-You can vote, change vote, submit, resubmit, and make suggestions until 11:59PM GMT on Wednesday, Sept 9.
-The designs are below for your viewing pleasure.  For how to submit, scroll further.
+The submitted designs are below for your viewing pleasure.
 
 <div style="width: 65vw">
 <div class="row">
@@ -34,6 +34,8 @@ The designs are below for your viewing pleasure.  For how to submit, scroll furt
 </div>
 </div>
 <br>
+
+### Design Contest Rules
 
 ![contestposter](/assets/images/TSHIRTLOGOPOSTER.png "contestposter")
 
