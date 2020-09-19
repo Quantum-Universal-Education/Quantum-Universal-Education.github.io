@@ -265,13 +265,13 @@ title: "Contributing"
 
 I want to...
 
-&#9679; [Share an online learning resource to recommend](https://forms.gle/c1jaS3XEVXH3Savx6)
+&#9679; Share an online learning resource to recommend by submitting a pull request on the [Github repo](https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io)
 
-![tshirt](/assets/images/t-shirt.png "t-shirt") [Contribute a new or newly open-source learning resource](https://forms.gle/oGJQP6mkaK3uqpFy5)
+![tshirt](/assets/images/t-shirt.png "t-shirt") [Contribute a new or newly open-source learning resource](https://quantumuniversaled.typeform.com/to/TYDeLwCr)
 
-![tshirt](/assets/images/t-shirt.png "t-shirt") [Review contributions and help make them accessible](https://forms.gle/EDaQ8VMx37qrxjQa7)
+![tshirt](/assets/images/t-shirt.png "t-shirt") [Review contributions and help make them accessible](https://quantumuniversaled.typeform.com/to/TYDeLwCr)
 
-If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) - we would love to hear it!
+If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!
 
 ![tshirt](/assets/images/t-shirt.png "t-shirt") This symbol means you get a free t-shirt shipped to you!
 
@@ -289,15 +289,20 @@ Yipeng Huang, Assistant Professor of Computer Science at Rutgers University
 
 Alberto Maldonado Romo, Master's student in computer science at the Center for Computing Research, IPN, Mexico
 
-Claudia Zendejas-Morales
+Claudia Zendejas-Morales, undergraduate at the National Autonomous University of Mexico
 
 Rodrigo Pires Ferreira, Undergraduate at the Aeronautics Institute of Technology
 
+Bavithra Govintharajah, Graduate student at RWTH Aachen, Germany
+
+Samanvay Sharma, grad student at Keio University
+
 ## Qurators
+
+Sanskruti Wathare, CSE undergrad student
 
 Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
 
 Hirmay Sandesara, Ahmedabad University
 
 Harshit Garg, CompSci 3rd year Undergrad at BITS Pilani India
-
