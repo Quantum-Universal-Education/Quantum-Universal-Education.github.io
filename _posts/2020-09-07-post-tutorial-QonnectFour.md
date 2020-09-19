@@ -10,6 +10,8 @@ tags:
   - Quantum game
 author:
  - Praveen J
+ - Curate Section
+ - Harshit Garg Q
 ---
 
 This post will elaborate on my thought process/journey and resources used for creating the Quantum game Qonnect four with Qiskit, which also is the first ever game I’ve made. This post is written with an aim of giving a beginner perspective. By reading this, you:  
