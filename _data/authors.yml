@@ -20,6 +20,9 @@ Lia Yeh:
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:lia@fullstackquantumcomputation.tech"
 
+Lia Yeh Q:
+  name: "lia Yeh"
+
 Rodrigo Pires Ferreira:
   name: "Rodrigo Pires Ferreira"
   avatar: "assets/images/biopics/rodrigo_f.jpg"
@@ -36,6 +39,22 @@ Yipeng Huang:
   name: "Yipeng Huang"
   avatar: "/assets/images/biopics/yipeng_h.jpg"
 
+Sanskruti Wathare Q:
+  name: "Sanskruti Wathare"
+
+Praveen J Q:
+  name: "Praveen J"
+
+Hirmay Sandesara Q:
+  name: "Hirmay Sandesara"
+
+Harshit Garg Q:
+  name: "Harshit Garg"
+
 Praveen J:
   name: "Praveen J"
   avatar: "/assets/images/biopics/praveen_j.jpg"
+
+Curate Section:
+  name: "Curated By:"
+

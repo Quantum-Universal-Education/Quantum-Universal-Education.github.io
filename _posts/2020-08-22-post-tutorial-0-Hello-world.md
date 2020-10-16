@@ -12,7 +12,10 @@ tags:
   - jupyter notebook
   - quantum computing
   - Hello, World!
-author: Alberto Maldonado Romo
+author: 
+  - Alberto Maldonado Romo
+  - Curate Section
+  - Harshit Garg Q
 ---
 
 
