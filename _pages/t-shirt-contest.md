@@ -3,7 +3,7 @@ permalink: /t-shirt-contest/
 title: "T-shirt and Logo Design Contest"
 ---
 
-Congratulations to Hemant Chaurasia, the artist of the design in the first row below, second from the left, which received the most votes in public voting!  After a week or two for modifications, we'll unveil the official t-shirt with Hemant's design, a new Discord server image, website logo and 404 page, and social media banners!
+Congratulations to Hemant Chaurasia, the artist of the design in the first row below, second from the left, which received the most votes in public voting!  The design is now being touched up by a professional t-shirt graphic designer.  We can't wait to unveil the official t-shirt design, website logo and 404 page, and social media banners!
 
 The shirts are a gift to our qontributors, qurators, and all who've submitted their beautiful designs!  Thank you for supporting this initiative and thank you to the [Unitary Fund](https://unitary.fund) nonprofit for funding!
 The submitted designs are below for your viewing pleasure.

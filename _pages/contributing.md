@@ -273,15 +273,11 @@ I want to...
 
 If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!
 
-![tshirt](/assets/images/t-shirt.png "t-shirt") This symbol means you get a free t-shirt shipped to you!
-
-Limit one t-shirt per contributor or curator.
-
-Logo and t-shirt design contest is throughout the month of August, anyone can submit and view details [here](https://fullstackquantumcomputation.tech/t-shirt-contest/)!
+![tshirt](/assets/images/t-shirt.png "t-shirt") This symbol means you get a free t-shirt shipped to you!  Limit one t-shirt per contributor or curator.  Logo and t-shirt design contest was throughout the month of August and the final design is now being touched up by a professional t-shirt graphic designer; you can view details [here](https://fullstackquantumcomputation.tech/t-shirt-contest/)!
 
 ## Qontributors
 
-Lia Yeh, just finished undergrad at UC Santa Barbara
+Lia Yeh, PhD student in computer science at the University of Oxford
 
 Vincent Pisani, Undergraduate at UC Santa Barbara
 
@@ -297,6 +293,8 @@ Bavithra Govintharajah, Graduate student at RWTH Aachen, Germany
 
 Samanvay Sharma, grad student at Keio University
 
+Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
+
 ## Qurators
 
 Sanskruti Wathare, CSE undergrad student
@@ -306,3 +304,5 @@ Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
 Hirmay Sandesara, Ahmedabad University
 
 Harshit Garg, CompSci 3rd year Undergrad at BITS Pilani India
+
+Lia Yeh, PhD student in computer science at the University of Oxford
