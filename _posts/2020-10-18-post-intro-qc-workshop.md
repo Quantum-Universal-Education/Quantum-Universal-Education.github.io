@@ -1,5 +1,5 @@
 ---
-title: "Intro to Quantum Computing at Clemson University's Freshman Hackathon"
+title: "Intro to Quantum Computing at CUhackit"
 categories:
   - Blog
 tags:
