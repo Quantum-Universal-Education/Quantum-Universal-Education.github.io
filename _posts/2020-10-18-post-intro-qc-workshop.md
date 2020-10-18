@@ -18,7 +18,7 @@ tags:
 author:
   - Alberto Maldonado Romo
   - Lia Yeh
-  - Sansriti
+  - Sansriti Ranjan
 ---
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9XAZUlAu2dA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

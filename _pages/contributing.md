@@ -295,6 +295,8 @@ Samanvay Sharma, grad student at Keio University
 
 Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
 
+Sanskriti Ranjan, Computer Engineering student at Clemson University
+
 ## Qurators
 
 Sanskruti Wathare, CSE undergrad student
