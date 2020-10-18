@@ -1,5 +1,5 @@
 ---
-title: "Intro to Quantum Computing prerecorded workshop at Clemson University's Freshman Hackathon"
+title: "Intro to Quantum Computing at Clemson University's Freshman Hackathon"
 categories:
   - Blog
 tags:
@@ -23,7 +23,7 @@ author:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9XAZUlAu2dA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This introduction to quantum computing workshop video was made for [Clemson University's freshman hackathon](https://cuhack.it/)!  They uploaded the video to their YouTube channel [here](https://www.youtube.com/channel/UCSlPyiZ6-yyOWh4GKVetrWg).
+This introduction to quantum computing workshop video was made for [Clemson University's freshman hackathon](https://cuhack.it/)!  They uploaded the video to their YouTube [here](https://www.youtube.com/watch?v=YPp4HwqjHAw&t=1536s).
 
 It teaches the topics of:
   - what is quantum computing
