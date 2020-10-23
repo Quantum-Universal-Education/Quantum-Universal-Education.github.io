@@ -22,11 +22,14 @@ author:
   - Praveen J Q
   - Lia Yeh Q
 ---
+<br>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rVve--2Y7aI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
 <br>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BkHD0hsVZEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br>
+<br>
 Speakers: Sagnik Banerjee and Rahul Saha
 
 Title: Commonly implemented two qubit gates for superconducting qubits
@@ -37,7 +40,7 @@ Among all quantum information processing architectures available, superconductin
 
 Although this talk is intended to those having some basic knowledge of superconducting qubits and their associated physics, it can be a nice exposure even to perfect newbies in this domain. However, some idea of Quantum Mechanics is essentially required to grasp the rich physics of this field. Nevertheless, we hope that our contribution will serve as a good resource to understanding some commonly implemented two qubit gates :)
 
-
+<br>
 Connect with the speakers:
 
 Sagnik Banerjee:
@@ -46,13 +49,14 @@ Linkedin ID: [https://www.linkedin.com/in/sagnik-banerjee-66300517b/](https://ww
 
 email: sagnik.banerjee01@gmail.com
 
+<br>
 Rahul Saha:
 
 Linkedin ID: [https://www.linkedin.com/in/rahul-saha-7a26251a3/](https://www.linkedin.com/in/rahul-saha-7a26251a3/)
 
 email: rahulsaha.juetce@gmail.com
 
-
+<br>
 Refresh your memory and get comfortable before we start:
 
 1. Introduction To Transmon Qubits and Its Relating Physics: [https://www.youtube.com/playlist?list=PLOFEBzvs-VvrXTMy5Y2IqmSaUjfnhvBHR](https://www.youtube.com/playlist?list=PLOFEBzvs-VvrXTMy5Y2IqmSaUjfnhvBHR) [Video: 17-19]
@@ -66,6 +70,7 @@ Refresh your memory and get comfortable before we start:
    [https://ocw.mit.edu/ans7870/18/18.013a/textbook/HTML/chapter16/section03.html](https://ocw.mit.edu/ans7870/18/18.013a/textbook/HTML/chapter16/section03.html)
 5. Introduction To Linear Algebra: [https://qiskit.org/textbook/ch-appendix/linear_algebra.html](https://qiskit.org/textbook/ch-appendix/linear_algebra.html)
 
+<br>
 References
 1. A Quantum Engineer's Guide to Superconducting Qubits
 
