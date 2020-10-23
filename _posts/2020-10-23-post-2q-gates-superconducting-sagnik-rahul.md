@@ -30,6 +30,11 @@ author:
 
 <br>
 <br>
+
+Slides: [https://docs.google.com/presentation/d/1xMrhTVtNR0XF4UFR98x7VzrsEe0B7TZyvq8Oh5STYcw/edit?usp=sharing](https://docs.google.com/presentation/d/1xMrhTVtNR0XF4UFR98x7VzrsEe0B7TZyvq8Oh5STYcw/edit?usp=sharing)
+
+These slides are shared publicly.  They have been revised from the slides in the video to be utilizable as a stand-alone resource.
+
 Speakers: Sagnik Banerjee and Rahul Saha
 
 Title: Commonly implemented two qubit gates for superconducting qubits
