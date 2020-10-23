@@ -20,12 +20,21 @@ Lia Yeh:
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:lia@fullstackquantumcomputation.tech"
 
-Lia Yeh Q:
-  name: "Lia Yeh"
+Praveen J:
+  name: "Praveen J"
+  avatar: "/assets/images/biopics/praveen_j.jpg"
+
+Rahul Saha:
+  name: "Rahul Saha"
+  avatar: "assets/images/biopics/rahul_s.jpg"
 
 Rodrigo Pires Ferreira:
   name: "Rodrigo Pires Ferreira"
   avatar: "assets/images/biopics/rodrigo_f.jpg"
+
+Sagnik Banerjee:
+  name: "Sagnik Banerjee"
+  avatar: "assets/images/biopics/sagnik_b.jpg"
 
 Samanvay Sharma:
   name: "Samanvay Sharma"
@@ -43,22 +52,21 @@ Yipeng Huang:
   name: "Yipeng Huang"
   avatar: "/assets/images/biopics/yipeng_h.jpg"
 
-Sanskruti Wathare Q:
-  name: "Sanskruti Wathare"
-
-Praveen J Q:
-  name: "Praveen J"
-
-Hirmay Sandesara Q:
-  name: "Hirmay Sandesara"
+Curate Section:
+  name: "Curated By:"
 
 Harshit Garg Q:
   name: "Harshit Garg"
 
-Praveen J:
-  name: "Praveen J"
-  avatar: "/assets/images/biopics/praveen_j.jpg"
+Hirmay Q:
+  name: "Hirmay"
 
-Curate Section:
-  name: "Curated By:"
+Lia Yeh Q:
+  name: "Lia Yeh"
+
+Praveen J Q:
+  name: "Praveen J"
+
+Sanskruti Wathare Q:
+  name: "Sanskruti Wathare"
 
