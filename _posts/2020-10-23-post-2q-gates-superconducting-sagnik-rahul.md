@@ -18,7 +18,7 @@ author:
   - Sagnik Banerjee
   - Rahul Saha
   - Curate Section
-  - Hirmay Q
+  - Hirmay Sandesara Q
   - Praveen J Q
   - Lia Yeh Q
 ---

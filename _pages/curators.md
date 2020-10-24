@@ -46,7 +46,7 @@ title: "Curators"
 
 <div style="width: 50vw; padding: 20px; margin: 10px; clear: both">
 <img style="float: right; padding: 20px" src="/assets/images/biopics/hirmay_s.JPG" width="250" height="250"/>
-<h1>Hirmay</h1>
+<h1>Hirmay Sandesara</h1>
 <ul>
     <li><a href="/blog/post-2q-gates-superconducting-sagnik-rahul">Commonly implemented two qubit gates for superconducting qubits</a></li>
 </ul>
