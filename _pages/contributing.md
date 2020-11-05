@@ -297,6 +297,16 @@ Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
 
 Sanskriti Ranjan, Computer Engineering student at Clemson University
 
+Rana Prathap, Math and Computing major at IIT Kharagpur, Co-op at IBM Quantum
+
+Kathrin Koenig, PhD student at Fraunhofer IAF/ University of Freiburg
+
+Hyorin Kim
+
+Dayeong Kang, CSE undergraduate student at the Kyungpook National University
+
+Rochisha Agarwal, Undergraduate at IIT Roorkee
+
 ## Qurators
 
 Sanskruti Wathare, CSE undergrad student

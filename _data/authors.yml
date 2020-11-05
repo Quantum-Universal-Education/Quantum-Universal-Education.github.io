@@ -20,6 +20,18 @@ Lia Yeh:
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:lia@fullstackquantumcomputation.tech"
 
+Dayeong Kang:
+  name: "Dayeong Kang"
+  avatar: "assets/images/biopics/dayeong_k.jpg"
+
+Hyorin Kim:
+  name: "Hyorin Kim"
+  avatar: "assets/images/biopics/hyorin_k.jpg"
+
+Kathrin Koenig:
+  name: "Kathrin Koenig"
+  avatar: "assets/images/biopics/kathrin_k.jpg"
+
 Praveen J:
   name: "Praveen J"
   avatar: "/assets/images/biopics/praveen_j.jpg"
@@ -27,6 +39,14 @@ Praveen J:
 Rahul Saha:
   name: "Rahul Saha"
   avatar: "assets/images/biopics/rahul_s.jpg"
+
+Rana Prathap:
+  name: "Rana Prathap"
+  avatar: "assets/images/biopics/rana_p.jpg"
+
+Rochisha Agarwal:
+  name: "Rochisha Agarwal"
+  avatar: "assets/images/biopics/rochisha_a.jpg"
 
 Rodrigo Pires Ferreira:
   name: "Rodrigo Pires Ferreira"
