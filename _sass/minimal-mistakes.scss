@@ -136,6 +136,21 @@ html {
   }
 }
 
+.sidebar.sticky {
+  overflow-y: auto;
+  max-height: calc(100vh - #{$nav-height} - 2em);
+  scrollbar-width: thin;
+  scrollbar-color: lightgray;
+}
+
+.sidebar.sticky::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar.sticky::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+}
+
 // adjust left/right sidebar and page position on x-large
 .sidebar{
   @include breakpoint($x-large) {
