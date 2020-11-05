@@ -29,6 +29,9 @@ author:
   - Hyorin Kim 
   - Kathrin Koenig
   - Rana Prathap
+  - Curate Section
+  - Harshit Garg Q
+  - Lia Yeh Q
 ---
 
 |Have a look at these prerequisites to better understand the article:
@@ -40,7 +43,7 @@ We are living in the [Noisy Intermediate Scale Quantum](https://arxiv.org/abs/18
 
 Random numbers are an important commodity in multiple fields and businesses. The random numbers we are able to create on deterministic devices such as our computer are not truly random and are called [pseudo-random numbers](https://en.wikipedia.org/wiki/Pseudorandom_number_generator). For most purposes these pseudo random numbers should be sufficient, however, for applications involving security, true random numbers are imperative. But, creating such truly random numbers is not trivial. For example, the security company Cloudflare (which runs a network for increasing internet security and performance which over 25 million internet properties are on) uses a [video of a wall of lava lamps as a source of randomness](https://blog.cloudflare.com/randomness-101-lavarand-in-production/) in the creation of random numbers. Today, let's see how we can extract randomness inherent in a Quantum Computer to create random numbers. 
 
-This project was part of the [Qiskit Hackathon Global](https://qiskithackathon.global.bemyapp.com/#/projects), from October 5th-9th 2020. The hackathon was a private event. The idea for our project came from Soyoung Shin, who also mentored our group.
+This project was part of the [Qiskit Hackathon Global](https://qiskithackathon.global.bemyapp.com/#/projects), from October 5th-9th 2020. The hackathon was a private event. The idea for our project came from [Soyoung Shin](https://www.linkedin.com/in/karysshin/), who also mentored our group.
 
 ## The aim of this project
 - Find a use case of the noise
