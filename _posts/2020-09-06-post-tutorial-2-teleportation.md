@@ -1,3 +1,21 @@
+---
+title: "Quantum Programming Tutorial 2: Quantum Teleportation"
+categories:
+  - Blog
+tags:
+  - Qiskit
+  - Cirq
+  - QDK
+  - Q#
+  - Silq
+  - Strawberry Fields
+  - jupyter notebook
+  - quantum computing
+  - quantum teleportation 
+author:
+  - Alberto Maldonado Romo
+---
+
 # Teleporting States
 
 
