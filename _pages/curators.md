@@ -12,6 +12,7 @@ title: "Curators"
     <li><a href="/blog/post-tutorial-0-Hello-world">Quantum Programming Tutorial 0: Hello, World!</a></li>
     <li><a href="/blog/post-pqc">Introduction to Post-Quantum Cryptography</a></li>
     <li><a href="/blog/post-tutorial-QonnectFour">Qonnect four - Making a quantum game</a></li>
+    <li><a href="/blog/post-quantum-ugly-duckling">Make use of noisy hardware: Building a noisy quantum random number generator</a></li>
 </ul>
 <div style="clear:both"></div>
 </div>
@@ -22,6 +23,7 @@ title: "Curators"
 <ul>
     <li><a href="/blog/post-pqc">Introduction to Post-Quantum Cryptography</a></li>
     <li><a href="/blog/post-2q-gates-superconducting-sagnik-rahul">Commonly implemented two qubit gates for superconducting qubits</a></li>
+    <li><a href="/blog/post-quantum-ugly-duckling">Make use of noisy hardware: Building a noisy quantum random number generator</a></li>
 </ul>
 <div style="clear:both"></div>
 </div>

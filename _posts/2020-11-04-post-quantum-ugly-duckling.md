@@ -1,5 +1,5 @@
 ---
-title: "Quantum Random Number Generation at Qiskit Hackathon Global"
+title: "Make use of noisy hardware: Building a noisy quantum random number generator"
 categories:
   - Blog
 tags:
