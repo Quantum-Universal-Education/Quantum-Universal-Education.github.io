@@ -56,15 +56,15 @@ Silq can be installed on Linux instructions, Mac instructions and Windows instru
 
 Strawberry Fields is a full-stack Python library for designing, optimizing, and utilizing photonic quantum computers. https://strawberryfields.readthedocs.io/en/stable/_static/install.html
 
-# Note
-
-If anyone needs help on installing or question about the code, we can try to help in our discord server https://discord.gg/NDm9e9W
 
 # Hello World
 
 To verify the installation of each of these programming languages, you can check their operation by generating the program "Hello, World!
 
 ## Qiskit
+
+![qiskit qat.png](/assets/quantum_programs/0_hello_world/qat_qiskit.png)
+
 Use python to programming a qubit with respective its measurement (Considering as base the if the qiskit community).
 
 
@@ -153,6 +153,7 @@ qiskit.visualization.plot_histogram(job.result().get_counts(program))
 ![png](/assets/quantum_programs/0_hello_world/output_12_0.png)
 
 
+![qiskit qat2.png](/assets/quantum_programs/0_hello_world/qat_qiskit2.png)
 
 Qiskit gives the opportunity to use quantum computers remotely, to access them you need to have an account at https://quantum-computing.ibm.com, where by checking the section "my account" you will get a token to use a eal quantum computer. In case that you save the count in your local computer is not neccesary do it again.
 
@@ -203,6 +204,8 @@ So ends the **Qiskit** Hello World! program in simulation and on a real computer
 
 ## CIRQ
 
+![cirq qat.png](/assets/quantum_programs/0_hello_world/qat_cirq.png)
+
 The Hello, World! from Cirq is using python to programming a qubit by applying a square root of X with its respective measurement (Considering as base the if the qiskit community).
 The qubits in cirq are selected from a grid.
 
@@ -213,6 +216,8 @@ qubit = cirq.GridQubit(0, 0)# Select a qubit in the state |0>.
 ```
 
 The Hello, World! circuit is generated
+
+![cirq qat2.png](/assets/quantum_programs/0_hello_world/qat_cirq2.png)
 
 
 ```python
@@ -269,6 +274,8 @@ So ends the **Cirq** Hello World! program in simulation.
 
 ## QDK
 
+![qdk qat.png](/assets/quantum_programs/0_hello_world/qat_qdk.png)
+
 This example is based on the programming language Q# , which has the same syntax as C#.  
 
 As a first step you should consider that Q# has a great diversity of modules that are already based to perform gate operations like qubit measurement (like the data type *qubit*). 
@@ -295,6 +302,7 @@ operation MeasureSuperposition() : Result { // type Result return the measuremen
 <ul><li>MeasureSuperposition</li></ul>
 
 
+![qdk qat2.png](/assets/quantum_programs/0_hello_world/qat_qdk2.png)
 
 After generating the function it is called from the command %simulate followed by the name of the function and showing the result of the simulation
 
@@ -315,6 +323,8 @@ So ends the **QDK** Hello World! program in simulation.
 
 ## Silq
 It is a new high-level language that is based on any program following the quantum computing paradigm.Being a new programming language it is very limited so there is no kernel for jupyter. In other words, the following code must be used inside a file with the extension slq.
+
+![silq qat.png](/assets/quantum_programs/0_hello_world/qat_silq.png)
 
 Silq is based on a mixture between c++ and python, where a main function must be defined and this must return the measurement of the qubits used in the program that was performed.
 
@@ -345,9 +355,11 @@ or
 
 For future programs made in silq, the link will be shared with the source code file.
 
+![silq qat2.png](/assets/quantum_programs/0_hello_world/qat_silq2.png)
 
 # Strawberry Fields
-The programs are based on photon-based quantum circuit design and the program can be simulated using the various Strawberry Fields backends.
+
+![strawberryFields qat.png](/assets/quantum_programs/0_hello_world/qat_sf.png)
 
 The program is started by calling the strawberryfields modules that are in charge of generating the qubits, the circuit and the simulation.
 
@@ -375,6 +387,8 @@ with prog.context as q:
     ops.BSgate(0.43, 0.1) | (q[1], q[2])
     ops.MeasureFock() | q # perform the measurement on all qubits of the variable q 
 ```
+
+![strawberryFields qat2.png](/assets/quantum_programs/0_hello_world/qat_sf2.png)
 
 It is possible to print the set of instructions that were made to build the circuit as the measurements that will be made at the end of it.
 
@@ -463,3 +477,10 @@ result.samples
 
 
 With this fnish the Hello, World! of  strawberries fields.
+
+
+# Note
+
+If anyone needs help on installing or question about the code, we can try to help in our discord server https://discord.gg/NDm9e9W
+
+<img src="/assets/quantum_programs/0_hello_world/cat.svg" width="400" height="400" />
