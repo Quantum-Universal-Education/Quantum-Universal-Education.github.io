@@ -19,7 +19,9 @@ author:
 ---
 
 
-# Hello, World! in 5 quantum enviroments
+![cover.png](/assets/quantum_programs/0_hello_world/cover_hw.png)
+
+# Quantum enviroments
 
 There are different frameworks or  programming languages or tools to perform quantum algorithms, of these we will highlight four:
 
@@ -32,6 +34,8 @@ There are different frameworks or  programming languages or tools to perform qua
 </ul>
 
 # Installation Guide
+
+![cover_2.png](/assets/quantum_programs/0_hello_world/2_hw.png)
 
 For each of the frameworks or porgramming languages, the official links are mentioned so that they can be installed in different environments.
 
