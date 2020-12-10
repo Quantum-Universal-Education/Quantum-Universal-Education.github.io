@@ -23,7 +23,7 @@ author:
 
 # Quantum enviroments
 
-There are different frameworks or  programming languages or tools to perform quantum algorithms, of these we will highlight four:
+There are different frameworks or  programming languages or tools to perform quantum algorithms, of these we will highlight five:
 
 <ul>
     <li>Qiskit</li>
