@@ -12,7 +12,7 @@ tags:
   - jupyter notebook
   - quantum computing
   - Hello, World!
-author: 
+author:
   - Alberto Maldonado Romo
   - Curate Section
   - Harshit Garg Q
@@ -37,33 +37,42 @@ There are different frameworks or  programming languages or tools to perform qua
 
 ![cover_2.png](/assets/quantum_programs/0_hello_world/2_hw.png)
 
-For each of the frameworks or porgramming languages, the official links are mentioned so that they can be installed in different environments.
+For each of the frameworks or programming languages, the official links are mentioned so that they can be installed on different systems.
 
 ## [Qiskit](https://qiskit.org/)
-Qiskit can be installed on Windows7 or higher, Ubuntu 16.04 or higher, macOS 10.12.6 or later operating systems. Its link is https://qiskit.org/documentation/install.html
+Qiskit can be installed on Windows7 or higher, Linux, and macOS 10.12.6 or later operating systems.
+
+Link: [https://qiskit.org/documentation/install.html](https://qiskit.org/documentation/install.html)
 
 ## [Cirq](https://github.com/quantumlib/Cirq)
 
-Cirq can be installed on Linux, Mac OS X and Windows operating systems, as well as on the Docker. Its link is https://cirq.readthedocs.io/en/stable/install.html
+Cirq can be installed on Linux, Mac OS X and Windows operating systems, as well as on the Docker.
 
+Link: [https://cirq.readthedocs.io/en/stable/install.html](https://cirq.readthedocs.io/en/stable/install.html)
 
 ## [QDK](https://www.microsoft.com/en-us/quantum/development-kit)
 
-QDK has fourth ways to work: develop with Q# command line applications, develop with Q# Jupyter Notebooks, develop with Q# and Python - Enables you to combine Python and Q# and develop with Q# and .NET. Their link is https://docs.microsoft.com/en-us/quantum/quickstarts/
+QDK has four ways to work: develop with Q# command line applications, develop with Q# Jupyter Notebooks, develop with Q# and Python - Enables you to combine Python and Q# and develop with Q# and .NET.
+
+Link: [https://docs.microsoft.com/en-us/quantum/quickstarts/](https://docs.microsoft.com/en-us/quantum/quickstarts/)
 
 
 ## [Silq](https://silq.ethz.ch/)
 
-Silq can be installed on Linux instructions, Mac instructions and Windows instructions. Its link is  https://silq.ethz.ch/install
+Silq can be installed on Linux, macOS and Windows.
+
+Link: [https://silq.ethz.ch/install](https://silq.ethz.ch/install)
 
 ## [Strawberry Fields](https://strawberryfields.ai/)
 
-Strawberry Fields is a full-stack Python library for designing, optimizing, and utilizing photonic quantum computers. https://strawberryfields.readthedocs.io/en/stable/_static/install.html
+Strawberry Fields is a full-stack Python library for designing, optimizing, and utilizing photonic quantum computers.
+
+Link: [https://strawberryfields.readthedocs.io/en/stable/_static/install.html](https://strawberryfields.readthedocs.io/en/stable/_static/install.html)
 
 
 # Hello World
 
-To verify the installation of each of these programming languages, you can check their operation by generating the program "Hello, World!
+To verify the installation of each of these programming languages, you can check their operation by generating the program "Hello, World!"
 
 ## Qiskit
 
@@ -73,7 +82,7 @@ Use python to programming a qubit with respective its measurement (Considering a
 
 
 ```python
-import qiskit # call  the qiskit's module 
+import qiskit # call the qiskit's module
 
 qr = qiskit.QuantumRegister(1) # call a quantum bit (or qubit)
 cr = qiskit.ClassicalRegister(1) # call a clasical bit
@@ -169,7 +178,7 @@ qiskit.IBMQ.save_account('my_token') #Replace the text my_token for your own tok
     configrc.store_credentials:WARNING:2020-08-23 00:46:18,646: Credentials already present. Set overwrite=True to overwrite.
 
 
-After having the key saved, use the load method and select a computer (the list can be found at the link https://quantum-computing.ibm.com/), for this example the ibmq16_melbourne (has 15 qubits) is selected. 
+After having the key saved, use the load method and select a computer (the list can be found at the link https://quantum-computing.ibm.com/), for this example the ibmq16_melbourne (has 15 qubits) is selected.
 
 
 ```python
@@ -215,7 +224,7 @@ The qubits in cirq are selected from a grid.
 
 
 ```python
-import cirq # call  the cirq's module 
+import cirq # call  the cirq's module
 qubit = cirq.GridQubit(0, 0)# Select a qubit in the state |0>.
 ```
 
@@ -257,7 +266,7 @@ Can be show in a histogram with the method  plot_state_histogram()
 
 
 ```python
-counts = cirq.plot_state_histogram(result) # cal the method to generate a plot 
+counts = cirq.plot_state_histogram(result) # cal the method to generate a plot
 ```
 
 
@@ -268,7 +277,7 @@ In case to the the probability per state is posible with the coutns divided by t
 
 
 ```python
-print("Probabiity =", counts/repetitions)  # cal the method to generate a plot 
+print("Probabiity =", counts/repetitions)  # cal the method to generate a plot
 ```
 
     Probabiity = [0.5 0.5]
@@ -280,9 +289,9 @@ So ends the **Cirq** Hello World! program in simulation.
 
 ![qdk qat.png](/assets/quantum_programs/0_hello_world/qat_qdk.png)
 
-This example is based on the programming language Q# , which has the same syntax as C#.  
+This example is based on the programming language Q# , which has the same syntax as C#.
 
-As a first step you should consider that Q# has a great diversity of modules that are already based to perform gate operations like qubit measurement (like the data type *qubit*). 
+As a first step you should consider that Q# has a great diversity of modules that are already based to perform gate operations like qubit measurement (like the data type *qubit*).
 
 
 ```python
@@ -290,7 +299,7 @@ open Microsoft.Quantum.Intrinsic;     // for the H operation
 open Microsoft.Quantum.Measurement;   // for MResetZ
 
 operation MeasureSuperposition() : Result { // type Result return the measurement
-    using (q = Qubit()) {  // using a variable of type qubit q 
+    using (q = Qubit()) {  // using a variable of type qubit q
         H(q);              // apply Hadamard gate on the variable q
         return MResetZ(q); // apply the measurement on q
       }
@@ -342,7 +351,7 @@ To represent the state 0 is the value false and 1 is true for this example so yo
 ```python
 def main(){ // define the main function
     x:=H(false); // assign to the boolean variable x the superposition of the state false or 0
-     return measure(x); // return the 
+     return measure(x); // return the
 }
 ```
 
@@ -353,7 +362,7 @@ Generate a file with the previous code and save as hello_world.slq.
 
 ```python
 0
-or 
+or
 1
 ```
 
@@ -382,14 +391,14 @@ For more information about the gates it uses you can find the following link htt
 # create a quantum program with 3 qubits
 prog = sf.Program(3)
 
-# describe the circuit 
+# describe the circuit
 with prog.context as q:
-    ops.Sgate(0.54) | q[0] # call the Sgate 
+    ops.Sgate(0.54) | q[0] # call the Sgate
     ops.Sgate(0.54) | q[1]
     ops.Sgate(0.54) | q[2]
     ops.BSgate(0.43, 0.1) | (q[0], q[2]) # call the BSGate
     ops.BSgate(0.43, 0.1) | (q[1], q[2])
-    ops.MeasureFock() | q # perform the measurement on all qubits of the variable q 
+    ops.MeasureFock() | q # perform the measurement on all qubits of the variable q
 ```
 
 ![strawberryFields qat2.png](/assets/quantum_programs/0_hello_world/qat_sf2.png)
@@ -409,7 +418,7 @@ prog.print()
     MeasureFock | (q[0], q[1], q[2])
 
 
-The Engine method works with the name of the backend and the possible options for that backend. 
+The Engine method works with the name of the backend and the possible options for that backend.
 
 You can work with three backends.
 
