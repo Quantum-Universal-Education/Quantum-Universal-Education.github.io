@@ -41,6 +41,7 @@ author:
 This online workshop on how to apply to Master's and PhD programs internationally was on Friday August 28, 11AM-1PM PDT / 6PM-8PM GMT on Google Meet.  The students running it have successfully applied to physics, CS, and ECE; Master's and PhD programs; in US, Germany, UK, Canada, Mexico, Japan.
 
 We highly recommend anyone watching the above YouTube video to also follow along the slides, linked at [https://docs.google.com/presentation/d/1YTXgORzgQ8BKPMX4vCKL1MzuLXVEckL3XQfVW-XZsuo/edit?usp=sharing](https://docs.google.com/presentation/d/1YTXgORzgQ8BKPMX4vCKL1MzuLXVEckL3XQfVW-XZsuo/edit?usp=sharing).  In the speaker notes below many of the slides are more detailed writeups with links mentioned in the workshop.
+We also recommend checking out these recordings of info sessions for a bunch of quantum Master's degree programs organized by Harrisburg University at http://masterdegrees.tryquantum.org/
 
 Below is the workshop poster:
 
