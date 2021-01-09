@@ -1,5 +1,5 @@
 ---
-title: Pokemon Quantum fight
+title: Quantum Pokemon Fight
 categories:
   - Blog
 tags:
@@ -14,8 +14,11 @@ tags:
   - Quantum game
 author:
   - Michael Rollin
+  - Curate Section
   - Praveen J Q
 ---
+A quantum game and algorithm to fight in Pokemon.
+
 
 ## Table of Contents
 
@@ -130,13 +133,13 @@ As shown in my illustration above, I use the same quantum computer for all of my
 #### Precision / Critical / condition / Speed draw
 - When a pokemon declares an attack, the first thing to do is to check if the attack can affect the opponent, this is done by doing a check on the accuracy of the move. We call this number $\psi$ (say $psi$) and then I'm creating a qubit and appling a quantum rotation gate of angle $\pi*\psi$.
 
-If the accuracy is $100\%$, my qubit will flip from 0 to 1, thus the attack affects the target. If the attack has an accurancy of $70\%$, the qubit will be in a superposition and its the role of the measurement to "choose" if the qubit will collapse to the state 0 or go to state 1.
+If the accuracy is 100%, my qubit will flip from 0 to 1, thus the attack affects the target. If the attack has an accurancy of 70%, the qubit will be in a superposition and its the role of the measurement to "choose" if the qubit will collapse to the state 0 or go to state 1.
 
 
-- Next, we check the probability of critical attack, apart from some exceptions this number is always the same, approximatly $4\%$ ($4.17\%$). With this number we'll apply the same transformation as the accuracy check.
+- Next, we check the probability of critical attack, apart from some exceptions this number is always the same, approximatly 4% (4.17%). With this number we'll apply the same transformation as the accuracy check.
 
 
-- Finally we check if the move is of fire, poison, electric or ice type. If so, we apply to a qubit a transformation of the respective accuracy ($10\%$, $30\%$, $30\%$ and $10\%$) and see if a condition of burn, poison, paralysis or freeze will apply.
+- Finally we check if the move is of fire, poison, electric or ice type. If so, we apply to a qubit a transformation of the respective accuracy (10%, 30%, 30% and 10%) and see if a condition of burn, poison, paralysis or freeze will apply.
 
 
 - Usually, the order of which pokemon moves first is decided by their speed, but sometimes both have the same speed. In this case, we put a qubit in a perfect superposition by rotation by $\frac{\pi}{2}$.
