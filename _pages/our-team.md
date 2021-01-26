@@ -59,13 +59,6 @@ Praveen J is a senior undergraduate at Indian Institute of Science, Bangalore pu
 <div style="clear:both"></div>
 </div>
 
-<div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both" markdown="1">
-<img style="float: right; padding: 20px" src="/assets/images/biopics/vincent_p.png" width="250" height="250"/>
-
-Vincent Pisani is an undergraduate studying Computing in the College of Creative Studies at the University of California, Santa Barbara. They also have a strong passion for mathematics and have explored various areas including hyperbolic geometry and cellular automata. They have studied quantum computing through Lia's course as well as IBM's Qiskit Global Summer School in 2020 and hope to pursue it in future college courses. Their favorite quantum game is Quantum Game; check it out at [https://quantumgame.io](https://quantumgame.io/).
-<div style="clear:both"></div>
-</div>
-
 <div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both">
 <img style="float: left; padding: 20px" src="/assets/images/biopics/bavithra_g.jpg" width="250" height="250"/>
 
@@ -94,3 +87,9 @@ Nilay Awasthi is a final year undergraduate with major's in Electronics and Comm
 <div style="clear:both"></div>
 </div>
 
+<div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both" markdown="1">
+<img style="float: right; padding: 20px" src="/assets/images/biopics/harshit_g.png" width="250" height="250"/>
+
+Harshit Garg is an undergraduate studying Computer Science at BITS Pilani, India. He has had a passion for all things CompSci far as long as he can remember. Combined this with a fascination of Quantum Mechanics, he sees in Quantum Computing a unique opportunity to be working for something from the ground up, akin to the architects of computers (and the internet!) of a bygone era.
+<div style="clear:both"></div>
+</div>
