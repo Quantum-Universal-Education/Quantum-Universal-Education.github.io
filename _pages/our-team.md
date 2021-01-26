@@ -80,13 +80,6 @@ Adithya Sireesh (Adi) has recently graduated from the University of Edinburgh wi
 <div style="clear:both"></div>
 </div>
 
-<div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both">
-<img style="float: right; padding: 20px" src="/assets/images/biopics/nilay_a.jpg" width="250" height="250"/>
-
-Nilay Awasthi is a final year undergraduate with major's in Electronics and Communication with minor's in Embedded Systems and Design. His interest ranges in the domain of Electronic Hardware Development, be it in a classical world or the world on uncertainties-quantum. He's exploring the domain of Quantum Hardware, which involves, quantum circuits optimization, alternative quantum architectures.
-<div style="clear:both"></div>
-</div>
-
 <div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both" markdown="1">
 <img style="float: right; padding: 20px" src="/assets/images/biopics/harshit_g.png" width="250" height="250"/>
 
