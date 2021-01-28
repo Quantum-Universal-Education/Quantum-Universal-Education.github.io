@@ -1,6 +1,4 @@
 main:
-  - title: "Design Contest"
-    url: /t-shirt-contest/
   - title: "Posts"
     url: /posts/
     #  - title: "Categories"
@@ -9,6 +7,8 @@ main:
     #    url: /tags/
   - title: "Contributing"
     url: /contributing/
+  - title: "Hardware"
+    url: /hardware/
   - title: "Our Team"
     url: /our-team/
   - title: "Curators"

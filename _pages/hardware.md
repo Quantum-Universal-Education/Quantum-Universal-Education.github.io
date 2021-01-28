@@ -1,6 +1,6 @@
 ---
 permalink: /hardware/
-title: "Quantum Hardware"
+title: "Hardware"
 ---
 
 <div id="hardware"></div>
