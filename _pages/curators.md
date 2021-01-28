@@ -42,6 +42,7 @@ title: "Curators"
 <h1>Praveen J</h1>
 <ul>
     <li><a href="/blog/post-2q-gates-superconducting-sagnik-rahul">Commonly implemented two qubit gates for superconducting qubits</a></li>
+    <li><a href="/blog/post-quantum-pokemon-fight">Quantum Pokemon Fight</a></li>
 </ul>
 <div style="clear:both"></div>
 </div>
