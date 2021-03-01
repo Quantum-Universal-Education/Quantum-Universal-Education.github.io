@@ -1,6 +1,6 @@
 ---
 permalink: /areas/
-title: "Areas"
+
 ---
 
 <link rel="stylesheet" href="/assets/css/front_page.css">
