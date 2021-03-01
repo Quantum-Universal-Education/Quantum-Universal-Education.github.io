@@ -302,8 +302,8 @@ h2 { margin:30px auto;}
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
 <script src="js/multislider.js"></script> 
 <script>
-		$('#mixedSlider').multislider({
-			duration: 500,
-			interval: 3000
-		});
+
 </script>
+
+extra_javascript:
+    /assets/js/multislider.js
