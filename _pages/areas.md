@@ -217,7 +217,7 @@ h2 { margin:30px auto;}
                         <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Sensing</div>
-				<img src="="/assets/front-page/q_sensing.png" alt="House" style="width:100%">
+				<img src="/assets/front-page/q_sensing.png" alt="House" style="width:100%">
 			   </div>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
@@ -288,7 +288,7 @@ h2 { margin:30px auto;}
 
 
 
-</div>
+
 <!-- End page content -->
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
