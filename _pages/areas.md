@@ -179,6 +179,7 @@ title: "Areas"
 <footer class="w3-center w3-padding-16">
   <p style="font-size:12px;" >© 2021 People Interested in Quantum Universal Education</p>
 </footer>
+
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
 <script src="js/multislider.js"></script> 
 <script>
