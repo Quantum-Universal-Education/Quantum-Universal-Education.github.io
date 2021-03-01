@@ -124,7 +124,7 @@ h2 { margin:30px auto;}
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home"  >
-  <img class="w3-image" src="/assets/fornt-page/cover.png" alt="FSQC" width="99%" height="800" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="99%" height="800" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <div class="w3-display-middle w3-margin-top w3-center">
 
   </div>
@@ -286,18 +286,10 @@ h2 { margin:30px auto;}
                 </div>
 </div>
 
-<div>
+
 
 </div>
-
-
 <!-- End page content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-padding-16">
-  <p style="font-size:12px;" >© 2021 People Interested in Quantum Universal Education</p>
-</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
 <script src="/assets/js/multislider.js"></script> 
