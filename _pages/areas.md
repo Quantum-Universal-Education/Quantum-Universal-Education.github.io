@@ -124,7 +124,7 @@ h2 { margin:30px auto;}
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home"  >
-  <img class="w3-image" src="images/cover.png" alt="FSQC" width="99%" height="800" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <img class="w3-image" src="/assets/fornt-page/cover.png" alt="FSQC" width="99%" height="800" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <div class="w3-display-middle w3-margin-top w3-center">
 
   </div>
@@ -147,7 +147,7 @@ h2 { margin:30px auto;}
 
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Learning Resources</div>
-				<img classs="backg" src="="/assets/front-page/q_learning_resource.png" alt="House" style="width:100%">
+				<img classs="backg" src="/assets/front-page/q_learning_resource.png" alt="House" style="width:100%">
 
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
@@ -167,7 +167,7 @@ h2 { margin:30px auto;}
 
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Software</div>
-				<img classs="backg" src="="/assets/front-page/q_software.png" alt="House" style="width:100%">
+				<img classs="backg" src="/assets/front-page/q_software.png" alt="House" style="width:100%">
 
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
@@ -177,7 +177,7 @@ h2 { margin:30px auto;}
 
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Algorithms</div>
-				<img classs="backg" src="="/assets/front-page/q_algorithms.png" alt="House" style="width:100%">
+				<img classs="backg" src="/assets/front-page/q_algorithms.png" alt="House" style="width:100%">
 
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
@@ -187,7 +187,7 @@ h2 { margin:30px auto;}
 
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Computer Architecture</div>
-				<img classs="backg" src="="/assets/front-page/q_architecture.png" alt="House" style="width:100%">
+				<img classs="backg" src="/assets/front-page/q_architecture.png" alt="House" style="width:100%">
 
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
@@ -197,7 +197,7 @@ h2 { margin:30px auto;}
 
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Error Correction</div>
-				<img classs="backg" src="="/assets/front-page/q_error_c.png" alt="House" style="width:100%">
+				<img classs="backg" src="/assets/front-page/q_error_c.png" alt="House" style="width:100%">
 
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
@@ -207,7 +207,7 @@ h2 { margin:30px auto;}
 
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Chemistry</div>
-				<img classs="backg" src="="/assets/front-page/q_chemistry.png" alt="House" style="width:100%">
+				<img classs="backg" src="/assets/front-page/q_chemistry.png" alt="House" style="width:100%">
 
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
@@ -225,7 +225,7 @@ h2 { margin:30px auto;}
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Cryptography</div>
-				<img src="="/assets/front-page/q_cryptography.png" alt="House" style="width:100%">
+				<img src="/assets/front-page/q_cryptography.png" alt="House" style="width:100%">
 			      </div>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
@@ -233,7 +233,7 @@ h2 { margin:30px auto;}
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Communication</div>
-				<img src="="/assets/front-page/q_comunication.png" alt="House" style="width:100%">
+				<img src="/assets/front-page/q_comunication.png" alt="House" style="width:100%">
 			      </div>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
@@ -241,7 +241,7 @@ h2 { margin:30px auto;}
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Information Theory</div>
-				<img src="="/assets/front-page/q_information_t.png" alt="House" style="width:100%">
+				<img src="/assets/front-page/q_information_t.png" alt="House" style="width:100%">
 			      </div>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
@@ -249,7 +249,7 @@ h2 { margin:30px auto;}
                         <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Finance</div>
-				<img src="="/assets/front-page/q_time.png" alt="House" style="width:100%">
+				<img src="/assets/front-page/q_time.png" alt="House" style="width:100%">
 			      </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
@@ -257,7 +257,7 @@ h2 { margin:30px auto;}
                         <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Machine Learning</div>
-				<img src="="/assets/front-page/qml.png" alt="House" style="width:100%">
+				<img src="/assets/front-page/qml.png" alt="House" style="width:100%">
 			      </div>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
@@ -265,7 +265,7 @@ h2 { margin:30px auto;}
                        <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Games</div>
-				<img src="="/assets/front-page/q_game.png" alt="House" style="width:100%">
+				<img src="/assets/front-page/q_game.png" alt="House" style="width:100%">
 			      </div>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
@@ -273,7 +273,7 @@ h2 { margin:30px auto;}
                        <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Miscellaneous</div>
-				<img src="="/assets/front-page/q_miscellaneous.png" alt="House" style="width:100%">
+				<img src="/assets/front-page/q_miscellaneous.png" alt="House" style="width:100%">
 			      </div>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
