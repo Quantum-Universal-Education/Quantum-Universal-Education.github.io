@@ -3,7 +3,10 @@ permalink: /areas/
 
 ---
 <link href="/assets/css/areas.css" rel="stylesheet" type="text/css">
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" id="home"  >
 <p>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></p>
