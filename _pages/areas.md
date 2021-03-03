@@ -31,7 +31,7 @@ margin-bottom: 25px;
 .w3-button{font-size: 80%;}	
 	
 	
-body { font-family:'Open Sans'; background-color:#fafafa;}
+body { font-family: "Times New Roman", Times, serif; background-color:#fafafa;}
 h2 { margin:30px auto;}
 .container { margin:150px auto;}
 #mixedSlider {
@@ -54,7 +54,7 @@ h2 { margin:30px auto;}
 }
 @media (max-width: 991px) {
   #mixedSlider .MS-content .item {
-    width: 80%;
+    width: 50%;
   }
 }
 @media (max-width: 767px) {
