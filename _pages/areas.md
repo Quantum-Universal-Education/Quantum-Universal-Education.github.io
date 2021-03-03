@@ -143,10 +143,7 @@ h2 {color:black;font-size:50x;text-align:center; margin:30px auto;}
 <header class="w3-display-container w3-content w3-wide" id="home"  >
 <p>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></p>
 	
-  <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="100%" height="500" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-  <div class="w3-display-middle w3-margin-top w3-center">
-
-  </div>
+  <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="100%" height="500">
 </header>
 
 
