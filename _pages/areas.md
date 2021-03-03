@@ -10,7 +10,7 @@ permalink: /areas/
 <link href="/assets/css/front-page.css" rel="stylesheet" type="text/css">
 
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide" id="home" style="width: 65vw;">	
+<header class="w3-display-container w3-content w3-wide" id="home" style="width: 50vw;">	
   <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="100%" height="500" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <p>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></p>
 </header>
@@ -24,7 +24,7 @@ permalink: /areas/
 
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="width: 65vw;border-width:thick;border-color:#f9f9f9;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div class="w3-content w3-padding" style="width: 50vw;border-width:thick;border-color:#f9f9f9;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 <div id="mixedSlider" >
                     <div class="MS-content">
