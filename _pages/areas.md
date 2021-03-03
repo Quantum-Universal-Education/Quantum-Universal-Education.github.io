@@ -23,7 +23,7 @@ title: "Quantum Computing"
 
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:100%;border-width:thick;border-color:#f9f9f9;;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div class="w3-content w3-padding" style="width: 65vw;max-width:100%;border-width:thick;border-color:#f9f9f9;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 <div id="mixedSlider" >
                     <div class="MS-content">
