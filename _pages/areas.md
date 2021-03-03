@@ -31,7 +31,7 @@ margin-bottom: 25px;
 .w3-button{font-size: 80%;}	
 	
 	
-body { font-family: "Times New Roman", Times, serif; background-color:#fafafa;}
+body { font-family: "Times New Roman"; background-color:#f0f0f0;}
 h2 { margin:30px auto;}
 .container { margin:150px auto;}
 #mixedSlider {
@@ -146,9 +146,9 @@ h2 { margin:30px auto;}
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home"  >
-Share an online learning resource to recommend by submitting a pull request on the <a ref="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a>
+Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a>
 	
-  <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="200%" height="800" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="100%" height="500" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <div class="w3-display-middle w3-margin-top w3-center">
 
   </div>
