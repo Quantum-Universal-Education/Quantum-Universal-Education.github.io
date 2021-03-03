@@ -9,25 +9,8 @@ permalink: /areas/
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
 <style>
-h1 {color:red;font-size:50px;}
-p{color:#050015;font-size:30px;}
-a{color:#a70024;font-size:20px;}
 
-
-div.head_container {
-text-align: center;
-padding: 10px 20px;
-background-color: green;
-opacity: 0.5;
-}
-div.principal_image {
-width: 100%;
-background-color: white;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-margin-bottom: 25px;
-}
 .w3-button{font-size: 80%;}	
-	
 h2 {color:black;font-size:50x;text-align:center; margin:30px auto;}
 #mixedSlider {
   position: relative;
@@ -143,7 +126,7 @@ h2 {color:black;font-size:50x;text-align:center; margin:30px auto;}
 <header class="w3-display-container w3-content w3-wide" id="home"  >
 <p>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></p>
 	
-  <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="100%" height="500">
+  <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="100%" height="500" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 </header>
 
 
@@ -160,76 +143,61 @@ h2 {color:black;font-size:50x;text-align:center; margin:30px auto;}
 <div id="mixedSlider" >
                     <div class="MS-content">
                         <div class="item">
-
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Learning Resources</div>
 				<img classs="backg" src="/assets/front-page/q_learning_resource.png" alt="House" style="width:100%">
-
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
                         </div>
                         <div class="item">
-
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Hardware</div>
 				<img classs="backg" src="/assets/front-page/q_hardware.png" alt="House" style="width:100%">
-
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="https://fullstackquantumcomputation.tech/hardware/">Read More</a>
                         </div>
                         <div class="item">
-
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Software</div>
 				<img classs="backg" src="/assets/front-page/q_software.png" alt="House" style="width:100%">
-
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
                         </div>
                         <div class="item">
-
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Algorithms</div>
 				<img classs="backg" src="/assets/front-page/q_algorithms.png" alt="House" style="width:100%">
-
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
                         </div>
                         <div class="item">
-
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Computer Architecture</div>
 				<img classs="backg" src="/assets/front-page/q_architecture.png" alt="House" style="width:100%">
-
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
                         </div>
                         <div class="item">
-
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Error Correction</div>
 				<img classs="backg" src="/assets/front-page/q_error_c.png" alt="House" style="width:100%">
-
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
                         </div>
                         <div class="item">
-
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Chemistry</div>
 				<img classs="backg" src="/assets/front-page/q_chemistry.png" alt="House" style="width:100%">
-
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
                             <a href="#">Read More</a>
                         </div>
-
                         <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Sensing</div>
@@ -301,12 +269,7 @@ h2 {color:black;font-size:50x;text-align:center; margin:30px auto;}
                     </div>
                 </div>
 </div>
-
-
-
-
 <!-- End page content -->
-
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
 <script src="/assets/js/multislider.js"></script> 
 <script>
