@@ -54,7 +54,7 @@ h2 { margin:30px auto;}
 }
 @media (max-width: 991px) {
   #mixedSlider .MS-content .item {
-    width: 50%;
+    width: 80%;
   }
 }
 @media (max-width: 767px) {
@@ -161,7 +161,7 @@ h2 { margin:30px auto;}
 
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:98%;border-width:thick;border-color:#f9f9f9;;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div class="w3-content w3-padding" style="max-width:100%;border-width:thick;border-color:#f9f9f9;;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 <div id="mixedSlider" >
                     <div class="MS-content">
