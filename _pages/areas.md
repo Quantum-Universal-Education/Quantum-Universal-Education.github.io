@@ -9,8 +9,22 @@ permalink: /areas/
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
 <style>
-
-.w3-button{font-size: 80%;}	
+		h1 {color:red;font-size:50px;}
+		p{color:#050015;font-size:30px;}
+		a{color:#a70024;font-size:20px;}
+		div.head_container {
+		  text-align: center;
+		  padding: 10px 20px;
+		  background-color: green;
+  		  opacity: 0.5;
+		}
+		div.principal_image {
+		  width: 100%;
+		  background-color: white;
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		  margin-bottom: 25px;
+		}
+		.w3-button{font-size: 80%;}
 h2 {color:black;font-size:50x;text-align:center; margin:30px auto;}
 #mixedSlider {
   position: relative;
