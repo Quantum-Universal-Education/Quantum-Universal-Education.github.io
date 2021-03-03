@@ -146,6 +146,8 @@ h2 { margin:30px auto;}
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home"  >
+Share an online learning resource to recommend by submitting a pull request on the [Github repo](https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io)
+	
   <img class="w3-image" src="/assets/front-page/cover.png" alt="FSQC" width="99%" height="800" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <div class="w3-display-middle w3-margin-top w3-center">
 
