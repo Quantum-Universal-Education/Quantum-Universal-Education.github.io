@@ -28,10 +28,7 @@ margin-bottom: 25px;
 }
 .w3-button{font-size: 80%;}	
 	
-	
-body { font-family: "Times New Roman"; background-color:#f0f0f0;}
 h2 {color:black;font-size:50x;text-align:center; margin:30px auto;}
-.container { margin:150px auto;}
 #mixedSlider {
   position: relative;
 }
