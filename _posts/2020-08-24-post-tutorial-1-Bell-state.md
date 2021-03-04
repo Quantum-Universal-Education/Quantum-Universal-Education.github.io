@@ -15,9 +15,6 @@ tags:
 author: Alberto Maldonado Romo
 ---
 
-# Quantum Entanglement between Two Qubits
-
-
 "The Bell state, ![eq_bell_state.png](/assets/quantum_programs/1_bell_state/eq_bell_state.png), is of particular interest: if we pick any of the two qubits to measure, we would obtain outcome j0i or j1i with equal probability; and the other qubit is guaranteed to be measured in the same state as the first. This “correlation” between the two qubits are called quantum entanglement. However, this is not to be confused with two correlated random bits each with equal probability of being observed |0> or |1> . 
 Proof of the distinction is omitted for the sake of brevity; we refer the interested reader to
 the studies on “local hidden variables” theory, Bell’s inequality, and the CHSH
