@@ -151,6 +151,7 @@ qiskit.visualization.plot_histogram(counts) # plot the histogram
 # Cirq Program
 The cirq code to perform the previously mentioned state of bell is described.
 
+![bell_state_cirq_1.png](/assets/quantum_programs/1_bell_state/bell_state_cirq1.png)
 
 ```python
 import cirq # call the library
@@ -173,6 +174,9 @@ print("Circuit:")
 print(circuit) # print the circuit at this moment
 
 # Simulate the circuit.
+
+![bell_state_cirq_2.png](/assets/quantum_programs/1_bell_state/bell_state_cirq2.png)
+
 
 shots = 100 # number of shots in the simulation
 simulator = cirq.Simulator() # call the Simulator method
@@ -198,6 +202,7 @@ counts = cirq.plot_state_histogram(result) # cal the method to generate a plot
 
 ![png](/assets/quantum_programs/1_bell_state/output_12_0.png)
 
+![bell_state_cirq_3.png](/assets/quantum_programs/1_bell_state/bell_state_cirq3.png)
 
 
 ```python
