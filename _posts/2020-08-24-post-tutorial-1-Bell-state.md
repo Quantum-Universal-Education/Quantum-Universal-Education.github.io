@@ -39,6 +39,7 @@ The simplest example for quantum computation is to generate a Bell state from th
 # Qiskit Program
 The qiskit code to perform the previously mentioned state of bell is described.
 
+![bell_state_qiskit.png](/assets/quantum_programs/1_bell_state/bell_state_qiskit1.png)
 
 ```python
 import qiskit
