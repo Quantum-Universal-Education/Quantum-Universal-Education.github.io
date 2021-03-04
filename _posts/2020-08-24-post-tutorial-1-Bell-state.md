@@ -89,6 +89,7 @@ plot_state_qsphere(new_sv.data) # show the plot of  the output qubits
 
 ![png](/assets/quantum_programs/1_bell_state/output_4_1.png)
 
+![bell_state_qiskit_2.png](/assets/quantum_programs/1_bell_state/bell_state_qiskit2.png)
 
 
 
