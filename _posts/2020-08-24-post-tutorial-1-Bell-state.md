@@ -214,6 +214,7 @@ print("Probabiity =", counts/shots) # print the probabilities of every qubit_sta
 
 # QDK Program
 The QDK (using Q#) code to perform the previously mentioned state of bell is described.
+![bell_state_qdk_1.png](/assets/quantum_programs/1_bell_state/bell_state_qdk1.png)
 
 
 ```python
@@ -254,6 +255,7 @@ operation TestBellState(count : Int, initial : Result) : (Int, Int) { // generat
     /snippet:(2,10): warning QS6003: The namespace is already open.
 
 
+![bell_state_qdk_2.png](/assets/quantum_programs/1_bell_state/bell_state_qdk2.png)
 
 
 
@@ -277,6 +279,7 @@ operation BellState(): Unit{
 <ul><li>BellState</li></ul>
 
 
+![bell_state_qdk_3.png](/assets/quantum_programs/1_bell_state/bell_state_qdk3.png)
 
 
 ```python
