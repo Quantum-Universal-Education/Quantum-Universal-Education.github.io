@@ -308,7 +308,7 @@ The silq code to perform the previously mentioned state of bell is described.
 
 For this first example we must take into account the following properties of the silq language:
 
-![bell_state_silq_1.png](/assets/quantum_programs/1_bell_state/bell_silq1.png)
+![bell_state_silq_1.png](/assets/quantum_programs/1_bell_state/bell_state_silq1.png)
 
 
 ### B type variables are Boolean variables.
@@ -347,7 +347,7 @@ To know more about the documentation  check the following link : https://silq.et
 
 ## Generate cnot function
 
-![bell_state_silq_2.png](/assets/quantum_programs/1_bell_state/bell_silq2.png)
+![bell_state_silq_2.png](/assets/quantum_programs/1_bell_state/bell_state_silq2.png)
 
 
 To generate the denied controlled gate it is necessary to indicate two boolean variables: x,y where x represents the control qubit and if it is true it denies the variable y.
@@ -367,7 +367,7 @@ def cnot(const x:B,y:B):B{ //generate the function Cnot gate
 
 ## Define main function
 
-![bell_state_silq_3.png](/assets/quantum_programs/1_bell_state/bell_silq3.png)
+![bell_state_silq_3.png](/assets/quantum_programs/1_bell_state/bell_state_silq3.png)
 
 
 We initialize the boolean variables x,y in false or zero state, to the variable x we apply the Hadamard gate, followed by the cnot function where x is the control qubit over the qubit y. Finally, we measure and return the values of the qubits (obtaining their classic values from the two qubits used in the program).
