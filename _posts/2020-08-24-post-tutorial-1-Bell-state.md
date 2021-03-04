@@ -111,6 +111,8 @@ plot_histogram(counts) # plot the output istogram
 
 Generate the same circuit on a real quantum computing that use 15 qubits.
 
+![bell_state_qiskit_3.png](/assets/quantum_programs/1_bell_state/bell_state_qiskit3.png)
+
 
 ```python
 qiskit.IBMQ.load_account() # load the token
