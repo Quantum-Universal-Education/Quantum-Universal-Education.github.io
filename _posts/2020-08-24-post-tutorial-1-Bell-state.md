@@ -34,7 +34,7 @@ Synthesis Lectures on Computer Architecture)*".
 
 The simplest example for quantum computation is to generate a Bell state from the controlled-not gate to or Cnot with a previous superposition of the qubit and control with the Hadamard gate.
 
-![bell_state.png](/assets/quantum_programs/1_bell_state/bell_state.png)
+![bell_state.png](/assets/quantum_programs/1_bell_state/circuit_bell_state.png)
 
 # Qiskit Program
 The qiskit code to perform the previously mentioned state of bell is described.
@@ -401,12 +401,14 @@ The previous silq code is in the file called bell_state.sql
 
 The strawberry fields code to perform the previously mentioned state of bell is described.
 
+![bell_state_strawberry_fields_1.png](/assets/quantum_programs/1_bell_state/bell_state_sf1.png)
 
 
 ```python
 import strawberryfields as sf
 from strawberryfields import ops
 ```
+![bell_state_strawberry_fields_2.png](/assets/quantum_programs/1_bell_state/bell_state_sf2.png)
 
 
 ```python
@@ -428,6 +430,8 @@ state.trace()
 state.dm().shape # density matrix
 result.samples #print the output states
 ```
+![bell_state_strawberry_fields_3.png](/assets/quantum_programs/1_bell_state/bell_state_sf3.png)
+
 
     Rgate(1.57) | (q[0])
     CXgate(1) | (q[0], q[1])
