@@ -173,10 +173,9 @@ circuit.append(cirq.measure(q1, key='m1')) # adder the measure in q1
 print("Circuit:")
 print(circuit) # print the circuit at this moment
 
+
+
 # Simulate the circuit.
-
-![bell_state_cirq_2.png](/assets/quantum_programs/1_bell_state/bell_state_cirq2.png)
-
 
 shots = 100 # number of shots in the simulation
 simulator = cirq.Simulator() # call the Simulator method
@@ -184,6 +183,7 @@ result = simulator.run(circuit, repetitions=shots) # run the circuit in shots ti
 print("Results:")
 print(result) # show the results
 ```
+![bell_state_cirq_3.png](/assets/quantum_programs/1_bell_state/bell_state_cirq3.png)
 
     Circuit:
     (0, 0): ───H───@───M('m0')───
