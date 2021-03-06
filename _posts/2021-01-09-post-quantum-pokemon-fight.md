@@ -17,6 +17,8 @@ author:
   - Curate Section
   - Praveen J Q
 ---
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+
 A quantum game and algorithm to fight in Pokemon.
 
 
@@ -131,7 +133,8 @@ We perform every probability calculations and opponent decision(s) by quantum pr
 As shown in my illustration above, I use the same quantum computer for all of my probability calculations and as the only difference between these calculations are the probabilities of occurences, I just use the same circuit but with a different angle of theta (rotation).
 
 #### Precision / Critical / condition / Speed draw
-- When a pokemon declares an attack, the first thing to do is to check if the attack can affect the opponent, this is done by doing a check on the accuracy of the move. We call this number $\psi$ (say $psi$) and then I'm creating a qubit and appling a quantum rotation gate of angle $\pi*\psi$.
+- When a pokemon declares an attack, the first thing to do is to check if the attack can affect the opponent, this is done by doing a check on the accuracy of the move. We call this number $$\psi$$ (say $$ psi$$) and then I'm creating a qubit and appling a quantum rotation gate of angle 
+$$\pi*\psi$$.
 
 If the accuracy is 100%, my qubit will flip from 0 to 1, thus the attack affects the target. If the attack has an accurancy of 70%, the qubit will be in a superposition and its the role of the measurement to "choose" if the qubit will collapse to the state 0 or go to state 1.
 
@@ -142,7 +145,8 @@ If the accuracy is 100%, my qubit will flip from 0 to 1, thus the attack affects
 - Finally we check if the move is of fire, poison, electric or ice type. If so, we apply to a qubit a transformation of the respective accuracy (10%, 30%, 30% and 10%) and see if a condition of burn, poison, paralysis or freeze will apply.
 
 
-- Usually, the order of which pokemon moves first is decided by their speed, but sometimes both have the same speed. In this case, we put a qubit in a perfect superposition by rotation by $\frac{\pi}{2}$.
+- Usually, the order of which pokemon moves first is decided by their speed, but sometimes both have the same speed. In this case, we put a qubit in a perfect superposition by rotation by 
+$$\frac{\pi}{2}$$.
 
 
 ```python
@@ -297,11 +301,14 @@ measurement: 3/═════════════════════�
 - The inputs are represented by the qubits "algo_" on the top
 - The algorithm is represented by the CNOT gate in the middle
 - The diffuser is represented by the big block at the end
-- The oracle is at the last qubit, it's in superposition state $|->$, for phase inversion of inputs which match the required conditions.
+- The oracle is at the last qubit, it's in superposition state 
+$$ |-> $$, 
+for phase inversion of inputs which match the required conditions.
 
-Here all our inputs are in superposition with each others, so we have something like : $\frac{|000> + |001> + |010> + ... |111>}{\sqrt{8}}$.
-<br/>Then our algorithm is only an MCT gate and will be activated only if all the qubits are in state 1, so that only the inputs $|111>$ will flip the oracle qubit to add a phase of $(-1)$ to this input.
-<br/>Finally our diffuser is going to read all of the inputs and if it sees an input with a negative phase, it'll amplify this input to $3 * \theta$ (or $2 * \theta$ depending on its initial amplitude and number of states).
+Here all our inputs are in superposition with each others, so we have something like : 
+$$ \frac{|000> + |001> + |010> + ... |111>}{\sqrt{8}} $$.
+<br/>Then our algorithm is only an MCT gate and will be activated only if all the qubits are in state 1, so that only the inputs $$ |111> $$ will flip the oracle qubit to add a phase of $(-1)$ to this input.
+<br/>Finally our diffuser is going to read all of the inputs and if it sees an input with a negative phase, it'll amplify this input to $$ 3 * \theta$$ (or $$ 2 * \theta $$ depending on its initial amplitude and number of states).
 
 
 ```python
