@@ -16,10 +16,13 @@ author:
   - Alberto Maldonado Romo
 ---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+
 # Teleporting States
 
 
-"In this section, we highlight a remarkable phenomenon called “quantum teleportation,” and its important applications in gate scheduling, namely a strategy called “gate teleportation,” in which scheduling gates is equivalent to scheduling resource states. We start by  writing down an important resource state, the  EPR pair $|\psi>$, which  can be  produced in the tutorial 1: Bell State.
+"In this section, we highlight a remarkable phenomenon called “quantum teleportation,” and its important applications in gate scheduling, namely a strategy called “gate teleportation,” in which scheduling gates is equivalent to scheduling resource states. We start by  writing down an important resource state, the  EPR pair $$ |\psi> $$,
+which  can be  produced in the tutorial 1: Bell State.
 The teleportation-based quantum computer (QC) architecture, require which such EPR pairs are utilized as resource states. Because both quantum states and quantum gates can be transferred over long distance via a teleportation circuit, this technique is particularly useful in distributed QC architectures or in reducing communication cost in general.*(Ding (2020),Chong (2020),
 University of Chicago, book,Quantum Computer Systems: Research for Noisy Intermediate-Scale Quantum Computers
 Synthesis Lectures on Computer Architecture)*".
