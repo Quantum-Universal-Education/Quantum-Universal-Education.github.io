@@ -14,8 +14,11 @@ tags:
   - Bell state
 author: Alberto Maldonado Romo
 ---
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
 
-"The Bell state, ![eq_bell_state.png](/assets/quantum_programs/1_bell_state/eq_bell_state.png), is of particular interest: if we pick any of the two qubits to measure, we would obtain outcome j0i or j1i with equal probability; and the other qubit is guaranteed to be measured in the same state as the first. This “correlation” between the two qubits are called quantum entanglement. However, this is not to be confused with two correlated random bits each with equal probability of being observed |0> or |1> . 
+"The Bell state,
+$$ | x_1 x_2 > = \frac{1}{\sqrt{2}} | 00 > + \frac{1}{\sqrt{2}} | 11 > $$ 
+, is of particular interest: if we pick any of the two qubits to measure, we would obtain outcome j0i or j1i with equal probability; and the other qubit is guaranteed to be measured in the same state as the first. This “correlation” between the two qubits are called quantum entanglement. However, this is not to be confused with two correlated random bits each with equal probability of being observed |0> or |1> . 
 Proof of the distinction is omitted for the sake of brevity; we refer the interested reader to
 the studies on “local hidden variables” theory, Bell’s inequality, and the CHSH
 game. In essence, the measurement of one qubit intrinsically alters and determines the
