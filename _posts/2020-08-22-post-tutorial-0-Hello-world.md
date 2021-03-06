@@ -134,7 +134,7 @@ program.draw(output="mpl")
 
 
 
-The simulation does nothing but measure the qubit in its base state $$|0>$$, which is the value that is set as the standard for each qubit.
+The simulation does nothing but measure the qubit in its base state |0>, which is the value that is set as the standard for each qubit.
 
 Circuit simulation is performed by selecting a backend as 'qasm_simulator
 
@@ -153,7 +153,7 @@ print( job.result().get_counts() )
     {'0': 1024}
 
 
-Another way to identify the output values from a histogram that will display the total of measurements in the $|0>$ state
+Another way to identify the output values from a histogram that will display the total of measurements in the |0> state
 
 
 ```python
