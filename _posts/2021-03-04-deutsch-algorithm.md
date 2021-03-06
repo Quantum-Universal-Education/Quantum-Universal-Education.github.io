@@ -83,7 +83,7 @@ qc.draw(output='mpl', style=style)
 
 
 
-The initial state is $$ | 0 > |0>, \text{ we apply the } x \text{gate to the second qubit and obtain } | \psi_{0} > =  | 0 > | 1 >$$
+The initial state is $$ | 0 > | 0 >$$,  we apply the  $$x$$ gate to the second qubit and obtain  $$| \psi_{0} > =  | 0 > | 1 >$$
 
 $$ | \psi_{0} >_{AB} =  | 0  >_{A} X | 0  >_{B}=  | 0  >_{A} | 1 >_{B} $$
 
@@ -104,16 +104,16 @@ qc.draw(output='mpl', style=style)
 
 
 
-After the Hadamard gate is apply to $| \psi_{0}>_{AB}$, the state becomes
+After the Hadamard gate is apply to $$| \psi_{0}>_{AB}$$, the state becomes
 
 $$ | \psi_{1} >_{AB} = (H \otimes H) | \psi_{0}>_{AB} = H | 0 >_{A} H | 1 >_{B}= \Big( \frac{1}{\sqrt{2}} | 0 >_{A} + \frac{1}{\sqrt{2}} | 1 >_{A} \Big) \Big( \frac{1}{\sqrt{2}} | 0 >_{B}  - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)$$
 
 
 $$ =  \frac{1}{2} | 0 >_{A} \Big(   | 0 >_{B} -  | 1 >_{B} \Big)  +  \frac{1}{2} | 1 >_{A} \Big(  | 0 >_{B} -  | 1 >_{B} \Big)  $$
 
-## Oracle $U_{f}$
+## Oracle $$U_{f}$$
 
-Applying the $U_{f}$ oracle, we have the state:
+Applying the $$U_{f}$$ oracle, we have the state:
 
 $$ | \psi_{2} >_{AB}  = U_{f} | \psi_{1} >_{AB}  =  \frac{1}{2} | 0 >_{A}  \Big(  | 0 \oplus f(0) >_{B} -  | 1 \oplus f(0) >_{B} \Big)  +  \frac{1}{2} | 1 >_{A}  \Big( | 0 \oplus f(1)>_{B} -  | 1 \oplus f(1) >_{B} \Big)  $$
 
@@ -126,9 +126,9 @@ $$--------------------------------------------------------------------------$$
 
 $$  =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}}  | 0 >_{A}  +   \frac{1}{\sqrt{2}} (-1)^{f(0) \oplus f(1)} | 1 >_{A}  \Big)  \Big( \frac{1}{\sqrt{2}} | 0 >_{B} - \frac{1}{\sqrt{2}}| 1 >_{B} \Big)  $$
 
-## Function f(x) constant
+## Function $$f(x)$$ constant
 
-If $U_{f}$ is constant $f(0) \oplus f(1) = 0$ then
+If $$U_{f}$$ is constant $$f(0) \oplus f(1) = 0$$ then
 
 $$ | \psi_{2} >_{AB}  =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}}  | 0 >_{A}  +   \frac{1}{\sqrt{2}} (-1)^{0} | 1 >_{A}  \Big) \Big( \frac{1}{\sqrt{2}}| 0 >_{B} - \frac{1}{\sqrt{2}}| 1 >_{B} \Big)  =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}}  | 0 >_{A}  +   \frac{1}{\sqrt{2}} | 1 >_{A}  \Big) \Big( \frac{1}{\sqrt{2}}| 0 >_{B} - \frac{1}{\sqrt{2}}| 1 >_{B} \Big)  $$
 
@@ -156,11 +156,11 @@ $$  =  (-1)^{f(0)} |  0 >_{A} \Big( \frac{1}{\sqrt{2}} |  0>_{B} - \frac{1}{\sqr
 
 ```
 
-The probability of measure $| 0  >_{A}$ in the first qubit is 1. This means that for a **constant** function, a measurement of the first qubit is certain to return $| 0  >$
+The probability of measure $$| 0  >_{A}$$ in the first qubit is 1. This means that for a **constant** function, a measurement of the first qubit is certain to return $$| 0  >$$
 
-## Function f(x) balanced
+## Function $$f(x)$$ balanced
 
-If $U_{f}$ is balance $f(0) \oplus f(1) = 1$ then
+If $$U_{f}$$ is balance $$f(0) \oplus f(1) = 1$$ then
 
 $$ | \psi_{2}>_{AB}  =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}}  | 0 >_{A}  +   \frac{1}{\sqrt{2}} (-1)^{1} | 1 >_{A}  \Big) \Big( \frac{1}{\sqrt{2}}| 0 >_{B} - \frac{1}{\sqrt{2}}| 1 >_{B} \Big) $$
 
@@ -187,7 +187,7 @@ $$--------------------------------------------$$
 
 $$  =  (-1)^{f(0)} | 1 >_{A} \Big( \frac{1}{\sqrt{2}}| 0 >_{B} - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)  $$
 
-The probability of measure $| 1  >_{A}$ in the first qubit is 1. This means that for a **balanced** function, a measurement of the first qubit is certain to return $| 1  >$
+The probability of measure $$| 1  >_{A}$$ in the first qubit is 1. This means that for a **balanced** function, a measurement of the first qubit is certain to return $$| 1  >$$
 
 ## Implemented a balanced oracle (CNOT)
 
@@ -236,7 +236,7 @@ qc.draw(output='mpl', style=style)
 
 $$  | \psi_{2} >_{AB}  = CNOT | \psi_{1} >_{AB} =  \frac{1}{2} \Big(  | 0 0 > - | 0 1> + | 1 1 > - | 1 0 > \Big)= | -  >_{A} | - >_{B}    = | - - >_{AB}   $$
 
-## Apply the Hadamard gate to the first ($A$) qubit
+## Apply the Hadamard gate to the first ($$A$$) qubit
 
 
 ```python
@@ -300,7 +300,7 @@ def oracleBalance1(qcir):
     return qcir  
 ```
 
-Balanced oracle 2 : CNOT ($I \otimes x$)
+Balanced oracle 2 : CNOT ($$I \otimes x$$)
 
 
 ```python
@@ -312,7 +312,7 @@ def oracleBalance2(qcir):
     return qcir  
 ```
 
-Constant oracle 1: ($I \otimes x$)
+Constant oracle 1: ($$I \otimes x$$)
 
 
 ```python
@@ -324,7 +324,7 @@ def oracleConstant1(qcir):
     return qcir  
 ```
 
-Constant oracle 2: ($I \otimes I$)
+Constant oracle 2: ($$I \otimes I$$)
 
 
 ```python
