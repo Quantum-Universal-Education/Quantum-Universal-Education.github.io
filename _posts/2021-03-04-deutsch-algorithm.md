@@ -104,7 +104,7 @@ qc.draw(output='mpl', style=style)
 
 
 
-$$ \text{After the Hadamard gate is apply to } \psi_{0}>_{AB}, \text{ the state becomes}$$
+$$ \text{After the Hadamard gate is apply to } | \psi_{0}>_{AB}, \text{ the state becomes}$$
 
 $$ | \psi_{1} >_{AB} = (H \otimes H) | \psi_{0}>_{AB} = H | 0 >_{A} H | 1 >_{B}= \Big( \frac{1}{\sqrt{2}} | 0 >_{A} + \frac{1}{\sqrt{2}} | 1 >_{A} \Big) \Big( \frac{1}{\sqrt{2}} | 0 >_{B}  - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)$$
 
@@ -117,7 +117,7 @@ Applying the $$U_{f}$$ oracle, we have the state:
 
 $$ | \psi_{2} >_{AB}  = U_{f} | \psi_{1} >_{AB}  =  \frac{1}{2} | 0 >_{A}  \Big(  | 0 \oplus f(0) >_{B} -  | 1 \oplus f(0) >_{B} \Big)  +  \frac{1}{2} | 1 >_{A}  \Big( | 0 \oplus f(1)>_{B} -  | 1 \oplus f(1) >_{B} \Big)  $$
 
-Using $ | 0 \oplus a > -  | 1 \oplus a > = (-1)^{a} (|  0 > - | 1 > ) $
+Using $$ | 0 \oplus a > -  | 1 \oplus a > = (-1)^{a} (|  0 > - | 1 > ) $$
 
 $$  | \psi_{2}>_{AB}  =  \frac{1}{2} (-1)^{f(0)} | 0 >_{A}  \Big( | 0 >_{B} - | 1 >_{B} \Big)  +  \frac{1}{2} (-1)^{f(1)} | 1 >_{A} \Big( | 0 >_{B} -  |1 >_{B} \Big)  =  \Big( \frac{1}{\sqrt{2}} (-1)^{f(0)} | 0 >_{A}  +   \frac{1}{\sqrt{2}} (-1)^{f(1)} | 1 >_{A}  \Big)  \Big( \frac{1}{\sqrt{2}} | 0 >_{B} - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)  $$
 
