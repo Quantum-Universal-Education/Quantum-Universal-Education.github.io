@@ -18,7 +18,7 @@ author:
   - Harshit Garg Q
 ---
 
-
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 ![cover.png](/assets/quantum_programs/0_hello_world/cover_hw.png)
 
 # Quantum enviroments
