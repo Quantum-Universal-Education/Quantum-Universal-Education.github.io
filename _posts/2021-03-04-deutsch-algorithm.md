@@ -83,7 +83,7 @@ qc.draw(output='mpl', style=style)
 
 
 
-The initial state is $$ | 0 > | 0 >$$,  we apply the  $$x$$ gate to the second qubit and obtain  $$| \psi_{0} > =  | 0 > | 1 >$$
+$$\text{The initial state is} | 0 > | 0 >,  \text{we apply the } x \text{gate to the second qubit and obtain } | \psi_{0} > =  | 0 > | 1 >$$
 
 $$ | \psi_{0} >_{AB} =  | 0  >_{A} X | 0  >_{B}=  | 0  >_{A} | 1 >_{B} $$
 
