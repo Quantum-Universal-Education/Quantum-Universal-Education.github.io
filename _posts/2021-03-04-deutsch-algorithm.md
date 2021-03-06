@@ -117,8 +117,7 @@ $$ =  \frac{1}{2} | 0 >_{A} \Big(   | 0 >_{B} -  | 1 >_{B} \Big)  +  \frac{1}{2}
 
 Applying the $$U_{f}$$ oracle, we have the state:
 
-$$ | \psi_{2} >_{AB}  = U_{f} | \psi_{1} >_{AB}  =  $$
-$$ \frac{1}{2} | 0 >_{A}  \Big(  | 0 \oplus f(0) >_{B} -  | 1 \oplus f(0) >_{B} \Big)  +  \frac{1}{2} | 1 >_{A}  \Big( | 0 \oplus f(1)>_{B} -  | 1 \oplus f(1) >_{B} \Big)  $$
+$$ | \psi_{2} >_{AB}  = U_{f} | \psi_{1} >_{AB}  =  \frac{1}{2} | 0 >_{A}  \Big(  | 0 \oplus f(0) >_{B} -  | 1 \oplus f(0) >_{B} \Big)  +  \frac{1}{2} | 1 >_{A}  \Big( | 0 \oplus f(1)>_{B} -  | 1 \oplus f(1) >_{B} \Big)  $$
 
 $$ \text{Using } | 0 \oplus a > -  | 1 \oplus a > = (-1)^{a} (|  0 > - | 1 > ) $$
 
@@ -161,8 +160,9 @@ $$  =  (-1)^{f(0)} |  0 >_{A} \Big( \frac{1}{\sqrt{2}} |  0>_{B} - \frac{1}{\sqr
 
 ```
 
-$$\text{The probability of measure} | 0  >_{A} \text{ in the first qubit is 1.} $$
-This means that for a  **constant**  function,a measurement of the first qubit is certain to return 
+The probability of measure} 
+$$ | 0  >_{A} $$
+in the first qubit is 1. This means that for a  **constant**  function,a measurement of the first qubit is certain to return 
 $$ | 0  > $$
 
 ## Function $$f(x)$$ balanced
