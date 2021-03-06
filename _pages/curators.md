@@ -56,4 +56,13 @@ title: "Curators"
 <div style="clear:both"></div>
 </div>
 
+<div style="width: 50vw; padding: 20px; margin: 10px; clear: both">
+<img style="float: right; padding: 20px" src="/assets/images/biopics/alberto_r.png" width="250" height="250"/>
+<h1>Alberto Maldonado Romo</h1>
+<ul>
+    <li><a href="/blog/deutsch-algorithm">The Deutsch Algorithm</a></li>
+</ul>
+<div style="clear:both"></div>
+</div>
+
 
