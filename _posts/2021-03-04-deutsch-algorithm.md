@@ -117,7 +117,7 @@ Applying the $$U_{f}$$ oracle, we have the state:
 
 $$ | \psi_{2} >_{AB}  = U_{f} | \psi_{1} >_{AB}  =  \frac{1}{2} | 0 >_{A}  \Big(  | 0 \oplus f(0) >_{B} -  | 1 \oplus f(0) >_{B} \Big)  +  \frac{1}{2} | 1 >_{A}  \Big( | 0 \oplus f(1)>_{B} -  | 1 \oplus f(1) >_{B} \Big)  $$
 
-Using $$ | 0 \oplus a > -  | 1 \oplus a > = (-1)^{a} (|  0 > - | 1 > ) $$
+$$ \text{Using } | 0 \oplus a > -  | 1 \oplus a > = (-1)^{a} (|  0 > - | 1 > ) $$
 
 $$  | \psi_{2}>_{AB}  =  \frac{1}{2} (-1)^{f(0)} | 0 >_{A}  \Big( | 0 >_{B} - | 1 >_{B} \Big)  +  \frac{1}{2} (-1)^{f(1)} | 1 >_{A} \Big( | 0 >_{B} -  |1 >_{B} \Big)  =  \Big( \frac{1}{\sqrt{2}} (-1)^{f(0)} | 0 >_{A}  +   \frac{1}{\sqrt{2}} (-1)^{f(1)} | 1 >_{A}  \Big)  \Big( \frac{1}{\sqrt{2}} | 0 >_{B} - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)  $$
 
@@ -132,7 +132,7 @@ If $$U_{f}$$ is constant $$f(0) \oplus f(1) = 0$$ then
 
 $$ | \psi_{2} >_{AB}  =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}}  | 0 >_{A}  +   \frac{1}{\sqrt{2}} (-1)^{0} | 1 >_{A}  \Big) \Big( \frac{1}{\sqrt{2}}| 0 >_{B} - \frac{1}{\sqrt{2}}| 1 >_{B} \Big)  =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}}  | 0 >_{A}  +   \frac{1}{\sqrt{2}} | 1 >_{A}  \Big) \Big( \frac{1}{\sqrt{2}}| 0 >_{B} - \frac{1}{\sqrt{2}}| 1 >_{B} \Big)  $$
 
-Applying the Hadamard gate to the first ($A$) qubit 
+Applying the Hadamard gate to the first ($$A$$) qubit 
 
 $$  | \psi_{3} >_{AB} =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}}  H | 0 >_{A}  +   \frac{1}{\sqrt{2}} H | 1 >_{A}  \Big) \Big( \frac{1}{\sqrt{2}} | 0 >_{B} - \frac{1}{\sqrt{2}} | 1 >_{B} \Big) $$
 
@@ -156,7 +156,7 @@ $$  =  (-1)^{f(0)} |  0 >_{A} \Big( \frac{1}{\sqrt{2}} |  0>_{B} - \frac{1}{\sqr
 
 ```
 
-The probability of measure $$| 0  >_{A}$$ in the first qubit is 1. This means that for a **constant** function, a measurement of the first qubit is certain to return $$| 0  >$$
+$$\text{The probability of measure} | 0  >_{A} \text{ in the first qubit is 1. This means that for a **constant** function, a measurement of the first qubit is certain to return } | 0  >$$
 
 ## Function $$f(x)$$ balanced
 
@@ -169,7 +169,7 @@ $$--------------------------------------------$$
 
 $$  =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}} | 0 >_{A}  -  \frac{1}{\sqrt{2}} | 1 >_{A}   \Big) \Big( \frac{1}{\sqrt{2}}| 0 >_{B}  - \frac{1}{\sqrt{2}}| 1 >_{B}  \Big)  $$
 
-Apply the Hadamard gate to the first ($A$) qubit
+Apply the Hadamard gate to the first ($$A$$) qubit
 
 $$  | \psi_{3}>_{AB}  =  (-1)^{f(0)} \Big( \frac{1}{\sqrt{2}}  H |  0 >_{A}  -   \frac{1}{\sqrt{2}} H | 1 >_{A}  \Big) \Big( \frac{1}{\sqrt{2}} |  0 >_{B} - \frac{1}{\sqrt{2}} |  1 >_{B} \Big)  $$
 
@@ -187,7 +187,7 @@ $$--------------------------------------------$$
 
 $$  =  (-1)^{f(0)} | 1 >_{A} \Big( \frac{1}{\sqrt{2}}| 0 >_{B} - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)  $$
 
-The probability of measure $$| 1  >_{A}$$ in the first qubit is 1. This means that for a **balanced** function, a measurement of the first qubit is certain to return $$| 1  >$$
+$$ \text{The probability of measure } | 1  >_{A} \text{in the first qubit is 1. This means that for a **balanced** function, a measurement of the first qubit is certain to return } | 1  >$$
 
 ## Implemented a balanced oracle (CNOT)
 
@@ -253,7 +253,7 @@ qc.draw(output='mpl', style=style)
 
 $$  | \psi_{3} >_{AB}  = (H \otimes I ) | \psi_{2} >_{AB} =   (H| -  >_{A}) | - >_{B}   = | 1  >_{A} | - >_{B}   $$
 
-The probability of measure $| 1  >_{A}$ in the first qubit is 1. Confirming that CNOT is a balacend oracle.
+The probability of measure $$| 1  >_{A}$$ in the first qubit is 1. Confirming that CNOT is a balacend oracle.
 
 
 ```python
@@ -285,7 +285,7 @@ plot_histogram(answer)
 
 
 
-As expected we obtain $1$ with probability 1
+As expected we obtain $$1$$ with probability 1
 
 ## Putting all together in a function
 
@@ -447,7 +447,7 @@ plot_histogram(answerC1)
 
 
 
-![png](output_94_0.png)
+![png](/assets/quantum_programs/deutsch_algorithm/output_94_0.png)
 
 
 
