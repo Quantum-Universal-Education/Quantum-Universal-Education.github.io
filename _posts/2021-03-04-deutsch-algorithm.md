@@ -11,7 +11,11 @@ author:
   - Victor Onofre
 ---
 
-The problem solved by the Deutsch algorithm is the following. We are given a device that computes some function $f: \{0,1 \} \rightarrow \{0,1\}$. We can think of the device as a black box or "oracle".This means that we can apply the circuit to obtain values of $f(x)$ for given inputs $x$, but we cannot gain any information about the inner workings of the circuit to learn about the function $f$. There are 4 possible funcions from $\{0,1 \}$ to $\{0,1\}$, $f_{0}$, $f_{1}$, $f_{2}$ and $f_{3}$.
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+The problem solved by the Deutsch algorithm is the following. We are given a device that computes some function $$f: \{0,1 \} \rightarrow \{0,1\}$$. We can think of the device as a black box or "oracle".This means that we can apply the circuit to obtain values of $$f(x)$$ for given inputs $$x$$, but we cannot gain any information about the inner workings of the circuit to learn about the function $$f$$. There are 4 possible funcions from $$\{0,1 \}$$ to $$\{0,1\}$$, $$f_{0}$$, $$f_{1}$$, $$f_{2}$$ and $$f_{3}$$.
 
 **$f(x)$ is constant $\Big( f_{i}(0) = f_{i}(1) \Big)$ or balanced $\Big(  f_{i}(0) \neq f_{i}(1) \Big) $?**
 
