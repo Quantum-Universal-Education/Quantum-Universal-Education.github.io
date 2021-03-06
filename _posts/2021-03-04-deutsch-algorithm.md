@@ -104,7 +104,7 @@ qc.draw(output='mpl', style=style)
 
 
 
-$$ \text{After the Hadamard gate is apply to } | \psi_{0}>_{AB}, \text{ the state becomes}$$
+$$ \text{After, applying the Hadamard gate to } | \psi_{0}>_{AB}, \text{ the state becomes}$$
 
 $$ | \psi_{1} >_{AB} = (H \otimes H) | \psi_{0}>_{AB} = H | 0 >_{A} H | 1 >_{B}= \Big( \frac{1}{\sqrt{2}} | 0 >_{A} + \frac{1}{\sqrt{2}} | 1 >_{A} \Big) \Big( \frac{1}{\sqrt{2}} | 0 >_{B}  - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)$$
 
@@ -156,7 +156,9 @@ $$  =  (-1)^{f(0)} |  0 >_{A} \Big( \frac{1}{\sqrt{2}} |  0>_{B} - \frac{1}{\sqr
 
 ```
 
-$$\text{The probability of measure} | 0  >_{A} \text{ in the first qubit is 1. This means that for a } **constant** \text{ function, a measurement of the first qubit is certain to return } | 0  >$$
+$$\text{The probability of measure} | 0  >_{A} \text{ in the first qubit is 1.} $$
+This means that for a  **constant**  function,
+$$\texta measurement of the first qubit is certain to return } | 0  >$$
 
 ## Function $$f(x)$$ balanced
 
