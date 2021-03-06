@@ -15,7 +15,7 @@ author:
 
 
 
-The problem solved by the Deutsch algorithm is the following. We are given a device that computes some function $$f: \{0,1 \} \rightarrow \{0,1\}$$. We can think of the device as a black box or "oracle".This means that we can apply the circuit to obtain values of $$f(x)$$ for given inputs $$x$$, but we cannot gain any information about the inner workings of the circuit to learn about the function $$f$$. There are 4 possible funcions from $$\{0,1 \}$$ to $$\{0,1\}$$, $$f_{0}$$, $$f_{1}$$, $$f_{2}$$ and $$f_{3}$$.
+The problem solved by the Deutsch algorithm is the following. We are given a device that computes some function $$f: \{0,1 \} \rightarrow \{0,1\}$$. We can think of the device as a black box or "oracle".This means that we can apply the circuit to obtain values of $$f(x)$$ for given inputs $$x$$, but we cannot gain any information about the inner workings of the circuit to learn about the function $$f$$. There are 4 possible functions from $$\{0,1 \}$$ to $$\{0,1\}$$, $$f_{0}$$, $$f_{1}$$, $$f_{2}$$ and $$f_{3}$$.
 
 **$$f(x)$$ is constant $$\Big( f_{i}(0) = f_{i}(1) \Big)$$ or balanced $$\Big(  f_{i}(0) \neq f_{i}(1) \Big) $$?**
 
@@ -26,7 +26,7 @@ The problem solved by the Deutsch algorithm is the following. We are given a dev
 |          $$f_{2}$$         |           1          |            0           |                        1                       |
 |          $$f_{3}$$         |           1          |            1           |                        0                       ||
 
-The problem is to determine the value of $$f_{i}(0) \oplus  f_{i}(1)$$. If we determine that $$f(0) \oplus f(1) = 0$$, then we known that $$f$$ is constant $$\Big( f(0) = f(1) \Big) $$. If  $$f(0) \oplus f(1) = 1$$  then we known that $$f$$ is balanced $$\Big(  f(0) \neq f(1) \Big) $$. In particular $$f_{0}$$ and $$f_{3}$$ are constant and $$f_{1}$$ and $$f_{2}$$ are balanced.
+The problem is to determine the value of $$f_{i}(0) \oplus  f_{i}(1)$$. If we determine that $$f(0) \oplus f(1) = 0$$, then we know that $$f$$ is constant $$\Big( f(0) = f(1) \Big) $$. If  $$f(0) \oplus f(1) = 1$$  then we know that $$f$$ is balanced $$\Big(  f(0) \neq f(1) \Big) $$. In particular $$f_{0}$$ and $$f_{3}$$ are constant and $$f_{1}$$ and $$f_{2}$$ are balanced.
 
 Classically, **two** evaluations or query of the function are necessary to answer the question. If only one evaluation is permitted, the function could still be either constant or balanced regardless of the input and output obtained.
 
@@ -83,7 +83,7 @@ qc.draw(output='mpl', style=style)
 
 
 
-The initial stae is $$ | 0 > |0>$$, we apply the $$x$$ gate to the second qubit and obtain $$ | \psi_{0} > =  | 0 > | 1 >$$
+The initial state is $$ | 0 > |0>, \text{ we apply the } x \text{gate to the second qubit and obtain } | \psi_{0} > =  | 0 > | 1 >$$
 
 $$ | \psi_{0} >_{AB} =  | 0  >_{A} X | 0  >_{B}=  | 0  >_{A} | 1 >_{B} $$
 
