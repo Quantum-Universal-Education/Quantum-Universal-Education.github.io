@@ -26,10 +26,8 @@ permalink: /areas/
 
 <div class="w3-container w3-padding-32" id="projects">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Areas of Quantum Science</h2>
-	\\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
-	$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-	\\( ax^2 + \sqrt{bx} + c = 0 \\)
-	\(ax^2 + \sqrt{bx} + c = 0 \)
+	$$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$
+	$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $
   </div>
 
 
