@@ -26,7 +26,6 @@ permalink: /areas/
 
 <div class="w3-container w3-padding-32" id="projects">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Areas of Quantum Science</h2>
-**$$f(x) \text{  is constant  } \Big( f_{i}(0) = f_{i}(1) \Big) \text{  or balanced } $$\Big(  f_{i}(0) \neq f_{i}(1) \Big) $$?**
 
   </div>
 
