@@ -491,6 +491,8 @@ plot_histogram(answerC2)
 ![png](/assets/quantum_programs/deutsch_algorithm/output_97_0.png)
 
 
+Source code: https://github.com/victor-onofre/Quantum_Algorithms/blob/main/Deutsch_Algorithm.ipynb
+
 
 ### References:
 
@@ -502,3 +504,5 @@ plot_histogram(answerC2)
 ```python
 
 ```
+## Author 
+Victor Onofre, [GitHub](https://github.com/victor-onofre/), [Twitter](https://twitter.com/VicOnofre1)
