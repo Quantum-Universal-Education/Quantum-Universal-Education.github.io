@@ -119,7 +119,8 @@ $$ | \psi_{2} >_{AB}  = U_{f} | \psi_{1} >_{AB}  =  \frac{1}{2} | 0 >_{A}  \Big(
 
 $$ \text{Using } | 0 \oplus a > -  | 1 \oplus a > = (-1)^{a} (|  0 > - | 1 > ) $$
 
-$$  | \psi_{2}>_{AB}  =  \frac{1}{2} (-1)^{f(0)} | 0 >_{A}  \Big( | 0 >_{B} - | 1 >_{B} \Big)  +  \frac{1}{2} (-1)^{f(1)} | 1 >_{A} \Big( | 0 >_{B} -  |1 >_{B} \Big)  =  \Big( \frac{1}{\sqrt{2}} (-1)^{f(0)} | 0 >_{A}  +   \frac{1}{\sqrt{2}} (-1)^{f(1)} | 1 >_{A}  \Big)  \Big( \frac{1}{\sqrt{2}} | 0 >_{B} - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)  $$
+$$  | \psi_{2}>_{AB}  =  \frac{1}{2} (-1)^{f(0)} | 0 >_{A}  \Big( | 0 >_{B} - | 1 >_{B} \Big)  +  \frac{1}{2} (-1)^{f(1)} | 1 >_{A} \Big( | 0 >_{B} -  |1 >_{B} \Big)$$
+$$=  \Big( \frac{1}{\sqrt{2}} (-1)^{f(0)} | 0 >_{A}  +   \frac{1}{\sqrt{2}} (-1)^{f(1)} | 1 >_{A}  \Big)  \Big( \frac{1}{\sqrt{2}} | 0 >_{B} - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)  $$
 
 $$--------------------------------------------------------------------------$$
 
@@ -158,7 +159,7 @@ $$  =  (-1)^{f(0)} |  0 >_{A} \Big( \frac{1}{\sqrt{2}} |  0>_{B} - \frac{1}{\sqr
 
 $$\text{The probability of measure} | 0  >_{A} \text{ in the first qubit is 1.} $$
 This means that for a  **constant**  function,
-$$\texta measurement of the first qubit is certain to return } | 0  >$$
+$$\text{a measurement of the first qubit is certain to return } | 0  >$$
 
 ## Function $$f(x)$$ balanced
 
@@ -189,7 +190,9 @@ $$--------------------------------------------$$
 
 $$  =  (-1)^{f(0)} | 1 >_{A} \Big( \frac{1}{\sqrt{2}}| 0 >_{B} - \frac{1}{\sqrt{2}} | 1 >_{B} \Big)  $$
 
-$$ \text{The probability of measure } | 1  >_{A} \text{in the first qubit is 1. This means that for a } **balanced** \text{ function, a measurement of the first qubit is certain to return } | 1  >$$
+$$ \text{The probability of measure } | 1  >_{A} \text{in the first qubit is 1.}$$
+This means that for a  **balanced**  function, 
+$$\text{ a measurement of the first qubit is certain to return } | 1  >$$
 
 ## Implemented a balanced oracle (CNOT)
 
