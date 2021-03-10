@@ -27,12 +27,12 @@ permalink: /areas/
   background-color: white; 
   color: black; 
   border: 2px solid #0082a4;
-  width: 50%;
+  width: 48%;
 }
 .qontributor:hover {
   background-color: #0082a4;
   color: white;
-  width: 50%;
+  width: 48%;
 }
 
 
@@ -40,12 +40,12 @@ permalink: /areas/
   background-color: white; 
   color: black; 
   border: 2px solid #167e2d;
-  width: 50%;
+  width: 48%;
 }
 .qurator:hover {
   background-color: #167e2d;
   color: white;
-  width: 50%;
+  width: 480%;
 }
 
 </style>
@@ -65,11 +65,11 @@ permalink: /areas/
 
 <div class="w3-container w3-padding-32" >	
   <div class="w3-container w3-padding-32" >
-   <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor: Contribute a new or newly open-source learning resource</button>
-   <button class="button qurator">Qurator: Review contributions and help make them accessible</button>
+   <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>  Contribute a new or newly open-source learning resource</button>
+   <button class="button qurator" onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qurator: <br> Review contributions and help make them accessible</button>
   </div>
 	
-<h4>If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!<h4>
+<h4>If you have an idea not exactly one of the options above, suggest it via [our Discord server](https://discord.gg/NDm9e9W) after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
 </div>
 
 
