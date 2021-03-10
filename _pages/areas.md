@@ -215,12 +215,11 @@ permalink: /areas/
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >	
   <div class="w3-container w3-padding-32" >
-   <a href="#">Qontributor List</a>
-   <a href="#">Qurator List</a>
+   <a href="#" style="width: 48%;">Qontributor List</a>
+   <a href="#" style="width: 48%;">Qurator List</a>
 
   </div>
 	
-<h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
 </div>
 
 
