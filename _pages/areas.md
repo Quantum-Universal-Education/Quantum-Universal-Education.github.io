@@ -68,8 +68,6 @@ permalink: /areas/
    <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>Contribute a new open-source learning resource</button>
    <button class="button qurator" onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qurator: <br> Review contributions and help make them accessible</button>
   </div>
-	
-<h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
 </div>
 
 
@@ -214,6 +212,23 @@ permalink: /areas/
                     </div>
                 </div>
 </div>
+
+<div class="w3-container w3-padding-32" style="width: 65vw" >	
+  <div class="w3-container w3-padding-32" >
+   <a href="#">Qontributor List</a>
+   <a href="#">Qurator List</a>
+
+  </div>
+	
+<h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
+</div>
+
+
+
+<div class="w3-container w3-padding-32" style="width: 65vw" >		
+<h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
+</div>
+
 <!-- End page content -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
 <script src="/assets/js/multislider.js"></script> 
