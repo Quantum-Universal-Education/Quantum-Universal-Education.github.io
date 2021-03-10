@@ -65,7 +65,7 @@ permalink: /areas/
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >	
   <div class="w3-container w3-padding-32" >
-   <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>  Contribute a new or newly open-source learning resource</button>
+   <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>Contribute a new open-source learning resource</button>
    <button class="button qurator" onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qurator: <br> Review contributions and help make them accessible</button>
   </div>
 	
