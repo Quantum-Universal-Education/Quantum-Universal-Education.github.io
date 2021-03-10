@@ -1,4 +1,4 @@
-  Pongo la solicitud ---
+ ---
 permalink: /areas/
 ---
 
