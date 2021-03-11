@@ -219,8 +219,8 @@ permalink: /areas/
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >	
-<a href="#" style="width: 48%;color:#6d2f15">Qontributor List</a>	
-  <div id="qontributor_list" class="w3-container w3-padding-32" >
+<button onclick="qontributor_section()" style="color:#6d2f15">Qontributor List</button>	
+  <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
 	  
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford </h5>
 <br>
@@ -261,9 +261,9 @@ permalink: /areas/
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >
- <a href="#" style="width: 48%;color:#005853;">Qurator List</a>
-<div id="qurator_list" class="w3-container w3-padding-32" >
-<h5>Sanskruti Wathare, CSE undergrad student
+<button onclick="qurator_section()" style="color:#6d2f15">Qurator List</button>	
+<div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
+	<h5>Sanskruti Wathare, CSE undergrad student </h5>
 <br>
 <h5>Praveen J, Undergraduate at the Indian Institute of Science, Bangalore</h5>
 <br>
@@ -273,10 +273,8 @@ permalink: /areas/
 <br>
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford</h5>
 <br>
-<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5>
-  
-</div>
-	
+<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5> 
+</div>	
 </div>
 
 
@@ -293,3 +291,25 @@ $('#mixedSlider').multislider({
 		interval: 3000
 });
 </script>
+
+<script>
+
+function qontributor_section() {
+  var x = document.getElementById("qontributor_list");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function qurator_section() {
+  var x = document.getElementById("qurator_list");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
