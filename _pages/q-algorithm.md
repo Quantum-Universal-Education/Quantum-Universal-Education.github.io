@@ -9,49 +9,6 @@ permalink: /Quantum Algorithms/
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <style>
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.qontributor {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #6d2f15;
-  width: 48%;
-}
-.qontributor:hover {
-  background-color: #6d2f15;
-  color: white;
-  width: 48%;
-}
-
-
-.qurator {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #005853;
-  width: 48%;
-}
-.qurator:hover {
-  background-color: #005853;
-  color: white;
-  width: 48%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .column {
   float: left;
   width: 50%;
