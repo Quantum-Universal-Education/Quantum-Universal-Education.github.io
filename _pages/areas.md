@@ -48,6 +48,24 @@ permalink: /areas/
   width: 48%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
 </style>
 <!-- Header -->
 
@@ -73,10 +91,16 @@ permalink: /areas/
 
 <div  class="w3-container w3-padding-32" style="width: 55vw">
 <h4> you get a free t-shirt shipped to you! Limit one t-shirt per contributor or curator.  <a href="https://fullstackquantumcomputation.tech/t-shirt-contest/">Logo and t-shirt design contest</a> was throughout the month of August 2020 and the final design is below! </h4>
-  <div class="column" style="display: block;margin-left: auto;margin-right: auto;">
-    <img src="/assets/images/designs/fsqc_shirt_sky-coffee.png" alt="quantum computing hardwares schroedinger's cat shirt design sky coffee" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+<div class="row">
+  <div class="column">
+   <img src="/assets/images/designs/fsqc_shirt_sky-coffee.png" alt="quantum computing hardwares schroedinger's cat shirt design sky coffee" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+  </div>
+  <div class="column">
     <img src="/assets/images/designs/fsqc_shirt_pale-teal.png" alt="quantum computing hardwares schroedinger's cat shirt design pale teal" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
   </div>
+
+</div>	
+	
 </div>
 
 
