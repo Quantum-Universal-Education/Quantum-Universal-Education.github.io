@@ -54,7 +54,7 @@ permalink: /areas/
 
 .column {
   float: left;
-  width: 33.33%;
+  width: 50%;
   padding: 5px;
 }
 
@@ -92,10 +92,10 @@ permalink: /areas/
 <div  class="w3-container w3-padding-32" style="width: 55vw">
 <h4> you get a free t-shirt shipped to you! Limit one t-shirt per contributor or curator.  <a href="https://fullstackquantumcomputation.tech/t-shirt-contest/">Logo and t-shirt design contest</a> was throughout the month of August 2020 and the final design is below! </h4>
 <div class="row">
-  <div class="column">
+  <div class="column" style="width: 50%;">
    <img src="/assets/images/designs/fsqc_shirt_sky-coffee.png" alt="quantum computing hardwares schroedinger's cat shirt design sky coffee" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
   </div>
-  <div class="column">
+  <div class="column" style="width: 50%;">
     <img src="/assets/images/designs/fsqc_shirt_pale-teal.png" alt="quantum computing hardwares schroedinger's cat shirt design pale teal" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
   </div>
 
@@ -243,7 +243,7 @@ permalink: /areas/
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >	
-<button class="button" onclick="qontributor_section()" style="color:#6d2f15">Qontributor List</button>	
+<button class="button" onclick="qontributor_section()" style="background-color: transparent;color:#6d2f15">Qontributor List</button>	
   <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
 	  
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford </h5>
@@ -285,7 +285,7 @@ permalink: /areas/
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >
-<button class="button" onclick="qurator_section()" style="color:#6d2f15">Qurator List</button>	
+<button class="button" onclick="qurator_section()" style="background-color: transparent;color:#6d2f15">Qurator List</button>	
 <div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
 	<h5>Sanskruti Wathare, CSE undergrad student </h5>
 <br>
