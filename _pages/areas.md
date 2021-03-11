@@ -26,11 +26,11 @@ permalink: /areas/
 .qontributor {
   background-color: white; 
   color: black; 
-  border: 2px solid #0082a4;
+  border: 2px solid #6d2f15;
   width: 48%;
 }
 .qontributor:hover {
-  background-color: #0082a4;
+  background-color: #6d2f15;
   color: white;
   width: 48%;
 }
@@ -39,11 +39,11 @@ permalink: /areas/
 .qurator {
   background-color: white; 
   color: black; 
-  border: 2px solid #167e2d;
+  border: 2px solid #005853;
   width: 48%;
 }
 .qurator:hover {
-  background-color: #167e2d;
+  background-color: #005853;
   color: white;
   width: 48%;
 }
@@ -219,64 +219,63 @@ permalink: /areas/
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >	
-<a href="#" style="width: 48%;">Qontributor List</a>	
-  <div class="w3-container w3-padding-32" >
+<a href="#" style="width: 48%;color:#6d2f15">Qontributor List</a>	
+  <div id="qontributor_list" class="w3-container w3-padding-32" >
 	  
-Lia Yeh, PhD student in computer science at the University of Oxford
-
-Vincent Pisani, Undergraduate at UC Santa Barbara
-
-Yipeng Huang, Assistant Professor of Computer Science at Rutgers University
-
-Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico
-
-Claudia Zendejas-Morales, undergraduate at the National Autonomous University of Mexico
-
-Rodrigo Pires Ferreira, Undergraduate at the Aeronautics Institute of Technology
-
-Bavithra Govintharajah, Graduate student at RWTH Aachen, Germany
-
-Samanvay Sharma, grad student at Keio University
-
-Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
-
-Sanskriti Ranjan, Computer Engineering student at Clemson University
-
-Rana Prathap, Math and Computing major at IIT Kharagpur, Co-op at IBM Quantum
-
-Kathrin Koenig, PhD student at Fraunhofer IAF/ University of Freiburg
-
-Hyorin Kim
-
-Dayeong Kang, CSE undergraduate student at the Kyungpook National University
-
-Rochisha Agarwal, Undergraduate at IIT Roorkee
-
-Michaël Rollin, Electrical Engineer
-
-Victor Onofre, Center of Nanoscience and Nanotechnology (CNyN) of the National Autonomous University of México (UNAM)
+<h5>Lia Yeh, PhD student in computer science at the University of Oxford </h5>
+<br>
+<h5>Vincent Pisani, Undergraduate at UC Santa Barbara </h5>
+<br>
+<h5>Yipeng Huang, Assistant Professor of Computer Science at Rutgers University</h5>
+<br>
+<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5>
+<br>
+<h5>Claudia Zendejas-Morales, undergraduate at the National Autonomous University of Mexico</h5>
+<br>
+<h5>Rodrigo Pires Ferreira, Undergraduate at the Aeronautics Institute of Technology</h5>
+<br>
+<h5>Bavithra Govintharajah, Graduate student at RWTH Aachen, Germany</h5>
+<br>
+<h5>Samanvay Sharma, grad student at Keio University</h5>
+<br>
+<h5>Praveen J, Undergraduate at the Indian Institute of Science, Bangalore</h5>
+<br>
+<h5>Sanskriti Ranjan, Computer Engineering student at Clemson University</h5>
+<br>
+<h5>Rana Prathap, Math and Computing major at IIT Kharagpur, Co-op at IBM Quantum</h5>
+<br>
+<h5>Kathrin Koenig, PhD student at Fraunhofer IAF/ University of Freiburg</h5>
+<br>
+<h5>Hyorin Kim</h5>
+<br>
+<h5>Dayeong Kang, CSE undergraduate student at the Kyungpook National University</h5>
+<br>
+<h5>Rochisha Agarwal, Undergraduate at IIT Roorkee</h5>
+<br>
+<h5>Michaël Rollin, Electrical Engineer</h5>
+<br>
+<h5>Victor Onofre, Center of Nanoscience and Nanotechnology (CNyN) of the National Autonomous University of México (UNAM)</h5>
 
   </div>
 	
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >
- <a href="#" style="width: 48%;">Qurator List</a>
-
-Sanskruti Wathare, CSE undergrad student
-
-Praveen J, Undergraduate at the Indian Institute of Science, Bangalore
-
-Hirmay Sandesara, Ahmedabad University
-
-Harshit Garg, CompSci 3rd year Undergrad at BITS Pilani India
-
-Lia Yeh, PhD student in computer science at the University of Oxford
-
-Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico
-	
-  <div class="w3-container w3-padding-32" >
-  </div>
+ <a href="#" style="width: 48%;color:#005853;">Qurator List</a>
+<div id="qurator_list" class="w3-container w3-padding-32" >
+<h5>Sanskruti Wathare, CSE undergrad student
+<br>
+<h5>Praveen J, Undergraduate at the Indian Institute of Science, Bangalore</h5>
+<br>
+<h5>Hirmay Sandesara, Ahmedabad University</h5>
+<br>
+<h5>Harshit Garg, CompSci 3rd year Undergrad at BITS Pilani India</h5>
+<br>
+<h5>Lia Yeh, PhD student in computer science at the University of Oxford</h5>
+<br>
+<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5>
+  
+</div>
 	
 </div>
 
