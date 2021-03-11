@@ -1,5 +1,5 @@
 ---
-permalink: /Quantum Algorithms/
+permalink: /Qq-algorithm/
 ---
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,7 +15,6 @@ permalink: /Quantum Algorithms/
   padding: 5px;
 }
 
-/* Clearfix (clear floats) */
 .row::after {
   content: "";
   clear: both;
