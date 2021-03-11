@@ -1,5 +1,5 @@
 ---
-permalink: /Quantum Algorithms/
+permalink: /Algorithms/
 ---
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -65,7 +65,14 @@ permalink: /Quantum Algorithms/
   display: table;
 }
 
-
+.img_post {
+  vertical-align: middle;
+  display: table-cell;
+}
+span {
+  vertical-align: middle;
+  display: table-cell;
+}
 </style>
 <!-- Header -->
 
@@ -83,8 +90,15 @@ permalink: /Quantum Algorithms/
 
 <div class="w3-container w3-padding-32" id="post" style="width: 55vw;">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Deutsch's Algorithm</h3>
-    <h4>Descriptiont: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ..</h4>
+  <div class="w3-container w3-padding-32"  style="display:table">
+   <span> <h4>Descriptiont: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ..</h4></span>
+    <span><img src="/assets/front-page/deutsch_img.png" /></span>
+   </div>
 </div>
+
+
+
+
 
 
 
