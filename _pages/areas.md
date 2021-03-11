@@ -144,7 +144,7 @@ permalink: /areas/
 				<img classs="backg" src="/assets/front-page/q_algorithms.png" alt="House" style="width:100%">
 			    </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tellus ex. Integer eu fringilla nisi. Donec id dapibus mauris, eget dignissim turpis ...</p>
-                            <a href="#">Read More</a>
+                            <a href="https://fullstackquantumcomputation.tech/q-algorithm/">Read More</a>
                         </div>
                         <div class="item">
 			      <div class="w3-display-container backg">
