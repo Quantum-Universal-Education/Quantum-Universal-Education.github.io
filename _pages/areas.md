@@ -59,7 +59,7 @@ permalink: /areas/
 
 
 <header class="w3-display-container w3-content w3-wide" id="home" style="width: 55vw;">	
-  <img class="w3-image" src="/assets/images/jayantis_qontributing_infographic.png" alt="FSQC" width="100%" height="500" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <img class="w3-image" src="/assets/images/jayantis_qontributing_infographic.png" alt="FSQC" width="100%" height="500" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 
 </header>
 
@@ -74,8 +74,8 @@ permalink: /areas/
 <div  class="w3-container w3-padding-32" style="width: 55vw">
 <h4> you get a free t-shirt shipped to you! Limit one t-shirt per contributor or curator.  <a href="https://fullstackquantumcomputation.tech/t-shirt-contest/">Logo and t-shirt design contest</a> was throughout the month of August 2020 and the final design is below! </h4>
   <div class="column" style="display: block;margin-left: auto;margin-right: auto;">
-    <img src="/assets/images/designs/fsqc_shirt_sky-coffee.png" alt="quantum computing hardwares schroedinger's cat shirt design sky coffee" width="325">
-    <img src="/assets/images/designs/fsqc_shirt_pale-teal.png" alt="quantum computing hardwares schroedinger's cat shirt design pale teal" width="325">
+    <img src="/assets/images/designs/fsqc_shirt_sky-coffee.png" alt="quantum computing hardwares schroedinger's cat shirt design sky coffee" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+    <img src="/assets/images/designs/fsqc_shirt_pale-teal.png" alt="quantum computing hardwares schroedinger's cat shirt design pale teal" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
   </div>
 </div>
 
@@ -219,7 +219,7 @@ permalink: /areas/
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >	
-<button onclick="qontributor_section()" style="color:#6d2f15">Qontributor List</button>	
+<button class="button" onclick="qontributor_section()" style="color:#6d2f15">Qontributor List</button>	
   <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
 	  
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford </h5>
@@ -261,7 +261,7 @@ permalink: /areas/
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >
-<button onclick="qurator_section()" style="color:#6d2f15">Qurator List</button>	
+<button class="button" onclick="qurator_section()" style="color:#6d2f15">Qurator List</button>	
 <div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
 	<h5>Sanskruti Wathare, CSE undergrad student </h5>
 <br>
@@ -278,8 +278,16 @@ permalink: /areas/
 </div>
 
 
-<div class="w3-container w3-padding-32" style="width: 65vw" >		
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
 <h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
+</div>
+
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
+
+<h2> Here's a map of where all the above people are from!</h2>
+<div style="width: 55vw">
+	<img src="/assets/images/fsqc_map.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+</div>
 </div>
 
 <!-- End page content -->
