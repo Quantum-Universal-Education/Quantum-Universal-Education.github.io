@@ -69,7 +69,7 @@ permalink: /areas/
 </style>
 <!-- Header -->
 
-
+<div style="background:white">
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contributing</h2>
     <h4>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></h4>
@@ -313,7 +313,7 @@ permalink: /areas/
 	<img src="/assets/images/fsqc_map.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 </div>
 </div>
-
+</div>
 <!-- End page content -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
 <script src="/assets/js/multislider.js"></script> 
