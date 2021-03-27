@@ -65,6 +65,7 @@ permalink: /areas/
   display: table;
 }
 
+.page__footer {color: #FFFFFF;}
 
 </style>
 <!-- Header -->
