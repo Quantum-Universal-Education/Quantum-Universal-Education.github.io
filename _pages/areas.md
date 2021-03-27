@@ -121,14 +121,14 @@ permalink: /areas/
                             <p>Where can I learn about quantum science and quantum computing?</p>
                             <a href="#">Read More</a>
                         </div>
+			    <a href="https://fullstackquantumcomputation.tech/hardware/">
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Hardware</div>
 				<img classs="backg" src="/assets/front-page/q_hardware.png" alt="House" style="width:100%">
 			    </div>
                             <p>How are qubits (or other paradigms of quantum computers) physically implemented?</p>
-                            <a href="https://fullstackquantumcomputation.tech/hardware/">Read More</a>
-                        </div>
+                        </div></a>
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Software</div>
