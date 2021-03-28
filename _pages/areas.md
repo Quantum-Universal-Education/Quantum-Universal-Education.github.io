@@ -76,7 +76,7 @@ text-align: justify;”
 </style>
 <!-- Header -->
 
-<header class="w3-display-container w3-content w3-wide" id="home" style="width: 55vw;background:lightgrey;">	
+<header class="w3-display-container w3-content w3-wide" id="home" style="width: 100%;background:lightgrey;">	
 
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contributing</h2>
@@ -121,7 +121,7 @@ text-align: justify;”
                     <div class="MS-content">
                         <div class="item">
 			<a href="#">
-			<div>
+			<div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Learning Resources</div>
 				<img classs="backg" src="/assets/front-page/q_learning_resource.png" alt="House" style="width:100%">
