@@ -151,38 +151,37 @@ text-align: justify;”
 			    </div>
                             <p>What can quantum computers do better than classical computers?</p>
                         </div></a>
+			  <a href="#">
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Computer Architecture</div>
 				<img classs="backg" src="/assets/front-page/q_architecture.png" alt="House" style="width:100%">
 			    </div>
                             <p>What happens between the hardware and software of a quantum computer?</p>
-                            <a href="#">Read More</a>
-                        </div>
+                        </div></a>
+                            <a href="#">
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Error Correction</div>
 				<img classs="backg" src="/assets/front-page/q_error_c.png" alt="House" style="width:100%">
 			    </div>
                             <p>How can errors in quantum computation be corrected?</p>
-                            <a href="#">Read More</a>
-                        </div>
-                        <div class="item">
+                        </div></a>
+                        <a href="#"><div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Chemistry</div>
 				<img classs="backg" src="/assets/front-page/q_chemistry.png" alt="House" style="width:100%">
 			    </div>
                             <p>What makes chemistry one of the most anticipated applications of quantum computing?</p>
-                            <a href="#">Read More</a>
-                        </div>
+                        </div></a>
+			     <a href="#">
                         <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Sensing</div>
 				<img src="/assets/front-page/q_sensing.png" alt="House" style="width:100%">
 			   </div>
                            <p>How can quantum technology enhance sensors used in our day-to-day lives?</p>
-                            <a href="#">Read More</a>
-                        </div>
+                        </div></a>
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Cryptography</div>
