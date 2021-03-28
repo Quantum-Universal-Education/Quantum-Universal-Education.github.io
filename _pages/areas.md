@@ -70,6 +70,9 @@ permalink: /areas/
   max-height: 5rem;
 }
 
+div p{
+text-align: justify;”
+}
 </style>
 <!-- Header -->
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
