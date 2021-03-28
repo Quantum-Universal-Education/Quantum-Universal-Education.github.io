@@ -135,22 +135,22 @@ text-align: justify;”
 			    </div>
                             <p>How are qubits (or other paradigms of quantum computers) physically implemented?</p>
                         </div></a>
+			<a href="https://fullstackquantumcomputation.tech/blog/post-tutorial-0-Hello-world/">    
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Software</div>
 				<img classs="backg" src="/assets/front-page/q_software.png" alt="House" style="width:100%">
 			    </div>
-                            <p>How do I program quantum computers?</p>
-                            <a href="https://fullstackquantumcomputation.tech/blog/post-tutorial-0-Hello-world/">Read More</a>
-                        </div>
+				<p>How do I program quantum computers?</p>
+                        </div></a>
+			<a href="https://fullstackquantumcomputation.tech/q-algorithm/">    
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Algorithms</div>
 				<img classs="backg" src="/assets/front-page/q_algorithms.png" alt="House" style="width:100%">
 			    </div>
                             <p>What can quantum computers do better than classical computers?</p>
-                            <a href="https://fullstackquantumcomputation.tech/q-algorithm/">Read More</a>
-                        </div>
+                        </div></a>
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-display-topleft w3-black w3-padding ">Quantum Computer Architecture</div>
