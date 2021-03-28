@@ -75,16 +75,16 @@ text-align: justify;”
 }
 </style>
 <!-- Header -->
+
+<header class="w3-display-container w3-content w3-wide" id="home" style="width: 55vw;background:lightgrey;">	
+
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contributing</h2>
     <h4>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></h4>
   </div>
-
-
-<header class="w3-display-container w3-content w3-wide" id="home" style="width: 55vw;">	
   <img class="w3-image" src="/assets/images/jayantis_qontributing_infographic.png" alt="FSQC" width="100%" height="500" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 
-</header>
+
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >	
   <div class="w3-container w3-padding-32" >
@@ -109,12 +109,12 @@ text-align: justify;”
 </div>
 
 
+</header>
+
 <div class="w3-container w3-padding-32" >
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Areas of Quantum Science</h2>
   </div>
 
-
-<!-- Page content -->
 <div class="w3-content w3-padding" style="width: 55vw;border-width:thick;border-color:#f9f9f9;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 <div id="mixedSlider" >
