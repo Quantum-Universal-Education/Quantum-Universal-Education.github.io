@@ -70,6 +70,12 @@ permalink: /areas/
   max-height: 5rem;
 }
 
+.page__footer-copyright {
+  font-family: $global-font-family;
+  font-size: $type-size-6;
+}
+
+
 div p{
 text-align: justify;”
 }
