@@ -65,7 +65,7 @@ permalink: /areas/
   display: table;
 }
 
-.page__footer {color: #FFFFFF;}
+.page__footer {color: #FFFFFF;font-size: 16px;}
 .site-logo img {
   max-height: 5rem;
 }
