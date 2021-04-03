@@ -189,7 +189,7 @@ text-align: justify;”
                         </div></a>
                         <div class="item">
                              <div class="w3-display-container">
-				<div class="w3-display-topleft w3-black w3-padding">Quantum Cryptography</div>
+				<div class="w3-black w3-padding">Quantum Cryptography</div>
 				<img src="/assets/front-page/q_cryptography.png" alt="House" style="width:100%">
 			      </div>
                            <p>What could cryptography look like in a future with quantum codebreaking?</p>
@@ -197,7 +197,7 @@ text-align: justify;”
                         </div>
                         <div class="item">
                              <div class="w3-display-container">
-				<div class="w3-display-topleft w3-black w3-padding">Quantum Communication</div>
+				<div class="w3-black w3-padding">Quantum Communication</div>
 				<img src="/assets/front-page/q_comunication.png" alt="House" style="width:100%">
 			      </div>
                            <p>How is quantum communication more secure?</p>
@@ -205,7 +205,7 @@ text-align: justify;”
                         </div>
                         <div class="item">
                              <div class="w3-display-container">
-				<div class="w3-display-topleft w3-black w3-padding">Quantum Information Theory</div>
+				<div class="w3-black w3-padding">Quantum Information Theory</div>
 				<img src="/assets/front-page/q_information_t.png" alt="House" style="width:100%">
 			      </div>
                            <p>What is the math and physics behind quantum computing?</p>
@@ -223,7 +223,7 @@ text-align: justify;”
                         -->
 			<div class="item">
                             <div class="w3-display-container">
-				<div class="w3-display-topleft w3-black w3-padding">Quantum Machine Learning</div>
+				<div class="w3-black w3-padding">Quantum Machine Learning</div>
 				<img src="/assets/front-page/qml.png" alt="House" style="width:100%">
 			      </div>
                            <p>How can quantum computing help analyze and learn from data?</p>
@@ -231,7 +231,7 @@ text-align: justify;”
                         </div>
                        <div class="item">
                             <div class="w3-display-container">
-				<div class="w3-display-topleft w3-black w3-padding">Quantum Games</div>
+				<div class="w3-black w3-padding">Quantum Games</div>
 				<img src="/assets/front-page/q_game.png" alt="House" style="width:100%">
 			      </div>
                            <p>How can I play and make games about quantum science and computing?</p>
@@ -239,7 +239,7 @@ text-align: justify;”
                         </div>
                        <div class="item">
                             <div class="w3-display-container">
-				<div class="w3-display-topleft w3-black w3-padding">Miscellaneous</div>
+				<div class="w3-black w3-padding">Miscellaneous</div>
 				<img src="/assets/front-page/q_miscellaneous.png" alt="House" style="width:100%">
 			      </div>
                            <p>What else is interesting about quantum computing?</p>
