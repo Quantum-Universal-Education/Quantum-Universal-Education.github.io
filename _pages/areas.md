@@ -128,7 +128,7 @@ text-align: justify;”
 			<a href="#">
 			<div class="item">
 			      <div class="w3-display-container backg">
-				<div class="w3-display-topleft w3-black w3-padding ">Quantum Learning Resources</div>
+				<div class="w3-black w3-padding ">Quantum Learning Resources</div>
 				<img classs="backg" src="/assets/front-page/q_learning_resource.png" alt="House" style="width:100%">
 			    </div>
                             <p>Where can I learn about quantum science and quantum computing?</p>
