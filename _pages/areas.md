@@ -71,8 +71,7 @@ permalink: /areas/
 }
 
 .page__footer-copyright {
-  font-family: $global-font-family;
-  font-size: $type-size-6;
+  font-size: 40px;
 }
 
 
