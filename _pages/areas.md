@@ -69,9 +69,9 @@ permalink: /areas/
   max-height: 5rem;
 }
 
-.page__footer-copyright {
+/*.page__footer-copyright {
   font-size: 20px;
-}
+}*/
 
 
 div p{
