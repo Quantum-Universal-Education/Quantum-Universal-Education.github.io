@@ -135,7 +135,7 @@ text-align: justify;”
 			    <a href="https://fullstackquantumcomputation.tech/hardware/">
                         <div class="item">
 			      <div class="w3-display-container backg">
-				<div class="w3-display-topleft w3-black w3-padding ">Quantum Hardware</div>
+				<div class="w3-black w3-padding ">Quantum Hardware</div>
 				<img classs="backg" src="/assets/front-page/q_hardware.png" alt="House" style="width:100%">
 			    </div>
                             <p>How are qubits (or other paradigms of quantum computers) physically implemented?</p>
@@ -143,7 +143,7 @@ text-align: justify;”
 			<a href="https://fullstackquantumcomputation.tech/blog/post-tutorial-0-Hello-world/">    
                         <div class="item">
 			      <div class="w3-display-container backg">
-				<div class="w3-display-topleft w3-black w3-padding ">Quantum Software</div>
+				<div class="w3-black w3-padding ">Quantum Software</div>
 				<img classs="backg" src="/assets/front-page/q_software.png" alt="House" style="width:100%">
 			    </div>
 				<p>How do I program quantum computers?</p>
@@ -151,7 +151,7 @@ text-align: justify;”
 			<a href="https://fullstackquantumcomputation.tech/q-algorithm/">    
                         <div class="item">
 			      <div class="w3-display-container backg">
-				<div class="w3-display-topleft w3-black w3-padding ">Quantum Algorithms</div>
+				<div class="w3-black w3-padding ">Quantum Algorithms</div>
 				<img classs="backg" src="/assets/front-page/q_algorithms.png" alt="House" style="width:100%">
 			    </div>
                             <p>What can quantum computers do better than classical computers?</p>
@@ -159,7 +159,7 @@ text-align: justify;”
 			  <a href="#">
                         <div class="item">
 			      <div class="w3-display-container backg">
-				<div class="w3-display-topleft w3-black w3-padding ">Quantum Computer Architecture</div>
+				<div class="w3-black w3-padding ">Quantum Computer Architecture</div>
 				<img classs="backg" src="/assets/front-page/q_architecture.png" alt="House" style="width:100%">
 			    </div>
                             <p>What happens between the hardware and software of a quantum computer?</p>
@@ -167,14 +167,14 @@ text-align: justify;”
                             <a href="#">
                         <div class="item">
 			      <div class="w3-display-container backg">
-				<div class="w3-display-topleft w3-black w3-padding ">Quantum Error Correction</div>
+				<div class="w3-black w3-padding ">Quantum Error Correction</div>
 				<img classs="backg" src="/assets/front-page/q_error_c.png" alt="House" style="width:100%">
 			    </div>
                             <p>How can errors in quantum computation be corrected?</p>
                         </div></a>
                         <a href="#"><div class="item">
 			      <div class="w3-display-container backg">
-				<div class="w3-display-topleft w3-black w3-padding ">Quantum Chemistry</div>
+				<div class="w3-black w3-padding ">Quantum Chemistry</div>
 				<img classs="backg" src="/assets/front-page/q_chemistry.png" alt="House" style="width:100%">
 			    </div>
                             <p>What makes chemistry one of the most anticipated applications of quantum computing?</p>
@@ -182,7 +182,7 @@ text-align: justify;”
 			     <a href="#">
                         <div class="item">
                             <div class="w3-display-container">
-				<div class="w3-display-topleft w3-black w3-padding">Quantum Sensing</div>
+				<div class="w3-black w3-padding">Quantum Sensing</div>
 				<img src="/assets/front-page/q_sensing.png" alt="House" style="width:100%">
 			   </div>
                            <p>How can quantum technology enhance sensors used in our day-to-day lives?</p>
