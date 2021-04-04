@@ -37,7 +37,7 @@ $\begin{pmatrix}
 1 & 0
 \end{pmatrix}$
 
-H|0> we get the |+> state. When we apply the X gate to the **|+>** state, the **|+>** state is not affected. When another H gate is applied to the qubit, the state collapses to **|0>**. When we measure the state we get a 100% the |0> state.
+H| 0> we get the | +> state. When we apply the X gate to the **| +>** state, the **| +>** state is not affected. When another H gate is applied to the qubit, the state collapses to **| 0>**. When we measure the state we get a 100% the | 0> state.
 
 ---
 
