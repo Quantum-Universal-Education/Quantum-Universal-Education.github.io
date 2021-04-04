@@ -2,7 +2,7 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
-Quantum coins is a game intended to show some of the fundamental properties of a quantum computer, which are [superposition](https://en.wikipedia.org/wiki/Superposition_principle) and uncertinity. The most basic unit of information in a classical computer is a bit(0 or 1).A quantum computer on the other hand uses qubit which has a more fluid nature than a bit. A qubit can  simultaneously be 0 and 1 with some probability of being zero and some probability of being 1. A superposition is a property of a qubit to be in a fluid nature, which states that the state of the coin can be something other that 0 or 1, which in our case lies somewhere in between 0 and 1. The measurement of the quantum state in superposition leads to the collapse of the quantum state to either 0 or 1. This phenomenon is called Wave Function Collapse. The result of the collapse is stored in a classical bit C0, C1 etc. A superposition is created in a qubit by using a [Hadamard Gate](https://qiskit.org/textbook/ch-states/single-qubit-gates.html#hgate). A classical computer cannot create a bit that has a fluid nature. A bit is limited to its 0 and 1 state. To carry out operations in a classical computer various gates are used like the AND gate, OR gate, NOT gate, XOR gate etc. The NOT gate, also called a bit flip gate, converts the 0 stae to 1 state and 1 state to 0 state. A bit flip however has no effect on a superposition of a quantum state. This is the working principal of our game. Moreover when two H gates act on a single qubit we get a matrix which when applied to a state 0 or 1 does not change the input, as it forms an  identity matrix. When a superposition is created and a bit flip is applied to it, superposition is not affected, when another H gate is applied the initial state of the qubit is recovered.
+Quantum coins is a game intended to show some of the fundamental properties of a quantum computer, which are [superposition](https://en.wikipedia.org/wiki/Superposition_principle) and uncertinity. The most basic unit of information in a classical computer is a bit (0 or 1).A quantum computer on the other hand uses qubit which has a more fluid nature than a bit. A qubit can  simultaneously be 0 and 1 with some probability of being zero and some probability of being 1. A superposition is a property of a qubit to be in a fluid nature, which states that the state of the coin can be something other that 0 or 1, which in our case lies somewhere in between 0 and 1. The measurement of the quantum state in superposition leads to the collapse of the quantum state to either 0 or 1. This phenomenon is called Wave Function Collapse. The result of the collapse is stored in a classical bit C0, C1 etc. A superposition is created in a qubit by using a [Hadamard Gate](https://qiskit.org/textbook/ch-states/single-qubit-gates.html#hgate). A classical computer cannot create a bit that has a fluid nature. A bit is limited to its 0 and 1 state. To carry out operations in a classical computer various gates are used like the AND gate, OR gate, NOT gate, XOR gate etc. The NOT gate, also called a bit flip gate, converts the 0 stae to 1 state and 1 state to 0 state. A bit flip however has no effect on a superposition of a quantum state. This is the working principal of our game. Moreover when two H gates act on a single qubit we get a matrix which when applied to a state 0 or 1 does not change the input, as it forms an  identity matrix. When a superposition is created and a bit flip is applied to it, superposition is not affected, when another H gate is applied the initial state of the qubit is recovered.
 
 ---
 
@@ -45,7 +45,7 @@ state. When we apply the X gate to the **| +>** state, the **| +>** state is not
 For its proof of concept, the Qiskit framework will be used for the construction of the quantum circuit.
  
 
- So, the initial state of coin(isoc) is kept Heads.
+ So, the initial state of coin (or by its abbreviation isoc) is kept Heads.
 
 <ul>
 <li>First the Computer applies the H gate on  the circuit.</li>
@@ -136,18 +136,24 @@ for i in counts: # The counts dictionary is itrated and the result is printed.
 
 ________________________________________________________________________________
 If played on a classical computer the player has a 50% chance of winning against the computer. When the same idea is imposed on a Quantum Circuit the results are completely in favour of the computer, the computer wins 100% of times. The game uses the 2 qubit version of the [***Out0***](https://github.com/skushagra/quantum/blob/master/python_files/out0.py) algorithm.
-Through out the course of the game there are three moves, two by the computer and one by the user. The process however involves nearly 6 choices to be, made either to flip or not. The game begins with a coin initially in Heads state. The Heads state is represented by the |0> quantum state. The Quantum Computer exhibits the property of superposition by using the H gate. The computer applies a H gate which creates the |+> state, user as always has the choice to flip the bit or not by applying the X gate. There are certain particularities that are achieved in qubits by means of quantum gates. One interesting relationship that we apply is with HXH gates. Although we use two quantum gates that make the superposition of the state |0> in the linear combination of |0> and |1> with the same probability that would give the identity matrix, instead, we obtain the equivalent of applying the Z gate, the result of our circuit is that it will not change the state, that is, it will always give us |0>, so the quantum computer will always win. For the demonstration of the above, we will apply the quantum circuit and will use as backend as ibmqx2 to apply the quantum circuit for the game. Hence no matter what the user does, flip or no flip, the computer always wins.
+Through out the course of the game there are three moves, two by the computer and one by the user. The process however involves nearly 6 choices to be, made either to flip or not. The game begins with a coin initially in Heads state. The Heads state is represented by the |0> quantum state. The Quantum Computer exhibits the property of superposition by using the H gate. The computer applies a H gate which creates the |+> state, user as always has the choice to flip the bit or not by applying the X gate. There are certain particularities that are achieved in qubits by means of quantum gates.  One interesting relationship that we apply is with HXH gates. Although a superposition is initalized, the three gates used to achieve the superposition are equivalent to the Z gate. The result is that the state it does not change, it will always give us |0>, so the quantum computer will always win. To demonstration this, we will apply the quantum circuit and will use as backend as ibmqx2 to apply the quantum circuit for the game. Hence not matter what the user does, flip or no flip, the computer always wins. 
 
 ---
 ## Brief answer's to important questions
 
 ***1 --> What happens when you apply the Hadamard gate on the coin?***
 
-A Hadamard gate is gate which creates an equal superposition of the | 0>  and | 1> state which we call the | +> state. We say that the H gate creates a quantum state which is a linear combination of the states |0> and |1>.
+A Hadamard gate is gate which creates an equal superposition of the 
+$$| 0>$$
+and 
+$$| 1>$$ 
+state which we call the 
+$$| +>$$ 
+state. We say that the H gate creates a quantum state which is a linear combination of the states  $$| 0>\text{ and } | 1>$$.
 
 $$|\psi> = \alpha|0> + \beta|1>$$
 
-Here $$\alpha^2$$ and $$\beta^2$$ is the probability of measuring ***|0>*** and ***|1>*** respectively.
+Here $$\alpha^2$$ and $$\beta^2$$ is the probability of measuring $$| 0>$$ and $$| 1>$$ respectively.
 
 Here $$\alpha^2 = \beta^2 = 0.5 \text{ and } \alpha = \beta = 1/\sqrt2$$
 
@@ -168,7 +174,7 @@ When a bit flip is applied to a Heads state, it changes it to Tales and if bit f
 ---
 ***3 --> What happens if you apply Hadamard and X to the coin?***
 
-When a Hadamard gate is applied to a |0> quantum state it changes to |+> the X gate however has no effect on the superposition and hence the |+> state remains unaffected. 
+When a Hadamard gate is applied to a $$| 0>$$ quantum state it changes to $$| +>$$ the X gate however has no effect on the superposition and hence the $$| +>$$ state remains unaffected. 
 
 ---
 
@@ -185,18 +191,18 @@ $$\begin{pmatrix}
 0
 \end{pmatrix}$$
 
-The X gate on the initial state gives the state |1> :
+The X gate on the initial state gives the state $$| 1>$$ :
 
 $$\begin{pmatrix}
 0\\
 1
 \end{pmatrix}$$
 
-When hadamard gate on |1> gives what we call the |-> state, given by:
+When hadamard gate on $$| 1>$$ gives what we call the $$| ->$$ state, given by:
 
 $$|\psi> = (|0> - |1>)/\sqrt2$$
 
-There is still $0.5$ probability of ***|0>*** and $0.5$ probability of ***-|1>.***
+There is still $$0.5$$ probability of $$|0>$$ and $$0.5$$ probability of $$-|b1>$$.
 
 ***6 --> What happens when the circuit is executed n times?***
 
