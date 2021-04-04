@@ -32,7 +32,10 @@ $$ \begin{pmatrix}
 1 & 0
 \end{pmatrix} $$
 
-$$H | 0>$$ we get the | +> state. When we apply the X gate to the **| +>** state, the **| +>** state is not affected. When another H gate is applied to the qubit, the state collapses to **| 0>**. When we measure the state we get a 100% the | 0> state.
+$$ H | 0> $$ 
+we get the 
+$$| +>$$ 
+state. When we apply the X gate to the **| +>** state, the **| +>** state is not affected. When another H gate is applied to the qubit, the state collapses to **| 0>**. When we measure the state we get a 100% the | 0> state.
 
 ---
 
@@ -142,11 +145,11 @@ Through out the course of the game there are three moves, two by the computer an
 
 *A Hadamard gate is gate which creates an equal superposition of the |0>  and |1> state which we call the |+> state. We say that the H gate creates a quantum state which is a linear combination of the states |0> and |1>.*
 
-###$|\psi> = \alpha|0> + \beta|1>$
+###$$|\psi> = \alpha|0> + \beta|1>$$
 
-Here $\alpha^2$ and $\beta^2$ is the probability of measuring ***|0>*** and ***|1>*** respectively.
+Here $$\alpha^2$$ and $$\beta^2$$ is the probability of measuring ***|0>*** and ***|1>*** respectively.
 
-Here $\alpha^2 = \beta^2 = 0.5$ and $\alpha = \beta = 1/\sqrt2$
+Here $$\alpha^2 = \beta^2 = 0.5$ and $\alpha = \beta = 1/\sqrt2$$
 
 
 ---
