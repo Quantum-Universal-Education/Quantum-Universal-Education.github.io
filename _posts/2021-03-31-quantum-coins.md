@@ -9,27 +9,35 @@ Quantum coins is a game intended to show some of the fundamental properties of a
 # Our Proposal
 We do not get into the process of the computer making a move, we straight away apply the H gate, for both the moves of the computer. The user will have the choice to apply the bit flip operator. The result will be that no matter what the user does, the quantum state of coin is not affected. 
 
-The Hadamard matrix is given as follows :-
+The Hadamard matrix is given as follows :
+
+
+$\big(\begin{smallmatrix}
+  a & b\\
+  c & d
+\end{smallmatrix}\big)$
+
+
+
 $\begin{pmatrix}
 1/\sqrt2 & 1/\sqrt2\\
 1/\sqrt2 & -1/\sqrt2
 \end{pmatrix}$
 
-Our initial quantum sate is |0> which i9s represented by :-
+Our initial quantum sate is |0> which i9s represented by :
 $\begin{pmatrix}
 1\\
 0
 \end{pmatrix}$
 
-The bit flip gate is given by :-
+The bit flip gate is given by :
 
 $\begin{pmatrix}
 0 & 1\\
 1 & 0
 \end{pmatrix}$
 
-$H|0>$ 
-we get the $|+>$ state. When we apply the X gate to the **|+>** state, the **|+>** state is not affected. When another H gate is applied to the qubit, the state collapses to **|0>**. When we measure the state we get a 100% the |0> state.
+H|0> we get the |+> state. When we apply the X gate to the **|+>** state, the **|+>** state is not affected. When another H gate is applied to the qubit, the state collapses to **|0>**. When we measure the state we get a 100% the |0> state.
 
 ---
 
