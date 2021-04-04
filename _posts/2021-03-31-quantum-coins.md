@@ -12,11 +12,12 @@ We do not get into the process of the computer making a move, we straight away a
 The Hadamard matrix is given as follows :
 
 
-$\big(\begin{smallmatrix}
+\begin{equation*}
+\big(\begin{smallmatrix}
   a & b\\
   c & d
-\end{smallmatrix}\big)$
-
+\end{smallmatrix}\big)
+\end{equation*}
 
 
 $\begin{pmatrix}
