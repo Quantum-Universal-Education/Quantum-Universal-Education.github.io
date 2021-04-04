@@ -143,13 +143,13 @@ Through out the course of the game there are three moves, two by the computer an
 
 ***1 --> What happens when you apply the Hadamard gate on the coin?***
 
-*A Hadamard gate is gate which creates an equal superposition of the |0>  and |1> state which we call the |+> state. We say that the H gate creates a quantum state which is a linear combination of the states |0> and |1>.*
+A Hadamard gate is gate which creates an equal superposition of the | 0>  and | 1> state which we call the | +> state. We say that the H gate creates a quantum state which is a linear combination of the states |0> and |1>.
 
-###$$|\psi> = \alpha|0> + \beta|1>$$
+$$|\psi> = \alpha|0> + \beta|1>$$
 
 Here $$\alpha^2$$ and $$\beta^2$$ is the probability of measuring ***|0>*** and ***|1>*** respectively.
 
-Here $$\alpha^2 = \beta^2 = 0.5$ and $\alpha = \beta = 1/\sqrt2$$
+Here $$\alpha^2 = \beta^2 = 0.5 \text{ and } \alpha = \beta = 1/\sqrt2$$
 
 
 ---
@@ -163,33 +163,39 @@ Here $$\alpha^2 = \beta^2 = 0.5$ and $\alpha = \beta = 1/\sqrt2$$
 
 **X(1) -> 0**
 
-*When a bit flip is applied to a Heads state, it changes it to Tales and if bit flip is applied on Tales it gives the Heads state.*
+When a bit flip is applied to a Heads state, it changes it to Tales and if bit flip is applied on Tales it gives the Heads state.
 
 ---
 ***3 --> What happens if you apply Hadamard and X to the coin?***
 
-*When a Hadamard gate is applied to a |0> quantum state it changes to |+> the X gate however has no effect on the superposition and hence the |+> state remains unaffected. *
+When a Hadamard gate is applied to a |0> quantum state it changes to |+> the X gate however has no effect on the superposition and hence the |+> state remains unaffected. 
 
 ---
 
 ***4 --> What happens if you apply Hadamard, X, and Hadamard to the coin?***
 
-*As we said, when a superposition is created, the X gate has no affect on the superposition. When another H gate is applied the resultant is an Identity which gives |0> as the initial state was zero.*
+As we said, when a superposition is created, the X gate has no affect on the superposition. When another H gate is applied the resultant is an Identity which gives |0> as the initial state was zero.
 
 ***5 --> What happens if you apply X and Hadamard to the coin?***
 
-*When the X gate is applied and then H gate is applied, the result is different that usual. The initial state is :- \begin{pmatrix}
+When the X gate is applied and then H gate is applied, the result is different that usual. The initial state is :- 
+
+$$\begin{pmatrix}
 1\\
 0
-\end{pmatrix}*
-The X gate on the initial state gives the state |1> :-
-\begin{pmatrix}
+\end{pmatrix}$$
+
+The X gate on the initial state gives the state |1> :
+
+$$\begin{pmatrix}
 0\\
 1
-\end{pmatrix}
-When hadamard gate on |1> gives what we call the |-> state, given by:-
+\end{pmatrix}$$
 
-###$|\psi> = (|0> - |1>)/\sqrt2$
+When hadamard gate on |1> gives what we call the |-> state, given by:
+
+$$|\psi> = (|0> - |1>)/\sqrt2$$
+
 There is still $0.5$ probability of ***|0>*** and $0.5$ probability of ***-|1>.***
 
 ***6 --> What happens when the circuit is executed n times?***
