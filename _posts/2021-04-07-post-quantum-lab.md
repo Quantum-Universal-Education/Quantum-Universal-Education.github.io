@@ -59,7 +59,7 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 	</tbody>
 </table>
 
-<img src="/assets/images/Mica_QLab/container.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+<img src="/assets/images/Mica_QLab/ql.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 
 
 ## 3. How does it work <a class="anchor" id="working"></a>
@@ -67,7 +67,7 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 <table border=0>
 	<tbody>
 		<tr>
-			<td><img src="/assets/images/Mica_QLab/ql.PNG" width=100%></td>
+			<td><img src="/assets/images/Mica_QLab/ql.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;"></td>
 			<td>The role of the image is to simulate a virtual environment as a Quantum lab for a specialized library/language. Another need is to synchronize the data between the container of the host computer. <br /> Like this, we could develop our code on our favorite IDE on our classical computer and run the code directly in the container. <br /><br /> Download the code : <b><a href="https://github.com/mickahell/quantum_lab">Github</a></b></td>
 		</tr>
 	</tbody>
