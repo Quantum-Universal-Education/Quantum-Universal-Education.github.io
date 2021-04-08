@@ -172,4 +172,3 @@ Michaël Rollin, [GitHub](https://github.com/mickahell), [Twitter](https://twitt
 ### Cite as
 If you use my work, please cite as : Quantum Lab: Docker image for quantum laboratory, Michaël Rollin, 2021, DOI: <a href="https://doi.org/10.5281/zenodo.4664195">10.5281/zenodo.4664195</a>
 
-[zenodo.4664195](https://doi.org/10.5281/zenodo.4664195)
