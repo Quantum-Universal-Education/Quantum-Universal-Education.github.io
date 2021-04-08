@@ -59,7 +59,6 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 	</tbody>
 </table>
 
-<img src="/assets/images/Mica_QLab/ql.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 
 
 ## 3. How does it work <a class="anchor" id="working"></a>
