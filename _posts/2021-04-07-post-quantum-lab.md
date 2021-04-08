@@ -65,7 +65,7 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 <table border=0>
 	<tbody>
 		<tr>
-			<td>![/assets/images/Mica_QLab/ql.PNG(/assets/images/Mica_QLab/ql.PNG)</td>
+			<td>![/assets/images/Mica_QLab/ql.PNG](/assets/images/Mica_QLab/ql.PNG)</td>
 			<td>The role of the image is to simulate a virtual environment as a Quantum lab for a specialized library/language. Another need is to synchronize the data between the container of the host computer. <br /> Like this, we could develop our code on our favorite IDE on our classical computer and run the code directly in the container. <br /><br /> Download the code : <b><a href="https://github.com/mickahell/quantum_lab">Github</a></b></td>
 		</tr>
 	</tbody>
