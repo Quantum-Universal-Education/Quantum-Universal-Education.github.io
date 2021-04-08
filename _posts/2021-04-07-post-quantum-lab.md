@@ -1,5 +1,5 @@
 ---
-title: Quantum LAb
+title: Quantum Lab
 categories:
   - Blog
 tags:
@@ -55,7 +55,7 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 	<tbody>
 		<tr>
 			<td width=66%><a href="https://www.docker.com/">Docker</a> is a technology allowing OS virtualization and system simulation. It allows to generalize a simple application with its whole environment into a deployable package to be share and run everywhere on every computer supporting Docker. This package is calling a container, the container is OS-level virtualization and every container share their own kernel. Moreover, the container is fully isolated from the host application.</td>
-			<td align="center"><img src="container-what-is-container.png" width=100%></td>
+			<td align="center"><img src="/assets/images/Mica_QLab/container-what-is-container.png" width=100%></td>
 		</tr>
 	</tbody>
 </table>
@@ -65,7 +65,7 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 <table border=0>
 	<tbody>
 		<tr>
-			<td><img src="ql.PNG" width=100%></td>
+			<td><img src="/assets/images/Mica_QLab/ql.PNG" width=100%></td>
 			<td>The role of the image is to simulate a virtual environment as a Quantum lab for a specialized library/language. Another need is to synchronize the data between the container of the host computer. <br /> Like this, we could develop our code on our favorite IDE on our classical computer and run the code directly in the container. <br /><br /> Download the code : <b><a href="https://github.com/mickahell/quantum_lab">Github</a></b></td>
 		</tr>
 	</tbody>
