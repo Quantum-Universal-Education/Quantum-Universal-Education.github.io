@@ -46,7 +46,7 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 
 - <summary>Mac / Windows</summary>
 <pre>https://www.docker.com/products/docker-desktop</pre>
-</details>
+
 ## 2. What is Docker <a class="anchor" id="docker"></a>
 
 <table border=0>
@@ -58,7 +58,7 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 	</tbody>
 </table>
 
-<img src="/assets/images/jayantis_qontributing_infographic.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+<img src="/assets/images/Mica_QLab/container-what-is-container.png style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 
 
 ## 3. How does it work <a class="anchor" id="working"></a>
@@ -89,12 +89,16 @@ You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quan
 To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : <pre>docker image tag mickahell/[IMAGE_NAME]:latest quantum_lab:latest</pre>
 
 Now if you tape `docker images` you'll be able to see your image :
+
 <pre>
+```python
 REPOSITORY                     TAG       IMAGE ID       CREATED       SIZE
 quantum_lab                    latest    73cc092474d1   3 weeks ago   1.48GB
 mickahell/quantum_lab_qiskit   latest    73cc092474d1   3 weeks ago   1.48GB
 ubuntu                         18.04     329ed837d508   4 weeks ago   63.3MB
+```
 </pre>
+
 
 ### 3.2. Create container <a class="anchor" id="container"></a>
 Now we have our image `quantum_lab`, you can see it by taping `docker images`. Next we need to set up a container who we be our virtual environment. We can create as much container as the stockage of our computer allows it.
