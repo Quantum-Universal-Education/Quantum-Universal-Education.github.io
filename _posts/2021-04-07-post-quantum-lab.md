@@ -53,7 +53,8 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 	<tbody>
 		<tr>
 			<td style="width:66%" > <a href="https://www.docker.com/">Docker</a> is a technology allowing OS virtualization and system simulation. It allows to generalize a simple application with its whole environment into a deployable package to be share and run everywhere on every computer supporting Docker. This package is calling a container, the container is OS-level virtualization and every container share their own kernel. Moreover, the container is fully isolated from the host application.</td>
-			<td><img src="/assets/images/Mica_QLab/container.png" width=100%></td>
+			<td>
+<img src="/assets/images/Mica_QLab/container.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;"></td>
 		</tr>	
 	</tbody>
 </table>
