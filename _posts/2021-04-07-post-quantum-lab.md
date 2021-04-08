@@ -92,12 +92,10 @@ To not have any problem with the following tutorial I suggest you to rename the 
 Now if you tape `docker images` you'll be able to see your image :
 
 <pre>
-```python
 REPOSITORY                     TAG       IMAGE ID       CREATED       SIZE
 quantum_lab                    latest    73cc092474d1   3 weeks ago   1.48GB
 mickahell/quantum_lab_qiskit   latest    73cc092474d1   3 weeks ago   1.48GB
 ubuntu                         18.04     329ed837d508   4 weeks ago   63.3MB
-```
 </pre>
 
 
