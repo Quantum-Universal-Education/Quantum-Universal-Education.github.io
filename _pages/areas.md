@@ -255,7 +255,7 @@ text-align: justify;”
                 </div>
 </div>
 
-<div class="w3-container w3-padding-32" style="width: 65vw" >	
+<div class="w3-container w3-padding-32" style="width: 55vw" >	
 <button class="button" onclick="qontributor_section()" style="width: 65vw; background-color:#280A7D;color:#FFFFFF">Qontributor List</button>	
   <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
 	  
@@ -297,8 +297,8 @@ text-align: justify;”
 	
 </div>
 
-<div class="w3-container w3-padding-32" style="width: 65vw" >
-<button class="button" onclick="qurator_section()" style="background-color: transparent;color:#6d2f15">Qurator List</button>	
+<div class="w3-container w3-padding-32" style="width: 55vw" >
+<button class="button" onclick="qurator_section()" style="width: 65vw; background-color:#00833C;color:#FFFFFF">Qurator List</button>	
 <div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
 	<h5>Sanskruti Wathare, CSE undergrad student </h5>
 <br>
