@@ -256,7 +256,7 @@ text-align: justify;”
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >	
-<button class="button" onclick="qontributor_section()" style="width: 65vw; background-color: transparent;color:#280A7D">Qontributor List</button>	
+<button class="button" onclick="qontributor_section()" style="width: 65vw; background-color:#280A7D;color:#FFFFFF">Qontributor List</button>	
   <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
 	  
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford </h5>
