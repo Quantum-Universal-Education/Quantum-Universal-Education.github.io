@@ -255,6 +255,13 @@ text-align: justify;”
                 </div>
 </div>
 
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
+</div>
+
+
+<h2> Members </h2>
+
 <div class="w3-container w3-padding-32" style="width: 55vw" >	
 <button class="button" onclick="qontributor_section()" style="width: 55vw; background-color:#280A7D;color:#FFFFFF">Qontributor List</button>	
   <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
@@ -335,11 +342,7 @@ text-align: justify;”
 </div>	
 </div>
  
- 
- 
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
-<h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
-</div>
+
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
 
