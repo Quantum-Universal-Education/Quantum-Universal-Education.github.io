@@ -311,6 +311,8 @@ text-align: justify;”
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford</h5>
 <br>
 <h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5> 
+<br>
+<h5>Alberto Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5> 
 </div>	
 </div>
 
