@@ -80,44 +80,6 @@ text-align: justify;”
 </style>
 <!-- Header -->
 
-<header class="w3-display-container w3-content w3-wide" id="home">	
-
-<div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contributing</h2>
-    <h4>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></h4>
-  </div>
-
-<div style="width: 55vw">
-	<img src="/assets/images/jayantis_qontributing_infographic.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
-</div>
-
-<div class="w3-container w3-padding-32" style="width: 55vw" >	
-  <div class="w3-container w3-padding-32" >
-   <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>Contribute a new open-source learning resource</button>
-   <button class="button qurator" onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qurator: <br> Review contributions and help make them accessible</button>
-  </div>
-</div>
-
-
-<div  class="w3-container w3-padding-32" style="width: 55vw">
-<h4> you get a free t-shirt shipped to you! Limit one t-shirt per contributor or curator.  <a href="https://fullstackquantumcomputation.tech/t-shirt-contest/">Logo and t-shirt design contest</a> was throughout the month of August 2020 and the final design is below! </h4>
-<div class="row">
-  <div class="column" style="width: 50%;">
-   <img src="/assets/images/designs/fsqc_shirt_sky-coffee.png" alt="quantum computing hardwares schroedinger's cat shirt design sky coffee" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
-  </div>
-  <div class="column" style="width: 50%;">
-    <img src="/assets/images/designs/fsqc_shirt_pale-teal.png" alt="quantum computing hardwares schroedinger's cat shirt design pale teal" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
-  </div>
-
-</div>	
-	
-</div>
-
-
-</header>
-
-
-
 <div class="w3-container w3-padding-32" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Areas of Quantum Science</h2>
   </div>
@@ -258,6 +220,46 @@ text-align: justify;”
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
 <h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
 </div>
+
+<header class="w3-display-container w3-content w3-wide" id="home">	
+
+<div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contributing</h2>
+    <h4>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></h4>
+  </div>
+
+<div style="width: 55vw">
+	<img src="/assets/images/jayantis_qontributing_infographic.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+</div>
+
+<div class="w3-container w3-padding-32" style="width: 55vw" >	
+  <div class="w3-container w3-padding-32" >
+   <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>Contribute a new open-source learning resource</button>
+   <button class="button qurator" onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qurator: <br> Review contributions and help make them accessible</button>
+  </div>
+</div>
+
+
+<div  class="w3-container w3-padding-32" style="width: 55vw">
+<h4> you get a free t-shirt shipped to you! Limit one t-shirt per contributor or curator.  <a href="https://fullstackquantumcomputation.tech/t-shirt-contest/">Logo and t-shirt design contest</a> was throughout the month of August 2020 and the final design is below! </h4>
+<div class="row">
+  <div class="column" style="width: 50%;">
+   <img src="/assets/images/designs/fsqc_shirt_sky-coffee.png" alt="quantum computing hardwares schroedinger's cat shirt design sky coffee" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+  </div>
+  <div class="column" style="width: 50%;">
+    <img src="/assets/images/designs/fsqc_shirt_pale-teal.png" alt="quantum computing hardwares schroedinger's cat shirt design pale teal" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+  </div>
+
+</div>	
+	
+</div>
+
+
+</header>
+
+
+
+
 
 
 <h2> Members </h2>
