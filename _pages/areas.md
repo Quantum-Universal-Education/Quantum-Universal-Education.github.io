@@ -256,7 +256,7 @@ text-align: justify;”
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >	
-<button class="button" onclick="qontributor_section()" style="width: 65vw; background-color:#280A7D;color:#FFFFFF">Qontributor List</button>	
+<button class="button" onclick="qontributor_section()" style="width: 55vw; background-color:#280A7D;color:#FFFFFF">Qontributor List</button>	
   <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
 	  
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford </h5>
@@ -298,7 +298,7 @@ text-align: justify;”
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >
-<button class="button" onclick="qurator_section()" style="width: 65vw; background-color:#00833C;color:#FFFFFF">Qurator List</button>	
+<button class="button" onclick="qurator_section()" style="width: 55vw; background-color:#00833C;color:#FFFFFF">Qurator List</button>	
 <div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
 	<h5>Sanskruti Wathare, CSE undergrad student </h5>
 <br>
