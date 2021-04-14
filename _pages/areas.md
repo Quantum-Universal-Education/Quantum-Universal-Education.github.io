@@ -118,7 +118,7 @@ text-align: justify;”
 
 
 
-<div class="w3-container w3-padding-32" style="width: 55vw; background:lightblue">
+<div class="w3-container w3-padding-32" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Areas of Quantum Science</h2>
   </div>
 
@@ -256,7 +256,7 @@ text-align: justify;”
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 65vw" >	
-<button class="button" onclick="qontributor_section()" style="background-color: transparent;color:#6d2f15">Qontributor List</button>	
+<button class="button" onclick="qontributor_section()" style="width: 65vw; background-color: transparent;color:#280A7D">Qontributor List</button>	
   <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
 	  
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford </h5>
