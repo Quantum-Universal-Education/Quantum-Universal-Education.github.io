@@ -82,7 +82,7 @@ text-align: justify;”
 
 <header class="w3-display-container w3-content w3-wide" id="home">	
 
-<div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
+<div class="w3-container w3-padding-32" id="projects" style="width: 55vw;background-color: lightblue;" >
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contributing</h2>
     <h4>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></h4>
   </div>
