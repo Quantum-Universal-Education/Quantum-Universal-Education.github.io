@@ -90,7 +90,7 @@ text-align: justify;”
 <div style="width: 55vw">
 	<img src="/assets/images/jayantis_qontributing_infographic.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 </div>
-
+<br>
 <div class="w3-container w3-padding-32" style="width: 55vw" >	
   <div class="w3-container w3-padding-32" >
    <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>Contribute a new open-source learning resource</button>
