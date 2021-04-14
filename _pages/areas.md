@@ -80,7 +80,7 @@ text-align: justify;”
 </style>
 <!-- Header -->
 
-<header class="w3-display-container w3-content w3-wide" id="home" style="background-color: lightblue;">	
+<header class="w3-display-container w3-content w3-wide" id="home">	
 
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;" >
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contributing</h2>
