@@ -312,11 +312,31 @@ text-align: justify;”
 <br>
 <h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5> 
 <br>
-<h5>Alberto Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5> 
+<h5>Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5> 
 </div>	
 </div>
 
-
+<div class="w3-container w3-padding-32" style="width: 55vw" >
+<button class="button" onclick="qurator_section()" style="width: 55vw; background-color:#FE6A1A;color:#FFFFFF">Our team</button>	
+<div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
+	<h5>Sanskruti Wathare, CSE undergrad student </h5>
+<br>
+<h5>Praveen J, Undergraduate at the Indian Institute of Science, Bangalore</h5>
+<br>
+<h5>Hirmay Sandesara, Ahmedabad University</h5>
+<br>
+<h5>Harshit Garg, CompSci 3rd year Undergrad at BITS Pilani India</h5>
+<br>
+<h5>Lia Yeh, PhD student in computer science at the University of Oxford</h5>
+<br>
+<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5> 
+<br>
+<h5>Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5> 
+</div>	
+</div>
+ 
+ 
+ 
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
 <h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
 </div>
