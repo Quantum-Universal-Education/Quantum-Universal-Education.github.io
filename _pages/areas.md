@@ -23,8 +23,8 @@ permalink: /areas/
 }
 
 .qontributor {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #6d2f15;
   width: 48%;
 }
@@ -36,8 +36,8 @@ permalink: /areas/
 
 
 .qurator {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #005853;
   width: 48%;
 }
@@ -91,125 +91,143 @@ text-align: justify;”
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Learning Resources</div>
-				<img classs="backg" src="/assets/front-page/q_learning_resource.png" alt="House" style="width:100%">
+        <a href="#">
+				<img classs="backg" src="/assets/front-page/q_learning_resource.png" alt="House" style="width:100%"></a>
 			    </div>
                             <p>Where can I learn about quantum science and quantum computing?</p>
-			<a href="#"> Read more </a>
                         </div>
-			    <a href="https://fullstackquantumcomputation.tech/hardware/">
+
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Hardware</div>
-				<img classs="backg" src="/assets/front-page/q_hardware.png" alt="House" style="width:100%">
+        <a href="https://fullstackquantumcomputation.tech/hardware/">
+				<img classs="backg" src="/assets/front-page/q_hardware.png" alt="House" style="width:100%"></a>
 			    </div>
-                            <p>How are qubits (or other paradigms of quantum computers) physically implemented?</p>
-                        </div></a>
-			<a href="https://fullstackquantumcomputation.tech/blog/post-tutorial-0-Hello-world/">    
+                            <p>How are qubits physically implemented?</p>
+                        </div>
+
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Software</div>
-				<img classs="backg" src="/assets/front-page/q_software.png" alt="House" style="width:100%">
+        <a href="https://fullstackquantumcomputation.tech/blog/post-tutorial-0-Hello-world/">  
+				<img classs="backg" src="/assets/front-page/q_software.png" alt="House" style="width:100%"></a>
 			    </div>
-				<p>How do I program quantum computers?</p>
-                        </div></a>
-			<a href="https://fullstackquantumcomputation.tech/q-algorithm/">    
+				                    <p>How do I program quantum computers?</p>
+                        </div>
+
+
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Algorithms</div>
-				<img classs="backg" src="/assets/front-page/q_algorithms.png" alt="House" style="width:100%">
+        <a href="https://fullstackquantumcomputation.tech/q-algorithm/">  
+				<img classs="backg" src="/assets/front-page/q_algorithms.png" alt="House" style="width:100%"></a>
 			    </div>
                             <p>What can quantum computers do better than classical computers?</p>
-                        </div></a>
-			  <a href="#">
+                        </div>
+
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Computer Architecture</div>
-				<img classs="backg" src="/assets/front-page/q_architecture.png" alt="House" style="width:100%">
+        <a href="#">
+				<img classs="backg" src="/assets/front-page/q_architecture.png" alt="House" style="width:100%"></a>
 			    </div>
                             <p>What happens between the hardware and software of a quantum computer?</p>
-                        </div></a>
-                            <a href="#">
+                        </div>
+
+
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Error Correction</div>
-				<img classs="backg" src="/assets/front-page/q_error_c.png" alt="House" style="width:100%">
+        <a href="#">
+				<img classs="backg" src="/assets/front-page/q_error_c.png" alt="House" style="width:100%"></a>
 			    </div>
                             <p>How can errors in quantum computation be corrected?</p>
-                        </div></a>
-                        <a href="#"><div class="item">
+                        </div>
+
+                      <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Chemistry</div>
-				<img classs="backg" src="/assets/front-page/q_chemistry.png" alt="House" style="width:100%">
+          <a href="#">
+				<img classs="backg" src="/assets/front-page/q_chemistry.png" alt="House" style="width:100%"></a>
 			    </div>
                             <p>What makes chemistry one of the most anticipated applications of quantum computing?</p>
-                        </div></a>
-			     <a href="#">
+                        </div>
+
                         <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Sensing</div>
-				<img src="/assets/front-page/q_sensing.png" alt="House" style="width:100%">
+        <a href="#">
+				<img src="/assets/front-page/q_sensing.png" alt="House" style="width:100%"></a>
 			   </div>
                            <p>How can quantum technology enhance sensors used in our day-to-day lives?</p>
-                        </div></a>
+                        </div>
+
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Cryptography</div>
-				<img src="/assets/front-page/q_cryptography.png" alt="House" style="width:100%">
+        <a href="https://fullstackquantumcomputation.tech/blog/post-pqc/">
+				<img src="/assets/front-page/q_cryptography.png" alt="House" style="width:100%"></a>
 			      </div>
                            <p>What could cryptography look like in a future with quantum codebreaking?</p>
-                            <a href="https://fullstackquantumcomputation.tech/blog/post-pqc/">Read More</a>
                         </div>
+
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Communication</div>
-				<img src="/assets/front-page/q_comunication.png" alt="House" style="width:100%">
+        <a href="https://fullstackquantumcomputation.tech/blog/post-qkd/">
+				<img src="/assets/front-page/q_comunication.png" alt="House" style="width:100%"></a>
 			      </div>
                            <p>How is quantum communication more secure?</p>
-                            <a href="https://fullstackquantumcomputation.tech/blog/post-qkd/">Read More</a>
                         </div>
+
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Information Theory</div>
-				<img src="/assets/front-page/q_information_t.png" alt="House" style="width:100%">
+        <a href="#">
+				<img src="/assets/front-page/q_information_t.png" alt="House" style="width:100%"></a>
 			      </div>
                            <p>What is the math and physics behind quantum computing?</p>
-                            <a href="#">Read More</a>
                         </div>
+
                         <!--
 			<div class="item">
                             <div class="w3-display-container">
 				<div class="w3-display-topleft w3-black w3-padding">Quantum Finance</div>
-				<img src="/assets/front-page/q_time.png" alt="House" style="width:100%">
+        <a href="#">
+				<img src="/assets/front-page/q_time.png" alt="House" style="width:100%"></a>
 			      </div>
-                            <p></p>
-                            <a href="#">Read More</a>
+                            <p>  </p>
+
                         </div>
                         -->
 			<div class="item">
                             <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Machine Learning</div>
-				<img src="/assets/front-page/qml.png" alt="House" style="width:100%">
+        <a href="#">
+				<img src="/assets/front-page/qml.png" alt="House" style="width:100%"></a>
 			      </div>
-                           <p>How can quantum computing help analyze and learn from data?</p>
-                            <a href="#">Read More</a>
+                           <p>How can quantum computing help analyze and learn from data?</p>        
                         </div>
+
                        <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Games</div>
-				<img src="/assets/front-page/q_game.png" alt="House" style="width:100%">
+        <a href="#">
+				<img src="/assets/front-page/q_game.png" alt="House" style="width:100%"></a>
 			      </div>
                            <p>How can I play and make games about quantum science and computing?</p>
-                            <a href="#">Read More</a>
                         </div>
+
                        <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-black w3-padding">Miscellaneous</div>
-				<img src="/assets/front-page/q_miscellaneous.png" alt="House" style="width:100%">
+        <a href="#">
+				<img src="/assets/front-page/q_miscellaneous.png" alt="House" style="width:100%"></a>
 			      </div>
                            <p>What else is interesting about quantum computing?</p>
-                            <a href="#">Read More</a>
                         </div>
                     </div>
+
                     <div class="MS-controls">
                         <button class="MS-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
                         <button class="MS-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
@@ -221,7 +239,7 @@ text-align: justify;”
 <h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
 </div>
 
-<header class="w3-display-container w3-content w3-wide" id="home">	
+<header class="w3-display-container w3-content w3-wide" id="home">
 
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contributing</h2>
@@ -232,7 +250,7 @@ text-align: justify;”
 	<img src="/assets/images/jayantis_qontributing_infographic.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 </div>
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >	
+<div class="w3-container w3-padding-32" style="width: 55vw" >
   <div class="w3-container w3-padding-32" >
    <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>Contribute a new open-source learning resource</button>
    <button class="button qurator" onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qurator: <br> Review contributions and help make them accessible</button>
@@ -250,8 +268,8 @@ text-align: justify;”
     <img src="/assets/images/designs/fsqc_shirt_pale-teal.png" alt="quantum computing hardwares schroedinger's cat shirt design pale teal" width="325" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
   </div>
 
-</div>	
-	
+</div>
+
 </div>
 
 
@@ -260,14 +278,12 @@ text-align: justify;”
 
 
 
-
-
 <h2> Members </h2>
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >	
-<button class="button" onclick="qontributor_section()" style="width: 55vw; background-color:#280A7D;color:#FFFFFF">Qontributor List</button>	
+<div class="w3-container w3-padding-32" style="width: 55vw" >
+<button class="button" onclick="qontributor_section()" style="width: 55vw; background-color:#280A7D;color:#FFFFFF">Qontributor List</button>
   <div id="qontributor_list" class="w3-container w3-padding-32" style="display:none">
-	  
+
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford </h5>
 <br>
 <h5>Vincent Pisani, Undergraduate at UC Santa Barbara </h5>
@@ -303,11 +319,11 @@ text-align: justify;”
 <h5>Victor Onofre, Center of Nanoscience and Nanotechnology (CNyN) of the National Autonomous University of México (UNAM)</h5>
 
   </div>
-	
+
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >
-<button class="button" onclick="qurator_section()" style="width: 55vw; background-color:#00833C;color:#FFFFFF">Qurator List</button>	
+<button class="button" onclick="qurator_section()" style="width: 55vw; background-color:#00833C;color:#FFFFFF">Qurator List</button>
 <div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
 	<h5>Sanskruti Wathare, CSE undergrad student </h5>
 <br>
@@ -319,14 +335,14 @@ text-align: justify;”
 <br>
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford</h5>
 <br>
-<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5> 
+<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5>
 <br>
-<h5>Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5> 
-</div>	
+<h5>Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5>
+</div>
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >
-<button class="button" onclick="qurator_section()" style="width: 55vw; background-color:#FE6A1A;color:#FFFFFF">Our team</button>	
+<button class="button" onclick="qurator_section()" style="width: 55vw; background-color:#FE6A1A;color:#FFFFFF">Our team</button>
 <div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
 	<h5>Sanskruti Wathare, CSE undergrad student </h5>
 <br>
@@ -338,12 +354,12 @@ text-align: justify;”
 <br>
 <h5>Lia Yeh, PhD student in computer science at the University of Oxford</h5>
 <br>
-<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5> 
+<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5>
 <br>
-<h5>Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5> 
-</div>	
+<h5>Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5>
 </div>
- 
+</div>
+
 
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
@@ -354,8 +370,8 @@ text-align: justify;”
 </div>
 </div>
 <!-- End page content -->
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
-<script src="/assets/js/multislider.js"></script> 
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/assets/js/multislider.js"></script>
 <script>
 $('#mixedSlider').multislider({
 		duration: 500,
@@ -383,4 +399,3 @@ function qurator_section() {
   }
 }
 </script>
-
