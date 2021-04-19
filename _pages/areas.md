@@ -96,7 +96,6 @@ text-align: justify;”
 			    </div>
                             <p>Where can I learn about quantum science and quantum computing?</p>
                         </div>
-
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Hardware</div>
@@ -105,7 +104,6 @@ text-align: justify;”
 			    </div>
                             <p>How are qubits physically implemented?</p>
                         </div>
-
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Software</div>
@@ -114,8 +112,6 @@ text-align: justify;”
 			    </div>
 				                    <p>How do I program quantum computers?</p>
                         </div>
-
-
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Algorithms</div>
@@ -124,7 +120,6 @@ text-align: justify;”
 			    </div>
                             <p>What can quantum computers do better than classical computers?</p>
                         </div>
-
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Computer Architecture</div>
@@ -133,8 +128,6 @@ text-align: justify;”
 			    </div>
                             <p>What happens between the hardware and software of a quantum computer?</p>
                         </div>
-
-
                         <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Error Correction</div>
@@ -143,7 +136,6 @@ text-align: justify;”
 			    </div>
                             <p>How can errors in quantum computation be corrected?</p>
                         </div>
-
                       <div class="item">
 			      <div class="w3-display-container backg">
 				<div class="w3-black w3-padding ">Quantum Chemistry</div>
@@ -152,7 +144,6 @@ text-align: justify;”
 			    </div>
                             <p>What makes chemistry one of the most anticipated applications of quantum computing?</p>
                         </div>
-
                         <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Sensing</div>
@@ -161,7 +152,6 @@ text-align: justify;”
 			   </div>
                            <p>How can quantum technology enhance sensors used in our day-to-day lives?</p>
                         </div>
-
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Cryptography</div>
@@ -170,7 +160,6 @@ text-align: justify;”
 			      </div>
                            <p>What could cryptography look like in a future with quantum codebreaking?</p>
                         </div>
-
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Communication</div>
@@ -179,7 +168,6 @@ text-align: justify;”
 			      </div>
                            <p>How is quantum communication more secure?</p>
                         </div>
-
                         <div class="item">
                              <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Information Theory</div>
@@ -188,7 +176,6 @@ text-align: justify;”
 			      </div>
                            <p>What is the math and physics behind quantum computing?</p>
                         </div>
-
                         <!--
 			<div class="item">
                             <div class="w3-display-container">
@@ -197,7 +184,6 @@ text-align: justify;”
 				<img src="/assets/front-page/q_time.png" alt="House" style="width:100%"></a>
 			      </div>
                             <p>  </p>
-
                         </div>
                         -->
 			<div class="item">
@@ -208,7 +194,6 @@ text-align: justify;”
 			      </div>
                            <p>How can quantum computing help analyze and learn from data?</p>        
                         </div>
-
                        <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-black w3-padding">Quantum Games</div>
@@ -217,7 +202,6 @@ text-align: justify;”
 			      </div>
                            <p>How can I play and make games about quantum science and computing?</p>
                         </div>
-
                        <div class="item">
                             <div class="w3-display-container">
 				<div class="w3-black w3-padding">Miscellaneous</div>
@@ -227,7 +211,6 @@ text-align: justify;”
                            <p>What else is interesting about quantum computing?</p>
                         </div>
                     </div>
-
                     <div class="MS-controls">
                         <button class="MS-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
                         <button class="MS-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
@@ -235,9 +218,6 @@ text-align: justify;”
                 </div>
 </div>
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
-<h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
-</div>
 
 <header class="w3-display-container w3-content w3-wide" id="home">
 
@@ -249,12 +229,16 @@ text-align: justify;”
 <div style="width: 55vw">
 	<img src="/assets/images/jayantis_qontributing_infographic.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 </div>
-
+<br> <br>
 <div class="w3-container w3-padding-32" style="width: 55vw" >
   <div class="w3-container w3-padding-32" >
    <button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qontributor:<br>Contribute a new open-source learning resource</button>
    <button class="button qurator" onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Qurator: <br> Review contributions and help make them accessible</button>
   </div>
+</div>
+
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<h4>If you have an idea not exactly one of the options above, suggest it via  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
 </div>
 
 
@@ -278,7 +262,9 @@ text-align: justify;”
 
 
 
-<h2> Members </h2>
+<div class="w3-container w3-padding-32" style="width: 55vw;">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Members</h2>
+  </div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >
 <button class="button" onclick="qontributor_section()" style="width: 55vw; background-color:#280A7D;color:#FFFFFF">Qontributor List</button>
