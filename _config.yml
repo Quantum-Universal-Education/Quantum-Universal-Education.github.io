@@ -103,16 +103,16 @@ footer:
 
 defaults:
  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: false
-      comments: true
-      share: true
-      related: true
+  #- scope:
+  #    path: ""
+  #    type: posts
+  #  values:
+  #    layout: single
+  #    author_profile: true
+  #    read_time: false
+  #    comments: true
+  #    share: true
+  #    related: true
   # _pages
   - scope:
       path: "_pages"
