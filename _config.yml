@@ -104,7 +104,7 @@ footer:
 defaults:
  # _posts
   - scope:
-      path: ""
+      path: "/_pages/areas.md"
       type: posts
     values:
       layout: single
