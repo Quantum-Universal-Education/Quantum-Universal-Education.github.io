@@ -104,10 +104,15 @@ text-align: justify;”
 
 <h2>Recordings of past sessions</h2>
 <div style="width: 55vw">
+	<h4> Conjugate Coding by  Stephen Wiesner </h4>
+	<h5> Moderated by Lia Yeh </h5>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/EiDpvlSiC3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
+<br> <br>
+	
 	<div style="width: 55vw">
+	<h4>the physical implementation of quantum computation  by David P. DiVincenzor </h4>
+	<h5> Moderated  by Victor Onofre </h5>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/AVDIXNLGCDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		
 		
