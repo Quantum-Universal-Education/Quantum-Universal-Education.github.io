@@ -92,7 +92,7 @@ text-align: justify;”
 </div>
 <br> <br>
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<div class="w3-container w3-padding-32" style="width: 50vw" >		
 <h4>If you want to participate and interact with other members on previous and upcoming papers you can do so on  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
 </div>
 
@@ -104,11 +104,13 @@ text-align: justify;”
 
 <h2>Recordings of past sessions</h2>
 <div style="width: 55vw">
-	<iframe width="560" height="315" src="https://www.youtube.com/watch?v=EiDpvlSiC3k&t=851s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/EiDpvlSiC3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 	<div style="width: 55vw">
-	<iframe width="560" height="315" src="https://www.youtube.com/watch?v=AVDIXNLGCDk&ab_channel=Full-StackQuantumComputation" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/AVDIXNLGCDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+		
 </div>
 
 </div>
