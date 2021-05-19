@@ -84,11 +84,11 @@ text-align: justify;”
 
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Journal Club</h2>
-    <h4>Share an online learning resource to recommend by submitting a pull request on the <a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io">Github repo</a></h4>
+    <h4>To be able to learn together about quantum computing from journal each month.</h4>
   </div>
 
 <div style="width: 55vw">
-	<img src="/assets/images/jayantis_qontributing_infographic.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+	<img src="/assets/images/journalclub_cover.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 </div>
 <br> <br>
 <div class="w3-container w3-padding-32" style="width: 55vw" >
