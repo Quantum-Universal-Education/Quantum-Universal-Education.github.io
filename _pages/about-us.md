@@ -1,9 +1,92 @@
 ---
 permalink: /about-us/
-title: "About us"
 ---
 
-The educational materials hosted on this website are under the <a href="https://opensource.org/licenses/ECL-2.0">Educational Community License, Version 2.0</a>; it is a modification of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> specific to the needs of the education communities using this license, and therefore abides by the <a href="https://www.apache.org/foundation/policies/conduct.html">Apache Code of Conduct</a>.
+<link href="/assets/css/areas.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/png"  href="/assets/front-page/FSQC-small.png" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.qontributor {
+  background-color: white;
+  color: black;
+  border: 2px solid #6d2f15;
+  width: 48%;
+}
+.qontributor:hover {
+  background-color: #6d2f15;
+  color: white;
+  width: 48%;
+}
+
+
+.qurator {
+  background-color: white;
+  color: black;
+  border: 2px solid #005853;
+  width: 48%;
+}
+.qurator:hover {
+  background-color: #005853;
+  color: white;
+  width: 48%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.page__footer {color: #FFFFFF;font-size: 16px;}
+.site-logo img {
+  max-height: 4rem;
+}
+
+.page__footer-copyright {
+  font-size: 20px;
+}
+
+
+div p{
+text-align: justify;”
+}
+</style>
+<!-- Header -->
+
+<div class="w3-container w3-padding-32" style="width: 55vw;">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">About us</h2>
+  </div>
+
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<h4>The educational materials hosted on this website are under the <a href="https://opensource.org/licenses/ECL-2.0">Educational Community License, Version 2.0</a>; it is a modification of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> specific to the needs of the education communities using this license, and therefore abides by the <a href="https://www.apache.org/foundation/policies/conduct.html">Apache Code of Conduct</a>.
 
 You could say this project had three parts to its origin story:
 
@@ -16,14 +99,14 @@ We have a Discord server open to all people interested in quantum universal educ
 Our online community events are at this <a href="https://calendar.google.com/calendar/b/1?cid=Y19ubTIwOTMwN2NuMDk1dHVhY2RpMHI4Z2Qwb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Google Calendar</a>.
 
 This website .tech domain name is thanks to <a href="https://mlh.io">Major League Hacking</a>'s gift to their <a href="https://top.mlh.io/2020">2020 Top 50 Hackers</a>.
+</h4>
+</div>
 
 
 
-
----
-permalink: /our-team/
-title: "Our Team"
----
+<div class="w3-container w3-padding-32" style="width: 55vw;">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Our team</h2>
+  </div>
 
 <div style="border: 2px dotted brown; width: 50vw; padding: 20px; margin: 10px; clear: both">
 <img style="float: right; padding: 20px" src="/assets/images/biopics/lia_y.jpeg" width="250" height="250"/>
