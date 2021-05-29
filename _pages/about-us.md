@@ -91,9 +91,9 @@ text-align: justify;”
 <h5>You could say this project had three parts to its origin story:</h5>
 
   <ul>
-<li><h6>- An undergraduate student-led seminar taught/ran by Lia Yeh at the University of California, Santa Barbara in Spring 2020, <a href="https://www.ccs.ucsb.edu/courses/2020/spring/full-stack-quantum-computation">Full-Stack Quantum Computation</a>.</h6></li>
-<li><h6>- A grant to build a community-driven open-source quantum education website from the <a href="https://unitary.fund">Unitary Fund</a>, a non-profit working to create a quantum technology ecosystem that benefits the most people.</h6></li>
-<li><h6>- A quantum education channel and online meet-up at the 2020 Qiskit Global Summer School Discord server.</h6></li>
+<li>An undergraduate student-led seminar taught/ran by Lia Yeh at the University of California, Santa Barbara in Spring 2020, <a href="https://www.ccs.ucsb.edu/courses/2020/spring/full-stack-quantum-computation">Full-Stack Quantum Computation</a>.</li>
+<li>A grant to build a community-driven open-source quantum education website from the <a href="https://unitary.fund">Unitary Fund</a>, a non-profit working to create a quantum technology ecosystem that benefits the most people.</li>
+<li>A quantum education channel and online meet-up at the 2020 Qiskit Global Summer School Discord server.</li>
   </ul>
     
     
