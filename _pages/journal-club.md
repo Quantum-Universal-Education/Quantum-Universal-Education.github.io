@@ -66,7 +66,7 @@ permalink: /journal-club/
 
 .page__footer {color: #FFFFFF;font-size: 16px;}
 .site-logo img {
-  max-height: 5rem;
+  max-height: 4rem;
 }
 
 .page__footer-copyright {
