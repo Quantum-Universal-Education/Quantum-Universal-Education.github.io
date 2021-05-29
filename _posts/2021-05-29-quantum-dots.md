@@ -14,7 +14,7 @@ author:
   - Samanvay Sharma Q
 ---
 
-<div style="border: 0px solid black; width: 50vw">
+#<div style="border: 0px solid black; width: 50vw">
 <img src="/assets/images/Mark_Quantum_Dots/Slide0.PNG"/>
 <br>
 <br>
@@ -60,10 +60,12 @@ Properties of Quantum Dots.
 The emerging properties are what really are the distinguishing features of QDs
 <br>
 Mainly
+
 1. These nanostructures are so tightly confined that they are said to be “0D”
 2. They have bound, quantized energy states: Think back to the Harmonic Oscillator example
 3. They have pretty well defined energy band structures (that we can manipulate, split, control charge movement)
 4. Their electronic wavefunctions closely resemble those of actual atoms (Look at Kittel)
+
 <br>
 Because of these neat properties Quantum Dots have also been given the name “Artificial Atoms”
 <br>
@@ -79,18 +81,26 @@ That’s why the definition can seem somewhat broad and vague. There are multipl
 <br>
 I’d like to highlight a 4 of ways to make Quantum Dot structures
 <br>
-* One way of making a dot is Single Molecule traps, not unlike what we talked about earlier with our first guest speakers
+One way of making a dot is Single Molecule traps, not unlike what we talked about earlier with our first guest speakers
+
 - where we trap whole molecules in between electrodes and manipulate them there
+
 <br>
-* Another way we can go about making a QD is by synthesizing metallic particles with chemistry
+Another way we can go about making a QD is by synthesizing metallic particles with chemistry
+
 - Actually, this is kind of cool because of how quick it is: check out videos on Youtube
+
 <br>
-* A third way which is fairly popular in the world of silicon photonics is Vertical Semiconductor QDs
+A third way which is fairly popular in the world of silicon photonics is Vertical Semiconductor QDs
+
 - Build up layers of material, then etch down these column structures and you get a confined dot
+
 <br>
-* Finally, what will be the focus of the remainder of my talk: Lateral Semiconductor Dots 
+Finally, what will be the focus of the remainder of my talk: Lateral Semiconductor Dots 
+
 - Voltage Corals
 - Where we use processes common in Semiconductor fab processes to lay out the dots in a planar arrangement
+
 <br>
 <img src="/assets/images/Mark_Quantum_Dots/Slide6.PNG"/>
 <br>
@@ -107,12 +117,14 @@ And while these criteria were initially meant to characterize the computer as a 
 <br>
 they actually work well to describe the criteria necessary for the qubits that make up that computer 
 <br>
-* So for a good Qubit, we want to be able to:
+So for a good Qubit, we want to be able to:
+
 - Initialize: Get a Qubit into a known and stable state
 - Manipulate: Or act on it with a set of gates
 - Readout: After some manipulations, we want to be able to determine what state we are in
 - Keep them for a long time: Or have keeping them isolated from the environment as much as possible to mitigate decoherence
 - Scale: Have multiple qubits available to work with
+
 <br>
 So that’s what we want to see with our Qubits
 <br>
@@ -158,9 +170,11 @@ So we have initialized our Qubit in the Spin Up state
 <br>
 Now we want to apply some gates to the qubit. Well first, we make sure the qubit is trapped so that it cant escape (so both up and down are below the Fermi Level):
 <br>
-* Then we can do this in one of two ways:
+Then we can do this in one of two ways:
+
 - Electron Spin Resonance (ESR): Using an oscillating magnetic or electric fields to drive transitions from spin up to spin down 
 - Or we can take a more indirect approach by letting the interactions between electrons themselves act as the manipulation: Couple two electron qubit wavefunctions
+
 <br>
 Now, final state of the electrons depend on each other
 <br>
@@ -208,11 +222,15 @@ Fermi level E_F should be between up state and down state energy. Such that the 
 <br>
 One last note on the final part of the DiVincenzo Criteria:
 <br>
-* I want to point out that Spin Qubits are nice because of how much effort it takes to decohere
+I want to point out that Spin Qubits are nice because of how much effort it takes to decohere
+
 - You need two coupling mechanisms in order for the qubit to lose energy
+
 <br>
-* Also, they are very scalable.
+Also, they are very scalable.
+
 - Example: The Qubyte (8 Qubits)
+
 <br>
 Comment from Jiji:
 <br>
