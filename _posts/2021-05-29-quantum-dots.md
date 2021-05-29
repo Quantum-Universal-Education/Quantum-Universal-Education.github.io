@@ -14,7 +14,7 @@ author:
   - Samanvay Sharma Q
 ---
 
-#<div style="border: 0px solid black; width: 50vw">
+<div style="border: 0px solid black; width: 50vw">
 <img src="/assets/images/Mark_Quantum_Dots/Slide0.PNG"/>
 <br>
 <br>
