@@ -32,6 +32,18 @@ Kathrin Koenig:
   name: "Kathrin Koenig"
   avatar: "assets/images/biopics/kathrin_k.jpg"
 
+Kushagra Sharma:
+  name: "Kushagra Sharma"
+  avatar: "/assets/images/biopics/kushagra_s.jpeg"
+
+Mark Leal:
+  name: "Mark Leal"
+  avatar: "assets/images/biopics/mark_l.jpg"
+
+Michael Rollin:
+  name: "Michaël Rollin"
+  avatar: "/assets/images/biopics/michael_rollin.png"
+
 Praveen J:
   name: "Praveen J"
   avatar: "/assets/images/biopics/praveen_j.jpg"
@@ -64,6 +76,10 @@ Sansriti Ranjan:
   name: "Sansriti Ranjan"
   avatar: "assets/images/biopics/sansriti_r.jpg"
 
+Victor Onofre:
+  name: "Victor Onofre"
+  avatar: "/assets/images/biopics/victor_o.jpg" 
+
 Vincent Pisani:
   name: "Vincent Pisani"
   avatar: "/assets/images/biopics/vincent_p.png"
@@ -71,24 +87,15 @@ Vincent Pisani:
 Yipeng Huang:
   name: "Yipeng Huang"
   avatar: "/assets/images/biopics/yipeng_h.jpg"
-
-Michael Rollin:
-  name: "Michaël Rollin"
-  avatar: "/assets/images/biopics/michael_rollin.png"
-
-Victor Onofre:
-  name: "Victor Onofre"
-  avatar: "/assets/images/biopics/victor_o.jpg"
-  
-Kushagra Sharma:
-  name: "Kushagra Sharma"
-  avatar: "/assets/images/biopics/kushagra_s.jpeg"
-
+ 
 Curate Section:
   name: "Curated By:"
 
 Alberto Maldonado Romo Q:
   name: "Alberto Maldonado Romo"
+
+Che (Jiji) Chiang Q:
+  name: "Che (Jiji) Chiang"
 
 Harshit Garg Q:
   name: "Harshit Garg"
@@ -104,6 +111,9 @@ Praveen J Q:
 
 Ricky Kienhoefer Q:
   name: "Ricky Kienhoefer"
+
+Samanvay Sharma Q:
+  name: "Samanvay Sharma"
 
 Sanskruti Wathare Q:
   name: "Sanskruti Wathare"

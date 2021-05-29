@@ -303,9 +303,12 @@ text-align: justify;”
 <h5>Michaël Rollin, Electrical Engineer</h5>
 <br>
 <h5>Victor Onofre, Center of Nanoscience and Nanotechnology (CNyN) of the National Autonomous University of México (UNAM)</h5>
-
-  </div>
-
+<br>
+<h5>Kushagra Sharma, Student at The Coding School</h5>
+<br>
+<h5>Mark Leal, Former Research Assistant at UC Santa Barbara; Systems Engineer at FLIR Systems</h5>
+<br>
+</div>
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >
@@ -323,30 +326,22 @@ text-align: justify;”
 <br>
 <h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5>
 <br>
-<h5>Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5>
+<h5>Ricky Kienhoefer, Undergrad at University of Nevada, Reno</h5>
+<br>
+<h5>Che (Jiji) Chiang, Physics major at National Taiwan University</h5>
+<br>
+<h5>Samanvay Sharma, grad student at Keio University</h5>
+<br>
 </div>
 </div>
 
+<!--
 <div class="w3-container w3-padding-32" style="width: 55vw" >
 <button class="button" onclick="qurator_section()" style="width: 55vw; background-color:#FE6A1A;color:#FFFFFF">Our team</button>
 <div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
-	<h5>Sanskruti Wathare, CSE undergrad student </h5>
-<br>
-<h5>Praveen J, Undergraduate at the Indian Institute of Science, Bangalore</h5>
-<br>
-<h5>Hirmay Sandesara, Ahmedabad University</h5>
-<br>
-<h5>Harshit Garg, CompSci 3rd year Undergrad at BITS Pilani India</h5>
-<br>
-<h5>Lia Yeh, PhD student in computer science at the University of Oxford</h5>
-<br>
-<h5>Alberto Maldonado Romo, PhD student in computer science at the Center for Computing Research, IPN, Mexico</h5>
-<br>
-<h5>Ricky Kienhoefe,Undergrad at University of Nevada, Reno</h5>
 </div>
 </div>
-
-
+-->
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
 
