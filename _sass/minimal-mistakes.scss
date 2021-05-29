@@ -67,6 +67,9 @@ html {
  .site-logo img { max-height: 5rem; height:50px; }
   }
   
+ .site-logo img { max-height: 5rem; height:50px; }
+
+  
   @include breakpoint($x-large) {
     line-height: 1.6em;
   }
