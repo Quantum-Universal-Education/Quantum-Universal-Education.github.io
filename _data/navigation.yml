@@ -5,6 +5,8 @@ main:
     #    url: /categories/
     #  - title: "Tags"
     #    url: /tags/
+  - title: "Journal Club"
+    url: /journal-club/
   - title: "Contributing"
     url: /contributing/
   - title: "Hardware"
