@@ -64,7 +64,7 @@ html {
     line-height: 1.6em;
   }
 .greedy-nav {
- .site-logo img { max-height: 4rem;}
+ img { max-height: 4rem;}
   }
   
   @include breakpoint($x-large) {
