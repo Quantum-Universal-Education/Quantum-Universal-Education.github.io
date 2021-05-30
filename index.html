@@ -83,7 +83,7 @@ text-align: justify;”
 }
 	
 
-ul {
+/*ul {
   background: #3399ff;
   padding: 20px;
 }
@@ -91,6 +91,17 @@ ul {
 ul li {
   background: #cce5ff;
   margin: 5px;
+}*/
+	
+.container {
+  background-color:white;
+  border:solid .5em black;
+  border-radius:.5em;
+  box-sizing:border-box;
+  flex:0 0 30%;
+  height:240px;
+  margin:.5em;
+  overflow:auto;
 }	
 	
 </style>
@@ -310,7 +321,7 @@ ul li {
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >
 <button class="button" onclick="qurator_section()" style="width: 55vw; background-color:#00833C;color:#FFFFFF">Qurator List</button>
-<div id="qurator_list" class="w3-container w3-padding-32" style="display:none">
+<div id="qurator_list" class="w3-container w3-padding-32 container" style="display:none">
 <div style="width: 50vw; padding: 20px; margin: 10px; clear: both">
 <img style="float: right; padding: 20px" src="/assets/images/biopics/harshit_g.png" width="250" height="250"/>
 <h1>Harshit Garg</h1>
