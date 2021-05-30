@@ -81,9 +81,9 @@ text-align: justify;”
 </style>
 <!-- Header -->
 
-<div class="w3-container w3-padding-32" style="width: 55vw;">
+<!--div class="w3-container w3-padding-32" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">About us</h2>
-  </div>
+  </div-->
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
 The educational materials hosted on this website are under the <a href="https://opensource.org/licenses/ECL-2.0">Educational Community License, Version 2.0</a>; it is a modification of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> specific to the needs of the education communities using this license, and therefore abides by the <a href="https://www.apache.org/foundation/policies/conduct.html">Apache Code of Conduct</a>.
