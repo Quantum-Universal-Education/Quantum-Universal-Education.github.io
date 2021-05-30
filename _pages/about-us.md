@@ -86,9 +86,13 @@ text-align: justify;”
   </div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
-<h5>The educational materials hosted on this website are under the <a href="https://opensource.org/licenses/ECL-2.0">Educational Community License, Version 2.0</a>; it is a modification of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> specific to the needs of the education communities using this license, and therefore abides by the <a href="https://www.apache.org/foundation/policies/conduct.html">Apache Code of Conduct</a>.</h5>
+The educational materials hosted on this website are under the <a href="https://opensource.org/licenses/ECL-2.0">Educational Community License, Version 2.0</a>; it is a modification of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> specific to the needs of the education communities using this license, and therefore abides by the <a href="https://www.apache.org/foundation/policies/conduct.html">Apache Code of Conduct</a>.
 
-<h5>You could say this project had three parts to its origin story:</h5>
+<div class="w3-container w3-padding-32" style="width: 55vw;">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Our story</h2>
+  </div>
+ 
+You could say this project had three parts to its origin story:
 
   <ul>
 <li>An undergraduate student-led seminar taught/ran by Lia Yeh at the University of California, Santa Barbara in Spring 2020, <a href="https://www.ccs.ucsb.edu/courses/2020/spring/full-stack-quantum-computation">Full-Stack Quantum Computation</a>.</li>
@@ -96,12 +100,12 @@ text-align: justify;”
 <li>A quantum education channel and online meet-up at the 2020 Qiskit Global Summer School Discord server.</li>
   </ul>
     
-    
-<h5>We have a Discord server open to all people interested in quantum universal education (PIQUE).  In other words, we are an international online group of people passionate about community-driven open-source, universal quantum education!  We give you the warmest welcome at <a href="https://discord.gg/NDm9e9W">our Discord server</a>. </h5>
 
-<h5>Our online community events are at this <a href="https://calendar.google.com/calendar/b/1?cid=Y19ubTIwOTMwN2NuMDk1dHVhY2RpMHI4Z2Qwb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Google Calendar</a>.</h5>
+We have a Discord server open to all people interested in quantum universal education (PIQUE).  In other words, we are an international online group of people passionate about community-driven open-source, universal quantum education!  We give you the warmest welcome at <a href="https://discord.gg/NDm9e9W">our Discord server</a>.
 
-<h5>This website .tech domain name is thanks to <a href="https://mlh.io">Major League Hacking</a>'s gift to their <a href="https://top.mlh.io/2020">2020 Top 50 Hackers</a>.</h5>
+Our online community events are at this <a href="https://calendar.google.com/calendar/b/1?cid=Y19ubTIwOTMwN2NuMDk1dHVhY2RpMHI4Z2Qwb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Google Calendar</a>.
+
+This website .tech domain name is thanks to <a href="https://mlh.io">Major League Hacking</a>'s gift to their <a href="https://top.mlh.io/2020">2020 Top 50 Hackers</a>.
 </div>
 
 
