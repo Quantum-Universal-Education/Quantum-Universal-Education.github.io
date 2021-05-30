@@ -100,12 +100,6 @@ You could say this project had three parts to its origin story:
 <li>A quantum education channel and online meet-up at the 2020 Qiskit Global Summer School Discord server.</li>
   </ul>
     
-
-We have a Discord server open to all people interested in quantum universal education (PIQUE).  In other words, we are an international online group of people passionate about community-driven open-source, universal quantum education!  We give you the warmest welcome at <a href="https://discord.gg/NDm9e9W">our Discord server</a>.
-
-Our online community events are at this <a href="https://calendar.google.com/calendar/b/1?cid=Y19ubTIwOTMwN2NuMDk1dHVhY2RpMHI4Z2Qwb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Google Calendar</a>.
-
-This website .tech domain name is thanks to <a href="https://mlh.io">Major League Hacking</a>'s gift to their <a href="https://top.mlh.io/2020">2020 Top 50 Hackers</a>.
 </div>
 
 
@@ -196,4 +190,13 @@ Adithya Sireesh (Adi) has recently graduated from the University of Edinburgh wi
 
 Harshit Garg is an undergraduate studying Computer Science at BITS Pilani, India. He has had a passion for all things CompSci far as long as he can remember. Combined this with a fascination of Quantum Mechanics, he sees in Quantum Computing a unique opportunity to be working for something from the ground up, akin to the architects of computers (and the internet!) of a bygone era.
 <div style="clear:both"></div>
+</div>
+
+
+<div class="w3-container w3-padding-32" style="width: 55vw;">
+  We have a Discord server open to all people interested in quantum universal education (PIQUE).  In other words, we are an international online group of people passionate about community-driven open-source, universal quantum education!  We give you the warmest welcome at <a href="https://discord.gg/NDm9e9W">our Discord server</a>.
+  <br>
+  Our online community events are at this <a href="https://calendar.google.com/calendar/b/1?cid=Y19ubTIwOTMwN2NuMDk1dHVhY2RpMHI4Z2Qwb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Google Calendar</a>.
+  <br>
+  This website .tech domain name is thanks to <a href="https://mlh.io">Major League Hacking</a>'s gift to their <a href="https://top.mlh.io/2020">2020 Top 50 Hackers</a>.
 </div>
