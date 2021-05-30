@@ -195,8 +195,8 @@ Harshit Garg is an undergraduate studying Computer Science at BITS Pilani, India
 
 <div class="w3-container w3-padding-32" style="width: 55vw;">
   We have a Discord server open to all people interested in quantum universal education (PIQUE).  In other words, we are an international online group of people passionate about community-driven open-source, universal quantum education!  We give you the warmest welcome at <a href="https://discord.gg/NDm9e9W">our Discord server</a>.
-  <br>
+  <br> <br>
   Our online community events are at this <a href="https://calendar.google.com/calendar/b/1?cid=Y19ubTIwOTMwN2NuMDk1dHVhY2RpMHI4Z2Qwb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Google Calendar</a>.
-  <br>
+  <br> <br>
   This website .tech domain name is thanks to <a href="https://mlh.io">Major League Hacking</a>'s gift to their <a href="https://top.mlh.io/2020">2020 Top 50 Hackers</a>.
 </div>
