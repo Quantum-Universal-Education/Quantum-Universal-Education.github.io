@@ -85,12 +85,11 @@ text-align: justify;”
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">About us</h2>
   </div-->
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
-The educational materials hosted on this website are under the <a href="https://opensource.org/licenses/ECL-2.0">Educational Community License, Version 2.0</a>; it is a modification of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> specific to the needs of the education communities using this license, and therefore abides by the <a href="https://www.apache.org/foundation/policies/conduct.html">Apache Code of Conduct</a>.
-
 <div class="w3-container w3-padding-32" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Our story</h2>
   </div>
+  
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
  
 You could say this project had three parts to its origin story:
 
@@ -194,6 +193,8 @@ Harshit Garg is an undergraduate studying Computer Science at BITS Pilani, India
 
 
 <div class="w3-container w3-padding-32" style="width: 55vw;">
+  The educational materials hosted on this website are under the <a href="https://opensource.org/licenses/ECL-2.0">Educational Community License, Version 2.0</a>; it is a modification of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> specific to the needs of the education communities using this license, and therefore abides by the <a href="https://www.apache.org/foundation/policies/conduct.html">Apache Code of Conduct</a>.
+    <br> <br>
   We have a Discord server open to all people interested in quantum universal education (PIQUE).  In other words, we are an international online group of people passionate about community-driven open-source, universal quantum education!  We give you the warmest welcome at <a href="https://discord.gg/NDm9e9W">our Discord server</a>.
   <br> <br>
   Our online community events are at this <a href="https://calendar.google.com/calendar/b/1?cid=Y19ubTIwOTMwN2NuMDk1dHVhY2RpMHI4Z2Qwb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Google Calendar</a>.
