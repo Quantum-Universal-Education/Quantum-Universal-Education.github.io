@@ -1,5 +1,6 @@
 ---
 permalink: /journal-club/
+layout: archive
 ---
 
 <link href="/assets/css/areas.css" rel="stylesheet" type="text/css">
