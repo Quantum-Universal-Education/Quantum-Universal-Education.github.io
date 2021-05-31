@@ -58,6 +58,13 @@ html {
   }
 }
 
+.archive{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+
 // line height
 .page__content {
   @include breakpoint($large) {
