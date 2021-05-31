@@ -78,6 +78,12 @@ permalink: /about-us/
 div p{
 text-align: justify;”
 }
+  
+.archive{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
 </style>
 <!-- Header -->
 
