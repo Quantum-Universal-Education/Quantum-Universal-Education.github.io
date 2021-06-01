@@ -7,13 +7,15 @@ main:
     #    url: /tags/
   - title: "Journal Club"
     url: /journal-club/
-  - title: "Contributing"
-    url: /contributing/
-  - title: "Hardware"
-    url: /hardware/
-  - title: "Our Team"
-    url: /our-team/
-  - title: "Curators"
-    url: /curators/
-  - title: "About"
-    url: /about/
+  #- title: "Contributing"
+  #  url: /contributing/
+  #- title: "Hardware"
+  #  url: /hardware/
+  #- title: "Our Team"
+  #  url: /our-team/
+  #- title: "Curators"
+  #  url: /curators/
+  #- title: "About"
+  #  url: /about/
+  - title: "About us"
+    url: /about-us/

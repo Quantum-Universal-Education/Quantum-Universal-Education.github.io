@@ -1,5 +1,6 @@
 ---
 permalink: /journal-club/
+layout: archive
 ---
 
 <link href="/assets/css/areas.css" rel="stylesheet" type="text/css">
@@ -66,7 +67,7 @@ permalink: /journal-club/
 
 .page__footer {color: #FFFFFF;font-size: 16px;}
 .site-logo img {
-  max-height: 5rem;
+  max-height: 4rem;
 }
 
 .page__footer-copyright {
@@ -77,6 +78,13 @@ permalink: /journal-club/
 div p{
 text-align: justify;”
 }
+	
+.archive{
+display: flex;
+align-items: center;
+flex-direction: column;
+}	
+	
 </style>
 <!-- Header -->
 
