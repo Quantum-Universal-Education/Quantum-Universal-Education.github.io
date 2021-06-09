@@ -92,11 +92,11 @@ flex-direction: column;
 
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Annual Anniversary</h2>
-    <h4>To be able to learn together about quantum computing from journal each month.</h4>
+    <h4>Time to celebrate and listen to everyone's quantum computing progress.</h4>
   </div>
 
 <div style="width: 55vw">
-	<img src="/assets/images/journalclub_cover.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 </div>
 <br> <br>
 
@@ -110,27 +110,8 @@ flex-direction: column;
 
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
 
-<h2>Recordings of past sessions</h2>
-<div style="width: 55vw">
-	<h4> Conjugate Coding by  Stephen Wiesner </h4>
-	<h5> Moderated by Lia Yeh </h5>
-	<h6> April 3, 2021 </h6>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/EiDpvlSiC3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<br> <br>
-	
-	<div style="width: 55vw">
-	<h4>The physical implementation of quantum computation  by David P. DiVincenzor </h4>
-	<h5> Moderated  by Victor Onofre </h5>
-	<h6>May 8, 2021 </h6>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/AVDIXNLGCDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
-</div>
+<h2>Typeform for the register</h2>
 
-	<div style="width: 55vw">
-	<h4>Soon new paper </h4>
-	<h5> Moderated  searching for a volunteer </h5>
-	<h6>June 5, 2021 </h6>
-</div>
 	
 </div>
 <!-- End page content -->
