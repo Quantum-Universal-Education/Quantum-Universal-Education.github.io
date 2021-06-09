@@ -113,11 +113,11 @@ flex-direction: column;
     <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4>	
 <div class="row">
   <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
+    <h2>Topics</h2>
     <p>Some text..</p>
   </div>
   <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
+    <h2>Important Dates</h2>
     <p>Some text..</p>
   </div>
 </div>	
