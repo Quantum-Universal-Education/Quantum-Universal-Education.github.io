@@ -112,19 +112,19 @@ flex-direction: column;
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Annual Anniversary</h2>
     <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4>	
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#280A7D;color:#FFFFFF;">
     <h2>Topics</h2>
     <p>Some text..</p>
   </div>
-  <div class="column" style="background-color:#bbb;">
-    <h3>Important Dates</h3>
-    <h2>Open enrollment</h2>
+  <div class="column" style="background-color:#00833C;color:#FFFFFF">
+    <h2>Important Dates</h2>
+    <h3>Open enrollment</h3>
 	  <p>June 14, 2021</p>
-    <h2>Close enrollment</h2>
+    <h3>Close enrollment</h3>
 	  <p>July 9, 2021</p>
-    <h2>Abstracts accepted from</h2>
+    <h3>Abstracts accepted from</h3>
 	  <p>July 16th, 2021</p>
-  <h2>Event Days</h2>
+  <h3>Event Days</h3>
 	<p>July 24th and 25th, 2021</p>
   </div>
 </div>	
