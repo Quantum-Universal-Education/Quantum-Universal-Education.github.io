@@ -94,7 +94,7 @@ flex-direction: column;
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  /*height: 300px;*/ /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -117,15 +117,15 @@ flex-direction: column;
     <p>Some text..</p>
   </div>
   <div class="column" style="background-color:#00833C;color:#FFFFFF">
-    <h2>Important Dates</h2>
-    <h3>Open enrollment</h3>
-	  <p>June 14, 2021</p>
-    <h3>Close enrollment</h3>
-	  <p>July 9, 2021</p>
-    <h3>Abstracts accepted from</h3>
-	  <p>July 16th, 2021</p>
-  <h3>Event Days</h3>
-	<p>July 24th and 25th, 2021</p>
+    <h2 style="color:#FFFFFF">Important Dates</h2>
+    <h3 style="color:#FFFFFF">Open enrollment</h3>
+	  <p style="color:#FFFFFF">June 14, 2021</p>
+    <h3 style="color:#FFFFFF">Close enrollment</h3>
+	  <p style="color:#FFFFFF">July 9, 2021</p>
+    <h3 style="color:#FFFFFF">Abstracts accepted from</h3>
+	  <p style="color:#FFFFFF">July 16th, 2021</p>
+  <h3 style="color:#FFFFFF">Event Days</h3>
+	<p style="color:#FFFFFF">July 24th and 25th, 2021</p>
   </div>
 </div>	
 	
