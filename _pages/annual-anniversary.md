@@ -27,12 +27,12 @@ layout: archive
   background-color: white;
   color: black;
   border: 2px solid #6d2f15;
-  width: 48%;
+  width: 100%;
 }
 .qontributor:hover {
   background-color: #6d2f15;
   color: white;
-  width: 48%;
+  width: 100%;
 }
 
 
@@ -40,12 +40,12 @@ layout: archive
   background-color: white;
   color: black;
   border: 2px solid #005853;
-  width: 48%;
+  width: 100%;
 }
 .qurator:hover {
   background-color: #005853;
   color: white;
-  width: 48%;
+  width: 100%;
 }
 
 * {
@@ -97,8 +97,8 @@ flex-direction: column;
 	
   </div>
 
-<div style="width: 40vw">
-	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+<div style="width: 55vw">
+	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
 </div>
 <br> <br>
 
@@ -110,9 +110,9 @@ flex-direction: column;
 </header>
 
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<div class="w3-container w3-padding-32" style="width: 40vw" >		
 
-<button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Register</button>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Register</button>
 
 	
 </div>
