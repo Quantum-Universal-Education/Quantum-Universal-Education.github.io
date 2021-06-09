@@ -108,7 +108,7 @@ flex-direction: column;
 </header>
 
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<div class="w3-container w3-padding-32" style="width: 40vw" >		
 
 <h2>Typeform for the register</h2>
 
