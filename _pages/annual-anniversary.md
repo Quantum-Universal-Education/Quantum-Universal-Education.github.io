@@ -117,8 +117,15 @@ flex-direction: column;
     <p>Some text..</p>
   </div>
   <div class="column" style="background-color:#bbb;">
-    <h2>Important Dates</h2>
-    <p>Some text..</p>
+    <h3>Important Dates</h3>
+    <h2>Open enrollment</h2>
+	  <p>June 14, 2021</p>
+    <h2>Close enrollment</h2>
+	  <p>July 9, 2021</p>
+    <h2>Abstracts accepted from</h2>
+	  <p>July 16th, 2021</p>
+  <h2>Event Days</h2>
+	<p>July 24th and 25th, 2021</p>
   </div>
 </div>	
 	
