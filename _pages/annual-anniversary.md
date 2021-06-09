@@ -114,7 +114,23 @@ flex-direction: column;
 <div class="row">
   <div class="column" style="background-color:#280A7D;color:#FFFFFF;">
     <h2>Topics</h2>
-    <p>Some text..</p>
+  <ul>
+	  <li>Quantum Learning Resources</li>
+	  <li>Quantum Hardware</li>
+	  <li>Quantum Software</li>
+	  <li>Quantum Algorithms</li>
+	  <li>Quantum Computer Architecture</li>
+	  <li>Quantum Error Correction</li>
+	  <li>Quantum Chemistry</li>
+	  <li>Quantum Sensing</li>
+	  <li>Quantum Cryptography</li>
+	  <li>Quantum Communication</li>
+	  <li>Quantum Information Theory</li>
+	  <li>Quantum Machine Learning</li>
+	  <li>Quantum Games</li>
+	  <li>Miscellaneous</li>
+  </ul>
+    <h3>Some text..</h3>
   </div>
   <div class="column" style="background-color:#00833C;color:#FFFFFF">
     <h2 style="color:#FFFFFF">Important Dates</h2>
