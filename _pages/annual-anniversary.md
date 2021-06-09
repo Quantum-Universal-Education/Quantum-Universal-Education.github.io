@@ -93,24 +93,26 @@ flex-direction: column;
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Annual Anniversary</h2>
     <h4>Time to celebrate and listen to everyone's quantum computing progress.</h4>
+    <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4>
+	
   </div>
 
-<div style="width: 55vw">
+<div style="width: 40vw">
 	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 </div>
 <br> <br>
 
-<div class="w3-container w3-padding-32" style="width: 50vw" >		
-<h4>If you want to participate and interact with other members on previous and upcoming papers you can do so on  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<h4></h4>
 </div>
 
 
 </header>
 
 
-<div class="w3-container w3-padding-32" style="width: 40vw" >		
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
 
-<h2>Typeform for the register</h2>
+<button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Register</button>
 
 	
 </div>
