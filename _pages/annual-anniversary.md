@@ -85,7 +85,6 @@ display: flex;
 align-items: center;
 flex-direction: column;
 }	
-<style>
 * {
   box-sizing: border-box;
 }
@@ -200,7 +199,7 @@ body {
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: #FE6A1A;
+  background-color: #A70024;
   position: relative;
   color: white;
   border-radius: 6px;
@@ -259,14 +258,19 @@ body {
   </div>
   <div class="container right">
     <div class="content">
-    <h2 style="color:#FFFFFF">Important Dates</h2>
-    
-	  
-    <h3 style="color:#FFFFFF">Close enrollment</h3>
+    <h2 style="color:#FFFFFF">Close enrollment</h2>
 	  <p style="color:#FFFFFF">July 9, 2021</p>
-    <h3 style="color:#FFFFFF">Abstracts accepted from</h3>
+  </div>
+  </div>
+  <div class="container right">
+    <div class="content">  
+    <h2 style="color:#FFFFFF">Abstracts accepted from</h2>
 	  <p style="color:#FFFFFF">July 16th, 2021</p>
-  <h3 style="color:#FFFFFF">Event Days</h3>
+  </div>
+  </div>
+  <div class="container right">
+    <div class="content">  
+  <h2 style="color:#FFFFFF">Event Days</h2>
 	<p style="color:#FFFFFF">July 24th and 25th, 2021</p>
     </div>
   </div>
