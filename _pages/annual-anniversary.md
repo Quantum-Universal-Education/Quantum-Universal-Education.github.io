@@ -283,6 +283,10 @@ body {
 
 <div class="w3-container w3-padding-32" style="width: 55vw;">	
 	<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Topics</h2>
+	<div>
+	<div style="padding: 50px; display: inline-block;"><ul><li>Quantum Learning Resources</li></ul></div>
+	<div style="padding: 50px; display: inline-block;"><ul><li>Quantum Hardware</li></ul></div>
+	</div>
   <ul>
 	  <li>Quantum Learning Resources</li>
 	  <li>Quantum Hardware</li>
