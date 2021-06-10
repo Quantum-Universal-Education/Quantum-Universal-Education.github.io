@@ -93,7 +93,7 @@ flex-direction: column;
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 50%;
+  width: 45%;
   padding: 10px;
   height: 700px /* Should be removed. Only for demonstration */
 }
@@ -112,8 +112,8 @@ flex-direction: column;
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Annual Anniversary</h2>
     <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4>	
-<div class="w3-container w3-padding-32" style="width: 55vw" >
-  <div class="w3-container w3-padding-32" style="background-color:#280A7D;color:#FFFFFF;">
+<div class="row">
+  <div class="column" style="background-color:#280A7D;color:#FFFFFF;width: 48%;">
     <h2  style="color:#FFFFFF">Topics</h2>
   <ul>
 	  <li>Quantum Learning Resources</li>
@@ -132,7 +132,7 @@ flex-direction: column;
 	  <li>Miscellaneous</li>
   </ul>
   </div>
-  <div class="column" style="background-color:#00833C;color:#FFFFFF">
+  <div class="column" style="background-color:#00833C;color:#FFFFFF;width: 48%;">
     <h2 style="color:#FFFFFF">Important Dates</h2>
     <h3 style="color:#FFFFFF">Open enrollment</h3>
 	  <p style="color:#FFFFFF">June 14, 2021</p>
