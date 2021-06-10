@@ -110,7 +110,6 @@ flex-direction: column;
 }
 
 body {
-  background-color: #474e5d;
   font-family: Helvetica, sans-serif;
 }
 
