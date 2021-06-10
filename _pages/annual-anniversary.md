@@ -94,7 +94,7 @@ flex-direction: column;
   float: left;
   width: 50%;
   padding: 10px;
-  /*height: 300px;*/ /* Should be removed. Only for demonstration */
+  height: 800px /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -113,7 +113,7 @@ flex-direction: column;
     <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4>	
 <div class="row">
   <div class="column" style="background-color:#280A7D;color:#FFFFFF;">
-    <h2>Topics</h2>
+    <h2  style="color:#FFFFFF">Topics</h2>
   <ul>
 	  <li>Quantum Learning Resources</li>
 	  <li>Quantum Hardware</li>
@@ -130,7 +130,6 @@ flex-direction: column;
 	  <li>Quantum Games</li>
 	  <li>Miscellaneous</li>
   </ul>
-    <h3>Some text..</h3>
   </div>
   <div class="column" style="background-color:#00833C;color:#FFFFFF">
     <h2 style="color:#FFFFFF">Important Dates</h2>
