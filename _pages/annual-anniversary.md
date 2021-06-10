@@ -262,7 +262,7 @@ body {
 	  <p style="color:#FFFFFF">July 9, 2021</p>
   </div>
   </div>
-  <div class="container right">
+  <div class="container left">
     <div class="content">  
     <h2 style="color:#FFFFFF">Abstracts accepted from</h2>
 	  <p style="color:#FFFFFF">July 16th, 2021</p>
