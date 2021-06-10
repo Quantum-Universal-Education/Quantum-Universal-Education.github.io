@@ -112,8 +112,8 @@ flex-direction: column;
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Annual Anniversary</h2>
     <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4>	
-<div class="row">
-  <div class="column" style="background-color:#280A7D;color:#FFFFFF;">
+<div class="w3-container w3-padding-32" style="width: 55vw" >
+  <div class="w3-container w3-padding-32" style="background-color:#280A7D;color:#FFFFFF;">
     <h2  style="color:#FFFFFF">Topics</h2>
   <ul>
 	  <li>Quantum Learning Resources</li>
