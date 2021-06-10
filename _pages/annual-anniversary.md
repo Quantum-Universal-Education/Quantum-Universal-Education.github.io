@@ -4,6 +4,7 @@ layout: archive
 ---
 
 <link href="/assets/css/areas.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/png"  href="/assets/images/FSQC-small.png" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
@@ -94,7 +95,7 @@ flex-direction: column;
   float: left;
   width: 50%;
   padding: 10px;
-  height: 800px /* Should be removed. Only for demonstration */
+  height: 700px /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
