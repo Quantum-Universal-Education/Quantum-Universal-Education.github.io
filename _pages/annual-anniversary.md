@@ -275,34 +275,38 @@ body {
     </div>
   </div>
 </div>	
-	
-	
 
-	
   </div>
-
 <div class="w3-container w3-padding-32" style="width: 55vw;">	
 	<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Topics</h2>
 	<div>
-	<div style="padding: 50px; display: inline-block;"><ul><li>Quantum Learning Resources</li></ul></div>
-	<div style="padding: 50px; display: inline-block;"><ul><li>Quantum Hardware</li></ul></div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Learning Resources</li></ul></div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Hardware</li></ul></div>
 	</div>
-  <ul>
-	  <li>Quantum Learning Resources</li>
-	  <li>Quantum Hardware</li>
-	  <li>Quantum Software</li>
-	  <li>Quantum Algorithms</li>
-	  <li>Quantum Computer Architecture</li>
-	  <li>Quantum Error Correction</li>
-	  <li>Quantum Chemistry</li>
-	  <li>Quantum Sensing</li>
-	  <li>Quantum Cryptography</li>
-	  <li>Quantum Communication</li>
-	  <li>Quantum Information Theory</li>
-	  <li>Quantum Machine Learning</li>
-	  <li>Quantum Games</li>
-	  <li>Miscellaneous</li>
-  </ul>
+	</div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Software</li></ul></div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Algorithms</li></ul></div>
+	</div>
+	</div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Computer Architecture</li></ul></div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Error Correction</li></ul></div>
+	</div>
+	</div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Chemistry</li></ul></div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Sensing</li></ul></div>
+	</div>
+	</div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Cryptography</li></ul></div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Communication</li></ul></div>
+	</div>
+	</div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum  Information Theory</li></ul></div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Machine Learning</li></ul></div>
+	</div>
+	</div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Games</li></ul></div>
+	<div style="padding: 10px; display: inline-block;"><ul><li>Miscellaneous</li></ul></div>
+	</div>
 </div>
 <br> <br>	
 <div style="width: 55vw">
@@ -310,7 +314,6 @@ body {
 	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
 </div>
 <br> <br>
-
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
 <h4></h4>
 </div>
