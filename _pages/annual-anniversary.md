@@ -240,7 +240,7 @@ body {
 </style>
 <!-- Header -->
 
-<header class="w3-display-container w3-content w3-wide" id="home">
+<header class="w3-container w3-padding-32" id="home" style="position:relative;text-align:center">
 
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Annual Anniversary</h2>
@@ -253,13 +253,13 @@ body {
   <div class="container left">
     <div class="content">
     <h2 style="color:#FFFFFF">Open enrollment</h2>
-<p style="color:#FFFFFF">June 14, 2021</p>
+<p style="color:#FFFFFF">June 14th, 2021</p>
   </div>
   </div>
   <div class="container right">
     <div class="content">
     <h2 style="color:#FFFFFF">Close enrollment</h2>
-	  <p style="color:#FFFFFF">July 9, 2021</p>
+	  <p style="color:#FFFFFF">July 9th, 2021</p>
   </div>
   </div>
   <div class="container left">
