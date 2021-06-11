@@ -283,27 +283,27 @@ body {
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Learning Resources</li></ul></div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Hardware</li></ul></div>
 	</div>
-	</div>
+	<div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Software</li></ul></div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Algorithms</li></ul></div>
 	</div>
-	</div>
+	<div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Computer Architecture</li></ul></div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Error Correction</li></ul></div>
 	</div>
-	</div>
+	<div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Chemistry</li></ul></div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Sensing</li></ul></div>
 	</div>
-	</div>
+	<div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Cryptography</li></ul></div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Communication</li></ul></div>
 	</div>
-	</div>
+	<div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum  Information Theory</li></ul></div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Machine Learning</li></ul></div>
 	</div>
-	</div>
+	<div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Quantum Games</li></ul></div>
 	<div style="padding: 10px; display: inline-block;"><ul><li>Miscellaneous</li></ul></div>
 	</div>
