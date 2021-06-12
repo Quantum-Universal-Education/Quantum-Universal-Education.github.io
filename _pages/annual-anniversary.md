@@ -327,7 +327,7 @@ body {
 
 <div class="w3-container w3-padding-32" style="width: 40vw" >		
 
-<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/TYDeLwCr'">Register</button>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Register</button>
 
 	
 </div>
