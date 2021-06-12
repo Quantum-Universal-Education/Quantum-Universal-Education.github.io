@@ -246,7 +246,14 @@ body {
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Annual Anniversary</h2>
     <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4>	
 	</div>
-	
+<div style="width: 55vw">
+	    <h4>Time to celebrate and listen to everyone's quantum computing progress.</h4>
+	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
+</div>
+<br> <br>
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<h4></h4>
+</div>	
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">TimeLine</h2>	
 <div class="timeline">
@@ -264,7 +271,7 @@ body {
   </div>
   <div class="container left">
     <div class="content">  
-    <h2 style="color:#FFFFFF">Abstracts accepted from</h2>
+    <h2 style="color:#FFFFFF">Abstracts deadline</h2>
 	  <p style="color:#FFFFFF">July 16th, 2021</p>
   </div>
   </div>
@@ -309,14 +316,7 @@ body {
 	</div>
 </div>
 <br> <br>	
-<div style="width: 55vw">
-	    <h4>Time to celebrate and listen to everyone's quantum computing progress.</h4>
-	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
-</div>
-<br> <br>
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
-<h4></h4>
-</div>
+
 
 	
 	
