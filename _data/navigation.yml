@@ -7,6 +7,8 @@ main:
     #    url: /tags/
   - title: "Journal Club"
     url: /journal-club/
+   - title: "Annual Anniversary"
+    url: /annual-anniversary/
   #- title: "Contributing"
   #  url: /contributing/
   #- title: "Hardware"
