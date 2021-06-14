@@ -247,7 +247,7 @@ body {
     <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4>	
 	</div>
 <div style="width: 55vw">
-	    <h4>Time to celebrate and listen to everyone's quantum computing progress.</h4>
+	    <!--h4>Time to celebrate and listen to everyone's quantum computing progress.</h4-->
 	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
 </div>
 </header>
