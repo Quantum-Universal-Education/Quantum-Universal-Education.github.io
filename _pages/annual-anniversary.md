@@ -245,7 +245,7 @@ body {
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Annual Anniversary</h2>
     <!--h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4-->
-	<h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing for our community.Time to celebrate and listen to everyone's quantum computing progress.</h4>
+	<h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing for our community.Time to celebrate and listen to everyone's quantum computing progress!</h4>
 	</div>
 <div style="width: 55vw">
 	    <!--h4>Time to celebrate and listen to everyone's quantum computing progress.</h4-->
