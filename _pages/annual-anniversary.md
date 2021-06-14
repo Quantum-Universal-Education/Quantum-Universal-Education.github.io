@@ -250,6 +250,7 @@ body {
 	    <h4>Time to celebrate and listen to everyone's quantum computing progress.</h4>
 	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
 </div>
+</header>
 <br> <br>
 <div class="w3-container w3-padding-32" style="width: 40vw" >		
 <h2 style="color:#A70024">Registration is now open</h2>
@@ -257,6 +258,7 @@ body {
 
 	
 </div>	
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
 	
 <br> <br>	
 <div class="w3-container w3-padding-32" style="width: 55vw" >		
@@ -330,7 +332,7 @@ body {
 	
 
 
-</header>
+</div>
 
 
 
