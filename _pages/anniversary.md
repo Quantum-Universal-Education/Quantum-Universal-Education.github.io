@@ -1,5 +1,5 @@
 ---
-permalink: /anniversary/
+permalink: /anniversary-21/
 layout: archive
 ---
 
