@@ -254,7 +254,7 @@ body {
 </header>
 <div class="w3-container w3-padding-32" style="width: 40vw" >   
 <h2 style="color:#A70024">Registration is now open</h2>
-<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Register</button>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Abstract submission</button>
 
   
 </div>  
