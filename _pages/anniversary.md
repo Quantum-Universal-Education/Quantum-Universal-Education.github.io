@@ -335,6 +335,33 @@ body {
 The meetups will be spread out throughout July 24th and 25th.  The regional area and language meetups will be at most suitable times, while other topics and demographic meetups will be when most people can attend.
 </p>
 </div>
+  
+  <div class="w3-container w3-padding-32" style="width: 55vw;"> 
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">How do I join the meetups?</h3>
+    <p>To make it interactive and fun, most of the meetups will be on AltspaceVR, which is Microsoft's free/quick/easy to install computer virtual reality meetup.  As it is not supported for all platforms, we will also hold several meetups on Discord.
+Although RSVP is not needed to join, we highly encourage you to RSVP as we will first email the event join links to those who RSVP'd for those meetup sessions, and then based on capacity open up meetup rooms through our <a href="https://discord.gg/NDm9e9W">Our Discord server</a>.  RSVP'ing will enable you to sign up for the meetups you would like to join, which we then schedule based on your time zone and availability.  RSVP'ing will even allow you to suggest topics for a meetup room you'd like to see --- for each topic, so you can stay in contact after the meetup, we will make and moderate a text channel for that topic in the Discord server.</p>
+</div>
+  
+  
+<div class="w3-container w3-padding-32" style="width: 55vw;"> 
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Are we going to hand out speaker certificates? </h3>
+    <p>Yes, only for accepted abstracts</p>
+</div>
+</div>
+
+
+<div class="w3-container w3-padding-32" style="width: 55vw;"> 
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">How to write an abstract?  </h3>
+  <p>Following those ideas:</p>
+  <ul>
+    <li>One or two sentences on background and motivation.</li>
+    <li>A sentence on the problem addressed.</li>
+    <li>Couple of sentences on the model, approach, and methods; their novelty in  contrast to existing works.</li>
+    <li>Highlights of exciting main results in two-three sentences.</li>
+    <li>A closing sentence on the implications/importance of the contributions/results.</li>
+   <ul>
+    <p>You can use the following steps in this <a href="https://arxiv.org/pdf/1907.12204.pdf">paper</a>.</p>
+</div>
 </div>
 
 
