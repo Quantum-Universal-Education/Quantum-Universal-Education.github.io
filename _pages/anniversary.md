@@ -347,7 +347,6 @@ Although RSVP is not needed to join, we highly encourage you to RSVP as we will 
   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Are we going to hand out speaker certificates? </h3>
     <p>Yes, only for accepted abstracts</p>
 </div>
-</div>
 
 
 <div class="w3-container w3-padding-32" style="width: 55vw;"> 
