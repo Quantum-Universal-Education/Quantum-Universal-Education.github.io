@@ -257,7 +257,15 @@ body {
 <button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Abstract submission</button>
 
   
-</div>  
+</div> 
+
+<div class="w3-container w3-padding-32" style="width: 40vw" >   
+<h2 style="color:#A70024">Register is now open</h2>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register</button>
+
+  
+</div> 
+
 <div class="w3-container w3-padding-32" style="width: 55vw" >   
 <div class="w3-container w3-padding-32" style="width: 55vw" >   
 <h4></h4>
@@ -335,20 +343,15 @@ body {
 The meetups will be spread out throughout July 24th and 25th.  The regional area and language meetups will be at most suitable times, while other topics and demographic meetups will be when most people can attend.
 </p>
 </div>
-  
   <div class="w3-container w3-padding-32" style="width: 55vw;"> 
   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">How do I join the meetups?</h3>
     <p>To make it interactive and fun, most of the meetups will be on AltspaceVR, which is Microsoft's free/quick/easy to install computer virtual reality meetup.  As it is not supported for all platforms, we will also hold several meetups on Discord.
 Although RSVP is not needed to join, we highly encourage you to RSVP as we will first email the event join links to those who RSVP'd for those meetup sessions, and then based on capacity open up meetup rooms through our <a href="https://discord.gg/NDm9e9W">Our Discord server</a>.  RSVP'ing will enable you to sign up for the meetups you would like to join, which we then schedule based on your time zone and availability.  RSVP'ing will even allow you to suggest topics for a meetup room you'd like to see --- for each topic, so you can stay in contact after the meetup, we will make and moderate a text channel for that topic in the Discord server.</p>
 </div>
-  
-  
 <div class="w3-container w3-padding-32" style="width: 55vw;"> 
   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Are we going to hand out speaker certificates? </h3>
     <p>Yes, only for accepted abstracts</p>
 </div>
-
-
 <div class="w3-container w3-padding-32" style="width: 55vw;"> 
   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">How to write an abstract?  </h3>
   <p>Following those ideas:</p>
