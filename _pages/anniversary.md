@@ -328,8 +328,17 @@ body {
 </div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw;"> 
-  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="color:#A70024">surprise activities coming soon</h2>
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Frequently Asked Questions (FAQ)</h2>
+  <div class="w3-container w3-padding-32" style="width: 55vw;"> 
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">When are the talks and meetups?</h3>
+    <p>The talks will be live on Zoom, on July 24th, and if need be the 25th.  The scheduling will begin after the talks are accepted.  Taking into account the speakers' availability, we will do our best to have most talks be when most people can attend, which is morning in western time zones and night in eastern time zones.  If the speaker has given permission, their talk will be publicly viewable afterwards on the FSQC Youtube channel.
+The meetups will be spread out throughout July 24th and 25th.  The regional area and language meetups will be at most suitable times, while other topics and demographic meetups will be when most people can attend.
+</p>
+</div>
 </div>
 
 
+<div class="w3-container w3-padding-32" style="width: 55vw;"> 
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="color:#A70024">surprise activities coming soon</h2>
+</div>
 <!-- End page content -->
