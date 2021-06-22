@@ -85,21 +85,24 @@ plugins:
 
 footer:
   links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/company/quantum-universal-education/"
+    - label: "Discord"
+      icon: "fab fa-discord"
+      url: "https://discord.gg/NDm9e9W"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://www.facebook.com/QuantumUniversalEducation"
-    #    - label: "Twitter"
-    #      icon: "fab fa-fw fa-twitter-square"
-    #      url: "https://twitter.com/"
-    #    - label: "Instagram"
-    #      icon: "fab fa-fw fa-instagram"
-    #      url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/company/quantum-universal-education/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/QuantUniEd/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io"
 
 defaults:
  # _posts
