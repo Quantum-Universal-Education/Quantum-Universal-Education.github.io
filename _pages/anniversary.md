@@ -357,10 +357,10 @@ Although RSVP is not needed to join, we highly encourage you to RSVP as we will 
     <li>Couple of sentences on the model, approach, and methods; their novelty in  contrast to existing works.</li>
     <li>Highlights of exciting main results in two-three sentences.</li>
     <li>A closing sentence on the implications/importance of the contributions/results.</li>
-   <ul>
+   </ul>
     <p>You can use the following steps in this <a href="https://arxiv.org/pdf/1907.12204.pdf">paper</a>.</p>
-
-
+     </div>
+</div>
 
 <div class="w3-container w3-padding-32" style="width: 55vw;"> 
   <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="color:#A70024">surprise activities coming soon</h2>
