@@ -245,7 +245,7 @@ body {
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Anniversary</h2>
     <!--h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4-->
-	<h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing for our community.Time to celebrate and listen to everyone's quantum computing progress!</h4>
+	<h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing for our community. Time to celebrate and listen to everyone's quantum computing progress!</h4>
 	</div>
 <div style="width: 55vw">
 	    <!--h4>Time to celebrate and listen to everyone's quantum computing progress.</h4-->
@@ -253,8 +253,9 @@ body {
 </div>
 </header>
 <div class="w3-container w3-padding-32" style="width: 40vw" >		
-<h2 style="color:#A70024">Registration is now open</h2>
-<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Register</button>
+<h2 style="color:#A70024">Registration is now open!  Free to attend</h2>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Sign up to give a talk</button>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register for the event</button>
 
 	
 </div>	
@@ -263,23 +264,24 @@ body {
 <h4></h4>
 </div>	
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">TimeLine</h2>	
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Timeline</h2>	
 <div class="timeline">
   <div class="container left">
     <div class="content">
-    <h2 style="color:#FFFFFF">Open enrollment</h2>
-<p style="color:#FFFFFF">June 14th, 2021</p>
+    <h2 style="color:#FFFFFF">Live & Recorded Workshop: How to Write an Abstract</h2>
+    <h3 style="color:#FFFFFF">Discord server #abstract-workshop stage channel</h3>
+<p style="color:#FFFFFF">4pm UTC, June 27th, 2021</p>
   </div>
   </div>
   <div class="container right">
     <div class="content">
-    <h2 style="color:#FFFFFF">Close enrollment</h2>
+    <h2 style="color:#FFFFFF">Talk abstract deadline</h2>
 	  <p style="color:#FFFFFF">July 9th, 2021</p>
   </div>
   </div>
   <div class="container left">
     <div class="content">  
-    <h2 style="color:#FFFFFF">Abstracts deadline</h2>
+    <h2 style="color:#FFFFFF">Event registration deadline</h2>
 	  <p style="color:#FFFFFF">July 16th, 2021</p>
   </div>
   </div>
