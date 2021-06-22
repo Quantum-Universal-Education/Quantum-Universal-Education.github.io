@@ -27,11 +27,11 @@ layout: archive
 .qontributor {
   background-color: white;
   color: black;
-  border: 2px solid #6d2f15;
+  border: 2px solid #280A7D;
   width: 100%;
 }
 .qontributor:hover {
-  background-color: #6d2f15;
+  background-color: #280A7D;
   color: white;
   width: 100%;
 }
@@ -261,12 +261,11 @@ body {
 
 <div class="w3-container w3-padding-32" style="width: 40vw" >   
 <h2 style="color:#A70024">Register is now open</h2>
-<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register</button>
+<button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register</button>
 
   
 </div> 
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >   
 <div class="w3-container w3-padding-32" style="width: 55vw" >   
 <h4></h4>
 </div>  
@@ -360,6 +359,7 @@ Although RSVP is not needed to join, we highly encourage you to RSVP as we will 
     <li>A closing sentence on the implications/importance of the contributions/results.</li>
    <ul>
     <p>You can use the following steps in this <a href="https://arxiv.org/pdf/1907.12204.pdf">paper</a>.</p>
+</div>
 </div>
 
 
