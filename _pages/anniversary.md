@@ -359,8 +359,7 @@ Although RSVP is not needed to join, we highly encourage you to RSVP as we will 
     <li>A closing sentence on the implications/importance of the contributions/results.</li>
    <ul>
     <p>You can use the following steps in this <a href="https://arxiv.org/pdf/1907.12204.pdf">paper</a>.</p>
-</div>
-</div>
+
 
 
 <div class="w3-container w3-padding-32" style="width: 55vw;"> 
