@@ -1,5 +1,5 @@
 ---
-permalink: /anniversary-21/
+permalink: /anniversary/
 layout: archive
 ---
 
@@ -27,11 +27,11 @@ layout: archive
 .qontributor {
   background-color: white;
   color: black;
-  border: 2px solid #280A7D;
+  border: 2px solid #6d2f15;
   width: 100%;
 }
 .qontributor:hover {
-  background-color: #280A7D;
+  background-color: #6d2f15;
   color: white;
   width: 100%;
 }
@@ -79,12 +79,12 @@ layout: archive
 div p{
 text-align: justify;”
 }
-  
+	
 .archive{
 display: flex;
 align-items: center;
 flex-direction: column;
-} 
+}	
 * {
   box-sizing: border-box;
 }
@@ -102,8 +102,8 @@ flex-direction: column;
   content: "";
   display: table;
   clear: both;
-} 
-  
+}	
+	
 * {
   box-sizing: border-box;
 }
@@ -236,7 +236,7 @@ body {
   .right {
   left: 0%;
   }
-} 
+}	
 </style>
 <!-- Header -->
 
@@ -245,124 +245,96 @@ body {
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Anniversary</h2>
     <!--h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing and for our community to share ideas, thoughts and their knowledge throughout this year.</h4-->
-  <h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing for our community.Time to celebrate and listen to everyone's quantum computing progress!</h4>
-  </div>
+	<h4>This event is to celebrate our first anniversary in sharing the knowledge of quantum computing for our community. Time to celebrate and listen to everyone's quantum computing progress!</h4>
+	</div>
 <div style="width: 55vw">
-      <!--h4>Time to celebrate and listen to everyone's quantum computing progress.</h4-->
-  <img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
+	    <!--h4>Time to celebrate and listen to everyone's quantum computing progress.</h4-->
+	<img src="/assets/images/event.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
 </div>
 </header>
-<div class="w3-container w3-padding-32" style="width: 40vw" >   
-<h2 style="color:#A70024">Abstract submission is now open</h2>
-<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Abstract submission</button>
+<div class="w3-container w3-padding-32" style="width: 40vw" >		
+<h2 style="color:#A70024">Registration is now open!  Free to attend</h2>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Sign up to give a talk</button>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register for the event</button>
 
-  
-</div> 
-
-<div class="w3-container w3-padding-32" style="width: 40vw" >   
-<h2 style="color:#A70024">Register is now open</h2>
-<button class="button qontributor"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register</button>
-
-  
-</div> 
-
-<div class="w3-container w3-padding-32" style="width: 55vw" >   
+	
+</div>	
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<div class="w3-container w3-padding-32" style="width: 55vw" >		
 <h4></h4>
-</div>  
+</div>	
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">TimeLine</h2> 
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Timeline</h2>	
 <div class="timeline">
   <div class="container left">
     <div class="content">
-    <h2 style="color:#FFFFFF">Open enrollment</h2>
-<p style="color:#FFFFFF">June 14th, 2021</p>
+    <h2 style="color:#FFFFFF">Live & Recorded Workshop: How to Write an Abstract</h2>
+    <h3 style="color:#FFFFFF">Discord server #abstract-workshop stage channel</h3>
+<p style="color:#FFFFFF">4pm UTC, June 27th, 2021</p>
   </div>
   </div>
   <div class="container right">
     <div class="content">
-    <h2 style="color:#FFFFFF">Close enrollment</h2>
-    <p style="color:#FFFFFF">July 9th, 2021</p>
+    <h2 style="color:#FFFFFF">Talk abstract deadline</h2>
+	  <p style="color:#FFFFFF">July 9th, 2021</p>
   </div>
   </div>
   <div class="container left">
     <div class="content">  
-    <h2 style="color:#FFFFFF">Abstracts deadline</h2>
-    <p style="color:#FFFFFF">July 16th, 2021</p>
+    <h2 style="color:#FFFFFF">Event registration deadline</h2>
+	  <p style="color:#FFFFFF">July 16th, 2021</p>
   </div>
   </div>
   <div class="container right">
     <div class="content">  
   <h2 style="color:#FFFFFF">Event Days</h2>
-  <p style="color:#FFFFFF">July 24th and 25th, 2021</p>
+	<p style="color:#FFFFFF">July 24th and 25th, 2021</p>
     </div>
   </div>
-</div>  
+</div>	
 
   </div>
-<div class="w3-container w3-padding-32" style="width: 55vw;"> 
-  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Topics</h2>
-  <div style="width:100%">
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Learning Resources</li></ul></div>
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Hardware</li></ul></div>
-  </div>
-  <div style="width:100%">
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Software</li></ul></div>
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Algorithms</li></ul></div>
-  </div>
-  <div style="width:100%">
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Computer Architecture</li></ul></div>
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Error Correction</li></ul></div>
-  </div>
-  <div style="width:100%">
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Chemistry</li></ul></div>
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Sensing</li></ul></div>
-  </div>
-  <div style="width:100%">
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Cryptography</li></ul></div>
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Communication</li></ul></div>
-  </div>
-  <div style="width:100%">
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum  Information Theory</li></ul></div>
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Machine Learning</li></ul></div>
-  </div>
-  <div style="width:100%">
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Games</li></ul></div>
-  <div style="padding: 10px; display: inline-block;width:47%"><ul><li>Miscellaneous</li></ul></div>
-  </div>
+<div class="w3-container w3-padding-32" style="width: 55vw;">	
+	<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Topics</h2>
+	<div style="width:100%">
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Learning Resources</li></ul></div>
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Hardware</li></ul></div>
+	</div>
+	<div style="width:100%">
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Software</li></ul></div>
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Algorithms</li></ul></div>
+	</div>
+	<div style="width:100%">
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Computer Architecture</li></ul></div>
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Error Correction</li></ul></div>
+	</div>
+	<div style="width:100%">
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Chemistry</li></ul></div>
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Sensing</li></ul></div>
+	</div>
+	<div style="width:100%">
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Cryptography</li></ul></div>
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Communication</li></ul></div>
+	</div>
+	<div style="width:100%">
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum  Information Theory</li></ul></div>
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Machine Learning</li></ul></div>
+	</div>
+	<div style="width:100%">
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Games</li></ul></div>
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Miscellaneous</li></ul></div>
+	</div>
+</div>
+<br> <br>	
+
+
+	
+	
+
+
 </div>
 
-<div class="w3-container w3-padding-32" style="width: 55vw;"> 
-  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Frequently Asked Questions (FAQ)</h2>
-  <div class="w3-container w3-padding-32" style="width: 55vw;"> 
-  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">When are the talks and meetups?</h3>
-    <p>The talks will be live on Zoom, on July 24th, and if need be the 25th.  The scheduling will begin after the talks are accepted.  Taking into account the speakers' availability, we will do our best to have most talks be when most people can attend, which is morning in western time zones and night in eastern time zones.  If the speaker has given permission, their talk will be publicly viewable afterwards on the FSQC Youtube channel.
-The meetups will be spread out throughout July 24th and 25th.  The regional area and language meetups will be at most suitable times, while other topics and demographic meetups will be when most people can attend.
-</p>
-</div>
-  <div class="w3-container w3-padding-32" style="width: 55vw;"> 
-  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">How do I join the meetups?</h3>
-    <p>To make it interactive and fun, most of the meetups will be on AltspaceVR, which is Microsoft's free/quick/easy to install computer virtual reality meetup.  As it is not supported for all platforms, we will also hold several meetups on Discord.
-Although RSVP is not needed to join, we highly encourage you to RSVP as we will first email the event join links to those who RSVP'd for those meetup sessions, and then based on capacity open up meetup rooms through our <a href="https://discord.gg/NDm9e9W">Our Discord server</a>.  RSVP'ing will enable you to sign up for the meetups you would like to join, which we then schedule based on your time zone and availability.  RSVP'ing will even allow you to suggest topics for a meetup room you'd like to see --- for each topic, so you can stay in contact after the meetup, we will make and moderate a text channel for that topic in the Discord server.</p>
-</div>
-<div class="w3-container w3-padding-32" style="width: 55vw;"> 
-  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Are we going to hand out speaker certificates? </h3>
-    <p>Yes, only for accepted abstracts</p>
-</div>
-<div class="w3-container w3-padding-32" style="width: 55vw;"> 
-  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">How to write an abstract?  </h3>
-  <p>Following those ideas:</p>
-  <ul>
-    <li>One or two sentences on background and motivation.</li>
-    <li>A sentence on the problem addressed.</li>
-    <li>Couple of sentences on the model, approach, and methods; their novelty in  contrast to existing works.</li>
-    <li>Highlights of exciting main results in two-three sentences.</li>
-    <li>A closing sentence on the implications/importance of the contributions/results.</li>
-   </ul>
-    <p>You can use the following steps in this <a href="https://arxiv.org/pdf/1907.12204.pdf">paper</a>.</p>
-     </div>
-</div>
 
-<div class="w3-container w3-padding-32" style="width: 55vw;"> 
-  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="color:#A70024">surprise activities coming soon</h2>
-</div>
+
 <!-- End page content -->
+
