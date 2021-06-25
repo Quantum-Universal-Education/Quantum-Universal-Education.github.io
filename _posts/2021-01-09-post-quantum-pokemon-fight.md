@@ -960,6 +960,8 @@ immunity_fire_0: ───────────░─────────
 Of course, this program is not perfect, it only encodes 8 Pokemons and only attack moves. But the main problem is the program doesn't have any graphics and would need a window with both pokemons players, attack choose menu and life indicators.
 Is you feel the same that the program needs graphics or others cool features like improvements on the AI, do not hesitate to go to my [GitHub repository](https://github.com/mickahell/quantum_pokemon-fight) and create an issue so that I can grant you access for working together on this.
 
+As well an online version of the full game is available to play directly in your browser, work well on Chrome and Firefox --> https://games.xtraorbitals.xyz
+
 ## References <a class="anchor" id="references"></a>
 1. Qiskit Textbook [Grover's Algorithm](https://qiskit.org/textbook/ch-algorithms/grover.html)
 2. Wikipedia, [Vertex cover](https://en.wikipedia.org/wiki/Vertex_cover)
