@@ -4,6 +4,7 @@ categories:
   - Blog
 tags:
   - Qiskit
+  - Qiskit Nature
   - Q#
   - Quantum computing
   - PennyLane
@@ -13,6 +14,7 @@ tags:
   - Framework
   - QLM
   - Tutorial
+  - Cirq
 author:
   - Michael Rollin
   - Curate Section
@@ -35,6 +37,7 @@ For these reason it begins  complicated to set up a clear unique environment to 
 	3.2. [Create container](#container)  
 	3.3. [Run everything together](#run)
 4. [Future](#future)
+	4.1. [Live platform](#live)
 5. [Annexes](#annexes)
 6. [References](#ref)
 
@@ -84,6 +87,7 @@ Pre-build images for each environment are available in the [Docker Hub](https://
 - `quantum_lab_qsharp`
 - `quantum_lab_simulaqron`
 - `quantum_lab_myqlm`
+- `quantum_lab_cirq`
 
 You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quantum_lab_qiskit`)  
 To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : <pre>docker image tag mickahell/[IMAGE_NAME]:latest quantum_lab:latest</pre>
@@ -122,6 +126,9 @@ Also, the experiences part will be externalized in another GitHub repository and
 
 If you have an idea of features do not hesitate and create an **[issue](https://github.com/mickahell/quantum_lab/issues/new)**.
 
+## 4.1. Live platform <a class="anchor" id="live"></a>
+A live version is available directly in your browser for prototype, testing experiments and science vulgarisation/demo. Also presenting how to use the image to create Quantum application to deploy everywhere --> [here](https://quantum-lab.xtraorbitals.xyz)
+
 ## 5. Annexes <a class="anchor" id="annexes"></a>
 ### Environment details
 
@@ -137,7 +144,9 @@ If you have an idea of features do not hesitate and create an **[issue](https://
     - Libs : ```simulaqron```
   - `myqlm.sh`
     - Libs : ```myqlm, libmagickwand-dev, myqlm-interop[qiskit_binder]```
-
+  - `cirq.sh`
+    - Libs : ```cirq, cirq-core[contrib], texlive-latex-base, latexmk```
+ 
 All the libs setup scripts are available in the folder `/opt/quantum_lab/build` inside the image, some of the libs can live together and some cannot (ex. `qiskit` and `pennylane-qiskit` can't).
 
 #### Protocols for experiencing Quantum
