@@ -269,7 +269,7 @@ body {
   <div class="container left">
     <div class="content">
     <h2 style="color:#FFFFFF">Live & Recorded Workshop: How to Write an Abstract</h2>
-    <h3 style="color:#FFFFFF">Discord server #abstract-workshop stage channel</h3>
+    <h3 style="color:#FFFFFF">Zoom link in Discord server #pique-announcements channel</h3>
 <p style="color:#FFFFFF">4pm UTC, June 27th, 2021</p>
   </div>
   </div>
