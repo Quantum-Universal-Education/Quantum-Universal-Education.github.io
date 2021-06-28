@@ -328,9 +328,24 @@ body {
 <br> <br>	
 
 
-	
-	
+<div class="w3-container w3-padding-32" style="width: 55vw;">	
+	<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Frequently Asked Questions (FAQ)</h2>	
+	<div class="w3-container w3-padding-32" style="width: 55vw;">	
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">When are the talks and meetups?</h3>	
+	<p>The talks will be live on Zoom, on July 24th, and if need be the 25th.  The scheduling will begin after the talks are accepted.  Taking into account the speakers' availability, we will do our best to have most talks be when most people can attend, which is morning in western time zones and night in eastern time zones.  If the speaker has given permission, their talk will be publicly viewable afterwards on the FSQC Youtube channel.
+The meetups will be spread out throughout July 24th and 25th.  The regional area and language meetups will be at most suitable times, while other topics and demographic meetups will be when most people can attend.</p>
+	</div>
+	<div class="w3-container w3-padding-32" style="width: 55vw;">	
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">How do I join the meetups?</h3>	
+	<p>To make it interactive and fun, most of the meetups will be on AltspaceVR, which is Microsoft's free/quick/easy to install computer virtual reality meetup.  As it is not supported for all platforms, we will also hold several meetups on Discord.
+Although RSVP is not needed to join, we highly encourage you to RSVP as we will first email the event join links to those who RSVP'd for those meetup sessions, and then based on capacity open up meetup rooms through our Discord server [https://discord.gg/NDm9e9W].  RSVP'ing will enable you to sign up for the meetups you would like to join, which we then schedule based on your time zone and availability.  RSVP'ing will even allow you to suggest topics for a meetup room you'd like to see --- for each topic, so you can stay in contact after the meetup, we will make and moderate a text channel for that topic in the Discord server.</p>
+	</div>
+	<div class="w3-container w3-padding-32" style="width: 55vw;">	
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Are we going to hand out speaker certificates?</h3>	
+	<p>Yes, only for accepted abstracts</p>
+	</div>
 
+</div>
 
 </div>
 
