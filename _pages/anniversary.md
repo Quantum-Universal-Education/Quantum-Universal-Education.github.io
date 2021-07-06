@@ -264,7 +264,8 @@ body {
 <h4></h4>
 </div>	
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Timeline</h2>	
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Timeline</h2>
+	<h4 style="text-align:center">Deadlines below are Anytime-on-Earth (AoE)</h4>	
 <div class="timeline">
   <div class="container left">
     <div class="content">
