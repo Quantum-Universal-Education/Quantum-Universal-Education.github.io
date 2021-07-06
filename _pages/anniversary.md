@@ -268,28 +268,29 @@ body {
 <div class="timeline">
   <div class="container left">
     <div class="content">
-	<h2 style="color:#FFFFFF">How to Write an Abstract</h2>
-    <h3 style="color:#FFFFFF"><a href="https://fullstackquantumcomputation.tech/blog/abstract-workshop" style="color:#FFFFFF; text-align:left">Workshop recording link</a></h3>
+	<h3 style="color:#FFFFFF; text-align:left; margin-bottom:0px">How to Write an Abstract</h3>
+    <h3 style="color:#FFFFFF; margin-top:0px"><a href="https://fullstackquantumcomputation.tech/blog/abstract-workshop" style="color:#FFFFFF">Workshop recording link</a></h3>
 <p style="color:#FFFFFF">4pm UTC, June 27th, 2021</p>
   </div>
   </div>
   <div class="container right">
     <div class="content">
-    <h2 style="color:#FFFFFF">Talk abstract deadline</h2>
-	<h3 style="color:#FFFFFF">to receive feedback</h3>
+    <h2 style="color:#FFFFFF; text-align:left; margin-bottom:0px">Talk abstract due</h2>
+	<h3 style="color:#FFFFFF; margin-top:0px">if you'd like feedback</h3>
 	  <p style="color:#FFFFFF">July 9th, 2021</p>
   </div>
   </div>
   <div class="container left">
     <div class="content">  
-    <h2 style="color:#FFFFFF">Talk abstract deadline and</h2>
-	<h2 style="color:#FFFFFF">Event registration deadline</h2>
+    <h2 style="color:#FFFFFF; text-align:left; margin-bottom:0px">Talk abstract due</h2>
+	<h3 style="color:#FFFFFFF; text-align:left; margin-top:0px; margin-bottom:0px">&</h3>
+	<h2 style="color:#FFFFFF; text-align:left; margin-top:0px">Event registration due</h2>
 	  <p style="color:#FFFFFF">July 16th, 2021</p>
   </div>
   </div>
   <div class="container right">
     <div class="content">  
-  <h2 style="color:#FFFFFF">Event Days</h2>
+  <h2 style="color:#FFFFFF; text-align:left">Event Days</h2>
 	<p style="color:#FFFFFF">July 24th and 25th, 2021</p>
     </div>
   </div>
