@@ -51,7 +51,7 @@ The info, links, and guide mentioned in and accompanying this workshop are publi
 
 We would greatly appreciate if anyone who attended or later watched this recording to fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSdDFfOKnYxj7eGETu0RQIzP1GjJ__NahVQG8IgCmSTFchCXFQ/viewform?usp=sf_link) made by our admin Jayanti, as part of QCery, a project to survey people's exposure and understanding of quantum computing; also as we are open to suggestions/feedback and what future events you are interested in.
 
-The research proposal guide with examples mentioned in the workshop, by Lia, is linked at [https://docs.google.com/document/d/1tkKmrm47vUbAtMjdWnOX_mo5z1AsaseXbPBVsB7S82A/edit?usp=sharing](https://docs.google.com/document/d/1tkKmrm47vUbAtMjdWnOX_mo5z1AsaseXbPBVsB7S82A/edit?usp=sharing).  It will be edited and moved from Google docs to a post on this site shortly.
+The research proposal guide with examples mentioned in the workshop, by Lia, is linked at [https://docs.google.com/document/d/1tkKmrm47vUbAtMjdWnOX_mo5z1AsaseXbPBVsB7S82A/edit?usp=sharing](https://docs.google.com/document/d/1tkKmrm47vUbAtMjdWnOX_mo5z1AsaseXbPBVsB7S82A/edit?usp=sharing).
 
 We've compiled below a Q & A of related questions answered in the workshop text chat and on Discord!
 
