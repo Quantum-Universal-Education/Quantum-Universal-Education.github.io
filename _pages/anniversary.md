@@ -268,20 +268,22 @@ body {
 <div class="timeline">
   <div class="container left">
     <div class="content">
-    <h2 style="color:#FFFFFF">Live & Recorded Workshop: How to Write an Abstract</h2>
-    <h3 style="color:#FFFFFF">Zoom link in Discord server #pique-announcements channel</h3>
+	<h2 style="color:#FFFFFF">How to Write an Abstract</h2>
+    <h3 style="color:#FFFFFF"><a href="https://fullstackquantumcomputation.tech/blog/abstract-workshop" style="color:#FFFFFF; text-align:left">Workshop recording link</a></h3>
 <p style="color:#FFFFFF">4pm UTC, June 27th, 2021</p>
   </div>
   </div>
   <div class="container right">
     <div class="content">
     <h2 style="color:#FFFFFF">Talk abstract deadline</h2>
+	<h3 style="color:#FFFFFF">to receive feedback</h3>
 	  <p style="color:#FFFFFF">July 9th, 2021</p>
   </div>
   </div>
   <div class="container left">
     <div class="content">  
-    <h2 style="color:#FFFFFF">Event registration deadline</h2>
+    <h2 style="color:#FFFFFF">Talk abstract deadline and</h2>
+	<h2 style="color:#FFFFFF">Event registration deadline</h2>
 	  <p style="color:#FFFFFF">July 16th, 2021</p>
   </div>
   </div>
@@ -317,7 +319,7 @@ body {
 	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Communication</li></ul></div>
 	</div>
 	<div style="width:100%">
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum  Information Theory</li></ul></div>
+	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Information Theory</li></ul></div>
 	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Machine Learning</li></ul></div>
 	</div>
 	<div style="width:100%">
