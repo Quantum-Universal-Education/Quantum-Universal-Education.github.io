@@ -253,9 +253,10 @@ body {
 </div>
 </header>
 <div class="w3-container w3-padding-32" style="width: 40vw" >		
-<h2 style="color:#A70024">Registration is now open!  Free to attend</h2>
-<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Sign up to give a talk</button>
-<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register for the event</button>
+<h2 style="color:#A70024;text-decoration: line-through;">Registration is now open!  Free to attend</h2>
+<h2 style="color:#A70024;">To find out more about our event you can join our <a href="https://discord.gg/NDm9e9W">Our Discord server</a> </h2>
+<!--button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Sign up to give a talk</button>
+<button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register for the event</button-->
 
 	
 </div>	
