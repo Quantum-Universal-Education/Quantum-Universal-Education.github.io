@@ -3,7 +3,7 @@ permalink: /schedule_anniversary/
 title: "Schedule Anniversary"
 ---
 <div class="w3-container w3-padding-32" style="width: 55vw;">	
-<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">It is with great encouragement that we share with you the talks that have been accepted for the event on 14 and 25 July 2021.</h2><br>
+<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">It is with great enthusiasm that we share with you the talks that have been accepted for the event on 14 and 25 July 2021.</h2><br>
 
 <h3>The schedule will be posted later, for the moment we share with you the accepted talks and their abstracts.</h3><br>
 </div>
