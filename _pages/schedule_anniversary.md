@@ -2,10 +2,12 @@
 permalink: /schedule_anniversary/
 title: "Schedule Anniversary"
 ---
-
-It is with great encouragement that we share with you the talks that have been accepted for the event on 14 and 25 July 2021.<br>
+<div class="w3-container w3-padding-32" style="width: 55vw;">	
+<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">It is with great encouragement that we share with you the talks that have been accepted for the event on 14 and 25 July 2021.</h2><br>
 
 The schedule will be posted later, for the moment we share with you the accepted talks and their abstracts.<br>
+</div>
+
 
 <div id="schedule_anniversary"></div>
 <script>
@@ -38,7 +40,7 @@ var author = [
   
  
 var affiliation = [
-"PhD student, Quantum Group, University of Oxford"
+"PhD student, Quantum Group, University of Oxford",
 "PhD student, Center for Computing Research - Instituto Politecnico Nacional",
 "Student at Universidad del Valle and intern at Purdue University",
 "Center of Nanoscience and Nanotechnology (CNyN)",
