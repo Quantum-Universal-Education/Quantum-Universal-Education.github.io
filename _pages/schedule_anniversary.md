@@ -3,13 +3,14 @@ permalink: /schedule_anniversary/
 title: "Schedule Anniversary"
 ---
 
-It is with great encouragement that we share with you the talks that have been accepted for the event on 14 and 25 July 2021.
+It is with great encouragement that we share with you the talks that have been accepted for the event on 14 and 25 July 2021.<br>
 
-
+The schedule will be posted later, for the moment we share with you the accepted talks and their abstracts.<br>
 
 <div id="schedule_anniversary"></div>
 <script>
 var author = [
+"Lia Yeh",
 "Alberto Maldonado Romo",
 "Kevin Jofroit Joven Noriega",
 "Victor Onofre and F. Rojas",
@@ -31,10 +32,13 @@ var author = [
 "Rukhsan Ul Haq",
 "Sagnik Banerjee",
 "Sansriti Ranjan",
-"Zeki Seskir"];
+"Zeki Seskir",
+"Adam Fattal",
+"John van de Wetering"];
   
  
 var affiliation = [
+"PhD student, Quantum Group, University of Oxford"
 "PhD student, Center for Computing Research - Instituto Politecnico Nacional",
 "Student at Universidad del Valle and intern at Purdue University",
 "Center of Nanoscience and Nanotechnology (CNyN)",
@@ -56,10 +60,13 @@ var affiliation = [
 "Quantum Scientist, IBM",
 "Jadavpur University",
 "Research student at Future Technologies in High Performance Computing at Clemson University",
-"Board member at QWorld and Research Assistant at METU Physics Department" ]
+"Board member at QWorld and Research Assistant at METU Physics Department",
+"Undergraduate of Physics",
+"Oxford University"]
   
   
 var title = [
+"Quantum gates: software vs hardware implementation",
 "Classification of the MNIST dataset using quantum knn and quantum neural networks.",
 "Simulating Quantum Circuits on Classical Hardware using FPGA",
 "Discord-type quantum correlations in the radical pair mechanism for magnetoreception in birds",
@@ -81,7 +88,9 @@ var title = [
 "Quantum Oracles",
 "Engineering the quantum dynamics in 2-D honeycomb systems",
 "Research student at Future Technologies in High Performance Computing at Clemson University",
-"The Landscape of Academic Literature in Quantum Technologies"];
+"The Landscape of Academic Literature in Quantum Technologies",
+"Hosting a Workshop: What I learned",
+"Doing quantum computing using pictures"];
   
   
  var img = [
@@ -99,6 +108,7 @@ var title = [
 "q_learning_resource"];
   
 var abstract = [
+"Unlike for classical computers, for quantum computers, present-day quantum assembly languages do not correspond to physical hardware operations.  Although gate-based quantum computers which implement a universal gateset can run any qubit operations, for the implementation to be efficient, the desired gate needs to be decomposed into gates the hardware can run.  This talk is a primer on quantum computer architecture, specifically how quantum software is compiled to quantum assembly language and then to quantum hardware.",
 "Quantum computing has initiated a great popularity to be able to perform in different environments quantum algorithms that some claim to reach a quantum supremacy, one of the most popular areas is the Quantum Machine Learning (QML) as there are equivalents to the models, such as neural networks, support machines, nearest neighbor, and that these manage to perform a Supervised Learning to classify from a set that we know its result. Our proposal uses quantum circuits to represent a neural network following the format of parametric quantum circuits and using Grover's algorithm and a complex data storage structure known as quantum RAM (QRAM) that has a complexity O(log(n)) to read a state of information with the use of the SWAP Test for the quantum nearest neighbor. These examples developed in two popular environments which are Qiskit as in PennyLane we managed to obtain an accuracy greater than 80% considering that it is a two-class classifier.",
 "One of the main actual problems in quantum computing is related to the number of qubits that can have the hardware implementation, also that can difficult the limitation of the algorithms and also that the algorithms can have errors due to the environment. We present a hardware implementation on FPGA that can emulate quantum circuits with a certain architecture that gives all the probabilities distribution of the quantum circuit outcomes.",
 "The leading hypothesis to explain how migratory birds can detect the direction of the Earth's magnetic field is the Radical-Pair mechanism, which is by now a well-established theoretically and experimentally mechanism. The radical pairs oscillate between singlet and triplet states. The Earth's magnetic field direction influences the probability of finding them in one state or another. The yield of these states controls the neural signals of the bird's retina, providing the basis for magnetoreception. This research studies quantum correlations in the mechanism of radical pairs, working with discord-type quantifiers. In the first stage of the work, the dependence of the angle of the Earth's magnetic field and the singlet yield was investigated, consistent with the different studies on the mechanism of radical pairs. In the second stage, discord-type quantifiers were calculated as a function of the angle of the Earth's magnetic field, finding a dependence similar to that of the singlet yield.",
@@ -120,7 +130,9 @@ var abstract = [
 "Quantum oracles are the fundamental primitives of many quantum algorithms like Deutsch-Jozsa, Grover, Quantum amplitude estimation. So, understanding quantum oracles is crucial for understanding these quantum algorithms and other generalized versions of them as well. In my talk I will try to give a pedagogical introduction to quantum oracles and discuss some of their applications which have been recently explored.",
 "An exciting playground for exploring quantum dynamics in the nano-scale is a 2D honeycomb system. With the evolution of nano-electronics and continued miniaturization of devices, it became evident that 2D materials would not only empower us to engineer novel devices, but also aid understanding the rich physics involved. It is no myth that all major breakthroughs in condensed matter physics have some sort of motivation drawn from hexagonal lattices. Graphene, among many others, is one such awesome 2D material, which could be cleverly ‘quantum-engineered’ to design robust ‘topological quantum devices’ or maybe applications in spintronics or in the whole new field of ‘valleytronics’. From an enormous rise in computational power to significant decrease in power consumption, the possibilities are endless. In this talk, I share some of my ‘quantum thoughts’ to introduce the fascinating world of honeycomb systems.",
 "Addressing data movement bottlenecks in HPC and other applications is important to improve storage and I/O performance. Data compression (lossy or lossless) helps in reducing the number of bytes that must be transmitted or stored. Caching is another method that helps in reducing data movement by keeping data required for computation in fast memory. Previously, it has been explored that hardware compression can be used to expand size of hardware caches and main memory or caching at the software level. Softwares caches further improve the I/O performance for distributed applications and cache the input data for parallel tasks. One of the main applications of compression and caching in quantum computing is in reducing the memory footprint for quantum circuit simulations. In quantum computing research, using classical HPC systems to simulate quantum computers is integral for understanding behavior of quantum computing systems. These simulations allow developers to evaluate complexity of new quantum algorithms and validate the design of quantum devices. Therefore, through this research we aim to build a cache simulator which can be used to assess the performance of different compressors as they cache for compressed blocks of various HPC applications or quantum simulations. This simulator can then be used to run different benchmarks (quantum approximate optimization algorithm (QAOA), Quantum Fourier Transform (QFT), Grover’s Search Algorithm) and then choose the compressor based on its cache performance.",
-"In this study, we investigated the academic literature on quantum technologies (QT) using bibliometric tools. We used a set of 49,823 articles obtained from the Web of Science (WoS) database using a search query constructed through expert opinion. Analysis of this revealed that QT is deeply rooted in physics, and the majority of the articles are published in physics journals. Keyword analysis revealed that the literature could be clustered into three distinct sets, which are (i) quantum communication/cryptography, (ii) quantum computation, and (iii) physical realizations of quantum systems. We performed a burst analysis that showed the emergence and fading away of certain key concepts in the literature. This is followed by co-citation analysis on the “highly cited” articles provided by the WoS, using these we devised a set of core corpus of 34 publications. Comparing the most highly cited articles in this set with respect to the initial set we found that there is a clear difference in most cited subjects. Finally, we performed co-citation analyses on country and organization levels to find the central nodes in the literature. Overall, the analyses of the datasets allowed us to cluster the literature into three distinct sets, construct the core corpus of the academic literature in QT, and to identify the key players on country and organization levels, thus offering insight into the current state of the field."]; 
+"In this study, we investigated the academic literature on quantum technologies (QT) using bibliometric tools. We used a set of 49,823 articles obtained from the Web of Science (WoS) database using a search query constructed through expert opinion. Analysis of this revealed that QT is deeply rooted in physics, and the majority of the articles are published in physics journals. Keyword analysis revealed that the literature could be clustered into three distinct sets, which are (i) quantum communication/cryptography, (ii) quantum computation, and (iii) physical realizations of quantum systems. We performed a burst analysis that showed the emergence and fading away of certain key concepts in the literature. This is followed by co-citation analysis on the “highly cited” articles provided by the WoS, using these we devised a set of core corpus of 34 publications. Comparing the most highly cited articles in this set with respect to the initial set we found that there is a clear difference in most cited subjects. Finally, we performed co-citation analyses on country and organization levels to find the central nodes in the literature. Overall, the analyses of the datasets allowed us to cluster the literature into three distinct sets, construct the core corpus of the academic literature in QT, and to identify the key players on country and organization levels, thus offering insight into the current state of the field.",
+"Quantum Computing is a rapidly emerging field that is gaining a lot of interest not only within academia, but also within other areas  such as industry and the business world in general. For this reason,  a lot of interest in "adapting to quantum" is being displayed by a notable subset of the STEM (and in some cases, even  the non-STEM) community. As a consequence, many opportunities are available in the field of  quantum education that people, even beginners at the undergraduate level (such as myself), can exploit. Here, I will discuss The Eigensolvers,  a group of students who have an avid interest in quantum computing,  as well as our first global workshop. I will also give tips for  anyone who is interested in pursuing something similar and talk about future plans and how you can contribute to them.",
+"In this talk I will give a brief introduction to the ZX-calculus, a graphical language for reasoning about quantum computation. I will give a demonstration of our software PyZX which allows you to do quantum circuit rewriting on a massive scale."]; 
   
 var data = [];
 var length = author.length; // user defined length
