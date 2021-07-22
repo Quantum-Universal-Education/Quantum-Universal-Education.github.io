@@ -257,7 +257,7 @@ body {
 <h2 style="color:#A70024;">If you missed registration, you can join via our <a href="https://discord.gg/NDm9e9W">Discord server</a> #pique-announcements channel</h2>
 <!--button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Sign up to give a talk</button>
 <button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register for the event</button-->
-<button class="button qurator"  onclick="document.location='https://fullstackquantumcomputation.tech/schedule_anniversary/'">Accepted abstracts </button>
+<button class="button qurator"  onclick="document.location='https://fullstackquantumcomputation.tech/schedule_anniversary/'">Event Schedule and Accepted Abstracts</button>
 
 	
 </div>	
