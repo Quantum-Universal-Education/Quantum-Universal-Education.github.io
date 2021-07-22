@@ -254,7 +254,7 @@ body {
 </header>
 <div class="w3-container w3-padding-32" style="width: 40vw" >		
 <h2 style="color:#A70024;text-decoration: line-through;">Registration is now open!  Free to attend</h2>
-<h2 style="color:#A70024;">if u missed registration, u can still join via our <a href="https://discord.gg/NDm9e9W">Discord server announcements </a> </h2>
+<h2 style="color:#A70024;">If you missed registration, you can join via our <a href="https://discord.gg/NDm9e9W">Discord server</a> #pique-announcements channel</h2>
 <!--button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Sign up to give a talk</button>
 <button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register for the event</button-->
 <button class="button qurator"  onclick="document.location='https://fullstackquantumcomputation.tech/schedule_anniversary/'">Accepted abstracts </button>
