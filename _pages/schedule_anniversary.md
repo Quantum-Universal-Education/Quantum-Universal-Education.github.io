@@ -6,11 +6,10 @@ title: "Schedule Anniversary"
 <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">It is with great enthusiasm that we share with you the talks that have been accepted for the event on 14 and 25 July 2021.</h2><br>
 
 <div style="width: 65vw">
-	    <!--h4>Time to celebrate and listen to everyone's quantum computing progress.</h4-->
-	<img src="/assets/images/schedule_v4.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
+	<img src="/assets/images/schedule_v4.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 100%;">
 </div>
 </div>
-
+<br><br>
 
 <div id="schedule_anniversary"></div>
 <script>
