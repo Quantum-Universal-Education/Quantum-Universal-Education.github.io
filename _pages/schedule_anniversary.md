@@ -7,7 +7,7 @@ title: "Schedule Anniversary"
 
 <div style="width: 65vw">
 	    <!--h4>Time to celebrate and listen to everyone's quantum computing progress.</h4-->
-	<img src="/assets/images/anniversary-21_flyer.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
+	<img src="/assets/images/schedule_v4.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
 </div>
 </div>
 
