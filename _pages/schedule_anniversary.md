@@ -11,6 +11,9 @@ title: "Schedule Anniversary"
 </div>
 <br><br>
 
+<div class="w3-container w3-padding-32" style="width: 55vw;">	
+<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Accepted Abstracts.</h2><br>
+
 <div id="schedule_anniversary"></div>
 <script>
 var author = [
