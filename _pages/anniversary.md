@@ -5,6 +5,8 @@ layout: archive
 
 <link href="/assets/css/areas.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" type="image/png"  href="/assets/images/FSQC-small.png" />
+<link rel="stylesheet" href="styles.css">
+
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
@@ -237,6 +239,109 @@ body {
   left: 0%;
   }
 }	
+
+
+
+.view_item img{
+	width: 75px;
+}
+
+.wrapper{
+	width: 800px;
+	margin: 20px auto;
+}
+
+.links{
+	margin-bottom: 25px;
+	background: #fff;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.links ul{
+	display: flex;
+	justify-content: center;
+}
+
+.links ul li{
+	margin: 0 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.links ul li:hover,
+.links ul li.active{
+	color: #FE6A1A;
+}
+
+.view_main{
+	background: #fff;
+	border-radius: 3px;
+	padding: 15px;
+}
+
+.list-view .view_item {
+	background: #fff;
+	border: 1px solid #e2efe1;
+	margin: 10px;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+}
+
+.list-view .view_item:last-child{
+	margin-bottom: 0;
+}
+
+.list-view .view_item .vi_left{
+	margin-right: 25px;
+}
+
+.view_item .title{
+	font-weight: 600;
+}
+
+.view_item .content{
+	margin: 5px 0;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 200;
+}
+
+.view_item .btn{
+	width: 125px;
+	background: #4abd3e;
+	padding: 8px 5px;
+	border-radius: 3px;
+	color: #fff;
+	text-align: center;
+	font-weight: 200;
+	cursor: pointer;
+}
+
+.view_item .btn:hover{
+	background: #3bd62b;
+}
+
+.grid-view{
+	width: 100%;
+}
+
+.grid-view .view_item {
+	display: inline-block;
+    border: 1px solid #e2efe1;
+    width: 230px;
+    padding: 25px;
+    text-align: center;
+    margin: 10px;
+}
+
+.grid-view .view_item .vi_left{
+	margin-bottom: 10px;
+}
 </style>
 <!-- Header -->
 
@@ -252,85 +357,35 @@ body {
 	<img src="/assets/images/anniversary-21_flyer.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;  margin-left: auto;  margin-right: auto;  width: 50%;">
 </div>
 </header>
-<div class="w3-container w3-padding-32" style="width: 40vw" >		
+<div class="w3-container w3-padding-32" style="width: 40vw" >
 <h2 style="color:#A70024;text-decoration: line-through;">Registration is now open!  Free to attend</h2>
 <h2 style="color:#A70024;">If you missed registration, you can join via our <a href="https://discord.gg/NDm9e9W">Discord server</a> #pique-announcements channel</h2>
 <!--button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/hG70hI38'">Sign up to give a talk</button>
 <button class="button qurator"  onclick="document.location='https://quantumuniversaled.typeform.com/to/OoTHmxDx'">Register for the event</button-->
-<button class="button qurator"  onclick="document.location='https://fullstackquantumcomputation.tech/schedule_anniversary/'">Event Schedule and Accepted Abstracts</button>
+</div>
 
-	
-</div>	
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
-<h4></h4>
-</div>	
-<div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Timeline</h2>
-	<h4 style="text-align:center">Deadlines below are Anytime-on-Earth (AoE)</h4>	
-<div class="timeline">
-  <div class="container left">
-    <div class="content">
-	<h3 style="color:#FFFFFF; text-align:left; margin-bottom:0px">How to Write an Abstract</h3>
-    <h3 style="color:#FFFFFF; margin-top:0px"><a href="https://fullstackquantumcomputation.tech/blog/abstract-workshop" style="color:#FFFFFF">Workshop recording link</a></h3>
-<p style="color:#FFFFFF;text-decoration: line-through;">4pm UTC, June 27th, 2021</p>
-  </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-    <h2 style="color:#FFFFFF; text-align:left; margin-bottom:0px">Talk abstract due</h2>
-	<h3 style="color:#FFFFFF; margin-top:0px">if you'd like feedback</h3>
-	  <p style="color:#FFFFFF;text-decoration: line-through;">July 9th, 2021</p>
-  </div>
-  </div>
-  <div class="container left">
-    <div class="content">  
-    <h2 style="color:#FFFFFF; text-align:left; margin-bottom:0px">Talk abstract due</h2>
-	<h3 style="color:#FFFFFFF; text-align:left; margin-top:0px; margin-bottom:0px">&</h3>
-	<h2 style="color:#FFFFFF; text-align:left; margin-top:0px">Event registration due</h2>
-	  <p style="color:#FFFFFF;text-decoration: line-through;">July 16th, 2021</p>
-  </div>
-  </div>
-  <div class="container right">
-    <div class="content">  
-  <h2 style="color:#FFFFFF; text-align:left">Event Days</h2>
-	<p style="color:#FFFFFF">July 24th and 25th, 2021</p>
-    </div>
-  </div>
-</div>	
-
-  </div>
 <div class="w3-container w3-padding-32" style="width: 55vw;">	
-	<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Topics</h2>
-	<div style="width:100%">
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Learning Resources</li></ul></div>
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Hardware</li></ul></div>
-	</div>
-	<div style="width:100%">
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Software</li></ul></div>
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Algorithms</li></ul></div>
-	</div>
-	<div style="width:100%">
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Computer Architecture</li></ul></div>
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Error Correction</li></ul></div>
-	</div>
-	<div style="width:100%">
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Chemistry</li></ul></div>
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Sensing</li></ul></div>
-	</div>
-	<div style="width:100%">
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Cryptography</li></ul></div>
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Communication</li></ul></div>
-	</div>
-	<div style="width:100%">
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Information Theory</li></ul></div>
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Machine Learning</li></ul></div>
-	</div>
-	<div style="width:100%">
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Quantum Games</li></ul></div>
-	<div style="padding: 10px; display: inline-block;width:47%"><ul><li>Miscellaneous</li></ul></div>
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">It is with great enthusiasm that we share with you the talks that have been accepted for the event on 24 and 25 July 2021.</h3>
+	<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Videos of the talks on 24 July</h2>
+	<div class="wrapper">
+		<div class="view_main"  style="width: 65vw;">
+			<div id="video_anniversary" class="view_wrap list-view" style="display: block;">
+				<!--div class="view_item" style="width: 65vw;">
+					<p class="title">title</p>
+						<div class="title">Autor</div>
+					<div class="vi_left" style="width:40%;" >
+						<iframe width="180" height="135" src="https://www.youtube.com/embed/YC88NyV5SuM"></iframe> 
+					</div>
+					<div class="vi_right" style="width:58%;" >
+						<p class="content">Addressing data movement bottlenecks in HPC and other applications is important to improve storage and I/O performance. Data compression (lossy or lossless) helps in reducing the number of bytes that must be transmitted or stored. Caching is another method that helps in reducing data movement by keeping data required for computation in fast memory. Previously, it has been explored that hardware compression can be used to expand size of hardware caches and main memory or caching at the software level. Softwares caches further improve the I/O performance for distributed applications and cache the input data for parallel tasks. One of the main applications of compression and caching in quantum computing is in reducing the memory footprint for quantum circuit simulations. In quantum computing research, using classical HPC systems to simulate quantum computers is integral for understanding behavior of quantum computing systems. These simulations allow developers to evaluate complexity of new quantum algorithms and validate the design of quantum devices. Therefore, through this research we aim to build a cache simulator which can be used to assess the performance of different compressors as they cache for compressed blocks of various HPC applications or quantum simulations. This simulator can then be used to run different benchmarks (quantum approximate optimization algorithm (QAOA), Quantum Fourier Transform (QFT), Grover’s Search Algorithm) and then choose the compressor based on its cache performance.</p>
+					</div>
+				</div-->
+			</div>
+		</div>
 	</div>
 </div>
+
+
 <br> <br>	
 
 
@@ -351,11 +406,107 @@ Although RSVP is not needed to join, we highly encourage you to RSVP as we will 
 	<p>Yes, only for accepted abstracts</p>
 	</div>
 
-</div>
 
 </div>
 
+<script>
+var author_saturday = [
+"Kevin Jofroit Joven Noriega",
+"Wen-Sen Lu",
+"Md. Sakibul Islam",
+"Leonardo Calderón",
+"Elliot Evans",
+"Dante Bencivenga",
+"Jitesh Lalwani",
+"Kathrin Koenig",
+"Rodrigo Pires Ferreira",
+"Sagnik Banerjee",
+"Sansriti Ranjan",
+"Kushagra Sharma"];
+  
+var affiliation_staturday = [
+"Student at Universidad del Valle and intern at Purdue University",
+"Qiskit advocate",
+"B.Sc (Engg.) in Electrical and Electronic Engineering",
+"Software Engineer and Quantum Enthusiast",
+"elliot.website",
+"qcsimplify.com",
+"Founder of a Quantum Computing Startup",
+"PhD Student at Fraunhofer IAF and University Freiburg",
+"Co-founder at Brazil Quantum | BSc/MSc student at the Aeronautics Institute of Technology",
+"Jadavpur University",
+"Research student at Future Technologies in High Performance Computing at Clemson University",
+"Student at Sacred Heart School"]
+  
+var title_saturday = [
+"Simulating Quantum Circuits on Classical Hardware using FPGA",
+"QArcade: A table-top arcade machine for quantum game developers",
+"Introduction to Ion Trap Hardware, scaling and its future",
+"Q-Dino: A Quantum version of the classical game of Chrome Dinosaur",
+"What If You Could See Qubits!?",
+"QC Simplify: An online tool to simplify and commute quantum gates on the fly",
+"quantumcat - Cross-Platform Open-Source Quantum Computing Library",
+"Error Extrapolation: an Introduction to Richardson Extrapolation",
+"Solving Linear Differential Equations via Quantum Algorithms",
+"Engineering the quantum dynamics in 2-D honeycomb systems",
+"Research student at Future Technologies in High Performance Computing at Clemson University",
+"Superposition and Quantum Coins"];
+  
+  
+ var video_saturday = [
+"https://www.youtube.com/embed/7anlxNPBdi0",
+"https://www.youtube.com/embed/rXZ7xgbtXB0",
+"https://www.youtube.com/embed/9JY9xUXSRj0",
+"https://www.youtube.com/embed/xHOGpSY61XA",
+"https://www.youtube.com/embed/BtHHz8h5Ygc",
+"https://www.youtube.com/embed/dxqsNfeA-3M",
+"https://www.youtube.com/embed/KqLos-j4dP8",
+"https://www.youtube.com/embed/WC2Au-zHIS8",
+"https://www.youtube.com/embed/TJrcWp2uBoQ",
+"https://www.youtube.com/embed/4INMaL5ywwU",
+"https://www.youtube.com/embed/YC88NyV5SuM",
+"https://www.youtube.com/embed/rxTvHT6z6kA"];
+  
+  var abstract_saturday = [
+"One of the main actual problems in quantum computing is related to the number of qubits that can have the hardware implementation, also that can difficult the limitation of the algorithms and also that the algorithms can have errors due to the environment. We present a hardware implementation on FPGA that can emulate quantum circuits with a certain architecture that gives all the probabilities distribution of the quantum circuit outcomes.",
+"It is our privilege to explore the cutting-edge quantum computational space during the NISQ era with qiskit. Looking back into the history especially in the 1970’s, arcade game developers already started the machine-level programming and prepared themselves as the future coders even if the hardware was still limited. In the meanwhile, game-driven breakthrough for the classical hardware, such as the first 3D acceleration chip Super FX in Nintendo super-NES home console, also demonstrated the possibilities where new hardware could be inspired by the game developers.In this project, we hope to contribute to quantum education by leveraging the experience of classical arcades in the 70’s. The motivation of this project is to help quantum enthusiastic building a classical machine hosting quantum development environment. It could be game development platform such as PICO-8 with micro-qiskit or full-fledged Python3 environment with Thonny which allows developers to access the full power of qiskit.Indeed, for mature users such as graduate student with physics or computer science background it is perhaps more straightforward for them to use qiskit on their laptops for some serious quantum simulations, while this project is aiming at K-12 students and educators who has rather limited experience regarding quantum physics and/or programming. For these audiences PICO-8 and micro-qiskit offer a simple yet concise platform for the to concentrate on their creativity to navigate the quantum ideas such as superposition and entanglement. Read more about this project here: https://github.com/wslu42/QArcade",
+"Several physical implementations of qubits exist to employ quantum computational advantages, some of them are superconducting qubits, ion-trap, quantum dots. Out of all of this trapped ion technology has a good amount of potential, although superconducting qubits are the most common one. Basically ion is trapped in an energy function saddle point to harness the qubit property from the ion. An introduction of this promising technology will be discussed and shared its advantages over superconducting properties. Some meticulous procedures are followed to make quantum gates and at the end of the talk, we will discuss its scaling techniques and future potentials.",
+"The world of videogames is mainly based on reaching a goal using to your advantage the effects that were determined by games designers for each of the actions that the player can perform through an interface. Let's give an example, the game of the chrome’s dinosaur has as its main goal to avoid the obstacles and get all the possible points, the actions of the player are to press the spacebar and the effect on the dinosaur of that action is jump. On the other hand, quantum computing has different applications, including the use of quantum properties in video games, one of the main characteristics that we can find is the use of qubits, information units and the analog of bits in classical computing. Qubits can be manipulated using quantum gates, which in turn can be arranged into quantum circuits. Putting these two ideas together, we decided to create a new video game in which the effects do not depend totally on the player actions or video game designer. Taking up the example of the classical chrome’s dinosaur, we developed a game in which the user has control over a set of quantum gates and their position in a quantum circuit, then based on a framework that can simulate quantum circuits such as Qiskit of IBM, we get the results which determine whether the dinosaur jumps or ducks. We hope you enjoy and learn a lot with this game.",
+"Understanding qubits through math only goes so far...sometimes you just need to look at them with your eyeballs. In this session I'll talk about some inspiring approaches to making qubits visual and interactive, my decisions and lessons learned while creating a gamified quantum circuit editor for beginners (elliot.website/qubit), and some of my ideas for how qubits could be visualized in the future.",
+"Quantum circuits feel less intuitive than classical circuits. I'm developing QC Simplify (qcsimplify.com) with the goal of helping people new to quantum computing gain a better intuition for how the order of quantum gates changes the behaviour of a quantum circuit. It uses a simple drag-and-drop interface, where you can drag gates across each other to automatically apply a commutation rule that keeps the circuit’s behaviour the same. When you place a new gate by letting go of it on the circuit, it will cancel with adjacent gates (when possible) to simplify the circuit. I will give a demo of the current capabilities of the website and propose some possible future directions, and will gladly listen to any ideas you bring for improvements!",
+"Quantumcat is a cross-platform library and is built on the principle of write once and execute on any quantum provider. Developers just have to follow one syntax and could execute their circuit in one of the supported platforms such as Google Cirq, IBM Qiskit, IonQ, and Rigetti (Few others are in progress) without the need to write code in multiple syntaxes. More info on: https://quantumcat.io/",
+"In NISQ era, quantum computers are not perfect and errors prevent them from being useful. Among the sources of errors, gate errors are significant. To reduce these errors an active error mitigation can be used. By amplifying the errors and then extrapolating, those to zero errors will increase the performance of NISQ devices. In my talk, I would like to give an introduction to what are sources of errors and to the method of error mitigation with Richardson extrapolation.",
+"Several natural phenomena are described by differential equations - which are also used to model quantum systems. Simulating those systems in a quantum computer implies solving a particular set of linear differential equations (LDEs) using quantum algorithms. We use the same techniques to solve a broader set of LDEs, by representing their solutions via Taylor Series and decoding them into qubits. We use Yao Quantum (an efficient open-source framework for quantum algorithm design), written in Julia, to perform simulations with a 10 relative error.",
+"An exciting playground for exploring quantum dynamics in the nano-scale is a 2D honeycomb system. With the evolution of nano-electronics and continued miniaturization of devices, it became evident that 2D materials would not only empower us to engineer novel devices, but also aid understanding the rich physics involved. It is no myth that all major breakthroughs in condensed matter physics have some sort of motivation drawn from hexagonal lattices. Graphene, among many others, is one such awesome 2D material, which could be cleverly ‘quantum-engineered’ to design robust ‘topological quantum devices’ or maybe applications in spintronics or in the whole new field of ‘valleytronics’. From an enormous rise in computational power to significant decrease in power consumption, the possibilities are endless. In this talk, I share some of my ‘quantum thoughts’ to introduce the fascinating world of honeycomb systems.",
+"Addressing data movement bottlenecks in HPC and other applications is important to improve storage and I/O performance. Data compression (lossy or lossless) helps in reducing the number of bytes that must be transmitted or stored. Caching is another method that helps in reducing data movement by keeping data required for computation in fast memory. Previously, it has been explored that hardware compression can be used to expand size of hardware caches and main memory or caching at the software level. Softwares caches further improve the I/O performance for distributed applications and cache the input data for parallel tasks. One of the main applications of compression and caching in quantum computing is in reducing the memory footprint for quantum circuit simulations. In quantum computing research, using classical HPC systems to simulate quantum computers is integral for understanding behavior of quantum computing systems. These simulations allow developers to evaluate complexity of new quantum algorithms and validate the design of quantum devices. Therefore, through this research we aim to build a cache simulator which can be used to assess the performance of different compressors as they cache for compressed blocks of various HPC applications or quantum simulations. This simulator can then be used to run different benchmarks (quantum approximate optimization algorithm (QAOA), Quantum Fourier Transform (QFT), Grover’s Search Algorithm) and then choose the compressor based on its cache performance.",
+"Researchers and Scientists have always hunted for analogies to explain complex physical phenomenas. Games have always been a way to explain our understanding. Quantum Coins combines both, we implement a circuit which returns a which returns the initial quantum state. Quantum Coins is a coin game which is intended to show some of the most fundamental properties of Quantum Mechanics. The game exploits superposition and uncertainty to show that quantum systems have an edge over classical computers when we talk about usability. The game is inspired from a reference in a TED Talk here (https://www.youtube.com/watch?v=QuR96...). A coin is initially placed in Heads position, there are a total of 3 moves, classically the game is all about random events. The computer and the player have an equal probability of winning. On a quantum computer the circuit is fashioned in such a way that the output is the ket 0 state with measurement probability equal to 100%. Hence by using some simple gates we display some of the most fundamental properties of Quantum Computers."]; 
+  
+var data = [];
+var length = author_saturday.length; // user defined length
+
+for(var i = 0; i < length; i++) {
+    data.push(i);
+}
+
+data.sort(() => Math.random() - 0.5);
+  
+  
+var first = Math.floor(Math.random() * author_saturday.length);
+var html_str = "";
+var i;
+for (i = 0; i < title_saturday.length; i++) {
+  var idx = (first + i) % title_saturday.length; 
+  html_str += "<div class=\"view_item\" style=\"width: 65vw;\"> <div class=\"vi_left\" style=\"width:30%;\" > <iframe width=\"180\" height=\"135\" src="+ video_saturday[data[idx]] +"></iframe>  </div> <div class=\"vi_right\" style=\"width:68%;\" > <p class=\"title\"> "+title_saturday[data[idx]] + "</p> <div class=\"title\">"+ author_saturday[data[idx]] +" "+ affiliation_staturday[data[idx]] +"</div> <p class=\"content\">"+ abstract_saturday[data[idx]]+ "</p></div></div>\n";
+                          
+}
+document.getElementById("video_anniversary").innerHTML = html_str;
+
+</script>
 
 
-<!-- End page content -->
+<!-- End page content
+
+  html_str += "<div class=\"view_item\" style=\"width: 65vw;\"> <div class=\"vi_left\" style="width:40%;\" > <iframe width=\"180\" height=\"135\" src=\"https://www.youtube.com/embed/YC88NyV5SuM\"></iframe>  </div> <div class=\"vi_right\" style=\"width:58%;\" > <p class=\"title\"> "+title[data[idx]] + "</p> <div class=\"title\">"+ author[data[idx]] + "   "  + affiliation[data[idx]] +"</div> <p class=\"content\">"+ abstract[data[idx]]+ "</p></div></div>\n;"
+                          -->
+
 
