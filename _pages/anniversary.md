@@ -369,7 +369,7 @@ body {
 	<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Videos of the talks on 24 July</h2>
 	<div class="wrapper">
 		<div class="view_main"  style="width: 65vw;">
-			<div id="video_anniversary" class="view_wrap list-view" style="display: block;">
+			<div id="video_anniversary_saturday" class="view_wrap list-view" style="display: block;">
 				<!--div class="view_item" style="width: 65vw;">
 					<p class="title">title</p>
 						<div class="title">Autor</div>
@@ -380,6 +380,15 @@ body {
 						<p class="content">Addressing data movement bottlenecks in HPC and other applications is important to improve storage and I/O performance. Data compression (lossy or lossless) helps in reducing the number of bytes that must be transmitted or stored. Caching is another method that helps in reducing data movement by keeping data required for computation in fast memory. Previously, it has been explored that hardware compression can be used to expand size of hardware caches and main memory or caching at the software level. Softwares caches further improve the I/O performance for distributed applications and cache the input data for parallel tasks. One of the main applications of compression and caching in quantum computing is in reducing the memory footprint for quantum circuit simulations. In quantum computing research, using classical HPC systems to simulate quantum computers is integral for understanding behavior of quantum computing systems. These simulations allow developers to evaluate complexity of new quantum algorithms and validate the design of quantum devices. Therefore, through this research we aim to build a cache simulator which can be used to assess the performance of different compressors as they cache for compressed blocks of various HPC applications or quantum simulations. This simulator can then be used to run different benchmarks (quantum approximate optimization algorithm (QAOA), Quantum Fourier Transform (QFT), Grover’s Search Algorithm) and then choose the compressor based on its cache performance.</p>
 					</div>
 				</div-->
+			</div>
+		</div>
+	</div>
+	
+	<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Videos of the talks on 25 July</h2>
+	<div class="wrapper">
+		<div class="view_main"  style="width: 65vw;">
+			<div id="video_anniversary_sunday" class="view_wrap list-view" style="display: block;">
+
 			</div>
 		</div>
 	</div>
@@ -410,6 +419,7 @@ Although RSVP is not needed to join, we highly encourage you to RSVP as we will 
 </div>
 
 <script>
+
 var author_saturday = [
 "Kevin Jofroit Joven Noriega",
 "Wen-Sen Lu",
@@ -423,7 +433,9 @@ var author_saturday = [
 "Sagnik Banerjee",
 "Sansriti Ranjan",
 "Kushagra Sharma"];
-  
+
+
+
 var affiliation_staturday = [
 "Student at Universidad del Valle and intern at Purdue University",
 "Qiskit advocate",
@@ -451,8 +463,7 @@ var title_saturday = [
 "Engineering the quantum dynamics in 2-D honeycomb systems",
 "Research student at Future Technologies in High Performance Computing at Clemson University",
 "Superposition and Quantum Coins"];
-  
-  
+	
  var video_saturday = [
 "https://www.youtube.com/embed/7anlxNPBdi0",
 "https://www.youtube.com/embed/rXZ7xgbtXB0",
@@ -466,7 +477,8 @@ var title_saturday = [
 "https://www.youtube.com/embed/4INMaL5ywwU",
 "https://www.youtube.com/embed/YC88NyV5SuM",
 "https://www.youtube.com/embed/rxTvHT6z6kA"];
-  
+
+	
   var abstract_saturday = [
 "One of the main actual problems in quantum computing is related to the number of qubits that can have the hardware implementation, also that can difficult the limitation of the algorithms and also that the algorithms can have errors due to the environment. We present a hardware implementation on FPGA that can emulate quantum circuits with a certain architecture that gives all the probabilities distribution of the quantum circuit outcomes.",
 "It is our privilege to explore the cutting-edge quantum computational space during the NISQ era with qiskit. Looking back into the history especially in the 1970’s, arcade game developers already started the machine-level programming and prepared themselves as the future coders even if the hardware was still limited. In the meanwhile, game-driven breakthrough for the classical hardware, such as the first 3D acceleration chip Super FX in Nintendo super-NES home console, also demonstrated the possibilities where new hardware could be inspired by the game developers.In this project, we hope to contribute to quantum education by leveraging the experience of classical arcades in the 70’s. The motivation of this project is to help quantum enthusiastic building a classical machine hosting quantum development environment. It could be game development platform such as PICO-8 with micro-qiskit or full-fledged Python3 environment with Thonny which allows developers to access the full power of qiskit.Indeed, for mature users such as graduate student with physics or computer science background it is perhaps more straightforward for them to use qiskit on their laptops for some serious quantum simulations, while this project is aiming at K-12 students and educators who has rather limited experience regarding quantum physics and/or programming. For these audiences PICO-8 and micro-qiskit offer a simple yet concise platform for the to concentrate on their creativity to navigate the quantum ideas such as superposition and entanglement. Read more about this project here: https://github.com/wslu42/QArcade",
@@ -480,7 +492,71 @@ var title_saturday = [
 "An exciting playground for exploring quantum dynamics in the nano-scale is a 2D honeycomb system. With the evolution of nano-electronics and continued miniaturization of devices, it became evident that 2D materials would not only empower us to engineer novel devices, but also aid understanding the rich physics involved. It is no myth that all major breakthroughs in condensed matter physics have some sort of motivation drawn from hexagonal lattices. Graphene, among many others, is one such awesome 2D material, which could be cleverly ‘quantum-engineered’ to design robust ‘topological quantum devices’ or maybe applications in spintronics or in the whole new field of ‘valleytronics’. From an enormous rise in computational power to significant decrease in power consumption, the possibilities are endless. In this talk, I share some of my ‘quantum thoughts’ to introduce the fascinating world of honeycomb systems.",
 "Addressing data movement bottlenecks in HPC and other applications is important to improve storage and I/O performance. Data compression (lossy or lossless) helps in reducing the number of bytes that must be transmitted or stored. Caching is another method that helps in reducing data movement by keeping data required for computation in fast memory. Previously, it has been explored that hardware compression can be used to expand size of hardware caches and main memory or caching at the software level. Softwares caches further improve the I/O performance for distributed applications and cache the input data for parallel tasks. One of the main applications of compression and caching in quantum computing is in reducing the memory footprint for quantum circuit simulations. In quantum computing research, using classical HPC systems to simulate quantum computers is integral for understanding behavior of quantum computing systems. These simulations allow developers to evaluate complexity of new quantum algorithms and validate the design of quantum devices. Therefore, through this research we aim to build a cache simulator which can be used to assess the performance of different compressors as they cache for compressed blocks of various HPC applications or quantum simulations. This simulator can then be used to run different benchmarks (quantum approximate optimization algorithm (QAOA), Quantum Fourier Transform (QFT), Grover’s Search Algorithm) and then choose the compressor based on its cache performance.",
 "Researchers and Scientists have always hunted for analogies to explain complex physical phenomenas. Games have always been a way to explain our understanding. Quantum Coins combines both, we implement a circuit which returns a which returns the initial quantum state. Quantum Coins is a coin game which is intended to show some of the most fundamental properties of Quantum Mechanics. The game exploits superposition and uncertainty to show that quantum systems have an edge over classical computers when we talk about usability. The game is inspired from a reference in a TED Talk here (https://www.youtube.com/watch?v=QuR96...). A coin is initially placed in Heads position, there are a total of 3 moves, classically the game is all about random events. The computer and the player have an equal probability of winning. On a quantum computer the circuit is fashioned in such a way that the output is the ket 0 state with measurement probability equal to 100%. Hence by using some simple gates we display some of the most fundamental properties of Quantum Computers."]; 
+	
+	
+var author_sunday = [
+"Victor Onofre and F. Rojas",
+"AJMAL IBN MOHAMMED ALTHAF",
+"Claudia Zendejas-Morales",
+"Emilio Peláez and Minh Pham",
+"Joonho Kim",
+"Pinaki Sen",
+"Rana Prathap Simh Mukthavaram",
+"Zeki Seskir",
+"Lia Yeh",
+"John van de Wetering"];
+ 
+var affiliation_sunday = [
+"Center of Nanoscience and Nanotechnology (CNyN)",
+"MSc Physics student, Q Enthusiasts Kerala",
+"Teacher Assistant at UNAM and Intern at Quantum Flytrap",
+"Research Intern at Weizmann Institute of Science & Undergraduate mathematics student at the University of Chicago.",
+"Institute for Advanced Study",
+"Engineering Undergrad at NIT Agartala, INDIA and Research Intern at ISI Kolkata, INDIA",
+"Qiskit Advocate, Mathematics and Computing at IIT Kharagpur, AI Architect at MapRecruit.ai",
+"Board member at QWorld and Research Assistant at METU Physics Department",
+"PhD student, Quantum Group, University of Oxford",
+"Oxford University"]
+
+	
+var title_sunday = [
+"Discord-type quantum correlations in the radical pair mechanism for magnetoreception in birds",
+"Digital Divide in Quantum Education",
+"Incorporating the advantages of ZX-calculus in the Tequila platform",
+"On the recursive construction of relative phased multiple controlled Toffoli",
+"Quantum Energy Landscape and Variational Quantum Algorithms",
+"Hierarchical Extreme Quantum Machine Learning with Tensor and Neural Networks in the NISQ Era",
+"Building Retro-Style Quantum Games for Arduino from scratch",
+"The Landscape of Academic Literature in Quantum Technologies",
+"Quantum gates: software vs hardware implementation",
+"Doing quantum computing using pictures"];
+	
+ var video_sunday = [
+"https://www.youtube.com/embed/-PWs6JbtfUQ",
+"https://www.youtube.com/embed/LehWenCTnIw",
+"https://www.youtube.com/embed/lN8TxkgrdVE",
+"https://www.youtube.com/embed/aqxQykylCOs",
+"https://www.youtube.com/embed/decfApZo-Cg",
+"https://www.youtube.com/embed/tJyAaSw3wWc",
+"https://www.youtube.com/embed/vgIO6jC3US0",
+"https://www.youtube.com/embed/NrKJcR_XzOQ",
+"https://www.youtube.com/embed/8NpVsJb4xbY",
+"https://www.youtube.com/embed/poh6cbHhvek"];
   
+var abstract_sunday = [
+"The leading hypothesis to explain how migratory birds can detect the direction of the Earth's magnetic field is the Radical-Pair mechanism, which is by now a well-established theoretically and experimentally mechanism. The radical pairs oscillate between singlet and triplet states. The Earth's magnetic field direction influences the probability of finding them in one state or another. The yield of these states controls the neural signals of the bird's retina, providing the basis for magnetoreception. This research studies quantum correlations in the mechanism of radical pairs, working with discord-type quantifiers. In the first stage of the work, the dependence of the angle of the Earth's magnetic field and the singlet yield was investigated, consistent with the different studies on the mechanism of radical pairs. In the second stage, discord-type quantifiers were calculated as a function of the angle of the Earth's magnetic field, finding a dependence similar to that of the singlet yield.",
+"We live in a society where all the classes have gone from offline mode to online mode all of a sudden in a year. The digital divide, as we know is the inaccessibility to technology and gadgets. Nowadays education is just a privilege only for those who have access to technology. The same issue is there in the domain of quantum education. Quantum computing is relatively a new field and because of this, not everyone has prior exposure to it. To bridge the issue there are a lot of quantum education initiatives and many of them are free. The question is does everyone have access to quantum education in online mode. In Kerala, which is my state there is smartphone access is there for 90% of the students, but for quantum education, the smartphone is not enough. We need computer access for using quantum computing platforms or for coding. There are only 10-20 % of students who use computers for their education and this makes a huge gap in accessing the quantum world. My talk focuses on representing the issues in the first part. The second part address some of the possible solution in reducing the digital divide and how to be more inclusive in the quantum world. The solution discussed is regarding how learning materials can be made available offline, how local science communities and volunteers from quantum universal education can help in teaching quantum computing.",
+"Tequila's main goal is to simplify and accelerate the implementation of new ideas for quantum algorithms, allowing algorithms to be prototyped and subsequently transforming the resulting circuits and executing them in quantum simulators or interfaces. In order to execute optimized circuits, we sought to take advantage of the benefits of ZX-calculus, incorporating the functionality of converting Tequila circuits to PyZX circuits and vice versa, through OpenQASM code, an intermediate representation for quantum instructions. With this extension to the Tequila platform, the optimization of circuits is achieved by reducing the T-count, the number of non-Clifford quantum gates, by up to 28%.",
+"We propose an efficient construction for multiple controlled-NOT gates that allows for relative phase difference in the output of the gate and uses no additional qubits other than n control qubits and one target qubit. We employ a recursive construction using three base cases: the phaseless CNOT, the phased Toffoli, and the phased triple controlled-NOT; the latter two are known constructions from previous literature on the subject. To prove its correctness, we use the method of exhaustion, checking all different gate and parameter combinations. Finally, we derive an upper bound on the complexity of our technique and compare it to the recently known construction of complexity 9n + O(1) CNOT gates.",
+"Variational Quantum Algorithm (VQA) is a major application of the near-term hybrid computing model that jointly uses a classical computer to handle continuous variables and a quantum computer to generate variational wavefunctions controlled by those variables. Many computing problems are formulated as optimization problems in this framework to find out the global minimum in the quantum energy landscape. In this talk, I will explain two main design factors for efficient VQA optimization, i.e., the entangling capability and number of control parameters of the variational wavefunction, by analyzing how they influence the geometric shape of the quantum energy landscape.",
+"Recently, the closeness between the techniques used in classical machine learning and quantum-many body physics has got significant attention among the academic and research communities. Especially, the deep learning frameworks and tensor networks hold similar properties such that they can be used for machine learning tasks. In noisy intermediate-scale quantum (NISQ) technology, the quantum circuits with a long circuit depth or a large number of qubits cannot be implemented on NISQ devices. It is highly demanding to develop applications with adequate resources which can exploit the quantum advantages. In this paper, we proposed the architecture of hierarchal extreme quantum machine learning consisting of quantum tensor variants of autoencoder (i.e. Tree tensor network (TTN), multi-scale entanglement renormalization ansatz (MERA)) and quantum neural network (QNN) for binary classification. The proposed hierarchical architecture has the ability to overcome the shortcomings of regular tensor networks and can be defined in complex geometries efficiently as long as the order can be represented appropriately. We apply the quantum variants of TTN and MERA for image compression and quantum neural networks to classifying the images and compare their performance, concluding that the combination of TTN performs better than MERA with QNN for image classification.",
+"Building retro quantum games in general is a task that’s super fun and in my opinion one of the best ways to cement your basic quantum computing concepts. However, Quantum games today are usually built for relatively powerful microprocessors such as a Raspberry pi or for a computer. These chips tend to be relatively expensive and honestly just aren’t fun to build retro games on - as you already have libraries like Pygame to help you along the process. The aim of this project was to build a retro handheld using an Arduino and program a game based on quantum computing onto it.  During this talk I’ll be sharing the process of how I built the quantum game, provide the code and circuit schematics so you can play and build on it yourself!",
+"In this study, we investigated the academic literature on quantum technologies (QT) using bibliometric tools. We used a set of 49,823 articles obtained from the Web of Science (WoS) database using a search query constructed through expert opinion. Analysis of this revealed that QT is deeply rooted in physics, and the majority of the articles are published in physics journals. Keyword analysis revealed that the literature could be clustered into three distinct sets, which are (i) quantum communication/cryptography, (ii) quantum computation, and (iii) physical realizations of quantum systems. We performed a burst analysis that showed the emergence and fading away of certain key concepts in the literature. This is followed by co-citation analysis on the “highly cited” articles provided by the WoS, using these we devised a set of core corpus of 34 publications. Comparing the most highly cited articles in this set with respect to the initial set we found that there is a clear difference in most cited subjects. Finally, we performed co-citation analyses on country and organization levels to find the central nodes in the literature. Overall, the analyses of the datasets allowed us to cluster the literature into three distinct sets, construct the core corpus of the academic literature in QT, and to identify the key players on country and organization levels, thus offering insight into the current state of the field.",
+"Unlike for classical computers, for quantum computers, present-day quantum assembly languages do not correspond to physical hardware operations. Although gate-based quantum computers which implement a universal gateset can run any qubit operations, for the implementation to be efficient, the desired gate needs to be decomposed into gates the hardware can run. This talk is a primer on quantum computer architecture, specifically how quantum software is compiled to quantum assembly language and then to quantum hardware.",
+"Quantum mechanics is famously counter-intuitive, so we should grasp at anything that allows us to understand it in a more intuitive manner. As we are visual creatures, why not let our visual cortex do some work and represent computations using pictures instead of formulae or matrices! The ZX-calculus is a graphical language for reasoning about quantum computation. The usefulness of ZX comes from our ability to transform and simplify ZX-diagrams completely graphically. In this talk I will briefly introduce ZX, and demonstrate using our software library PyZX how we can simplify quantum computations and how to verify a circuit is exactly doing what it says on the tin."]; 
+  
+//////////// saturday ///////////////////////////
+	
 var data = [];
 var length = author_saturday.length; // user defined length
 
@@ -499,7 +575,30 @@ for (i = 0; i < title_saturday.length; i++) {
   html_str += "<div class=\"view_item\" style=\"width: 65vw;\"> <div class=\"vi_left\" style=\"width:30%;\" > <iframe width=\"180\" height=\"135\" src="+ video_saturday[data[idx]] +"></iframe>  </div> <div class=\"vi_right\" style=\"width:68%;\" > <p class=\"title\"> "+title_saturday[data[idx]] + "</p> <div class=\"title\">"+ author_saturday[data[idx]] +" "+ affiliation_staturday[data[idx]] +"</div> <p class=\"content\">"+ abstract_saturday[data[idx]]+ "</p></div></div>\n";
                           
 }
-document.getElementById("video_anniversary").innerHTML = html_str;
+document.getElementById("video_anniversary_saturday").innerHTML = html_str;
+	
+//////////// sunday///////////////				      
+				      
+				      
+var data = [];
+var length = author_sunday.length; // user defined length
+
+for(var i = 0; i < length; i++) {
+    data.push(i);
+}
+
+data.sort(() => Math.random() - 0.5);
+  
+  
+var first = Math.floor(Math.random() * 10);
+var html_str_s = "";
+var i;
+for (i = 0; i < title_sunday.length; i++) {
+  var idx = (first + i) % title_sunday.length; 
+  html_str_s += "<div class=\"view_item\" style=\"width: 65vw;\"> <div class=\"vi_left\" style=\"width:30%;\" > <iframe width=\"180\" height=\"135\" src="+ video_sunday[data[idx]] +"></iframe>  </div> <div class=\"vi_right\" style=\"width:68%;\" > <p class=\"title\"> "+title_sunday[data[idx]] + "</p> <div class=\"title\">"+ author_sunday[data[idx]] +" "+ affiliation_sunday[data[idx]] +"</div> <p class=\"content\">"+ abstract_sunday[data[idx]]+ "</p></div></div>\n";		      
+				  
+}
+document.getElementById("video_anniversary_sunday").innerHTML = html_str_s;
 
 </script>
 
