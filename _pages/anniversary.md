@@ -432,7 +432,8 @@ var author_saturday = [
 "Rodrigo Pires Ferreira",
 "Sagnik Banerjee",
 "Sansriti Ranjan",
-"Kushagra Sharma"];
+"Kushagra Sharma",
+"Dayeong Kang"];
 
 
 
@@ -448,7 +449,8 @@ var affiliation_staturday = [
 "Co-founder at Brazil Quantum | BSc/MSc student at the Aeronautics Institute of Technology",
 "Jadavpur University",
 "Research student at Future Technologies in High Performance Computing at Clemson University",
-"Student at Sacred Heart School"]
+"Student at Sacred Heart School",
+""]
   
 var title_saturday = [
 "Simulating Quantum Circuits on Classical Hardware using FPGA",
@@ -462,7 +464,8 @@ var title_saturday = [
 "Solving Linear Differential Equations via Quantum Algorithms",
 "Engineering the quantum dynamics in 2-D honeycomb systems",
 "Research student at Future Technologies in High Performance Computing at Clemson University",
-"Superposition and Quantum Coins"];
+"Superposition and Quantum Coins",
+"My projects with Qiskit"];
 	
  var video_saturday = [
 "https://www.youtube.com/embed/7anlxNPBdi0",
@@ -476,7 +479,8 @@ var title_saturday = [
 "https://www.youtube.com/embed/TJrcWp2uBoQ",
 "https://www.youtube.com/embed/4INMaL5ywwU",
 "https://www.youtube.com/embed/YC88NyV5SuM",
-"https://www.youtube.com/embed/rxTvHT6z6kA"];
+"https://www.youtube.com/embed/rxTvHT6z6kA",
+"https://www.youtube.com/embed/be5jlFmPaio"];
 
 	
   var abstract_saturday = [
@@ -491,7 +495,8 @@ var title_saturday = [
 "Several natural phenomena are described by differential equations - which are also used to model quantum systems. Simulating those systems in a quantum computer implies solving a particular set of linear differential equations (LDEs) using quantum algorithms. We use the same techniques to solve a broader set of LDEs, by representing their solutions via Taylor Series and decoding them into qubits. We use Yao Quantum (an efficient open-source framework for quantum algorithm design), written in Julia, to perform simulations with a 10 relative error.",
 "An exciting playground for exploring quantum dynamics in the nano-scale is a 2D honeycomb system. With the evolution of nano-electronics and continued miniaturization of devices, it became evident that 2D materials would not only empower us to engineer novel devices, but also aid understanding the rich physics involved. It is no myth that all major breakthroughs in condensed matter physics have some sort of motivation drawn from hexagonal lattices. Graphene, among many others, is one such awesome 2D material, which could be cleverly ‘quantum-engineered’ to design robust ‘topological quantum devices’ or maybe applications in spintronics or in the whole new field of ‘valleytronics’. From an enormous rise in computational power to significant decrease in power consumption, the possibilities are endless. In this talk, I share some of my ‘quantum thoughts’ to introduce the fascinating world of honeycomb systems.",
 "Addressing data movement bottlenecks in HPC and other applications is important to improve storage and I/O performance. Data compression (lossy or lossless) helps in reducing the number of bytes that must be transmitted or stored. Caching is another method that helps in reducing data movement by keeping data required for computation in fast memory. Previously, it has been explored that hardware compression can be used to expand size of hardware caches and main memory or caching at the software level. Softwares caches further improve the I/O performance for distributed applications and cache the input data for parallel tasks. One of the main applications of compression and caching in quantum computing is in reducing the memory footprint for quantum circuit simulations. In quantum computing research, using classical HPC systems to simulate quantum computers is integral for understanding behavior of quantum computing systems. These simulations allow developers to evaluate complexity of new quantum algorithms and validate the design of quantum devices. Therefore, through this research we aim to build a cache simulator which can be used to assess the performance of different compressors as they cache for compressed blocks of various HPC applications or quantum simulations. This simulator can then be used to run different benchmarks (quantum approximate optimization algorithm (QAOA), Quantum Fourier Transform (QFT), Grover’s Search Algorithm) and then choose the compressor based on its cache performance.",
-"Researchers and Scientists have always hunted for analogies to explain complex physical phenomenas. Games have always been a way to explain our understanding. Quantum Coins combines both, we implement a circuit which returns a which returns the initial quantum state. Quantum Coins is a coin game which is intended to show some of the most fundamental properties of Quantum Mechanics. The game exploits superposition and uncertainty to show that quantum systems have an edge over classical computers when we talk about usability. The game is inspired from a reference in a TED Talk here (https://www.youtube.com/watch?v=QuR96...). A coin is initially placed in Heads position, there are a total of 3 moves, classically the game is all about random events. The computer and the player have an equal probability of winning. On a quantum computer the circuit is fashioned in such a way that the output is the ket 0 state with measurement probability equal to 100%. Hence by using some simple gates we display some of the most fundamental properties of Quantum Computers."]; 
+"Researchers and Scientists have always hunted for analogies to explain complex physical phenomenas. Games have always been a way to explain our understanding. Quantum Coins combines both, we implement a circuit which returns a which returns the initial quantum state. Quantum Coins is a coin game which is intended to show some of the most fundamental properties of Quantum Mechanics. The game exploits superposition and uncertainty to show that quantum systems have an edge over classical computers when we talk about usability. The game is inspired from a reference in a TED Talk here (https://www.youtube.com/watch?v=QuR96...). A coin is initially placed in Heads position, there are a total of 3 moves, classically the game is all about random events. The computer and the player have an equal probability of winning. On a quantum computer the circuit is fashioned in such a way that the output is the ket 0 state with measurement probability equal to 100%. Hence by using some simple gates we display some of the most fundamental properties of Quantum Computers.",
+"I will talk three qiskit projects, and these have a same thing which are using cloud. (1) Quantum Ugly Duckling: making a discord bot with NQRNG. For this project, I used IBM Cloud server and database to sabe quantum dad jokes. (2) Qoupang: quantum blockchain service for logistics. Our team used a cloud server and QRNG for making a hash value of each block. (3) Qiskit Textbook Master: a quiz app for learning qiskit textbook. Using a web-hosting service in Github, give a bundle of quizzes to help learning. Main focus will be You can make these quantum projects easily!"]; 
 	
 	
 var author_sunday = [
