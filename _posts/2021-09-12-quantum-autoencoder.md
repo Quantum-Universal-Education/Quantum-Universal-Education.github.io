@@ -8,6 +8,7 @@ tags:
 author: 
   - Maria Martinez
   - Luis Martinez
+  - Curate Section
   - Jayanti Singh Q
 ---
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
