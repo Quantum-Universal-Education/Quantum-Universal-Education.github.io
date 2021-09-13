@@ -87,7 +87,15 @@ Vincent Pisani:
 Yipeng Huang:
   name: "Yipeng Huang"
   avatar: "/assets/images/biopics/yipeng_h.jpg"
- 
+
+Maria Martinez:
+  name: "Maria Fernanda Martinez Vazquez"
+  avatar: "/assets/images/biopics/fernanda_m.jpg" 
+
+Luis Martinez:
+  name: " Luis Eduardo Martinez Hernandez"
+  avatar: "/assets/images/biopics/luis_e_m·jpg" 
+
 Curate Section:
   name: "Curated By:"
 
@@ -102,6 +110,9 @@ Harshit Garg Q:
 
 Hirmay Sandesara Q:
   name: "Hirmay Sandesara"
+
+Jayanti Singh Q:
+  name: "Jayanti Singh"
 
 Lia Yeh Q:
   name: "Lia Yeh"

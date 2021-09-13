@@ -6,8 +6,9 @@ tags:
   - quantum machine learning
   - quantum computing
 author:
- 
----
+   - Maria Martinez
+  - Luis Martinez
+  - Jayanti Singh Q
 # Quantum Autoencoder with MNIST classification
 
 ## What's a quantum autoencoder and why should you care?
@@ -18,9 +19,9 @@ Now, a quantum autoencoder applies the same principle of a classical autoencoder
 
 Graphically, a quantum state autoencoder and decoder can be seen as the following:
 
-![autoencoder](./autoencoder.png)
+![autoencoder](/assets/images/autoencoder/autoencoder.png)
 
-As you can see in the image, we have a 4x4 statevector that we want to encode into a 2x2 statevector. We can do this by applying the autoencoder to our circuit. One thing worth noticing is that two qubits were set to |0> in the process. Nonetheless, there wasn't a loss of information because we encoded that information inside the two last qubits. Now, if we want to have the original 4x4 statevector we need to apply the decoder to our circuit. Notice that we have to include the qubits that were set in the |0> state.
+As you can see in the image, we have a 4x4 statevector that we want to encode into a 2x2 statevector. We can do this by applying the autoencoder to our circuit. One thing worth noticing is that two qubits were set to $$$$|0>$$$$ in the process. Nonetheless, there wasn't a loss of information because we encoded that information inside the two last qubits. Now, if we want to have the original 4x4 statevector we need to apply the decoder to our circuit. Notice that we have to include the qubits that were set in the |0> state.
 
 The general process to construct a quantum autoencoder is [1] [6]:
 - Generate a statevector that we want to reduce.
@@ -368,8 +369,8 @@ while k < len(x_test): #Deleting no valuable information for the training set
 
 Now, we renormalize so we can interpret a vector state and then apply it to our quantum circuit model according to the next mathematical expression: 
 
-$ \frac{input-vector}{\sqrt{\sum_{i=0}^{n-1} (input-vector_i)^2}}$,
-Where input-vector is the 64x1 vector that we'll tranform into a vector state $| \psi \rangle$.
+$$ \frac{input-vector}{\sqrt{\sum_{i=0}^{n-1} (input-vector_i)^2}}$$,
+Where input-vector is the 64x1 vector that we'll tranform into a vector state $$| \psi \rangle$$.
 
 
 ```python
@@ -406,7 +407,7 @@ print("The sum of the states from the training set 0",np.sum(x_train[0]**2))
 
 ## Construction of the Autoencoder
 
-For this part 6 qubits are considered, since 64 = $2^6$. We'll map with the amplitude method, and just with 1 layer.
+For this part 6 qubits are considered, since 64 = $$2^6$$. We'll map with the amplitude method, and just with 1 layer.
 
 Later on, the circuit used for this application will be shown.
 
@@ -537,7 +538,7 @@ def vqc(n, num_layers,params):
     return circuit
 ```
 
-The circuit of our tensor network is affected by 10 q-gates $Ry(\theta)$ and 4 $C_{not}$. Considering the cost as linked to the number of $C_{not}$, it will be 4.
+The circuit of our tensor network is affected by 10 q-gates $$Ry(\theta)$$ and 4 $$C_{not}$$. Considering the cost as linked to the number of $$C_{not}$$, it will be 4.
 
 
 ```python
@@ -556,7 +557,7 @@ vqc(n,num_layers,params).draw(output="mpl")
 
 From [6] we considered the Swap-test to seek the value of y. Adittionally, we took the general idea of the swap test from [7] which is the following:
     
-   Given two states  $| \phi_0 \phi_1 \rangle$, where the first one is the reference vector $| 0 \rangle$ and the second one is state that we want to eliminate (with the autoencoder) to use a smaller number of qubits. If we apply the swap-test and after the measurement of the state $| 0 \rangle$ we get the $| 0 \rangle$ state then we correctly encoded our qubits.
+   Given two states  $$| \phi_0 \phi_1 \rangle$$, where the first one is the reference vector $$| 0 \rangle$$ and the second one is state that we want to eliminate (with the autoencoder) to use a smaller number of qubits. If we apply the swap-test and after the measurement of the state $$| 0 \rangle$$ we get the $$| 0 \rangle$$ state then we correctly encoded our qubits.
 
 
 
@@ -650,13 +651,13 @@ from scipy.optimize import minimize
 
 Now, to identify the cost we used the expected value of the z axis. This is defined by:
 
-$\langle Z \rangle = \langle q | Z | q\rangle =\langle q|0\rangle\langle 0|q\rangle - \langle q|1\rangle\langle 1|q\rangle
-=|\langle 0 |q\rangle|^2 - |\langle 1 | q\rangle|^2 $
+$$\langle Z \rangle = \langle q | Z | q\rangle =\langle q|0\rangle\langle 0|q\rangle - \langle q|1\rangle\langle 1|q\rangle
+=|\langle 0 |q\rangle|^2 - |\langle 1 | q\rangle|^2 $$
 
 
 And after integrating the swap-test criteria we get:
 
-$1 -\langle Z \rangle = 1 - \langle q | Z | q\rangle = 1- [\langle q|0\rangle\langle 0|q\rangle - \langle q|1\rangle\langle 1|q\rangle] = 1 - [|\langle 0 |q\rangle|^2 - |\langle 1 | q\rangle|^2] = 1 - |\langle 0 |q\rangle|^2 + |\langle 1 | q\rangle|^2 $
+$$1 -\langle Z \rangle = 1 - \langle q | Z | q\rangle = 1- [\langle q|0\rangle\langle 0|q\rangle - \langle q|1\rangle\langle 1|q\rangle] = 1 - [|\langle 0 |q\rangle|^2 - |\langle 1 | q\rangle|^2] = 1 - |\langle 0 |q\rangle|^2 + |\langle 1 | q\rangle|^2 $$
 
 You can check this link for additional information on the expected value: https://qiskit.org/textbook/ch-labs/Lab02_QuantumMeasurement.html
 
@@ -891,7 +892,7 @@ axarr[4].imshow(test_reduce[4].reshape(4,4)*255)
 
 ###  Data decompression 
 
-After applying the complex conjugate, as we state earlier, we should get the orignal input value $|\phi \rangle$
+After applying the complex conjugate, as we state earlier, we should get the orignal input value $$|\phi \rangle$$
 
 
 ```python
@@ -1014,22 +1015,22 @@ To compare the reconstructed images obtained from the autoencoder and the origin
 
 - Mean square error (MSE)
 
-$MSE=\frac{1}{m n} \sum_{i=0}^{m-1} \sum_{j=0}^{n-1}[I(i, j)-K(i, j)]^{2},$ 
+$$MSE=\frac{1}{m n} \sum_{i=0}^{m-1} \sum_{j=0}^{n-1}[I(i, j)-K(i, j)]^{2},$$ 
 
-whre $m$ is the image height $I$, n the width of the image $K$ and $i$,$j$ the psotions $x,y$ images pixels; the closer to 0 get the better the result.
+whre $$m$$ is the image height $$I$$, n the width of the image $$K$$ and $$i$$,$$j$$ the psotions $$x,y$$ images pixels; the closer to 0 get the better the result.
 
 - Peak signal-to-noise ratio (PSNR)
 
-$PSNR = 10×log_{10}(\frac{(mxn)^2}{MSE},$
+$$PSNR = 10×log_{10}(\frac{(mxn)^2}{MSE},$$
 
-where $m$ is the image height $I$, n the width of the image $K$ and $MSE$ the mean square error; the bigger the better.
+where $$m$$ is the image height $$I$$, n the width of the image $$K$$ and $$MSE$$ the mean square error; the bigger the better.
 
 
 - structural similarity index measure (SSIM)
 
-$    \operatorname{SSIM}(x, y)=\frac{\left(2 \mu_{x} \mu_{y}+c_{1}\right)\left(2 \sigma_{x y}+c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\sigma_{y}^{2}+c_{2}\right)},$
+$$    \operatorname{SSIM}(x, y)=\frac{\left(2 \mu_{x} \mu_{y}+c_{1}\right)\left(2 \sigma_{x y}+c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\sigma_{y}^{2}+c_{2}\right)},$$
 
-where $\mu$ is the mean, $\sigma$ is the standard deviation and $c$ is covariance [1]; The worst case is -1 and the best is 1.
+where $$\mu$$ is the mean, $$\sigma$$ is the standard deviation and $$c$$ is covariance [1]; The worst case is -1 and the best is 1.
 
 
 ```python
@@ -1456,13 +1457,13 @@ Due the results obtained we define an histogram by a metric in the best cases an
 
 The results closer to 0 are the best results, looking at a visual approach, our best case is with 200 images. 
 
-<img src="mse.png"> 
+<img src="/assets/images/autoencoder/mse.png"> 
 
 
 ## PSNR
 The results with the larger value than the axis, are the best results, looking at a visual approach, our best case is with 200 images.
 
-<img src="psnr.png">
+<img src="/assets/images/autoencoder/psnr.png">
 
 
 
@@ -1470,7 +1471,7 @@ The results with the larger value than the axis, are the best results, looking a
 ## SSIM
 The results closer to 1 are the best results, looking at a visual approach, our best case is with 200 images.
 
-<img src="ssim.png">
+<img src="/assets/images/autoencoder/ssim.png">
 
 
 
@@ -1750,9 +1751,9 @@ In this project, we propose a classification method of 0's and 1's through an au
 
 ## Authors
 
-- Martínez Vázquez María Fernanda (undergraduate)
+- Martínez Vázquez María Fernanda [linkedin](https://www.linkedin.com/in/mar%C3%ADa-fernanda-mart%C3%ADnez-v%C3%A1zquez-271b90208)
 - Navarro Ambriz Ronaldo  (undergraduate)
-- Martinez Hernandez Luis Eduardo (undergraduate)
+- Martinez Hernandez Luis Eduardo [linkedin](https://www.linkedin.com/in/luis-eduardo-martinez-hernandez-782470120/)
 - Galindo Reyes Agustin (undergraduate)
 - Alberto Maldonado Romo (master)
 
