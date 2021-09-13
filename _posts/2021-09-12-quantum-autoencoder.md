@@ -6,10 +6,12 @@ tags:
   - quantum machine learning
   - quantum computing
 author:
-   - Maria Martinez
-  - Luis Martinez
-  - Jayanti Singh Q
+ 
+---
 # Quantum Autoencoder with MNIST classification
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 
 ## What's a quantum autoencoder and why should you care?
 
