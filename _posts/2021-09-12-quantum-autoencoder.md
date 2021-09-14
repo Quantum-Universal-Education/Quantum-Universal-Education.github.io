@@ -26,6 +26,7 @@ Graphically, a quantum state autoencoder and decoder can be seen as the followin
 
 ![autoencoder](/assets/images/autoencoder/autoencoder.png)
 
+As you can see in the image, we have a $$4\times4$$ statevector that we want to encode into a $$2\times2$$ statevector. We can do this by applying the autoencoder to our circuit. One thing worth noticing is that two qubits were set to 0 state  in the process. Nonetheless, there wasn't a loss of information because we encoded that information inside the two last qubits. Now, if we want to have the original $$4 \times 4$$ statevector we need to apply the decoder to our circuit. Notice that we have to include the qubits that were set in the 0 state.
 
 The general process to construct a quantum autoencoder is [1] [6]:
 - Generate a statevector that we want to reduce.
