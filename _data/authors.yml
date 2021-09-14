@@ -93,8 +93,17 @@ Maria Martinez:
   avatar: "/assets/images/biopics/fernanda_m.jpg" 
 
 Luis Martinez:
-  name: " Luis Eduardo Martinez Hernandez"
+  name: "Luis Eduardo Martinez Hernandez"
   avatar: "/assets/images/biopics/luis_e_m.jpg" 
+
+Ronaldo Navarro:
+  name: "Ronaldo Navarro Ambriz"
+  avatar: "/assets/images/biopics/ronaldo_n.jpg" 
+  
+Agustin Galindo:
+  name: "Ronaldo Galindo Reyes"
+  avatar: "/assets/images/biopics/agustin_g.jpg" 
+
 
 Curate Section:
   name: "Curated By:"

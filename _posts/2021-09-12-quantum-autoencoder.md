@@ -7,7 +7,9 @@ tags:
   - quantum computing
 author: 
   - Maria Martinez
+  - Ronaldo Navarro
   - Luis Martinez
+  - Agustin Galindo
   - Curate Section
   - Jayanti Singh Q
 ---
@@ -24,7 +26,7 @@ Graphically, a quantum state autoencoder and decoder can be seen as the followin
 
 ![autoencoder](/assets/images/autoencoder/autoencoder.png)
 
-As you can see in the image, we have a 4x4 statevector that we want to encode into a 2x2 statevector. We can do this by applying the autoencoder to our circuit. One thing worth noticing is that two qubits were set to $$$$|0>$$$$ in the process. Nonetheless, there wasn't a loss of information because we encoded that information inside the two last qubits. Now, if we want to have the original 4x4 statevector we need to apply the decoder to our circuit. Notice that we have to include the qubits that were set in the |0> state.
+As you can see in the image, we have a $$4x4$$ statevector that we want to encode into a $$2x2$$ statevector. We can do this by applying the autoencoder to our circuit. One thing worth noticing is that two qubits were set to $$|0>$$ in the process. Nonetheless, there wasn't a loss of information because we encoded that information inside the two last qubits. Now, if we want to have the original $$4x4$$ statevector we need to apply the decoder to our circuit. Notice that we have to include the qubits that were set in the $$|0>$$ state.
 
 The general process to construct a quantum autoencoder is [1] [6]:
 - Generate a statevector that we want to reduce.
@@ -1622,7 +1624,7 @@ We test the algorithm by seeing how the test set classification does.
 predictions = zzpc_svc.predict(matrix_test)
 ```
 
-As can be seen, out of 300 samples, only 6 were not classified correctly.
+As can be seen, out of 300 samples, only 9 were not classified correctly.
 
 
 ```python
@@ -1755,10 +1757,10 @@ In this project, we propose a classification method of 0's and 1's through an au
 ## Authors
 
 - Martínez Vázquez María Fernanda [linkedin](https://www.linkedin.com/in/mar%C3%ADa-fernanda-mart%C3%ADnez-v%C3%A1zquez-271b90208)
-- Navarro Ambriz Ronaldo  (undergraduate)
+- Navarro Ambriz Ronaldo 
 - Martinez Hernandez Luis Eduardo [linkedin](https://www.linkedin.com/in/luis-eduardo-martinez-hernandez-782470120/)
-- Galindo Reyes Agustin (undergraduate)
-- Alberto Maldonado Romo (master)
+- Galindo Reyes Agustin [facebook](https://www.facebook.com/riddlerg https://www.linkedin.com/in/agustin-galindo-reyes-218a25174)[github](https://github.com/agus2207)
+- Alberto Maldonado Romo 
 
 # References
 
