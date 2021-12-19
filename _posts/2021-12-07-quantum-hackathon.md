@@ -87,6 +87,8 @@ The swag for the best education project
 ![shirt](/assets/images/designs/fsqc_shirt_pale-teal.png)      
 
 
+The host institute conducted an interview with the local participants who came in third place, the post can be found [here.](https://www.ipn.mx/imageninstitucional/comunicados/ver-comunicado.html?y=2021&n=254&t=6&fbclid=IwAR2PGuryGeF3Qs6GL2S6YQTBF4jlSrLpN_KQF_DrHeryvDB83GpafKAw5Ak)
+
 ## Results
 
 We got a lot of feedback from our participants from different countries Mexico, Colombia, Chile, Venezuela and Peru, the most remarkable ones are: 
@@ -128,7 +130,7 @@ Finally, we asked our participants the following question, "Would you like to se
 - [promo](https://www.facebook.com/CORECIC/photos/3112112655696390)
 - [hype](https://qiskitfallfest.hypeinnovation.com/servlet/hype/IMT?userAction=BrowseCurrentUser&templateName=MenuItem)
 - [playlist](https://www.youtube.com/watch?v=x0RMjEdHOmw&list=PLlU00HdSTWDwRnguUpTpSwbp_YBeaeN6t)
-
+- [post](https://www.ipn.mx/imageninstitucional/comunicados/ver-comunicado.html?y=2021&n=254&t=6&fbclid=IwAR2PGuryGeF3Qs6GL2S6YQTBF4jlSrLpN_KQF_DrHeryvDB83GpafKAw5Ak)
 
 <script>
 
