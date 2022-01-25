@@ -87,6 +87,9 @@ The swag for the best education project
 ![shirt](/assets/images/designs/fsqc_shirt_pale-teal.png)      
 
 
+Link of the IPN magazine where they mention our event as organizers [here](https://online.anyflip.com/ewxjr/fhpb/mobile/index.html).
+
+
 The host institute conducted an interview with the local participants who came in third place, the post can be found [here.](https://www.ipn.mx/imageninstitucional/comunicados/ver-comunicado.html?y=2021&n=254&t=6&fbclid=IwAR2PGuryGeF3Qs6GL2S6YQTBF4jlSrLpN_KQF_DrHeryvDB83GpafKAw5Ak)
 
 ## Results
