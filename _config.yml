@@ -132,3 +132,5 @@ tag_archive:
   path: /tags/
 kramdown:
   math_engine: katex
+
+theme: jekyll-theme-cayman
