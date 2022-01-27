@@ -119,19 +119,44 @@ flex-direction: column;
 </div>
 <br> <br>
 	
-	<div style="width: 55vw">
+<div style="width: 55vw">
 	<h4>The physical implementation of quantum computation  by David P. DiVincenzor </h4>
 	<h5> Moderated  by Victor Onofre </h5>
 	<h6>May 8, 2021 </h6>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/AVDIXNLGCDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 </div>
 
-	<div style="width: 55vw">
+
+<div style="width: 55vw">
+	<h4>Quantum Computing in the NISQ era and beyond by John Preskill </h4>
+	<h5> Moderated  by Victor Onofre </h5>
+	<h6>July 17, 2021 </h6>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/J4JTumTV6C8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+</div>
+
+
+<div style="width: 55vw">
+	<h4>Quantum Machine Learning, Classification in medical data </h4>
+	<h5> Moderated  by  Abel Cotoñeto, Jesús Salvador, Luis Magaña, Saúl Puente</h5>
+	<h6>December 11, 2021 </h6>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/dx7eqQYPqeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+</div>
+
+
+<div style="width: 55vw">
+	<h4>Entangled Tardigrades </h4>
+	<h5> Moderated  by  Ricky Kienhoefer</h5>
+	<h6>January 8, 2022 </h6>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/APx-WCMRKzg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+</div>
+
+
+
+<div style="width: 55vw">
 	<h4>Soon new paper </h4>
 	<h5> Moderated  searching for a volunteer </h5>
-	<h6>June 5, 2021 </h6>
+	<h6>February, 2022 </h6>
 </div>
 	
 </div>
 <!-- End page content -->
-
