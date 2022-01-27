@@ -1,5 +1,5 @@
 ---
-permalink: /journal-club/
+permalink: /calendar/
 layout: archive
 ---
 
