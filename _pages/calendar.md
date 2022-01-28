@@ -91,12 +91,10 @@ flex-direction: column;
 .mySlides {display:none;}
 </style>
 <!-- Header -->
-
 <header class="w3-display-container w3-content w3-wide" id="home">
-
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Quantum Meme Calendar 2022</h2>
-    <h4>There were incredible memes about quantum computing and the result is a calendar for the year 2022. Congratulations to all participants!/h4>
+    <h4>There were incredible memes about quantum computing and the result is a calendar for the year 2022. Congratulations to all participants!</h4>
   </div>
 <br> <br>
 </header>
