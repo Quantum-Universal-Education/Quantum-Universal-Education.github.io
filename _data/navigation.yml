@@ -9,6 +9,8 @@ main:
     url: /journal-club/
   - title: "Anniversary"
     url: /anniversary/
+  - title: "Calendar"
+    url: /calendar/
   #- title: "Contributing"
   #  url: /contributing/
   #- title: "Hardware"
