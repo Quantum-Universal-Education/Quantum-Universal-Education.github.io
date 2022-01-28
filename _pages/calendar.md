@@ -92,7 +92,7 @@ flex-direction: column;
 
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Quantum Meme Calendar 2022</h2>
-    <h4>To be able to learn together about quantum computing from journal each month.</h4>
+    <h4>There were incredible memes about quantum computing and the result is a calendar for the year 2022. Congratulations to all participants!/h4>
   </div>
 
 <div style="width: 55vw">
@@ -100,63 +100,40 @@ flex-direction: column;
 </div>
 <br> <br>
 
-<div class="w3-container w3-padding-32" style="width: 50vw" >		
-<h4>If you want to participate and interact with other members on previous and upcoming papers you can do so on  <a href="https://discord.gg/NDm9e9W">Our Discord server</a> after accepting the code of conduct in the {% raw %}#{% endraw %}improve-discord-or-site channel - we would love to hear it!</h4>
-</div>
-
 
 </header>
 
 
-<div class="w3-container w3-padding-32" style="width: 55vw" >		
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%">
+  <img class="mySlides" src="january_2022.svg" style="width:100%">
+  <img class="mySlides" src="february_2022.png" style="width:100%">
+  <img class="mySlides" src="march_2022.png" style="width:100%">
 
-<h2>Recordings of past sessions</h2>
-<div style="width: 55vw">
-	<h4> Conjugate Coding by  Stephen Wiesner </h4>
-	<h5> Moderated by Lia Yeh </h5>
-	<h6> April 3, 2021 </h6>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/EiDpvlSiC3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<br> <br>
-	
-<div style="width: 55vw">
-	<h4>The physical implementation of quantum computation  by David P. DiVincenzor </h4>
-	<h5> Moderated  by Victor Onofre </h5>
-	<h6>May 8, 2021 </h6>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/AVDIXNLGCDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
-</div>
-
-
-<div style="width: 55vw">
-	<h4>Quantum Computing in the NISQ era and beyond by John Preskill </h4>
-	<h5> Moderated  by Victor Onofre </h5>
-	<h6>July 17, 2021 </h6>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/J4JTumTV6C8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
-</div>
-
-
-<div style="width: 55vw">
-	<h4>Quantum Machine Learning, Classification in medical data </h4>
-	<h5> Moderated  by  Abel Cotoñeto, Jesús Salvador, Luis Magaña, Saúl Puente</h5>
-	<h6>December 11, 2021 </h6>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/dx7eqQYPqeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
-</div>
-
-
-<div style="width: 55vw">
-	<h4>Entangled Tardigrades </h4>
-	<h5> Moderated  by  Ricky Kienhoefer</h5>
-	<h6>January 8, 2022 </h6>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/APx-WCMRKzg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
 
 
-<div style="width: 55vw">
-	<h4>Soon new paper </h4>
-	<h5> Moderated  searching for a volunteer </h5>
-	<h6>February, 2022 </h6>
-</div>
-	
-</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 <!-- End page content -->
