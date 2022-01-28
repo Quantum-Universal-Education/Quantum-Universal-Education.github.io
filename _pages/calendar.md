@@ -91,12 +91,12 @@ flex-direction: column;
 <header class="w3-display-container w3-content w3-wide" id="home">
 
 <div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Journal Club</h2>
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Quantum Meme Calendar 2022</h2>
     <h4>To be able to learn together about quantum computing from journal each month.</h4>
   </div>
 
 <div style="width: 55vw">
-	<img src="/assets/images/journalclub_cover.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
+	<img src="/assets/images/calendar_2022/cover_2022.svg" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
 </div>
 <br> <br>
 
