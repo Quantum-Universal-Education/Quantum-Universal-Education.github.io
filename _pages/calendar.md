@@ -85,6 +85,8 @@ align-items: center;
 flex-direction: column;
 }	
 	
+
+.mySlides {display:none;}
 </style>
 <!-- Header -->
 
@@ -94,21 +96,26 @@ flex-direction: column;
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Quantum Meme Calendar 2022</h2>
     <h4>There were incredible memes about quantum computing and the result is a calendar for the year 2022. Congratulations to all participants!/h4>
   </div>
-
-<div style="width: 55vw">
-	<img src="/assets/images/calendar_2022/cover_2022.svg" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;">
-</div>
 <br> <br>
-
-
 </header>
 
 
 <div class="w3-content w3-display-container">
   <img class="mySlides" src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%">
-  <img class="mySlides" src="january_2022.svg" style="width:100%">
-  <img class="mySlides" src="february_2022.png" style="width:100%">
-  <img class="mySlides" src="march_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/january_2022.svg" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/february_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/march_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/april_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/may_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/june_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/july_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/august_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/september_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/october_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/november_2022.png" style="width:100%">
+  <img class="mySlides" src="/assets/images/calendar_2022/december_2022.png" style="width:100%">
+
+
 
 <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
 <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
