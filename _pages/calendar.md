@@ -88,6 +88,12 @@ flex-direction: column;
 }	
 	
 
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
 .mySlides {display:none;}
 </style>
 <!-- Header -->
@@ -101,19 +107,107 @@ flex-direction: column;
 
 
 <div class="w3-content w3-display-container">
-  <a href="https://qartgen.herokuapp.com/"><img class="mySlides" src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%"></a>
-  <img class="mySlides" src="/assets/images/calendar_2022/january_2022.png" style="width:100%">
-  <a href="https://youtu.be/APx-WCMRKzg"><img class="mySlides" src="/assets/images/calendar_2022/february_2022.svg" style="width:100%"></a>
-  <img class="mySlides" src="/assets/images/calendar_2022/march_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/april_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/may_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/june_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/july_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/august_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/september_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/october_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/november_2022.png" style="width:100%">
-  <img class="mySlides" src="/assets/images/calendar_2022/december_2022.png" style="width:100%">
+<div class="mySlides">
+  <a href="https://qartgen.herokuapp.com/"><img src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%"></a>
+  <div lass="container">
+  <p>Author :  Samantha Lang</p>
+  </div>
+</div>
+
+
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/january_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Lucas Arenstein</p>
+  </div>
+</div>
+
+<div class="mySlides">
+  <a href="https://youtu.be/APx-WCMRKzg"><img src="/assets/images/calendar_2022/february_2022.svg" style="width:100%"></a>
+  <div class="container">
+  <p >Author :  Lia Yeh</p>
+  </div>
+</div>
+
+
+<div class=" mySlides">
+  <img src="/assets/images/calendar_2022/march_2022.png" style="width:100%">
+  <div class="container">
+  <p >Author :  Adam Palmer </p>
+  </div>
+</div>
+
+
+
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/april_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Luciano Bello</p>
+  </div>
+</div>  
+  
+
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/may_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Samantha Lang</p>
+  </div>
+</div>  
+
+
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/june_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Ioannis Theodonis</p>
+  </div>
+</div>  
+
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/july_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Alberto Maldonado Romo</p>
+  </div>
+</div>  
+
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/august_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Martin Hayhurst Appel</p>
+  </div>
+</div>  
+
+
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/september_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Haytham Rahman</p>
+  </div>
+</div>  
+
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/october_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Minh Pham</p>
+  </div>
+</div>  
+
+
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/november_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Minh Pham</p>
+  </div>
+</div>  
+
+
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/december_2022.png" style="width:100%">
+  <div class="container">
+  <p>Author :  Misty Wahl</p>
+  </div>
+</div>  
+
+
 
 
 
