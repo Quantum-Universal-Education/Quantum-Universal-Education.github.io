@@ -115,8 +115,8 @@ div.container {
 <div class="w3-content w3-display-container">
 <div class="polaroid">
   <a href="https://qartgen.herokuapp.com/"><img class="mySlides" src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%"></a>
-  <div class="container">
-  <p>Author :  Samantha Lang</p>
+  <div class="container ">
+  <p class="mySlides">Author :  Samantha Lang</p>
   </div>
 </div>
 
@@ -124,14 +124,14 @@ div.container {
 <div class="polaroid">
   <img class="mySlides" src="/assets/images/calendar_2022/january_2022.png" style="width:100%">
   <div class="container">
-  <p>Author :  Lucas Arenstein</p>
+  <p class="mySlides">Author :  Lucas Arenstein</p>
   </div>
 </div>
 
 <div class="polaroid">
   <a href="https://youtu.be/APx-WCMRKzg"><img class="mySlides" src="/assets/images/calendar_2022/february_2022.svg" style="width:100%"></a>
   <div class="container">
-  <p>Author :  Lia Yeh</p>
+  <p class="mySlides">Author :  Lia Yeh</p>
   </div>
 </div>
 
@@ -139,7 +139,7 @@ div.container {
 <div class="polaroid">
   <img class="mySlides" src="/assets/images/calendar_2022/march_2022.png" style="width:100%">
   <div class="container">
-  <p>Author :  Adam Palmer </p>
+  <p class="mySlides">Author :  Adam Palmer </p>
   </div>
 </div>
 
