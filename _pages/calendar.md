@@ -110,7 +110,7 @@ div.container {
 <div class="mySlides">
   <a href="https://qartgen.herokuapp.com/"><img src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%"></a>
   <div lass="container">
-  <p class="mySlides">Author :  Samantha Lang</p>
+  <p>Author :  Samantha Lang</p>
   </div>
 </div>
 
@@ -123,7 +123,7 @@ div.container {
 </div>
 
 <div class="mySlides">
-  <a href="https://youtu.be/APx-WCMRKzg"><img class="mySlides" src="/assets/images/calendar_2022/february_2022.svg" style="width:100%"></a>
+  <a href="https://youtu.be/APx-WCMRKzg"><img src="/assets/images/calendar_2022/february_2022.svg" style="width:100%"></a>
   <div class="container">
   <p >Author :  Lia Yeh</p>
   </div>
