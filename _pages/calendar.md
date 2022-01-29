@@ -101,7 +101,15 @@ flex-direction: column;
 
 
 <div class="w3-content w3-display-container">
+<div >
   <a href="https://qartgen.herokuapp.com/"><img class="mySlides" src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%"></a>
+  <div class="container">
+  <p>Author :  Samantha Lang</p>
+  </div>
+</div>
+
+
+  
   <img class="mySlides" src="/assets/images/calendar_2022/january_2022.png" style="width:100%">
   <a href="https://youtu.be/APx-WCMRKzg"><img class="mySlides" src="/assets/images/calendar_2022/february_2022.svg" style="width:100%"></a>
   <img class="mySlides" src="/assets/images/calendar_2022/march_2022.png" style="width:100%">
