@@ -88,6 +88,18 @@ flex-direction: column;
 }	
 	
 
+  div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
 .mySlides {display:none;}
 </style>
 <!-- Header -->
@@ -101,7 +113,7 @@ flex-direction: column;
 
 
 <div class="w3-content w3-display-container">
-<div >
+<div class="polaroid">
   <a href="https://qartgen.herokuapp.com/"><img class="mySlides" src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%"></a>
   <div class="container">
   <p>Author :  Samantha Lang</p>
@@ -109,7 +121,7 @@ flex-direction: column;
 </div>
 
 <div class="w3-content w3-display-container">
-<div >
+<div class="polaroid">
   <img class="mySlides" src="/assets/images/calendar_2022/january_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Lucas Arenstein</p>
@@ -117,7 +129,7 @@ flex-direction: column;
 </div>
 
 <div class="w3-content w3-display-container">
-<div >
+<div class="polaroid">
   <a href="https://youtu.be/APx-WCMRKzg"><img class="mySlides" src="/assets/images/calendar_2022/february_2022.svg" style="width:100%"></a>
   <div class="container">
   <p>Author :  Lia Yeh</p>
@@ -126,7 +138,7 @@ flex-direction: column;
 
 
 <div class="w3-content w3-display-container">
-<div >
+<div class="polaroid">
   <img class="mySlides" src="/assets/images/calendar_2022/march_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Adam Palmer </p>
