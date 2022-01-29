@@ -113,101 +113,101 @@ div.container {
 
 
 <div class="w3-content w3-display-container">
-<div class="polaroid">
-  <a href="https://qartgen.herokuapp.com/"><img class="mySlides" src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%"></a>
-  <div class="container ">
+<div class="polaroid mySlides">
+  <a href="https://qartgen.herokuapp.com/"><img src="/assets/images/calendar_2022/cover_2022.svg" style="width:100%"></a>
+  <div lass="container">
   <p class="mySlides">Author :  Samantha Lang</p>
   </div>
 </div>
 
 
-<div class="polaroid">
-  <img class="mySlides" src="/assets/images/calendar_2022/january_2022.png" style="width:100%">
+<div class="polaroid mySlides">
+  <img  src="/assets/images/calendar_2022/january_2022.png" style="width:100%">
   <div class="container">
-  <p class="mySlides">Author :  Lucas Arenstein</p>
+  <p>Author :  Lucas Arenstein</p>
   </div>
 </div>
 
-<div class="polaroid">
+<div class="polaroid mySlides">
   <a href="https://youtu.be/APx-WCMRKzg"><img class="mySlides" src="/assets/images/calendar_2022/february_2022.svg" style="width:100%"></a>
   <div class="container">
-  <p class="mySlides">Author :  Lia Yeh</p>
+  <p >Author :  Lia Yeh</p>
   </div>
 </div>
 
 
-<div class="polaroid">
-  <img class="mySlides" src="/assets/images/calendar_2022/march_2022.png" style="width:100%">
+<div class="polaroid mySlides">
+  <img src="/assets/images/calendar_2022/march_2022.png" style="width:100%">
   <div class="container">
-  <p class="mySlides">Author :  Adam Palmer </p>
+  <p >Author :  Adam Palmer </p>
   </div>
 </div>
 
 
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/april_2022.png" style="width:100%">
+<div class="polaroid mySlides">
+  <img src="/assets/images/calendar_2022/april_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Luciano Bello</p>
   </div>
 </div>  
   
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/may_2022.png" style="width:100%">
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/may_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Samantha Lang</p>
   </div>
 </div>  
 
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/june_2022.png" style="width:100%">
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/june_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Ioannis Theodonis</p>
   </div>
 </div>  
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/july_2022.png" style="width:100%">
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/july_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Alberto Maldonado Romo</p>
   </div>
 </div>  
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/august_2022.png" style="width:100%">
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/august_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Martin Hayhurst Appel</p>
   </div>
 </div>  
 
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/september_2022.png" style="width:100%">
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/september_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Haytham Rahman</p>
   </div>
 </div>  
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/october_2022.png" style="width:100%">
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/october_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Minh Pham</p>
   </div>
 </div>  
 
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/november_2022.png" style="width:100%">
+<div class="mySlides">
+  <img  src="/assets/images/calendar_2022/november_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Minh Pham</p>
   </div>
 </div>  
 
 
-<div >
-  <img class="mySlides" src="/assets/images/calendar_2022/december_2022.png" style="width:100%">
+<div class="mySlides">
+  <img src="/assets/images/calendar_2022/december_2022.png" style="width:100%">
   <div class="container">
   <p>Author :  Misty Wahl</p>
   </div>
