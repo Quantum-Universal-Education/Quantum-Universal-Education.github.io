@@ -95,6 +95,22 @@ div.container {
 }
 
 .mySlides {display:none;}
+
+
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
 </style>
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" id="home">
@@ -215,7 +231,12 @@ div.container {
 <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
+<div class="w3-container w3-padding-32" id="projects" style="width: 55vw;">
 
+<a href="/assets/documents/calendar.pdf" download="GFG">
+<button class="btn" style="width:100%"><i class="fa fa-download"></i> Download</button>
+</a>
+</div>
 
 
 <script>
