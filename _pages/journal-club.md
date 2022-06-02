@@ -149,13 +149,21 @@ flex-direction: column;
 	<h6>January 8, 2022 </h6>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/APx-WCMRKzg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 </div>
+	
+	
+<div style="width: 55vw">
+	<h4>Simulating large quantum circuits on a small quantum computer </h4>
+	<h5> Moderated  by  Gideon Uchehara</h5>
+	<h6>June 2, 2022 </h6>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Oz2JvfqgpHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+</div>
 
 
 
 <div style="width: 55vw">
 	<h4>Soon new paper </h4>
 	<h5> Moderated  searching for a volunteer </h5>
-	<h6>February, 2022 </h6>
+	<h6>July, 2022 </h6>
 </div>
 	
 </div>
