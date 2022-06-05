@@ -45,6 +45,9 @@ async def on_message(message):
     channel = str(message.channel.name)
     print(f"{username}: {user_message} - {channel}")  # This will log the messages in the server.
 
+    scheduler = schedule_jobs.Scheduler(bot).schedule()
+    scheduler.start()
+
     if message.author == client.user:  # Stops the bot from endlessly replying to itself.
         return
 
