@@ -7,9 +7,9 @@ tasks:
     3: ["Frequent Example"]
     2: ["Infrequent Example"]
     1: ["Rare Example"]
-# time to send a reminder message every 24 hours
+# time to send a reminder message every 24 hours at 2pm
 messageTime:
-    hour: 24
+    hour: 14
     minutes : 0
 # Do not send messages on Sunday
 blacklistedDays: ['Sunday']
