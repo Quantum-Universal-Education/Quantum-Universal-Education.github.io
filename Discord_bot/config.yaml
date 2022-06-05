@@ -2,7 +2,7 @@
 token: 'YOUR_TOKEN_HERE'
 
 tasks: 
-#standart daily message is set to common example
+#standart daily message
     4: ["Common Example", "Another common example"]
     3: ["Frequent Example"]
     2: ["Infrequent Example"]
