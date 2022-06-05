@@ -1,0 +1,15 @@
+# rename config.yaml and replace with your bot token 
+token: 'YOUR_TOKEN_HERE'
+# add your tasks to array
+# number is the weight, ex, 10 is 10x more likely to shop up than 1
+tasks: 
+    4: ["Common Example", "Another common example"]
+    3: ["Frequent Example"]
+    2: ["Infrequent Example"]
+    1: ["Rare Example"]
+# set time to get message, in 24 hour clock
+messageTime:
+    hour: 7
+    minutes: 30
+# days to not send message, capitilization is ignored but spelling is not
+blacklistedDays: ['Saturday', 'Sunday']
