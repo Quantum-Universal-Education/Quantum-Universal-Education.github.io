@@ -1,15 +1,15 @@
-# rename config.yaml and replace with your bot token 
+# Discord bot token: see https://discord.com/developers/applications
 token: 'YOUR_TOKEN_HERE'
-# add your tasks to array
-# number is the weight, ex, 10 is 10x more likely to shop up than 1
+
 tasks: 
+#standart daily message is set to common example
     4: ["Common Example", "Another common example"]
     3: ["Frequent Example"]
     2: ["Infrequent Example"]
     1: ["Rare Example"]
-# set time to get message, in 24 hour clock
+# time to send a reminder message every 24 hours
 messageTime:
-    hour: 7
-    minutes: 30
-# days to not send message, capitilization is ignored but spelling is not
-blacklistedDays: ['Saturday', 'Sunday']
+    hour: 24
+    minutes : 0
+# Do not send messages on Sunday
+blacklistedDays: ['Sunday']
