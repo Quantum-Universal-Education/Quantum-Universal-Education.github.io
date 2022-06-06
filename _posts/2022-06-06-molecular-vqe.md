@@ -6,20 +6,20 @@ In this tutorial we will outline the theoretical background of the VQE and how i
 
 The problem we wish to solve is to find the energies associated with a given Hamiltonain $\hat{H}$. We begin with the Time Independent Schrodinger Equation (TISE):
 
-\begin{equation}
+$$
     \hat{H} |\Psi \rangle = E |\Psi \rangle
-\end{equation}
+$$
 
 This is fundamentally an eigenvalue problem, in which the energies are the eigenvalues of the hamiltonian. Focusing on the ground state energy (i.e. the minimum eigenvalue), yields 
-\begin{equation}
+$$
     E_0 \leq \langle \Psi | \hat{H} | \Psi \rangle
-\end{equation}
+$$
 
 Where the RHS represented the expectation value of the hamiltonian. We can therefore approximate $E_0$ by minimizing this RHS using a parameterized wavefunction (or in the case of quantum computers, a parameterized quantum circuit). I.e. by solving the optimization problem [1]:
 
-\begin{equation}
+$$
     \min_\theta \langle \Psi(\theta) | \hat{H} | \Psi(\theta) \rangle
-\end{equation}
+$$
 
 And that is the variational quantum eigensolver!
 
@@ -27,25 +27,25 @@ And that is the variational quantum eigensolver!
 
 Of course, now the real challenge begins. How do we map our molecular hamiltonains problem onto this setup? First, let us revisit the TISE and rewrite it in an expanded form. 
 
-\begin{equation}
+$$
     \frac{-\hbar^2}{2m} \nabla^2 \Psi (r)  + V(r) \Psi (r)  = E \Psi (r)
-\end{equation}
+$$
 
 where $\nabla^2$ is the Laplacian (divergence of the gradient). Note that $r$ can be in Cartesian or polar or any coordinate system. This separates the hamiltonian into kinetic (Laplacian) and potential (V) energies. 
 
 Now let us expand this equation to be more specific for molecules. Zooming in on the kinetic energy, we have two sources of movement: the electrons and the movement of the nucleus. Thus we have:
 
-\begin{equation}
+$$
     K.E. = -\sum_i^{nuclei} \frac{\hbar^2}{2 m_i} \nabla^2_i - \sum_i^{electrons} \frac{\hbar^2}{2m_e} \nabla^2_i
-\end{equation}
+$$
 
 where $m$ corresponds to the mass. 
 
 Now let us consider the potential energy. There are three sources of coulombic interactions, the nucleus electron attraction, the nucleus nucleus repulsion and the electron electron repulsion. We write this as:
 
-\begin{equation}
+$$
     P.E. = -\sum_i^{nuclei} \sum_j^{electrons} \frac{Z_i e^2}{4 \pi \epsilon_0 |r_i - r_j|} + \sum_i^{nuclei} \sum_{j \neq i}^{nuclei} \frac{Z_i Z_j e^2}{4 \pi \epsilon_0 |r_i - r_j|} + \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{e^2}{4 \pi \epsilon_0 |r_i - r_j|}
-\end{equation}
+$$
 
 Where $Z_i$ is the atomic number.
 
@@ -58,11 +58,11 @@ Combining these yields the full molecular hamiltonain:
 Now we can reduce the scope of our problems with some assumptions. First, we assume that the nuclei are not moving. This is based on the fact that electrons move many thousands of times faster. This approximation is known as the Born-Oppenheimer Approximation. This enables us to remove two terms from our hamiltonian that become constant (constants in the hamiltonian apply a constant effect to the eigenvalues). The resulting hamiltonian is known as the electronic hamiltonian (we simplify some terms using atomic units): 
 
 
-\begin{equation}
+$$
 \label{reduced_hamil}
     %\hat{H}_{BO} = - \sum_i^{electrons} \frac{\hbar^2}{2m_e} \nabla^2_i -\sum_i^{nuclei} \sum_j^{electrons} \frac{Z_i e^2}{4 \pi \epsilon_0 |r_i - r_j|}  + \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{e^2}{4 \pi \epsilon_0 |r_i - r_j|}
     \hat{H}_{BO} = - \sum_i^{electrons} \frac{1}{2} \nabla^2_i -\sum_i^{nuclei} \sum_j^{electrons} \frac{Z_i}{|r_i - r_j|}  + \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{1}{|r_i - r_j|}
-\end{equation}
+$$
 
 Now that we have reduced the problem to just include electronic components (hence why it is called the electronic structure problem), we need to get the into something operable on quantum computers. 
 
@@ -71,9 +71,9 @@ Now that we have reduced the problem to just include electronic components (henc
 To do this conversion, we move from the "first quantization" to the "second quantization". These are just different formalisms that convey the same information. In this SQ formalize, we move from Slater Determinants to occupation number representations where $\Psi = |n_1, n_2, n_3, ... \rangle$ and $n_i$ corresponds to the number of particles in state $i$ (note the exponential growth that comes with expanding this state representation). We can operate on this wavefunction using creation and annihilation operators $\hat{a}_i^\dagger, \hat{a}_i$. The challenge is to now map the original molecular hamiltonian into this formalism. 
 
 Single particle operators can be mapped via 
-\begin{equation}
+$$
 \sum_i \hat{h} (x_i) \rightarrow \sum_{p, q} \langle p | \hat{h} | q \rangle \hat{a}^\dagger_p \hat{a}_q
-\end{equation}
+$$
 
 So we can map our electronic kinetic energy and nuclear-electron potential (since the nuclei are frozen) via the following. Also note that in the following equations x is not a one dimensional Cartesian coordinate, but contains the 3 dimensional information (as used above). The mapping is called the core integral. 
 
@@ -84,9 +84,9 @@ So we can map our electronic kinetic energy and nuclear-electron potential (sinc
 
 Multiparticle operators can be mapped via:
 
-\begin{equation}
+$$
     \frac{1}{2} \sum_i \sum_j \hat{h}(x_i, x_j) \rightarrow \frac{1}{2}\sum_{p, q, r, s} \langle pq | \hat{h} | rs \rangle \hat{a}^\dagger_p \hat{a}^\dagger_q \hat{a}_r \hat{a}_s
-\end{equation}
+$$
 
 So we can map our two particle term (the electron electron repulsion term) using the electron repulsion integral:
 
@@ -96,9 +96,9 @@ So we can map our two particle term (the electron electron repulsion term) using
 
 Combining these with the fermionic operators yields (where p, q, r, s can take on any of the N spin orbitals):
 
-\begin{equation}
+$$
     \hat{H}_{SQ} = h_{pq} \hat{a}^\dagger_p \hat{a}_q + \frac{1}{2}g_{pqrs} \hat{a}^\dagger_p \hat{a}^\dagger_q \hat{a}_r \hat{a}_s + C
-\end{equation}
+$$
 
 We have the C constant to account for the assumptions earlier (since even if the nuclei are static, the nucleus-nucleus repulsion term is still some constant). Note that these integrals can be solved and provide the constants for our hamiltonian terms in VQE. 
 
@@ -108,22 +108,22 @@ We have the C constant to account for the assumptions earlier (since even if the
 Now we just have two final challenges. How do we map the the orbitals to our occupation numbers and how do we map the fermionic operators to the quantum computer operations? Let's address the first challenge now. There are many different choices of mapping we could use. To represent this problem, we use a linear combination of atomic orbitals (LCAO). A common choice for VQE is STO-3G (approximating the Slater type orbital with 3 gaussians). To represent STO-3G we separate the wavefunction into its radial and angular parts $\Psi = R(r)Y(\theta, \phi)$ where 
 
 
-\begin{equation}
+$$
 \begin{split}
     \text{Slater Type Orbital}: R(r) = N r^l e^{-\zeta r} \\
     \text{Gaussian Type Orbital}: R(r) = N r^l e^{-\zeta r^2} \\
     \text{STO-3G}: R(r) = N \sum_i^3 c_i r^l e^{-\zeta_i r^2} 
 \end{split}
-\end{equation}
+$$
 
 Where $r^l$ is the angular momentum, $\zeta$ controls charge/size of nucleus and $N, c_i$ are constants. These are minimal basis sets (i.e. one function per orbital) and uncommon in classical computational quantum chemistry, more accurate ones such as 6-31G* or cc-pVDZ are preferred. 
 
 
 To tackle the second challenge, once again, there are several solutions such as Parity Mapping, Jordan-Wigner, Bravy-Kitaev, etc. All of these map fermionic operators onto pauli gates. These mappings are necessary since we the basic Pauli gates do not satisfy the commutation relations that fermionic operators must. For example, Jordan-Wigner maps 
 
-\begin{equation}
+$$
     \hat{a}_p \rightarrow \frac{1}{2}(X_p + i Y_p)Z_1 ... Z_{p-1}
-\end{equation}
+$$
 
 And now we have all the tools for VQE. We can map our hamiltonian onto our quantum operations using the fermionic operators and the conversions and we can map our orbital space to our quantum register using a basis function and the occupation formalism. Thankfully everthing that has been covered so far has been implemented in easy to use python packages. 
 
