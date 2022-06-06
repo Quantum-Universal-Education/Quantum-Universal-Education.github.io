@@ -3,16 +3,13 @@ title: "Qubits vs Bits"
 categories:
   - Blog
 tags:
+  - programming project
   - numpy
   - jupyter notebook
-  - quantum computing
   - quantum bit
-  -qutip
-author:
-  - Maria Gragera Garces
-  - Curate Section
-  - Alberto Maldonado Romo Q
+author: Maria Gragera Garces
 ---
+
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
