@@ -298,7 +298,8 @@ plt.show()
 
 
     
-![png](output_18_0.png)
+![png](/assets/images/vqe/output_18_0.png)
+
     
 
 
