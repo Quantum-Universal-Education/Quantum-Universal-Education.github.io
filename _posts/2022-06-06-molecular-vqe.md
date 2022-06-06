@@ -11,6 +11,7 @@ $$
 $$
 
 This is fundamentally an eigenvalue problem, in which the energies are the eigenvalues of the hamiltonian. Focusing on the ground state energy (i.e. the minimum eigenvalue), yields 
+
 $$
     E_0 \leq \langle \Psi | \hat{H} | \Psi \rangle
 $$
