@@ -383,7 +383,3 @@ As a fundamental unit of information, our qubit is not very interesting by itsel
 Hi 👋 ! Thank you for completing my short tutorial on Qubits. I'm Maria, a university undergraduate working in the Quantum Networking field. 
 As part of my degree I joined Cisco, where I have been contributing to their internal R&D Quantum incubation team for the past year. My work focuses on quantum networking protocol design and simulations, and I am now actively trying to use my newly learned skills to contribute in the Quantum open source software community! In an effort to do this I am creating simple tutorials such as this one that help non-technical individuals start their quantum journey.
 If you want to see what I'm up to, feel free to follow my career on Linkedin: https://www.linkedin.com/in/maria-gragera-garces/
-
-
-## Author 
-Maria Gragera Garces, Intern at Cisco & Student at the University of Bath, [Linkedin](https://www.linkedin.com/in/maria-gragera-garces/)
