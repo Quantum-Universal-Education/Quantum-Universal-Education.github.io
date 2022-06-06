@@ -51,9 +51,9 @@ Where $Z_i$ is the atomic number.
 
 Combining these yields the full molecular hamiltonain:
 
-\begin{multline}
+$$
     \hat{H} = -\sum_i^{nuclei} \frac{\hbar^2}{2 m_i} \nabla^2_n - \sum_i^{electrons} \frac{\hbar^2}{2m_e} \nabla^2_i -\sum_i^{nuclei} \sum_j^{electrons} \frac{Z_i e^2}{4 \pi \epsilon_0 |r_i - r_j|} + \sum_i^{nuclei} \sum_{j \neq i}^{nuclei} \frac{Z_i Z_j e^2}{4 \pi \epsilon_0 |r_i - r_j|} + \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{e^2}{4 \pi \epsilon_0 |r_i - r_j|}
-\end{multline}
+$$
 
 Now we can reduce the scope of our problems with some assumptions. First, we assume that the nuclei are not moving. This is based on the fact that electrons move many thousands of times faster. This approximation is known as the Born-Oppenheimer Approximation. This enables us to remove two terms from our hamiltonian that become constant (constants in the hamiltonian apply a constant effect to the eigenvalues). The resulting hamiltonian is known as the electronic hamiltonian (we simplify some terms using atomic units): 
 
@@ -77,9 +77,9 @@ $$
 
 So we can map our electronic kinetic energy and nuclear-electron potential (since the nuclei are frozen) via the following. Also note that in the following equations x is not a one dimensional Cartesian coordinate, but contains the 3 dimensional information (as used above). The mapping is called the core integral. 
 
-\begin{multline}
+$$
     - \sum_i^{electrons} \left ( \frac{1}{2} \nabla^2_i  + \sum_i^{nuclei}  \frac{Z_i}{|r_i - r_j|} \right )  \rightarrow \int^{\infty}_{-\infty}  \psi^*_p (x) \left ( -\frac{1}{2} \nabla^2 - \sum_i^{nuclei} \frac{Z_i}{|r_i - r_{x}|} \right )  \psi_q (x) dx = h_{pq} = \langle p | \hat{h} | q \rangle
-\end{multline}
+$$
 
 
 Multiparticle operators can be mapped via:
@@ -90,9 +90,9 @@ $$
 
 So we can map our two particle term (the electron electron repulsion term) using the electron repulsion integral:
 
-\begin{multline}
+$$
     \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{1}{|r_i - r_j|} \rightarrow \int^{\infty}_{-\infty}  \int^{\infty}_{-\infty}  \psi^*_p(x_i) \psi^*_q(x_i) \frac{1}{|r_i - r_j|} \psi_r(x_j) \psi_s(x_j) dx_i dx_j  = g_{pqrs} = \langle pq | \hat{h} | rs \rangle
-\end{multline}
+$$
 
 Combining these with the fermionic operators yields (where p, q, r, s can take on any of the N spin orbitals):
 
