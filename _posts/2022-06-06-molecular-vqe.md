@@ -71,6 +71,7 @@ Now that we have reduced the problem to just include electronic components (henc
 To do this conversion, we move from the "first quantization" to the "second quantization". These are just different formalisms that convey the same information. In this SQ formalize, we move from Slater Determinants to occupation number representations where $\Psi = |n_1, n_2, n_3, ... \rangle$ and $n_i$ corresponds to the number of particles in state $i$ (note the exponential growth that comes with expanding this state representation). We can operate on this wavefunction using creation and annihilation operators $\hat{a}_i^\dagger, \hat{a}_i$. The challenge is to now map the original molecular hamiltonian into this formalism. 
 
 Single particle operators can be mapped via 
+
 $$
 \sum_i \hat{h} (x_i) \rightarrow \sum_{p, q} \langle p | \hat{h} | q \rangle \hat{a}^\dagger_p \hat{a}_q
 $$
