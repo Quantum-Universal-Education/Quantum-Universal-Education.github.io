@@ -23,6 +23,7 @@ Quaze was developed by the 'Qorsairs Team':
 2. Vardaan Sahgal
 3. Vatsal Kanoria 
 
+
 ## Introduction:  
 ### Quaze
 Quaze - the quantum maze! This is a puzzle game inspired by quantum computing, following rules like those used for the transformation of qubits, the basic units of information for a quantum computer. Our motivation while developing this game was to create a simple browser-based learning game which was easily accessible to all. The game acts as an educational resource to teach the basics of qubit rotations and transformations to early-stage Quantum Computing learners. 
