@@ -31,6 +31,8 @@ Quaze - the quantum maze! This is a puzzle game inspired by quantum computing, f
 ### Gameplay
 At a first glance, the game looks like just another maze puzzle, where the goal is to reach the end of a Maze by finding the correct path. However, on a closer look, reaching the end of the maze is not the only goal of the game. There is a quantum twist. The qubit at the start must also be rotated while moving through the maze to obtain a qubit target state, as indicated at the end of the maze. 
 
+![image](https://user-images.githubusercontent.com/40118003/172994058-fefafe8f-8c47-4cba-a3e4-6ce754a36eed.png)
+
 ### Controls
 Use the arrow keys ↑, ↓, ← & → to move the qubit around the maze. 
 When the qubit moves into a quantum gate (a coloured tile within the maze), it changes its state. 
@@ -44,6 +46,9 @@ Note: A rotation of a state around a symmetrical axis will leave the state the s
 If you reach the end of the maze and the state is not the target, keep going. You can move backwards and try a different route.
 
 A more visual explanation of the game controls can be found in the [Quaze Tutorial](https://qorsairs.github.io/Quaze/tutorial.html).
+
+![image](https://user-images.githubusercontent.com/40118003/172994236-494a7fc3-4162-42f1-9518-f80716c96e08.png)
+
 
 ## Getting started:
 The game is developed using JS, HTML and CSS and hence, some basic knowledge in these languages is a prerequisite for the following tutorial. Although it is a quantum computing inspired game, quantum computing is not directly used in game development and so, knowledge is quantum computing is encouraged but not at all necessary for the tutorial!
