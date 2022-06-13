@@ -333,3 +333,6 @@ plt.show()
 [4] Kandala, A., Mezzacapo, A., Temme, K., Takita, M., Brink, M., Chow, J. M., & Gambetta, J. M. (2017). Hardware-efficient variational quantum eigensolver for small molecules and quantum magnets. Nature, 549(7671), 242-246.
 
 [5] Lockwood, O. (2022). An Empirical Review of Optimization Techniques for Quantum Variational Circuits. arXiv preprint arXiv:2202.01389.
+
+## Author 
+Owen Lockwood, [Twitter](https://twitter.com/wnlckwd)

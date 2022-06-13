@@ -1,6 +1,24 @@
-# Electronic Simulation of Molecules using Pennylane
+---
+title: "Electronic Simulation of Molecules using Pennylane"
+categories:
+  - Blog
+tags:
+  - tutorial
+  - Pennylane
+  - jupyter notebook
+  - quantum computing
+  - quantum chemistry
+  - H2
+author: 
+  - Zeeshan Ahmed
+  - Curate Section
+  - Lia Yeh Q
+---
 
-Simulation of chemical processes is one of the most promising applications of quantum computers, fields such as drug discovery can use simulations to solve complex problems at a faster rate. We will look at why quantum computers have an advantage over classical computers in the field of molecular simulation and look at an example of simulation of $H_2$ using Pennylane’s `qchem` library.
+
+
+
+Simulation of chemical processes is one of the most promising applications of quantum computers, fields such as drug discovery can use simulations to solve complex problems at a faster rate. We will look at why quantum computers have an advantage over classical computers in the field of molecular simulation and look at an example of simulation of $$H_2$$ using Pennylane’s `qchem` library.
 
 # Quantum Nature of Universe
 
@@ -114,7 +132,7 @@ Each electron must be represented by a qubit and each orbital can hold up to two
 
 ### State vector
 
-If the spin orbitals of the molecule are represented by binary vectors of length $N$, i.e. $\ket{n_0, \dots n_{M-1}}$ we can map each of these into a corresponding state vector of $N$ qubit system:
+If the spin orbitals of the molecule are represented by binary vectors of length $N$, i.e. $$\ket{n_0, \dots n_{M-1}}$$ we can map each of these into a corresponding state vector of $N$ qubit system:
 
 $$
 \ket{n_0, \dots n_{N-1}} \rightarrow \ket{q_0\dots q_{N-1}}
@@ -283,3 +301,6 @@ Using the handy tools of Pennylane, we were able to go from a chemical file for 
 [3] Whitfield, James D., Jacob Biamonte, and Alan Aspuru-Guzik. 2011. Simulation of electronic structure Hamiltonians using quantum computers.
 
 ---
+
+## Author 
+Zeeshan Ahmed, [Twitter](https://twitter.com/Zeeshan61354321)
