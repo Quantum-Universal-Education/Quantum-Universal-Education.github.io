@@ -15,7 +15,7 @@ author:
   - Lia Yeh Q
 ---
 
-
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
 Simulation of chemical processes is one of the most promising applications of quantum computers, fields such as drug discovery can use simulations to solve complex problems at a faster rate. We will look at why quantum computers have an advantage over classical computers in the field of molecular simulation and look at an example of simulation of $$H_2$$ using Pennylane’s `qchem` library.
