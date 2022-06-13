@@ -133,11 +133,11 @@ In this case variables a & b allow us to find the coordinates of our blue qubit 
 
 ### How is this different to the binary system?
 
-In the previous example, we can see that our qubit (represented by a blue dot) is closer to the Bloch sphere's $|0\rangle$ pole than to it's $|1\rangle$ pole. Wouldn't that imply that it represents the equivalents of a 0 bit, and that the Bloch sphere is just a confusing 3D way of explaining how particles make a choice between being in a state $|0\rangle$ & $|1\rangle$?
+In the previous example, we can see that our qubit (represented by a blue dot) is closer to the Bloch sphere's $$\vert 0 \rangle$$ pole than to it's $$\vert 1 \rangle$$ pole. Wouldn't that imply that it represents the equivalents of a 0 bit, and that the Bloch sphere is just a confusing 3D way of explaining how particles make a choice between being in a state $$\vert 0 \rangle$$ & $$\vert 1 \rangle$$?
 
 Fortunately, no, if that was the case Quantum computers wouldn't be very interesting. 
 
-A qubit does not represent a "state", but rather a superposition of states. Our example is partly in state $|0\rangle$ and partly in state $|1\rangle$, it holds both states simultaneously even if it might be closer to one.
+A qubit does not represent a "state", but rather a superposition of states. Our example is partly in state $\vert 0 \rangle$ and partly in state $\vert 1 \rangle$, it holds both states simultaneously even if it might be closer to one.
 
 That is a difficult concept to grasp, but the following comparison to bits might make it simpler:
 With two bits we can create $2^2$ = 4 number combinations: 11,10,01, & 00 . Given that qubits hold two states at once, two qubits can hold all those combinations at once. 
