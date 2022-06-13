@@ -41,10 +41,10 @@ print(binary_string)
 
 In essence, modern computers are massive calculators that know how to store an interpret ridiculous amounts of data. Each file, video, document and image in our laptops, phones, smartwatches, etc. can be and is represented by a (very long) series of numbers. Therefore, computational power boils down to having an efficient and fast system of storing and processing this data. Our current devices use the bit system.
 
-X bits are capable of representing a number between 0 and $2^x$. That might not seem like a lot at first, but the above creates a series of 100 bits, and therefore can represent any number between 0 & 1267650600228229401496703205376​... For reference as of the 3/6/22 Elon Musk's net worth is estimated at 2181000000 (218.1 billion) US $. Quite impressive for a sequence of 1's and 0's.
+X bits are capable of representing a number between 0 and $$2^x$$. That might not seem like a lot at first, but the above creates a series of 100 bits, and therefore can represent any number between 0 & 1267650600228229401496703205376​... For reference as of the 3/6/22 Elon Musk's net worth is estimated at 2181000000 (218.1 billion) US $. Quite impressive for a sequence of 1's and 0's.
 
 The word "bit" stands for binary digit. The binary number system is the most basic unit of information, and allows us to store any number as a combination of 0's and 1's. 
-The way value is associated with each 1 or 0 is based on their position in the string. For example, in binary, 10 represents the number 2 but 100 represent number 4. From right to left each bit multiplies $2^n$, with n being it's position. The idea looks something like this:
+The way value is associated with each 1 or 0 is based on their position in the string. For example, in binary, 10 represents the number 2 but 100 represent number 4. From right to left each bit multiplies $$2^n$$, with n being it's position. The idea looks something like this:
 
                                  64   |  32   |  16   |   8   |   4   |   2   |   1  
                                  ____________________________________________________   
@@ -98,7 +98,7 @@ b.show()
     
 
 
-The idea behind this representation is that a Qubit has a state 0 or |0> if it's amplitude* lies at the top of the sphere, & a state |1> if it lies at the bottom.
+The idea behind this representation is that a Qubit has a state 0 or $\vert 0 \rangle$ if it's amplitude* lies at the top of the sphere, & a state $$\vert 1 \rangle$$ if it lies at the bottom.
 
 ### Amplitudes and vectors
 
@@ -108,7 +108,7 @@ A qubit is often represented by the following formula:
                                                      |ψ⟩=a|0⟩+b|1⟩
 
 
-This mathematical representation allows us to position our qubit |ψ⟩ in the Bloch sphere. The variables a & b give us the qubit's coordinates with respect to it's allowed states $|0>$ & $|1>$.
+This mathematical representation allows us to position our qubit |ψ⟩ in the Bloch sphere. The variables a & b give us the qubit's coordinates with respect to it's allowed states $\vert 0 \rangle$ & $\vert 1 \rangle$.
 Run the code below, to get a better idea of what type of information a & b provide:
 
 
@@ -137,10 +137,10 @@ In the previous example, we can see that our qubit (represented by a blue dot) i
 
 Fortunately, no, if that was the case Quantum computers wouldn't be very interesting. 
 
-A qubit does not represent a "state", but rather a superposition of states. Our example is partly in state $\vert 0 \rangle$ and partly in state $\vert 1 \rangle$, it holds both states simultaneously even if it might be closer to one.
+A qubit does not represent a "state", but rather a superposition of states. Our example is partly in state $$\vert 0 \rangle$$ and partly in state $$\vert 1 \rangle$$, it holds both states simultaneously even if it might be closer to one.
 
 That is a difficult concept to grasp, but the following comparison to bits might make it simpler:
-With two bits we can create $2^2$ = 4 number combinations: 11,10,01, & 00 . Given that qubits hold two states at once, two qubits can hold all those combinations at once. 
+With two bits we can create $$2^2$$ = 4 number combinations: 11,10,01, & 00 . Given that qubits hold two states at once, two qubits can hold all those combinations at once. 
 
      X qubits can represent All values between 0 & $2^x$ at a time, Y bits can represent ONE value between 0 & $2^y$ at a time
 
