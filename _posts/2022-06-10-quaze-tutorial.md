@@ -460,3 +460,6 @@ Again, the navbar element is also included in the webpage to allow easy navigati
 
 ## Conclusions  
 Only the important parts of the code are explained here, but the entire Source code can be viewed at [Qorsairs - GitHub Repo](https://github.com/Qorsairs/Quaze). As you've seen, making a quantum game is quite simple and in fact, can be developed even with absolutely no knowledge of quantum computing. All you need is a good game idea, some basic programming skills, and the will to make your idea come to life. 
+
+## Author 
+Vardaan Sahgal, [Website](sahgalvardaan.github.io/) [Twitter](linkedin.com/in/vardaansahgal)
