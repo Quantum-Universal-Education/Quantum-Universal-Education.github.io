@@ -98,7 +98,7 @@ b.show()
     
 
 
-The idea behind this representation is that a Qubit has a state 0 or $\vert 0 \rangle$ if it's amplitude* lies at the top of the sphere, & a state $$\vert 1 \rangle$$ if it lies at the bottom.
+The idea behind this representation is that a Qubit has a state 0 or $$\vert 0 \rangle$$ if it's amplitude* lies at the top of the sphere, & a state $$\vert 1 \rangle$$ if it lies at the bottom.
 
 ### Amplitudes and vectors
 
@@ -108,7 +108,7 @@ A qubit is often represented by the following formula:
                                                      |ψ⟩=a|0⟩+b|1⟩
 
 
-This mathematical representation allows us to position our qubit |ψ⟩ in the Bloch sphere. The variables a & b give us the qubit's coordinates with respect to it's allowed states $\vert 0 \rangle$ & $\vert 1 \rangle$.
+This mathematical representation allows us to position our qubit |ψ⟩ in the Bloch sphere. The variables a & b give us the qubit's coordinates with respect to it's allowed states $$\vert 0 \rangle$$ & $$\vert 1 \rangle$$.
 Run the code below, to get a better idea of what type of information a & b provide:
 
 
@@ -171,8 +171,9 @@ Many quantum simulators are currently available to the public (I will append a l
 SeQUeNCe is an open source, discrete-event simulator for quantum networks. In order for the code below to run, you will need to install the SeQUeNCe package.
 You can download the source code from github:
 
-                                             https://github.com/sequence-toolbox/SeQUeNCe
-
+                                             [https://github.com/sequence-toolbox/SeQUeNCe
+](https://github.com/sequence-toolbox/SeQUeNCe
+)
 Then navigate to its directory, and install with:
 
 
@@ -203,7 +204,7 @@ from sequence.utils.encoding import polarization
 from sequence.utils.quantum_state import QuantumState
 ```
 
-Qubits are mathematical interpretations that can be used to explain and build quantum circuits over different types of quantum computers. They can take different shapes and physical formats. Depending on the technology a qubit may be a photon, a trapped ion, a superconductor, a semiconductor quantum dot, etc. If you want to become more familiar with different types of qubits, I would recommend starting with this QuTech video: https://youtu.be/oZacBmOwvz0
+Qubits are mathematical interpretations that can be used to explain and build quantum circuits over different types of quantum computers. They can take different shapes and physical formats. Depending on the technology a qubit may be a photon, a trapped ion, a superconductor, a semiconductor quantum dot, etc. If you want to become more familiar with different types of qubits, I would recommend starting with this QuTech video: [https://youtu.be/oZacBmOwvz0](https://youtu.be/oZacBmOwvz0)
 
 Sequence is a photonic based simulator, which means that it considers photons as it's qubit "format". In order to build a qubit, we will import it's photon class.
 
@@ -379,7 +380,7 @@ As a fundamental unit of information, our qubit is not very interesting by itsel
 
 Hi 👋 ! Thank you for completing my short tutorial on Qubits. I'm Maria, a university undergraduate working in the Quantum Networking field. 
 As part of my degree I joined Cisco, where I have been contributing to their internal R&D Quantum incubation team for the past year. My work focuses on quantum networking protocol design and simulations, and I am now actively trying to use my newly learned skills to contribute in the Quantum open source software community! In an effort to do this I am creating simple tutorials such as this one that help non-technical individuals start their quantum journey.
-If you want to see what I'm up to, feel free to follow my career on Linkedin: https://www.linkedin.com/in/maria-gragera-garces/
+If you want to see what I'm up to, feel free to follow my career on Linkedin: [https://www.linkedin.com/in/maria-gragera-garces/](https://www.linkedin.com/in/maria-gragera-garces/)
 
 
 ## Author 
