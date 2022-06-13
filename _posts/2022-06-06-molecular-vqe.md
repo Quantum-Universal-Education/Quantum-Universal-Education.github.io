@@ -1,6 +1,25 @@
-# Variational Quantum Eigensolver: Simulating the Electronic Structure of Molecules
+---
+title: "Variational Quantum Eigensolver: Simulating the Electronic Structure of Molecules"
+categories:
+  - Blog
+tags:
+  - tutorial
+  - TFQ
+  - VQE
+  - jupyter notebook
+  - quantum computing
+  - quantum chemistry
+  - H2
+author: 
+  - Owen Lockwood
+  - Curate Section
+  - Lia Yeh Q
+  - Alberto Maldonado Romo Q
+---
 
-In this tutorial we will outline the theoretical background of the VQE and how it can be applied on a quantum computer, then show an implementation in TensorFlow-Quantum for the $H_2$ molecule. 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+In this tutorial we will outline the theoretical background of the VQE and how it can be applied on a quantum computer, then show an implementation in TensorFlow-Quantum for the $$H_2$$ molecule. 
 
 ## Problem Definition
 
@@ -16,7 +35,7 @@ $$
     E_0 \leq \langle \Psi | \hat{H} | \Psi \rangle
 $$
 
-Where the RHS represented the expectation value of the hamiltonian. We can therefore approximate $E_0$ by minimizing this RHS using a parameterized wavefunction (or in the case of quantum computers, a parameterized quantum circuit). I.e. by solving the optimization problem [1]:
+Where the RHS represented the expectation value of the hamiltonian. We can therefore approximate $$E_0$$ by minimizing this RHS using a parameterized wavefunction (or in the case of quantum computers, a parameterized quantum circuit). I.e. by solving the optimization problem [1]:
 
 $$
     \min_\theta \langle \Psi(\theta) | \hat{H} | \Psi(\theta) \rangle

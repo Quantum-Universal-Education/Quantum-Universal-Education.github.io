@@ -7,7 +7,10 @@ tags:
   - numpy
   - jupyter notebook
   - quantum bit
-author: Maria Gragera Garces
+author: 
+  - Maria Gragera Garces
+  - Curate Section
+  - Lia Yeh Q
 ---
 
 
