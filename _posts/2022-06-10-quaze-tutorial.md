@@ -12,6 +12,7 @@ tags:
   - Quantum game
 author:
  - Vardaan Sahgal
+ - Alberto Maldonado Romo Q
 ---
 
 *Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to create their first puzzle game inspired by quantum computing. This is exactly how 'Quaze' was developed during the [QAIF Quantum Games Hackathon 2021](https://www.qaif.org/contests/quantum-games-hackathon).* 
