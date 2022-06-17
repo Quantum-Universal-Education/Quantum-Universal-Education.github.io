@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quantum interest Quiz</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../static/css/main_screen.css">   
+</head>
+
+<body>
+  
+    <div class="site-wrapper" style="background-image: url({{ url_for('static',filename = '/img/qc.jpg')}});">
+
+      <div class="site-wrapper-inner">
+
+        <div class="container">
+
+          <div class="masthead clearfix">
+            
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Quantum Universal Education</h1>
+            <h3>Area of interest predictor Results</h3>
+            <!-- <p class="lead" style="font-weight: bold;">Quantum Universal Education presents the first ever Area of interest predictor to help users find their passion in various Quantum areas of interest through a small Quiz. </p> -->
+
+            <div class="col-lg-6 mb-4">
+                <div class="card" style="width:50rem; margin-top: 5%; margin-left:25%; background-color: #e2d3a0;">
+                    <img class="card-img-top" src="" alt="">
+  
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <!-- <form action="/action" method="POST" role='form'>
+                        <div class="list-group">
+                            <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="A" value="A">
+                              Cras justo odio
+                            </button>
+                            <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="B" value="B">Dapibus ac facilisis in</button>
+                            <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="C" value="C">Morbi leo risus</button>
+                            <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="D" value="D">Porta ac consectetur ac</button>
+                            <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="E" value="E">Vestibulum at eros</button>
+                          </div>
+                        </form> -->
+                        <h1 class="display-2" style="font-weight: bold;">Congratulations!!!</h1>
+                        <h5 class="display-5" style="text-align: center;">You belong to the category <div style="font-weight: bold; font-size: larger; color:#547067;">{{ category }}</div> which means {{ desc }}</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <p class="lead">
+              <a href="/" class="btn btn-lg btn-default">Start Quiz again</a>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
