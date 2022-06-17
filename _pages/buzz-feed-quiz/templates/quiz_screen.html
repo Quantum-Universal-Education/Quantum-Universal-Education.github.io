@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz Page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../static/css/main_screen.css">   
+</head>
+
+<body>
+    <div class="site-wrapper" style="background-image: url({{ url_for('static',filename = '/img/qc.jpg')}});">
+
+        <div class="container">
+            <div class="column">
+                <div class="col-lg-6 mb-4">
+                    <div class="card" style="width: 50rem; margin-top: 25%; margin-left:25%; background: rgb(176, 103, 44);">
+                        <img class="card-img-top" src="" alt="">
+      
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: left; font-weight: bold; font-size: 25px;">{{ question_num }}</h5>
+                            <p class="card-text" style="font-size: 25px;text-align: left;">
+                                {{ question }}
+                            </p>
+      
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card" style="width:50rem; margin-top: 5%; margin-left:25%; background-color: #122620;">
+                        <img class="card-img-top" src="" alt="">
+      
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Card title</h5> -->
+                            <!-- <form action="/action" method="POST" role='form'>
+                            <div class="list-group">
+                                <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="A" value="A">
+                                  Cras justo odio
+                                </button>
+                                <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="B" value="B">Dapibus ac facilisis in</button>
+                                <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="C" value="C">Morbi leo risus</button>
+                                <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="D" value="D">Porta ac consectetur ac</button>
+                                <button type="button" class="btn btn-outline-warning list-group-item list-group-item-action" type="submit" name="E" value="E">Vestibulum at eros</button>
+                              </div>
+                            </form> -->
+                            <div class="list-group">
+                                {% if option_length==2 %}
+                                <a href="/action/A" class="btn btn-outline-warning list-group-item list-group-item-action">
+                                  {{ option_1 }}
+                                </a>
+                                <a href="/action/B" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_2 }}</a>
+
+                                {% elif option_length==3 %}
+                                <a href="/action/A" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_1 }}</a>
+                                <a href="/action/B" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_2 }}</a>
+                                <a href="/action/C" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_3 }}</a>
+
+
+                                {% elif option_length==4 %}
+                                <a href="/action/A" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_1 }}</a>
+                                <a href="/action/B" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_2 }}</a>
+                                <a href="/action/C" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_3 }}</a>
+                                <a href="/action/D" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_4 }}</a>
+
+                                {% elif option_length==5 %}
+                                <a href="/action/A" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_1 }}</a>
+                                <a href="/action/B" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_2 }}</a>
+                                <a href="/action/C" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_3 }}</a>
+                                <a href="/action/D" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_4 }}</a>
+                                <a href="/action/E" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_5 }}</a>
+                                
+                                {% else %}
+                                <a href="/action/A" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_1 }}</a>
+                                <a href="/action/B" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_2 }}</a>
+                                <a href="/action/C" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_3 }}</a>
+                                <a href="/action/D" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_4 }}</a>
+                                <a href="/action/E" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_5 }}</a>
+                                <a href="/action/F" class="btn btn-outline-warning list-group-item list-group-item-action">{{ option_6 }}</a>
+                                {% endif %}
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress" style="width: 50%; margin-left: 24%;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: {{ pb_width }}%"></div>
+          </div>
+    </div>
+</body>
+
+</html>

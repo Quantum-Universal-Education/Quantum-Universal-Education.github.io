@@ -1,0 +1,37 @@
+{
+  "Q1": {
+    "question": "What is your favorite subject?",
+    "a": "chemistry",
+    "b": "physics",
+    "c": "math",
+    "d": "english",
+    "e": "engineering",
+    "f": "cs",
+    "options": "6"
+  },
+
+  "Q2": {
+    "question": "Are you more of?",
+    "a": "hands-on person",
+    "b": "books person",
+    "options": "2"
+  },
+
+  "Q3": {
+    "question": "Are you more interested in?",
+    "a": "studying what has been done",
+    "b": "study new possibilities",
+    "c": "project management",
+    "options": "3"
+  },
+
+  
+  "Q4": {
+    "question": "Do you see yourself working in ?",
+    "a": "on a computer",
+    "b": "in a lab",
+    "c": "in consulting",
+    "options": "3"
+  }
+  
+}
