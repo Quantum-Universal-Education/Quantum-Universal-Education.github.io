@@ -1,5 +1,5 @@
 ---
-permalink: /calendar/
+permalink: /calendar23/
 layout: archive
 ---
 
