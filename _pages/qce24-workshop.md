@@ -100,6 +100,35 @@ flex-direction: column;
   border-radius: 50%;
   box-shadow: inset 10px 10px 40px 0 rgba(20, 20, 20, 1);
 }
+
+.btn {
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid #333333;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #444;
+  color: white;
+}
 	
 </style>
 <!-- Header -->
@@ -123,6 +152,50 @@ Montréal, Québec, Canada, September 20th 2024</h3>
 <br> <br>
 </div>
 
+
+<div class="w3-container w3-padding-32 " style="width: 55vw"  >   
+<h1>Program of the Workshop</h1>
+
+<table id="customers">
+  <tr>
+    <th>Event</th>
+    <th>Duration</th>
+  </tr>
+  <tr>
+    <td>Talks 1</td>
+    <td>45 minutes</td>
+  </tr>
+  <tr>
+    <td>Discussion 1</td>
+    <td>45 minutes</td>
+  </tr>
+  <tr>
+    <td>Talks 2</td>
+    <td>45 minutes</td>
+  </tr>
+  <tr>
+    <td>Discussion 2</td>
+    <td>45 minutes</td>
+  </tr>
+  <tr>
+    <td>Talks 3</td>
+    <td>30 minutes</td>
+  </tr>
+  <tr>
+    <td>Discussion 3</td>
+    <td>30 minutes</td>
+  </tr>
+  <tr>
+    <td>Breakout Summaries</td>
+    <td>15 minutes</td>
+  </tr>
+  <tr>
+    <td>Handouts/Survey</td>
+    <td>15 minutes</td>
+  </tr>
+</table>
+</div>
+
 </header>
 
 
@@ -133,6 +206,8 @@ Montréal, Québec, Canada, September 20th 2024</h3>
     <h3>PsiQuantum </h3>
     <p> Quantum Software Engineer at PsiQuantum. He is lead developer of bartiq, a tool for performing symbolic quantum resource estimation. While at Zapata he was leading the efforts of developing Bench-Q, a resource estimation tool developed as part of DARPA's Quantum Benchmarking program. His main interest is building better software tools for quantum computing, in particular through designing better abstractions. Michał is an active member of the community and has been involved in multiple initiatives such as QOSF Mentorship Program, Unitary Fund, IEEE Quantum Week conference and others. He's also author of a blog Musty Thoughts. </p>
      <img   class="center" src="/assets/images/qce24/michal.jpg" alt="Michał Stęchły" style="width:150px;height:150px;"> 
+    <p>Extra information: <a class="btn" href="https://github.com/PsiQ/bartiq">
+      bartiq</a>,  <a class="btn" href="http://www.mustythoughts.com/">personal blog</a></p>
   </div>
   <br> <br>
 
@@ -156,8 +231,9 @@ Montréal, Québec, Canada, September 20th 2024</h3>
 <div class="round3" style="width: 55vw">
     <h2>Mariia Mykhailova</h2>
     <h3> Microsoft Quantum </h3>
-    <p>.</p>
-     <img   class="center" src="/assets/images/qce24/.jpg" alt="Mariia Mykhailova" style="width:150px;height:150px;"> 
+    <p>Mariia Mykhailova is a principal software engineer at the Advanced Quantum Development team at Microsoft. Her main interests are software for fault-tolerant quantum computation and quantum education and outreach. Mariia is the author and maintainer of the Quantum Katas project – an open-source collection of hands-on tutorials and programming problems for learning quantum computing. She is the author of the books “Q# Pocket Guide” (2022, O'Reilly) and "Quantum Programming in Depth" (2024, Manning). Mariia is also a part-time lecturer at Northeastern University, where she has been teaching “Introduction to Quantum Computing” since 2020, and a mentor in QOSF Mentorship Program.</p>
+     <img   class="center" src="/assets/images/qce24/mamykhai.jpg" alt="Mariia Mykhailova" style="width:150px;height:150px;"> 
+    <p>Extra information: <a class="btn" href="https://quantum.microsoft.com/en-us/experience/quantum-katas"> katas</a>,  <a class="btn" href="https://www.oreilly.com/library/view/q-pocket-guide/9781098108854/"> Q# pocket guide</a>,  <a class="btn" href="https://www.manning.com/books/quantum-programming-in-depth"> Manning book</a></p>
   </div>
   <br> <br>
 
@@ -173,7 +249,7 @@ Montréal, Québec, Canada, September 20th 2024</h3>
     <h2>Ricky young</h2>
     <h3>qBraid</h3>
     <p>Currently serves as an engineer and COO at qBraid. He graduated with a Bachelors in Eengineering Physics from Stanford with a focus in quantum science. Ricky has placed 1st in the Creative Destruction Lab hackathon alongside his teammates in SRRSA.</p>
-     <img   class="center" src="/assets/images/qce24/" alt="Rycky Young" style="width:150px;height:150px;"> 
+     <img   class="center" src="/assets/images/qce24/Ricky.jpg" alt="Rycky Young" style="width:150px;height:150px;"> 
   </div>
   <br> <br>
 
