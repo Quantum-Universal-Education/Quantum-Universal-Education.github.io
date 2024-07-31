@@ -240,7 +240,7 @@ Montréal, Québec, Canada, September 20th 2024</h3>
 <div class="round3" style="width: 55vw">
     <h2>Misty Wahl</h2>
     <h3>Unitary Fund</h3>
-    <p>Misty Wahl is a Member of the Technical Staff at Unitary Fund, a non-profit organization helping to build the quantum technology ecosystem. She is a lead developer of the quantum error mitigation software package Mitiq and a researcher in quantum error mitigation. Misty is also the creator and host of a video series featuring microgrant winners on Unitary Fund's YouTube channel. Prior to pivoting to quantum technology, Misty was an engineering project manager at ASML, a global semiconductor equipment manufacturer. Misty holds BS and MEng degrees in Mechanical Engineering from Cornell University.</p>
+    <p>Misty Wahl is a Member of the Technical Staff at Unitary Fund, a non-profit organization helping to build the quantum technology ecosystem. She is a lead developer of the quantum software packages Mitiq (quantum error mitigation) and Aquapointer (quantum for biological applications) as well as a researcher in quantum error mitigation and quantum applications. Misty is also the creator and host of a video series featuring microgrant winners on Unitary Fund's YouTube channel. Prior to pivoting to quantum technology, Misty was an engineering project manager at ASML, a global semiconductor equipment manufacturer. Misty holds BS and MEng degrees in Mechanical Engineering from Cornell University.</p>
      <img   class="center" src="/assets/images/qce24/Misty.png" alt="Misty Wahl" style="width:150px;height:150px;"> 
   </div>
   <br> <br>
