@@ -158,40 +158,44 @@ Montréal, Québec, Canada, September 20th 2024</h3>
 
 <table id="customers">
   <tr>
-    <th>Event</th>
-    <th>Duration</th>
+    <th><p style="color: white;">Event</p></th>
+    <th><p style="color: white;">Duration</p></th>
   </tr>
   <tr>
-    <td>Talks 1</td>
-    <td>45 minutes</td>
+    <td><p>Talks 1</p></td>
+    <td><p>60 minutes</p></td>
   </tr>
   <tr>
-    <td>Discussion 1</td>
-    <td>45 minutes</td>
+    <td><p>Discussion 1</p></td>
+    <td><p>45 minutes</p></td>
   </tr>
   <tr>
-    <td>Talks 2</td>
-    <td>45 minutes</td>
+    <td><p>Break</p></td>
+    <td><p>15 minutes</p></td>
+  </tr>  
+  <tr>
+    <td><p>Talks 2</p></td>
+    <td><p>45 minutes</p></td>
   </tr>
   <tr>
-    <td>Discussion 2</td>
-    <td>45 minutes</td>
+    <td><p>Discussion 2</p></td>
+    <td><p>45 minutes</p></td>
   </tr>
   <tr>
-    <td>Talks 3</td>
-    <td>30 minutes</td>
-  </tr>
-  <tr>
+    <td><p>Break</p></td>
+    <td><p>15 minutes</p></td>
+  </tr> 
+  <!--tr>
     <td>Discussion 3</td>
-    <td>30 minutes</td>
+    <td>45 minutes</td>
+  </tr-->
+  <tr>
+    <td><p>Breakout Summaries</p></td>
+    <td><p>30 minutes</p></td>
   </tr>
   <tr>
-    <td>Breakout Summaries</td>
-    <td>15 minutes</td>
-  </tr>
-  <tr>
-    <td>Handouts/Survey</td>
-    <td>15 minutes</td>
+    <td><p>Handouts/Survey</p></td>
+    <td><p>15 minutes</p></td>
   </tr>
 </table>
 </div>
@@ -217,14 +221,18 @@ Montréal, Québec, Canada, September 20th 2024</h3>
     <h3>Xanadu </h3>
     <p> Catalina holds a MSc. in Electronics from Los Andes University and an Engineering Diploma from IMT Atlantique in France, with a research focus on autonomous systems. She’s currently Quantum Community Manager at Xanadu, where she helps build the community around PennyLane. In the past, Catalina worked at IBM, where she was an IBM Quantum Ambassador.</p>
      <img   class="center" src="/assets/images/qce24/Catalina_Albornoz.jpg" alt="Catalina Albornoz" style="width:150px;height:150px;"> 
+    <p>Extra information: <a class="btn" href="https://pennylane.ai/">
+      pennylane</a></p>
   </div>
   <br> <br>
 
   <div class="round3" style="width: 55vw">
     <h2> Zeki Seskir</h2>
     <h3>Institute for Technology Assessment and Systems Analysis, Karlsruhe Institute of Technology, Germany and QWorld </h3>
-    <p>.</p>
-     <img   class="center" src="/assets/images/qce24/.jpg" alt="Zeki Seskir" style="width:150px;height:150px;"> 
+    <p>Zeki C. Seskir is a researcher in the field of technology assessment (TA) and coordinator of the project "QuTec: Quantum Technology Innovations for Society." He conducts landscaping studies on QT ecosystems, education and outreach research in QT, and conceptual exploration for ELSA research for QT to be utilized in TA capabilities. He was a co-coordinator of the project "Quantum Technologies Education for Everyone [QuTE4E]" organized within the QTEdu CSA under the Quantum Flagship, and a co-founder/co-coordinator of QTurkey, a local branch of QWorld. His background is in Science and Technology Policy Studies (STPS) and in Physics with a focus on Quantum Information Science. His research interests cover a wide range of topics from quantum games to innovation ecosystems.</p>
+     <img   class="center" src="/assets/images/qce24/Zeki.jpg" alt="Zeki Seskir" style="width:150px;height:150px;"> 
+    <p>Extra information: <a class="btn" href="https://qturkey.org/">
+      QTurkey</a></p>
   </div>
   <br> <br>
 	
@@ -242,6 +250,9 @@ Montréal, Québec, Canada, September 20th 2024</h3>
     <h3>Unitary Fund</h3>
     <p>Misty Wahl is a Member of the Technical Staff at Unitary Fund, a non-profit organization helping to build the quantum technology ecosystem. She is a lead developer of the quantum software packages Mitiq (quantum error mitigation) and Aquapointer (quantum for biological applications), as well as a researcher in quantum error mitigation and quantum applications. Misty is also the creator and host of a video series featuring microgrant winners on Unitary Fund's YouTube channel. Prior to pivoting to quantum technology, Misty was an engineering project manager at ASML, a global semiconductor equipment manufacturer. Misty holds BS and MEng degrees in Mechanical Engineering from Cornell University.</p>
      <img   class="center" src="/assets/images/qce24/Misty.png" alt="Misty Wahl" style="width:150px;height:150px;"> 
+    <p>Extra information: <a class="btn" href="https://github.com/unitaryfund/mitiq">
+      Mitiq</a>, <a class="btn" href="https://unitary.fund/grants/">
+      unitary.fund/grants</a></p>
   </div>
   <br> <br>
   
@@ -250,6 +261,8 @@ Montréal, Québec, Canada, September 20th 2024</h3>
     <h3>qBraid</h3>
     <p>Currently serves as an engineer and COO at qBraid. He graduated with a Bachelors in Eengineering Physics from Stanford with a focus in quantum science. Ricky has placed 1st in the Creative Destruction Lab hackathon alongside his teammates in SRRSA.</p>
      <img   class="center" src="/assets/images/qce24/Ricky.jpg" alt="Rycky Young" style="width:150px;height:150px;"> 
+    <p>Extra information: <a class="btn" href="https://github.com/qBraid/qBraid">
+      qBraid</a></p>
   </div>
   <br> <br>
 
@@ -258,11 +271,14 @@ Montréal, Québec, Canada, September 20th 2024</h3>
     <h2>Thomas Cervoni</h2>
     <h3>Quantinuum</h3>
     <p>.</p>
-     <img   class="center" src="/assets/images/qce24/" alt="Thomas Cervoni" style="width:150px;height:150px;"> 
+     <img   class="center" src="/assets/images/qce24/" alt="Thomas Cervoni" style="width:150px;height:150px;">
+     <p>Extra information: <a class="btn" href="https://github.com/CQCL/tket">
+      tket</a>, <a class="btn" href="https://github.com/CQCL/lambeq">
+      lambeq</a></p> 
   </div>
   <br> <br>
   
-<div class="round3" style="width: 55vw">
+<!--div class="round3" style="width: 55vw">
     <h2>Tom Lubowe</h2>
     <h3>Nvidia</h3>
     <p>.</p>
@@ -271,7 +287,7 @@ Montréal, Québec, Canada, September 20th 2024</h3>
   <br> <br>
   
 
-</div>
+</div-->
 
 <div class="w3-container w3-padding-32 " style="width: 55vw"  >   
   <h3>Organizing Committee</h3>
