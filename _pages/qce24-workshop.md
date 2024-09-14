@@ -259,7 +259,7 @@ Montréal, Québec, Canada, September 20th 2024</h3>
 <div class="round3" style="width: 55vw">
     <h2>Ricky Young</h2>
     <h3>qBraid</h3>
-    <p>Currently serves as an engineer and COO at qBraid. He graduated with a Bachelors in Eengineering Physics from Stanford with a focus in quantum science. Ricky has placed 1st in the Creative Destruction Lab hackathon alongside his teammates in SRRSA.</p>
+    <p>Currently serves as an engineer and COO at qBraid. He graduated with a Bachelors in Engineering Physics from Stanford with a focus in quantum science. Ricky has placed 1st in the Creative Destruction Lab hackathon alongside his teammates in SRRSA.</p>
      <img   class="center" src="/assets/images/qce24/Ricky.jpg" alt="Rycky Young" style="width:150px;height:150px;"> 
     <p>Extra information: <a class="btn" href="https://github.com/qBraid/qBraid">
       qBraid</a></p>
