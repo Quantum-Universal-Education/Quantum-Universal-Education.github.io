@@ -257,7 +257,7 @@ Montréal, Québec, Canada, September 20th 2024</h3>
   <br> <br>
   
 <div class="round3" style="width: 55vw">
-    <h2>Ricky young</h2>
+    <h2>Ricky Young</h2>
     <h3>qBraid</h3>
     <p>Currently serves as an engineer and COO at qBraid. He graduated with a Bachelors in Eengineering Physics from Stanford with a focus in quantum science. Ricky has placed 1st in the Creative Destruction Lab hackathon alongside his teammates in SRRSA.</p>
      <img   class="center" src="/assets/images/qce24/Ricky.jpg" alt="Rycky Young" style="width:150px;height:150px;"> 
@@ -268,10 +268,10 @@ Montréal, Québec, Canada, September 20th 2024</h3>
 
 
 <div class="round3" style="width: 55vw">
-    <h2>Thomas Cervoni</h2>
+    <h2>Mark Jackson</h2>
     <h3>Quantinuum</h3>
-    <p>.</p>
-     <img   class="center" src="/assets/images/qce24/" alt="Thomas Cervoni" style="width:150px;height:150px;">
+    <p>Dr. Mark Jackson is the Senior Quantum Evangelist at Quantinuum. He received his B.S. in Physics and Mathematics from Duke University and Ph.D. in Theoretical Physics from Columbia University. He then spent 10 years researching superstring theory and cosmology, co-authoring almost 40 technical articles. He is an Entrepreneur In Residence at Yale Ventures, Adjunct Faculty at Singularity University, and a Director of Astronomers Without Borders.</p>
+     <img   class="center" src="/assets/images/qce24/Mark.jpg" alt="Mark Jackson" style="width:150px;height:150px;">
      <p>Extra information: <a class="btn" href="https://github.com/CQCL/tket">
       tket</a>, <a class="btn" href="https://github.com/CQCL/lambeq">
       lambeq</a></p> 
