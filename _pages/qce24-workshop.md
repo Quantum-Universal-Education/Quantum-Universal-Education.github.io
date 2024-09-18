@@ -156,52 +156,7 @@ Montréal, Québec, Canada, September 20th 2024</h3>
 <div class="w3-container w3-padding-32 " style="width: 55vw"  >   
 <h1>Program of the Workshop</h1>
 
-<table id="customers">
-  <tr>
-    <th><p style="color: white;">Event</p></th>
-    <th><p style="color: white;">Duration</p></th>
-  </tr>
-  <tr>
-    <td><p>Talks 1</p></td>
-    <td><p>60 minutes</p></td>
-  </tr>
-  <tr>
-    <td><p>Discussion 1</p></td>
-    <td><p>45 minutes</p></td>
-  </tr>
-  <tr>
-    <td><p>Break</p></td>
-    <td><p>15 minutes</p></td>
-  </tr>  
-  <tr>
-    <td><p>Talks 2</p></td>
-    <td><p>45 minutes</p></td>
-  </tr>
-  <tr>
-    <td><p>Discussion 2</p></td>
-    <td><p>45 minutes</p></td>
-  </tr>
-  <tr>
-    <td><p>Break</p></td>
-    <td><p>15 minutes</p></td>
-  </tr> 
-  <!--tr>
-    <td>Discussion 3</td>
-    <td>45 minutes</td>
-  </tr-->
-  <tr>
-    <td><p>Breakout Summaries</p></td>
-    <td><p>30 minutes</p></td>
-  </tr>
-  <tr>
-    <td><p>Handouts/Survey</p></td>
-    <td><p>15 minutes</p></td>
-  </tr>
-</table>
-</div>
-
-</header>
-
+<img   class="center" src="/assets/images/qce24/IoOS-QCE24-Schedule.png" alt="Workshop Schedule" style="width:700px;">
 
 <div class="w3-container w3-padding-32 " style="width: 55vw"  >		
   <h1>Speakers</h1>
