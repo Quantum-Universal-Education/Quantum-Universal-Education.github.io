@@ -157,6 +157,10 @@ Montréal, Québec, Canada, September 20th 2024</h3>
 <h1>Program of the Workshop</h1>
 
 <img src="/assets/images/qce24/IoOS-QCE24-Schedule.png" alt="Workshop Schedule" style="width:700px;">
+<br>
+<br>
+<br>
+<br>
 
 <div class="w3-container w3-padding-32 " style="width: 55vw"  >		
   <h1>Speakers</h1>
