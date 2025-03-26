@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Full-Stack Quantum Computation"
+title: "Quantum Universal"
 title_separator: "|"
-subtitle: "Community-driven, open-source education resources"
+subtitle: "Education | Community | Open Source"
 name: People Interested in Quantum Universal Education
-email: "lia@fullstackquantumcomputation.tech"
+email: "admins@quantumuniversal.org"
 description: >- # this means to ignore newlines until "baseurl:"
   "Welcome to this community-driven, open-source educational website for learning about all aspects of quantum computing across the full stack, from hardware to algorithms to everything in between and adjacent!  Whether you are new to quantum science, filling in gaps in your foundation of knowledge, or supplementing a course you are taking, our goal is to help you learn based on your interests and background knowledge.  We are always open to recommendations and contributions from the quantum computing community."
-url: "https://fullstackquantumcomputation.tech"
+url: "https://quantumuniversal.org"
   #twitter_username: username
 github_username: "Quantum-Universal-Education"
 repository: "Quantum-Universal-Education/Quantum-Universal-Education.github.io"
