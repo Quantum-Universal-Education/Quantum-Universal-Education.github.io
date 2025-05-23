@@ -1,0 +1,1355 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Qonnect four - Making a quantum game | Full-Stack Quantum Computation</title>
+<meta name="description" content="This post will elaborate on my thought process/journey and resources used for creating the Quantum game Qonnect four with Qiskit, which also is the first ever game I’ve made. This post is written with an aim of giving a beginner perspective. By reading this, you: 1) Get an idea of the issues faced and how I tackled them. 2) Will know the nuances of making a quantum game in an interactive ipython notebook. 3) Will know the code structuring, learn from my mistakes. 4) Should be able to make your own first simple quantum game.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Full-Stack Quantum Computation">
+<meta property="og:title" content="Qonnect four - Making a quantum game">
+<meta property="og:url" content="https://fullstackquantumcomputation.tech/blog/post-tutorial-QonnectFour/">
+
+
+  <meta property="og:description" content="This post will elaborate on my thought process/journey and resources used for creating the Quantum game Qonnect four with Qiskit, which also is the first ever game I’ve made. This post is written with an aim of giving a beginner perspective. By reading this, you: 1) Get an idea of the issues faced and how I tackled them. 2) Will know the nuances of making a quantum game in an interactive ipython notebook. 3) Will know the code structuring, learn from my mistakes. 4) Should be able to make your own first simple quantum game.">
+
+
+
+  <meta property="og:image" content="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-09-07T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://fullstackquantumcomputation.tech/blog/post-tutorial-QonnectFour/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Full-Stack Quantum Computation Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/FSQC-small.png" alt="Full-Stack Quantum Computation"></a>
+        
+        <a class="site-title" href="/">
+          Full-Stack Quantum Computation
+          <span class="site-subtitle">Community-driven, open-source education resources</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/journal-club/"
+                
+                
+              >Journal Club</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/qce24-workshop/"
+                
+                
+              >QCE24 Workshop</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about-us/"
+                
+                
+              >About us</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/biopics/praveen_j.jpg" alt="Praveen J" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Praveen J</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Curated By:</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Harshit Garg</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+<!--added-->
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Qonnect four - Making a quantum game">
+    <meta itemprop="description" content="This post will elaborate on my thought process/journey and resources used for creating the Quantum game Qonnect four with Qiskit, which also is the first ever game I’ve made. This post is written with an aim of giving a beginner perspective. By reading this, you:1) Get an idea of the issues faced and how I tackled them.2) Will know the nuances of making a quantum game in an interactive ipython notebook.3) Will know the code structuring, learn from my mistakes.4) Should be able to make your own first simple quantum game.">
+    <meta itemprop="datePublished" content="2020-09-07T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://fullstackquantumcomputation.tech/blog/post-tutorial-QonnectFour/" itemprop="url">Qonnect four - Making a quantum game
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>This post will elaborate on my thought process/journey and resources used for creating the Quantum game Qonnect four with Qiskit, which also is the first ever game I’ve made. This post is written with an aim of giving a beginner perspective. By reading this, you:<br />
+1) Get an idea of the issues faced and how I tackled them.<br />
+2) Will know the nuances of making a quantum game in an interactive ipython notebook.<br />
+3) Will know the code structuring, learn from my mistakes.<br />
+4) Should be able to make your own first simple quantum game.</p>
+
+<p>The game can be found at <a href="https://github.com/Praveen91299/QonnectFour">https://github.com/Praveen91299/QonnectFour</a></p>
+
+<h2 id="introduction">Introduction:</h2>
+<h3 id="why-make-a-quantum-game">Why make a quantum game?</h3>
+<p>The idea to make a quantum game came to me when I saw the Quantum Dojo, Quantum pong and Quantum Intuition’s Turn the Qubit’s off. Introducing quantum principles and math into games brought much richness and randomness to the game that it made it both hard, challenging and at the same time interesting and on an academic perspective made it easy for beginners to understand Quantum Mechanics.</p>
+
+<p>Like any other paradigms, games play an important role in learning as it makes it fun.</p>
+
+<p>So with that in mind, I set to make my first Quantum Game.</p>
+
+<h3 id="why-qonnect-four">Why Qonnect Four?</h3>
+<p>Since My first exposure to quantum games was the Quantum Dojo, I decided to make something similar with interactive ipython notebooks. My first thought was to make something like the classical mastermind, which I realised is quite the same as Quantum Dojo. So I thought about other classic board games that I’ve played and ended up with Connect four. It’s ideal since:<br />
+1) Qubit requirements are less hence less resource intensive.<br />
+2) Adding entangling gates could make the game very interesting and unexpected.</p>
+
+<p>Before I began, I took a look at <a href="https://github.com/HuangJunye/Awesome-Quantum-Games">this amazing list</a> of some popular Quantum games made before to check if I wasn’t reinventing the wheel. Then I began.</p>
+
+<h3 id="gameplay">Gameplay</h3>
+<p>Before starting with the code, lets look at the game flow for a game over LAN. Let <code class="language-plaintext highlighter-rouge">IP</code> denote the Player 1 IPv4 address.</p>
+
+<p>Player 1: Initiates Server by running <code class="language-plaintext highlighter-rouge">python3 Server.py</code> at a terminal instance.
+Player 1: Connects to the Server script from the Jupyter notebook using the constructor<br />
+    <code class="language-plaintext highlighter-rouge">game = QonnectFour(columns = 7, seed = 42, depth = 2, StartPlayer = 0, MultiPlayer = 1, host = 1, Server_IP = 'IP')</code><br />
+Player 2: Connects using<br />
+    <code class="language-plaintext highlighter-rouge">game = QonnectFour(columns = 7, seed = 42, depth = 2, StartPlayer = 1, MultiPlayer = 1, host = 0, Server_IP = 'IP')</code></p>
+
+<p>Now Player 1 starts by first making a move, either <code class="language-plaintext highlighter-rouge">game.measure()</code> or <code class="language-plaintext highlighter-rouge">game.&lt;gate&gt;()</code> and uses <code class="language-plaintext highlighter-rouge">game.send_move()</code> to send the move to the Server.<br />
+Since the clients are not continuously asking for data from the Server, Player 2 now receives the move performed using <code class="language-plaintext highlighter-rouge">game.get_move()</code>.<br />
+Player 2 continues similarly and the game continues still one of the person wins by obtaining four continuous coins in a row/column/diagonal.</p>
+
+<h2 id="getting-started">Getting started:</h2>
+<p>Install the required packages using pip/conda</p>
+
+<p>Set up Qiskit by <code class="language-plaintext highlighter-rouge">pip install qiskit</code><br />
+Set up other required packages like matplotlib, numpy, Pillow (PIL) using <code class="language-plaintext highlighter-rouge">pip install &lt;package name&gt;</code></p>
+
+<p>Set up jupyter notebooks or any other interface to edit a .inpyb notebook<br />
+<code class="language-plaintext highlighter-rouge">pip install notebook</code> for classical notebook (or)<br />
+<code class="language-plaintext highlighter-rouge">pip install jupyterlab</code> for JupyterLab (A newer rendition of Jupyter notebooks)</p>
+
+<p>If you wish to set up a virtual environment wherein you wish to work follow instructions in <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">this website</a> and <a href="https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/">this website</a>.</p>
+
+<p>I first defined my game as a class, so each time a game instance can be initiated and will retain the memory of the state of the game instead of relying on global variables. This also allows to create an independent copy of the game over which the person can try out moves, see it’s output, etc. I will explain the <code class="language-plaintext highlighter-rouge">__init__()</code> function towards the end after I’ve defined the methods.</p>
+
+<p>Along with this, I defined two classes coord() and rect() that are used to carry 2D coordinate values with a few useful methods and will be useful for rendering the output board state.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">coord</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+    
+    <span class="k">def</span> <span class="nf">relocate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords_new</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">coords_new</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">coords_new</span>
+        
+    <span class="k">def</span> <span class="nf">displace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords_disp</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">coords_disp</span><span class="p">.</span><span class="n">x</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">coords_disp</span><span class="p">.</span><span class="n">y</span>
+        
+    <span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">x</span> <span class="o">*=</span> <span class="n">scale</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">*=</span> <span class="n">scale</span>
+        
+<span class="k">class</span> <span class="nc">rect</span><span class="p">(</span><span class="n">coord</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">colour</span> <span class="o">=</span> <span class="n">black</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'rectangle'</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">label</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">coords</span><span class="p">.</span><span class="n">x</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">coords</span><span class="p">.</span><span class="n">y</span>
+        
+        <span class="c1">#image data
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">colour</span> <span class="o">!=</span> <span class="n">black</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">recolour</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rect</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">black</span><span class="p">),</span> <span class="n">colour</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">recolour</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">colour</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">location</span><span class="p">.</span><span class="n">width</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">location</span><span class="p">.</span><span class="n">height</span><span class="p">):</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">b</span> <span class="o">+</span> <span class="n">location</span><span class="p">.</span><span class="n">y</span><span class="p">][</span><span class="n">a</span> <span class="o">+</span> <span class="n">location</span><span class="p">.</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">colour</span>
+    
+    <span class="k">def</span> <span class="nf">save_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="n">fromarray</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">data</span><span class="p">,</span> <span class="s">'RGB'</span><span class="p">)</span>
+        <span class="n">img</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">+</span> <span class="s">'.png'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">+</span> <span class="s">'.png'</span>
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">coord()</code> objects contain only two values, x and y coordinates. Methods like <code class="language-plaintext highlighter-rouge">relocate()</code> to redefine the point, <code class="language-plaintext highlighter-rouge">displace()</code> to move the point and <code class="language-plaintext highlighter-rouge">rescale()</code> to rescale the point is defined.</p>
+
+<p><code class="language-plaintext highlighter-rouge">rect()</code> objects are rectangles, with an array that defines the pixels value of the image of the rectangle. I added two additional methods, recolour() which takes input of location (a rect object itself) to recolour, and the colour to recolour that rectangle location to. This is achieved by just re-assigning the values in the pixel value array of the object over the range of the given dimensions.<br />
+The other function saves the image as <code class="language-plaintext highlighter-rouge">“&lt;name of object&gt;.png”</code>. The method <code class="language-plaintext highlighter-rouge">Image.fromarray()</code> takes array input (Of size length x breadth x 3) and ‘RGB’ identifying the type of input and returns a Image object. <code class="language-plaintext highlighter-rouge">&lt;object&gt;.save()</code> method is used to save the file. The method returns the image name.</p>
+
+<h3 id="game-class-definition-and-class-variables">Game class definition and class variables</h3>
+<p>The game is initialized using the constructor:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">seed</span><span class="p">,</span> <span class="n">depth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">StartPlayer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">MultiPlayer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">host</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Server_IP</span> <span class="o">=</span> <span class="s">'0'</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">cols</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="p">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s">'statevector_simulator'</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">depth</span> <span class="o">=</span> <span class="n">depth</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">seed</span> <span class="o">=</span> <span class="n">seed</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">ready</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">turn</span> <span class="o">=</span> <span class="n">StartPlayer</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">MultiPlayer</span> <span class="o">=</span> <span class="n">MultiPlayer</span>
+
+    <span class="c1">#for multiplayer stuff
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">host</span> <span class="o">=</span> <span class="s">"localhost"</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">move_no</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">move_no_opp</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">move</span> <span class="o">=</span> <span class="s">"0:0:h:0"</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">StartPlayer</span> <span class="o">=</span> <span class="n">StartPlayer</span> <span class="c1"># the person's role: 0 - Start first, else start second.
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">host_bin</span> <span class="o">=</span> <span class="n">host</span> <span class="c1"># 1 if local system is host and host is Player 0.
+</span>
+    <span class="c1">#board with initial flags of -1
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">board</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">full</span><span class="p">((</span><span class="n">cols</span><span class="p">,</span> <span class="n">cols</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">coin_array</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">cols</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">board_img</span> <span class="o">=</span> <span class="n">rect</span><span class="p">(</span><span class="n">cols</span><span class="o">*</span><span class="n">scale</span><span class="p">,</span> <span class="n">cols</span><span class="o">*</span><span class="n">scale</span><span class="p">,</span>  <span class="n">coord</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">black</span><span class="p">,</span> <span class="s">"board"</span><span class="p">)</span>
+
+    <span class="c1">#start server if multiplayer
+</span>    <span class="k">if</span> <span class="n">MultiPlayer</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">host_bin</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># if not host, then take in the Server_IP
+</span>            <span class="bp">self</span><span class="p">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">Server_IP</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">Network</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">host</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">host_bin</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># if game host, send seed.
+</span>            <span class="bp">self</span><span class="p">.</span><span class="n">net</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"seed:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">seed</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">depth</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">StartPlayer</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># the player is player 1 as not host
+</span>            <span class="n">received</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">net</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"seed:want"</span><span class="p">)</span>
+            <span class="n">received</span> <span class="o">=</span> <span class="n">received</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">":"</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">seed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">received</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">depth</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">received</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">column</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">received</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">received</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">StartPlayer</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">StartPlayer</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">turn</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1">#initialise pseudo-random circuit and corresponding statevector
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">cols</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">Statevector</span><span class="p">(</span><span class="n">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">backend</span><span class="p">).</span><span class="n">result</span><span class="p">().</span><span class="n">get_statevector</span><span class="p">())</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">generate_random</span><span class="p">()</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">ready</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1">#display after starting game
+</span>    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Welcome to Qonnect four! </span><span class="se">\n</span><span class="s"> Player "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">turn</span><span class="p">)</span> <span class="o">+</span> <span class="s">" to begin. </span><span class="se">\n</span><span class="s"> Initial state:"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>First I initialize some variables of the object,<br />
+<code class="language-plaintext highlighter-rouge">seed</code> - seed<br />
+<code class="language-plaintext highlighter-rouge">depth</code> - depth of initial random circuit<br />
+<code class="language-plaintext highlighter-rouge">column</code> - number of initial columns (and rows)<br />
+<code class="language-plaintext highlighter-rouge">backend</code> - simulation backend<br />
+<code class="language-plaintext highlighter-rouge">ready</code> - indicator if the game has begun (initalising, preprocessing, etc all done)<br />
+<code class="language-plaintext highlighter-rouge">turn</code> - player who is going to start<br />
+<code class="language-plaintext highlighter-rouge">board</code> - array for coin values 0/1/-1
+<code class="language-plaintext highlighter-rouge">coin_array</code> - a counter for number of coins in each of the column<br />
+<code class="language-plaintext highlighter-rouge">board_img</code> - <code class="language-plaintext highlighter-rouge">rect()</code> object for board image<br />
+<code class="language-plaintext highlighter-rouge">circuit</code> - Quantum circuit of the game<br />
+<code class="language-plaintext highlighter-rouge">state</code> - Statevector that is evolved and measured</p>
+
+<p>For Multiplayer over LAN, we have some additional variables required:<br />
+<code class="language-plaintext highlighter-rouge">MultiPlayer</code> - whether LAN multiplayer game or not,<br />
+<code class="language-plaintext highlighter-rouge">host</code> - host server IPv4,<br />
+<code class="language-plaintext highlighter-rouge">move_no, move_no_opp</code> - count of moves done by the players so far so as to check if valid move,<br />
+<code class="language-plaintext highlighter-rouge">StartPlayer</code> - local Player role<br />
+<code class="language-plaintext highlighter-rouge">host_bin</code> - 0 if not host, 1 if host<br />
+<code class="language-plaintext highlighter-rouge">move</code> - stores a string that can be parsed to indicate the latest valid move performed by the player</p>
+
+<p>If it is a multiplayer game, the host first initializes an instance of <code class="language-plaintext highlighter-rouge">Network</code> class that initializes connection with the server script. Then sends the seed, depth, StartPlayer and column values to the server. The server stores this and sends to the client/non-host player upon connection. A simple socket system as used here allows to send and receive strings. So we send them separated by “:”, which is parsed when received and used accordingly.</p>
+
+<p>After these steps, the game is initialized by using the seed to append a random circuit to the <code class="language-plaintext highlighter-rouge">circuit</code> object and obtain it’s <code class="language-plaintext highlighter-rouge">state</code> object as <code class="language-plaintext highlighter-rouge">state</code>. It ends with outputting the circuit, etc and a message with who starts the game.</p>
+
+<p>Next I listed out what broadly made up my game. In Connect four, a person makes only one type of move - adding coins. Here, my board is represented by a circuit, where there is a one-one correspondence with the qubit and the column. The person is allowed to either add gates or make measurements on each. And when a measurement is made, single or multiple coins are added. So I needed to write methods/functions that:</p>
+
+<p>1) Initialize the circuit to a random state -  so no particular player had the advantage<br />
+2) Make moves - measure/adding gates<br />
+3) Check if there’s a match (four in a row/column/diagonal)<br />
+4) Output the current state of the game</p>
+
+<p>For clarity, I’ll be explaining my code in the above order. When I thought about/wrote the code, I started with the outputting process, then checking the state, after which I wrote the functions for the moves and finally the random initialization, on the way adding whatever I felt required to the class constructor. In general it doesn’t matter as long as you plan beforehand.</p>
+
+<h3 id="random-circuit-initialization">Random circuit initialization</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">generate_random</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">seed_digits</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="nb">bin</span><span class="p">((</span><span class="bp">self</span><span class="p">.</span><span class="n">seed</span> <span class="o">+</span> <span class="mi">500</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">))[</span><span class="mi">2</span><span class="p">:]]</span>
+    <span class="n">seed_digits</span> <span class="o">=</span> <span class="n">seed_digits</span><span class="p">[:(</span><span class="nb">len</span><span class="p">(</span><span class="n">seed_digits</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seed_digits</span><span class="p">)</span><span class="o">%</span><span class="mi">3</span><span class="p">))]</span>
+
+    <span class="n">gate_sequence</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seed_digits</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">)):</span>
+        <span class="n">gate_sequence</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">seed_digits</span><span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">seed_digits</span><span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">seed_digits</span><span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="mi">2</span><span class="p">])</span>
+
+    <span class="n">number_temp</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">depth</span><span class="o">*</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="o">*</span><span class="mi">3</span>
+    <span class="n">gate_sequence_temp</span> <span class="o">=</span> <span class="n">gate_sequence</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">gate_sequence_temp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">number_temp</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">number_temp</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">gate_sequence_temp</span><span class="p">))):</span>
+            <span class="n">gate_sequence</span> <span class="o">+=</span> <span class="p">[</span><span class="nb">int</span><span class="p">((</span><span class="n">d</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">seed</span><span class="o">*</span><span class="n">a</span><span class="p">)</span><span class="o">%</span><span class="mi">8</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">gate_sequence_temp</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">depth</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">add_gate</span><span class="p">(</span><span class="n">gates</span><span class="p">[</span><span class="n">gate_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">a</span><span class="p">])</span>
+                <span class="n">gate_sequence</span> <span class="o">=</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">%</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">%</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">add_gate</span><span class="p">(</span><span class="s">'cx'</span><span class="p">,</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+                <span class="n">gate_sequence</span> <span class="o">=</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">%</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">%</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+                <span class="n">c</span> <span class="o">=</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">%</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span>
+                <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(((</span><span class="n">c</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="n">a</span><span class="p">))</span> <span class="o">==</span> <span class="n">b</span><span class="p">))</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">add_gate</span><span class="p">(</span><span class="s">'ccx'</span><span class="p">,</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">])</span>
+                <span class="n">gate_sequence</span> <span class="o">=</span> <span class="n">gate_sequence</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+                <span class="k">continue</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+    <span class="k">return</span>
+</code></pre></div></div>
+
+<p>To initialize a pseudo-random circuit, the method requires a random string as a seed, so the seed is passed when the game object is initiated. I first extend the seed to a larger number, then convert it to an array of “0” and ”1”. Extending the seed can be better done with a hash function, but I didn’t wish to include any other external functions. Since I’ve restricted my gates to only 8 types, I make sure that the binary string length is a multiple of 3. At each iteration, the function will add gates to the circuit. I do this by parsing the array as three’s and converting into integer indices which will denote the gate type and if it is a multiqubit gate, the successive gates denote the required locations.</p>
+
+<p>In this game, since the game continues with the post measurement state of the circuit after a measurement is made and requires to wait for user input of moves, it cannot be continuously run on the quantum system and cannot be repeated with the same outcomes. So simulate the quantum state, I use a Statevector object over which I perform gates and measurements. So the game in it’s current state (V1.2) is a simulated system. I maintain a statevector object with all actions so far and a circuit object for illustration purposes only.</p>
+
+<p>Since the output of measurements are still statevectors, we can still form a circuit to evolve the state and perform the measurement on an actual quantum computer. While this is possible, it would introduce wait times into the game which is undesireable right now.</p>
+
+<h3 id="adding-gates">Adding gates</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">clear_output</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Invalid positional argument. Please pass a single position as argument."</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">add_gate</span><span class="p">(</span><span class="s">'h'</span><span class="p">,</span> <span class="p">[</span><span class="n">args</span><span class="p">])</span>
+    <span class="k">return</span>
+</code></pre></div></div>
+
+<p>To add gates, I wrote separate class methods that have the same syntax as that of qiskit (like above), and also a common add_gate() method that does a check of the input parameters and performs the required gates. The reason I wrote add_gate() separately is that it would be easier to code to add random gates in the initial stage and also add gates on local copy of the game when played over LAN.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">add_gate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gate</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+    
+    <span class="k">if</span> <span class="n">flag</span> <span class="ow">and</span> <span class="bp">self</span><span class="p">.</span><span class="n">ready</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">MultiPlayer</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">StartPlayer</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="p">.</span><span class="n">move_no</span> <span class="o">!=</span> <span class="bp">self</span><span class="p">.</span><span class="n">move_no_opp</span><span class="p">:</span> <span class="c1"># if player 0, then should play first
+</span>                <span class="k">print</span><span class="p">(</span><span class="s">"Invalid move. Wait for other player to play move or try receiving move by game.get_move()."</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">StartPlayer</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="p">.</span><span class="n">move_no</span> <span class="o">!=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">move_no_opp</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Invalid move. Wait for other player to play move or try receiving move by game.get_move()."</span><span class="p">)</span>
+                <span class="k">return</span>
+
+    <span class="c1">#check if column full
+</span>    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">coin_array</span><span class="p">[</span><span class="n">args</span><span class="p">[</span><span class="n">a</span><span class="p">]]</span> <span class="o">==</span> <span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">clear_output</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Column full, try different move"</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+            <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="c1">#apply corresponding gates/operators
+</span>    <span class="n">qc_temp</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">gate</span> <span class="o">==</span> <span class="s">"h"</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="n">qc_temp</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">evolve</span><span class="p">(</span><span class="n">Operator</span><span class="p">(</span><span class="n">qc_temp</span><span class="p">))</span>
+
+    <span class="c1">#similarly for other single qubit gates
+</span>
+    <span class="k">if</span> <span class="n">gate</span> <span class="o">==</span> <span class="s">"cx"</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">qc_temp</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">evolve</span><span class="p">(</span><span class="n">Operator</span><span class="p">(</span><span class="n">qc_temp</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">gate</span> <span class="o">==</span> <span class="s">"ccx"</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">ccx</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">qc_temp</span><span class="p">.</span><span class="n">ccx</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">evolve</span><span class="p">(</span><span class="n">Operator</span><span class="p">(</span><span class="n">qc_temp</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">ready</span><span class="p">:</span>
+        <span class="n">clear_output</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Current state:"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">pass_turn</span><span class="p">()</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">move_no</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">make_move</span><span class="p">(</span><span class="n">gate</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+    <span class="k">return</span>
+</code></pre></div></div>
+
+<p>First, the method checks if it is a multiplayer game and whether a player is adding the move (and not another internal code). <code class="language-plaintext highlighter-rouge">flag</code> is set to 1 by default and is 0 when we wish to not check if it’s a valid move or update any move number/turn. This would help us when we play over LAN as we wish to update the opponent’s move onto our local copy of the game instance.</p>
+
+<p>So once we checked if it’s a valid move (the correct player’s turn incase of LAN) and whether the column is not already full (since there is no point adding gates to columns that are already full with coins), we proceed to apply the gates. At each <code class="language-plaintext highlighter-rouge">if</code> clause, we check the gate type passed in <code class="language-plaintext highlighter-rouge">gate</code> and array length of args, then perform appropriate gates on the circuit <code class="language-plaintext highlighter-rouge">self.circuit</code> and evolve the statevector <code class="language-plaintext highlighter-rouge">self.state</code> according to the gate. This is done by initializing a <code class="language-plaintext highlighter-rouge">QuantumCircuit</code> instance, adding the gate and evolving by this circuit by <code class="language-plaintext highlighter-rouge">self.state.evolve()</code> method.</p>
+
+<p><code class="language-plaintext highlighter-rouge">self.ready</code> checks if the game has begun. If <code class="language-plaintext highlighter-rouge">True</code>, clears output of cell using ipython method <code class="language-plaintext highlighter-rouge">clear_output()</code> and prints the current state using <code class="language-plaintext highlighter-rouge">self.disp_game_state()</code>. Then if <code class="language-plaintext highlighter-rouge">flag == True</code>, it passes the turn to the other player. <code class="language-plaintext highlighter-rouge">make_move()</code> method makes the message to be passed to the server if played over LAN.</p>
+
+<h3 id="server-and-networking-using-sockets">Server and Networking using sockets</h3>
+<p>This section is almost entirely based on code that can be found <a href="https://github.com/techwithtim/Network-Game-Tutorial">here</a> and a quick tutorial can be found <a href="https://www.youtube.com/watch?v=-3B1v-K1oXE">here</a><br />
+The multiplayer over LAN in v1.2 uses two additional scripts, <code class="language-plaintext highlighter-rouge">Network()</code> class definition and <code class="language-plaintext highlighter-rouge">Server.py</code> to setup a server system on the host’s computer.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="k">class</span> <span class="nc">Network</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">IP</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">socket</span><span class="p">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="p">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="p">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">IP</span> 
+        <span class="bp">self</span><span class="p">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">5555</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">port</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="nb">id</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">connect</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">addr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">).</span><span class="n">decode</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="nb">str</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">).</span><span class="n">decode</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">socket</span><span class="p">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>The constructor takes a parameter, the server IPv4 address passed on to it. To establish a connection, the method <code class="language-plaintext highlighter-rouge">connect()</code> of the socket class is used, to which the address, a tuple of the IP and port number is passed. This is executed in the <code class="language-plaintext highlighter-rouge">connect()</code> method of the Network class. This returns a message from the server on receiving the connection request.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">send()</code> method of the socket class (which is used in the above defined <code class="language-plaintext highlighter-rouge">Network.send()</code>) is used to send messages to the server and return any associated message. The <code class="language-plaintext highlighter-rouge">try: ... except:</code> is a python code used to handle errors instead of halting the complete program. If the try block throws any error, instead of halting the program, it returns the error message. We shall not delve further in this for now.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">from</span> <span class="nn">_thread</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="p">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="p">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="p">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="s">''</span> <span class="c1">#replace with Server device IPv4
+</span><span class="n">port</span> <span class="o">=</span> <span class="mi">5555</span>
+
+<span class="n">server_ip</span> <span class="o">=</span> <span class="n">socket</span><span class="p">.</span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">server</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Server IP: "</span> <span class="o">+</span> <span class="n">server_ip</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">s</span><span class="p">.</span><span class="n">bind</span><span class="p">((</span><span class="n">server</span><span class="p">,</span> <span class="n">port</span><span class="p">))</span>
+
+<span class="k">except</span> <span class="n">socket</span><span class="p">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+<span class="n">s</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Waiting for a connection"</span><span class="p">)</span>
+
+<span class="n">currentId</span> <span class="o">=</span> <span class="s">"0"</span>
+<span class="n">Data</span> <span class="o">=</span> <span class="p">[</span><span class="s">"0:0:h:0"</span><span class="p">,</span> <span class="s">"1:0:h:0"</span><span class="p">]</span> <span class="c1">#player:moveID:move:positions...
+</span><span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">depth</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">column</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">StartPlayer</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">threaded_client</span><span class="p">(</span><span class="n">conn</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">currentId</span><span class="p">,</span> <span class="n">Data</span><span class="p">,</span> <span class="n">seed</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">StartPlayer</span>
+    <span class="n">conn</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="nb">str</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">currentId</span><span class="p">))</span>
+    <span class="n">currentId</span> <span class="o">=</span> <span class="s">"1"</span>
+    <span class="n">reply</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span>
+            <span class="n">reply</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s">'2'</span><span class="p">:</span>
+                <span class="n">conn</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="nb">str</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s">"Goodbye"</span><span class="p">))</span>
+                <span class="c1">#break
+</span>            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Recieved: "</span> <span class="o">+</span> <span class="n">reply</span><span class="p">)</span>
+                <span class="n">arr</span> <span class="o">=</span> <span class="n">reply</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">":"</span><span class="p">)</span>
+                
+                <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">"seed"</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">"want"</span><span class="p">:</span>
+                        <span class="n">send</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">depth</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">column</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">StartPlayer</span><span class="p">)</span> <span class="c1">#sends initial states
+</span>                        <span class="k">print</span><span class="p">(</span><span class="n">send</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">seed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                        <span class="n">depth</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+                        <span class="n">column</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+                        <span class="n">StartPlayer</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+                        <span class="n">send</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">#get move
+</span>                    <span class="n">iden</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">send</span> <span class="o">=</span> <span class="n">Data</span><span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">iden</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+                    <span class="n">iden</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">Data</span><span class="p">[</span><span class="n">iden</span><span class="p">]</span> <span class="o">=</span> <span class="n">reply</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">"Added move: "</span> <span class="o">+</span> <span class="n">reply</span><span class="p">)</span>
+                    <span class="n">send</span> <span class="o">=</span> <span class="n">reply</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Sending: "</span> <span class="o">+</span> <span class="n">send</span><span class="p">)</span>
+                <span class="n">conn</span><span class="p">.</span><span class="n">sendall</span><span class="p">(</span><span class="nb">str</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">send</span><span class="p">))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Nothing received"</span><span class="p">)</span>
+    
+    <span class="k">print</span><span class="p">(</span><span class="s">"Connection Closed"</span><span class="p">)</span>
+    <span class="n">conn</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">conn</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">accept</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Connected to: "</span><span class="p">,</span> <span class="n">addr</span><span class="p">)</span>
+    
+    <span class="n">start_new_thread</span><span class="p">(</span><span class="n">threaded_client</span><span class="p">,</span> <span class="p">(</span><span class="n">conn</span><span class="p">,))</span>
+</code></pre></div></div>
+
+<p>First, the socket object is initiated, then the address and port number (it’s identity) is ‘binded’ to the socket. Then the method <code class="language-plaintext highlighter-rouge">listen(x)</code> waits for x connect requests on the network. Once a connection is made, it  sets up a new thread using <code class="language-plaintext highlighter-rouge">start_new_thread()</code> with each connect requests received, and executes the <code class="language-plaintext highlighter-rouge">threaded_client</code> method. Each thread keeps looking for messages received. The received message is split and when “seed” is the first word, it checks if “want” is the second word, then sends the previously received seed, depth and other details of the game as sent by the host. Else it assumes that the following words were sent by the host and is assigned to the global variables of the server script, and sends a “1”. If only one word is received, then it requires the last move sent by the other player, stored in <code class="language-plaintext highlighter-rouge">Data</code>. If 4 or more words are parsed from the sent message, it means that the player has sent in his move, then the code saves the message in <code class="language-plaintext highlighter-rouge">Data</code>.</p>
+
+<p>You can just prefix the messages with a tag indicating what the kind of message was (seed/seed-want/move/get-move).</p>
+
+<p>Further, in the main game class, I’ve defined <code class="language-plaintext highlighter-rouge">send_move()</code> and <code class="language-plaintext highlighter-rouge">get_move()</code> for the player to send their move to the server instance and receive the opponent’s move. Please refer to the game files.</p>
+
+<h3 id="performing-measurements">Performing measurements</h3>
+<p>So to perform measurements, we not only need to add them to the circuit, but also perform measurements on the statevector, and check if any other qubits collapsed to classical state as a result of this measurement. So we check the purity of the qubits before and after and see if there’s a change to classical state. To check the purity, we use <code class="language-plaintext highlighter-rouge">probability(&lt;qubit_position&gt;)</code> method of statevector class which returns an 2 element list giving the amplitudes of 0/1 state of that qubit. <code class="language-plaintext highlighter-rouge">numpy.isclose()</code> checks if the two elements are approximately equal, upto a threshhold passed as the third parameter. The method then returns the array indicating where ever it is pure.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_pure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="n">isclose</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">probabilities</span><span class="p">([</span><span class="n">a</span><span class="p">])[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">)</span> <span class="ow">or</span> <span class="n">np</span><span class="p">.</span><span class="n">isclose</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">probabilities</span><span class="p">([</span><span class="n">a</span><span class="p">])[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">):</span>
+            <span class="n">temp</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">temp</span>
+
+<span class="k">def</span> <span class="nf">measure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qubit_pos</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+
+    <span class="c1">#when multiplayer, check if valid
+</span>    <span class="k">if</span> <span class="n">flag</span><span class="p">:</span> <span class="c1"># if performing own move
+</span>        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">MultiPlayer</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">StartPlayer</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="p">.</span><span class="n">move_no</span> <span class="o">!=</span> <span class="bp">self</span><span class="p">.</span><span class="n">move_no_opp</span><span class="p">:</span> <span class="c1"># if player 0, then should play first
+</span>                <span class="k">print</span><span class="p">(</span><span class="s">"Invalid move. Wait for other player to play move or try receiving move by game.get_move()."</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">StartPlayer</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="p">.</span><span class="n">move_no</span> <span class="o">!=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">move_no_opp</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Invalid move. Wait for other player to play move or try receiving move by game.get_move()."</span><span class="p">)</span>
+                <span class="k">return</span>
+
+        <span class="c1">#check if the column is not full already
+</span>        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">qubit_pos</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">clear_output</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Invalid input! Provide an integer for position number"</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">coin_array</span><span class="p">[</span><span class="n">qubit_pos</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">clear_output</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Column full, try different move"</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">qubit_pos</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">clear_output</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Column out of bounds! Enter value between 0 and "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">column</span><span class="p">))</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">coin_array</span><span class="p">[</span><span class="n">qubit_pos</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
+        <span class="c1">#get premeasurement pure states
+</span>        <span class="n">pure_before</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_pure</span><span class="p">()</span>
+
+        <span class="c1">#perform measurement
+</span>        <span class="n">result</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">measure</span><span class="p">([</span><span class="n">qubit_pos</span><span class="p">])</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">measure</span><span class="p">([</span><span class="n">qubit_pos</span><span class="p">],</span> <span class="p">[</span><span class="n">qubit_pos</span><span class="p">])</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+
+        <span class="c1">#check if any other qubits collapsed to pure due to measurement
+</span>        <span class="n">pure_after</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_pure</span><span class="p">()</span>
+
+        <span class="n">positions</span> <span class="o">=</span> <span class="p">[</span><span class="n">qubit_pos</span><span class="p">]</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">result</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">pure_after</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">pure_before</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">!=</span> <span class="n">qubit_pos</span><span class="p">:</span>
+                <span class="n">positions</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+                <span class="n">res_extra</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">measure</span><span class="p">([</span><span class="n">a</span><span class="p">])</span>
+                <span class="n">res_extra</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">res_extra</span><span class="p">)</span>
+                <span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">res_extra</span><span class="p">)</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">coin_array</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1">#for making move to send (for multiplayer)
+</span>        <span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">7</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">positions</span><span class="p">)):</span>
+            <span class="n">temp</span><span class="p">[</span><span class="n">positions</span><span class="p">[</span><span class="n">a</span><span class="p">]]</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">move_no</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="n">positions</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">temp</span> <span class="c1"># so we can mark where measurement was performed
+</span>        <span class="c1">#temp = np.concatenate([temp, self.state.data])
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">make_move</span><span class="p">(</span><span class="s">"measure"</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">flag</span><span class="p">:</span> <span class="c1"># when updating opponent's move
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">measure</span><span class="p">([</span><span class="n">qubit_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">qubit_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+
+        <span class="n">temp2</span> <span class="o">=</span> <span class="n">qubit_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+        <span class="n">meas</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+        <span class="k">while</span> <span class="n">meas</span> <span class="o">!=</span> <span class="n">qubit_pos</span><span class="p">[</span><span class="n">qubit_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="n">res</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">measure</span><span class="p">([</span><span class="n">qubit_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+            <span class="n">meas</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">state</span>
+
+        <span class="n">positions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">temp2</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">positions</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">coin_array</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">temp2</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">positions</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">coin_array</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1">#update board and display
+</span>    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">positions</span><span class="p">)):</span>
+        <span class="n">temp_coord</span> <span class="o">=</span> <span class="n">coord</span><span class="p">(</span><span class="n">positions</span><span class="p">[</span><span class="n">a</span><span class="p">],</span> <span class="bp">self</span><span class="p">.</span><span class="n">columns</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">coin_array</span><span class="p">[</span><span class="n">positions</span><span class="p">[</span><span class="n">a</span><span class="p">]])</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">temp_coord</span><span class="p">.</span><span class="n">x</span><span class="p">][</span><span class="n">temp_coord</span><span class="p">.</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+        <span class="n">temp_coord</span><span class="p">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+        <span class="c1">#add coin
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">board_img</span><span class="p">.</span><span class="n">recolour</span><span class="p">(</span><span class="n">rect</span><span class="p">(</span><span class="n">scale</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">temp_coord</span><span class="p">),</span> <span class="n">coin_colours</span><span class="p">[</span><span class="n">results</span><span class="p">[</span><span class="n">a</span><span class="p">]])</span>
+
+    <span class="c1">#check for matches
+</span>    <span class="n">end</span><span class="p">,</span> <span class="n">player</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_board</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">end</span><span class="p">:</span>
+        <span class="n">clear_output</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Player "</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="o">+</span> <span class="s">" wins! </span><span class="se">\n</span><span class="s"> "</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Final state: "</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">MultiPlayer</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">send_move</span><span class="p">()</span>
+        <span class="n">wrap_up</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Current state:"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">disp_game_state</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">pass_turn</span><span class="p">()</span>
+    <span class="k">return</span>
+</code></pre></div></div>
+
+<p>The method for measurement first checks <code class="language-plaintext highlighter-rouge">flag == 1</code> and then checks whether it is a valid input. If yes, then it proceeds to first check for pure states, then to add measurement to the circuit and also performs a measurement on the <code class="language-plaintext highlighter-rouge">self.state</code> using <code class="language-plaintext highlighter-rouge">measure()</code> method. Now it again checks for pure states, then marks the states where the measurement has collapsed due to measurement, and is added to <code class="language-plaintext highlighter-rouge">positions</code> array and the corresponding results in <code class="language-plaintext highlighter-rouge">results</code> array. Then the game board is updated, followed by a check for matches of four. If any found, it ends the game and outputs the result (winner).</p>
+
+<p>if <code class="language-plaintext highlighter-rouge">flag == 0</code> indicating a move that is being received from the server and not performed. In this case, a measurement is added to the circuit and the statevector <code class="language-plaintext highlighter-rouge">self.state</code> is measured till equal to the received measurement since we want the local copy to be equal to the other player’s copy.</p>
+
+<h3 id="checking-the-board">Checking the board</h3>
+<p>The following method is used to check the board for any matches. If found, it returns <code class="language-plaintext highlighter-rouge">True</code> and the match coin (0/1) found.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_board</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">!=-</span><span class="mi">1</span><span class="p">:</span>
+
+                <span class="k">if</span> <span class="n">x</span><span class="o">&lt;=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span> <span class="o">-</span> <span class="mi">4</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                        <span class="n">temp</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">a</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
+
+                    <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">zeros</span><span class="p">).</span><span class="nb">all</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">ones</span><span class="p">).</span><span class="nb">all</span><span class="p">():</span>
+                        <span class="k">return</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
+
+                    <span class="c1">#diagonal
+</span>                    <span class="k">if</span> <span class="n">y</span><span class="o">&lt;=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span> <span class="o">-</span> <span class="mi">4</span><span class="p">):</span>
+                        <span class="c1">#temp = np.array([0]*4)
+</span>                        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                            <span class="n">temp</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">a</span><span class="p">][</span><span class="n">y</span> <span class="o">+</span> <span class="n">a</span><span class="p">]</span>
+
+                        <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">zeros</span><span class="p">).</span><span class="nb">all</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">ones</span><span class="p">).</span><span class="nb">all</span><span class="p">():</span>
+                            <span class="k">return</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">y</span><span class="o">&lt;=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">columns</span> <span class="o">-</span> <span class="mi">4</span><span class="p">):</span>
+                    <span class="c1">#temp = np.array([0]*4)
+</span>                    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                        <span class="n">temp</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span> <span class="o">+</span> <span class="n">a</span><span class="p">]</span>
+
+                    <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">zeros</span><span class="p">).</span><span class="nb">all</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">ones</span><span class="p">).</span><span class="nb">all</span><span class="p">():</span>
+                        <span class="k">return</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
+
+                    <span class="c1">#antidiagonal
+</span>                    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                            <span class="n">temp</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span> <span class="o">-</span> <span class="n">a</span><span class="p">][</span><span class="n">y</span> <span class="o">+</span> <span class="n">a</span><span class="p">]</span>
+
+                        <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">zeros</span><span class="p">).</span><span class="nb">all</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">ones</span><span class="p">).</span><span class="nb">all</span><span class="p">():</span>
+                            <span class="k">return</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
+    <span class="k">return</span> <span class="bp">False</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">self.board</code> is an array that contains values of the coins. -1 if no coin; 0/1 for either player respectively.</p>
+
+<p>In a double for loop, at every board position, I check the row, column, diagonal and antidiagonal positions for any matches. If any are found, it returns <code class="language-plaintext highlighter-rouge">True</code> with the coin value (0/1). If you notice in the above code, first I check if the location actual has four or more positions ahead or behind as required so as to have a valid array to reference, hence to compare.</p>
+
+<h3 id="output-display">Output display</h3>
+<p>I wrote separate functions to create and save the output images and also display the same, as Jupyter notebook does not in default allow display of multiple images at a time.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">disp_game_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Board:"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">disp_board</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Circuit:"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">disp_circuit</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Qsphere:"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">disp_qsphere</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Bloch spheres:"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">disp_bloch_multivector</span><span class="p">()</span>
+    <span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">disp_circuit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">circuit</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="s">'mpl'</span><span class="p">).</span><span class="n">savefig</span><span class="p">(</span><span class="s">'circuit.png'</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Im</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s">'circuit.png'</span><span class="p">,</span> <span class="n">unconfined</span> <span class="o">=</span> <span class="bp">True</span><span class="p">))</span>
+    <span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">disp_board</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">board_img</span><span class="p">.</span><span class="n">save_image</span><span class="p">()</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Im</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s">'board.png'</span><span class="p">))</span>
+    <span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">disp_qsphere</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">plot_state_qsphere</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">data</span><span class="p">).</span><span class="n">savefig</span><span class="p">(</span><span class="s">'qsphere.png'</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Im</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s">'qsphere.png'</span><span class="p">,</span> <span class="n">unconfined</span> <span class="o">=</span> <span class="bp">True</span><span class="p">))</span>
+    <span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">disp_bloch_multivector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">plot_bloch_multivector</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">data</span><span class="p">).</span><span class="n">savefig</span><span class="p">(</span><span class="s">'bloch.png'</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Im</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s">'bloch.png'</span><span class="p">,</span> <span class="n">unconfined</span> <span class="o">=</span> <span class="bp">True</span><span class="p">))</span>
+    <span class="k">return</span>
+</code></pre></div></div>
+
+<p>The method <code class="language-plaintext highlighter-rouge">self.circuit.draw('mpl')</code> returns a matplotlib figure, which can be saved using the <code class="language-plaintext highlighter-rouge">savefig()</code> method. Then the method displays the full sized image (Normally it shrinks the image to fit) by importing the image file and passing <code class="language-plaintext highlighter-rouge">unconfined = True</code> option to create a Image object (IPython.display.Image has been imported as Im).</p>
+
+<h2 id="conclusions">Conclusions</h2>
+<p>The entire code can be found in the github repository shared. Only parts of the code are explained here. As you’ve seen, making a quantum game is quite simple. With a good idea and a plan of the structure and division of the code, you can easily write your own game. when you need help, Google and stack exchange are your best friends along with Qiskit documentation. Start by listing the possible classes and methods you will need and defining one by one, then proceed filling them up, modifying on the go.</p>
+
+<p>All the very best!</p>
+
+<h3 id="references-and-links">References and links</h3>
+<p>1) My code: <a href="https://github.com/Praveen91299/QonnectFour">https://github.com/Praveen91299/QonnectFour</a><br />
+2) Quantum Dojo: <a href="https://github.com/amirebrahimi/quantumdojo">https://github.com/amirebrahimi/quantumdojo</a><br />
+3) List of Quantum games: <a href="https://github.com/HuangJunye/Awesome-Quantum-Games">https://github.com/HuangJunye/Awesome-Quantum-Games</a><br />
+4) Creating a Conda environment: <a href="https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/">https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/</a><br />
+5) Conda documentation: <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</a><br />
+6) Network game tutorials by Tech with Tim: <a href="https://github.com/techwithtim/Network-Game-Tutorial">https://github.com/techwithtim/Network-Game-Tutorial</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#games" class="page__taxonomy-item p-category" rel="tag">games</a><span class="sep">, </span>
+    
+      <a href="/tags/#qiskit" class="page__taxonomy-item p-category" rel="tag">qiskit</a><span class="sep">, </span>
+    
+      <a href="/tags/#qonnect-four" class="page__taxonomy-item p-category" rel="tag">Qonnect Four</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-game" class="page__taxonomy-item p-category" rel="tag">Quantum game</a><span class="sep">, </span>
+    
+      <a href="/tags/#tutorials" class="page__taxonomy-item p-category" rel="tag">tutorials</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-09-07T00:00:00+00:00">September 7, 2020</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Qonnect+four+-+Making+a+quantum+game%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-tutorial-QonnectFour%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-tutorial-QonnectFour%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullstackquantumcomputation.tech/blog/post-tutorial-QonnectFour/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Qonnect+four+-+Making+a+quantum+game%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-tutorial-QonnectFour%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/post-tutorial-2-teleportation/" class="pagination--pager" title="Quantum Programming Tutorial 2: Quantum Teleportation">Previous</a>
+    
+    
+      <a href="/blog/post-intro-qc-workshop/" class="pagination--pager" title="Intro to Quantum Computing at CUhackit">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/QuantumVerse-Game/" rel="permalink">Quantumverse Game
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">QuantumVerse 🌌🎮- A Gamer’s Bot!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/File-Transfer-Using-QC-Protocol-Cirq/" rel="permalink">File Transfer Using Qc Protocol Cirq
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/quaze-tutorial/" rel="permalink">Tutorial to build a Quantum inspired puzzle game in JS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to cr...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-simulation/" rel="permalink">Electronic Simulation of Molecules using Pennylane
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://discord.gg/NDm9e9W" rel="nofollow noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/QuantumUniversalEducation" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/company/quantum-universal-education/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/QuantUniEd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://fullstackquantumcomputation.tech">Full-Stack Quantum Computation</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

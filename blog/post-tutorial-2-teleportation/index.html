@@ -1,0 +1,1041 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Quantum Programming Tutorial 2: Quantum Teleportation | Full-Stack Quantum Computation</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Full-Stack Quantum Computation">
+<meta property="og:title" content="Quantum Programming Tutorial 2: Quantum Teleportation">
+<meta property="og:url" content="https://fullstackquantumcomputation.tech/blog/post-tutorial-2-teleportation/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-09-06T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://fullstackquantumcomputation.tech/blog/post-tutorial-2-teleportation/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Full-Stack Quantum Computation Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/FSQC-small.png" alt="Full-Stack Quantum Computation"></a>
+        
+        <a class="site-title" href="/">
+          Full-Stack Quantum Computation
+          <span class="site-subtitle">Community-driven, open-source education resources</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/journal-club/"
+                
+                
+              >Journal Club</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/qce24-workshop/"
+                
+                
+              >QCE24 Workshop</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about-us/"
+                
+                
+              >About us</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/biopics/alberto_r.png" alt="Alberto Maldonado Romo" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Alberto Maldonado Romo</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+<!--added-->
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Quantum Programming Tutorial 2: Quantum Teleportation">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2020-09-06T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://fullstackquantumcomputation.tech/blog/post-tutorial-2-teleportation/" itemprop="url">Quantum Programming Tutorial 2: Quantum Teleportation
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<h1 id="teleporting-states">Teleporting States</h1>
+
+<p>“In this section, we highlight a remarkable phenomenon called “quantum teleportation,” and its important applications in gate scheduling, namely a strategy called “gate teleportation,” in which scheduling gates is equivalent to scheduling resource states. We start by  writing down an important resource state, the  EPR pair \(|\psi&gt;\),
+which  can be  produced in the tutorial 1: Bell State.
+The teleportation-based quantum computer (QC) architecture, require which such EPR pairs are utilized as resource states. Because both quantum states and quantum gates can be transferred over long distance via a teleportation circuit, this technique is particularly useful in distributed QC architectures or in reducing communication cost in general.<em>(Ding (2020),Chong (2020),
+University of Chicago, book,Quantum Computer Systems: Research for Noisy Intermediate-Scale Quantum Computers
+Synthesis Lectures on Computer Architecture)</em>”.</p>
+
+<p><img src="/assets/quantum_programs/2_quantum_teleportation/quantum_teleportation.png" alt="quantum_teleportation.png" /></p>
+
+<h1 id="qiskit-program">Qiskit Program</h1>
+<p>The qiskit program is generated to pass the information from one qubit to another</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">Aer</span><span class="p">,</span><span class="n">execute</span><span class="p">,</span> <span class="n">IBMQ</span>
+<span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span> <span class="c1"># the state vector of the required qubits is generated
+#The variables are initialized to generate the quantum circuit
+</span><span class="n">msg</span> <span class="o">=</span>  <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># infomration
+</span><span class="n">Alice</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># emisor
+</span><span class="n">Bob</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#receptor
+</span><span class="n">key1</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#condition one
+</span><span class="n">key2</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># condition two
+</span><span class="n">output</span>  <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># classical bit output
+</span><span class="n">circuit</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span><span class="n">Alice</span><span class="p">,</span> <span class="n">Bob</span><span class="p">,</span> <span class="n">key1</span><span class="p">,</span> <span class="n">key2</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span> <span class="c1"># genrate the quantum circuit
+</span></code></pre></div></div>
+
+<h3 id="initial-state-for-the-msm">Initial state for the msm</h3>
+<p>The qubit is rotated with the variable zero_state using the <em>initialize</em> method that indicates how much probability for the state |0&gt; and for the state |1&gt; (remember that the sum of the square module of those values must be equal to 1), to display the value of the input vector and check it is used the get_statevector method</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">zero_state</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="c1"># value in zero state
+</span>
+<span class="n">circuit</span><span class="p">.</span><span class="n">initialize</span><span class="p">([</span><span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">zero_state</span><span class="p">),</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">zero_state</span><span class="p">)],</span> <span class="n">msg</span><span class="p">)</span> <span class="c1">#obtain the value for msg variable
+</span><span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="p">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s">'statevector_simulator'</span><span class="p">)</span> <span class="c1"># simulate the previous circuit
+</span><span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="p">.</span><span class="n">result</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">get_statevector</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># show the vector output at this moment with 3 decimals
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[0.5      +0.j 0.8660254+0.j 0.       +0.j 0.       +0.j 0.       +0.j
+ 0.       +0.j 0.       +0.j 0.       +0.j]
+</code></pre></div></div>
+
+<h3 id="generate-the-circuit">Generate the circuit</h3>
+
+<p>The circuit shown in the initial figure of this post is built.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">circuit</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span> 
+<span class="n">circuit</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">Alice</span><span class="p">)</span> 
+<span class="n">circuit</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">Alice</span><span class="p">,</span><span class="n">Bob</span><span class="p">)</span> <span class="c1"># in this par of the circuit generate the bell state from tutorial number 1
+</span>
+
+<span class="n">circuit</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">circuit</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">Alice</span><span class="p">)</span>
+<span class="n">circuit</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="n">circuit</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">circuit</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">key1</span><span class="p">)</span>
+<span class="n">circuit</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">Alice</span><span class="p">,</span> <span class="n">key2</span><span class="p">)</span> <span class="c1"># at this point in the cycle the measurement of msg and Alice is generated 
+</span>
+
+<span class="n">circuit</span><span class="p">.</span><span class="n">z</span><span class="p">(</span><span class="n">Bob</span><span class="p">).</span><span class="n">c_if</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># this command if the measure in key1 if is one then  in the Bob qubit apply a Z gate
+</span><span class="n">circuit</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">Bob</span><span class="p">).</span><span class="n">c_if</span><span class="p">(</span><span class="n">key2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># this command if the measure in key2 if is one then  in the Bob qubit apply a X gate
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;qiskit.circuit.instructionset.InstructionSet at 0x7f4f57eaad10&gt;
+</code></pre></div></div>
+
+<h3 id="show-the-circuit">Show the circuit</h3>
+
+<p>show the circuit that at this moment representate the same circuit for the quantum teleportation</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">circuit</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">      ┌─────────────────────────┐ ░            ░      ┌───┐ ░ ┌─┐          »
+q0_0: ┤ initialize(0.5,0.86603) ├─░────────────░───■──┤ H ├─░─┤M├──────────»
+      └─────────────────────────┘ ░ ┌───┐      ░ ┌─┴─┐└───┘ ░ └╥┘┌─┐       »
+q1_0: ────────────────────────────░─┤ H ├──■───░─┤ X ├──────░──╫─┤M├───────»
+                                  ░ └───┘┌─┴─┐ ░ └───┘      ░  ║ └╥┘ ┌───┐ »
+q2_0: ────────────────────────────░──────┤ X ├─░────────────░──╫──╫──┤ Z ├─»
+                                  ░      └───┘ ░            ░  ║  ║  └─┬─┘ »
+                                                               ║  ║ ┌──┴──┐»
+c0: 1/═════════════════════════════════════════════════════════╩══╬═╡ = 1 ╞»
+                                                               0  ║ └─────┘»
+c1: 1/════════════════════════════════════════════════════════════╩════════»
+                                                                  0        »
+c2: 1/═════════════════════════════════════════════════════════════════════»
+                                                                           »
+«             
+«q0_0: ───────
+«             
+«q1_0: ───────
+«       ┌───┐ 
+«q2_0: ─┤ X ├─
+«       └─┬─┘ 
+«c0: 1/═══╪═══
+«      ┌──┴──┐
+«c1: 1/╡ = 1 ╞
+«      └─────┘
+«c2: 1/═══════
+«             </pre>
+
+<h3 id="produce-the-simulation-result">Produce the simulation result</h3>
+
+<p>Using the get_satevector method to verify the output vector changes, where the values were changed from qubit msg to qubit Bob</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="p">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s">'statevector_simulator'</span><span class="p">)</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="p">.</span><span class="n">result</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">get_statevector</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ 0.       +0.00000000e+00j -0.       +0.00000000e+00j
+  0.5      +0.00000000e+00j  0.       +0.00000000e+00j
+  0.       +0.00000000e+00j  0.       +0.00000000e+00j
+  0.8660254-1.06057524e-16j -0.       +0.00000000e+00j]
+</code></pre></div></div>
+
+<h1 id="cirq-program">Cirq Program</h1>
+<p>The cirq program is generated to pass the information from one qubit to another</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#call the libraries
+</span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">cirq</span>
+
+<span class="n">msg</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">GridQubit</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># call the qubit (0,0)
+</span><span class="n">Alice</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">GridQubit</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># call the qubit (0,1)
+</span><span class="n">Bob</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">GridQubit</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">zero_state</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="c1"># generate the value for th message i n the state 0
+</span></code></pre></div></div>
+
+<p>The information preparation of the qubit msg is generated and the vector you have up to this point is shown</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sim</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">Simulator</span><span class="p">()</span>
+<span class="n">q0</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">LineQubit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">init_value</span> <span class="o">=</span>  <span class="n">cirq</span><span class="p">.</span><span class="n">Circuit</span><span class="p">()</span> <span class="c1"># generate a qubit
+</span><span class="n">init_value</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">Y</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">zero_state</span><span class="p">)))</span> <span class="c1"># rotate the qubit 
+</span><span class="n">message</span> <span class="o">=</span> <span class="n">sim</span><span class="p">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">init_value</span><span class="p">)</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="n">init_value</span><span class="p">)</span> <span class="c1"># show the circuit fro mthe qubit msg
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">final_state</span><span class="p">)</span> <span class="c1"># show the vector state from the circuit of init_value
+</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">bloch_vector_from_state_vector</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">final_state</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"x: "</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">around</span><span class="p">(</span><span class="n">expected</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s">"y: "</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">around</span><span class="p">(</span><span class="n">expected</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span>
+          <span class="s">"z: "</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">around</span><span class="p">(</span><span class="n">expected</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">4</span><span class="p">))</span> <span class="c1"># show the rotation in the coordinate x,y and z
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(0, 0): ───Y^(7/11)───
+[0.2924804 +0.45490175j 0.45490175+0.7075196j ]
+x:  0.9098 y:  0.0 z:  -0.415
+</code></pre></div></div>
+
+<h2 id="generate-the-circuit-1">Generate the circuit</h2>
+
+<p>Repeat the before cell and adder the circuit from the quantum teleportation image.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">circuit</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">Circuit</span><span class="p">()</span> <span class="c1"># call the method circuit
+</span>
+<span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">Y</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">zero_state</span><span class="p">)))</span> <span class="c1"># initialize the qubit
+</span><span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">cirq</span><span class="p">.</span><span class="n">H</span><span class="p">(</span><span class="n">Alice</span><span class="p">),</span> <span class="n">cirq</span><span class="p">.</span><span class="n">CNOT</span><span class="p">(</span><span class="n">Alice</span><span class="p">,</span> <span class="n">Bob</span><span class="p">)])</span> <span class="c1"># generate the bell state from tutorial 1
+</span><span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">cirq</span><span class="p">.</span><span class="n">CNOT</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">Alice</span><span class="p">),</span> <span class="n">cirq</span><span class="p">.</span><span class="n">H</span><span class="p">(</span><span class="n">msg</span><span class="p">)])</span> <span class="c1">#
+</span><span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">Alice</span><span class="p">))</span> <span class="c1"># measure the msg and Alice qubits
+</span><span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">cirq</span><span class="p">.</span><span class="n">CNOT</span><span class="p">(</span><span class="n">Alice</span><span class="p">,</span> <span class="n">Bob</span><span class="p">),</span> <span class="n">cirq</span><span class="p">.</span><span class="n">CZ</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">Bob</span><span class="p">)])</span> <span class="c1"># depend of the previous valures apply X or Z gate
+</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Circuit:"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span> <span class="c1"># print the circuit at this moment
+</span>
+<span class="c1"># Simulate the circuit.
+</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">Simulator</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span> <span class="c1"># call the Simulator method
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Circuit:
+(0, 0): ───Y^(7/11)───────@───H───M───────@───
+                          │       │       │
+(0, 1): ───H──────────@───X───────M───@───┼───
+                      │               │   │
+(0, 2): ──────────────X───────────────X───@───
+</code></pre></div></div>
+
+<p>Show the vector state</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">answer</span> <span class="o">=</span>  <span class="n">simulator</span><span class="p">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+<span class="n">answer</span><span class="p">.</span><span class="n">final_state</span> <span class="c1"># final state show the vector final
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([ 0.29248038+0.45490175j,  0.45490175+0.70751953j,
+        0.        +0.j        ,  0.        +0.j        ,
+        0.        +0.j        , -0.        +0.j        ,
+        0.        +0.j        , -0.        +0.j        ], dtype=complex64)
+</code></pre></div></div>
+
+<p>Print the coordinate values from the qubit Bob and obtain the same rotation from the qubit msg</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">bloch_vector_from_state_vector</span><span class="p">(</span><span class="n">answer</span><span class="p">.</span><span class="n">final_state</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"x: "</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">around</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s">"y: "</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">around</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span>
+          <span class="s">"z: "</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">around</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">4</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x:  0.9098 y:  -0.0 z:  -0.415
+</code></pre></div></div>
+
+<h1 id="qdk-program">QDK Program</h1>
+<p>The QDK (using Q#) program is generated to pass the information from one qubit to another.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">operation</span> <span class="n">Teleport</span> <span class="p">(</span><span class="n">msg</span> <span class="p">:</span> <span class="n">Qubit</span><span class="p">,</span> <span class="n">Bob</span> <span class="p">:</span> <span class="n">Qubit</span><span class="p">)</span> <span class="p">:</span> <span class="n">Unit</span> <span class="p">{</span> <span class="o">//</span> <span class="n">generate</span> <span class="n">the</span> <span class="n">circuit</span> <span class="k">for</span> <span class="n">the</span> <span class="n">quantum</span> <span class="n">teeportation</span>
+
+    <span class="n">using</span> <span class="p">(</span><span class="n">Alice</span> <span class="o">=</span> <span class="n">Qubit</span><span class="p">())</span> <span class="p">{</span>
+        <span class="o">//</span> <span class="n">Create</span> <span class="n">the</span> <span class="n">bell</span> <span class="n">state</span> <span class="n">to</span> <span class="n">send</span> <span class="n">the</span> <span class="n">message</span><span class="p">.</span>
+        <span class="n">H</span><span class="p">(</span><span class="n">Alice</span><span class="p">);</span>
+        <span class="n">CNOT</span><span class="p">(</span><span class="n">Alice</span><span class="p">,</span> <span class="n">Bob</span><span class="p">);</span>
+
+        
+        <span class="n">CNOT</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">Alice</span><span class="p">);</span>
+        <span class="n">H</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+        <span class="n">let</span> <span class="n">key1</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+        <span class="n">let</span> <span class="n">key2</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">Alice</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Depend</span> <span class="n">of</span> <span class="n">the</span> <span class="n">values</span> <span class="n">i</span> <span class="n">nthe</span> <span class="n">measure</span> <span class="n">of</span> <span class="n">key1</span> <span class="ow">or</span> <span class="n">key2</span> <span class="nb">apply</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">gate</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">key1</span> <span class="o">==</span> <span class="n">One</span><span class="p">)</span> <span class="p">{</span> <span class="n">Z</span><span class="p">(</span><span class="n">Bob</span><span class="p">);</span> <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">key2</span> <span class="o">==</span> <span class="n">One</span><span class="p">)</span> <span class="p">{</span> <span class="n">X</span><span class="p">(</span><span class="n">Bob</span><span class="p">);</span> <span class="p">}</span>
+
+        <span class="o">//</span> <span class="n">Reset</span> <span class="n">the</span> <span class="s">"Alice"</span> <span class="n">qubit</span><span class="p">.</span>
+        <span class="n">Reset</span><span class="p">(</span><span class="n">Alice</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<ul><li>Teleport</li></ul>
+
+<p>Help functions to generate the random message qubit and validate that its value is teleported to Bob’s qubit</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nb">open</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Quantum</span><span class="p">.</span><span class="n">Intrinsic</span><span class="p">;</span>
+    <span class="nb">open</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Quantum</span><span class="p">.</span><span class="n">Canon</span><span class="p">;</span>
+    <span class="nb">open</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Quantum</span><span class="p">.</span><span class="n">Math</span><span class="p">;</span>
+
+    <span class="o">//</span> <span class="n">The</span> <span class="n">qubit</span> <span class="n">value</span> <span class="n">to</span> <span class="o">|+</span><span class="err">⟩</span><span class="p">.</span>
+    <span class="n">operation</span> <span class="n">SetToPlus</span><span class="p">(</span><span class="n">q</span><span class="p">:</span> <span class="n">Qubit</span><span class="p">)</span> <span class="p">:</span> <span class="n">Unit</span> <span class="p">{</span>
+        <span class="n">Reset</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">H</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="n">The</span> <span class="n">qubitvalue</span> <span class="n">to</span> <span class="o">|</span><span class="err">−⟩</span><span class="p">.</span>
+    <span class="n">operation</span> <span class="n">SetToMinus</span><span class="p">(</span><span class="n">q</span><span class="p">:</span> <span class="n">Qubit</span><span class="p">)</span> <span class="p">:</span> <span class="n">Unit</span> <span class="p">{</span>
+        <span class="n">Reset</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">X</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">H</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="k">if</span> <span class="n">the</span> <span class="n">quit</span> <span class="ow">is</span> <span class="o">|+&gt;</span> <span class="k">return</span> <span class="n">true</span>
+    <span class="n">operation</span> <span class="n">IsPlus</span><span class="p">(</span><span class="n">q</span><span class="p">:</span> <span class="n">Qubit</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">Measure</span><span class="p">([</span><span class="n">PauliX</span><span class="p">],</span> <span class="p">[</span><span class="n">q</span><span class="p">])</span> <span class="o">==</span> <span class="n">Zero</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="c1"># Summary
+</span>    <span class="o">//</span> <span class="k">if</span> <span class="n">the</span> <span class="n">qubit</span> <span class="ow">is</span> <span class="o">|-&gt;</span> <span class="p">(</span><span class="k">return</span> <span class="n">true</span>
+    <span class="n">operation</span> <span class="n">IsMinus</span><span class="p">(</span><span class="n">q</span><span class="p">:</span> <span class="n">Qubit</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">Measure</span><span class="p">([</span><span class="n">PauliX</span><span class="p">],</span> <span class="p">[</span><span class="n">q</span><span class="p">])</span> <span class="o">==</span> <span class="n">One</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="n">Generate</span> <span class="n">a</span> <span class="n">random</span> <span class="n">rotation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">qubit</span> <span class="n">msg</span>
+    <span class="n">operation</span> <span class="n">PrepareRandomMessage</span><span class="p">(</span><span class="n">q</span><span class="p">:</span> <span class="n">Qubit</span><span class="p">)</span> <span class="p">:</span> <span class="n">Unit</span> <span class="p">{</span>
+        <span class="n">let</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">RandomInt</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">choice</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Message</span><span class="p">(</span><span class="s">"Sending |-&gt;"</span><span class="p">);</span>
+            <span class="n">SetToMinus</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">Message</span><span class="p">(</span><span class="s">"Sending |+&gt;"</span><span class="p">);</span>
+            <span class="n">SetToPlus</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/snippet:(1,94): warning QS6003: The namespace is already open.
+/snippet:(2,10): warning QS6003: The namespace is already open.
+</code></pre></div></div>
+
+<ul><li>IsMinus</li><li>IsPlus</li><li>PrepareRandomMessage</li><li>SetToMinus</li><li>SetToPlus</li></ul>
+
+<p>Apply the quantum teleportation</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="n">generate</span> <span class="n">the</span> <span class="n">program</span>
+<span class="n">operation</span> <span class="n">TeleportRandomMessage</span> <span class="p">()</span> <span class="p">:</span> <span class="n">Unit</span> <span class="p">{</span>
+
+    <span class="n">using</span> <span class="p">(</span><span class="n">qubits</span> <span class="o">=</span> <span class="n">Qubit</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="p">{</span>
+
+        <span class="o">//</span><span class="n">Identify</span> <span class="n">the</span> <span class="n">msg</span> <span class="ow">and</span> <span class="n">Alice</span> <span class="n">qubit</span>
+        <span class="n">let</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">qubits</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="n">let</span> <span class="n">Bob</span> <span class="o">=</span> <span class="n">qubits</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+        <span class="n">PrepareRandomMessage</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span> <span class="o">//</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">random</span> <span class="n">value</span> <span class="k">for</span> <span class="n">msg</span> <span class="n">qubit</span>
+
+        <span class="o">//</span><span class="n">Apply</span> <span class="n">the</span> <span class="n">quntum</span> <span class="n">teleportation</span>
+        <span class="n">Teleport</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">Bob</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Report</span> <span class="n">the</span> <span class="n">message</span> <span class="n">received</span> <span class="k">from</span> <span class="n">Alice</span> <span class="n">to</span> <span class="n">Bob</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">IsPlus</span><span class="p">(</span><span class="n">Bob</span><span class="p">))</span>  <span class="p">{</span> <span class="n">Message</span><span class="p">(</span><span class="s">"Received |+&gt;"</span><span class="p">);</span> <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">IsMinus</span><span class="p">(</span><span class="n">Bob</span><span class="p">))</span> <span class="p">{</span> <span class="n">Message</span><span class="p">(</span><span class="s">"Received |-&gt;"</span><span class="p">);</span> <span class="p">}</span>
+
+        <span class="o">//</span> <span class="n">Reset</span> <span class="nb">all</span> <span class="n">of</span> <span class="n">the</span> <span class="n">qubits</span> 
+        <span class="n">ResetAll</span><span class="p">(</span><span class="n">qubits</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul><li>TeleportRandomMessage</li></ul>
+
+<p>Run the quantum teleportation program in Q#</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">simulate</span> <span class="n">TeleportRandomMessage</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sending |-&gt;
+Received |-&gt;
+
+
+
+
+
+()
+</code></pre></div></div>
+
+<h1 id="silq-program">Silq Program</h1>
+
+<p>The silq program is generated to pass the information from one qubit to another.</p>
+
+<h2 id="generate-cnot-function">Generate cnot function</h2>
+
+<p>To generate the denied controlled gate it is necessary to indicate two boolean variables: x,y where x represents the control qubit and if it is true it denies the variable y.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="n">B</span> <span class="n">means</span> <span class="n">the</span> <span class="n">boolean</span> <span class="nb">type</span> 
+<span class="o">//</span> <span class="n">const</span> <span class="n">mens</span> <span class="n">constant</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">boolean</span> <span class="n">variable</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">cnot</span><span class="p">(</span><span class="n">const</span> <span class="n">x</span><span class="p">:</span><span class="n">B</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">B</span><span class="p">):</span><span class="n">B</span><span class="p">{</span> <span class="o">//</span><span class="n">generate</span> <span class="n">the</span> <span class="n">function</span> <span class="n">Cnot</span> <span class="n">gate</span>
+  <span class="k">if</span> <span class="n">x</span><span class="p">{</span>  <span class="o">//</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="n">true</span>  <span class="nb">apply</span> <span class="n">the</span> <span class="n">sentence</span> <span class="n">inside</span> <span class="n">the</span> <span class="p">{}</span> 
+    <span class="n">y</span> <span class="p">:</span><span class="o">=</span> <span class="n">X</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>  <span class="o">//</span> <span class="nb">apply</span> <span class="n">X</span> <span class="n">gate</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">boolean</span> <span class="n">variable</span> <span class="n">x</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">y</span><span class="p">;</span> <span class="o">//</span> <span class="k">return</span> <span class="n">the</span> <span class="n">only</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="generate--teleportation-function">Generate  Teleportation Function</h1>
+<p>Apply the same structure for the image in the description,it is conditioned that the program is performed 100 times to verify that it is the same value of the message qubit</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">transport</span><span class="p">(){</span>
+  <span class="n">count</span> <span class="p">:</span><span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">//</span> <span class="n">intege</span> <span class="n">variable</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.</span><span class="p">.</span><span class="mi">100</span><span class="p">){</span> <span class="o">//</span> <span class="n">iteration</span> <span class="k">from</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">99</span>
+     
+      <span class="n">msg</span> <span class="p">:</span><span class="o">=</span> <span class="mi">0</span><span class="p">:</span><span class="n">B</span><span class="p">;</span>   <span class="o">//</span> <span class="n">boolean</span> <span class="n">variable</span> <span class="n">to</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">zero</span> <span class="ow">and</span> <span class="n">reprsentate</span> <span class="n">the</span> <span class="n">message</span> 
+      <span class="n">Alice</span> <span class="p">:</span><span class="o">=</span> <span class="mi">0</span><span class="p">:</span><span class="n">B</span><span class="p">;</span> 
+      <span class="n">Bob</span> <span class="p">:</span><span class="o">=</span> <span class="mi">0</span><span class="p">:</span><span class="n">B</span><span class="p">;</span>
+      
+      <span class="n">zero_state</span> <span class="o">=</span> <span class="mi">75</span><span class="p">;</span>
+      <span class="n">theta</span><span class="p">:</span><span class="o">=</span><span class="mi">2</span><span class="err">·</span><span class="n">asin</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">zero_state</span><span class="p">));</span> <span class="o">//</span><span class="n">prepare</span> <span class="n">the</span>  <span class="n">state</span>
+      <span class="n">msg</span> <span class="p">:</span><span class="o">=</span> <span class="n">rotY</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="n">msg</span><span class="p">);</span>
+      
+      <span class="n">Alice</span> <span class="p">:</span><span class="o">=</span> <span class="n">H</span><span class="p">(</span><span class="n">Alice</span><span class="p">);</span> <span class="o">//</span> <span class="n">generate</span> <span class="n">the</span> <span class="n">Bel</span> <span class="n">state</span> <span class="k">from</span> <span class="n">the</span> <span class="n">tutorial</span> <span class="mi">1</span>
+      <span class="n">Bob</span> <span class="p">:</span><span class="o">=</span> <span class="n">cx</span><span class="p">(</span><span class="n">Alice</span><span class="p">,</span><span class="n">Bob</span><span class="p">);</span>
+      <span class="n">Alice</span> <span class="p">:</span><span class="o">=</span> <span class="n">cx</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span><span class="n">Alice</span><span class="p">);</span>
+      <span class="n">msg</span> <span class="p">:</span><span class="o">=</span> <span class="n">H</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+      
+      <span class="n">msg</span> <span class="p">:</span><span class="o">=</span> <span class="n">measure</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span> <span class="o">//</span> <span class="n">measure</span> <span class="n">the</span> <span class="n">msg</span> <span class="n">qubit</span>
+      <span class="n">Alice</span> <span class="p">:</span><span class="o">=</span> <span class="n">measure</span><span class="p">(</span><span class="n">Alice</span><span class="p">);</span> <span class="o">//</span> <span class="n">measure</span> <span class="n">Alice</span> <span class="n">qubit</span>
+      
+      <span class="k">if</span> <span class="n">msg</span><span class="o">==</span><span class="mi">1</span><span class="p">{</span> 
+          <span class="n">Bob</span> <span class="p">:</span><span class="o">=</span> <span class="n">Z</span><span class="p">(</span><span class="n">Bob</span><span class="p">);</span> <span class="o">//</span> <span class="k">if</span> <span class="n">msg</span> <span class="ow">is</span> <span class="mi">1</span> <span class="nb">apply</span> <span class="n">Z</span> <span class="n">gate</span> <span class="ow">in</span>  <span class="n">Bob</span> <span class="n">gate</span>
+      <span class="p">}</span>
+      <span class="k">if</span> <span class="n">Alice</span><span class="o">==</span><span class="mi">1</span><span class="p">{</span>
+          <span class="n">Bob</span> <span class="p">:</span><span class="o">=</span> <span class="n">X</span><span class="p">(</span><span class="n">Bob</span><span class="p">);</span> <span class="o">//</span> <span class="k">if</span> <span class="n">msg</span> <span class="ow">is</span> <span class="mi">1</span> <span class="nb">apply</span> <span class="n">Z</span> <span class="n">gate</span> <span class="ow">in</span>  <span class="n">Bob</span> <span class="n">gate</span>
+      <span class="p">}</span>
+
+      <span class="n">Bob</span> <span class="p">:</span><span class="o">=</span> <span class="n">measure</span><span class="p">(</span><span class="n">Bob</span><span class="p">);</span>
+      <span class="k">if</span> <span class="n">Bob</span><span class="o">==</span><span class="mi">1</span><span class="p">{</span> 
+          <span class="n">count</span><span class="o">+=</span> <span class="mi">1</span><span class="p">;</span> <span class="o">//</span> <span class="k">if</span> <span class="n">Bob</span><span class="o">==</span><span class="mi">1</span> <span class="n">add</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">the</span> <span class="n">variable</span> <span class="n">count</span>
+      <span class="p">}</span>
+
+   <span class="p">}</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">);</span> <span class="o">//</span> <span class="k">print</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">integer</span> <span class="n">vaariable</span> <span class="n">count</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="define-main-function">Define main function</h2>
+
+<p>initialize the main function to the program, it calls the function transprot() and return a default value of return in 1</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">(){</span> <span class="o">//</span> <span class="n">main</span> <span class="n">function</span>
+    <span class="n">transport</span><span class="p">();</span>
+    <span class="k">return</span>  <span class="n">measure</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="expected-outputs">Expected outputs</h2>
+
+<p>The program print the value of the count in the Bob qubit, this one is approximately  equal to the value of the variable zero_state, and below of this print the default reaturn that  we indicate as 1.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">75</span>  <span class="o">//</span> <span class="n">the</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">same</span> <span class="k">from</span>  <span class="n">the</span> <span class="n">msg</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The previous silq code is in the file called transform.sql</p>
+
+<h1 id="strawberry-fields">Strawberry Fields</h1>
+
+<p>The strawberry fields  program is generated to pass the information from one qubit to another.</p>
+
+<p>import the strawberryields libraries for generare the circuit and run it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">strawberryfields</span> <span class="k">as</span> <span class="n">sf</span>
+<span class="kn">from</span> <span class="nn">strawberryfields.ops</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># initialize engine and program objects
+</span><span class="n">eng</span> <span class="o">=</span> <span class="n">sf</span><span class="p">.</span><span class="n">Engine</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s">"gaussian"</span><span class="p">)</span>
+<span class="n">prog</span> <span class="o">=</span> <span class="n">sf</span><span class="p">.</span><span class="n">Program</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">with</span> <span class="n">prog</span><span class="p">.</span><span class="n">context</span> <span class="k">as</span> <span class="n">q</span><span class="p">:</span>
+    <span class="c1"># create initial states
+</span>    <span class="n">Squeezed</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">Squeezed</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>  <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">Squeezed</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>  <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="c1"># apply the gate to be teleported
+</span>    <span class="n">Pgate</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># conditional phase entanglement
+</span>    <span class="n">CZgate</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">CZgate</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="c1"># projective measurement onto
+</span>    <span class="c1"># the position quadrature
+</span>    <span class="n">Fourier</span><span class="p">.</span><span class="n">H</span> <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">MeasureX</span> <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">Fourier</span><span class="p">.</span><span class="n">H</span> <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">MeasureX</span> <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># compare against the expected output
+</span>    <span class="c1"># X(q1/sqrt(2)).F.P(0.5).X(q0/sqrt(0.5)).F.|z&gt;
+</span>    <span class="c1"># not including the corrections
+</span>    <span class="n">Squeezed</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">Fourier</span>       <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="c1">#Xgate(q[0])   | q[3]
+</span>    <span class="n">Pgate</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>    <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">Fourier</span>       <span class="o">|</span> <span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="c1">##Xgate(q[1])   | q[3]
+</span>    <span class="c1"># end circuit
+</span><span class="n">prog</span><span class="p">.</span><span class="k">print</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Squeezed(0.1, 0) | (q[0])
+Squeezed(-2, 0) | (q[1])
+Squeezed(-2, 0) | (q[2])
+Pgate(0.5) | (q[1])
+CZgate(1) | (q[0], q[1])
+CZgate(1) | (q[1], q[2])
+Fourier.H | (q[0])
+MeasureX | (q[0])
+Fourier.H | (q[1])
+MeasureX | (q[1])
+Squeezed(0.1, 0) | (q[3])
+Fourier | (q[3])
+Pgate(0.5) | (q[3])
+Fourier | (q[3])
+</code></pre></div></div>
+
+<p>Print the solution for the circuit</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">results</span> <span class="o">=</span> <span class="n">eng</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">prog</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">reduced_gaussian</span><span class="p">([</span><span class="mi">2</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">reduced_gaussian</span><span class="p">([</span><span class="mi">3</span><span class="p">]))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(array([ 3.44420453, -3.83066208]), array([[ 1.11257261, -0.5851662 ],
+       [-0.5851662 ,  1.20659044]]))
+(array([0., 0.]), array([[ 1.12408144, -0.61070138],
+       [-0.61070138,  1.22140276]]))
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#cirq" class="page__taxonomy-item p-category" rel="tag">Cirq</a><span class="sep">, </span>
+    
+      <a href="/tags/#jupyter-notebook" class="page__taxonomy-item p-category" rel="tag">jupyter notebook</a><span class="sep">, </span>
+    
+      <a href="/tags/#q" class="page__taxonomy-item p-category" rel="tag">Q#</a><span class="sep">, </span>
+    
+      <a href="/tags/#qdk" class="page__taxonomy-item p-category" rel="tag">QDK</a><span class="sep">, </span>
+    
+      <a href="/tags/#qiskit" class="page__taxonomy-item p-category" rel="tag">Qiskit</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-computing" class="page__taxonomy-item p-category" rel="tag">quantum computing</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-teleportation" class="page__taxonomy-item p-category" rel="tag">quantum teleportation</a><span class="sep">, </span>
+    
+      <a href="/tags/#silq" class="page__taxonomy-item p-category" rel="tag">Silq</a><span class="sep">, </span>
+    
+      <a href="/tags/#strawberry-fields" class="page__taxonomy-item p-category" rel="tag">Strawberry Fields</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-09-06T00:00:00+00:00">September 6, 2020</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Quantum+Programming+Tutorial+2%3A+Quantum+Teleportation%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-tutorial-2-teleportation%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-tutorial-2-teleportation%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullstackquantumcomputation.tech/blog/post-tutorial-2-teleportation/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Quantum+Programming+Tutorial+2%3A+Quantum+Teleportation%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-tutorial-2-teleportation%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/grad-app-workshop/" class="pagination--pager" title="Workshop on Applying to Master’s and PhD Programs Internationally">Previous</a>
+    
+    
+      <a href="/blog/post-tutorial-QonnectFour/" class="pagination--pager" title="Qonnect four - Making a quantum game">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/QuantumVerse-Game/" rel="permalink">Quantumverse Game
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">QuantumVerse 🌌🎮- A Gamer’s Bot!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/File-Transfer-Using-QC-Protocol-Cirq/" rel="permalink">File Transfer Using Qc Protocol Cirq
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/quaze-tutorial/" rel="permalink">Tutorial to build a Quantum inspired puzzle game in JS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to cr...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-simulation/" rel="permalink">Electronic Simulation of Molecules using Pennylane
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://discord.gg/NDm9e9W" rel="nofollow noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/QuantumUniversalEducation" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/company/quantum-universal-education/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/QuantUniEd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://fullstackquantumcomputation.tech">Full-Stack Quantum Computation</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

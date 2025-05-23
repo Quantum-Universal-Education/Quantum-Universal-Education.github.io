@@ -1,0 +1,1035 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Qubits vs Bits | Full-Stack Quantum Computation</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Full-Stack Quantum Computation">
+<meta property="og:title" content="Qubits vs Bits">
+<meta property="og:url" content="https://fullstackquantumcomputation.tech/blog/qubits-vs-bits/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2022-06-05T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://fullstackquantumcomputation.tech/blog/qubits-vs-bits/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Full-Stack Quantum Computation Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/FSQC-small.png" alt="Full-Stack Quantum Computation"></a>
+        
+        <a class="site-title" href="/">
+          Full-Stack Quantum Computation
+          <span class="site-subtitle">Community-driven, open-source education resources</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/journal-club/"
+                
+                
+              >Journal Club</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/qce24-workshop/"
+                
+                
+              >QCE24 Workshop</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about-us/"
+                
+                
+              >About us</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/biopics/maria_g.jpg" alt="Maria Gragera Garces" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Maria Gragera Garces</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Curated By:</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Lia Yeh</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+<!--added-->
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Qubits vs Bits">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2022-06-05T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://fullstackquantumcomputation.tech/blog/qubits-vs-bits/" itemprop="url">Qubits vs Bits
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<p># 
+This tutorial will explain the fundamental differences between quantum and classical data storage units, and how they affect computer performance. This notebook has been designed for non-technical readers, who want to understand how qubits differ from bits and how do these differences make quantum computers different from classical computers.</p>
+
+<h3 id="binary-bits">Binary bits</h3>
+<p>How do computers store data? What allows us to communicate with modern machines?
+Regardless of academic background, anyone who has seen the Matrix films will intuitively think of a series of 0’s &amp; 1’s. Something like this comes to mind (run the code below to see a randomly generated binary string):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">binary_numbers</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+   
+    <span class="n">n</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="n">choice</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+ 
+<span class="n">binary_string</span> <span class="o">=</span> <span class="n">binary_numbers</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">binary_string</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0100101110000001110001000111010010111010100111000100000100010111010010011101001001110010101100100001
+</code></pre></div></div>
+
+<p>In essence, modern computers are massive calculators that know how to store an interpret ridiculous amounts of data. Each file, video, document and image in our laptops, phones, smartwatches, etc. can be and is represented by a (very long) series of numbers. Therefore, computational power boils down to having an efficient and fast system of storing and processing this data. Our current devices use the bit system.</p>
+
+<p>X bits are capable of representing a number between 0 and \(2^x\). That might not seem like a lot at first, but the above creates a series of 100 bits, and therefore can represent any number between 0 &amp; 1267650600228229401496703205376​… For reference as of the 3/6/22 Elon Musk’s net worth is estimated at 2181000000 (218.1 billion) US $. Quite impressive for a sequence of 1’s and 0’s.</p>
+
+<p>The word “bit” stands for binary digit. The binary number system is the most basic unit of information, and allows us to store any number as a combination of 0’s and 1’s. 
+The way value is associated with each 1 or 0 is based on their position in the string. For example, in binary, 10 represents the number 2 but 100 represent number 4. From right to left each bit multiplies \(2^n\), with n being it’s position. The idea looks something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                             64   |  32   |  16   |   8   |   4   |   2   |   1  
+                             ____________________________________________________   
+                              1   |   0   |   0   |   0   |   0   |   1   |   1     = 67
+                             ____________________________________________________   
+                              0   |   0   |   1   |   0   |   1   |   0   |   0     = 20
+                             ____________________________________________________   
+                              0   |   0   |   0   |   0   |   0   |   0   |   0     = 0
+</code></pre></div></div>
+
+<p>The following piece of code is a fun way for you to become more familiar with the idea of binary. It will output the binary equivalent of any number you feed it (the default is set to 100). Have fun testing it!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="mi">6</span><span class="si">:</span><span class="mi">100</span><span class="n">b</span><span class="si">}</span><span class="s">'</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'                                                                                                 110'
+</code></pre></div></div>
+
+<h3 id="qubits--the-bloch-sphere">Qubits &amp; the Bloch sphere</h3>
+
+<p>Now that we have built and intuition on the mathematical representation of data in modern computers, let’s look at why Quantum computers will run on a different system.</p>
+
+<p>Unlike modern classical computers, quantum computers base their storage on quantum particle superposition. Quantum theory argues that particles have states that dictate their behaviour. These states are very similar to our binary system, they are often also represented by 0’s &amp; 1’s. But unlike bits, they represent a much more complex data storage system.</p>
+
+<p>Scientists often like to represent qubits through  Bloch’s sphere. Run the code below to see how a Bloch sphere looks like:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">qutip</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">Bloch</span><span class="p">()</span>
+<span class="n">b</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/Maria_QvsB/output_10_0.png" alt="png" /></p>
+
+<p><img src="/assets/images/Maria_QvsB/output_10_1.png" alt="png" /></p>
+
+<p>The idea behind this representation is that a Qubit has a state 0 or \(\vert 0 \rangle\) if it’s amplitude* lies at the top of the sphere, &amp; a state \(\vert 1 \rangle\) if it lies at the bottom.</p>
+
+<h3 id="amplitudes-and-vectors">Amplitudes and vectors</h3>
+
+<p>With these ideas in place, let’s start decoding some of the very intimidating math behind qubits.
+A qubit is often represented by the following formula:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                                                 |ψ⟩=a|0⟩+b|1⟩
+</code></pre></div></div>
+
+<p>This mathematical representation allows us to position our qubit |ψ⟩ in the Bloch sphere. The variables a &amp; b give us the qubit’s coordinates with respect to it’s allowed states \(\vert 0 \rangle\) &amp; \(\vert 1 \rangle\).
+Run the code below, to get a better idea of what type of information a &amp; b provide:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="n">qutip</span><span class="p">.</span><span class="n">Bloch</span><span class="p">()</span>
+<span class="n">pnt</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="o">/</span><span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mf">1.</span><span class="o">/</span><span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mf">1.</span><span class="o">/</span><span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+<span class="n">b</span><span class="p">.</span><span class="n">add_points</span><span class="p">(</span><span class="n">pnt</span><span class="p">)</span>
+<span class="n">vec</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">b</span><span class="p">.</span><span class="n">add_vectors</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+<span class="n">up</span> <span class="o">=</span> <span class="n">qutip</span><span class="p">.</span><span class="n">basis</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">b</span><span class="p">.</span><span class="n">add_states</span><span class="p">(</span><span class="n">up</span><span class="p">)</span>
+<span class="n">b</span><span class="p">.</span><span class="n">render</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/Maria_QvsB/output_16_0.png" alt="png" /></p>
+
+<p>In this case variables a &amp; b allow us to find the coordinates of our blue qubit along the x &amp; y axis.</p>
+
+<h3 id="how-is-this-different-to-the-binary-system">How is this different to the binary system?</h3>
+
+<p>In the previous example, we can see that our qubit (represented by a blue dot) is closer to the Bloch sphere’s \(\vert 0 \rangle\) pole than to it’s \(\vert 1 \rangle\) pole. Wouldn’t that imply that it represents the equivalents of a 0 bit, and that the Bloch sphere is just a confusing 3D way of explaining how particles make a choice between being in a state \(\vert 0 \rangle\) &amp; \(\vert 1 \rangle\)?</p>
+
+<p>Fortunately, no, if that was the case Quantum computers wouldn’t be very interesting.</p>
+
+<p>A qubit does not represent a “state”, but rather a superposition of states. Our example is partly in state \(\vert 0 \rangle\) and partly in state \(\vert 1 \rangle\), it holds both states simultaneously even if it might be closer to one.</p>
+
+<p>That is a difficult concept to grasp, but the following comparison to bits might make it simpler:
+With two bits we can create \(2^2\) = 4 number combinations: 11,10,01, &amp; 00 . Given that qubits hold two states at once, two qubits can hold all those combinations at once.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> X qubits can represent All values between 0 &amp; $2^x$ at a time, Y bits can represent ONE value between 0 &amp; $2^y$ at a time
+</code></pre></div></div>
+
+<p>The computational power between a quantum computer and a classical computer is astronomical. For scale, this table shows the number of qubits needed to hold a certain amount of RAM against the number of bits.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                Number of qubits	Number of bits / Number of loops	    RAM	            Time'*'
+
+                     13	                      8192	                   1 kB		      2.73x10-6 s
+                     20	                      1048576	                128 kB		    3.5x10-4s
+                     23	                      8388608	                1 MB		      2.8x10-3s
+                     33	                      8589934592	             1 GB		      2.9 s
+                     43	                      8.8x1012	               1 TB		      49 mins
+                     53	                      9.0x1015	               1 PB		      35 hours
+                     63	                      9.2x1018	               1 EB		      97.5 years
+                     1000		               1.1x10301	               1.3x10282 EB  	1.1x10284 years
+</code></pre></div></div>
+
+<p>‘*’ The time that it takes to run these operations is estimated through the following assumptions: We have a Classical Computer with a clock speed of 3 GHz. This is an average base clock speed for most professional work laptops 3.0 GHz. Let’s also assume one operation in a classical state can be done in one clock cycle.  The computer could therefore perform 3 billion operations per second.</p>
+
+<p>Qubits can undoubtedly revolutionize humanities computing power. If we are able to fully develop efficient and functional quantum computers we will be able to run simulations and models that we can now only dream of. Qubits can (and hopefully will) revolutionize weather predictions, cryptography and online security, artificial intelligence, our mathematical models, stock prediction, etc.</p>
+
+<h3 id="lets-build-a-qubit">Let’s build a qubit</h3>
+
+<p>Great! We might be at the door of an unstoppable technology that will revolutionize many industries. What can we do now? 
+Unfortunately most of us do not have direct access to qubits, and probably won’t do so for the next couple of years. So for now, we have to prepare ourselves with simulations.</p>
+
+<p>Many quantum simulators are currently available to the public (I will append a list at the end of this notebook). One of my personal favourites is SeQUeNCe, which we will be using to build our qubit.
+SeQUeNCe is an open source, discrete-event simulator for quantum networks. In order for the code below to run, you will need to install the SeQUeNCe package.
+You can download the source code from github:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                                         [https://github.com/sequence-toolbox/SeQUeNCe ](https://github.com/sequence-toolbox/SeQUeNCe ) Then navigate to its directory, and install with:
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="p">.</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  File "&lt;ipython-input-5-9101172ce427&gt;", line 1
+    $ pip install .
+    ^
+SyntaxError: invalid syntax
+</code></pre></div></div>
+
+<p>Hopefully, now that the toolbox is installed, we can start importing the libraries we need.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sequence</span> 
+
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="kn">from</span> <span class="nn">sequence.utils.encoding</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sequence.utils.encoding</span> <span class="kn">import</span> <span class="n">polarization</span>
+<span class="kn">from</span> <span class="nn">sequence.utils.quantum_state</span> <span class="kn">import</span> <span class="n">QuantumState</span>
+</code></pre></div></div>
+
+<p>Qubits are mathematical interpretations that can be used to explain and build quantum circuits over different types of quantum computers. They can take different shapes and physical formats. Depending on the technology a qubit may be a photon, a trapped ion, a superconductor, a semiconductor quantum dot, etc. If you want to become more familiar with different types of qubits, I would recommend starting with this QuTech video: <a href="https://youtu.be/oZacBmOwvz0">https://youtu.be/oZacBmOwvz0</a></p>
+
+<p>Sequence is a photonic based simulator, which means that it considers photons as it’s qubit “format”. In order to build a qubit, we will import it’s photon class.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Photon</span><span class="p">():</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">wavelength</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">encoding_type</span><span class="o">=</span><span class="n">polarization</span><span class="p">,</span>
+                <span class="n">quantum_state</span><span class="o">=</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">))):</span>
+
+                <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">wavelength</span> <span class="o">=</span> <span class="n">wavelength</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">encoding_type</span> <span class="o">=</span> <span class="n">encoding_type</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">encoding_type</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="s">"single_atom"</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="bp">None</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span> <span class="o">=</span> <span class="n">QuantumState</span><span class="p">()</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">quantum_state</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">qstate_key</span> <span class="o">=</span> <span class="bp">None</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">is_null</span> <span class="o">=</span> <span class="bp">False</span>
+
+          <span class="k">def</span> <span class="nf">entangle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">photon</span><span class="p">):</span>
+
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">entangle</span><span class="p">(</span><span class="n">photon</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">)</span>
+
+          <span class="k">def</span> <span class="nf">random_noise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">random_noise</span><span class="p">()</span>
+
+          <span class="k">def</span> <span class="nf">set_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+
+          <span class="o">@</span><span class="nb">staticmethod</span>
+          <span class="k">def</span> <span class="nf">measure</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">photon</span><span class="p">):</span>
+
+                <span class="k">return</span> <span class="n">photon</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>That’s a lot of code at once! So let’s analyze it bit by bit!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">wavelength</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">encoding_type</span><span class="o">=</span><span class="n">polarization</span><span class="p">,</span>
+                <span class="n">quantum_state</span><span class="o">=</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">))):</span>
+
+                <span class="c1">#photon values
+</span>                <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">wavelength</span> <span class="o">=</span> <span class="n">wavelength</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">encoding_type</span> <span class="o">=</span> <span class="n">encoding_type</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">encoding_type</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="s">"single_atom"</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="bp">None</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span> <span class="o">=</span> <span class="n">QuantumState</span><span class="p">()</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">quantum_state</span>
+                
+                <span class="c1">#administrative lines
+</span>                <span class="bp">self</span><span class="p">.</span><span class="n">qstate_key</span> <span class="o">=</span> <span class="bp">None</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">is_null</span> <span class="o">=</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<p>Our first function <em>init</em> gives our photon its values: a name, a wavelength, a location, an encoding type, &amp; a quantum state.
+What do these values mean?</p>
+<ul>
+  <li>Name: The photon’s name serves as a way of identifying it in bigger simulations, it won’t be of much use to us now, but can be quite useful later on.</li>
+  <li>Wavelength: A photon is the fundamental particle of light. Light behaves as a particle and a wave. This effect causes photons to behave as such, and thus to have a wavelength.</li>
+  <li>Location: As I previously mentioned sequence is a Quantum network simulator. Therefore, its purpose is to simulate how qubits behave in a quantum network. For this to be possible, we need to know where qubits ‘land’ at the end of an experiment. Thus why photons need to have a defined location with respect to the simulated network.</li>
+  <li>Encoding type: We have set this value to single_atom. The simulator allows us to consider qubits as interpretations of one or various photons. For simplification, we have chosen to use one photon as a qubit.</li>
+  <li>Quantum state: This variable will hold our quantum state data.</li>
+</ul>
+
+<p>The bottom two lines are less relevant to our objective. They simply ensure our code doesn’t “break” whilst defining the variables of a photon, and allow for more advanced adjustments.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          <span class="k">def</span> <span class="nf">entangle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">photon</span><span class="p">):</span>
+
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">entangle</span><span class="p">(</span><span class="n">photon</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Our first function, points towards a very interesting qubit effect. As we already know, qubits are far more complex than bits. They are based on quantum particle theory, and therefore behave according to quantum physics. This means, that they are affected by quantum effects. One of which is entanglement. 
+If we entangle two qubits, regardless of how far apart they might be, measure the state of one of them allows us to know the state of the other without needing to measure it. This effect is extremely valuable and useful to quantum computation, as it allows us to create connections between fundamental particles of information. I will point at further reading material at the end of this notebook.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          <span class="k">def</span> <span class="nf">random_noise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">random_noise</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Our second function creates a randomly assigned noise. Quantum noise is currently one of the biggest hurdles the industry, most overcome in order to create efficient quantum machines. Quantum noise is a direct consequence of the quantum nature of qubits. Scientist don’t yet fully understand its origin, thus why it is often assigned randomly in simulations, but various quantum error correction codes exist and are being developed to combat it. These error correction codes, make use of quantum entanglement, as a tool to “check” if qubits hold their predicted state. 
+Given that we are only building a qubit, this effect won’t cause any issues.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          <span class="k">def</span> <span class="nf">set_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Our penultimate function, allows us to set the qubits state by using default values within the simulator. These values allow us to “find” our qubit’s position in the Bloch sphere. This state is what the final code will output, and it will resemble a set of coordinates.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          <span class="o">@</span><span class="nb">staticmethod</span>
+          <span class="k">def</span> <span class="nf">measure</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">photon</span><span class="p">):</span>
+
+                <span class="k">return</span> <span class="n">photon</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Our final function measures and returns the qubit’s state.</p>
+
+<p>Now, let’s take another look at our code:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sequence</span> 
+
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="kn">from</span> <span class="nn">sequence.utils.encoding</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sequence.utils.encoding</span> <span class="kn">import</span> <span class="n">polarization</span>
+<span class="kn">from</span> <span class="nn">sequence.utils.quantum_state</span> <span class="kn">import</span> <span class="n">QuantumState</span>
+        
+<span class="k">class</span> <span class="nc">Photon</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">wavelength</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">encoding_type</span><span class="o">=</span><span class="n">polarization</span><span class="p">,</span>
+        <span class="n">quantum_state</span><span class="o">=</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">))):</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wavelength</span> <span class="o">=</span> <span class="n">wavelength</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">encoding_type</span> <span class="o">=</span> <span class="n">encoding_type</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">encoding_type</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="s">"single_atom"</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span> <span class="o">=</span> <span class="n">QuantumState</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">quantum_state</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">qstate_key</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">is_null</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">def</span> <span class="nf">entangle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">photon</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">entangle</span><span class="p">(</span><span class="n">photon</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">random_noise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">random_noise</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">set_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">quantum_state</span><span class="p">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>We have now built a basic photon structure that we can now use for scalable simulations! 🎉🎉
+As a fundamental unit of information, our qubit is not very interesting by itself (as you might see when you run the code above, there are no returns). But it is the building block of Quantum computation, and a such a crucial part of all simulations.</p>
+
+<h2 id="thank-you--congratulations-for-coming-this-far">Thank you &amp; congratulations for coming this far!</h2>
+
+<h3 id="here-are-some-further-resources-on-mentioned-topics-and-used-tools">Here are some further resources on mentioned topics and used tools:</h3>
+
+<h4 id="further-reading-material-on-bits">Further reading material on bits:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Microsoft quantum resources: https://azure.microsoft.com/en-gb/overview/what-is-a-qubit/#superposition-interference-entanglement 
+- How to build a qubit (video) : https://youtu.be/oZacBmOwvz0 #### Qutip, the tool used to plot our Bloch sphere:
+- https://qutip.org/docs/latest/guide/guide-bloch.html #### Source for our qubit/bit performance table comparison:
+- https://vincentlauzon.com/2018/03/21/quantum-computing-how-does-it-scale/#:~:text=Classical%20Bits%20vs%20qubits,on%20both%20values%20at%20once. #### SeQUenCe: 
+- https://github.com/sequence-toolbox/SeQUeNCe #### Quantum entanglement:
+- https://scienceexchange.caltech.edu/topics/quantum-science-explained/entanglement   #### Quantum noise:
+- https://en.wikipedia.org/wiki/Quantum_noise#:~:text=Quantum%20noise%20is%20observed%20in,and%20Zero%2Dpoint%20energy%20fluctuations.
+</code></pre></div></div>
+
+<h2 id="my-journey-in-quantum">My journey in Quantum</h2>
+
+<p>Hi 👋 ! Thank you for completing my short tutorial on Qubits. I’m Maria, a university undergraduate working in the Quantum Networking field. 
+As part of my degree I joined Cisco, where I have been contributing to their internal R&amp;D Quantum incubation team for the past year. My work focuses on quantum networking protocol design and simulations, and I am now actively trying to use my newly learned skills to contribute in the Quantum open source software community! In an effort to do this I am creating simple tutorials such as this one that help non-technical individuals start their quantum journey.
+If you want to see what I’m up to, feel free to follow my career on Linkedin: <a href="https://www.linkedin.com/in/maria-gragera-garces/">https://www.linkedin.com/in/maria-gragera-garces/</a></p>
+
+<h2 id="author">Author</h2>
+<p>Maria Gragera Garces, Intern at Cisco &amp; Student at the University of Bath, <a href="https://www.linkedin.com/in/maria-gragera-garces/">Linkedin</a></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#jupyter-notebook" class="page__taxonomy-item p-category" rel="tag">jupyter notebook</a><span class="sep">, </span>
+    
+      <a href="/tags/#numpy" class="page__taxonomy-item p-category" rel="tag">numpy</a><span class="sep">, </span>
+    
+      <a href="/tags/#programming-project" class="page__taxonomy-item p-category" rel="tag">programming project</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-bit" class="page__taxonomy-item p-category" rel="tag">quantum bit</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-06-05T00:00:00+00:00">June 5, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Qubits+vs+Bits%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fqubits-vs-bits%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fqubits-vs-bits%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullstackquantumcomputation.tech/blog/qubits-vs-bits/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Qubits+vs+Bits%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fqubits-vs-bits%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/quantum-hackathon/" class="pagination--pager" title="Qiskit fall fest Mexico with PIQUE">Previous</a>
+    
+    
+      <a href="/blog/molecular-vqe/" class="pagination--pager" title="Variational Quantum Eigensolver: Simulating the Electronic Structure of Molecules">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/QuantumVerse-Game/" rel="permalink">Quantumverse Game
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">QuantumVerse 🌌🎮- A Gamer’s Bot!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/File-Transfer-Using-QC-Protocol-Cirq/" rel="permalink">File Transfer Using Qc Protocol Cirq
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/quaze-tutorial/" rel="permalink">Tutorial to build a Quantum inspired puzzle game in JS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to cr...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-simulation/" rel="permalink">Electronic Simulation of Molecules using Pennylane
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://discord.gg/NDm9e9W" rel="nofollow noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/QuantumUniversalEducation" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/company/quantum-universal-education/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/QuantUniEd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://fullstackquantumcomputation.tech">Full-Stack Quantum Computation</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

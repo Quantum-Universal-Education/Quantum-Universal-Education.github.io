@@ -1,0 +1,918 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Quantum Lab | Full-Stack Quantum Computation</title>
+<meta name="description" content="A simple docker image to simulate a full Quantum laboratory">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Full-Stack Quantum Computation">
+<meta property="og:title" content="Quantum Lab">
+<meta property="og:url" content="https://fullstackquantumcomputation.tech/blog/post-quantum-lab/">
+
+
+  <meta property="og:description" content="A simple docker image to simulate a full Quantum laboratory">
+
+
+
+  <meta property="og:image" content="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-07T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://fullstackquantumcomputation.tech/blog/post-quantum-lab/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Full-Stack Quantum Computation Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/FSQC-small.png" alt="Full-Stack Quantum Computation"></a>
+        
+        <a class="site-title" href="/">
+          Full-Stack Quantum Computation
+          <span class="site-subtitle">Community-driven, open-source education resources</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/journal-club/"
+                
+                
+              >Journal Club</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/qce24-workshop/"
+                
+                
+              >QCE24 Workshop</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about-us/"
+                
+                
+              >About us</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/biopics/michael_rollin.png" alt="Michaël Rollin" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Michaël Rollin</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Curated By:</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Alberto Maldonado Romo</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+<!--added-->
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Quantum Lab">
+    <meta itemprop="description" content="A simple docker image to simulate a full Quantum laboratory">
+    <meta itemprop="datePublished" content="2021-04-07T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://fullstackquantumcomputation.tech/blog/post-quantum-lab/" itemprop="url">Quantum Lab
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>A simple docker image to simulate a full <em>Quantum laboratory</em></p>
+
+<h2 id="abstract">Abstract</h2>
+<p>We are at the beginning of the run for the quantum supremacy and quantum independent of the different worldwide government. More and more companies are building their own quantum computer with their own library/language. Some of these allow to connect to multiple quantum computers and other are specializes for one type of computer. Also, some libraries are very specified for some kind of task like PennyLane for Quantum Machine Learning (QML).</p>
+
+<p>For these reason it begins  complicated to set up a clear unique environment to develop with each quantum technologies or to switch between each others. This article is about the setup of a simple multi-Docker image, allowing to build a clean environment for each technology’s known and a sharable volume to share the content between the host computer and the different container.</p>
+
+<h2 id="table-of-content">Table of content</h2>
+<ol>
+  <li><a href="#prereqisites">Pre-requisites</a></li>
+  <li><a href="#docker">What’s Docker ?</a></li>
+  <li><a href="#working">How does it work</a><br />
+ 3.1. <a href="#image">Building image</a><br />
+ 3.2. <a href="#container">Create container</a><br />
+ 3.3. <a href="#run">Run everything together</a></li>
+  <li><a href="#future">Future</a>
+ 4.1. <a href="#live">Live platform</a></li>
+  <li><a href="#annexes">Annexes</a></li>
+  <li><a href="#ref">References</a></li>
+</ol>
+
+<h2 id="1-pre-requisites-">1. Pre-requisites <a class="anchor" id="prereqisites"></a></h2>
+<p>First to be able to run the lab, you need to install Docker<a href="#6">[6]</a>, that’s the only requirement needed :</p>
+<ul>
+  <li>
+    <summary>Linux</summary>
+    <pre>apt-get install docker-ce docker-ce-cli containerd.io
+Refer to https://docs.docker.com/engine/install/ubuntu/</pre>
+  </li>
+  <li>
+    <summary>Mac / Windows</summary>
+  </li>
+</ul>
+<pre>https://www.docker.com/products/docker-desktop</pre>
+
+<h2 id="2-what-is-docker-">2. What is Docker <a class="anchor" id="docker"></a></h2>
+
+<table border="0">
+	<tbody>
+		<tr>
+			<td style="width:66%"> <a href="https://www.docker.com/">Docker</a> is a technology allowing OS virtualization and system simulation. It allows to generalize a simple application with its whole environment into a deployable package to be share and run everywhere on every computer supporting Docker. This package is calling a container, the container is OS-level virtualization and every container share their own kernel. Moreover, the container is fully isolated from the host application.</td>
+			<td>
+<img src="/assets/images/Mica_QLab/container.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;" /></td>
+		</tr>	
+	</tbody>
+</table>
+
+<h2 id="3-how-does-it-work-">3. How does it work <a class="anchor" id="working"></a></h2>
+
+<table border="0">
+	<tbody>
+		<tr>
+			<td><img src="/assets/images/Mica_QLab/ql.png" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display: block;margin-left: auto;margin-right: auto;" /></td>
+			<td>The role of the image is to simulate a virtual environment as a Quantum lab for a specialized library/language. Another need is to synchronize the data between the container of the host computer. <br /> Like this, we could develop our code on our favorite IDE on our classical computer and run the code directly in the container. <br /><br /> Download the code : <b><a href="https://github.com/mickahell/quantum_lab">Github</a></b></td>
+		</tr>
+	</tbody>
+</table>
+
+<h3 id="31-build-the-image-">3.1. Build the image <a class="anchor" id="image"></a></h3>
+<p>First we need to build the image, we have to generate a docker image from our <code class="language-plaintext highlighter-rouge">Dockerfile</code> by using :</p>
+<pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
+<p>Feel free to replace <code class="language-plaintext highlighter-rouge">qiskit.sh</code> with <code class="language-plaintext highlighter-rouge">qml.sh</code>, <code class="language-plaintext highlighter-rouge">qsharp.sh</code>, <code class="language-plaintext highlighter-rouge">simulaqron.sh</code> or <code class="language-plaintext highlighter-rouge">myqlm.sh</code>. That’ll set up a specialized environment for each library/language. This command can take several minutes, do not stop it until the command gave you the hand back.</p>
+
+<h4 id="pre-build-images">Pre-build images</h4>
+<p>Pre-build images for each environment are available in the <a href="https://hub.docker.com/search?q=mickahell%2Fquantum&amp;type=image">Docker Hub</a> :</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">quantum_lab_qiskit</code></li>
+  <li><code class="language-plaintext highlighter-rouge">quantum_lab_qml</code></li>
+  <li><code class="language-plaintext highlighter-rouge">quantum_lab_qsharp</code></li>
+  <li><code class="language-plaintext highlighter-rouge">quantum_lab_simulaqron</code></li>
+  <li><code class="language-plaintext highlighter-rouge">quantum_lab_myqlm</code></li>
+  <li><code class="language-plaintext highlighter-rouge">quantum_lab_cirq</code></li>
+</ul>
+
+<p>You can download them by using : <code class="language-plaintext highlighter-rouge">docker pull mickahell/[IMAGE_NAME]</code> (ex. <code class="language-plaintext highlighter-rouge">quantum_lab_qiskit</code>)<br />
+To not have any problem with the following tutorial I suggest you to rename the image as <code class="language-plaintext highlighter-rouge">quantum_lab</code> by using : &lt;pre&gt;docker image tag mickahell/[IMAGE_NAME]:latest quantum_lab:latest&lt;/pre&gt;</p>
+
+<p>Now if you tape <code class="language-plaintext highlighter-rouge">docker images</code> you’ll be able to see your image :</p>
+
+<pre>
+REPOSITORY                     TAG       IMAGE ID       CREATED       SIZE
+quantum_lab                    latest    73cc092474d1   3 weeks ago   1.48GB
+mickahell/quantum_lab_qiskit   latest    73cc092474d1   3 weeks ago   1.48GB
+ubuntu                         18.04     329ed837d508   4 weeks ago   63.3MB
+</pre>
+
+<h3 id="32-create-container-">3.2. Create container <a class="anchor" id="container"></a></h3>
+<p>Now we have our image <code class="language-plaintext highlighter-rouge">quantum_lab</code>, you can see it by taping <code class="language-plaintext highlighter-rouge">docker images</code>. Next we need to set up a container who we be our virtual environment. We can create as much container as the stockage of our computer allows it.</p>
+
+<h4 id="volume">Volume</h4>
+<p>To sync data between the container and the host computer we need to create a volume, by default in the image a simple volume is created between the default docker sharing folder of the host and the <code class="language-plaintext highlighter-rouge">/opt/quantum_lab/data/share</code> folder. To make things easier we can specify which folder of our host we want to sync by using <code class="language-plaintext highlighter-rouge">-v [YOUR_FOLDER]:/opt/quantum_lab/data/share</code> during the creation of the container.</p>
+
+<h4 id="jupyter">Jupyter</h4>
+<p>In each environment Jupyter notebook is available, to synchronize it with our host browser we need to sync port network to do this just use the option <code class="language-plaintext highlighter-rouge">-p 8888:8888</code> in the container creation. Then a script allow you to start a Jupyter server : <code class="language-plaintext highlighter-rouge">/opt/quantum_lab/data/start_jupyter.sh</code>.<br />
+Finally, just go in your browser and tap : <code class="language-plaintext highlighter-rouge">http://127.0.0.1:8888/</code></p>
+
+<h3 id="33-run-everything-together-">3.3. Run everything together <a class="anchor" id="run"></a></h3>
+<p>To create our container and to be allowed using volume sync and jupyter you can use this simple command line :</p>
+<pre>docker run -it -v $(pwd)/data:/opt/quantum_lab/data/share --entrypoint=/bin/bash -p 8888:8888 -e LANG=C.UTF-8 quantum_lab</pre>
+
+<h2 id="4-future-">4. Future <a class="anchor" id="future"></a></h2>
+<p>We are at the very beginning of the quantum era, so that means the already installed quantum technologies will have updated very often and more and more libraries and languages will be coming soon. So the image will be updated as often as possible and more environment will be soon available as a new option.</p>
+
+<p>The goal is to make everything possible to keep the image as simple as possible to use and to set up. Pre-build  image are already available in the <a href="https://hub.docker.com/search?q=mickahell%2Fquantum&amp;type=image">Docker Hub</a>, allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.</p>
+
+<p>Also, the experiences part will be externalized in another GitHub repository and download automatically in the build phase, in order to keep the Docker image clean without too much <em>random</em> data.</p>
+
+<p>If you have an idea of features do not hesitate and create an <strong><a href="https://github.com/mickahell/quantum_lab/issues/new">issue</a></strong>.</p>
+
+<h2 id="41-live-platform-">4.1. Live platform <a class="anchor" id="live"></a></h2>
+<p>A live version is available directly in your browser for prototype, testing experiments and science vulgarisation/demo. Also presenting how to use the image to create Quantum application to deploy everywhere –&gt; <a href="https://quantum-lab.xtraorbitals.xyz">here</a></p>
+
+<h2 id="5-annexes-">5. Annexes <a class="anchor" id="annexes"></a></h2>
+<h3 id="environment-details">Environment details</h3>
+
+<ul>
+  <li>Library’s (libs) common for every env :  <code class="language-plaintext highlighter-rouge">networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim</code></li>
+  <li>4 libs setup are available, one for installating Qiskit<a href="#1">[1]</a>, one for using Pannylane<a href="#2">[2]</a>, one for using Q#<a href="#3">[3]</a>, one for SimulaQron<a href="#4">[4]</a>, and one for myQLM<a href="#5">[5]</a>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">qml.sh</code>
+        <ul>
+          <li>Libs : <code class="language-plaintext highlighter-rouge">autograd, pennylane, pennylane-sf, pennylane-qiskit</code></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">qiskit.sh</code>
+        <ul>
+          <li>Libs : <code class="language-plaintext highlighter-rouge">qiskit, qiskit[visualization]</code></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">qsharp.sh</code>
+        <ul>
+          <li>Libs : <code class="language-plaintext highlighter-rouge">qsharp, iqsharp</code></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">simulaqron.sh</code>
+        <ul>
+          <li>Libs : <code class="language-plaintext highlighter-rouge">simulaqron</code></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">myqlm.sh</code>
+        <ul>
+          <li>Libs : <code class="language-plaintext highlighter-rouge">myqlm, libmagickwand-dev, myqlm-interop[qiskit_binder]</code></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">cirq.sh</code>
+        <ul>
+          <li>Libs : <code class="language-plaintext highlighter-rouge">cirq, cirq-core[contrib], texlive-latex-base, latexmk</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>All the libs setup scripts are available in the folder <code class="language-plaintext highlighter-rouge">/opt/quantum_lab/build</code> inside the image, some of the libs can live together and some cannot (ex. <code class="language-plaintext highlighter-rouge">qiskit</code> and <code class="language-plaintext highlighter-rouge">pennylane-qiskit</code> can’t).</p>
+
+<h4 id="protocols-for-experiencing-quantum">Protocols for experiencing Quantum</h4>
+<p><strong>COMING SOON !</strong></p>
+
+<h3 id="hello-world">Hello world!</h3>
+<p><em>Hello world</em> program for each environment are available inside the image in the data folder and allow to test the quantum laboratory.</p>
+
+<h3 id="simple-docker-commands">Simple docker commands</h3>
+<ul>
+  <li>List the existed images : <code class="language-plaintext highlighter-rouge">docker images</code></li>
+  <li>List the existed container : <code class="language-plaintext highlighter-rouge">docker ps -a</code>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">-a</code> is used to show every existed containers, that’s include the stopped one</li>
+    </ul>
+  </li>
+  <li>To start a container : <code class="language-plaintext highlighter-rouge">docker start [CONTAINEUR_ID]</code></li>
+  <li>To go inside a started container : <code class="language-plaintext highlighter-rouge">docker exec -it -u root [CONTAINEUR_ID] /bin/bash</code></li>
+  <li>Delete container : <code class="language-plaintext highlighter-rouge">docker rm [CONTAINEUR_ID]</code></li>
+  <li>Delete stopped container : <code class="language-plaintext highlighter-rouge">docker container prune</code></li>
+  <li>Delete image : <code class="language-plaintext highlighter-rouge">docker rmi [NAME_OF_THE_IMAGE]</code>
+    <ul>
+      <li>You can use <code class="language-plaintext highlighter-rouge">-f</code> to force the suppression and delete the containers associated to the image</li>
+    </ul>
+  </li>
+  <li>List the existed volume : <code class="language-plaintext highlighter-rouge">docker volume ls</code></li>
+  <li>Delete volume not used anymore : <code class="language-plaintext highlighter-rouge">docker volume prune</code></li>
+</ul>
+
+<h2 id="6-references-">6. References <a class="anchor" id="ref"></a></h2>
+<p><a id="1">[1]</a> <a href="https://qiskit.org">Qiskit</a>: An Open-source Framework for Quantum Computing, 2019, <a href="10.5281/zenodo.2562110">DOI: 10.5281/zenodo.2562110</a><br />
+<a id="2">[2]</a> <a href="https://pennylane.ai">Pennylane</a>: Automatic differentiation of hybrid quantum-classical computations, 2018, <a href="https://arxiv.org/abs/1811.04968">DOI: arXiv:1811.04968</a><br />
+<a id="3">[3]</a> <a href="https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/">Q#</a>: The Microsoft Quantum Development Kit Preview, 2017 <br />
+<a id="4">[4]</a> <a href="http://www.simulaqron.org/">Simulaqron</a>: A simulator for developing quantum internet software, 2018, <a href="https://doi.org/10.1088/2058-9565/aad56e">DOI: 10.1088/2058-9565/aad56e</a><br />
+<a id="5">[5]</a> <a href="https://atos.net/en/lp/myqlm">AQASM</a>: Atos Quantum Assembler, 2021, <a href="https://arxiv.org/abs/2102.12973">DOI: arXiv:2102.12973</a><br />
+<a id="6">[6]</a> <a href="https://www.docker.com">Docker</a>, An introduction to Docker for reproducible research, 2015, <a href="https://doi.org/10.1145/2723872.2723882">DOI: 10.1145/2723872.2723882</a></p>
+
+<h2 id="author">Author</h2>
+<p>Michaël Rollin, <a href="https://github.com/mickahell">GitHub</a>, <a href="https://twitter.com/mickahell89700">Twitter</a>, <a href="https://www.linkedin.com/in/michaelrollin/">Linkedin</a></p>
+<h3 id="cite-as">Cite as</h3>
+<p>If you use my work, please cite as : Quantum Lab: Docker image for quantum laboratory, Michaël Rollin, 2021, DOI: <a href="https://doi.org/10.5281/zenodo.4664195">10.5281/zenodo.4664195</a></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#cirq" class="page__taxonomy-item p-category" rel="tag">Cirq</a><span class="sep">, </span>
+    
+      <a href="/tags/#docker" class="page__taxonomy-item p-category" rel="tag">Docker</a><span class="sep">, </span>
+    
+      <a href="/tags/#framework" class="page__taxonomy-item p-category" rel="tag">Framework</a><span class="sep">, </span>
+    
+      <a href="/tags/#pennylane" class="page__taxonomy-item p-category" rel="tag">PennyLane</a><span class="sep">, </span>
+    
+      <a href="/tags/#q" class="page__taxonomy-item p-category" rel="tag">Q#</a><span class="sep">, </span>
+    
+      <a href="/tags/#qiskit" class="page__taxonomy-item p-category" rel="tag">Qiskit</a><span class="sep">, </span>
+    
+      <a href="/tags/#qiskit-nature" class="page__taxonomy-item p-category" rel="tag">Qiskit Nature</a><span class="sep">, </span>
+    
+      <a href="/tags/#qlm" class="page__taxonomy-item p-category" rel="tag">QLM</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-computing" class="page__taxonomy-item p-category" rel="tag">Quantum computing</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-lab" class="page__taxonomy-item p-category" rel="tag">Quantum Lab</a><span class="sep">, </span>
+    
+      <a href="/tags/#simulator" class="page__taxonomy-item p-category" rel="tag">Simulator</a><span class="sep">, </span>
+    
+      <a href="/tags/#tutorial" class="page__taxonomy-item p-category" rel="tag">Tutorial</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-04-07T00:00:00+00:00">April 7, 2021</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Quantum+Lab%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-quantum-lab%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-quantum-lab%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullstackquantumcomputation.tech/blog/post-quantum-lab/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Quantum+Lab%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-quantum-lab%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/quantum-coins/" class="pagination--pager" title="Quantum coins">Previous</a>
+    
+    
+      <a href="/blog/quantum-dots/" class="pagination--pager" title="Quantum Dots and their Application as Electron Spin Qubits">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/QuantumVerse-Game/" rel="permalink">Quantumverse Game
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">QuantumVerse 🌌🎮- A Gamer’s Bot!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/File-Transfer-Using-QC-Protocol-Cirq/" rel="permalink">File Transfer Using Qc Protocol Cirq
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/quaze-tutorial/" rel="permalink">Tutorial to build a Quantum inspired puzzle game in JS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to cr...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-simulation/" rel="permalink">Electronic Simulation of Molecules using Pennylane
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://discord.gg/NDm9e9W" rel="nofollow noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/QuantumUniversalEducation" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/company/quantum-universal-education/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/QuantUniEd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://fullstackquantumcomputation.tech">Full-Stack Quantum Computation</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

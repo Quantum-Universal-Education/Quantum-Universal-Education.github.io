@@ -1,0 +1,1622 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Quantum Pokemon Fight | Full-Stack Quantum Computation</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Full-Stack Quantum Computation">
+<meta property="og:title" content="Quantum Pokemon Fight">
+<meta property="og:url" content="https://fullstackquantumcomputation.tech/blog/post-quantum-pokemon-fight/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-01-09T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://fullstackquantumcomputation.tech/blog/post-quantum-pokemon-fight/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Full-Stack Quantum Computation Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/FSQC-small.png" alt="Full-Stack Quantum Computation"></a>
+        
+        <a class="site-title" href="/">
+          Full-Stack Quantum Computation
+          <span class="site-subtitle">Community-driven, open-source education resources</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/journal-club/"
+                
+                
+              >Journal Club</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/qce24-workshop/"
+                
+                
+              >QCE24 Workshop</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about-us/"
+                
+                
+              >About us</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/biopics/michael_rollin.png" alt="Michaël Rollin" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Michaël Rollin</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Curated By:</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Praveen J</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+<!--added-->
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Quantum Pokemon Fight">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2021-01-09T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://fullstackquantumcomputation.tech/blog/post-quantum-pokemon-fight/" itemprop="url">Quantum Pokemon Fight
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<p>A quantum game and algorithm to fight in Pokemon.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+  <li><a href="#chap0">Pre-requisites</a></li>
+  <li><a href="#idea">The idea</a></li>
+  <li><a href="#game">The game</a>
+    <ul>
+      <li><a href="#general_process">General processes</a></li>
+    </ul>
+  </li>
+  <li><a href="#ai">Artificial Intelligence</a>
+    <ul>
+      <li><a href="#strategy">Strategy</a></li>
+      <li><a href="#grover">Grover’s algorithm</a></li>
+      <li><a href="#qram">QRAM</a></li>
+      <li><a href="#algorithm">General algorithm</a></li>
+    </ul>
+  </li>
+  <li><a href="#then">And now ?</a></li>
+  <li><a href="#references">References</a></li>
+</ul>
+
+<h2 id="pre-requisites-">Pre-requisites <a class="anchor" id="chap0"></a></h2>
+<p>Before starting, we need to install qiskit, for which we need to execute the following cell:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">qiskit</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">qiskit</span><span class="p">[</span><span class="n">visualization</span><span class="p">]</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+</code></pre></div></div>
+
+<p>To test your installation :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span><span class="p">,</span> <span class="n">YouTubeVideo</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">qiskit</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">Aer</span><span class="p">,</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">IBMQ</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span>
+<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">plot_histogram</span><span class="p">,</span> <span class="n">plot_bloch_multivector</span>
+<span class="n">qiskit</span><span class="p">.</span><span class="n">__qiskit_version__</span>
+</code></pre></div></div>
+
+<p>In order to initialize our quantum computer just run the following cell :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialize Qasm simulator backend
+</span><span class="n">qasm</span> <span class="o">=</span> <span class="n">Aer</span><span class="p">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s">'qasm_simulator'</span><span class="p">)</span>
+
+<span class="c1"># Initialize Real Quantum computer
+# If you run qiskit on a real computer for the first time, you will need to create an account on https://quantum-computing.ibm.com/login
+# and run the following line with you token.
+#IBMQ.save_account('MY_API_TOKEN')
+</span>
+<span class="n">IBMQ</span><span class="p">.</span><span class="n">load_account</span><span class="p">()</span>
+<span class="n">provider</span> <span class="o">=</span> <span class="n">IBMQ</span><span class="p">.</span><span class="n">get_provider</span><span class="p">(</span><span class="s">'ibm-q'</span><span class="p">)</span>
+<span class="n">quantum_computer</span> <span class="o">=</span> <span class="n">provider</span><span class="p">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s">'ibmq_16_melbourne'</span><span class="p">)</span>
+
+<span class="c1"># Here we will use the local simulator --&gt; Aer
+</span><span class="n">backend_sim</span> <span class="o">=</span> <span class="n">qasm</span>  <span class="c1"># Choose your backend : &lt;quantum_computer&gt; or &lt;qasm&gt;
+</span></code></pre></div></div>
+
+<h2 id="idea-behind-">Idea behind <a class="anchor" id="idea"></a></h2>
+<p>The main idea of this game code came due to Nostalgia. If you were born in the 90’s you certainly played the first Pokemon games, Red and Blue (not you Yellow) and of course you would remeber the opening of the game:</p>
+
+<iframe width="400" height="300" src="https://www.youtube.com/embed/C19O5xm51dk" frameborder="0" allowfullscreen=""></iframe>
+
+<p>This first fight gave me the idea of doing this program, but with a quantumification of every process and a possibility of giving the opponent a quantum AI of sorts.
+Here in this post, I’ll not go deep into the classical framework but mainly into the quantum processes.</p>
+
+<h2 id="the-game-">The game <a class="anchor" id="game"></a></h2>
+<p>The game is executed by python programming and consists of:</p>
+<ul>
+  <li>initialization of the objects
+    <ul>
+      <li>choice of quantum backend</li>
+      <li>types</li>
+      <li>attacks</li>
+      <li>pokemon</li>
+      <li>players</li>
+    </ul>
+  </li>
+  <li>fight
+    <ul>
+      <li>team creation</li>
+      <li>choice of action -&gt; attack or switch (quantum)
+        <ul>
+          <li>if attack -&gt; choice of attack (quantum)</li>
+          <li>if switch -&gt; choice of pokemon switch (quantum)</li>
+        </ul>
+      </li>
+      <li>choice of who attacks first by the level of speed</li>
+      <li>whether choice of speeds of both pokemon are the same (quantum)</li>
+      <li>precision of the attack (quantum)</li>
+      <li>critical attack (quantum)</li>
+      <li>applying condition -&gt; poison / paralyze / burn / freeze (quantum)</li>
+      <li>choice of next pokemon if AI pokemon is KO (quantum)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>We perform every probability calculations and opponent decision(s) by quantum processes. The perfect structure could be illustrated as:</p>
+
+<p><img src="/assets/images/Mica_QPF/structure.png" alt="/assets/images/Mica_QPF/structure.png" /></p>
+
+<h3 id="general-processes-">General processes <a class="anchor" id="general_process"></a></h3>
+<p>As shown in my illustration above, I use the same quantum computer for all of my probability calculations and as the only difference between these calculations are the probabilities of occurences, I just use the same circuit but with a different angle of theta (rotation).</p>
+
+<h4 id="precision--critical--condition--speed-draw">Precision / Critical / condition / Speed draw</h4>
+<ul>
+  <li>When a pokemon declares an attack, the first thing to do is to check if the attack can affect the opponent, this is done by doing a check on the accuracy of the move. We call this number \(\psi\) (say \(psi\)) and then I’m creating a qubit and appling a quantum rotation gate of angle 
+\(\pi*\psi\).</li>
+</ul>
+
+<p>If the accuracy is 100%, my qubit will flip from 0 to 1, thus the attack affects the target. If the attack has an accurancy of 70%, the qubit will be in a superposition and its the role of the measurement to “choose” if the qubit will collapse to the state 0 or go to state 1.</p>
+
+<ul>
+  <li>
+    <p>Next, we check the probability of critical attack, apart from some exceptions this number is always the same, approximatly 4% (4.17%). With this number we’ll apply the same transformation as the accuracy check.</p>
+  </li>
+  <li>
+    <p>Finally we check if the move is of fire, poison, electric or ice type. If so, we apply to a qubit a transformation of the respective accuracy (10%, 30%, 30% and 10%) and see if a condition of burn, poison, paralysis or freeze will apply.</p>
+  </li>
+  <li>
+    <p>Usually, the order of which pokemon moves first is decided by their speed, but sometimes both have the same speed. In this case, we put a qubit in a perfect superposition by rotation by 
+\(\frac{\pi}{2}\).</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">attack</span> <span class="o">=</span> <span class="mf">0.7</span> <span class="c1"># Accuracy of the attack, most of the attacks are of precision 100%, 90% or 70%
+</span><span class="n">crit</span> <span class="o">=</span> <span class="mf">0.0417</span> <span class="c1"># Critical 
+</span><span class="n">burn</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">poison</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">para</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">freeze</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">speedtie</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">qc</span><span class="p">.</span><span class="n">rx</span><span class="p">(</span><span class="n">math</span><span class="p">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">attack</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># The gate RX is like a NOT gate which allows us to define the angle theta and apply rotation
+</span><span class="n">qc</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">qc</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">     ┌───────────┐┌─┐
+q_0: ┤ RX(7π/10) ├┤M├
+     └───────────┘└╥┘
+c: 1/══════════════╩═
+                   0 </pre>
+
+<p>Now we have our circuit, run the following cell to read the result and see if the attack affects the opponent.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend_sim</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">result_job</span> <span class="o">=</span> <span class="n">job</span><span class="p">.</span><span class="n">result</span><span class="p">().</span><span class="n">get_memory</span><span class="p">()</span>
+<span class="n">to_return</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">result_job</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">to_return</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Result : {}, the attack succeeded!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">to_return</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Result : {}, the attack missed the target!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">to_return</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Result : 0, the attack missed the target!
+</code></pre></div></div>
+
+<p>As you can see, most of the time the result is flipping from 0 to 1 but sometimes the superposition collapses to 0 instead.</p>
+
+<h2 id="artificial-intelligence-">Artificial Intelligence <a class="anchor" id="ai"></a></h2>
+<p>Here comes the main part of the program, the real challenge. How to program the quantum computer opponent to be a good challenger to you!?!? 
+We’ll try to make something “simple” so we’ll not program some fancy neural network to make the computer better and better but we “just” make it such that it knows the basic rules that each of us already know:</p>
+<ul>
+  <li>type mapping</li>
+  <li>switching or attacking</li>
+</ul>
+
+<h3 id="strategy-">Strategy <a class="anchor" id="strategy"></a></h3>
+<p>To program our quantum brain, here a quick reminder of the Pokemon strategy. Every type has their weaknesses and their resistances.  When a Pokemon attacks by a move from one of it’s weakness it takes double the damage and when it’s attacked by a move from the set of types to which it is resistant, it take half of the damage.
+The entire type mapping are available here : https://boutique-pokemon.com/blogs/blog-pokemon/table-types-pokemon (french version).</p>
+
+<p>There are different ways to program it, I am using the Vertex Cover algorithm. The principe of this algorithm is to map everything to a graph and then finding the path that can connect both of the target(s). Here I’m using this algorithm like the chair lift in a mountain, that’s what connects all of the stations between with every ski slope in the middle (<a href="https://geofrider.remontees-mecaniques.net/3Vallees/Meribel/TSD6_Planhomme/planplanhomme.jpg">example</a>). More information about this algorithm can be found here: https://en.wikipedia.org/wiki/Vertex_cover</p>
+
+<p>That’ll allow us to make our types interact with each other in something like this:</p>
+
+<p><img src="/assets/images/Mica_QPF/types_graph.png" alt="/assets/images/Mica_QPF/types_graph.png" /></p>
+
+<p>Here the alphabet vertices (P, Q) are both the fighters and the number vertices on the left are the type of the moves, indicate the type weaknesses of the fighter at right. This graph is the key to program all of the actions of our quantum computer. With this graph in mind, it’ll attack with the strongest move or switch if its fighter is in a disadvantage.</p>
+
+<h4 id="quantumification">Quantumification</h4>
+<p>Now we have a basic graph, how can we translate it to quantum computing? We need to have a structure which gives us most of the time the best answer. Finding a structure which can have all inputs possible and give us the correct output no matter what! Here comes Grover’s algorithm…</p>
+
+<h3 id="grovers-algorithm-">Grover’s algorithm <a class="anchor" id="grover"></a></h3>
+<p>You may have already heard that one of the many advantages of a quantum computer is database searching speedup. Indeed that’s the role of the Grover’s algorithm.</p>
+
+<h4 id="method">Method</h4>
+<p>Grover’s algorithm uses the amplitude amplification to identify correct solution(s). Grovers uses several inputs and with a diffuser, amplifies the inputs which match the oracle to give the output.</p>
+
+<p>Example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">diffuser</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+    <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">nqubits</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+        <span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">qubit</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+        <span class="n">qc</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qubit</span><span class="p">)</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">nqubits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">mct</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">nqubits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">nqubits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+        <span class="n">qc</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qubit</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+        <span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">qubit</span><span class="p">)</span>
+    <span class="n">U_s</span> <span class="o">=</span> <span class="n">qc</span><span class="p">.</span><span class="n">to_gate</span><span class="p">()</span>
+    <span class="n">U_s</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"$Diff$"</span>
+    <span class="k">return</span> <span class="n">U_s</span>
+
+<span class="n">algo</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">'algo'</span><span class="p">)</span>
+<span class="n">oracle</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'oracle'</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">'measurement'</span><span class="p">)</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">algo</span><span class="p">,</span> <span class="n">oracle</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">diffuser</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">qc</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">algo</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">'algo'</span><span class="p">)</span>
+<span class="n">oracle</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'oracle'</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">'measurement'</span><span class="p">)</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">algo</span><span class="p">,</span> <span class="n">oracle</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># Init
+</span><span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">algo</span><span class="p">)</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">oracle</span><span class="p">)</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">oracle</span><span class="p">)</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+
+<span class="c1"># Algorithm
+</span><span class="n">qc</span><span class="p">.</span><span class="n">mcx</span><span class="p">(</span><span class="n">algo</span><span class="p">,</span> <span class="n">oracle</span><span class="p">)</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+
+<span class="c1"># Diffuser
+</span><span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">diffuser</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># Measure of the ouputs
+</span><span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">algo</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="n">qc</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">               ┌───┐      ░       ░ ┌─────────┐ ░ ┌─┐      
+       algo_0: ┤ H ├──────░───■───░─┤0        ├─░─┤M├──────
+               ├───┤      ░   │   ░ │         │ ░ └╥┘┌─┐   
+       algo_1: ┤ H ├──────░───■───░─┤1 $Diff$ ├─░──╫─┤M├───
+               ├───┤      ░   │   ░ │         │ ░  ║ └╥┘┌─┐
+       algo_2: ┤ H ├──────░───■───░─┤2        ├─░──╫──╫─┤M├
+               ├───┤┌───┐ ░ ┌─┴─┐ ░ └─────────┘ ░  ║  ║ └╥┘
+     oracle_0: ┤ X ├┤ H ├─░─┤ X ├─░─────────────░──╫──╫──╫─
+               └───┘└───┘ ░ └───┘ ░             ░  ║  ║  ║ 
+measurement: 3/════════════════════════════════════╩══╩══╩═
+                                                   0  1  2 </pre>
+
+<ul>
+  <li>The inputs are represented by the qubits “algo_” on the top</li>
+  <li>The algorithm is represented by the CNOT gate in the middle</li>
+  <li>The diffuser is represented by the big block at the end</li>
+  <li>The oracle is at the last qubit, it’s in superposition state 
+\(|-&gt;\), 
+for phase inversion of inputs which match the required conditions.</li>
+</ul>
+
+<p>Here all our inputs are in superposition with each others, so we have something like : 
+\(\frac{|000&gt; + |001&gt; + |010&gt; + ... |111&gt;}{\sqrt{8}}\).
+<br />Then our algorithm is only an MCT gate and will be activated only if all the qubits are in state 1, so that only the inputs \(|111&gt;\) will flip the oracle qubit to add a phase of $(-1)$ to this input.
+<br />Finally our diffuser is going to read all of the inputs and if it sees an input with a negative phase, it’ll amplify this input to \(3 * \theta\) (or \(2 * \theta\) depending on its initial amplitude and number of states).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend_sim</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span>
+<span class="n">result_job</span> <span class="o">=</span> <span class="n">job</span><span class="p">.</span><span class="n">result</span><span class="p">()</span>
+<span class="n">plot_histogram</span><span class="p">(</span><span class="n">result_job</span><span class="p">.</span><span class="n">get_counts</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/Mica_QPF/output_27_0.png" alt="/assets/images/Mica_QPF/output_27_0.png" /></p>
+
+<p>Here in our results, notice that most of the time the result is our predicted answer.</p>
+
+<p>More information about Grover here :</p>
+
+<h3 id="qram-">QRAM <a class="anchor" id="qram"></a></h3>
+<p>First thing first, how can we pass our inputs to Grover? In the above general example of using Grover, we gave it 3 random qubits, but we want to give it our list of attacks or the type of our fighter instead. To do that, we’ll use a QRAM (Quantum Random Access Memory), like classical RAM. It’ll allow us to map every input we want.</p>
+
+<h4 id="attacks">Attacks</h4>
+<p>To give an example of QRAM, we’ll map all of the attack move types of our fighter:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># We have our Blastoise (Tortank in French) with 4 attacks : hydroblast, earthquake, ice beam, giga-impact
+# We want to map all our attacks to their respective type(s) like: 
+# [hydroblast : water, earthquake : ground , ice beam : ice , giga-impact : normal]
+</span>
+<span class="c1"># Init register 
+</span><span class="n">qram_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">'qram'</span><span class="p">)</span> <span class="c1"># We have 4 elements to map to 2 qubits are enough
+</span><span class="n">normal_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'normal'</span><span class="p">)</span>
+<span class="n">fire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'fire'</span><span class="p">)</span>
+<span class="n">grass_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'grass'</span><span class="p">)</span>
+<span class="n">ground_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'ground'</span><span class="p">)</span>
+<span class="n">fly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'fly'</span><span class="p">)</span>
+<span class="n">water_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'water'</span><span class="p">)</span>
+<span class="n">elec_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'electric'</span><span class="p">)</span>
+<span class="n">ice_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'ice'</span><span class="p">)</span>
+<span class="n">bug_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'bug'</span><span class="p">)</span>
+<span class="n">steel_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'steel'</span><span class="p">)</span>
+<span class="n">qc_init</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">qram_q</span><span class="p">)</span>
+
+<span class="c1"># Init qubits
+</span><span class="n">qc_init</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">qram_q</span><span class="p">)</span> <span class="c1"># Init our inputs to superposition
+#qc.barrier()
+</span>
+<span class="n">qc_qram</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">qram_q</span><span class="p">,</span> <span class="n">normal_q</span><span class="p">,</span> <span class="n">fire_q</span><span class="p">,</span> <span class="n">grass_q</span><span class="p">,</span> <span class="n">ground_q</span><span class="p">,</span> <span class="n">fly_q</span><span class="p">,</span> <span class="n">water_q</span><span class="p">,</span> <span class="n">elec_q</span><span class="p">,</span> <span class="n">ice_q</span><span class="p">,</span> <span class="n">bug_q</span><span class="p">,</span> <span class="n">steel_q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># Mapping attacks
+## First attack is going to be on the address 00, hydroblast
+</span><span class="n">qc_qram</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qram_q</span><span class="p">)</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">ccx</span><span class="p">(</span><span class="n">qram_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">qram_q</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">water_q</span><span class="p">)</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qram_q</span><span class="p">)</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="c1">## Second attack -&gt; 01, earthquake
+</span><span class="n">qc_qram</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qram_q</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">ccx</span><span class="p">(</span><span class="n">qram_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">qram_q</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ground_q</span><span class="p">)</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qram_q</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="c1">## Third attack -&gt; 10, ice beam
+</span><span class="n">qc_qram</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qram_q</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">ccx</span><span class="p">(</span><span class="n">qram_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">qram_q</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ice_q</span><span class="p">)</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qram_q</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="c1">## Fourth attack -&gt; 11, giga impact
+</span><span class="n">qc_qram</span><span class="p">.</span><span class="n">ccx</span><span class="p">(</span><span class="n">qram_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">qram_q</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">normal_q</span><span class="p">)</span>
+<span class="n">qc_qram</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+
+<span class="n">qc_initQram</span> <span class="o">=</span> <span class="n">qc_init</span> <span class="o">+</span> <span class="n">qc_qram</span>
+<span class="n">qc_initQram</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">               ┌───┐┌───┐     ┌───┐ ░ ┌───┐     ┌───┐ ░                 ░      »
+       qram_0: ┤ H ├┤ X ├──■──┤ X ├─░─┤ X ├──■──┤ X ├─░────────■────────░───■──»
+               ├───┤├───┤  │  ├───┤ ░ └───┘  │  └───┘ ░ ┌───┐  │  ┌───┐ ░   │  »
+       qram_1: ┤ H ├┤ X ├──■──┤ X ├─░────────■────────░─┤ X ├──■──┤ X ├─░───■──»
+               └───┘└───┘  │  └───┘ ░        │        ░ └───┘  │  └───┘ ░ ┌─┴─┐»
+     normal_0: ────────────┼────────░────────┼────────░────────┼────────░─┤ X ├»
+                           │        ░        │        ░        │        ░ └───┘»
+       fire_0: ────────────┼────────░────────┼────────░────────┼────────░──────»
+                           │        ░        │        ░        │        ░      »
+      grass_0: ────────────┼────────░────────┼────────░────────┼────────░──────»
+                           │        ░      ┌─┴─┐      ░        │        ░      »
+     ground_0: ────────────┼────────░──────┤ X ├──────░────────┼────────░──────»
+                           │        ░      └───┘      ░        │        ░      »
+        fly_0: ────────────┼────────░─────────────────░────────┼────────░──────»
+                         ┌─┴─┐      ░                 ░        │        ░      »
+      water_0: ──────────┤ X ├──────░─────────────────░────────┼────────░──────»
+                         └───┘      ░                 ░        │        ░      »
+   electric_0: ─────────────────────░─────────────────░────────┼────────░──────»
+                                    ░                 ░      ┌─┴─┐      ░      »
+        ice_0: ─────────────────────░─────────────────░──────┤ X ├──────░──────»
+                                    ░                 ░      └───┘      ░      »
+        bug_0: ─────────────────────░─────────────────░─────────────────░──────»
+                                    ░                 ░                 ░      »
+      steel_0: ─────────────────────░─────────────────░─────────────────░──────»
+                                    ░                 ░                 ░      »
+measurement: 3/════════════════════════════════════════════════════════════════»
+                                                                               »
+«                ░ 
+«       qram_0: ─░─
+«                ░ 
+«       qram_1: ─░─
+«                ░ 
+«     normal_0: ─░─
+«                ░ 
+«       fire_0: ─░─
+«                ░ 
+«      grass_0: ─░─
+«                ░ 
+«     ground_0: ─░─
+«                ░ 
+«        fly_0: ─░─
+«                ░ 
+«      water_0: ─░─
+«                ░ 
+«   electric_0: ─░─
+«                ░ 
+«        ice_0: ─░─
+«                ░ 
+«        bug_0: ─░─
+«                ░ 
+«      steel_0: ─░─
+«                ░ 
+«measurement: 3/═══
+«                  </pre>
+
+<p>The X gate allow us to check the state of the qubit, if the qubits are on 1, the X gate is going to flip it to 0 and so the gate CCX will do nothing. If we add measurement gate(s) and analyse the result:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="s">'measure'</span><span class="p">)</span>
+<span class="n">qram_measure</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">qc_initQram</span> <span class="o">+</span> <span class="n">qram_measure</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">qc</span><span class="p">.</span><span class="n">reverse_bits</span><span class="p">()</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend_sim</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span>
+<span class="n">result_job</span> <span class="o">=</span> <span class="n">job</span><span class="p">.</span><span class="n">result</span><span class="p">()</span>
+<span class="n">plot_histogram</span><span class="p">(</span><span class="n">result_job</span><span class="p">.</span><span class="n">get_counts</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/Mica_QPF/output_33_0.png" alt="/assets/images/Mica_QPF/output_33_0.png" /></p>
+
+<p>Here we map our the attacks of our actual fighter and match with their type.</p>
+
+<h4 id="switch-">Switch <a class="anchor" id="switch"></a></h4>
+<p>For switching it’s similar, but we have to map all of our pokemons on X qubits and all of their attack types. For a team of 3 pokemons, we map the pokemon on the first qubit(s) and the attack on the next 2 qubits.</p>
+
+<h4 id="choose-move-">Choose move <a class="anchor" id="choose"></a></h4>
+<p>At the beginning of the post, I mentioned that the quantum computer has to choose if it has to do an attack or to switch Pokemon. To make this choice, we map the actual fighter of the opponent and see if it’s type is a weakness of ours. If yes, the quantum computer will choose to switch Pokemon, else it’ll choose to attack.</p>
+
+<p>Now we know how to create our quantum structure, how to map our inputs and know the design of our oracle (the graph). Let glue each part together.</p>
+
+<h3 id="general-algorithm-">General algorithm <a class="anchor" id="algorithm"></a></h3>
+<p>The main algorithm is the mapping algorithm and we’ll use it to find the best attack move, finding the best switch to another pokemon and to help the computer to choose if it has to attack or switch if its actual current fighter is in danger. To illustrate an example, we want our computer to find the best move.
+To do that we need:</p>
+<ul>
+  <li>first -&gt; give to our circuit the type of the moves our fighter knows. We did it in the above example ;)</li>
+  <li>second -&gt; map the weakness(es) and resistance(s) of the opponent fighter</li>
+  <li>third -&gt; mixing weakness(es) and resistance(s) together to know whether each move is very strong or not</li>
+  <li>last -&gt; adding the Grover diffuser</li>
+</ul>
+
+<p>Lets imagine, the computer fighter is a Blastoise and ours is a Charmander.
+<br />Charamender is a fire/fly type Pokemon so its weakness will be:</p>
+<ul>
+  <li>water</li>
+  <li>ground</li>
+  <li>electric</li>
+  <li>ice</li>
+</ul>
+
+<p>And its resistances :</p>
+<ul>
+  <li>fire</li>
+  <li>bug</li>
+  <li>grass</li>
+  <li>steel</li>
+  <li>ice
+<br />Also fly type has immunity to ground type, which means a fly type Pokemon would never take any damage from a ground move.</li>
+  <li>ground –&gt; immunity</li>
+</ul>
+
+<p>First of all, we have to map all of these parameters :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Init type qubits
+</span><span class="n">fire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'fire'</span><span class="p">)</span>
+<span class="n">grass_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'grass'</span><span class="p">)</span>
+<span class="n">ground_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'ground'</span><span class="p">)</span>
+<span class="n">fly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'fly'</span><span class="p">)</span>
+<span class="n">water_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'water'</span><span class="p">)</span>
+<span class="n">elec_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'electrick'</span><span class="p">)</span>
+<span class="n">ice_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'ice'</span><span class="p">)</span>
+<span class="n">bug_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'bug'</span><span class="p">)</span>
+<span class="n">steel_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'steel'</span><span class="p">)</span>
+<span class="n">qc_types</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">fire_q</span><span class="p">,</span> <span class="n">grass_q</span><span class="p">,</span> <span class="n">ground_q</span><span class="p">,</span> <span class="n">fly_q</span><span class="p">,</span> <span class="n">water_q</span><span class="p">,</span> <span class="n">elec_q</span><span class="p">,</span> <span class="n">ice_q</span><span class="p">,</span> <span class="n">bug_q</span><span class="p">,</span> <span class="n">steel_q</span><span class="p">)</span>
+
+<span class="c1"># Init charamender
+</span><span class="n">fire_weak</span> <span class="o">=</span> <span class="p">[</span><span class="n">water_q</span><span class="p">,</span> <span class="n">ground_q</span><span class="p">]</span>
+<span class="n">fly_weak</span> <span class="o">=</span> <span class="p">[</span><span class="n">elec_q</span><span class="p">,</span> <span class="n">ice_q</span><span class="p">]</span>
+<span class="n">fire_resist</span> <span class="o">=</span> <span class="p">[</span><span class="n">fire_q</span><span class="p">,</span> <span class="n">bug_q</span><span class="p">,</span> <span class="n">grass_q</span><span class="p">,</span> <span class="n">steel_q</span><span class="p">,</span> <span class="n">ice_q</span><span class="p">]</span>
+<span class="n">fly_resist</span> <span class="o">=</span> <span class="p">[</span><span class="n">grass_q</span><span class="p">,</span> <span class="n">bug_q</span><span class="p">]</span>
+<span class="n">fire_immune</span> <span class="o">=</span> <span class="p">[</span><span class="s">"None"</span><span class="p">]</span>
+<span class="n">fly_immune</span> <span class="o">=</span> <span class="p">[</span><span class="n">ground_q</span><span class="p">]</span>
+
+<span class="c1"># Charamenter type map
+</span><span class="n">weakFire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'weak_fire'</span><span class="p">)</span>
+<span class="n">weakFly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'weak_fly'</span><span class="p">)</span>
+<span class="n">checkWeak_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'check_weak'</span><span class="p">)</span>
+
+<span class="n">resistFire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'resist_fire'</span><span class="p">)</span>
+<span class="n">resistFly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'resist_fly'</span><span class="p">)</span>
+<span class="n">immuneFire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'immunity_fire'</span><span class="p">)</span>
+<span class="n">immuneFly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'immunity_fly'</span><span class="p">)</span>
+<span class="n">qc_charamender</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">weakFire_q</span><span class="p">,</span> <span class="n">weakFly_q</span><span class="p">,</span> <span class="n">checkWeak_q</span><span class="p">,</span> <span class="n">resistFire_q</span><span class="p">,</span> <span class="n">resistFly_q</span><span class="p">,</span> <span class="n">immuneFire_q</span><span class="p">,</span> <span class="n">immuneFly_q</span><span class="p">)</span>
+
+<span class="n">qc_defenderMapping</span> <span class="o">=</span> <span class="n">qc_types</span> <span class="o">+</span> <span class="n">qc_charamender</span>
+
+<span class="c1"># Apply gates
+## Weakness
+</span><span class="k">if</span> <span class="n">fire_weak</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s">"None"</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fire_weak</span><span class="p">:</span>
+        <span class="n">qc_defenderMapping</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">weakFire_q</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">fly_weak</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s">"None"</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fly_weak</span><span class="p">:</span>
+        <span class="n">qc_defenderMapping</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">weakFly_q</span><span class="p">)</span>
+<span class="n">qc_defenderMapping</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="c1">## Resistances
+</span><span class="k">if</span> <span class="n">fire_resist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s">"None"</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fire_resist</span><span class="p">:</span>
+        <span class="n">qc_defenderMapping</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">resistFire_q</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">fly_resist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s">"None"</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fly_resist</span><span class="p">:</span>
+        <span class="n">qc_defenderMapping</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">resistFly_q</span><span class="p">)</span>
+<span class="n">qc_defenderMapping</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="c1">## Immunity
+</span><span class="k">if</span> <span class="n">fire_immune</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s">"None"</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fire_immune</span><span class="p">:</span>
+        <span class="n">qc_defenderMapping</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">immuneFire_q</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">fly_immune</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s">"None"</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fly_immune</span><span class="p">:</span>
+        <span class="n">qc_defenderMapping</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">immuneFly_q</span><span class="p">)</span>
+
+<span class="c1"># Check of the weakness
+</span><span class="k">def</span> <span class="nf">or_weak</span><span class="p">(</span><span class="n">qc</span><span class="p">):</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">weakFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">checkWeak_q</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">cx</span><span class="p">(</span><span class="n">weakFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">checkWeak_q</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">ccx</span><span class="p">(</span><span class="n">weakFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">weakFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">checkWeak_q</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">qc_orweak</span> <span class="o">=</span> <span class="n">qc_types</span> <span class="o">+</span> <span class="n">qc_charamender</span>
+
+<span class="n">or_weak</span><span class="p">(</span><span class="n">qc_orweak</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">qc_defenderMapping</span> <span class="o">+</span> <span class="n">qc_orweak</span><span class="p">).</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">                                      ░                                     ░ »
+         fire_0: ─────────────────────░───■─────────────────────────────────░─»
+                                      ░   │                                 ░ »
+        grass_0: ─────────────────────░───┼─────────■─────────■─────────────░─»
+                                      ░   │         │         │             ░ »
+       ground_0: ────────────■────────░───┼─────────┼─────────┼─────────────░─»
+                             │        ░   │         │         │             ░ »
+          fly_0: ────────────┼────────░───┼─────────┼─────────┼─────────────░─»
+                             │        ░   │         │         │             ░ »
+        water_0: ──■─────────┼────────░───┼─────────┼─────────┼─────────────░─»
+                   │         │        ░   │         │         │             ░ »
+    electrick_0: ──┼────■────┼────────░───┼─────────┼─────────┼─────────────░─»
+                   │    │    │        ░   │         │         │             ░ »
+          ice_0: ──┼────┼────┼────■───░───┼─────────┼─────────┼────■────────░─»
+                   │    │    │    │   ░   │         │         │    │        ░ »
+          bug_0: ──┼────┼────┼────┼───░───┼────■────┼─────────┼────┼────■───░─»
+                   │    │    │    │   ░   │    │    │         │    │    │   ░ »
+        steel_0: ──┼────┼────┼────┼───░───┼────┼────┼────■────┼────┼────┼───░─»
+                 ┌─┴─┐  │  ┌─┴─┐  │   ░   │    │    │    │    │    │    │   ░ »
+    weak_fire_0: ┤ X ├──┼──┤ X ├──┼───░───┼────┼────┼────┼────┼────┼────┼───░─»
+                 └───┘┌─┴─┐└───┘┌─┴─┐ ░   │    │    │    │    │    │    │   ░ »
+     weak_fly_0: ─────┤ X ├─────┤ X ├─░───┼────┼────┼────┼────┼────┼────┼───░─»
+                      └───┘     └───┘ ░   │    │    │    │    │    │    │   ░ »
+   check_weak_0: ─────────────────────░───┼────┼────┼────┼────┼────┼────┼───░─»
+                                      ░ ┌─┴─┐┌─┴─┐┌─┴─┐┌─┴─┐  │  ┌─┴─┐  │   ░ »
+  resist_fire_0: ─────────────────────░─┤ X ├┤ X ├┤ X ├┤ X ├──┼──┤ X ├──┼───░─»
+                                      ░ └───┘└───┘└───┘└───┘┌─┴─┐└───┘┌─┴─┐ ░ »
+   resist_fly_0: ─────────────────────░─────────────────────┤ X ├─────┤ X ├─░─»
+                                      ░                     └───┘     └───┘ ░ »
+immunity_fire_0: ─────────────────────░─────────────────────────────────────░─»
+                                      ░                                     ░ »
+ immunity_fly_0: ─────────────────────░─────────────────────────────────────░─»
+                                      ░                                     ░ »
+«                       ░                 ░ 
+«         fire_0: ──────░─────────────────░─
+«                       ░                 ░ 
+«        grass_0: ──────░─────────────────░─
+«                       ░                 ░ 
+«       ground_0: ──■───░─────────────────░─
+«                   │   ░                 ░ 
+«          fly_0: ──┼───░─────────────────░─
+«                   │   ░                 ░ 
+«        water_0: ──┼───░─────────────────░─
+«                   │   ░                 ░ 
+«    electrick_0: ──┼───░─────────────────░─
+«                   │   ░                 ░ 
+«          ice_0: ──┼───░─────────────────░─
+«                   │   ░                 ░ 
+«          bug_0: ──┼───░─────────────────░─
+«                   │   ░                 ░ 
+«        steel_0: ──┼───░─────────────────░─
+«                   │   ░                 ░ 
+«    weak_fire_0: ──┼───░───■─────────■───░─
+«                   │   ░   │         │   ░ 
+«     weak_fly_0: ──┼───░───┼────■────■───░─
+«                   │   ░ ┌─┴─┐┌─┴─┐┌─┴─┐ ░ 
+«   check_weak_0: ──┼───░─┤ X ├┤ X ├┤ X ├─░─
+«                   │   ░ └───┘└───┘└───┘ ░ 
+«  resist_fire_0: ──┼───░─────────────────░─
+«                   │   ░                 ░ 
+«   resist_fly_0: ──┼───░─────────────────░─
+«                   │   ░                 ░ 
+«immunity_fire_0: ──┼───░─────────────────░─
+«                 ┌─┴─┐ ░                 ░ 
+« immunity_fly_0: ┤ X ├─░─────────────────░─
+«                 └───┘ ░                 ░ </pre>
+
+<p>Here is the entire mapping for all of the Charmander parameters, the check weakness qubit is used to check if the move can be super effective or not. Now let’s add the attack mapping.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">qc_algo</span> <span class="o">=</span> <span class="n">qc_init</span> <span class="o">+</span> <span class="n">qc_qram</span> <span class="o">+</span> <span class="n">qc_defenderMapping</span> <span class="o">+</span> <span class="n">qc_orweak</span>
+
+<span class="n">qc_algo</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Now we have to design our oracle such that it flips when the input is a correct answer. For that we will use a CNOT gate on the check qubits, on both resist qubits and on both immune qubits too:</p>
+<ul>
+  <li>The check qubit indicates if a move is strong or not against the target</li>
+  <li>The resist qubit is in 0 and will stay in 0 if the move is strong or very strong</li>
+  <li>The immune qubit stays in 0 if the move can cause damage to the target</li>
+</ul>
+
+<p>For the resistance qubits and the immune qubits, we will surround them by X gates to make sure flipping occurs if they are in 0, (ie) it’s an effective move.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">oracle_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'oracle'</span><span class="p">)</span>
+<span class="n">qc_oracle</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">oracle_q</span><span class="p">)</span>
+<span class="n">qc_oracle</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">oracle_q</span><span class="p">)</span>
+<span class="n">qc_oracle</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">oracle_q</span><span class="p">)</span>
+
+<span class="c1"># Glueing everything together
+</span><span class="n">qc_finale</span> <span class="o">=</span> <span class="n">qc_oracle</span> <span class="o">+</span> <span class="n">qc_init</span> <span class="o">+</span> <span class="n">qc_qram</span> <span class="o">+</span> <span class="n">qc_defenderMapping</span> <span class="o">+</span> <span class="n">qc_orweak</span>
+
+<span class="n">qc_finale</span><span class="p">.</span><span class="n">x</span><span class="p">([</span><span class="n">resistFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">resistFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">qc_finale</span><span class="p">.</span><span class="n">mcx</span><span class="p">([</span><span class="n">checkWeak_q</span><span class="p">,</span> <span class="n">resistFire_q</span><span class="p">,</span> <span class="n">resistFly_q</span><span class="p">,</span> <span class="n">immuneFire_q</span><span class="p">,</span> <span class="n">immuneFly_q</span><span class="p">],</span> <span class="n">oracle_q</span><span class="p">)</span>
+<span class="n">qc_finale</span><span class="p">.</span><span class="n">x</span><span class="p">([</span><span class="n">resistFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">resistFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">qc_finale</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+
+<span class="n">qc_finale</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Now, our entire algorithm is finished, and in order to not have errors in the distribution we need to repeat in reverse the entire algorithm a second time (except the oracle part) to uncompute the whole transformation. And finally we just need to apply our diffuser and measurements, allowing us to finally see the result.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">diffuser</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+    <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">nqubits</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+        <span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">qubit</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+        <span class="n">qc</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qubit</span><span class="p">)</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">nqubits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">mct</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">nqubits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">nqubits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+        <span class="n">qc</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">qubit</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+        <span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">qubit</span><span class="p">)</span>
+    <span class="n">U_s</span> <span class="o">=</span> <span class="n">qc</span><span class="p">.</span><span class="n">to_gate</span><span class="p">()</span>
+    <span class="n">U_s</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"$U_s$"</span>
+    <span class="k">return</span> <span class="n">qc</span>
+
+
+<span class="n">qc_finale</span> <span class="o">=</span> <span class="n">qc_oracle</span> <span class="o">+</span> <span class="n">qc_init</span> 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">qc_finale</span> <span class="o">=</span> <span class="n">qc_finale</span> <span class="o">+</span> <span class="n">qc_qram</span> <span class="o">+</span> <span class="n">qc_defenderMapping</span> <span class="o">+</span> <span class="n">qc_orweak</span>
+
+    <span class="n">qc_finale</span><span class="p">.</span><span class="n">x</span><span class="p">([</span><span class="n">resistFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">resistFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+    <span class="n">qc_finale</span><span class="p">.</span><span class="n">mcx</span><span class="p">([</span><span class="n">checkWeak_q</span><span class="p">,</span> <span class="n">resistFire_q</span><span class="p">,</span> <span class="n">resistFly_q</span><span class="p">,</span> <span class="n">immuneFire_q</span><span class="p">,</span> <span class="n">immuneFly_q</span><span class="p">],</span> <span class="n">oracle_q</span><span class="p">)</span>
+    <span class="n">qc_finale</span><span class="p">.</span><span class="n">x</span><span class="p">([</span><span class="n">resistFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">resistFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+
+    <span class="n">qc_finale</span> <span class="o">=</span> <span class="n">qc_finale</span> <span class="o">+</span> <span class="n">qc_orweak</span> <span class="o">+</span> <span class="n">qc_defenderMapping</span> <span class="o">+</span> <span class="n">qc_qram</span>
+
+    <span class="n">qc_finale</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">diffuser</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+    
+<span class="n">qc_finale</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">qc_finale</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">qram_q</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">qc_finale</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">qc</span> <span class="o">=</span> <span class="n">qc_finale</span><span class="p">.</span><span class="n">reverse_bits</span><span class="p">()</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend_sim</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span>
+<span class="n">result_job</span> <span class="o">=</span> <span class="n">job</span><span class="p">.</span><span class="n">result</span><span class="p">()</span>
+<span class="n">plot_histogram</span><span class="p">(</span><span class="n">result_job</span><span class="p">.</span><span class="n">get_counts</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/Mica_QPF/output_46_0.png" alt="/assets/images/Mica_QPF/output_46_0.png" /></p>
+
+<p>As we can see the only answer is the attack encoded in the address 00, which denotes hydroblast, a water attack, one of the weakness(es) of Charmander. That’s exactly what we wanted for our output.
+<br />Finally, the global structure of the circuit is looks like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">oracle_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'oracle'</span><span class="p">)</span>
+<span class="n">qram_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">'qram'</span><span class="p">)</span>
+
+<span class="n">fire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'fire'</span><span class="p">)</span>
+<span class="n">grass_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'grass'</span><span class="p">)</span>
+<span class="n">ground_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'ground'</span><span class="p">)</span>
+<span class="n">fly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'fly'</span><span class="p">)</span>
+<span class="n">water_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'water'</span><span class="p">)</span>
+<span class="n">elec_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'electrick'</span><span class="p">)</span>
+<span class="n">ice_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'ice'</span><span class="p">)</span>
+<span class="n">bug_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'bug'</span><span class="p">)</span>
+<span class="n">steel_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'steel'</span><span class="p">)</span>
+<span class="n">normal_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'normal'</span><span class="p">)</span>
+
+<span class="n">resistFire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'resist_fire'</span><span class="p">)</span>
+<span class="n">resistFly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'resist_fly'</span><span class="p">)</span>
+<span class="n">immuneFire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'immunity_fire'</span><span class="p">)</span>
+<span class="n">immuneFly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'immunity_fly'</span><span class="p">)</span>
+<span class="n">weakFire_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'weak_fire'</span><span class="p">)</span>
+<span class="n">weakFly_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'weak_fly'</span><span class="p">)</span>
+<span class="n">checkWeak_q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'check_weak'</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">'measure'</span><span class="p">)</span>
+
+<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">oracle_q</span><span class="p">,</span> <span class="n">qram_q</span><span class="p">,</span> <span class="n">fire_q</span><span class="p">,</span> <span class="n">grass_q</span><span class="p">,</span> <span class="n">ground_q</span><span class="p">,</span> <span class="n">fly_q</span><span class="p">,</span> <span class="n">water_q</span><span class="p">,</span> <span class="n">elec_q</span><span class="p">,</span> <span class="n">ice_q</span><span class="p">,</span> <span class="n">bug_q</span><span class="p">,</span> 
+                    <span class="n">steel_q</span><span class="p">,</span> <span class="n">normal_q</span><span class="p">,</span> <span class="n">resistFire_q</span><span class="p">,</span> <span class="n">resistFly_q</span><span class="p">,</span> <span class="n">immuneFire_q</span><span class="p">,</span> <span class="n">immuneFly_q</span><span class="p">,</span> 
+                    <span class="n">weakFire_q</span><span class="p">,</span> <span class="n">weakFly_q</span><span class="p">,</span> <span class="n">checkWeak_q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">qram</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+    <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">nqubits</span><span class="p">)</span>
+    <span class="n">U_s</span> <span class="o">=</span> <span class="n">qc</span><span class="p">.</span><span class="n">to_gate</span><span class="p">()</span>
+    <span class="n">U_s</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"$QRAM$"</span>
+    <span class="k">return</span> <span class="n">U_s</span>
+
+<span class="k">def</span> <span class="nf">defenderMapping</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+    <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">nqubits</span><span class="p">)</span>
+    <span class="n">U_s</span> <span class="o">=</span> <span class="n">qc</span><span class="p">.</span><span class="n">to_gate</span><span class="p">()</span>
+    <span class="n">U_s</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"$mappingChara$"</span>
+    <span class="k">return</span> <span class="n">U_s</span>
+
+<span class="k">def</span> <span class="nf">orweak</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+    <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">nqubits</span><span class="p">)</span>
+    <span class="n">U_s</span> <span class="o">=</span> <span class="n">qc</span><span class="p">.</span><span class="n">to_gate</span><span class="p">()</span>
+    <span class="n">U_s</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"$weakCheck$"</span>
+    <span class="k">return</span> <span class="n">U_s</span>
+
+<span class="k">def</span> <span class="nf">diffuser</span><span class="p">(</span><span class="n">nqubits</span><span class="p">):</span>
+    <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">nqubits</span><span class="p">)</span>
+    <span class="n">U_s</span> <span class="o">=</span> <span class="n">qc</span><span class="p">.</span><span class="n">to_gate</span><span class="p">()</span>
+    <span class="n">U_s</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"$diffuser$"</span>
+    <span class="k">return</span> <span class="n">U_s</span>
+
+<span class="c1"># Init
+</span><span class="n">qc</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">oracle_q</span><span class="p">)</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">oracle_q</span><span class="p">)</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">h</span><span class="p">(</span><span class="n">qram_q</span><span class="p">)</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># Qram
+</span>    <span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">qram</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+    <span class="c1"># Algo
+</span>    <span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">defenderMapping</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">])</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">orweak</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
+
+    <span class="c1"># Oracle
+</span>    <span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">x</span><span class="p">([</span><span class="n">resistFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">resistFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">mcx</span><span class="p">([</span><span class="n">checkWeak_q</span><span class="p">,</span> <span class="n">resistFire_q</span><span class="p">,</span> <span class="n">resistFly_q</span><span class="p">,</span> <span class="n">immuneFire_q</span><span class="p">,</span> <span class="n">immuneFly_q</span><span class="p">],</span> <span class="n">oracle_q</span><span class="p">)</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">x</span><span class="p">([</span><span class="n">resistFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">resistFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFire_q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">immuneFly_q</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+
+    <span class="c1"># Uncompute
+</span>    <span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">orweak</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">defenderMapping</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">])</span>
+    <span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">qram</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+
+    <span class="c1"># Diffuser
+</span>    <span class="n">qc</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">diffuser</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+    
+<span class="n">qc</span><span class="p">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">qc</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">qram_q</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">qc</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">                 ┌───┐┌───┐ ░                                                 »
+       oracle_0: ┤ X ├┤ H ├─░─────────────────────────────────────────────────»
+                 ├───┤└───┘ ░ ┌──────────┐                                    »
+         qram_0: ┤ H ├──────░─┤0         ├────────────────────────────────────»
+                 ├───┤      ░ │          │                                    »
+         qram_1: ┤ H ├──────░─┤1         ├────────────────────────────────────»
+                 └───┘      ░ │          │┌──────────────────┐                »
+         fire_0: ───────────░─┤2         ├┤0                 ├────────────────»
+                            ░ │          ││                  │                »
+        grass_0: ───────────░─┤3         ├┤1                 ├────────────────»
+                            ░ │          ││                  │                »
+       ground_0: ───────────░─┤4         ├┤2                 ├────────────────»
+                            ░ │          ││                  │                »
+          fly_0: ───────────░─┤5         ├┤3                 ├────────────────»
+                            ░ │   $QRAM$ ││                  │                »
+        water_0: ───────────░─┤6         ├┤4                 ├────────────────»
+                            ░ │          ││                  │                »
+    electrick_0: ───────────░─┤7         ├┤5                 ├────────────────»
+                            ░ │          ││                  │                »
+          ice_0: ───────────░─┤8         ├┤6                 ├────────────────»
+                            ░ │          ││                  │                »
+          bug_0: ───────────░─┤9         ├┤7                 ├────────────────»
+                            ░ │          ││   $mappingChara$ │                »
+        steel_0: ───────────░─┤10        ├┤8                 ├────────────────»
+                            ░ │          ││                  │                »
+       normal_0: ───────────░─┤11        ├┤9                 ├────────────────»
+                            ░ └──────────┘│                  │                »
+  resist_fire_0: ───────────░─────────────┤10                ├────────────────»
+                            ░             │                  │                »
+   resist_fly_0: ───────────░─────────────┤11                ├────────────────»
+                            ░             │                  │                »
+immunity_fire_0: ───────────░─────────────┤12                ├────────────────»
+                            ░             │                  │                »
+ immunity_fly_0: ───────────░─────────────┤13                ├────────────────»
+                            ░             │                  │┌──────────────┐»
+    weak_fire_0: ───────────░─────────────┤14                ├┤0             ├»
+                            ░             │                  ││              │»
+     weak_fly_0: ───────────░─────────────┤15                ├┤1 $weakCheck$ ├»
+                            ░             └──────────────────┘│              │»
+   check_weak_0: ───────────░─────────────────────────────────┤2             ├»
+                            ░                                 └──────────────┘»
+      measure: 2/═════════════════════════════════════════════════════════════»
+                                                                              »
+«                  ░      ┌───┐      ░                                     »
+«       oracle_0: ─░──────┤ X ├──────░─────────────────────────────────────»
+«                  ░      └─┬─┘      ░                                     »
+«         qram_0: ─░────────┼────────░─────────────────────────────────────»
+«                  ░        │        ░                                     »
+«         qram_1: ─░────────┼────────░─────────────────────────────────────»
+«                  ░        │        ░                 ┌──────────────────┐»
+«         fire_0: ─░────────┼────────░─────────────────┤0                 ├»
+«                  ░        │        ░                 │                  │»
+«        grass_0: ─░────────┼────────░─────────────────┤1                 ├»
+«                  ░        │        ░                 │                  │»
+«       ground_0: ─░────────┼────────░─────────────────┤2                 ├»
+«                  ░        │        ░                 │                  │»
+«          fly_0: ─░────────┼────────░─────────────────┤3                 ├»
+«                  ░        │        ░                 │                  │»
+«        water_0: ─░────────┼────────░─────────────────┤4                 ├»
+«                  ░        │        ░                 │                  │»
+«    electrick_0: ─░────────┼────────░─────────────────┤5                 ├»
+«                  ░        │        ░                 │                  │»
+«          ice_0: ─░────────┼────────░─────────────────┤6                 ├»
+«                  ░        │        ░                 │                  │»
+«          bug_0: ─░────────┼────────░─────────────────┤7                 ├»
+«                  ░        │        ░                 │   $mappingChara$ │»
+«        steel_0: ─░────────┼────────░─────────────────┤8                 ├»
+«                  ░        │        ░                 │                  │»
+«       normal_0: ─░────────┼────────░─────────────────┤9                 ├»
+«                  ░ ┌───┐  │  ┌───┐ ░                 │                  │»
+«  resist_fire_0: ─░─┤ X ├──■──┤ X ├─░─────────────────┤10                ├»
+«                  ░ ├───┤  │  ├───┤ ░                 │                  │»
+«   resist_fly_0: ─░─┤ X ├──■──┤ X ├─░─────────────────┤11                ├»
+«                  ░ ├───┤  │  ├───┤ ░                 │                  │»
+«immunity_fire_0: ─░─┤ X ├──■──┤ X ├─░─────────────────┤12                ├»
+«                  ░ ├───┤  │  ├───┤ ░                 │                  │»
+« immunity_fly_0: ─░─┤ X ├──■──┤ X ├─░─────────────────┤13                ├»
+«                  ░ └───┘  │  └───┘ ░ ┌──────────────┐│                  │»
+«    weak_fire_0: ─░────────┼────────░─┤0             ├┤14                ├»
+«                  ░        │        ░ │              ││                  │»
+«     weak_fly_0: ─░────────┼────────░─┤1 $weakCheck$ ├┤15                ├»
+«                  ░        │        ░ │              │└──────────────────┘»
+«   check_weak_0: ─░────────■────────░─┤2             ├────────────────────»
+«                  ░                 ░ └──────────────┘                    »
+«      measure: 2/═════════════════════════════════════════════════════════»
+«                                                                          »
+«                                             ░       
+«       oracle_0: ────────────────────────────░───────
+«                 ┌──────────┐┌─────────────┐ ░ ┌─┐   
+«         qram_0: ┤0         ├┤0            ├─░─┤M├───
+«                 │          ││  $diffuser$ │ ░ └╥┘┌─┐
+«         qram_1: ┤1         ├┤1            ├─░──╫─┤M├
+«                 │          │└─────────────┘ ░  ║ └╥┘
+«         fire_0: ┤2         ├────────────────░──╫──╫─
+«                 │          │                ░  ║  ║ 
+«        grass_0: ┤3         ├────────────────░──╫──╫─
+«                 │          │                ░  ║  ║ 
+«       ground_0: ┤4         ├────────────────░──╫──╫─
+«                 │          │                ░  ║  ║ 
+«          fly_0: ┤5         ├────────────────░──╫──╫─
+«                 │   $QRAM$ │                ░  ║  ║ 
+«        water_0: ┤6         ├────────────────░──╫──╫─
+«                 │          │                ░  ║  ║ 
+«    electrick_0: ┤7         ├────────────────░──╫──╫─
+«                 │          │                ░  ║  ║ 
+«          ice_0: ┤8         ├────────────────░──╫──╫─
+«                 │          │                ░  ║  ║ 
+«          bug_0: ┤9         ├────────────────░──╫──╫─
+«                 │          │                ░  ║  ║ 
+«        steel_0: ┤10        ├────────────────░──╫──╫─
+«                 │          │                ░  ║  ║ 
+«       normal_0: ┤11        ├────────────────░──╫──╫─
+«                 └──────────┘                ░  ║  ║ 
+«  resist_fire_0: ────────────────────────────░──╫──╫─
+«                                             ░  ║  ║ 
+«   resist_fly_0: ────────────────────────────░──╫──╫─
+«                                             ░  ║  ║ 
+«immunity_fire_0: ────────────────────────────░──╫──╫─
+«                                             ░  ║  ║ 
+« immunity_fly_0: ────────────────────────────░──╫──╫─
+«                                             ░  ║  ║ 
+«    weak_fire_0: ────────────────────────────░──╫──╫─
+«                                             ░  ║  ║ 
+«     weak_fly_0: ────────────────────────────░──╫──╫─
+«                                             ░  ║  ║ 
+«   check_weak_0: ────────────────────────────░──╫──╫─
+«                                             ░  ║  ║ 
+«      measure: 2/═══════════════════════════════╩══╩═
+«                                                0  1 </pre>
+
+<h2 id="and-now-">And now? <a class="anchor" id="then"></a></h2>
+<p>Of course, this program is not perfect, it only encodes 8 Pokemons and only attack moves. But the main problem is the program doesn’t have any graphics and would need a window with both pokemons players, attack choose menu and life indicators.
+Is you feel the same that the program needs graphics or others cool features like improvements on the AI, do not hesitate to go to my <a href="https://github.com/mickahell/quantum_pokemon-fight">GitHub repository</a> and create an issue so that I can grant you access for working together on this.</p>
+
+<p>As well an online version of the full game is available to play directly in your browser, work well on Chrome and Firefox <a href="https://games.xtraorbitals.xyz">here</a></p>
+
+<h2 id="references-">References <a class="anchor" id="references"></a></h2>
+<ol>
+  <li>Qiskit Textbook <a href="https://qiskit.org/textbook/ch-algorithms/grover.html">Grover’s Algorithm</a></li>
+  <li>Wikipedia, <a href="https://en.wikipedia.org/wiki/Vertex_cover">Vertex cover</a></li>
+  <li><a href="https://graphonline.ru/en/?graph=BipartiteGraph">Graph Online</a></li>
+  <li>Quantum Pokemon Fight, <a href="https://github.com/mickahell/quantum_pokemon-fight">GitHub</a></li>
+</ol>
+
+<h2 id="author">Author</h2>
+<p>Michaël Rollin, <a href="https://github.com/mickahell">GitHub</a>, <a href="https://twitter.com/mickahell89700">Twitter</a>, <a href="https://www.linkedin.com/in/michaelrollin/">Linkedin</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#game" class="page__taxonomy-item p-category" rel="tag">game</a><span class="sep">, </span>
+    
+      <a href="/tags/#grovers" class="page__taxonomy-item p-category" rel="tag">Grovers</a><span class="sep">, </span>
+    
+      <a href="/tags/#pokemon" class="page__taxonomy-item p-category" rel="tag">Pokemon</a><span class="sep">, </span>
+    
+      <a href="/tags/#qiskit" class="page__taxonomy-item p-category" rel="tag">Qiskit</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-ai" class="page__taxonomy-item p-category" rel="tag">Quantum AI</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-computing" class="page__taxonomy-item p-category" rel="tag">Quantum computing</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-game" class="page__taxonomy-item p-category" rel="tag">Quantum game</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-search" class="page__taxonomy-item p-category" rel="tag">Quantum search</a><span class="sep">, </span>
+    
+      <a href="/tags/#random" class="page__taxonomy-item p-category" rel="tag">Random</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-01-09T00:00:00+00:00">January 9, 2021</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Quantum+Pokemon+Fight%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-quantum-pokemon-fight%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-quantum-pokemon-fight%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullstackquantumcomputation.tech/blog/post-quantum-pokemon-fight/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Quantum+Pokemon+Fight%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fpost-quantum-pokemon-fight%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/post-quantum-ugly-duckling/" class="pagination--pager" title="Make use of noisy hardware: Building a noisy quantum random number generator">Previous</a>
+    
+    
+      <a href="/blog/deutsch-algorithm/" class="pagination--pager" title="The Deutsch Algorithm">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/QuantumVerse-Game/" rel="permalink">Quantumverse Game
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">QuantumVerse 🌌🎮- A Gamer’s Bot!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/File-Transfer-Using-QC-Protocol-Cirq/" rel="permalink">File Transfer Using Qc Protocol Cirq
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/quaze-tutorial/" rel="permalink">Tutorial to build a Quantum inspired puzzle game in JS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to cr...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-simulation/" rel="permalink">Electronic Simulation of Molecules using Pennylane
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://discord.gg/NDm9e9W" rel="nofollow noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/QuantumUniversalEducation" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/company/quantum-universal-education/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/QuantUniEd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://fullstackquantumcomputation.tech">Full-Stack Quantum Computation</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

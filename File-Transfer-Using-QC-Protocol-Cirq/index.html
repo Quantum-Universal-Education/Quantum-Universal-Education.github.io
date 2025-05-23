@@ -1,0 +1,783 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>File Transfer Using Qc Protocol Cirq | Full-Stack Quantum Computation</title>
+<meta name="description" content="Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Full-Stack Quantum Computation">
+<meta property="og:title" content="File Transfer Using Qc Protocol Cirq">
+<meta property="og:url" content="https://fullstackquantumcomputation.tech/File-Transfer-Using-QC-Protocol-Cirq/">
+
+
+  <meta property="og:description" content="Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq">
+
+
+
+  <meta property="og:image" content="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-03T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://fullstackquantumcomputation.tech/File-Transfer-Using-QC-Protocol-Cirq/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Full-Stack Quantum Computation Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/FSQC-small.png" alt="Full-Stack Quantum Computation"></a>
+        
+        <a class="site-title" href="/">
+          Full-Stack Quantum Computation
+          <span class="site-subtitle">Community-driven, open-source education resources</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/journal-club/"
+                
+                
+              >Journal Club</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/qce24-workshop/"
+                
+                
+              >QCE24 Workshop</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about-us/"
+                
+                
+              >About us</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  <!--added-->
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="File Transfer Using Qc Protocol Cirq">
+    <meta itemprop="description" content="Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq">
+    <meta itemprop="datePublished" content="2024-06-03T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://fullstackquantumcomputation.tech/File-Transfer-Using-QC-Protocol-Cirq/" itemprop="url">File Transfer Using Qc Protocol Cirq
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="quantum-communication-file-transfer-using-quantum-communication-protocol-with-cirq">Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Welcome to this tutorial on quantum communication using Cirq! In this tutorial, we will explore the concept of quantum communication and how it can be used for secure file transfer. Quantum communication leverages the principles of quantum mechanics to enable secure communication protocols that are theoretically unbreakable. This tutorial is designed for high school and undergraduate students and will guide you step-by-step through the essential concepts and practical implementation of a quantum communication protocol using Python and Cirq.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Before we begin, you should have a basic understanding of the following topics:</p>
+
+<ul>
+  <li>Basic Python programming</li>
+  <li>Basic concepts in quantum mechanics (optional but helpful)</li>
+  <li>Basic understanding of cryptography (optional but helpful)</li>
+</ul>
+
+<h2 id="learning-outcomes">Learning Outcomes</h2>
+
+<p>By the end of this tutorial, you will:</p>
+
+<ul>
+  <li>Understand the basics of quantum communication and its significance</li>
+  <li>Learn about quantum key distribution (QKD) and the BB84 protocol</li>
+  <li>Implement a simple quantum key distribution protocol using Cirq</li>
+  <li>Understand how quantum key distribution can be used for secure file transfer</li>
+</ul>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li>Introduction to Quantum Communication</li>
+  <li>Quantum Key Distribution (QKD)</li>
+  <li>The BB84 Protocol</li>
+  <li>Implementation of BB84 Protocol in Cirq</li>
+  <li>Secure File Transfer Using Quantum Keys</li>
+  <li>Conclusion and Further Reading</li>
+</ol>
+
+<h2 id="1-introduction-to-quantum-communication">1. Introduction to Quantum Communication</h2>
+
+<p>Quantum communication uses quantum bits (qubits) to encode information, taking advantage of quantum properties such as superposition and entanglement. Unlike classical bits, which can be either 0 or 1, qubits can exist in multiple states simultaneously, providing a higher level of security.</p>
+
+<h3 id="key-concepts">Key Concepts</h3>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>Qubit</strong>: The basic unit of quantum information, analogous to a classical bit. A qubit can be in a state</td>
+          <td>0⟩,</td>
+          <td>1⟩, or any quantum superposition of these states.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>Superposition</strong>: A fundamental principle of quantum mechanics where a qubit can be in a combination of both</td>
+          <td>0⟩ and</td>
+          <td>1⟩ states simultaneously. This property is what gives quantum computers their power.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>Entanglement</strong>: A quantum phenomenon where two qubits become linked, and the state of one qubit directly influences the state of another, no matter the distance between them. This property is crucial for quantum communication and quantum computing.</li>
+</ul>
+
+<h2 id="2-quantum-key-distribution-qkd">2. Quantum Key Distribution (QKD)</h2>
+
+<p>QKD is a method used to securely share encryption keys between two parties. It relies on the principles of quantum mechanics to ensure that any attempt to eavesdrop on the communication can be detected.</p>
+
+<h3 id="benefits-of-qkd">Benefits of QKD</h3>
+
+<ul>
+  <li><strong>Unconditional security</strong>: QKD security is based on the laws of physics rather than computational assumptions, making it theoretically unbreakable.</li>
+  <li><strong>Eavesdropping detection</strong>: Any attempt to intercept the key changes the quantum state, alerting the communicating parties and allowing them to discard the compromised bits.</li>
+</ul>
+
+<h2 id="3-the-bb84-protocol">3. The BB84 Protocol</h2>
+
+<p>The BB84 protocol, proposed by Charles Bennett and Gilles Brassard in 1984, is one of the first and most well-known QKD protocols. It uses two sets of bases to encode the qubits: rectilinear (0 and 1) and diagonal (+ and x).</p>
+
+<h3 id="steps-of-the-bb84-protocol">Steps of the BB84 Protocol</h3>
+
+<ol>
+  <li><strong>Preparation</strong>: The sender (Alice) prepares a random sequence of qubits using two bases (rectilinear and diagonal).</li>
+  <li><strong>Transmission</strong>: Alice sends the qubits to the receiver (Bob) over a quantum channel.</li>
+  <li><strong>Measurement</strong>: Bob measures the qubits using randomly chosen bases.</li>
+  <li><strong>Basis Reconciliation</strong>: Alice and Bob compare their bases over a classical channel and discard mismatched results.</li>
+  <li><strong>Key Sifting</strong>: The remaining bits form the raw key, which can be used for encryption.</li>
+</ol>
+
+<h2 id="4-implementation-of-bb84-protocol-in-cirq">4. Implementation of BB84 Protocol in Cirq</h2>
+
+<p>We will use the Python library Cirq to simulate the BB84 protocol. Ensure you have Cirq installed in your environment:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>cirq
+</code></pre></div></div>
+
+<h3 id="step-by-step-implementation">Step-by-Step Implementation</h3>
+
+<h4 id="1-import-libraries">1. Import Libraries</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">cirq</span>
+</code></pre></div></div>
+
+<h4 id="2-generate-random-bits-and-bases">2. Generate Random Bits and Bases</h4>
+
+<p>In this step, we generate random bits and bases for Alice.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">generate_random_bits</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)]</span>
+
+<span class="k">def</span> <span class="nf">generate_random_bases</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">([</span><span class="s">'Z'</span><span class="p">,</span> <span class="s">'X'</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)]</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Number of qubits
+</span><span class="n">alice_bits</span> <span class="o">=</span> <span class="n">generate_random_bits</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">alice_bases</span> <span class="o">=</span> <span class="n">generate_random_bases</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Random Bits</strong>: These are the bits that Alice wants to encode in the qubits.</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>Random Bases</strong>: These are the bases (Z or X) that Alice uses to encode the bits. The Z basis represents the standard computational basis (</td>
+          <td>0⟩ and</td>
+          <td>1⟩), and the X basis represents the diagonal basis (</td>
+          <td>+⟩ and</td>
+          <td>−⟩).</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h4 id="3-prepare-qubits">3. Prepare Qubits</h4>
+
+<p>In this step, Alice prepares the qubits according to her bits and bases.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">prepare_qubits</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">bases</span><span class="p">):</span>
+    <span class="n">qubits</span> <span class="o">=</span> <span class="p">[</span><span class="n">cirq</span><span class="p">.</span><span class="n">GridQubit</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">))]</span>
+    <span class="n">circuit</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">Circuit</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">bit</span><span class="p">,</span> <span class="n">base</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">bases</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">bit</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">X</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">base</span> <span class="o">==</span> <span class="s">'X'</span><span class="p">:</span>
+            <span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">H</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">qubits</span><span class="p">,</span> <span class="n">circuit</span>
+
+<span class="n">qubits</span><span class="p">,</span> <span class="n">alice_circuit</span> <span class="o">=</span> <span class="n">prepare_qubits</span><span class="p">(</span><span class="n">alice_bits</span><span class="p">,</span> <span class="n">alice_bases</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>cirq.GridQubit</strong>: Represents a qubit on a 2D grid.</li>
+  <li><strong>cirq.Circuit</strong>: A quantum circuit that contains the operations (gates) applied to the qubits.</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>cirq.X</strong>: A quantum gate that flips the state of a qubit (</td>
+          <td>0⟩ to</td>
+          <td>1⟩ and vice versa).</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>cirq.H</strong>: A Hadamard gate that puts a qubit into superposition (from</td>
+          <td>0⟩ to</td>
+          <td>+⟩ and from</td>
+          <td>1⟩ to</td>
+          <td>−⟩).</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h4 id="4-simulate-transmission-and-measurement">4. Simulate Transmission and Measurement</h4>
+
+<p>Bob receives the qubits and measures them using his own random bases.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">measure_qubits</span><span class="p">(</span><span class="n">qubits</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">circuit</span><span class="p">):</span>
+    <span class="n">simulator</span> <span class="o">=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">Simulator</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">base</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bases</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">base</span> <span class="o">==</span> <span class="s">'X'</span><span class="p">:</span>
+            <span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">H</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="n">circuit</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">measure</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="sa">f</span><span class="s">'m</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">'</span><span class="p">))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">simulator</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">qubits</span><span class="p">)):</span>
+        <span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">measurements</span><span class="p">[</span><span class="sa">f</span><span class="s">'m</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">'</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">results</span>
+
+<span class="n">bob_bases</span> <span class="o">=</span> <span class="n">generate_random_bases</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">bob_results</span> <span class="o">=</span> <span class="n">measure_qubits</span><span class="p">(</span><span class="n">qubits</span><span class="p">,</span> <span class="n">bob_bases</span><span class="p">,</span> <span class="n">alice_circuit</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>cirq.Simulator</strong>: A simulator to run quantum circuits.</li>
+  <li><strong>cirq.measure</strong>: A measurement operation on a qubit.</li>
+</ul>
+
+<h4 id="5-basis-reconciliation-and-key-sifting">5. Basis Reconciliation and Key Sifting</h4>
+
+<p>Alice and Bob compare their bases and sift the key.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sift_keys</span><span class="p">(</span><span class="n">alice_bases</span><span class="p">,</span> <span class="n">bob_bases</span><span class="p">,</span> <span class="n">alice_bits</span><span class="p">,</span> <span class="n">bob_results</span><span class="p">):</span>
+    <span class="n">sifted_key</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">a_base</span><span class="p">,</span> <span class="n">b_base</span><span class="p">,</span> <span class="n">a_bit</span><span class="p">,</span> <span class="n">b_bit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">alice_bases</span><span class="p">,</span> <span class="n">bob_bases</span><span class="p">,</span> <span class="n">alice_bits</span><span class="p">,</span> <span class="n">bob_results</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">a_base</span> <span class="o">==</span> <span class="n">b_base</span><span class="p">:</span>
+            <span class="n">sifted_key</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a_bit</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sifted_key</span>
+
+<span class="n">sifted_key</span> <span class="o">=</span> <span class="n">sift_keys</span><span class="p">(</span><span class="n">alice_bases</span><span class="p">,</span> <span class="n">bob_bases</span><span class="p">,</span> <span class="n">alice_bits</span><span class="p">,</span> <span class="n">bob_results</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Sifted Key:"</span><span class="p">,</span> <span class="n">sifted_key</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Sifted Key</strong>: The key bits that were measured using the same basis by both Alice and Bob.</li>
+</ul>
+
+<h2 id="5-secure-file-transfer-using-quantum-keys">5. Secure File Transfer Using Quantum Keys</h2>
+
+<p>Now that we have a secure key, we can use it for secure file transfer. We will use symmetric encryption (e.g., the One-Time Pad) for this purpose.</p>
+
+<h3 id="symmetric-encryption-example">Symmetric Encryption Example</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">encrypt_decrypt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="n">encrypted_decrypted</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">^</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">key</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">encrypted_decrypted</span>
+
+<span class="c1"># Convert sifted_key to a string of the same length as the message
+</span><span class="n">message</span> <span class="o">=</span> <span class="s">"Hello, Quantum World!"</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">sifted_key</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)]</span>
+
+<span class="c1"># Encrypt the message
+</span><span class="n">encrypted_message</span> <span class="o">=</span> <span class="n">encrypt_decrypt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Encrypted Message:"</span><span class="p">,</span> <span class="n">encrypted_message</span><span class="p">)</span>
+
+<span class="c1"># Decrypt the message
+</span><span class="n">decrypted_message</span> <span class="o">=</span> <span class="n">encrypt_decrypt</span><span class="p">(</span><span class="n">encrypted_message</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Decrypted Message:"</span><span class="p">,</span> <span class="n">decrypted_message</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Symmetric Encryption</strong>: A method of encryption where the same key is used for both encryption and decryption.</li>
+  <li><strong>One-Time Pad</strong>: A theoretically unbreakable encryption method where a random key is used only once.</li>
+</ul>
+
+<h2 id="6-conclusion-and-further-reading">6. Conclusion and Further Reading</h2>
+
+<p>Congratulations! You have successfully implemented a simple quantum key distribution protocol using the BB84 protocol and used it for secure file transfer. Quantum communication is a fascinating field with many real-world applications, from secure communications to quantum computing.</p>
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li>“Quantum Computation and Quantum Information” by Michael A. Nielsen and Isaac L. Chuang</li>
+  <li>“Introduction to Quantum Mechanics” by David J. Griffiths</li>
+  <li><a href="https://quantumai.google/cirq">Cirq Documentation</a></li>
+</ul>
+
+<h3 id="how-i-got-started-in-quantum-computing">How I Got Started in Quantum Computing</h3>
+
+<p>I got started in quantum computing through my fascination with quantum mechanics and its potential applications in computing and cryptography. Learning about the fundamental</p>
+
+<p>principles of quantum mechanics and their implications for information processing was incredibly exciting. I hope this tutorial has inspired you to explore the field of quantum computing and its many possibilities.</p>
+
+<h3 id="resources-and-references">Resources and References</h3>
+
+<ul>
+  <li><a href="https://quantumai.google/cirq">Cirq</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Quantum_cryptography">Quantum Cryptography</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/BB84">BB84 Protocol</a></li>
+</ul>
+
+<p>Feel free to contribute to this project and share your feedback. Happy coding!</p>
+
+<h2 id="full-code-for-reference">Full Code for Reference</h2>
+
+<p>Here is the complete code for the BB84 protocol implementation and secure file transfer:</p>
+
+<p>```python
+import random
+import cirq</p>
+
+<p>def generate_random_bits(length):
+    return [random.randint(0, 1) for _ in range(length)]</p>
+
+<p>def generate_random_bases(length):
+    return [random.choice([‘Z’, ‘X’]) for _ in range(length)]</p>
+
+<p>n = 100  # Number of qubits
+alice_bits = generate_random_bits(n)
+alice_bases = generate_random_bases(n)</p>
+
+<p>def prepare_qubits(bits, bases):
+    qubits = [cirq.GridQubit(0, i) for i in range(len(bits))]
+    circuit = cirq.Circuit()
+    for i, (bit, base) in enumerate(zip(bits, bases)):
+        if bit == 1:
+            circuit.append(cirq.X(qubits[i]))
+        if base == ‘X’:
+            circuit.append(cirq.H(qubits[i]))
+    return qubits, circuit</p>
+
+<p>qubits, alice_circuit = prepare_qubits(alice_bits, alice_bases)</p>
+
+<p>def measure_qubits(qubits, bases, circuit):
+    simulator = cirq.Simulator()
+    results = []
+    for i, base in enumerate(bases):
+        if base == ‘X’:
+            circuit.append(cirq.H(qubits[i]))
+        circuit.append(cirq.measure(qubits[i], key=f’m{i}’))
+    result = simulator.run(circuit)
+    for i in range(len(qubits)):
+        results.append(result.measurements[f’m{i}’][0])
+    return results</p>
+
+<p>bob_bases = generate_random_bases(n)
+bob_results = measure_qubits(qubits, bob_bases, alice_circuit)</p>
+
+<p>def sift_keys(alice_bases, bob_bases, alice_bits, bob_results):
+    sifted_key = []
+    for a_base, b_base, a_bit, b_bit in zip(alice_bases, bob_bases, alice_bits, bob_results):
+        if a_base == b_base:
+            sifted_key.append(a_bit)
+    return sifted_key</p>
+
+<p>sifted_key = sift_keys(alice_bases, bob_bases, alice_bits, bob_results)
+print(“Sifted Key:”, sifted_key)</p>
+
+<p>def encrypt_decrypt(message, key):
+    encrypted_decrypted = ‘‘.join(chr(ord(c) ^ k) for c, k in zip(message, key))
+    return encrypted_decrypted</p>
+
+<h1 id="convert-sifted_key-to-a-string-of-the-same-length-as-the-message">Convert sifted_key to a string of the same length as the message</h1>
+<p>message = “Hello, Quantum World!”
+key = sifted_key[:len(message)]</p>
+
+<h1 id="encrypt-the-message">Encrypt the message</h1>
+<p>encrypted_message = encrypt_decrypt(message, key)
+print(“Encrypted Message:”, encrypted_message)</p>
+
+<h1 id="decrypt-the-message">Decrypt the message</h1>
+<p>decrypted_message = encrypt_decrypt(encrypted_message, key)
+print(“Decrypted Message:”, decrypted_message)</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-03T00:00:00+00:00">June 3, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=File+Transfer+Using+Qc+Protocol+Cirq%20https%3A%2F%2Ffullstackquantumcomputation.tech%2FFile-Transfer-Using-QC-Protocol-Cirq%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullstackquantumcomputation.tech%2FFile-Transfer-Using-QC-Protocol-Cirq%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullstackquantumcomputation.tech/File-Transfer-Using-QC-Protocol-Cirq/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=File+Transfer+Using+Qc+Protocol+Cirq%20https%3A%2F%2Ffullstackquantumcomputation.tech%2FFile-Transfer-Using-QC-Protocol-Cirq%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/quaze-tutorial/" class="pagination--pager" title="Tutorial to build a Quantum inspired puzzle game in JS">Previous</a>
+    
+    
+      <a href="/QuantumVerse-Game/" class="pagination--pager" title="Quantumverse Game">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/QuantumVerse-Game/" rel="permalink">Quantumverse Game
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">QuantumVerse 🌌🎮- A Gamer’s Bot!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/quaze-tutorial/" rel="permalink">Tutorial to build a Quantum inspired puzzle game in JS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to cr...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-simulation/" rel="permalink">Electronic Simulation of Molecules using Pennylane
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-vqe/" rel="permalink">Variational Quantum Eigensolver: Simulating the Electronic Structure of Molecules
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://discord.gg/NDm9e9W" rel="nofollow noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/QuantumUniversalEducation" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/company/quantum-universal-education/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/QuantUniEd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://fullstackquantumcomputation.tech">Full-Stack Quantum Computation</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

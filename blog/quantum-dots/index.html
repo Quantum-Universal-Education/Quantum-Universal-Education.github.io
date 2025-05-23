@@ -1,0 +1,1025 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Quantum Dots and their Application as Electron Spin Qubits | Full-Stack Quantum Computation</title>
+<meta name="description" content="Overall, today I’ll be breaking my presentation into two major sections  So first I’ll be going over what Quantum Dots are, some of their core properties, and touch on a few methods for making quantum dots.  Then, to continue our showcase of different Quantum Computing Hardware  I’ll move on to how we can harness Quantum Dots to build what are known as Electron Spin Qubits.  So what an Electron Spin Qubit is, how they are made, and how they are used.  I want to point out that because Quantum Dots are such a rich topic there will be some aspects that I will have to gloss over,  So if you want more info, I will suggest some further reading       Alright, so what ARE quantum dots? Well, it’s a bit difficult to really illustrate without first talking about Dots in a somewhat abstract sense  The textbook definition is that a Quantum Dot is: “A system or structure fully confined in all three dimensions that exhibits discrete charge and electronic states”  So, you take a piece of material, confine it in 3D down to the nanoscale, I’m talking under 100nm  And if you do this, you’ll see some interesting characteristics will emerge. and there you go  According to this definition you have a Quantum Dot. Easy, A little bit of a broad/vague definition, but pretty straight forward yeah?  Well, what does that mean practically and how do we actually MAKE them, I’ll get to in a minute so keep that definition in mind  But first I need touch on the emergent properties and characteristics I mentioned that I think really what define Quantum Dots    Properties of Quantum Dots.   The emerging properties are what really are the distinguishing features of QDs  Mainly">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Full-Stack Quantum Computation">
+<meta property="og:title" content="Quantum Dots and their Application as Electron Spin Qubits">
+<meta property="og:url" content="https://fullstackquantumcomputation.tech/blog/quantum-dots/">
+
+
+  <meta property="og:description" content="Overall, today I’ll be breaking my presentation into two major sections  So first I’ll be going over what Quantum Dots are, some of their core properties, and touch on a few methods for making quantum dots.  Then, to continue our showcase of different Quantum Computing Hardware  I’ll move on to how we can harness Quantum Dots to build what are known as Electron Spin Qubits.  So what an Electron Spin Qubit is, how they are made, and how they are used.  I want to point out that because Quantum Dots are such a rich topic there will be some aspects that I will have to gloss over,  So if you want more info, I will suggest some further reading       Alright, so what ARE quantum dots? Well, it’s a bit difficult to really illustrate without first talking about Dots in a somewhat abstract sense  The textbook definition is that a Quantum Dot is: “A system or structure fully confined in all three dimensions that exhibits discrete charge and electronic states”  So, you take a piece of material, confine it in 3D down to the nanoscale, I’m talking under 100nm  And if you do this, you’ll see some interesting characteristics will emerge. and there you go  According to this definition you have a Quantum Dot. Easy, A little bit of a broad/vague definition, but pretty straight forward yeah?  Well, what does that mean practically and how do we actually MAKE them, I’ll get to in a minute so keep that definition in mind  But first I need touch on the emergent properties and characteristics I mentioned that I think really what define Quantum Dots    Properties of Quantum Dots.   The emerging properties are what really are the distinguishing features of QDs  Mainly">
+
+
+
+  <meta property="og:image" content="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-05-29T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://fullstackquantumcomputation.tech/blog/quantum-dots/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Full-Stack Quantum Computation Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/FSQC-small.png" alt="Full-Stack Quantum Computation"></a>
+        
+        <a class="site-title" href="/">
+          Full-Stack Quantum Computation
+          <span class="site-subtitle">Community-driven, open-source education resources</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/journal-club/"
+                
+                
+              >Journal Club</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/qce24-workshop/"
+                
+                
+              >QCE24 Workshop</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about-us/"
+                
+                
+              >About us</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/biopics/mark_l.jpg" alt="Mark Leal" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Mark Leal</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Curated By:</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Che (Jiji) Chiang</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Samanvay Sharma</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+<!--added-->
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Quantum Dots and their Application as Electron Spin Qubits">
+    <meta itemprop="description" content="Overall, today I’ll be breaking my presentation into two major sectionsSo first I’ll be going over what Quantum Dots are, some of their core properties, and touch on a few methods for making quantum dots.Then, to continue our showcase of different Quantum Computing HardwareI’ll move on to how we can harness Quantum Dots to build what are known as Electron Spin Qubits.So what an Electron Spin Qubit is, how they are made, and how they are used.I want to point out that because Quantum Dots are such a rich topic there will be some aspects that I will have to gloss over,So if you want more info, I will suggest some further readingAlright, so what ARE quantum dots? Well, it’s a bit difficult to really illustrate without first talking about Dots in a somewhat abstract senseThe textbook definition is that a Quantum Dot is: “A system or structure fully confined in all three dimensions that exhibits discrete charge and electronic states”So, you take a piece of material, confine it in 3D down to the nanoscale, I’m talking under 100nmAnd if you do this, you’ll see some interesting characteristics will emerge. and there you goAccording to this definition you have a Quantum Dot. Easy, A little bit of a broad/vague definition, but pretty straight forward yeah?Well, what does that mean practically and how do we actually MAKE them, I’ll get to in a minute so keep that definition in mindBut first I need touch on the emergent properties and characteristics I mentioned that I think really what define Quantum DotsProperties of Quantum Dots. The emerging properties are what really are the distinguishing features of QDsMainly">
+    <meta itemprop="datePublished" content="2021-05-29T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://fullstackquantumcomputation.tech/blog/quantum-dots/" itemprop="url">Quantum Dots and their Application as Electron Spin Qubits
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div style="border: 0px solid black; width: 50vw">
+<img src="/assets/images/Mark_Quantum_Dots/Slide0.PNG" />
+<br />
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide1.PNG" />
+<br />
+Overall, today I’ll be breaking my presentation into two major sections
+<br />
+So first I’ll be going over what Quantum Dots are, some of their core properties, and touch on a few methods for making quantum dots.
+<br />
+Then, to continue our showcase of different Quantum Computing Hardware
+<br />
+I’ll move on to how we can harness Quantum Dots to build what are known as Electron Spin Qubits.
+<br />
+So what an Electron Spin Qubit is, how they are made, and how they are used.
+<br />
+I want to point out that because Quantum Dots are such a rich topic there will be some aspects that I will have to gloss over,
+<br />
+So if you want more info, I will suggest some further reading
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide2.PNG" />
+<br />
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide3.PNG" />
+<br />
+Alright, so what ARE quantum dots? Well, it’s a bit difficult to really illustrate without first talking about Dots in a somewhat abstract sense
+<br />
+The textbook definition is that a Quantum Dot is: “A system or structure fully confined in all three dimensions that exhibits discrete charge and electronic states”
+<br />
+So, you take a piece of material, confine it in 3D down to the nanoscale, I’m talking under 100nm
+<br />
+And if you do this, you’ll see some interesting characteristics will emerge. and there you go
+<br />
+According to this definition you have a Quantum Dot. Easy, A little bit of a broad/vague definition, but pretty straight forward yeah?
+<br />
+Well, what does that mean practically and how do we actually MAKE them, I’ll get to in a minute so keep that definition in mind
+<br />
+But first I need touch on the emergent properties and characteristics I mentioned that I think really what define Quantum Dots
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide4.PNG" />
+<br />
+Properties of Quantum Dots. 
+<br />
+The emerging properties are what really are the distinguishing features of QDs
+<br />
+Mainly
+
+1. These nanostructures are so tightly confined that they are said to be “0D”
+2. They have bound, quantized energy states: Think back to the Harmonic Oscillator example
+3. They have pretty well defined energy band structures (that we can manipulate, split, control charge movement)
+4. Their electronic wavefunctions closely resemble those of actual atoms (Look at Kittel)
+
+<br />
+Because of these neat properties Quantum Dots have also been given the name “Artificial Atoms”
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide5.PNG" />
+<br />
+Alright so abstract discussion out of the way I can now go back to how we actually make Quantum Dots 
+<br />
+So there are several different ways of making structures and systems that exhibit the properties that we talked about before
+<br />
+We just need to find a way to confine a system in 3D
+<br />
+That’s why the definition can seem somewhat broad and vague. There are multiple ways of getting to the same properties.
+<br />
+I’d like to highlight a 4 of ways to make Quantum Dot structures
+<br />
+One way of making a dot is Single Molecule traps, not unlike what we talked about earlier with our first guest speakers
+
+- where we trap whole molecules in between electrodes and manipulate them there
+
+<br />
+Another way we can go about making a QD is by synthesizing metallic particles with chemistry
+
+- Actually, this is kind of cool because of how quick it is: check out videos on Youtube
+
+<br />
+A third way which is fairly popular in the world of silicon photonics is Vertical Semiconductor QDs
+
+- Build up layers of material, then etch down these column structures and you get a confined dot
+
+<br />
+Finally, what will be the focus of the remainder of my talk: Lateral Semiconductor Dots 
+
+- Voltage Corals
+- Where we use processes common in Semiconductor fab processes to lay out the dots in a planar arrangement
+
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide6.PNG" />
+<br />
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide7.PNG" />
+<br />
+Alright so now, I’d like to switch gears a little bit and begin talking about Qubits and Quantum Computers
+<br />
+Just so that we have a bit of an understanding of what we’re working toward
+<br />
+In the late 90s, early 2000s, David DiVincenzo proposed a set of criteria necessary for building a quantum computer. Aptly named the DiVincenzo Criteria
+<br />
+And while these criteria were initially meant to characterize the computer as a whole, 
+<br />
+they actually work well to describe the criteria necessary for the qubits that make up that computer 
+<br />
+So for a good Qubit, we want to be able to:
+
+- Initialize: Get a Qubit into a known and stable state
+- Manipulate: Or act on it with a set of gates
+- Readout: After some manipulations, we want to be able to determine what state we are in
+- Keep them for a long time: Or have keeping them isolated from the environment as much as possible to mitigate decoherence
+- Scale: Have multiple qubits available to work with
+
+<br />
+So that’s what we want to see with our Qubits
+<br />
+Now for the rest of my time, I’ll be going over how we can use Lateral semiconductor dots to make what are called Electron Spin Qubits
+<br />
+And go over in a little more detail how we can meet the criteria above
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide8.PNG" />
+<br />
+Electron Spin Qubits are Qubits that use the spin orientation of an electron (Spin Up and Spin Down) as the basis for the qubit
+<br />
+Here we have our good friend the Bloch Sphere to illustrate what I’m talking about
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/trapped_single_electron.gif" />
+<br />
+And here I’ll go through a little demonstration of how we trap a single electron to make our Qubit
+<br />
+The way that we make them with quantum dots is that we start with a sea of electrons
+<br />
+Then we apply a voltage via electrodes, so that we form a little electron puddle corralled by the electrodes
+<br />
+Once we have a well-defined dot, we pump out the electrons one by one until we only have one electron left.
+<br />
+Now have a well defined Quantum Dot with a single electron and a single controllable spin 
+<br />
+which means we have a well defined Electron Spin Qubit
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide15.PNG" />
+<br />
+So we have our trapped electron, now we want to actually do something with it.
+<br />
+First, like our DiVincenzo Criteria says, we have to initialize it, or in other words, we want to put it in a known stable state
+<br />
+How we do this is to apply a strong magnetic field at low temp so that there is a distinct Energy difference between the Up and Down states of the electron
+<br />
+Then we want to apply a voltage pulse so that we bring just one energy level below the Fermi Energy. 
+<br />
+We are making it so that we can only trap electrons in this particular state
+<br />
+So we have initialized our Qubit in the Spin Up state
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide16.PNG" />
+<br />
+Now we want to apply some gates to the qubit. Well first, we make sure the qubit is trapped so that it cant escape (so both up and down are below the Fermi Level):
+<br />
+Then we can do this in one of two ways:
+
+- Electron Spin Resonance (ESR): Using an oscillating magnetic or electric fields to drive transitions from spin up to spin down 
+- Or we can take a more indirect approach by letting the interactions between electrons themselves act as the manipulation: Couple two electron qubit wavefunctions
+
+<br />
+Now, final state of the electrons depend on each other
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide17.PNG" />
+<br />
+After applying the gates, we’ll want to readout the final state of our qubit
+<br />
+Now this is kind of tricky because we can’t actually directly measure the spin of an electron 
+<br />
+Well, we can, but it's really impractical, especially with this application.
+<br />
+So there’s this clever way of reading out where we can measure current to determine the state of the qubit.
+<br />
+Read the current coming out of the Qubit
+<br />
+So the premise is that we shift our energy states back up to where they were before and depending on which state the qubit is in, we will either measure a spike in current, or we wont measure anything
+<br />
+Let’s go through this:
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide18.PNG" />
+<br />
+First Result:
+<br />
+After we’ve done some manipulation we basically do the reverse of initialization
+<br />
+Spin Up:
+<br />
+We push the levels back up, but since the electron is in the spin down state, it is below the Fermi level and will not escape from the trap
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide19.PNG" />
+<br />
+Second Result:
+<br />
+After we’ve done some manipulation we basically do the reverse of initialization
+<br />
+Spin Down:
+<br />
+We push the levels back up, and since the electron is in the spin up state, it is above the Fermi level and will escape back into the sea of electrons
+<br />
+Comment from Jiji:
+<br />
+Fermi level E_F should be between up state and down state energy. Such that the qubit energy is below Fermi level when it is in the up state; above Fermi level when it is in the up state.
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide20.PNG" />
+<br />
+One last note on the final part of the DiVincenzo Criteria:
+<br />
+I want to point out that Spin Qubits are nice because of how much effort it takes to decohere
+
+- You need two coupling mechanisms in order for the qubit to lose energy
+
+<br />
+Also, they are very scalable.
+
+- Example: The Qubyte (8 Qubits)
+
+<br />
+Comment from Jiji:
+<br />
+Here are some comments about scalability of quantum dot. Silicon QD is based on solid state physics and the fabrication can be fit into flourishing semiconductor technology to some degree. Also, a QD qubit is essentially an electron confined in a potential well, so the volume of single dot would be small enough for scaling. These are pros about scalable QD qubit. 
+<br />
+However, comparing to superconducting qubit, QD qubit is more noisy. Since superconducting qubit use relatively macroscopic phenomena (Josephson junction); while QD is only an microscopic electron. It’s hard to construct multi qubit QD device and maintain the fidelity at the same time.
+<br />
+There is a challenge shared for any kind of qubit when talking about scalability: wire design. For QD system, we need different on resonance frequency  for each qubit, and each of the frequencies should not be to close in order to avoid crosstalk error. Additionally, we need localized AC magnetic field to control qubits individually. How to achieve frequency split and localized control without messy wire design is also a huge challenge. 
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide21.PNG" />
+<br />
+<br />
+<img src="/assets/images/Mark_Quantum_Dots/Slide22.PNG" />
+<br />
+Alright, and that’s the end!
+<br />
+Thanks for listening, if you are interested in the topic some more, I suggest looking up the resources here.
+<br />
+Thank you
+<br />
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#electron-spin-qubits" class="page__taxonomy-item p-category" rel="tag">electron spin qubits</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-dots" class="page__taxonomy-item p-category" rel="tag">quantum dots</a><span class="sep">, </span>
+    
+      <a href="/tags/#slides" class="page__taxonomy-item p-category" rel="tag">slides</a><span class="sep">, </span>
+    
+      <a href="/tags/#spin-qubits" class="page__taxonomy-item p-category" rel="tag">spin qubits</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-05-29T00:00:00+00:00">May 29, 2021</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Quantum+Dots+and+their+Application+as+Electron+Spin+Qubits%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fquantum-dots%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fquantum-dots%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullstackquantumcomputation.tech/blog/quantum-dots/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Quantum+Dots+and+their+Application+as+Electron+Spin+Qubits%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fquantum-dots%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/post-quantum-lab/" class="pagination--pager" title="Quantum Lab">Previous</a>
+    
+    
+      <a href="/blog/abstract-workshop/" class="pagination--pager" title="Workshop on How to Write a Talk Abstract">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/QuantumVerse-Game/" rel="permalink">Quantumverse Game
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">QuantumVerse 🌌🎮- A Gamer’s Bot!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/File-Transfer-Using-QC-Protocol-Cirq/" rel="permalink">File Transfer Using Qc Protocol Cirq
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/quaze-tutorial/" rel="permalink">Tutorial to build a Quantum inspired puzzle game in JS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to cr...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-simulation/" rel="permalink">Electronic Simulation of Molecules using Pennylane
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://discord.gg/NDm9e9W" rel="nofollow noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/QuantumUniversalEducation" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/company/quantum-universal-education/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/QuantUniEd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://fullstackquantumcomputation.tech">Full-Stack Quantum Computation</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

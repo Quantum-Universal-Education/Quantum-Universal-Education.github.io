@@ -1,0 +1,983 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Variational Quantum Eigensolver: Simulating the Electronic Structure of Molecules | Full-Stack Quantum Computation</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Full-Stack Quantum Computation">
+<meta property="og:title" content="Variational Quantum Eigensolver: Simulating the Electronic Structure of Molecules">
+<meta property="og:url" content="https://fullstackquantumcomputation.tech/blog/molecular-vqe/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2022-06-06T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://fullstackquantumcomputation.tech/blog/molecular-vqe/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Full-Stack Quantum Computation Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/FSQC-small.png" alt="Full-Stack Quantum Computation"></a>
+        
+        <a class="site-title" href="/">
+          Full-Stack Quantum Computation
+          <span class="site-subtitle">Community-driven, open-source education resources</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/journal-club/"
+                
+                
+              >Journal Club</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/qce24-workshop/"
+                
+                
+              >QCE24 Workshop</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about-us/"
+                
+                
+              >About us</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/biopics/owen_l.jpeg" alt="Owen Lockwood" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Owen Lockwood</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Curated By:</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Lia Yeh</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+<!--added-->
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Variational Quantum Eigensolver: Simulating the Electronic Structure of Molecules">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2022-06-06T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://fullstackquantumcomputation.tech/blog/molecular-vqe/" itemprop="url">Variational Quantum Eigensolver: Simulating the Electronic Structure of Molecules
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<p>In this tutorial we will outline the theoretical background of the VQE and how it can be applied on a quantum computer, then show an implementation in TensorFlow-Quantum for the \(H_2\) molecule.</p>
+
+<h2 id="problem-definition">Problem Definition</h2>
+
+<p>The problem we wish to solve is to find the energies associated with a given Hamiltonain $\hat{H}$. We begin with the Time Independent Schrodinger Equation (TISE):</p>
+
+\[\hat{H} |\Psi \rangle = E |\Psi \rangle\]
+
+<p>This is fundamentally an eigenvalue problem, in which the energies are the eigenvalues of the hamiltonian. Focusing on the ground state energy (i.e. the minimum eigenvalue), yields</p>
+
+\[E_0 \leq \langle \Psi | \hat{H} | \Psi \rangle\]
+
+<p>Where the RHS represented the expectation value of the hamiltonian. We can therefore approximate \(E_0\) by minimizing this RHS using a parameterized wavefunction (or in the case of quantum computers, a parameterized quantum circuit). I.e. by solving the optimization problem [1]:</p>
+
+\[\min_\theta \langle \Psi(\theta) | \hat{H} | \Psi(\theta) \rangle\]
+
+<p>And that is the variational quantum eigensolver!</p>
+
+<h2 id="molecular-hamiltonian-derivation">Molecular Hamiltonian Derivation</h2>
+
+<p>Of course, now the real challenge begins. How do we map our molecular hamiltonains problem onto this setup? First, let us revisit the TISE and rewrite it in an expanded form.</p>
+
+\[\frac{-\hbar^2}{2m} \nabla^2 \Psi (r)  + V(r) \Psi (r)  = E \Psi (r)\]
+
+<p>where $\nabla^2$ is the Laplacian (divergence of the gradient). Note that $r$ can be in Cartesian or polar or any coordinate system. This separates the hamiltonian into kinetic (Laplacian) and potential (V) energies.</p>
+
+<p>Now let us expand this equation to be more specific for molecules. Zooming in on the kinetic energy, we have two sources of movement: the electrons and the movement of the nucleus. Thus we have:</p>
+
+\[K.E. = -\sum_i^{nuclei} \frac{\hbar^2}{2 m_i} \nabla^2_i - \sum_i^{electrons} \frac{\hbar^2}{2m_e} \nabla^2_i\]
+
+<p>where $m$ corresponds to the mass.</p>
+
+<p>Now let us consider the potential energy. There are three sources of coulombic interactions, the nucleus electron attraction, the nucleus nucleus repulsion and the electron electron repulsion. We write this as:</p>
+
+\[P.E. = -\sum_i^{nuclei} \sum_j^{electrons} \frac{Z_i e^2}{4 \pi \epsilon_0 |r_i - r_j|} + \sum_i^{nuclei} \sum_{j \neq i}^{nuclei} \frac{Z_i Z_j e^2}{4 \pi \epsilon_0 |r_i - r_j|} + \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{e^2}{4 \pi \epsilon_0 |r_i - r_j|}\]
+
+<p>Where $Z_i$ is the atomic number.</p>
+
+<p>Combining these yields the full molecular hamiltonain:</p>
+
+\[\hat{H} = -\sum_i^{nuclei} \frac{\hbar^2}{2 m_i} \nabla^2_n - \sum_i^{electrons} \frac{\hbar^2}{2m_e} \nabla^2_i -\sum_i^{nuclei} \sum_j^{electrons} \frac{Z_i e^2}{4 \pi \epsilon_0 |r_i - r_j|} + \sum_i^{nuclei} \sum_{j \neq i}^{nuclei} \frac{Z_i Z_j e^2}{4 \pi \epsilon_0 |r_i - r_j|} + \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{e^2}{4 \pi \epsilon_0 |r_i - r_j|}\]
+
+<p>Now we can reduce the scope of our problems with some assumptions. First, we assume that the nuclei are not moving. This is based on the fact that electrons move many thousands of times faster. This approximation is known as the Born-Oppenheimer Approximation. This enables us to remove two terms from our hamiltonian that become constant (constants in the hamiltonian apply a constant effect to the eigenvalues). The resulting hamiltonian is known as the electronic hamiltonian (we simplify some terms using atomic units):</p>
+
+\[\label{reduced_hamil}
+    %\hat{H}_{BO} = - \sum_i^{electrons} \frac{\hbar^2}{2m_e} \nabla^2_i -\sum_i^{nuclei} \sum_j^{electrons} \frac{Z_i e^2}{4 \pi \epsilon_0 |r_i - r_j|}  + \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{e^2}{4 \pi \epsilon_0 |r_i - r_j|}
+    \hat{H}_{BO} = - \sum_i^{electrons} \frac{1}{2} \nabla^2_i -\sum_i^{nuclei} \sum_j^{electrons} \frac{Z_i}{|r_i - r_j|}  + \sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{1}{|r_i - r_j|}\]
+
+<p>Now that we have reduced the problem to just include electronic components (hence why it is called the electronic structure problem), we need to get the into something operable on quantum computers.</p>
+
+<h2 id="moving-to-an-amenable-formalism">Moving to an Amenable Formalism</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>To do this conversion, we move from the “first quantization” to the “second quantization”. These are just different formalisms that convey the same information. In this SQ formalize, we move from Slater Determinants to occupation number representations where $\Psi =</td>
+      <td>n_1, n_2, n_3, … \rangle$ and $n_i$ corresponds to the number of particles in state $i$ (note the exponential growth that comes with expanding this state representation). We can operate on this wavefunction using creation and annihilation operators $\hat{a}_i^\dagger, \hat{a}_i$. The challenge is to now map the original molecular hamiltonian into this formalism.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Single particle operators can be mapped via</p>
+
+\[\sum_i \hat{h} (x_i) \rightarrow \sum_{p, q} \langle p | \hat{h} | q \rangle \hat{a}^\dagger_p \hat{a}_q\]
+
+<p>So we can map our electronic kinetic energy and nuclear-electron potential (since the nuclei are frozen) via the following. Also note that in the following equations x is not a one dimensional Cartesian coordinate, but contains the 3 dimensional information (as used above). The mapping is called the core integral.</p>
+
+\[- \sum_i^{electrons} \left ( \frac{1}{2} \nabla^2_i  + \sum_i^{nuclei}  \frac{Z_i}{|r_i - r_j|} \right )  \rightarrow \int^{\infty}_{-\infty}  \psi^*_p (x) \left ( -\frac{1}{2} \nabla^2 - \sum_i^{nuclei} \frac{Z_i}{|r_i - r_{x}|} \right )  \psi_q (x) dx = h_{pq} = \langle p | \hat{h} | q \rangle\]
+
+<p>Multiparticle operators can be mapped via:</p>
+
+\[\frac{1}{2} \sum_i \sum_j \hat{h}(x_i, x_j) \rightarrow \frac{1}{2}\sum_{p, q, r, s} \langle pq | \hat{h} | rs \rangle \hat{a}^\dagger_p \hat{a}^\dagger_q \hat{a}_r \hat{a}_s\]
+
+<p>So we can map our two particle term (the electron electron repulsion term) using the electron repulsion integral:</p>
+
+\[\sum_i^{electrons} \sum_{j \neq i}^{electrons} \frac{1}{|r_i - r_j|} \rightarrow \int^{\infty}_{-\infty}  \int^{\infty}_{-\infty}  \psi^*_p(x_i) \psi^*_q(x_i) \frac{1}{|r_i - r_j|} \psi_r(x_j) \psi_s(x_j) dx_i dx_j  = g_{pqrs} = \langle pq | \hat{h} | rs \rangle\]
+
+<p>Combining these with the fermionic operators yields (where p, q, r, s can take on any of the N spin orbitals):</p>
+
+\[\hat{H}_{SQ} = h_{pq} \hat{a}^\dagger_p \hat{a}_q + \frac{1}{2}g_{pqrs} \hat{a}^\dagger_p \hat{a}^\dagger_q \hat{a}_r \hat{a}_s + C\]
+
+<p>We have the C constant to account for the assumptions earlier (since even if the nuclei are static, the nucleus-nucleus repulsion term is still some constant). Note that these integrals can be solved and provide the constants for our hamiltonian terms in VQE.</p>
+
+<h2 id="mapping-to-a-quantum-computer">Mapping to a Quantum Computer</h2>
+
+<p>Now we just have two final challenges. How do we map the the orbitals to our occupation numbers and how do we map the fermionic operators to the quantum computer operations? Let’s address the first challenge now. There are many different choices of mapping we could use. To represent this problem, we use a linear combination of atomic orbitals (LCAO). A common choice for VQE is STO-3G (approximating the Slater type orbital with 3 gaussians). To represent STO-3G we separate the wavefunction into its radial and angular parts $\Psi = R(r)Y(\theta, \phi)$ where</p>
+
+\[\begin{split}
+    \text{Slater Type Orbital}: R(r) = N r^l e^{-\zeta r} \\
+    \text{Gaussian Type Orbital}: R(r) = N r^l e^{-\zeta r^2} \\
+    \text{STO-3G}: R(r) = N \sum_i^3 c_i r^l e^{-\zeta_i r^2} 
+\end{split}\]
+
+<p>Where $r^l$ is the angular momentum, $\zeta$ controls charge/size of nucleus and $N, c_i$ are constants. These are minimal basis sets (i.e. one function per orbital) and uncommon in classical computational quantum chemistry, more accurate ones such as 6-31G* or cc-pVDZ are preferred.</p>
+
+<p>To tackle the second challenge, once again, there are several solutions such as Parity Mapping, Jordan-Wigner, Bravy-Kitaev, etc. All of these map fermionic operators onto pauli gates. These mappings are necessary since we the basic Pauli gates do not satisfy the commutation relations that fermionic operators must. For example, Jordan-Wigner maps</p>
+
+\[\hat{a}_p \rightarrow \frac{1}{2}(X_p + i Y_p)Z_1 ... Z_{p-1}\]
+
+<p>And now we have all the tools for VQE. We can map our hamiltonian onto our quantum operations using the fermionic operators and the conversions and we can map our orbital space to our quantum register using a basis function and the occupation formalism. Thankfully everthing that has been covered so far has been implemented in easy to use python packages.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>Now, let’s get to the code. In this tutorial we will be using TensorFlow-Quantum (TFQ) [2] for our quantum optimization need and OpenFermion [3] to generate our electronic structure problems. First, get all the imports squared away.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">import</span> <span class="nn">tensorflow_quantum</span> <span class="k">as</span> <span class="n">tfq</span>
+<span class="kn">import</span> <span class="nn">cirq</span>
+<span class="kn">import</span> <span class="nn">sympy</span>
+<span class="kn">import</span> <span class="nn">openfermion</span> <span class="k">as</span> <span class="n">of</span>
+<span class="kn">from</span> <span class="nn">openfermionpyscf</span> <span class="kn">import</span> <span class="n">generate_molecular_hamiltonian</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">linalg</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"TF Version:"</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"TFQ Version:"</span><span class="p">,</span> <span class="n">tfq</span><span class="p">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"OF Version:"</span><span class="p">,</span> <span class="n">of</span><span class="p">.</span><span class="n">__version__</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TF Version: 2.7.0
+TFQ Version: 0.6.1
+OF Version: 1.3.0
+</code></pre></div></div>
+
+<p>Now we need to choose our circuit structure to represent the parameterized wavefunction. Although there are a number of choices, we will be going with a HEA [4] inspired ansatz. In this, multiple layers of single qubit rotations are paired with circularly entangling CNOT gates.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">layer</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">qubits</span><span class="p">,</span> <span class="n">parameters</span><span class="p">):</span>
+    <span class="c1"># Single qubit rotations
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">qubits</span><span class="p">)):</span>
+        <span class="n">circuit</span> <span class="o">+=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">ry</span><span class="p">(</span><span class="n">parameters</span><span class="p">[</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span><span class="p">]).</span><span class="n">on</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">circuit</span> <span class="o">+=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">rz</span><span class="p">(</span><span class="n">parameters</span><span class="p">[</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]).</span><span class="n">on</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">circuit</span> <span class="o">+=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">ry</span><span class="p">(</span><span class="n">parameters</span><span class="p">[</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]).</span><span class="n">on</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="c1"># Entangling
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">qubits</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">circuit</span> <span class="o">+=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">CNOT</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">qubits</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">circuit</span> <span class="o">+=</span> <span class="n">cirq</span><span class="p">.</span><span class="n">CNOT</span><span class="p">(</span><span class="n">qubits</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">qubits</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">circuit</span>
+
+<span class="k">def</span> <span class="nf">ansatz</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">qubits</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">parameters</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">layers</span><span class="p">):</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">qubits</span><span class="p">):</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">qubits</span><span class="p">)]</span>
+        <span class="n">circuit</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">qubits</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">circuit</span>
+</code></pre></div></div>
+
+<p>Next, we must create the actual TF model that we will be optimizing. We will create a noiseless version and a noisy version (with shot and depolarizing noise). We will be using a gradient based optimizer so we need to be able to differentiate these ciruits. In the noiseless case we can use adjoint differentiation, an efficient method for simulations. In the noisy case we will use the more realistic parameter shift rule which tells us that the derivative of the quantum circuit is \(\frac{\partial f(x)}{x} = \frac{f(x + s) - f(x - s)}{2 \sin (s) }\)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">make_vqe</span><span class="p">(</span><span class="n">qubits</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">):</span>
+    <span class="n">num_params</span> <span class="o">=</span> <span class="n">layers</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">qubits</span><span class="p">)</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">sympy</span><span class="p">.</span><span class="n">symbols</span><span class="p">(</span><span class="s">'vqe0:%d'</span><span class="o">%</span><span class="n">num_params</span><span class="p">)</span> <span class="c1"># The variational parameters
+</span>    <span class="n">c</span> <span class="o">=</span> <span class="n">ansatz</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">Circuit</span><span class="p">(),</span> <span class="n">qubits</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span> <span class="c1"># Create the circuit
+</span>    <span class="n">ins</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">dtypes</span><span class="p">.</span><span class="n">string</span><span class="p">)</span> <span class="c1"># Quantum circuits are serialized as strings in TFQ
+</span>    <span class="n">pqc</span> <span class="o">=</span> <span class="n">tfq</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">PQC</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">,</span> <span class="n">differentiator</span><span class="o">=</span><span class="n">tfq</span><span class="p">.</span><span class="n">differentiators</span><span class="p">.</span><span class="n">Adjoint</span><span class="p">())(</span><span class="n">ins</span><span class="p">)</span>
+    <span class="n">vqe</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">ins</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">pqc</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">vqe</span>
+
+<span class="k">def</span> <span class="nf">make_vqe_noisy</span><span class="p">(</span><span class="n">qubits</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">):</span>
+    <span class="n">num_params</span> <span class="o">=</span> <span class="n">layers</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">qubits</span><span class="p">)</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">sympy</span><span class="p">.</span><span class="n">symbols</span><span class="p">(</span><span class="s">'vqe0:%d'</span><span class="o">%</span><span class="n">num_params</span><span class="p">)</span> <span class="c1"># The variational parameters
+</span>    <span class="n">c</span> <span class="o">=</span> <span class="n">ansatz</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">Circuit</span><span class="p">(),</span> <span class="n">qubits</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span> <span class="c1">#  Create the circuit
+</span>    <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">with_noise</span><span class="p">(</span><span class="n">cirq</span><span class="p">.</span><span class="n">depolarize</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.01</span><span class="p">))</span> <span class="c1"># Add noise 
+</span>    <span class="n">ins</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">dtypes</span><span class="p">.</span><span class="n">string</span><span class="p">)</span> <span class="c1"># Quantum circuits are serialized as strings in TFQ
+</span>    <span class="n">pqc</span> <span class="o">=</span> <span class="n">tfq</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">NoisyPQC</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">sample_based</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">differentiator</span><span class="o">=</span><span class="n">tfq</span><span class="p">.</span><span class="n">differentiators</span><span class="p">.</span><span class="n">ParameterShift</span><span class="p">())(</span><span class="n">ins</span><span class="p">)</span>
+    <span class="n">vqe</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">ins</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">pqc</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">vqe</span>
+</code></pre></div></div>
+
+<p>Now we just need a function to minimize the expectation value of this circuit. We can do that using traditional TensorFlow techniques using the Adam optimizer (which has been shown to be empirically efficient) [5].</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">optimize_vqe_gradient</span><span class="p">(</span><span class="n">vqe</span><span class="p">,</span> <span class="n">init</span><span class="p">):</span>
+    <span class="n">old</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">inf</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">tfq</span><span class="p">.</span><span class="n">convert_to_tensor</span><span class="p">([</span><span class="n">cirq</span><span class="p">.</span><span class="n">Circuit</span><span class="p">()])</span> <span class="c1"># Empty circuit input
+</span>    <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="n">vqe</span><span class="p">.</span><span class="n">set_weights</span><span class="p">([</span><span class="n">init</span><span class="p">])</span>
+    <span class="n">opt</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">optimizers</span><span class="p">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1"># Optimizer
+</span>    <span class="n">energy</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">:</span> <span class="c1"># 200 iterations
+</span>        <span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">GradientTape</span><span class="p">()</span> <span class="k">as</span> <span class="n">tape</span><span class="p">:</span>
+            <span class="n">guess</span> <span class="o">=</span> <span class="n">vqe</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+        <span class="c1"># Get and apply the gradients
+</span>        <span class="n">grads</span> <span class="o">=</span> <span class="n">tape</span><span class="p">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">vqe</span><span class="p">.</span><span class="n">trainable_variables</span><span class="p">)</span> 
+        <span class="n">opt</span><span class="p">.</span><span class="n">apply_gradients</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">grads</span><span class="p">,</span> <span class="n">vqe</span><span class="p">.</span><span class="n">trainable_variables</span><span class="p">))</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="n">guess</span><span class="p">.</span><span class="n">numpy</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">energy</span> <span class="o">=</span> <span class="n">guess</span>
+        <span class="c1"># If it has reached the minimum, stop optimization
+</span>        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">guess</span> <span class="o">-</span> <span class="n">old</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-5</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">old</span> <span class="o">=</span> <span class="n">guess</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">energy</span>
+</code></pre></div></div>
+
+<p>Now specify some of the important problem parameters.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">layers</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Number of VQE layers
+</span><span class="n">diatomic_bond_length</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="c1"># H_2 bond length
+</span><span class="n">interval</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1"># Increment to evaluate bond lengths at
+</span><span class="n">max_bond_length</span> <span class="o">=</span> <span class="mf">4.0</span> 
+<span class="n">basis</span> <span class="o">=</span> <span class="s">'sto-3g'</span>
+<span class="n">multiplicity</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">charge</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">ground_energies_real</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ground_energies_vqe</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ground_energies_vqe_noisy</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bond_lengths</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<p>Finally we can use OpenFermion to create our problems for each bond length. These functions solves the integrals from before and computes the necessary transforms to render the problem useable for a quantum computer.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="n">diatomic_bond_length</span> <span class="o">&lt;=</span> <span class="n">max_bond_length</span><span class="p">:</span> <span class="c1"># Iterate through the bond 
+</span>    <span class="n">geometry</span> <span class="o">=</span> <span class="p">[(</span><span class="s">'H'</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)),</span> <span class="p">(</span><span class="s">'H'</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">diatomic_bond_length</span><span class="p">))]</span> <span class="c1"># Specify the geometry of the molecule
+</span>    <span class="c1"># Solve the integrals above to generate the molecular hamiltonians
+</span>    <span class="n">molecular_hamiltonian</span> <span class="o">=</span> <span class="n">generate_molecular_hamiltonian</span><span class="p">(</span><span class="n">geometry</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">multiplicity</span><span class="p">,</span> <span class="n">charge</span><span class="p">)</span> 
+    <span class="n">n_qubits</span> <span class="o">=</span> <span class="n">of</span><span class="p">.</span><span class="n">count_qubits</span><span class="p">(</span><span class="n">molecular_hamiltonian</span><span class="p">)</span> 
+    <span class="n">qs</span> <span class="o">=</span> <span class="p">[</span><span class="n">cirq</span><span class="p">.</span><span class="n">GridQubit</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_qubits</span><span class="p">)]</span> <span class="c1"># Create the qubits for the circuit
+</span>    <span class="n">jw_operator</span> <span class="o">=</span> <span class="n">of</span><span class="p">.</span><span class="n">transforms</span><span class="p">.</span><span class="n">jordan_wigner</span><span class="p">(</span><span class="n">molecular_hamiltonian</span><span class="p">)</span> <span class="c1"># Convert the fermionic operators to pauli operators
+</span>    <span class="n">hamiltonian_jw_sparse</span> <span class="o">=</span> <span class="n">of</span><span class="p">.</span><span class="n">get_sparse_operator</span><span class="p">(</span><span class="n">jw_operator</span><span class="p">)</span>
+    <span class="n">eigs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">linalg</span><span class="p">.</span><span class="n">eigsh</span><span class="p">(</span><span class="n">hamiltonian_jw_sparse</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s">'SA'</span><span class="p">)</span> <span class="c1"># Compute the exact ground state
+</span>    <span class="n">hamiltonian</span> <span class="o">=</span> <span class="n">of</span><span class="p">.</span><span class="n">transforms</span><span class="p">.</span><span class="n">qubit_operator_to_pauli_sum</span><span class="p">(</span><span class="n">jw_operator</span><span class="p">,</span> <span class="n">qubits</span><span class="o">=</span><span class="n">qs</span><span class="p">)</span> <span class="c1"># Convert to cirq object
+</span>
+    <span class="c1"># Create VQE models
+</span>    <span class="n">vqe</span> <span class="o">=</span> <span class="n">make_vqe</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">)</span> 
+    <span class="n">vqe_noisy</span> <span class="o">=</span> <span class="n">make_vqe_noisy</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">)</span>
+    <span class="n">initial_value</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="n">layers</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n_qubits</span><span class="p">],</span> <span class="n">minval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="c1"># Optimize both models using same random initialization
+</span>    <span class="n">ground_gradient</span> <span class="o">=</span> <span class="n">optimize_vqe_gradient</span><span class="p">(</span><span class="n">vqe</span><span class="p">,</span> <span class="n">initial_value</span><span class="p">)</span>
+    <span class="n">ground_gradient_noisy</span> <span class="o">=</span> <span class="n">optimize_vqe_gradient</span><span class="p">(</span><span class="n">vqe_noisy</span><span class="p">,</span> <span class="n">initial_value</span><span class="p">)</span>
+    <span class="c1"># Save the results
+</span>    <span class="n">ground_energies_vqe</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ground_gradient</span><span class="p">)</span>
+    <span class="n">ground_energies_vqe_noisy</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ground_gradient_noisy</span><span class="p">)</span>
+    <span class="n">ground_energies_real</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">eigs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">bond_lengths</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">diatomic_bond_length</span><span class="p">)</span>
+
+    <span class="n">diatomic_bond_length</span> <span class="o">+=</span> <span class="n">interval</span>
+    <span class="k">if</span> <span class="n">diatomic_bond_length</span> <span class="o">&gt;</span> <span class="mf">1.5</span><span class="p">:</span>
+        <span class="n">diatomic_bond_length</span> <span class="o">+=</span> <span class="n">interval</span>
+</code></pre></div></div>
+
+<p>Finally, we can plot the results of the VQE calculations. We can see that for a small molecule such as $H_2$ our HEA circuit is capable of finding the ground state energy quite well. However, we can see that with the addition of shot and depolarizing noise, the performance decreases.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">bond_lengths</span><span class="p">,</span> <span class="n">ground_energies_vqe</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'VQE Predicted Ground State'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">facecolors</span><span class="o">=</span><span class="s">"None"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s">'blue'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">bond_lengths</span><span class="p">,</span> <span class="n">ground_energies_vqe_noisy</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Noisy VQE Predicted Ground State'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'s'</span><span class="p">,</span> <span class="n">facecolors</span><span class="o">=</span><span class="s">"None"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s">'red'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bond_lengths</span><span class="p">,</span> <span class="n">ground_energies_real</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Ground State'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'blue'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Interatomic Distance (Angstroms)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Energy (Hartree)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/vqe/output_18_0.png" alt="png" /></p>
+
+<h2 id="references">References</h2>
+
+<p>[1] Peruzzo, A., McClean, J., Shadbolt, P., Yung, M. H., Zhou, X. Q., Love, P. J., … &amp; O’brien, J. L. (2014). A variational eigenvalue solver on a photonic quantum processor. Nature communications, 5(1), 1-7.</p>
+
+<p>[2] Broughton, M., Verdon, G., McCourt, T., Martinez, A. J., Yoo, J. H., Isakov, S. V., … &amp; Mohseni, M. (2020). Tensorflow quantum: A software framework for quantum machine learning. arXiv preprint arXiv:2003.02989.</p>
+
+<p>[3] McClean, J. R., Rubin, N. C., Sung, K. J., Kivlichan, I. D., Bonet-Monroig, X., Cao, Y., … &amp; Babbush, R. (2020). OpenFermion: the electronic structure package for quantum computers. Quantum Science and Technology, 5(3), 034014.</p>
+
+<p>[4] Kandala, A., Mezzacapo, A., Temme, K., Takita, M., Brink, M., Chow, J. M., &amp; Gambetta, J. M. (2017). Hardware-efficient variational quantum eigensolver for small molecules and quantum magnets. Nature, 549(7671), 242-246.</p>
+
+<p>[5] Lockwood, O. (2022). An Empirical Review of Optimization Techniques for Quantum Variational Circuits. arXiv preprint arXiv:2202.01389.</p>
+
+<h2 id="author">Author</h2>
+<p>Owen Lockwood, <a href="https://twitter.com/wnlckwd">Twitter</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#h2" class="page__taxonomy-item p-category" rel="tag">H2</a><span class="sep">, </span>
+    
+      <a href="/tags/#jupyter-notebook" class="page__taxonomy-item p-category" rel="tag">jupyter notebook</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-chemistry" class="page__taxonomy-item p-category" rel="tag">quantum chemistry</a><span class="sep">, </span>
+    
+      <a href="/tags/#quantum-computing" class="page__taxonomy-item p-category" rel="tag">quantum computing</a><span class="sep">, </span>
+    
+      <a href="/tags/#tfq" class="page__taxonomy-item p-category" rel="tag">TFQ</a><span class="sep">, </span>
+    
+      <a href="/tags/#tutorial" class="page__taxonomy-item p-category" rel="tag">tutorial</a><span class="sep">, </span>
+    
+      <a href="/tags/#vqe" class="page__taxonomy-item p-category" rel="tag">VQE</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-06-06T00:00:00+00:00">June 6, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Variational+Quantum+Eigensolver%3A+Simulating+the+Electronic+Structure+of+Molecules%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fmolecular-vqe%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fmolecular-vqe%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://fullstackquantumcomputation.tech/blog/molecular-vqe/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Variational+Quantum+Eigensolver%3A+Simulating+the+Electronic+Structure+of+Molecules%20https%3A%2F%2Ffullstackquantumcomputation.tech%2Fblog%2Fmolecular-vqe%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/qubits-vs-bits/" class="pagination--pager" title="Qubits vs Bits">Previous</a>
+    
+    
+      <a href="/blog/molecular-simulation/" class="pagination--pager" title="Electronic Simulation of Molecules using Pennylane">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/QuantumVerse-Game/" rel="permalink">Quantumverse Game
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">QuantumVerse 🌌🎮- A Gamer’s Bot!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/File-Transfer-Using-QC-Protocol-Cirq/" rel="permalink">File Transfer Using Qc Protocol Cirq
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quantum Communication: File Transfer Using Quantum Communication Protocol with Cirq
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/quaze-tutorial/" rel="permalink">Tutorial to build a Quantum inspired puzzle game in JS
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Two physics geeks entered a Quantum Games hackathon with very minimal knowledge of Quantum Computing, met a CS Wiz, and the three embarked on a journey to cr...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/molecular-simulation/" rel="permalink">Electronic Simulation of Molecules using Pennylane
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://discord.gg/NDm9e9W" rel="nofollow noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/QuantumUniversalEducation" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/company/quantum-universal-education/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCsT2UvPgc3dLwGQ4ec6XDDA" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/QuantUniEd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Quantum-Universal-Education/Quantum-Universal-Education.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://fullstackquantumcomputation.tech">Full-Stack Quantum Computation</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
