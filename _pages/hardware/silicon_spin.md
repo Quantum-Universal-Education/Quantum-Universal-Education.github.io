@@ -1,6 +1,6 @@
 ---
-permalink: [/hardware/ions.md/](/hardware/ions.md/)
-title: "Trapped Ion Quantum Computing"
+permalink: [/hardware/silicon_spin.md/](/hardware/silicon_spin.md/)
+title: "Silicon Spin Quantum Computing"
 ---
 
 We recommend these learning resources to get started:
@@ -9,5 +9,5 @@ We recommend these learning resources to get started:
   - [Quantum computing with trapped ions](https://arxiv.org/abs/0809.4368) by Haffner, Roos, and Blatt of the Innsbruck, Austria group.  Abstract: Quantum computers hold the promise to solve certain computational task much more efficiently than classical computers. We review the recent experimental advancements towards a quantum computer with trapped ions. In particular, various implementations of qubits, quantum gates and some key experiments are discussed. Furthermore, we review some implementations of quantum algorithms such as a deterministic teleportation of quantum information and an error correction scheme.
 <br><hr>
 # Updated info:
-<img src="ions.png" width="500">
- - The Quantinuum System Model H2 operates on ^171^Yb^+^ atomic hyperfine states, between four laser-operated interaction zones where quantum operations are undertaken. Major entangling gates include _ZZ_ and _RZZ_. Future proposals include doubling the physical and logical qubits while decreasing the logical error rates by an order in each product iteration, until 9 orders of error reduction is achieved for fault tolerant quantum computing. 
+<img src="silicon_spin.png" width="500">
+ - Intel's CMOS-compatible spin qubits fabricated on 300-mm silicon wafers, operate via microwave and electric fields on single electron spins in a unit cell of 12 Si/Si~0.7~Ge~0.3~ quantum dots, and at cryogenic temperatures (1.6 K) for 99.9% single-qubit Clifford fidelities. Future proposals include extending the current unit cell to increase the number of logical qubits, and implement faster measurement hardware such as waveform generators and cryogenic amplifiers.
