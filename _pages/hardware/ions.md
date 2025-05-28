@@ -9,5 +9,5 @@ We recommend these learning resources to get started:
   - [Quantum computing with trapped ions](https://arxiv.org/abs/0809.4368) by Haffner, Roos, and Blatt of the Innsbruck, Austria group.  Abstract: Quantum computers hold the promise to solve certain computational task much more efficiently than classical computers. We review the recent experimental advancements towards a quantum computer with trapped ions. In particular, various implementations of qubits, quantum gates and some key experiments are discussed. Furthermore, we review some implementations of quantum algorithms such as a deterministic teleportation of quantum information and an error correction scheme.
 <br><hr>
 # Updated info:
-<img src="ions.png" width="500">
+<img src="ion.png" width="500">
  - The Quantinuum System Model H2 operates on ^171^Yb^+^ atomic hyperfine states, between four laser-operated interaction zones where quantum operations are undertaken. Major entangling gates include _ZZ_ and _RZZ_. Future proposals include doubling the physical and logical qubits while decreasing the logical error rates by an order in each product iteration, until 9 orders of error reduction is achieved for fault tolerant quantum computing. 
