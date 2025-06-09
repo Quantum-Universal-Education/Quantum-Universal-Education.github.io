@@ -1,0 +1,2330 @@
+[
+    {
+      "name": "UK National Quantum Computing Centre",
+      "country": "United Kingdom",
+      "lat": 51.6559,
+      "lon": -1.2615,
+      "website_url": "https://www.nqcc.ac.uk/",
+      "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.FwIyzGEyydp3MwEKz7l4WgHaB8%26pid%3DApi&f=1&ipt=933e099138e0b183fa7ed3ae4e8f4770ba0fd6e22de2d80d659b2c47f6d8ce32&ipo=images"
+    },
+    {
+      "name": "DistriQ Quantum Innovation Zone",
+      "country": "Canada",
+      "lat": 45.4042,
+      "lon": -71.8929,
+      "website_url": "https://distriq.com/",
+      "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.8JOK4VZtLM1rk9koUKGgjwAAAA%3Fpid%3DApi&f=1&ipt=cbbe90eec0f4dff14c5901d9b817c04a27e34434a49960fab2c04a014b2006a5&ipo=images"
+    },
+    {
+      "name": "Quantum Benchmarking Initiative",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+    "lon": -0.1278,
+      "website_url": "https://www.darpa.mil/research/programs/quantum-benchmarking-initiative",
+      "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ao-C5ywXS4dD-f8md2Nb2wHaDx%3Fr%3D0%26pid%3DApi&f=1&ipt=6329ac53278dc7a4ed2fd89c9503adfc9c77d65084cf39ff7a4307c01dabc002&ipo=images"
+    },
+    {
+      "name": "Quantum Benchmarking Initiative",
+      "country": "United States",
+      "lat": 37.7749,
+    "lon": -122.4194,
+      "website_url": "https://www.darpa.mil/research/programs/quantum-benchmarking-initiative",
+      "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ao-C5ywXS4dD-f8md2Nb2wHaDx%3Fr%3D0%26pid%3DApi&f=1&ipt=6329ac53278dc7a4ed2fd89c9503adfc9c77d65084cf39ff7a4307c01dabc002&ipo=images"
+    },
+    {
+      "name": "Quantum Benchmarking Initiative",
+      "country": "Canada",
+      "lat": 43.4635,
+    "lon": -80.5147,
+      "website_url": "https://www.darpa.mil/research/programs/quantum-benchmarking-initiative",
+      "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ao-C5ywXS4dD-f8md2Nb2wHaDx%3Fr%3D0%26pid%3DApi&f=1&ipt=6329ac53278dc7a4ed2fd89c9503adfc9c77d65084cf39ff7a4307c01dabc002&ipo=images"
+    },
+    {
+      "name": "Institute for Quantum Computing (IQC)",
+      "country": "Canada",
+      "lat": 43.4723,
+      "lon": -80.5449,
+      "website_url": "https://www.iqccanada.com/",
+      "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.UxlAP-MxzQ9SsYWoPepcUwHaDI%26pid%3DApi&f=1&ipt=df07e2a60f15b487247c8837ee8fe18c5be5a974f868dc79af799c6349f0f34d&ipo=images"
+    },
+    {
+      "name": "Quantum Artificial Intelligence Lab (QuAIL)",
+      "country": "United States",
+      "lat": 37.4192,
+      "lon": -122.0574,
+      "website_url": "https://www.quantumai.dev/",
+      "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.sdRDIOheXaqUM30-nImMxQHaD4%26pid%3DApi&f=1&ipt=a882d4155d713153f6d897e244b67e0375bb800c3e9271c6269ee877a50124a3&ipo=images"
+    },
+    {
+      "name": "IBM",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+    "lon": -0.1278,
+      "website_url": "https://quantum.ibm.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_G7FLLce-JdtMqv4Z0w1d0g-300x120.png"
+    },
+    {
+      "name": "IBM",
+      "country": "Germany",
+      "lat": 51.4810,
+    "lon": 7.2162,
+      "website_url": "https://quantum.ibm.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_G7FLLce-JdtMqv4Z0w1d0g-300x120.png"
+    },
+    {
+      "name": "IBM",
+      "country": "India",
+      "lat": 12.9716,
+    "lon": 77.5946,
+      "website_url": "https://quantum.ibm.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_G7FLLce-JdtMqv4Z0w1d0g-300x120.png"
+    },
+    {
+      "name": "IBM",
+      "country": "Canada",
+      "lat": 43.6532,
+    "lon": -79.3832,
+      "website_url": "https://quantum.ibm.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_G7FLLce-JdtMqv4Z0w1d0g-300x120.png"
+    },
+    {
+      "name": "IBM",
+      "country": "Australia",
+      "lat": -33.8688,
+    "lon": 151.2093,
+      "website_url": "https://quantum.ibm.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_G7FLLce-JdtMqv4Z0w1d0g-300x120.png"
+    },
+    {
+      "name": "Google Quantum AI",
+      "country": "United States",
+      "lat": 37.4220,
+      "lon": -122.0841,
+      "website_url": "https://quantumai.google/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Jh0PqTcoHOd-r6jq6BLZ6A-300x158.png"
+    },
+    {
+      "name": "Google Quantum AI",
+      "country": "United States",
+      "lat": 34.0522,
+    "lon": -118.2437,
+      "website_url": "https://quantumai.google/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Jh0PqTcoHOd-r6jq6BLZ6A-300x158.png"
+    },
+    {
+      "name": "Google Quantum AI",
+      "country": "United Kingdom",
+      "lat": 52.2053,
+    "lon": 0.1218,
+      "website_url": "https://quantumai.google/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Jh0PqTcoHOd-r6jq6BLZ6A-300x158.png"
+    },
+    {
+      "name": "Google Quantum AI",
+      "country": "Canada",
+      "lat": 43.6532,
+    "lon": -79.3832,
+      "website_url": "https://quantumai.google/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Jh0PqTcoHOd-r6jq6BLZ6A-300x158.png"
+    },
+    {
+      "name": "Microsoft",
+      "country": "United States",
+      "lat": 47.6396,
+      "lon": -122.1280,
+      "website_url": "https://quantum.microsoft.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_5bWPwl1mE4M61jzi8NeuJQ.png"
+    },
+    {
+      "name": "Amazon Web Services (AWS) Braket",
+      "country": "United States",
+      "lat": 47.6062,
+      "lon": -122.3321,
+      "website_url": "https://aws.amazon.com/braket/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_GGswBYo6oLhNpjtFmhQYEg.jpg"
+    },
+    {
+      "name": "Oxford Ionics",
+      "country": "United Kingdom",
+      "lat": 51.7520,
+      "lon": -1.2577,
+      "website_url": "https://www.oxionics.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XkcWVvOiwww-p2msFngMSw.png"
+    },
+    {
+      "name": "Oxford Ionics",
+      "country": "United States",
+      "lat": 40.015,
+    "lon": -105.2705,
+      "website_url": "https://www.oxionics.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XkcWVvOiwww-p2msFngMSw.png"
+    },
+    {
+      "name": "Oxford Ionics",
+      "country": "Switzerland",
+      "lat": 47.3769,
+    "lon": 8.5417,
+      "website_url": "https://www.oxionics.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XkcWVvOiwww-p2msFngMSw.png"
+    },
+    {
+      "name": "Oxford Ionics",
+      "country": "Netherlands",
+      "lat": 52.3676,
+    "lon": 4.9041,
+      "website_url": "https://www.oxionics.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XkcWVvOiwww-p2msFngMSw.png"
+    },
+    {
+      "name": "Oxford Ionics",
+      "country": "Germany",
+      "lat": 48.1351,
+    "lon": 11.5820,
+      "website_url": "https://www.oxionics.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XkcWVvOiwww-p2msFngMSw.png"
+    },
+    {
+      "name": "Oxford Ionics",
+      "country": "United Arab Emirates",
+      "lat": 25.276987,
+    "lon": 55.296249,
+      "website_url": "https://www.oxionics.com/",
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XkcWVvOiwww-p2msFngMSw.png"
+    },
+    {
+      "name": "Eviden (Atos Computing)",
+      "country": "France",
+      "website_url": "https://eviden.com/",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-08T152820.145-300x156.png"
+    },
+    {
+      "name": "Eviden (Atos Computing)",
+      "country": "India",
+      "website_url": "https://eviden.com/",
+      "lat": 18.5204,
+    "lon": 73.8567,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-08T152820.145-300x156.png"
+    },
+    {
+      "name": "Eviden (Atos Computing)",
+      "country": "Poland",
+      "website_url": "https://eviden.com/",
+      "lat": 53.1235,
+    "lon": 17.9863,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-08T152820.145-300x156.png"
+    },
+    {
+      "name": "Eviden (Atos Computing)",
+      "country": "Romania",
+      "website_url": "https://eviden.com/",
+      "lat": 45.7489,
+    "lon": 21.2087,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-08T152820.145-300x156.png"
+    },
+    {
+      "name": "Eviden (Atos Computing)",
+      "country": "Slovakia",
+      "website_url": "https://eviden.com/",
+      "lat": 48.1482,
+    "lon": 17.1067,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-08T152820.145-300x156.png"
+    },
+    {
+      "name": "Eviden (Atos Computing)",
+      "country": "Belgium",
+      "website_url": "https://eviden.com/",
+      "lat": 51.1833,
+    "lon": 4.4675,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-08T152820.145-300x156.png"
+    },
+    {
+      "name": "Intel",
+      "country": "United States",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 37.3861,
+      "lon": -122.0839,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "United States",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 45.5229,
+      "lon": -122.9898,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "United States",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 33.3062,
+      "lon": -111.8410,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "Ireland",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 53.3886,
+    "lon": -6.5329,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "Israel",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 32.7940,
+    "lon": 34.9896,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "Germany",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 48.1300,
+    "lon": 11.7070,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "India",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 12.9716,
+    "lon": 77.5946,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "China",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 39.9042,
+    "lon": 116.4074,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "Malaysia",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 5.4164,
+    "lon": 100.3327,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "Intel",
+      "country": "Vietnam",
+      "website_url": "https://www.intel.com/content/www/us/en/developer/tools/quantum-sdk/overview.html",
+      "lat": 10.8231,
+    "lon": 106.6297,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_I8pqf4jl8KqDsPtCLCK4iw.png"
+    },
+    {
+      "name": "NVIDIA",
+      "country": "United States",
+      "website_url": "https://www.nvidia.com/en-us/solutions/quantum-computing/",
+      "lat": 42.3601,
+      "lon": -71.0589,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Screenshot-696-300x129.png"
+    },
+    {
+      "name": "NVIDIA",
+      "country": "Germany",
+      "website_url": "https://www.nvidia.com/en-us/solutions/quantum-computing/",
+      "lat": 50.9048,
+      "lon": 6.3478,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Screenshot-696-300x129.png"
+    },
+    {
+      "name": "NVIDIA",
+      "country": "Japan",
+      "website_url": "https://www.nvidia.com/en-us/solutions/quantum-computing/",
+      "lat": 36.0821,
+    "lon": 140.0994,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Screenshot-696-300x129.png"
+    },
+    {
+      "name": "NVIDIA",
+      "country": "Poland",
+      "website_url": "https://www.nvidia.com/en-us/solutions/quantum-computing/",
+      "lat": 52.4075,
+    "lon": 16.9342,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Screenshot-696-300x129.png"
+    },
+    {
+      "name": "NVIDIA",
+      "country": "Israel",
+      "website_url": "https://www.nvidia.com/en-us/solutions/quantum-computing/",
+      "lat": 32.0853,
+    "lon": 34.7818,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Screenshot-696-300x129.png"
+    },
+    {
+      "name": "NVIDIA",
+      "country": "Denmark",
+      "website_url": "https://www.nvidia.com/en-us/solutions/quantum-computing/",
+      "lat": 55.6761,
+    "lon": 12.5683,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Screenshot-696-300x129.png"
+    },
+    {
+      "name": "Alice & Bob",
+      "country": "France",
+      "website_url": "https://alice-bob.com/",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_sRs2gUjZa9g-lr29kL83qQ.png"
+    },
+    {
+      "name": "Alice & Bob",
+      "country": "United States",
+      "website_url": "https://alice-bob.com/",
+      "lat": 42.373611,
+    "lon": -71.109733,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_sRs2gUjZa9g-lr29kL83qQ.png"
+    },
+    {
+      "name": "Alpine Quantum Technologies",
+      "country": "Austria",
+      "website_url": "https://www.aqt.eu/",
+      "lat": 47.2692,
+      "lon": 11.4041,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_6d5GWcx7dLwudKLoAL6q7g.jpg"
+    },
+    {
+      "name": "Anyon Systems",
+      "country": "Canada",
+      "website_url": "https://anyonsys.com/",
+      "lat": 45.5017,
+      "lon": -73.5673,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Anyon-Logo-300x52-1.webp"
+    },
+    {
+      "name": "Anyon Systems",
+      "country": "Canada",
+      "website_url": "https://anyonsys.com/",
+      "lat": 43.4736,
+      "lon": -80.5447,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Anyon-Logo-300x52-1.webp"
+    },
+    {
+      "name": "Atlantic Quantum",
+      "country": "USA",
+      "website_url": "https://atlantic-quantum.com/",
+      "lat": 42.3736,
+      "lon": -71.1097,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_-6txF2QlPGGj87yIJG-2JQ.png"
+    },
+    {
+      "name": "Atlantic Quantum",
+      "country": "Sweden",
+      "website_url": "https://atlantic-quantum.com/",
+      "lat": 57.7089,
+      "lon": 11.9746,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_-6txF2QlPGGj87yIJG-2JQ.png"
+    },
+    {
+      "name": "Atlantic Quantum",
+      "country": "Malaysia",
+      "website_url": "https://atlantic-quantum.com/",
+      "lat": 3.139,
+      "lon": 101.6869,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_-6txF2QlPGGj87yIJG-2JQ.png"
+    },
+    {
+      "name": "Atom Computing",
+      "country": "USA",
+      "website_url": "https://atom-computing.com/",
+      "lat": 37.8715,
+      "lon": -122.2730,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_BFMH-zpiq_tcpME3Kt-qLw-300x76.png"
+    },
+    {
+      "name": "Atom Computing",
+      "country": "United States",
+      "website_url": "https://atom-computing.com/",
+      "lat": 40.015,
+    "lon": -105.2705,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_BFMH-zpiq_tcpME3Kt-qLw-300x76.png"
+    },
+    {
+      "name": "Atom Computing",
+      "country": "Denmark",
+      "website_url": "https://atom-computing.com/",
+      "lat": 55.6761,
+    "lon": 12.5683,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_BFMH-zpiq_tcpME3Kt-qLw-300x76.png"
+    },
+    {
+      "name": "Bleximo",
+      "country": "USA",
+      "website_url": "https://bleximo.com",
+      "lat": 37.8715,
+      "lon": -122.2730,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_h9fEaUn30Lq9zenba0EUhg.png"
+    },
+    {
+      "name": "Bleximo",
+      "country": "United States",
+      "website_url": "https://bleximo.com",
+      "lat": 37.7749,
+      "lon": -122.4194,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_h9fEaUn30Lq9zenba0EUhg.png"
+    },
+    {
+      "name": "Bleximo",
+      "country": "China",
+      "website_url": "https://bleximo.com",
+      "lat": 39.9042,
+      "lon": 116.4074,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_h9fEaUn30Lq9zenba0EUhg.png"
+    },
+    {
+      "name": "C12 Quantum Electronics",
+      "country": "France",
+      "website_url": "https://www.c12qe.com/",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XJ_Yo9t_CW7ev6ewMjDqLw.jpg"
+    },
+    {
+      "name": "D-Wave",
+      "country": "Canada",
+      "website_url": "https://www.dwavequantum.com/",
+      "lat": 49.2488,
+      "lon": -122.9805,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Qb_wy4aCIo6DeDtS1dEJLg-300x68.png"
+    },
+    {
+      "name": "D-Wave",
+      "country": "United States",
+      "website_url": "https://www.dwavequantum.com/",
+      "lat": 34.7304,
+    "lon": -86.5861,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Qb_wy4aCIo6DeDtS1dEJLg-300x68.png"
+    },
+    {
+      "name": "D-Wave",
+      "country": "Ireland",
+      "website_url": "https://www.dwavequantum.com/",
+      "lat": 52.3347,
+      "lon": -6.4593,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Qb_wy4aCIo6DeDtS1dEJLg-300x68.png"
+    },
+    {
+      "name": "Diraq",
+      "country": "Australia",
+      "website_url": "https://diraq.com/",
+      "lat": -33.9173,
+      "lon": 151.2313,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hfulKqZwAaA8dOkdkq0SQQ.png"
+    },
+    {
+      "name": "Diraq",
+      "country": "United States",
+      "website_url": "https://diraq.com/",
+      "lat": 41.8781,
+    "lon": -87.6298,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hfulKqZwAaA8dOkdkq0SQQ.png"
+    },
+    {
+      "name": "Diraq",
+      "country": "United States",
+      "website_url": "https://diraq.com/",
+      "lat": 37.7749,
+    "lon": -122.4194,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hfulKqZwAaA8dOkdkq0SQQ.png"
+    },
+    {
+      "name": "EeroQ",
+      "country": "USA",
+      "website_url": "https://eeroq.com/",
+      "lat": 41.8781,
+      "lon": -87.6298,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_79yDrZ0ADUhDOCCzMbJ6bQ-300x150.png"
+    },
+    {
+      "name": "Infleqtion",
+      "country": "USA",
+      "website_url": "https://infleqtion.com/",
+      "lat": 40.01499,
+      "lon": -105.2705,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Infleqtion-Logo.png"
+    },
+    {
+      "name": "Infleqtion",
+      "country": "United States",
+      "website_url": "https://infleqtion.com/",
+      "lat": 41.8781,
+    "lon": -87.6298,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Infleqtion-Logo.png"
+    },
+    {
+      "name": "Infleqtion",
+      "country": "United States",
+      "website_url": "https://infleqtion.com/",
+      "lat": 43.0731,
+    "lon": -89.4012,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Infleqtion-Logo.png"
+    },
+    {
+      "name": "Infleqtion",
+      "country": "United States",
+      "website_url": "https://infleqtion.com/",
+      "lat": 39.9887,
+    "lon": -105.1305,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Infleqtion-Logo.png"
+    },
+    {
+      "name": "Infleqtion",
+      "country": "United Kingdom",
+      "website_url": "https://infleqtion.com/",
+      "lat": 51.7548,
+      "lon": -1.2544,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Infleqtion-Logo.png"
+    },
+    {
+      "name": "Infleqtion",
+      "country": "Australia",
+      "website_url": "https://infleqtion.com/",
+      "lat": -37.8136,
+      "lon": 144.9631,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/Infleqtion-Logo.png"
+    },
+    {
+      "name": "IQM",
+      "country": "Finland",
+      "website_url": "https://www.meetiqm.com/",
+      "lat": 60.2055,
+      "lon": 24.6559,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_GdXCkM90na4IojNYIO9xGw-300x106.png"
+    },
+    {
+      "name": "IQM",
+      "country": "Germany",
+      "website_url": "https://www.meetiqm.com/",
+      "lat": 48.1351,
+    "lon": 11.5820,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_GdXCkM90na4IojNYIO9xGw-300x106.png"
+    },
+    {
+      "name": "IQM",
+      "country": "France",
+      "website_url": "https://www.meetiqm.com/",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_GdXCkM90na4IojNYIO9xGw-300x106.png"
+    },
+    {
+      "name": "IQM",
+      "country": "Spain",
+      "website_url": "https://www.meetiqm.com/",
+      "lat": 40.4168,
+    "lon": -3.7038,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_GdXCkM90na4IojNYIO9xGw-300x106.png"
+    },
+    {
+      "name": "IQM",
+      "country": "Poland",
+      "website_url": "https://www.meetiqm.com/",
+      "lat": 52.2297,
+    "lon": 21.0122,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_GdXCkM90na4IojNYIO9xGw-300x106.png"
+    },
+    {
+      "name": "IQM",
+      "country": "United States",
+      "website_url": "https://www.meetiqm.com/",
+      "lat": 37.4419,
+      "lon": -122.1430,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_GdXCkM90na4IojNYIO9xGw-300x106.png"
+    },
+    {
+      "name": "IQM",
+      "country": "Singapore",
+      "website_url": "https://www.meetiqm.com/",
+      "lat": 1.3521,
+    "lon": 103.8198,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_GdXCkM90na4IojNYIO9xGw-300x106.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "USA",
+      "website_url": "https://ionq.com/",
+      "lat": 38.9897,
+      "lon": -76.9378,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "United States",
+      "website_url": "https://ionq.com/",
+      "lat": 47.7623,
+    "lon": -122.2054,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "Germany",
+      "website_url": "https://ionq.com/",
+      "lat": 48.1351,
+    "lon": 11.5820,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "Switzerland",
+      "website_url": "https://ionq.com/",
+      "lat": 47.4920,
+    "lon": 7.6200,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "Canada",
+      "website_url": "https://ionq.com/",
+      "lat": 43.6510,
+      "lon": -79.3470,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "France",
+      "website_url": "https://ionq.com/",
+      "lat": 48.8566,
+    "lon": 2.3522,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "Japan",
+      "website_url": "https://ionq.com/",
+      "lat": 35.6895,
+    "lon": 139.6917,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "Singapore",
+      "website_url": "https://ionq.com/",
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "IonQ",
+      "country": "United Kingdom",
+      "website_url": "https://ionq.com/",
+      "lat": 51.5074,
+    "lon": -0.1278,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wJCSgl5zX8D_8YTOYOXpMg-300x105.png"
+    },
+    {
+      "name": "Nord Quantique",
+      "country": "Canada",
+      "website_url": "https://nordquantique.ca/en/home",
+      "lat": 45.4042,
+      "lon": -71.8826,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Fw8rGJUlJBNFpgsgOWx5hA.png"
+    },
+    {
+      "name": "ORCA Computing",
+      "country": "United Kingdom",
+      "website_url": "https://orcacomputing.com/",
+      "lat": 51.5072,
+      "lon": -0.1276,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/orcacomputing_logo.jpg"
+    },
+    {
+      "name": "ORCA Computing",
+      "country": "United States",
+      "website_url": "https://orcacomputing.com/",
+      "lat": 30.3956,
+    "lon": -97.8321,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/orcacomputing_logo.jpg"
+    },
+    {
+      "name": "ORCA Computing",
+      "country": "United States",
+      "website_url": "https://orcacomputing.com/",
+      "lat": 47.6062,
+    "lon": -122.3321,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/orcacomputing_logo.jpg"
+    },
+    {
+      "name": "ORCA Computing",
+      "country": "Canada",
+      "website_url": "https://orcacomputing.com/",
+      "lat": 43.6630,
+    "lon": -79.4440,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/orcacomputing_logo.jpg"
+    },
+    {
+      "name": "ORCA Computing",
+      "country": "Poland",
+      "website_url": "https://orcacomputing.com/",
+      "lat": 52.1950,
+    "lon": 20.9530,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/orcacomputing_logo.jpg"
+    },
+    {
+      "name": "Origin Quantum",
+      "country": "China",
+      "website_url": "https://m.originqc.com.cn/en",
+      "lat": 31.8206,
+      "lon": 117.2272,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_LSH5mmkg7HHYuI-2UlPk5Q.jpg"
+    },
+    {
+      "name": "Origin Quantum",
+      "country": "China",
+      "website_url": "https://m.originqc.com.cn/en",
+      "lat": 39.9042,
+      "lon": 116.4074,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_LSH5mmkg7HHYuI-2UlPk5Q.jpg"
+    },
+    {
+      "name": "Origin Quantum",
+      "country": "China",
+      "website_url": "https://m.originqc.com.cn/en",
+      "lat": 30.5728,
+    "lon": 104.0668,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_LSH5mmkg7HHYuI-2UlPk5Q.jpg"
+    },
+    {
+      "name": "Origin Quantum",
+      "country": "China",
+      "website_url": "https://m.originqc.com.cn/en",
+      "lat": 22.5431,
+    "lon": 114.0579,
+      "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_LSH5mmkg7HHYuI-2UlPk5Q.jpg"
+    },
+  {
+    "name": "Oxford Quantum Circuits",
+    "country": "United Kingdom",
+    "website_url": "https://oqc.tech/",
+    "lat": 51.4562,
+    "lon": -0.9711,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_VEhxd9zGrPIeY87DZjJfjg.png"
+  },
+  {
+    "name": "Oxford Quantum Circuits",
+    "country": "United Kingdom",
+    "website_url": "https://oqc.tech/",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_VEhxd9zGrPIeY87DZjJfjg.png"
+  },
+  {
+    "name": "Oxford Quantum Circuits",
+    "country": "Japan",
+    "website_url": "https://oqc.tech/",
+    "lat": 35.6895,
+    "lon": 139.6917,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_VEhxd9zGrPIeY87DZjJfjg.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "France",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 48.7146,
+    "lon": 2.2446,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "France",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 48.7261,
+    "lon": 2.2830,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "Canada",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 45.4042,
+    "lon": -71.8929,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "United States",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "Netherlands",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 52.3676,
+    "lon": 4.9041,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "France",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 48.7136,
+    "lon": 2.2116,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "France",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 48.7136,
+    "lon": 2.2116,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "Germany",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 50.9210,
+    "lon": 6.3628,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "France",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 48.7136,
+    "lon": 2.2116,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "United Kingdom",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "South Korea",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 36.3504,
+    "lon": 127.3845,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Pasqal",
+    "country": "Saudi Arabia",
+    "website_url": "https://www.pasqal.com/",
+    "lat": 26.2886,
+    "lon": 50.1130,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_lXoyrZeBaf93r9CQq0gKFg-300x145.png"
+  },
+  {
+    "name": "Photonic Inc",
+    "country": "Canada",
+    "website_url": "https://photonic.com/",
+    "lat": 49.2488,
+    "lon": -122.9805,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_OC82wJvNiFdJvU_mVuS53A-300x115.png"
+  },
+  {
+    "name": "Photonic Inc",
+    "country": "United Kingdom",
+    "website_url": "https://photonic.com/",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_OC82wJvNiFdJvU_mVuS53A-300x115.png"
+  },
+  {
+    "name": "Photonic Inc",
+    "country": "United States",
+    "website_url": "https://photonic.com/",
+    "lat": 47.6062,
+    "lon": -122.3321,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_OC82wJvNiFdJvU_mVuS53A-300x115.png"
+  },
+  {
+    "name": "planqc",
+    "country": "Germany",
+    "website_url": "https://www.planqc.eu/",
+    "lat": 48.1351,
+    "lon": 11.5820,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_LqC6A_ggwF2BDEaqv9ll5Q-300x100.png"
+  },
+  {
+    "name": "PsiQuantum",
+    "country": "USA",
+    "website_url": "https://www.psiquantum.com/",
+    "lat": 37.4419,
+    "lon": -122.1430,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_AHV7hBLGabOj1QdDegt7Yg-300x156.png"
+  },
+  {
+    "name": "PsiQuantum",
+    "country": "USA",
+    "website_url": "https://www.psiquantum.com/",
+    "lat": 41.7520,
+    "lon": -87.5530,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_AHV7hBLGabOj1QdDegt7Yg-300x156.png"
+  },
+  {
+    "name": "PsiQuantum",
+    "country": "Australia",
+    "website_url": "https://www.psiquantum.com/",
+    "lat": -27.4710,
+    "lon": 153.0235,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_AHV7hBLGabOj1QdDegt7Yg-300x156.png"
+  },
+  {
+    "name": "PsiQuantum",
+    "country": "United Kingdom",
+    "website_url": "https://www.psiquantum.com/",
+    "lat": 53.3400,
+    "lon": -2.6200,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_AHV7hBLGabOj1QdDegt7Yg-300x156.png"
+  },
+  {
+    "name": "Quantum Computing Inc.",
+    "country": "USA",
+    "website_url": "https://quantumcomputinginc.com/",
+    "lat": 39.1157,
+    "lon": -77.5636,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-11T180725.435-300x39.png"
+  },
+  {
+    "name": "Quantum Computing Inc.",
+    "country": "USA",
+    "website_url": "https://quantumcomputinginc.com/",
+    "lat": 40.7455,
+    "lon": -74.0230,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-11T180725.435-300x39.png"
+  },
+  {
+    "name": "Quantum Computing Inc.",
+    "country": "USA",
+    "website_url": "https://quantumcomputinginc.com/",
+    "lat": 39.1153,
+    "lon": -77.5610,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-11T180725.435-300x39.png"
+  },
+  {
+    "name": "Quantum Computing Inc.",
+    "country": "USA",
+    "website_url": "https://quantumcomputinginc.com/",
+    "lat": 33.4255,
+    "lon": -111.9400,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-11T180725.435-300x39.png"
+  },
+  {
+    "name": "Qilimanjaro",
+    "country": "Spain",
+    "website_url": "https://www.qilimanjaro.tech/",
+    "lat": 41.3851,
+    "lon": 2.1734,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_AZEZWUEMJAnPN68ZEBdvWQ-300x60.png"
+  },
+  {
+    "name": "Qilimanjaro",
+    "country": "United Arab Emirates",
+    "website_url": "https://www.qilimanjaro.tech/",
+    "lat": 24.4539,
+    "lon": 54.3773,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_AZEZWUEMJAnPN68ZEBdvWQ-300x60.png"
+  },
+  {
+    "name": "QuEra",
+    "country": "USA",
+    "website_url": "https://www.quera.com/",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Rt8GmQqUPQtkytcRBQd_8Q.png"
+  },
+  {
+    "name": "QuEra",
+    "country": "Brazil",
+    "website_url": "https://www.quera.com/",
+    "lat": -23.5505,
+    "lon": -46.6333,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Rt8GmQqUPQtkytcRBQd_8Q.png"
+  },
+  {
+    "name": "Quandela",
+    "country": "France",
+    "website_url": "https://www.quandela.com/",
+    "lat": 48.7136,
+    "lon": 2.2116,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XJW_qFrCLoj8EjkWWUPFGw-300x150.jpg"
+  },
+  {
+    "name": "Quandela",
+    "country": "Canada",
+    "website_url": "https://www.quandela.com/",
+    "lat": 45.5051,
+    "lon": -73.5560,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XJW_qFrCLoj8EjkWWUPFGw-300x150.jpg"
+  },
+  {
+    "name": "Quandela",
+    "country": "Germany",
+    "website_url": "https://www.quandela.com/",
+    "lat": 48.1306,
+    "lon": 11.5880,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XJW_qFrCLoj8EjkWWUPFGw-300x150.jpg"
+  },
+  {
+    "name": "Quandela",
+    "country": "United Kingdom",
+    "website_url": "https://www.quandela.com/",
+    "lat": 52.2053,
+    "lon": 0.1218,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XJW_qFrCLoj8EjkWWUPFGw-300x150.jpg"
+  },
+  {
+    "name": "Quandela",
+    "country": "South Korea",
+    "website_url": "https://www.quandela.com/",
+    "lat": 37.5056,
+    "lon": 127.0390,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_XJW_qFrCLoj8EjkWWUPFGw-300x150.jpg"
+  },
+  {
+    "name": "QuantWare",
+    "country": "Netherlands",
+    "website_url": "https://www.quantware.com/",
+    "lat": 52.0116,
+    "lon": 4.3571,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_iZ6laQrnY9Kej9uSElYF7Q-300x115.png"
+  },
+  {
+    "name": "QuantWare",
+    "country": "Spain",
+    "website_url": "https://www.quantware.com/",
+    "lat": 41.4956,
+    "lon": 2.1070,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_iZ6laQrnY9Kej9uSElYF7Q-300x115.png"
+  },
+  {
+    "name": "QuantWare",
+    "country": "Israel",
+    "website_url": "https://www.quantware.com/",
+    "lat": 32.0853,
+    "lon": 34.7818,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_iZ6laQrnY9Kej9uSElYF7Q-300x115.png"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "United States",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 39.9402,
+    "lon": -105.0897,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "United Kingdom",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 52.2053,
+    "lon": 0.1218,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "United Kingdom",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 51.4945,
+    "lon": -0.1419,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "United Kingdom",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 51.7543,
+    "lon": -1.2615,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "Germany",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 48.1612,
+    "lon": 11.5781,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "Japan",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 35.6847,
+    "lon": 139.7630,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "United States",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 38.8906,
+    "lon": -77.0842,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "United States",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 45.0654,
+    "lon": -93.3693,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantinuum",
+    "country": "United States",
+    "website_url": "https://www.quantinuum.com/",
+    "lat": 34.5199,
+    "lon": -105.8701,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_hWhxftmhdI0066rT1y3rTA.jpg"
+  },
+  {
+    "name": "Quantum Brilliance",
+    "country": "Australia",
+    "website_url": "https://quantumbrilliance.com/",
+    "lat": -35.2809,
+    "lon": 149.1300,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_3n8fEgHWBL4smLC-yMdC6A.png"
+  },
+  {
+    "name": "Quantum Brilliance",
+    "country": "Germany",
+    "website_url": "https://quantumbrilliance.com/",
+    "lat": 48.7453,
+    "lon": 9.1638,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_3n8fEgHWBL4smLC-yMdC6A.png"
+  },
+  {
+    "name": "Quantum Brilliance",
+    "country": "Singapore",
+    "website_url": "https://quantumbrilliance.com/",
+    "lat": 1.2807,
+    "lon": 103.8500,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_3n8fEgHWBL4smLC-yMdC6A.png"
+  },
+  {
+    "name": "Quantum Brilliance",
+    "country": "United Kingdom",
+    "website_url": "https://quantumbrilliance.com/",
+    "lat": 53.1910,
+    "lon": -2.8950,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_3n8fEgHWBL4smLC-yMdC6A.png"
+  },
+  {
+    "name": "Quantum Circuits",
+    "country": "United States",
+    "website_url": "Builds full-stack superconducting quantum systems with modular and scalable architectures. Originates from Yale University.",
+    "lat": 43.0731,
+    "lon": -89.4012,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_5BN2yKBUfTOw_4GuZnGVqA.png"
+  },
+  {
+    "name": "Quantum Motion",
+    "country": "United Kingdom",
+    "website_url": "https://quantummotion.tech/",
+    "lat": 51.5072,
+    "lon": -0.1276,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_7lLJkk42NeHYf0cywrTejQ-300x98.png"
+  },
+  {
+    "name": "Quantum Motion",
+    "country": "Australia",
+    "website_url": "https://quantummotion.tech/",
+    "lat": -33.8977,
+    "lon": 151.1919,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_7lLJkk42NeHYf0cywrTejQ-300x98.png"
+  },
+  {
+    "name": "Quantum Source",
+    "country": "Israel",
+    "website_url": "https://www.qs-labs.com/",
+    "lat": 31.8948,
+    "lon": 34.8113,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_6j8TJ75VjfrIqGvhkhl9EA-300x102.png"
+  },
+  {
+    "name": "QuiX Quantum",
+    "country": "Netherlands",
+    "website_url": "https://www.quixquantum.com/",
+    "lat": 52.2215,
+    "lon": 6.8937,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/quix_quantum_bv_logo.jpg"
+  },
+  {
+    "name": "QuiX Quantum",
+    "country": "Netherlands",
+    "website_url": "https://www.quixquantum.com/",
+    "lat": 52.3564,
+    "lon": 4.9611,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/quix_quantum_bv_logo.jpg"
+  },
+  {
+    "name": "QuiX Quantum",
+    "country": "Germany",
+    "website_url": "https://www.quixquantum.com/",
+    "lat": 48.4011,
+    "lon": 9.9876,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/quix_quantum_bv_logo.jpg"
+  },
+  {
+    "name": "QuiX Quantum",
+    "country": "Germany",
+    "website_url": "https://www.quixquantum.com/",
+    "lat": 48.7758,
+    "lon": 9.1829,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/quix_quantum_bv_logo.jpg"
+  },
+  {
+    "name": "Rigetti Computing",
+    "country": "United States",
+    "website_url": "https://www.rigetti.com/",
+    "lat": 37.5585,
+    "lon": -121.9767,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_qa5qqPgivoeAj_1KMKNnDg-300x158.png"
+  },
+  {
+    "name": "Rigetti Computing",
+    "country": "United States",
+    "website_url": "https://www.rigetti.com/",
+    "lat": 37.8715,
+    "lon": -122.2730,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_qa5qqPgivoeAj_1KMKNnDg-300x158.png"
+  },
+  {
+    "name": "Rigetti Computing",
+    "country": "United Kingdom",
+    "website_url": "https://www.rigetti.com/",
+    "lat": 51.5186,
+    "lon": -0.1063,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_qa5qqPgivoeAj_1KMKNnDg-300x158.png"
+  },
+  {
+    "name": "Rigetti Computing",
+    "country": "Australia",
+    "website_url": "https://www.rigetti.com/",
+    "lat": -33.8918,
+    "lon": 151.2114,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_qa5qqPgivoeAj_1KMKNnDg-300x158.png"
+  },
+  {
+    "name": "SEEQC",
+    "country": "United States",
+    "website_url": "https://seeqc.com/",
+    "lat": 41.0620,
+    "lon": -73.8207,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_RIy4BqCq34B2x1VtXy2_dw-300x79.png"
+  },
+  {
+    "name": "SEEQC",
+    "country": "United Kingdom",
+    "website_url": "https://seeqc.com/",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_RIy4BqCq34B2x1VtXy2_dw-300x79.png"
+  },
+  {
+    "name": "SEEQC",
+    "country": "Italy",
+    "website_url": "https://seeqc.com/",
+    "lat": 40.8522,
+    "lon": 14.2681,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_RIy4BqCq34B2x1VtXy2_dw-300x79.png"
+  },
+  {
+    "name": "Silicon Quantum Computing",
+    "country": "Australia",
+    "website_url": "https://www.sqc.com.au/",
+    "lat": -33.8688,
+    "lon": 151.2093,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_60eYTM5iys75_7KBKvU87g-300x118.png"
+  },
+  {
+    "name": "Silicon Quantum Computing",
+    "country": "Australia",
+    "website_url": "https://www.sqc.com.au/",
+    "lat": -37.8136,
+    "lon": 144.9631,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_60eYTM5iys75_7KBKvU87g-300x118.png"
+  },
+  {
+    "name": "Silicon Quantum Computing",
+    "country": "Australia",
+    "website_url": "https://www.sqc.com.au/",
+    "lat": -27.4698,
+    "lon": 153.0251,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_60eYTM5iys75_7KBKvU87g-300x118.png"
+  },
+  {
+    "name": "Silicon Quantum Computing",
+    "country": "United States",
+    "website_url": "https://www.sqc.com.au/",
+    "lat": 34.4208,
+    "lon": -119.6982,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_60eYTM5iys75_7KBKvU87g-300x118.png"
+  },
+  {
+    "name": "Silicon Quantum Computing",
+    "country": "United States",
+    "website_url": "https://www.sqc.com.au/",
+    "lat": 41.8781,
+    "lon": -87.6298,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_60eYTM5iys75_7KBKvU87g-300x118.png"
+  },
+  {
+    "name": "Silicon Quantum Computing",
+    "country": "United Kingdom",
+    "website_url": "https://www.sqc.com.au/",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_60eYTM5iys75_7KBKvU87g-300x118.png"
+  },
+  {
+    "name": "Silicon Quantum Computing",
+    "country": "Germany",
+    "website_url": "https://www.sqc.com.au/",
+    "lat": 48.1351,
+    "lon": 11.5820,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_60eYTM5iys75_7KBKvU87g-300x118.png"
+  },
+  {
+    "name": "TuringQ",
+    "country": "China",
+    "website_url": "https://www.turingq.com/",
+    "lat": 31.2304,
+    "lon": 121.4737,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_tSpFmILx8EX8nCPZyw7l0g-300x94.png"
+  },
+  {
+    "name": "Universal Quantum",
+    "country": "United Kingdom",
+    "website_url": "https://universalquantum.com/",
+    "lat": 50.8225,
+    "lon": -0.1372,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_aAZMGbLw5nw0OmA12OCJwQ.jpg"
+  },
+  {
+    "name": "Universal Quantum",
+    "country": "Germany",
+    "website_url": "https://universalquantum.com/",
+    "lat": 53.5511,
+    "lon": 9.9937,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_aAZMGbLw5nw0OmA12OCJwQ.jpg"
+  },
+  {
+    "name": "Universal Quantum",
+    "country": "Canada",
+    "website_url": "https://universalquantum.com/",
+    "lat": 43.4715,
+    "lon": -80.5449,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_aAZMGbLw5nw0OmA12OCJwQ.jpg"
+  },
+  {
+    "name": "Xanadu",
+    "country": "Canada",
+    "website_url": "https://www.xanadu.ai/",
+    "lat": 43.6511,
+    "lon": -79.3839,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wcEtdU7JOPk-P3-PAihc_g-300x134.jpg"
+  },
+  {
+    "name": "Xanadu",
+    "country": "Canada",
+    "website_url": "https://www.xanadu.ai/",
+    "lat": 51.0450,
+    "lon": -114.0620,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wcEtdU7JOPk-P3-PAihc_g-300x134.jpg"
+  },
+  {
+    "name": "Xanadu",
+    "country": "United States",
+    "website_url": "https://www.xanadu.ai/",
+    "lat": 34.0007,
+    "lon": -81.0348,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wcEtdU7JOPk-P3-PAihc_g-300x134.jpg"
+  },
+  {
+    "name": "Xanadu",
+    "country": "Qatar",
+    "website_url": "https://www.xanadu.ai/",
+    "lat": 25.276987,
+    "lon": 51.520008,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wcEtdU7JOPk-P3-PAihc_g-300x134.jpg"
+  },
+  {
+    "name": "Xanadu",
+    "country": "South Korea",
+    "website_url": "https://www.xanadu.ai/",
+    "lat": 36.3504,
+    "lon": 127.3845,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wcEtdU7JOPk-P3-PAihc_g-300x134.jpg"
+  },
+  {
+    "name": "Xanadu",
+    "country": "South Korea",
+    "website_url": "https://www.xanadu.ai/",
+    "lat": 36.3504,
+    "lon": 127.3845,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_wcEtdU7JOPk-P3-PAihc_g-300x134.jpg"
+  },
+  {
+    "name": "1QBit",
+    "country": "Canada",
+    "website_url": "https://1qbit.com/",
+    "lat": 49.2827,
+    "lon": -123.1207,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_A3I_SVqjpPAOoacJmJFDYA-300x95.png"
+  },
+  {
+    "name": "1QBit",
+    "country": "Canada",
+    "website_url": "https://1qbit.com/",
+    "lat": 45.4000,
+    "lon": -71.9000,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_A3I_SVqjpPAOoacJmJFDYA-300x95.png"
+  },
+  {
+    "name": "1QBit",
+    "country": "Canada",
+    "website_url": "https://1qbit.com/",
+    "lat": 43.4668,
+    "lon": -80.5164,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_A3I_SVqjpPAOoacJmJFDYA-300x95.png"
+  },
+  {
+    "name": "Aliro Quantum",
+    "country": "United States",
+    "website_url": "https://www.aliroquantum.com/",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_IzU36_HkFH8VWfNUVpQiRQ.png"
+  },
+  {
+    "name": "Aliro Quantum",
+    "country": "United Kingdom",
+    "website_url": "https://www.aliroquantum.com/",
+    "lat": 54.5960,
+    "lon": -5.9302,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_IzU36_HkFH8VWfNUVpQiRQ.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Finland",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 60.1695,
+    "lon": 24.9354,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Finland",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 60.4518,
+    "lon": 22.2666,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Germany",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 52.52,
+    "lon": 13.405,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Italy",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 41.9028,
+    "lon": 12.4964,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Poland",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 52.2297,
+    "lon": 21.0122,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Norway",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 59.9139,
+    "lon": 10.7522,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Spain",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 40.4168,
+    "lon": -3.7038,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Denmark",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 55.6761,
+    "lon": 12.5683,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Ireland",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 53.3498,
+    "lon": -6.2603,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "United States",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 38.8951,
+    "lon": -77.0364,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "Algorithmiq",
+    "country": "Turkey",
+    "website_url": "https://algorithmiq.fi/",
+    "lat": 41.0082,
+    "lon": 28.9784,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_QpC-qL_XWWJxHr6SXw-Jdw-300x83.png"
+  },
+  {
+    "name": "A Star Quantum",
+    "country": "Japan",
+    "website_url": "https://a-star-quantum.jp/",
+    "lat": 35.6895,
+    "lon": 139.6917,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_R2-f2_kMlBW3VjH7EtdQWQ.png"
+  },
+  {
+    "name": "BEIT",
+    "country": "Poland",
+    "website_url": "https://beit.tech/",
+    "lat": 50.0647,
+    "lon": 19.9450,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_qDqYwDImFaPjMoD2mEH0Ug.png"
+  },
+  {
+    "name": "BEIT",
+    "country": "Canada",
+    "website_url": "https://beit.tech/",
+    "lat": 43.6629,
+    "lon": -79.3957,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_qDqYwDImFaPjMoD2mEH0Ug.png"
+  },
+  {
+    "name": "BEIT",
+    "country": "United States",
+    "website_url": "https://beit.tech/",
+    "lat": 38.9866,
+    "lon": -76.9378,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_qDqYwDImFaPjMoD2mEH0Ug.png"
+  },
+  {
+    "name": "BosonQ Psi",
+    "country": "India",
+    "website_url": "https://www.bqpsim.com/",
+    "lat": 12.9100,
+    "lon": 77.6400,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U5TLnnEa7Ak3I8zKY0gDRA.png"
+  },
+  {
+    "name": "BosonQ Psi",
+    "country": "India",
+    "website_url": "https://www.bqpsim.com/",
+    "lat": 21.1860,
+      "lon": 81.2849,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U5TLnnEa7Ak3I8zKY0gDRA.png"
+  },
+  {
+    "name": "BosonQ Psi",
+    "country": "United States",
+    "website_url": "https://www.bqpsim.com/",
+    "lat": 39.0000,
+    "lon": -86.0000,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U5TLnnEa7Ak3I8zKY0gDRA.png"
+  },
+  {
+    "name": "BosonQ Psi",
+    "country": "United States",
+    "website_url": "https://www.bqpsim.com/",
+    "lat": 39.5651,
+    "lon": -75.5050,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U5TLnnEa7Ak3I8zKY0gDRA.png"
+  },
+  {
+    "name": "BosonQ Psi",
+    "country": "United Kingdom",
+    "website_url": "https://www.bqpsim.com/",
+    "lat": 52.9290,
+    "lon": -1.1296,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U5TLnnEa7Ak3I8zKY0gDRA.png"
+  },
+  {
+    "name": "Entropica Labs",
+    "country": "Singapore",
+    "website_url": "https://entropicalabs.com/",
+    "lat": 1.3521,
+    "lon": 103.8198,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_N3Rn974Pjg_HPf-xu1w4Bw-300x118.png"
+  },
+  {
+    "name": "Entropica Labs",
+    "country": "Singapore",
+    "website_url": "https://entropicalabs.com/",
+    "lat": 1.2801,
+    "lon": 103.8475,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_N3Rn974Pjg_HPf-xu1w4Bw-300x118.png"
+  },
+  {
+    "name": "Entropica Labs",
+    "country": "Singapore",
+    "website_url": "https://entropicalabs.com/",
+    "lat": 1.2874,
+    "lon": 103.8477,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_N3Rn974Pjg_HPf-xu1w4Bw-300x118.png"
+  },
+  {
+    "name": "Horizon Quantum Computing",
+    "country": "Singapore",
+    "website_url": "https://www.horizonquantum.com/",
+    "lat": 1.3521,
+    "lon": 103.8198,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_vciQ1QnQQGx5-h9XTr2mbw.png"
+  },
+  {
+    "name": "Horizon Quantum Computing",
+    "country": "Ireland",
+    "website_url": "https://www.horizonquantum.com/",
+    "lat": 53.3369,
+    "lon": -6.2523,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_vciQ1QnQQGx5-h9XTr2mbw.png"
+  },
+  {
+    "name": "HQS Quantum Simulations",
+    "country": "Germany",
+    "website_url": "https://quantumsimulations.de/",
+    "lat": 49.0069,
+    "lon": 8.4037,
+    "logo_url":"https://thequantuminsider.com/wp-content/uploads/2023/12/1_WfCwDx7XHf7kqP-X1_Q18Q-300x112.png"
+  },
+  {
+    "name": "JiJ",
+    "country": "Japan",
+    "website_url": "https://www.j-ij.com/",
+    "lat": 35.6895,
+    "lon": 139.6917,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_OnY31OQY3zURSy-0dCK56Q.png"
+  },
+  {
+    "name": "JiJ",
+    "country": "Japan",
+    "website_url": "https://www.j-ij.com/",
+    "lat": 51.5725,
+    "lon": -1.3148,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_OnY31OQY3zURSy-0dCK56Q.png"
+  },
+  {
+    "name": "JiJ",
+    "country": "Germany",
+    "website_url": "https://www.j-ij.com/",
+    "lat": 53.5511,
+    "lon": 9.9937,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_OnY31OQY3zURSy-0dCK56Q.png"
+  },
+  {
+    "name": "Kuano",
+    "country": "United Kingdom",
+    "website_url": "https://www.kuano.ai/",
+    "lat": 52.1373,
+    "lon": 0.1200,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_MxZsiuhRkYvIAKI4Z1a0pQ-300x103.jpg"
+  },
+  {
+    "name": "Kvantify",
+    "country": "Denmark",
+    "website_url": "https://www.kvantify.com/",
+    "lat": 55.6761,
+    "lon": 12.5683,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/kvantify_logo.jpg"
+  },
+  {
+    "name": "Kvantify",
+    "country": "Denmark",
+    "website_url": "https://www.kvantify.com/",
+    "lat": 56.1530,
+    "lon": 10.2100,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/kvantify_logo.jpg"
+  },
+  {
+    "name": "Kvantify",
+    "country": "United Kingdom",
+    "website_url": "https://www.kvantify.com/",
+    "lat": 51.5031,
+    "lon": -0.0918,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/kvantify_logo.jpg"
+  },
+  {
+    "name": "Multiverse Computing",
+    "country": "Spain",
+    "website_url": "https://multiversecomputing.com/",
+    "lat": 43.3213,
+    "lon": -1.9857,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_TbLZplkhcM5KHOXtD4E09g.jpg"
+  },
+  {
+    "name": "Multiverse Computing",
+    "country": "Canada",
+    "website_url": "https://multiversecomputing.com/",
+    "lat": 43.6532,
+    "lon": -79.3832,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_TbLZplkhcM5KHOXtD4E09g.jpg"
+  },
+  {
+    "name": "Multiverse Computing",
+    "country": "Canada",
+    "website_url": "https://multiversecomputing.com/",
+    "lat": 45.4042,
+    "lon": -71.8929,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_TbLZplkhcM5KHOXtD4E09g.jpg"
+  },
+  {
+    "name": "Multiverse Computing",
+    "country": "France",
+    "website_url": "https://multiversecomputing.com/",
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_TbLZplkhcM5KHOXtD4E09g.jpg"
+  },
+  {
+    "name": "Multiverse Computing",
+    "country": "Germany",
+    "website_url": "https://multiversecomputing.com/",
+    "lat": 48.1351,
+    "lon": 11.5820,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_TbLZplkhcM5KHOXtD4E09g.jpg"
+  },
+  {
+    "name": "Multiverse Computing",
+    "country": "United Kingdom",
+    "website_url": "https://multiversecomputing.com/",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_TbLZplkhcM5KHOXtD4E09g.jpg"
+  },
+  {
+    "name": "Multiverse Computing",
+    "country": "United States",
+    "website_url": "https://multiversecomputing.com/",
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_TbLZplkhcM5KHOXtD4E09g.jpg"
+  },
+  {
+    "name": "Multiverse Computing",
+    "country": "Italy",
+    "website_url": "https://multiversecomputing.com/",
+    "lat": 45.4642,
+    "lon": 9.1900,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_TbLZplkhcM5KHOXtD4E09g.jpg"
+  },
+  {
+    "name": "Phasecraft",
+    "country": "United Kingdom",
+    "website_url": "https://phasecraft.io/",
+    "lat": 51.4545,
+    "lon": -2.5879,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1630639580885.jpg"
+  },
+  {
+    "name": "Phasecraft",
+    "country": "United Kingdom",
+    "website_url": "https://phasecraft.io/",
+    "lat": 51.5211,
+    "lon": -0.1436,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1630639580885.jpg"
+  },
+  {
+    "name": "Phasecraft",
+    "country": "United States",
+    "website_url": "https://phasecraft.io/",
+    "lat": 38.9072,
+    "lon": -77.0369,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1630639580885.jpg"
+  },
+  {
+    "name": "PolarisQB",
+    "country": "United States",
+    "website_url": "https://quadd.bio/",
+    "lat": 35.9940,
+    "lon": -78.8986,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_BYooQkQG3zFhM2vqcFmwcQ-300x96.png"
+  },
+  {
+    "name": "ProteinQure",
+    "country": "Canada",
+    "website_url": "https://www.proteinqure.com/",
+    "lat": 43.65107,
+    "lon": -79.347015,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_bQ-rcH08Curp6GM7G232ig-300x122.png"
+  },
+  {
+    "name": "QC Ware",
+    "country": "United States",
+    "website_url": "https://www.qcware.com/",
+    "lat": 37.3861,
+    "lon": -122.0839,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_LTnS2Zn4oiul5qrUF9yjow-300x102.png"
+  },
+  {
+    "name": "QC Ware",
+    "country": "France",
+    "website_url": "https://www.qcware.com/",
+    "lat": 48.864716,
+    "lon": 2.349014,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_LTnS2Zn4oiul5qrUF9yjow-300x102.png"
+  },
+  {
+    "name": "QC Ware",
+    "country": "Japan",
+    "website_url": "https://www.qcware.com/",
+    "lat": 35.6586,
+    "lon": 139.7454,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_LTnS2Zn4oiul5qrUF9yjow-300x102.png"
+  },
+  {
+    "name": "Quantastica",
+    "country": "Finland",
+    "website_url": "https://quantastica.com/",
+    "lat": 60.1695,
+    "lon": 24.9354,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_dKCyzSK1URR1-KdxXQcHxw-300x55.png"
+  },
+  {
+    "name": "Quantastica",
+    "country": "Estonia",
+    "website_url": "https://quantastica.com/",
+    "lat": 59.4370,
+    "lon": 24.7535,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_dKCyzSK1URR1-KdxXQcHxw-300x55.png"
+  },
+  {
+    "name": "Quantastica",
+    "country": "Serbia",
+    "website_url": "https://quantastica.com/",
+    "lat": 46.1000,
+    "lon": 19.6667,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_dKCyzSK1URR1-KdxXQcHxw-300x55.png"
+  },
+  {
+    "name": "Quantum Generative Materials (GenMat)",
+    "country": "United States",
+    "website_url": "https://www.genmat.xyz/",
+    "lat": 43.075968,
+    "lon": -107.290283,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1__u1IUfW4-LIhu2xEDQXZQQ.jpg"
+  },
+  {
+    "name": "Quantum Generative Materials (GenMat)",
+    "country": "India",
+    "website_url": "https://www.genmat.xyz/",
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1__u1IUfW4-LIhu2xEDQXZQQ.jpg"
+  },
+  {
+    "name": "Quantum Generative Materials (GenMat)",
+    "country": "United States",
+    "website_url": "https://www.genmat.xyz/",
+    "lat": 30.2672,
+    "lon": -97.7431,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1__u1IUfW4-LIhu2xEDQXZQQ.jpg"
+  },
+  {
+    "name": "Qubit Pharmaceuticals",
+    "country": "France",
+    "website_url": "https://www.qubit-pharmaceuticals.com/",
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Fe4RmUfeAEthGAsOSuJRoQ-300x158.png"
+  },
+  {
+    "name": "Qubit Pharmaceuticals",
+    "country": "United States",
+    "website_url": "https://www.qubit-pharmaceuticals.com/",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Fe4RmUfeAEthGAsOSuJRoQ-300x158.png"
+  },
+  {
+    "name": "Qubit Pharmaceuticals",
+    "country": "Canada",
+    "website_url": "https://www.qubit-pharmaceuticals.com/",
+    "lat": 45.4000,
+    "lon": -71.9000,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Fe4RmUfeAEthGAsOSuJRoQ-300x158.png"
+  },
+  {
+    "name": "QunaSys",
+    "country": "Japan",
+    "website_url": "https://qunasys.com/en",
+    "lat": 35.6895,
+    "lon": 139.6917,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_xYYusp81t9p5mnIINbpHbQ-300x138.png"
+  },
+  {
+    "name": "QunaSys",
+    "country": "Denmark",
+    "website_url": "https://qunasys.com/en",
+    "lat": 55.7083,
+    "lon": 12.5547,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_xYYusp81t9p5mnIINbpHbQ-300x138.png"
+  },
+  {
+    "name": "Riverlane",
+    "country": "United Kingdom",
+    "website_url": "https://www.riverlane.com/",
+    "lat": 52.2053,
+    "lon": 0.1218,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Uyw7VaVxOhNgxELOt4cO3g.jpg"
+  },
+  {
+    "name": "Riverlane",
+    "country": "United States",
+    "website_url": "https://www.riverlane.com/",
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Uyw7VaVxOhNgxELOt4cO3g.jpg"
+  },
+  {
+    "name": "Riverlane",
+    "country": "United States",
+    "website_url": "https://www.riverlane.com/",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_Uyw7VaVxOhNgxELOt4cO3g.jpg"
+  },
+  {
+    "name": "SandboxAQ",
+    "country": "United States",
+    "website_url": "https://www.sandboxaq.com/",
+    "lat": 37.4419,
+    "lon": -122.1430,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_kdNjjsdrh6k1nDV26IJcKg-300x79.jpg"
+  },
+  {
+    "name": "Strangeworks",
+    "country": "United States",
+    "website_url": "https://strangeworks.com/",
+    "lat": 30.2672,
+    "lon": -97.7431,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_0blSo3Gd6SNroCWcxz2ikQ-300x157.png"
+  },
+  {
+    "name": "Strangeworks",
+    "country": "Germany",
+    "website_url": "https://strangeworks.com/",
+    "lat": 48.1351,
+    "lon": 11.5820,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_0blSo3Gd6SNroCWcxz2ikQ-300x157.png"
+  },
+  {
+    "name": "Strangeworks",
+    "country": "Japan",
+    "website_url": "https://strangeworks.com/",
+    "lat": 35.6762,
+    "lon": 139.6503,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_0blSo3Gd6SNroCWcxz2ikQ-300x157.png"
+  },
+  {
+    "name": "Terra Quantum",
+    "country": "Switzerland",
+    "website_url": "https://terraquantum.swiss/",
+    "lat": 47.4780,
+    "lon": 9.4930,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_5v7rReC0a4YbOcOX4CamUw.png"
+  },
+  {
+    "name": "Terra Quantum",
+    "country": "Germany",
+    "website_url": "https://terraquantum.swiss/",
+    "lat": 48.1351,
+    "lon": 11.5820,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_5v7rReC0a4YbOcOX4CamUw.png"
+  },
+  {
+    "name": "Terra Quantum",
+    "country": "United Kingdom",
+    "website_url": "https://terraquantum.swiss/",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_5v7rReC0a4YbOcOX4CamUw.png"
+  },
+  {
+    "name": "Terra Quantum",
+    "country": "United States",
+    "website_url": "https://terraquantum.swiss/",
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_5v7rReC0a4YbOcOX4CamUw.png"
+  },
+  {
+    "name": "Terra Quantum",
+    "country": "Finland",
+    "website_url": "https://terraquantum.swiss/",
+    "lat": 60.1699,
+    "lon": 24.9384,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_5v7rReC0a4YbOcOX4CamUw.png"
+  },
+  {
+    "name": "Terra Quantum",
+    "country": "South Korea",
+    "website_url": "https://terraquantum.swiss/",
+    "lat": 37.5665,
+    "lon": 126.9780,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_5v7rReC0a4YbOcOX4CamUw.png"
+  },
+  {
+    "name": "Zapata AI",
+    "country": "United States",
+    "website_url": "https://zapataai.com/",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-13T163741.554-300x156.png"
+  },
+  {
+    "name": "Zapata AI",
+    "country": "Canada",
+    "website_url": "https://zapataai.com/",
+    "lat": 43.65107,
+    "lon": -79.347015,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-13T163741.554-300x156.png"
+  },
+  {
+    "name": "Zapata AI",
+    "country": "United States",
+    "website_url": "https://zapataai.com/",
+    "lat": 36.0346,
+    "lon": -86.7828,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-13T163741.554-300x156.png"
+  },
+  {
+    "name": "Zapata AI",
+    "country": "Japan",
+    "website_url": "https://zapataai.com/",
+    "lat": 35.6762,
+    "lon": 139.6503,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-13T163741.554-300x156.png"
+  },
+  {
+    "name": "Zapata AI",
+    "country": "United Kingdom",
+    "website_url": "https://zapataai.com/",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-13T163741.554-300x156.png"
+  },
+  {
+    "name": "Zapata AI",
+    "country": "Spain",
+    "website_url": "https://zapataai.com/",
+    "lat": 40.4168,
+    "lon": -3.7038,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-13T163741.554-300x156.png"
+  },
+  {
+    "name": "Zapata AI",
+    "country": "Denmark",
+    "website_url": "https://zapataai.com/",
+    "lat": 55.6761,
+    "lon": 12.5683,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/download-2023-12-13T163741.554-300x156.png"
+  },
+  {
+    "name": "Classiq",
+    "country": "Israel",
+    "website_url": "https://www.classiq.io/",
+    "lat": 32.0853,
+    "lon": 34.7818,
+    "logo_url":"https://thequantuminsider.com/wp-content/uploads/2023/12/1_TVbOwIZn0dM3yUG2SW6IjQ-300x158.png"
+  },
+  {
+    "name": "Classiq",
+    "country": "United States",
+    "website_url": "https://www.classiq.io/",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "logo_url":"https://thequantuminsider.com/wp-content/uploads/2023/12/1_TVbOwIZn0dM3yUG2SW6IjQ-300x158.png"
+  },
+  {
+    "name": "Classiq",
+    "country": "Japan",
+    "website_url": "https://www.classiq.io/",
+    "lat": 35.6762,
+    "lon": 139.6503,
+    "logo_url":"https://thequantuminsider.com/wp-content/uploads/2023/12/1_TVbOwIZn0dM3yUG2SW6IjQ-300x158.png"
+  },
+  {
+    "name": "Classiq",
+    "country": "Netherlands",
+    "website_url": "https://www.classiq.io/",
+    "lat": 52.3676,
+    "lon": 4.9041,
+    "logo_url":"https://thequantuminsider.com/wp-content/uploads/2023/12/1_TVbOwIZn0dM3yUG2SW6IjQ-300x158.png"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "Israel",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 32.0853,
+    "lon": 34.7818,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "Israel",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 32.7031,
+    "lon": 35.2969,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "Germany",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 48.7758,
+    "lon": 9.1829,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "Netherlands",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 52.0116,
+    "lon": 4.3571,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "United States",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "France",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "Japan",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 35.6762,
+    "lon": 139.6503,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "South Korea",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 37.5665,
+    "lon": 126.9780,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "Singapore",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 1.3521,
+    "lon": 103.8198,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "Quantum Machines",
+    "country": "Taiwan",
+    "website_url": "https://www.quantum-machines.co/",
+    "lat": 25.0330,
+    "lon": 121.5654,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_U_i1AMciRgDyE2nu7lijHA-300x145.jpg"
+  },
+  {
+    "name": "QuantrolOx",
+    "country": "United Kingdom",
+    "website_url": "https://quantrolox.com/",
+    "lat": 51.7520,
+    "lon": -1.2577,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_FYkz-j6XhNs4Bv_Y3fp-oQ-300x99.png"
+  },
+  {
+    "name": "QuantrolOx",
+    "country": "India",
+    "website_url": "https://quantrolox.com/.",
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_FYkz-j6XhNs4Bv_Y3fp-oQ-300x99.png"
+  },
+  {
+    "name": "QuantrolOx",
+    "country": "Finland",
+    "website_url": "https://quantrolox.com/",
+    "lat": 60.1695,
+    "lon": 24.9354,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_FYkz-j6XhNs4Bv_Y3fp-oQ-300x99.png"
+  },
+  {
+    "name": "Q-CTRL",
+    "country": "Australia",
+    "website_url": "https://q-ctrl.com/",
+    "lat": -33.8688,
+    "lon": 151.2093,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_dbx4zLZjI8PU5OiObbfJxQ-300x123.png"
+  },
+  {
+    "name": "Q-CTRL",
+    "country":  "United Kingdom",
+    "website_url": "https://q-ctrl.com/",
+    "lat": 51.754816,
+    "lon": -1.254367,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_dbx4zLZjI8PU5OiObbfJxQ-300x123.png"
+  },
+  {
+    "name": "Q-CTRL",
+    "country": "Germany",
+    "website_url": "https://q-ctrl.com/",
+    "lat": 52.5200,
+    "lon": 13.4050,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_dbx4zLZjI8PU5OiObbfJxQ-300x123.png"
+  },
+  {
+    "name": "Q-CTRL",
+    "country": "United States",
+    "website_url": "https://q-ctrl.com/",
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_dbx4zLZjI8PU5OiObbfJxQ-300x123.png"
+  },
+  {
+    "name": "Q-CTRL",
+    "country": "United States",
+    "website_url": "https://q-ctrl.com/",
+    "lat": 34.0522,
+    "lon": -118.2437,
+    "logo_url": "https://thequantuminsider.com/wp-content/uploads/2023/12/1_dbx4zLZjI8PU5OiObbfJxQ-300x123.png"
+  }
+] 
