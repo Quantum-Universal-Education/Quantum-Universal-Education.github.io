@@ -4,23 +4,26 @@ This project implements a command-line game to help you learn and practice
 simplifying quantum ZX-diagrams using fundamental rewrite rules.
 
 ## Project Structure
+# ZX-TheGame: Rules and File Overview
 
-* `zx_TheGame/`: This directory contains the core implementation of the ZX-calculus elements.
-    * `zx.py`: Defines the `Node` (for spiders, Hadamard, wire ends), `ZXDiagram` (for graph representation), and `ZXRules` (for applying rewrite rules) classes.
-* `game/`: This directory contains the game-specific logic.
-    * `quantum_game.py`: Defines the `QuantumGame` class, which manages levels, scoring, and user interaction.
-* `run_game.py`: The main script to run the game.
+This document outlines the key files and structure of the **ZX-TheGame** project — a command-line game designed to help you learn and practice ZX-calculus simplification rules through interactive levels and challenges.
 
-## How to Run
+---
 
-1.  **Navigate to the `zx_game_package` directory:**
-    ```bash
-    cd zx_game_package
-    ```
-2.  **Run the game script:**
-    ```bash
-    python run_game.py
-    ```
+## 📁 Project Directory Structure
+
+```bash
+ZX-TheGame/
+├── ZX-Rules.md                   # ← You're here: Overview of rules and file roles
+├── getting-started-in quantum.md # Beginner guide to ZX-calculus and running the game
+├── advance-level-rules.md       # Advanced simplification rules and strategies
+├── Code-explanation.md          # Detailed explanation of how core game code works
+├── zx.py                        # Core implementation of ZXDiagram, Node, and transformation logic
+├── zx-pygame.py                 # Optional Pygame version for interactive GUI (in development)
+├── Build-the-circuit-challenge.py # Circuit construction challenge levels (custom puzzles)
+├── Level2.py                    # Script for Level 2 puzzle logic and flow
+└── run_game.py                  # Main entry script to launch the game
+```
 
 ## Game Play
 
