@@ -22,7 +22,6 @@ ZX-TheGame/
 ├── zx-pygame.py                 # Optional Pygame version for interactive GUI (in development)
 ├── Build-the-circuit-challenge.py # Circuit construction challenge levels (custom puzzles)
 ├── Level2.py                    # Script for Level 2 puzzle logic and flow
-└── run_game.py                  # Main entry script to launch the game
 ```
 
 ## Game Play
