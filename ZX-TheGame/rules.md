@@ -5,8 +5,8 @@ simplifying quantum ZX-diagrams using fundamental rewrite rules.
 
 ## Project Structure
 
-* `zx_calculus/`: This directory contains the core implementation of the ZX-calculus elements.
-    * `core.py`: Defines the `Node` (for spiders, Hadamard, wire ends), `ZXDiagram` (for graph representation), and `ZXRules` (for applying rewrite rules) classes.
+* `zx_TheGame/`: This directory contains the core implementation of the ZX-calculus elements.
+    * `zx.py`: Defines the `Node` (for spiders, Hadamard, wire ends), `ZXDiagram` (for graph representation), and `ZXRules` (for applying rewrite rules) classes.
 * `game/`: This directory contains the game-specific logic.
     * `quantum_game.py`: Defines the `QuantumGame` class, which manages levels, scoring, and user interaction.
 * `run_game.py`: The main script to run the game.
