@@ -1,0 +1,9 @@
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+qiskit>=1.2
+qiskit-aer>=0.15
+cirq-core>=1.4
+pennylane>=0.40
+qibo>=0.2.13
+amazon-braket-sdk>=1.90
