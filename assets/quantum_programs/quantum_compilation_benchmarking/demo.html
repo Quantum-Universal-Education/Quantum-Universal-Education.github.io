@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UCC Simulator Benchmark Demo</title>
+  <style>
+    :root {
+      --ink: #18202a;
+      --muted: #55616f;
+      --line: #d9e0ea;
+      --blue: #1f6fb8;
+      --green: #0b7a53;
+      --gold: #b7791f;
+      --bg: #f6f8fb;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      width: min(1060px, calc(100vw - 48px));
+      min-height: 580px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 34px;
+      box-sizing: border-box;
+      box-shadow: 0 12px 35px rgba(31, 41, 55, 0.10);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 37px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 21px;
+      line-height: 1.45;
+    }
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 30px 0;
+    }
+    .step {
+      min-height: 132px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 18px;
+      background: #fbfdff;
+      box-sizing: border-box;
+    }
+    .step strong {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+    .step span {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 17px;
+    }
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+    th {
+      color: var(--muted);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .active {
+      color: var(--blue);
+      font-weight: 700;
+    }
+    .ok {
+      color: var(--green);
+      font-weight: 700;
+    }
+    .note {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 19px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 id="title">Benchmark one UCC-style circuit fairly</h1>
+    <p id="subtitle">The tutorial starts from one neutral gate list so every simulator receives the same unoptimized circuit description.</p>
+
+    <section class="pipeline">
+      <div class="step">
+        <strong>1. Build gate list</strong>
+        <span>Ry/Rz rotations plus entangling CX gates create a UCC-style workload.</span>
+      </div>
+      <div class="step">
+        <strong>2. Import into tools</strong>
+        <span>Qiskit Aer, Cirq, PennyLane, Qibo, and Braket LocalSimulator receive equivalent circuits.</span>
+      </div>
+      <div class="step">
+        <strong>3. Compare scaling</strong>
+        <span>Record qubits, depth, gate count, shots, repeats, median time, and status.</span>
+      </div>
+    </section>
+
+    <table aria-label="Benchmark result sample">
+      <thead>
+        <tr><th>Simulator</th><th>Qubits</th><th>Depth</th><th>Status</th><th>Median time</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <div class="note" id="note">Step 1: A neutral circuit description prevents accidental apples-to-oranges comparisons.</div>
+  </main>
+
+  <script>
+    const title = document.getElementById("title");
+    const subtitle = document.getElementById("subtitle");
+    const note = document.getElementById("note");
+    const rows = document.getElementById("rows");
+
+    const data = [
+      ["Qiskit Aer", "10", "1", "ok", "0.36 s"],
+      ["Cirq", "10", "1", "ok", "1.22 s"],
+      ["PennyLane default.qubit", "10", "1", "ok", "0.76 s"],
+      ["Qibo", "10", "1", "ok", "0.27 s"],
+      ["Braket LocalSimulator", "10", "1", "ok", "1.67 s"],
+    ];
+
+    const slides = [
+      {
+        title: "Benchmark one UCC-style circuit fairly",
+        subtitle: "The tutorial starts from one neutral gate list so every simulator receives the same unoptimized circuit description.",
+        note: "Step 1: A neutral circuit description prevents accidental apples-to-oranges comparisons.",
+        active: 0,
+      },
+      {
+        title: "Import the same workload into five simulators",
+        subtitle: "Each adapter converts the shared gate list into the simulator's native circuit object.",
+        note: "Step 2: The comparison is about how each tool handles the same workload, not five unrelated circuits.",
+        active: 1,
+      },
+      {
+        title: "Record runtime and scaling metadata",
+        subtitle: "The CSV stores qubits, depth, gate count, shots, repeats, median runtime, best runtime, status, and errors.",
+        note: "Step 3: Students can increase qubit count and depth to see how runtime changes.",
+        active: 2,
+      },
+      {
+        title: "Interpret the result carefully",
+        subtitle: "The table is a classroom benchmark, not a universal ranking of quantum software packages.",
+        note: "Final note: explain exactly what was measured, then let students rerun the benchmark on their own machines.",
+        active: 3,
+      },
+    ];
+
+    function renderRows(active) {
+      rows.innerHTML = data.map((row, index) => {
+        const cls = active === 3 || index === active ? "active" : "";
+        return `<tr class="${cls}"><td>${row[0]}</td><td>${row[1]}</td><td>${row[2]}</td><td class="ok">${row[3]}</td><td>${row[4]}</td></tr>`;
+      }).join("");
+    }
+
+    let index = 0;
+    function render() {
+      const slide = slides[index % slides.length];
+      title.textContent = slide.title;
+      subtitle.textContent = slide.subtitle;
+      note.textContent = slide.note;
+      renderRows(slide.active);
+      index += 1;
+    }
+    render();
+    setInterval(render, 2400);
+  </script>
+</body>
+</html>

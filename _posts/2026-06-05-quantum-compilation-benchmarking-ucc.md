@@ -266,6 +266,24 @@ plt.show()
 The best plot is not always the prettiest plot. The best plot is the one that
 makes the comparison honest and easy to understand.
 
+## Short Demo Video
+
+A short silent demo video is included with the tutorial assets:
+
+`assets/quantum_programs/quantum_compilation_benchmarking/ucc_benchmark_demo.webm`
+
+It walks through the classroom flow:
+
+1. build one neutral UCC-style gate list;
+2. import the same unoptimized workload into five simulator interfaces;
+3. compare the benchmark rows and scaling metadata;
+4. interpret the result as an educational benchmark rather than a universal
+   ranking of quantum software packages.
+
+The video was recorded from:
+
+`assets/quantum_programs/quantum_compilation_benchmarking/demo.html`
+
 ## Common Mistakes
 
 ### Mistake 1: Comparing Different Circuits
