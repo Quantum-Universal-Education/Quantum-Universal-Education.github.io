@@ -1,0 +1,11 @@
+# Dependencies for the issue #52 quantum error correction tutorial.
+# Validated locally with Python 3.13.5 on 2026-06-06.
+qiskit==2.4.1
+qiskit-aer==0.17.2
+qiskit-ibm-runtime==0.47.0
+numpy==2.3.5
+matplotlib==3.10.8
+pandas==2.2.3
+nbconvert==7.17.1
+ipykernel==7.2.0
+pylatexenc==2.10
