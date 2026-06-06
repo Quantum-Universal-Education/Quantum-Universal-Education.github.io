@@ -70,6 +70,247 @@ python -m pip install jupyterlab
 jupyter lab notebooks/qec_basics_qiskit_ibm.ipynb
 ```
 
+#2. Physical vs Logical qubits
+
+One of the biggest challenges in quantum computing is that qubits
+are extremely fragile.
+
+Heat, noise, imperfect control signals, and interactions with the
+environment can easily damage quantum information.
+
+This is why quantum error correction is necessary.
+
+
+===============================================================
+What is a physical qubit?
+===============================================================
+
+A physical qubit is the actual real hardware qubit inside the
+quantum computer.
+
+Examples include:
+- one superconducting circuit,
+- one neutral atom,
+- one trapped ion,
+- or one electron spin.
+
+A physical qubit is the real physical system that stores quantum
+information.
+
+However, physical qubits are noisy and unreliable.
+
+
+===============================================================
+What is a logical qubit?
+===============================================================
+
+A logical qubit is a protected qubit created using many physical
+qubits working together.
+
+The goal is to safely store one piece of quantum information even
+if some physical qubits experience errors.
+
+You can think of it like:
+- backup copies,
+- error checking,
+- and automatic repair systems
+working together to protect important information.
+
+So:
+
+    physical qubits = real hardware qubits
+
+    logical qubit = protected quantum information built from
+                    many physical qubits
+
+
+===============================================================
+How is a logical qubit created?
+===============================================================
+
+The quantum information is spread across multiple physical qubits
+using a quantum error-correcting code.
+
+One simple example is the three-qubit repetition code.
+
+Instead of storing:
+
+    |0>
+
+in one physical qubit, we encode it as:
+
+    |000>
+
+Similarly:
+
+    |1>
+
+is encoded as:
+
+    |111>
+
+Here:
+- 3 physical qubits
+represent:
+- 1 protected logical qubit.
+
+The logical information is distributed across all the qubits
+together.
+
+## 3. What is the three-qubit repetition code?
+
+
+The three-qubit repetition code is one of the simplest examples
+of quantum error correction.
+
+The main idea is very similar to repeating an important message
+multiple times so that one mistake can be detected and corrected.
+
+Imagine sending the message:
+
+    "YES"
+
+only once.
+
+If noise changes one letter, the message may become wrong.
+
+Instead, imagine sending:
+
+    "YES YES YES"
+
+Now if one copy gets damaged, the majority vote can still recover
+the correct message.
+
+The three-qubit repetition code works similarly.
+
+Instead of storing information in one qubit, we spread the
+information across three qubits.
+
+For example:
+
+    |0> becomes |000>
+
+    |1> becomes |111>
+
+If one qubit accidentally flips because of noise:
+
+    |000> -> |001>
+
+the system can still notice that most qubits remain 0.
+
+Using majority voting, the error can be corrected.
+
+This code can correct one bit-flip error.
+
+The repetition code is important because it introduces the central
+idea of quantum error correction:
+
+    protect fragile quantum information by spreading it across
+    multiple physical qubits.
+"""
+
+# ============================================================
+# How does the three-qubit repetition code detect an error?
+# ============================================================
+
+"""
+This is a very important question.
+
+At first, it may seem confusing:
+
+    "How does the system know whether a qubit flipped by mistake
+    or whether the information was already correct?"
+
+The key idea is that quantum error correction does NOT directly
+look at the original quantum information itself.
+
+Instead, it checks whether the qubits still agree with each other.
+
+Think about a classroom voting example.
+
+Suppose three students are supposed to hold the same answer card:
+
+    YES   YES   YES
+
+If one student accidentally changes their card:
+
+    YES   YES   NO
+
+the teacher notices that one answer does not match the others.
+
+The teacher does not need to know the original message beforehand.
+
+The teacher only checks whether the students still agree.
+
+The three-qubit repetition code works similarly.
+
+For example:
+
+    |0> is encoded as |000>
+
+    |1> is encoded as |111>
+
+Notice something important:
+
+In the correct encoded states:
+- all qubits match each other.
+
+Either:
+    000
+
+or:
+    111
+
+Now imagine one qubit flips because of noise:
+
+    000 -> 001
+
+or:
+
+    111 -> 101
+
+Now one qubit disagrees with the others.
+
+The quantum computer detects this disagreement.
+
+This is done using measurements called syndrome measurements.
+
+The syndrome measurement does NOT directly measure the quantum
+information itself.
+
+Instead, it checks relationships between qubits, such as:
+
+    "Do qubit 1 and qubit 2 match?"
+
+    "Do qubit 2 and qubit 3 match?"
+
+This is extremely important.
+
+If we directly measured the quantum state itself, the fragile
+quantum information would collapse and be destroyed.
+
+So quantum error correction carefully measures only the error
+pattern, not the stored quantum information.
+
+For example:
+
+    000  -> all qubits agree
+    111  -> all qubits agree
+
+But:
+
+    001  -> last qubit disagrees
+    010  -> middle qubit disagrees
+    100  -> first qubit disagrees
+
+From the disagreement pattern, the computer can identify which
+qubit most likely flipped.
+
+Then it applies a correction.
+
+This process is called quantum error detection and correction.
+
+
 ## A tiny code: the three-qubit repetition code
 
 The three-qubit bit-flip repetition code stores one logical bit in three physical qubits:
