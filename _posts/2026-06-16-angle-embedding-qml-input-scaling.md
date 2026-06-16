@@ -1,4 +1,3 @@
-
 ---
 title: "Angle Embedding in Quantum Machine Learning: Why Input Scaling Matters"
 layout: post
@@ -7,8 +6,6 @@ date: 2026-06-16
 categories: ["Quantum Machine Learning", "Tutorial"]
 tags: ["QML", "Angle Embedding", "Input Scaling", "Quantum Machine Learning", "UnitaryHack"]
 ---
-
-
 
 # Angle Embedding in Quantum Machine Learning: Why Input Scaling Matters
 
@@ -36,7 +33,7 @@ This method is simple and useful, but it has one important property:
 
 > Quantum rotation gates are periodic.
 
-Very large input values can wrap around the rotation period. As a result, different classical values may produce identical or very similar quantum-circuit responses.
+Very large input values can wrap around the rotation period. As a result, different classical values may produce identical or very similar measured quantum-circuit responses.
 
 This tutorial explains:
 
@@ -107,7 +104,7 @@ cos(x) = cos(x + 2πk)
 
 where `k` is any integer.
 
-Therefore, two classical values separated by `2π` can produce the same measured circuit response.
+Therefore, two classical values separated by `2π` can produce the same Pauli-Z measurement result.
 
 For small, carefully scaled values, this may not be a problem:
 
@@ -129,7 +126,7 @@ This can create an **aliasing problem**.
 
 ## 3. What is angle aliasing?
 
-Aliasing occurs when different input values become difficult or impossible to distinguish after encoding.
+Aliasing occurs when different input values become difficult or impossible to distinguish after encoding and measurement.
 
 Consider these two values:
 
@@ -143,19 +140,19 @@ b = 0.1 + 2 * np.pi
 They are different classical values, but they produce the same Pauli-Z expectation value after a single `RY` rotation:
 
 ```python
-np.cos(a) == np.cos(b)
+np.isclose(np.cos(a), np.cos(b))
 ```
 
 Because of periodic wrapping, a quantum model may not preserve the original distance or ordering between large classical values.
 
 This issue is especially relevant when the input comes from:
 
-* raw neural-network activations,
-* unnormalized datasets,
-* score-based generative models,
-* sensor values with large dynamic ranges,
-* optimization variables without known bounds,
-* or any classical feature that can grow without a fixed limit.
+- raw neural-network activations,
+- unnormalized datasets,
+- score-based generative models,
+- sensor values with large dynamic ranges,
+- optimization variables without known bounds,
+- or any classical feature that can grow without a fixed limit.
 
 Angle aliasing is not necessarily an error in the quantum circuit. It is a consequence of combining unbounded classical inputs with periodic quantum operations.
 
@@ -183,7 +180,7 @@ Multiplying by `π` maps the values into:
 (-π, π)
 ```
 
-This ensures that the encoded values remain within one controlled angular interval.
+This keeps the encoded values within one controlled angular interval.
 
 ```python
 import numpy as np
@@ -197,18 +194,18 @@ bounded_angles = np.pi * np.tanh(features)
 print(bounded_angles)
 ```
 
-This is not a universal solution for every QML task. The transformation also compresses very large values near `-π` or `π`, which may remove some magnitude information.
+This is not a universal solution for every QML task. The transformation compresses very large values near `-π` or `π`, which may remove some magnitude information.
 
 It should therefore be treated as one possible preprocessing strategy rather than a mandatory rule.
 
 Other possible approaches include:
 
-* standardization,
-* min-max scaling,
-* clipping,
-* learned scaling parameters,
-* data-dependent feature maps,
-* and problem-specific normalization.
+- standardization,
+- min-max scaling,
+- clipping,
+- learned scaling parameters,
+- data-dependent feature maps,
+- and problem-specific normalization.
 
 ---
 
@@ -261,11 +258,11 @@ def angle_embedding_response(angle: float) -> float:
 
 The complete script compares:
 
-* raw input angles,
-* raw angles wrapped into `[-π, π)`,
-* bounded angles produced by `π × tanh(x)`,
-* quantum-circuit responses produced by raw angles,
-* and quantum-circuit responses produced by bounded angles.
+- raw input angles,
+- raw angles wrapped into `[-π, π)`,
+- bounded angles produced by `π × tanh(x)`,
+- quantum-circuit responses produced by raw angles,
+- and quantum-circuit responses produced by bounded angles.
 
 Install the required packages:
 
@@ -281,9 +278,9 @@ python assets/quantum_programs/angle_embedding_qml/angle_embedding_demo.py
 
 The script prints diagnostic values and saves a comparison figure.
 
-![Angle embedding input-scaling comparison](/assets/quantum_programs/angle_embedding_qml/angle_embedding_input_scaling_demo.png)
+![Angle embedding input-scaling comparison]({{ site.baseurl }}/assets/quantum_programs/angle_embedding_qml/angle_embedding_input_scaling_demo.png)
 
-[View the complete Python example](/assets/quantum_programs/angle_embedding_qml/angle_embedding_demo.py)
+[View the complete Python example]({{ site.baseurl }}/assets/quantum_programs/angle_embedding_qml/angle_embedding_demo.py)
 
 ---
 
@@ -311,10 +308,12 @@ With raw angles, the circuit response oscillates repeatedly because:
 
 With bounded angles, the input remains within one controlled angular interval and avoids repeated wrapping across multiple periods.
 
-The bounded response may still saturate for very large positive or negative inputs. This illustrates an important trade-off:
+The bounded response may still saturate for very large positive or negative inputs. It can also map different inputs to similar measured values because the measurement itself remains periodic and symmetric.
 
-* raw encoding preserves the unbounded numerical value but can alias repeatedly,
-* bounded encoding avoids repeated wrapping but compresses extreme values.
+This illustrates an important trade-off:
+
+- raw encoding preserves the unbounded numerical value but can alias repeatedly,
+- bounded encoding avoids repeated wrapping but compresses extreme values.
 
 The correct choice depends on the application and the meaning of the features.
 
@@ -354,16 +353,16 @@ The input transformation should therefore be treated as part of the quantum-mode
 
 Before using angle embedding in a QML model, ask:
 
-* Are the input features normalized?
-* Can the feature values become unbounded?
-* What are the maximum and median feature magnitudes?
-* How many values exceed `π` or `2π`?
-* Does the quantum response change smoothly with the input?
-* Are different classical inputs producing nearly identical measurements?
-* Would standardization or min-max scaling be sufficient?
-* Would a bounded transformation such as `π × tanh(x)` be appropriate?
-* Does bounding the inputs cause excessive saturation?
-* Have the preprocessing choices been compared experimentally?
+- Are the input features normalized?
+- Can the feature values become unbounded?
+- What are the maximum and median feature magnitudes?
+- How many values exceed `π` or `2π`?
+- Does the quantum response change smoothly with the input?
+- Are different classical inputs producing nearly identical measurements?
+- Would standardization or min-max scaling be sufficient?
+- Would a bounded transformation such as `π × tanh(x)` be appropriate?
+- Does bounding the inputs cause excessive saturation?
+- Have the preprocessing choices been compared experimentally?
 
 It is also important to compare the quantum model against a suitable classical baseline.
 
@@ -375,9 +374,9 @@ A performance difference should not automatically be attributed to the use of a 
 
 The runnable example requires:
 
-* NumPy
-* Matplotlib
-* PennyLane
+- NumPy
+- Matplotlib
+- PennyLane
 
 Install the dependencies listed for the tutorial:
 
@@ -415,10 +414,10 @@ Replace `VIDEO_URL` with a public or unlisted video link before submitting the p
 
 ChatGPT was used to assist with:
 
-* organizing the tutorial structure,
-* improving educational wording,
-* reviewing the Markdown formatting,
-* and drafting portions of the example code.
+- organizing the tutorial structure,
+- improving educational wording,
+- reviewing the Markdown formatting,
+- and drafting portions of the example code.
 
 The contributor manually reviewed, edited, executed, and verified the final tutorial and code.
 
