@@ -1,4 +1,4 @@
-```yaml
+```
 ---
 title: "Angle Embedding in Quantum Machine Learning: Why Input Scaling Matters"
 layout: post
