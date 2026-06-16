@@ -65,7 +65,7 @@ For example, an image, sensor signal, or medical measurement may be represented 
 features = [0.2, -1.4, 3.1, 0.7]
 ```
 
-A quantum circuit cannot receive this vector in exactly the same way as a conventional neural network. We first need an **encoding method** that maps the classical values to quantum operations.
+A quantum circuit cannot receive this vector in exactly the same way as a conventional neural network. We first need an **encoding method** that maps classical values to quantum operations.
 
 Angle embedding is one of the simplest encoding methods. Each classical feature becomes the angle of a quantum rotation gate:
 
@@ -195,7 +195,10 @@ This ensures that the encoded values remain within one controlled angular interv
 ```python
 import numpy as np
 
-features = np.array([-100.0, -10.0, -1.0, 0.0, 1.0, 10.0, 100.0])
+features = np.array(
+    [-100.0, -10.0, -1.0, 0.0, 1.0, 10.0, 100.0]
+)
+
 bounded_angles = np.pi * np.tanh(features)
 
 print(bounded_angles)
@@ -239,7 +242,9 @@ print("Maximum magnitude:", np.max(np.abs(features)))
 print("Median magnitude:", np.median(np.abs(features)))
 ```
 
-A large fraction of values above `π` or `2π` does not automatically prove that the model will fail. However, it indicates that the circuit receives values spanning multiple rotation periods and that aliasing should be investigated.
+A large fraction of values above `π` or `2π` does not automatically prove that the model will fail.
+
+However, it indicates that the circuit receives values spanning multiple rotation periods and that aliasing should be investigated.
 
 ---
 
@@ -301,7 +306,7 @@ The bounded transformation:
 np.pi * np.tanh(features)
 ```
 
-produces a smooth, monotonic mapping into `(-π, π)`.
+produces a smooth and monotonic mapping into `(-π, π)`.
 
 The lower part of the figure compares the corresponding Pauli-Z expectation values.
 
@@ -311,7 +316,7 @@ With raw angles, the circuit response oscillates repeatedly because:
 ⟨Z⟩ = cos(x)
 ```
 
-With bounded angles, the circuit response changes smoothly across the input range and avoids repeated wrapping.
+With bounded angles, the input remains within one controlled angular interval and avoids repeated wrapping across multiple periods.
 
 The bounded response may still saturate for very large positive or negative inputs. This illustrates an important trade-off:
 
@@ -344,7 +349,9 @@ prediction
 
 The classical network may produce features with a much larger range than the quantum circuit expects.
 
-If those values are passed directly into rotation gates, the quantum layer may receive highly aliased representations. In this situation, changing the quantum ansatz or adding more trainable parameters may not solve the underlying encoding problem.
+If those values are passed directly into rotation gates, the quantum layer may receive highly aliased representations.
+
+In this situation, changing the quantum ansatz or adding more trainable parameters may not solve the underlying encoding problem.
 
 The input transformation should therefore be treated as part of the quantum-model architecture.
 
@@ -365,7 +372,9 @@ Before using angle embedding in a QML model, ask:
 * Does bounding the inputs cause excessive saturation?
 * Have the preprocessing choices been compared experimentally?
 
-It is also important to compare the quantum model against a suitable classical baseline. A performance difference should not automatically be attributed to the use of a quantum circuit if the models use different parameter counts, preprocessing steps, or architectural roles.
+It is also important to compare the quantum model against a suitable classical baseline.
+
+A performance difference should not automatically be attributed to the use of a quantum circuit if the models use different parameter counts, preprocessing steps, or architectural roles.
 
 ---
 
@@ -377,7 +386,7 @@ The runnable example requires:
 * Matplotlib
 * PennyLane
 
-Install the exact dependencies listed for the tutorial:
+Install the dependencies listed for the tutorial:
 
 ```bash
 pip install -r assets/quantum_programs/angle_embedding_qml/requirements.txt
@@ -403,7 +412,7 @@ A short video walkthrough should demonstrate:
 4. execution of the PennyLane example,
 5. and interpretation of the generated figure.
 
-Replace `VIDEO_URL` with the public or unlisted video link before submitting the pull request.
+Replace `VIDEO_URL` with a public or unlisted video link before submitting the pull request.
 
 [Watch the video demonstration](VIDEO_URL)
 
