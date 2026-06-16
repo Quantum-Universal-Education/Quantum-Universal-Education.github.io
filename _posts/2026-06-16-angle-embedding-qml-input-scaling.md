@@ -1,17 +1,20 @@
 ---
+
 title: "Angle Embedding in Quantum Machine Learning: Why Input Scaling Matters"
 layout: post
 author: "Jaeuk Kim"
 date: 2026-06-16
 categories:
-  - "Quantum Machine Learning"
-  - "Tutorial"
-tags:
-  - "QML"
-  - "Angle Embedding"
-  - "Input Scaling"
-  - "Quantum Machine Learning"
-  - "UnitaryHack"
+
+* "Quantum Machine Learning"
+* "Tutorial"
+  tags:
+* "QML"
+* "Angle Embedding"
+* "Input Scaling"
+* "Quantum Machine Learning"
+* "UnitaryHack"
+
 ---
 
 # Angle Embedding in Quantum Machine Learning: Why Input Scaling Matters
@@ -22,63 +25,70 @@ Quantum machine learning, or QML, often begins with a simple question:
 
 One common answer is **angle embedding**. In angle embedding, classical numbers are used as rotation angles for quantum gates.
 
-For example, if we have three classical features:
+For example, suppose we have three classical features:
 
 ```python
 features = [0.1, 0.5, 1.2]
 ```
 
-we can encode them into three qubits using rotation gates:
+We can encode them into three qubits using rotation gates:
 
 ```text
-qubit 0 → Ry(0.1)
-qubit 1 → Ry(0.5)
-qubit 2 → Ry(1.2)
+qubit 0 → RY(0.1)
+qubit 1 → RY(0.5)
+qubit 2 → RY(1.2)
 ```
 
-This is simple and useful, but it has one important detail:
+This method is simple and useful, but it has one important property:
 
-> Rotation gates are periodic.
+> Quantum rotation gates are periodic.
 
-That means very large input values can wrap around and behave like smaller angles. If we do not scale our inputs carefully, different classical values may become difficult for the quantum circuit to distinguish.
+Very large input values can wrap around the rotation period. As a result, different classical values may produce identical or very similar quantum-circuit responses.
 
 This tutorial explains:
 
 1. what angle embedding is,
-2. why periodicity matters,
+2. why rotation-gate periodicity matters,
 3. how large inputs can cause aliasing,
-4. and how simple input scaling can make QML workflows more stable.
+4. how to diagnose problematic input ranges,
+5. and how bounded preprocessing can make QML workflows more stable.
 
 ---
 
 ## 1. What is angle embedding?
 
-In classical machine learning, data is usually represented as vectors.
+In classical machine learning, data is commonly represented as a vector.
 
-For example, an image, a sensor signal, or a medical measurement can be represented as numbers:
+For example, an image, sensor signal, or medical measurement may be represented as:
 
 ```python
-x = [0.2, -1.4, 3.1, 0.7]
+features = [0.2, -1.4, 3.1, 0.7]
 ```
 
-A quantum circuit cannot directly receive this vector in the same way as a neural network.
-Instead, we need an **encoding method**.
+A quantum circuit cannot receive this vector in exactly the same way as a conventional neural network. We first need an **encoding method** that maps the classical values to quantum operations.
 
-Angle embedding is one of the simplest encoding methods.
-
-It maps each classical feature to a quantum rotation:
+Angle embedding is one of the simplest encoding methods. Each classical feature becomes the angle of a quantum rotation gate:
 
 ```text
-x_i → Ry(x_i)
+x_i → RY(x_i)
 ```
 
-This means the value of `x_i` becomes the angle of a rotation gate.
+For a four-dimensional input vector, a simple encoding circuit could apply one rotation to each qubit:
+
+```text
+RY(x_0) on qubit 0
+RY(x_1) on qubit 1
+RY(x_2) on qubit 2
+RY(x_3) on qubit 3
+```
+
+The encoded quantum state can then be processed by parameterized gates and measured to produce a prediction.
 
 ---
 
 ## 2. Why are rotation gates periodic?
 
-A rotation gate behaves like an angle on a circle.
+A rotation angle behaves like an angle on a circle.
 
 For example:
 
@@ -88,205 +98,338 @@ For example:
 4π radians
 ```
 
-all represent full rotations around the circle.
+represent zero, one full rotation, and two full rotations.
 
-This means that angles that differ by multiples of `2π` can produce very similar circuit behavior.
+For an `RY`-encoded qubit measured with the Pauli-Z operator, the expectation value is:
 
-For small input values, this is usually not a problem.
+```text
+⟨Z⟩ = cos(x)
+```
+
+The cosine function is periodic:
+
+```text
+cos(x) = cos(x + 2πk)
+```
+
+where `k` is any integer.
+
+Therefore, two classical values separated by `2π` can produce the same measured circuit response.
+
+For small, carefully scaled values, this may not be a problem:
 
 ```python
 features = [0.1, 0.3, 0.8]
 ```
 
-But if the input values are very large:
+However, unbounded values such as:
 
 ```python
 features = [10.0, 100.0, 1000.0]
 ```
 
-then the rotation gates may wrap around many times.
+can wrap around the rotation period many times.
 
-This can create an **aliasing** problem.
+This can create an **aliasing problem**.
 
 ---
 
-## 3. What is aliasing?
+## 3. What is angle aliasing?
 
-Aliasing happens when different input values become hard to distinguish after encoding.
+Aliasing occurs when different input values become difficult or impossible to distinguish after encoding.
 
-For angle embedding, this can happen because rotation gates repeat every `2π`.
-
-For example, these two values are different as classical numbers:
+Consider these two values:
 
 ```python
+import numpy as np
+
 a = 0.1
 b = 0.1 + 2 * np.pi
 ```
 
-But after angle embedding, they may produce very similar quantum rotations.
+They are different classical values, but they produce the same Pauli-Z expectation value after a single `RY` rotation:
 
-So the quantum circuit may not clearly distinguish `a` from `b`.
+```python
+np.cos(a) == np.cos(b)
+```
 
-This is especially important when the input comes from:
+Because of periodic wrapping, a quantum model may not preserve the original distance or ordering between large classical values.
 
-* raw neural network activations,
-* unnormalized data,
-* score-based models,
-* sensor values with large ranges,
-* or any feature that is not bounded.
+This issue is especially relevant when the input comes from:
+
+* raw neural-network activations,
+* unnormalized datasets,
+* score-based generative models,
+* sensor values with large dynamic ranges,
+* optimization variables without known bounds,
+* or any classical feature that can grow without a fixed limit.
+
+Angle aliasing is not necessarily an error in the quantum circuit. It is a consequence of combining unbounded classical inputs with periodic quantum operations.
 
 ---
 
-## 4. A simple bounded preprocessing idea
+## 4. A bounded preprocessing strategy
 
-A simple way to avoid extremely large angles is to bound the input before angle embedding.
+One way to reduce repeated angle wrapping is to bound the input before applying angle embedding.
 
-One possible transformation is:
+A simple transformation is:
 
 ```python
 angles = np.pi * np.tanh(features)
 ```
 
-This maps any real-valued input into the range:
+The hyperbolic tangent maps any real-valued input into:
+
+```text
+(-1, 1)
+```
+
+Multiplying by `π` maps the values into:
 
 ```text
 (-π, π)
 ```
 
-This does not solve every QML problem, but it is a useful safety step when inputs may be very large.
-
----
-
-## 5. Small Python demo
-
-The following code compares raw input angles and bounded input angles.
+This ensures that the encoded values remain within one controlled angular interval.
 
 ```python
 import numpy as np
 
 features = np.array([-100.0, -10.0, -1.0, 0.0, 1.0, 10.0, 100.0])
-
-raw_angles = features
 bounded_angles = np.pi * np.tanh(features)
 
-print("Original features:")
-print(features)
-
-print("\nRaw angles:")
-print(raw_angles)
-
-print("\nBounded angles using pi * tanh(x):")
 print(bounded_angles)
-
-print("\nMaximum absolute bounded angle:")
-print(np.max(np.abs(bounded_angles)))
 ```
 
-Expected result:
+This is not a universal solution for every QML task. The transformation also compresses very large values near `-π` or `π`, which may remove some magnitude information.
 
-```text
-The raw angles can become very large.
-The bounded angles stay within approximately -π and π.
-```
+It should therefore be treated as one possible preprocessing strategy rather than a mandatory rule.
+
+Other possible approaches include:
+
+* standardization,
+* min-max scaling,
+* clipping,
+* learned scaling parameters,
+* data-dependent feature maps,
+* and problem-specific normalization.
 
 ---
 
-## 6. Why this matters in QML
+## 5. Diagnosing the input scale
 
-In QML, we often combine classical neural networks with quantum circuits.
+Before applying angle embedding, it is useful to inspect the feature distribution.
 
-A typical hybrid model may look like this:
+A simple diagnostic is:
+
+```python
+import numpy as np
+
+fraction_over_pi = np.mean(np.abs(features) > np.pi)
+fraction_over_2pi = np.mean(np.abs(features) > 2 * np.pi)
+
+print("Fraction over π:", fraction_over_pi)
+print("Fraction over 2π:", fraction_over_2pi)
+```
+
+You can also inspect the maximum and median absolute values:
+
+```python
+print("Maximum magnitude:", np.max(np.abs(features)))
+print("Median magnitude:", np.median(np.abs(features)))
+```
+
+A large fraction of values above `π` or `2π` does not automatically prove that the model will fail. However, it indicates that the circuit receives values spanning multiple rotation periods and that aliasing should be investigated.
+
+---
+
+## 6. Running the PennyLane quantum-circuit demo
+
+The complete example included with this tutorial uses PennyLane to create a one-qubit quantum circuit.
+
+Each feature is encoded using an `RY` rotation, and the circuit measures the expectation value of the Pauli-Z operator.
+
+```python
+import pennylane as qml
+
+device = qml.device("default.qubit", wires=1)
+
+
+@qml.qnode(device)
+def angle_embedding_response(angle: float) -> float:
+    qml.RY(angle, wires=0)
+    return qml.expval(qml.PauliZ(0))
+```
+
+The complete script compares:
+
+* raw input angles,
+* raw angles wrapped into `[-π, π)`,
+* bounded angles produced by `π × tanh(x)`,
+* quantum-circuit responses produced by raw angles,
+* and quantum-circuit responses produced by bounded angles.
+
+Install the required packages:
+
+```bash
+pip install -r assets/quantum_programs/angle_embedding_qml/requirements.txt
+```
+
+Run the example:
+
+```bash
+python assets/quantum_programs/angle_embedding_qml/angle_embedding_demo.py
+```
+
+The script prints diagnostic values and saves a comparison figure.
+
+![Angle embedding input-scaling comparison](/assets/quantum_programs/angle_embedding_qml/angle_embedding_input_scaling_demo.png)
+
+[View the complete Python example](/assets/quantum_programs/angle_embedding_qml/angle_embedding_demo.py)
+
+---
+
+## 7. Understanding the result
+
+The upper part of the generated figure compares the angles entering the circuit.
+
+The raw angles repeatedly wrap between `-π` and `π` as the input value increases. This produces an oscillating pattern because increasingly large feature values cross multiple rotation periods.
+
+The bounded transformation:
+
+```python
+np.pi * np.tanh(features)
+```
+
+produces a smooth, monotonic mapping into `(-π, π)`.
+
+The lower part of the figure compares the corresponding Pauli-Z expectation values.
+
+With raw angles, the circuit response oscillates repeatedly because:
+
+```text
+⟨Z⟩ = cos(x)
+```
+
+With bounded angles, the circuit response changes smoothly across the input range and avoids repeated wrapping.
+
+The bounded response may still saturate for very large positive or negative inputs. This illustrates an important trade-off:
+
+* raw encoding preserves the unbounded numerical value but can alias repeatedly,
+* bounded encoding avoids repeated wrapping but compresses extreme values.
+
+The correct choice depends on the application and the meaning of the features.
+
+---
+
+## 8. Why this matters in hybrid QML
+
+A typical hybrid classical-quantum model may look like this:
 
 ```text
 classical neural network
         ↓
 feature vector
         ↓
+input scaling
+        ↓
 angle embedding
         ↓
-quantum circuit
+variational quantum circuit
         ↓
 measurement
         ↓
 prediction
 ```
 
-If the feature vector contains very large values, the angle embedding step may become unstable or less informative because of periodic wrapping.
+The classical network may produce features with a much larger range than the quantum circuit expects.
 
-Therefore, before using angle embedding, it is useful to check:
+If those values are passed directly into rotation gates, the quantum layer may receive highly aliased representations. In this situation, changing the quantum ansatz or adding more trainable parameters may not solve the underlying encoding problem.
 
-```python
-np.max(np.abs(features))
-```
-
-and to consider scaling or bounding the input.
+The input transformation should therefore be treated as part of the quantum-model architecture.
 
 ---
 
-## 7. Practical checklist
+## 9. Practical checklist
 
 Before using angle embedding in a QML model, ask:
 
-* Are my input features normalized?
-* Can the input values become very large?
-* Are the values bounded to a known range?
-* Do many values exceed `π` or `2π`?
-* Should I use a preprocessing step such as standardization, min-max scaling, or `np.pi * np.tanh(x)`?
+* Are the input features normalized?
+* Can the feature values become unbounded?
+* What are the maximum and median feature magnitudes?
+* How many values exceed `π` or `2π`?
+* Does the quantum response change smoothly with the input?
+* Are different classical inputs producing nearly identical measurements?
+* Would standardization or min-max scaling be sufficient?
+* Would a bounded transformation such as `π × tanh(x)` be appropriate?
+* Does bounding the inputs cause excessive saturation?
+* Have the preprocessing choices been compared experimentally?
 
-A simple diagnostic is:
-
-```python
-fraction_over_pi = np.mean(np.abs(features) > np.pi)
-fraction_over_2pi = np.mean(np.abs(features) > 2 * np.pi)
-
-print("Fraction over pi:", fraction_over_pi)
-print("Fraction over 2pi:", fraction_over_2pi)
-```
-
-If many values are larger than `π` or `2π`, input scaling should be considered.
+It is also important to compare the quantum model against a suitable classical baseline. A performance difference should not automatically be attributed to the use of a quantum circuit if the models use different parameter counts, preprocessing steps, or architectural roles.
 
 ---
 
-## 8. Dependencies
+## 10. Dependencies
 
-To run the simple demo, install:
+The runnable example requires:
 
-```bash
-pip install numpy matplotlib
-```
+* NumPy
+* Matplotlib
+* PennyLane
 
-If you want to extend this tutorial to a real QML framework, you can later add tools such as:
-
-```bash
-pip install pennylane
-```
-
-or:
+Install the exact dependencies listed for the tutorial:
 
 ```bash
-pip install qiskit
+pip install -r assets/quantum_programs/angle_embedding_qml/requirements.txt
 ```
 
-However, this tutorial keeps the first example simple so that beginners can understand the core idea without requiring a quantum SDK.
+The `requirements.txt` file should contain:
+
+```text
+numpy
+matplotlib
+pennylane
+```
 
 ---
 
-## 9. AI assistance disclosure
+## 11. Video demonstration
 
-This tutorial was drafted with assistance from ChatGPT for structure, wording, and educational clarity.
-The final content was manually reviewed and edited by the contributor.
+A short video walkthrough should demonstrate:
+
+1. the angle-embedding concept,
+2. the periodic behavior of rotation gates,
+3. the raw and bounded input values,
+4. execution of the PennyLane example,
+5. and interpretation of the generated figure.
+
+Replace `VIDEO_URL` with the public or unlisted video link before submitting the pull request.
+
+[Watch the video demonstration](VIDEO_URL)
 
 ---
 
-## 10. Personal note
+## 12. AI assistance disclosure
 
-I became interested in this topic while studying how quantum circuits can be combined with machine learning models.
+ChatGPT was used to assist with:
 
-One lesson I learned is that QML is not only about adding quantum circuits to neural networks.
-It is also important to understand how classical data enters the quantum circuit.
+* organizing the tutorial structure,
+* improving educational wording,
+* reviewing the Markdown formatting,
+* and drafting portions of the example code.
 
-Angle embedding looks simple, but input scaling can strongly affect how useful the encoded quantum features are.
+The contributor manually reviewed, edited, executed, and verified the final tutorial and code.
 
-For beginners, this is a useful reminder:
+---
 
-> In QML, data preprocessing is part of the quantum model design.
+## 13. Personal note
+
+I became interested in this topic while researching how variational quantum circuits can be integrated into machine-learning and generative-model pipelines.
+
+One lesson from this work is that QML is not only about adding quantum circuits to classical models. It is also necessary to understand how classical information enters the quantum circuit.
+
+Angle embedding appears simple, but the scale and distribution of its input features can strongly affect the behavior of the quantum model.
+
+For beginners, the main lesson is:
+
+> In quantum machine learning, data preprocessing is part of the quantum-model design.
