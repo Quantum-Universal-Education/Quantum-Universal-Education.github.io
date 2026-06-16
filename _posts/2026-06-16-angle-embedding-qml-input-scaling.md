@@ -1,21 +1,14 @@
+```yaml
 ---
-
 title: "Angle Embedding in Quantum Machine Learning: Why Input Scaling Matters"
 layout: post
 author: "Jaeuk Kim"
 date: 2026-06-16
-categories:
-
-* "Quantum Machine Learning"
-* "Tutorial"
-  tags:
-* "QML"
-* "Angle Embedding"
-* "Input Scaling"
-* "Quantum Machine Learning"
-* "UnitaryHack"
-
+categories: ["Quantum Machine Learning", "Tutorial"]
+tags: ["QML", "Angle Embedding", "Input Scaling", "Quantum Machine Learning", "UnitaryHack"]
 ---
+```
+
 
 # Angle Embedding in Quantum Machine Learning: Why Input Scaling Matters
 
