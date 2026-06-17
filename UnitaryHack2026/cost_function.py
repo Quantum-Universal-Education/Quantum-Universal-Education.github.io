@@ -6,7 +6,7 @@ Concept: distance in state-space.
 This module is a STANDALONE, ALTERNATIVE way to turn the quantum-annealed
 target arrangement into a single legal move, operating on the whole flock
 as one bitstring and Euclidean distance . The main game (cluck_and_crow.py) uses
-the simpler per-bird comparison in QuantumFlockMind.pick_best_move() .
+the simpler per-bird comparison in QuantumFlockMind.pick_best_move().
 
 Given the flock's current arrangement and the quantum-annealed "ideal"
 arrangement, this finds which single legal flip (one bird crossing to the
