@@ -3,7 +3,7 @@ quantum_ai.py
 -------------
 The brain of the Quantum Crows. This module is the "tutorial spine" of the
 whole project: every function below corresponds to one teachable quantum
-computing concept, in the order you'd encounter it in an intro course.
+computing concept,.
 
 THE BIG IDEA
 ============
@@ -242,13 +242,23 @@ def build_annealing_circuit(weights, time_steps=4):
     return qc, snapshots
 
 
-def run_circuit(qc, shots=2000):
+def run_circuit(qc, shots=2000, optimization_level=3):
     """Run on Qiskit Aer's local simulator and return the measurement
     counts -- a histogram of which classical bitstrings appeared, and how
     often. This is the closest a simulator gets to showing you genuine
-    quantum statistics."""
+    quantum statistics.
+
+    optimization_level controls how hard Qiskit's transpiler works to
+    simplify the circuit before running it (0 = no optimization, 3 = most
+    aggressive). Concept: real quantum hardware has limited qubit
+    connectivity and noisy gates, so transpilation rewrites a circuit into
+    an equivalent but shallower/cheaper one. We default to level 3 so the
+    game stays snappy even as the flock (and qubit count) grows -- more
+    birds means more NAE-3-SAT clauses, which means more gates, which means
+    transpilation matters more, not less.
+    """
     backend = AerSimulator()
-    transpiled = transpile(qc, backend)
+    transpiled = transpile(qc, backend, optimization_level=optimization_level)
     job = backend.run(transpiled, shots=shots)
     result = job.result()
     return result.get_counts()
@@ -260,6 +270,26 @@ def best_bitstring(counts):
     winner = max(counts, key=counts.get)
     # Qiskit returns bitstrings with qubit 0 as the *rightmost* character
     return [int(b) for b in reversed(winner)]
+
+
+def top_results(counts, n=5):
+    """
+    Concept: a probability distribution, made visible.
+
+    Returns the top `n` most-measured bitstrings as a list of
+    (bitstring_str, count, probability) tuples, sorted from most to least
+    likely. This is what makes "the computer thought about it" visibly
+    probabilistic rather than a black box that just spits out one answer:
+    the player can see that the winning split was, say, 34% likely, with
+    several runner-up splits close behind -- not the only outcome the
+    circuit could ever produce.
+    """
+    total_shots = sum(counts.values())
+    ranked = sorted(counts.items(), key=lambda kv: kv[1], reverse=True)
+    return [
+        (bitstring, count, count / total_shots if total_shots else 0.0)
+        for bitstring, count in ranked[:n]
+    ]
 
 
 def cut_value(bitstring, weights):
@@ -300,10 +330,27 @@ class QuantumFlockMind:
     Wraps the whole pipeline for one "turn" of AI thinking. Construct it
     with the current list of birds; it builds the graph, runs the quantum
     circuit, and exposes everything the UI needs to narrate the process.
+
+    time_steps is effectively the Hive's "intelligence dial": it's how many
+    alternating mix/cost rounds the annealing schedule gets to work with
+    before measurement. Concept: annealing schedule length.
+        - Fewer steps (e.g. 2): the circuit barely leaves "explore broadly"
+          before being measured, so the cost Hamiltonian never gets to
+          dominate. The resulting distribution stays close to uniform --
+          lots of near-equally-likely outcomes, i.e. more "noise."
+        - More steps (e.g. 10+): the schedule has time to ramp the cost
+          Hamiltonian's strength much higher relative to mixing, so
+          constructive interference has more rounds to reinforce the truly
+          good splits. The distribution sharpens around the best answer(s)
+          -- i.e. more "converged," more confidently optimal play.
+    T low time_steps makes
+    for a beatable, somewhat erratic Hive; high time_steps makes for a
+    sharper, more consistently optimal one.
     """
 
     def __init__(self, birds, time_steps=4):
         self.birds = birds
+        self.time_steps = time_steps
         self.clauses_by_key = state_to_nae_clauses(birds)
         self.nae3_clauses = []
         for key, group in self.clauses_by_key.items():
@@ -320,15 +367,18 @@ class QuantumFlockMind:
         self.circuit, self.snapshots = build_annealing_circuit(self.weights, time_steps)
         self.counts = None
         self.solution_bits = None
+        self.top_results = None
 
     def think(self, shots=2000):
         """Run the circuit and store results. Call once per AI turn."""
         if len(self.weights) == 0:
             self.counts = {}
             self.solution_bits = []
+            self.top_results = []
             return self.solution_bits
         self.counts = run_circuit(self.circuit, shots=shots)
         self.solution_bits = best_bitstring(self.counts)
+        self.top_results = top_results(self.counts, n=5)
         return self.solution_bits
 
     def target_side_for_bird(self, bird):
