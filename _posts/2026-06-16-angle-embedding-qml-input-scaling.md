@@ -433,3 +433,13 @@ Angle embedding appears simple, but the scale and distribution of its input feat
 For beginners, the main lesson is:
 
 > In quantum machine learning, data preprocessing is part of the quantum-model design.
+
+---
+
+## 14. References
+
+* [PennyLane `AngleEmbedding` documentation](https://docs.pennylane.ai/en/stable/code/api/pennylane.AngleEmbedding.html)
+* [PennyLane `qml.expval` documentation](https://docs.pennylane.ai/en/stable/code/api/pennylane.expval.html)
+* [PennyLane measurements documentation](https://docs.pennylane.ai/en/stable/introduction/measurements.html)
+* [NumPy `tanh` documentation](https://numpy.org/doc/stable/reference/generated/numpy.tanh.html)
+
