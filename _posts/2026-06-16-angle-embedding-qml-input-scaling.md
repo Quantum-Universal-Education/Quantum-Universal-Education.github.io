@@ -404,7 +404,6 @@ A short video walkthrough should demonstrate:
 4. execution of the PennyLane example,
 5. and interpretation of the generated figure.
 
-Replace `VIDEO_URL` with a public or unlisted video link before submitting the pull request.
 
 [Watch the video demonstration](https://youtu.be/s1vV0SLN36c)
 
