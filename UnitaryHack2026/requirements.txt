@@ -1,0 +1,6 @@
+qiskit>=1.0
+qiskit-aer>=0.13
+pygame>=2.5
+networkx>=3.0
+numpy>=1.24
+matplotlib>=3.7
