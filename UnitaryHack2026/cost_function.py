@@ -5,12 +5,8 @@ Concept: distance in state-space.
 
 This module is a STANDALONE, ALTERNATIVE way to turn the quantum-annealed
 target arrangement into a single legal move, operating on the whole flock
-as one bitstring and Euclidean distance (closer in spirit to the original
-MILQ Simulator's cost_function.py). The main game (cluck_and_crow.py) uses
-the simpler per-bird comparison in QuantumFlockMind.pick_best_move() instead,
-but this version is kept here as a reference -- and as a nice example of how
-the same idea ("which legal move gets me closest to the quantum answer?")
-can be implemented multiple equivalent ways. Feel free to swap it in.
+as one bitstring and Euclidean distance . The main game (cluck_and_crow.py) uses
+the simpler per-bird comparison in QuantumFlockMind.pick_best_move() .
 
 Given the flock's current arrangement and the quantum-annealed "ideal"
 arrangement, this finds which single legal flip (one bird crossing to the
