@@ -406,7 +406,7 @@ A short video walkthrough should demonstrate:
 
 Replace `VIDEO_URL` with a public or unlisted video link before submitting the pull request.
 
-[Watch the video demonstration](VIDEO_URL)
+[Watch the video demonstration](https://youtu.be/s1vV0SLN36c)
 
 ---
 
