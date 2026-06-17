@@ -1,3 +1,5 @@
+<img width="599" height="309" alt="crowgama" src="https://github.com/user-attachments/assets/ee16917d-1b3b-4460-9a12-3ef3f2148d3c" />
+<img width="596" height="291" alt="crowhgammaa" src="https://github.com/user-attachments/assets/f1ae29e3-d0d8-495c-a576-49af827b7b73" />
 # Game Rules
 
 ## Objective
