@@ -5,9 +5,7 @@ MAIN GAME FILE. Run this one:  python cluck_and_crow.py
 
 CLUCK & CROW: THE QUANTUM COOP
 -------------------------------
-A reimagining of the original "MILQ Simulator" hackathon game (hens vs.
-quantum crows instead of chocolate vs. strawberry milk cows), modernized to
-run on current Qiskit (Aer simulator, no deprecated APIs) and built as a
+A  (hens vs. quantum crows runs on current Qiskit (Aer simulator, no deprecated APIs) and built as a
 guided quantum-computing tutorial: every time the Quantum Crow Hive "thinks,"
 the game pauses and walks you through what the quantum circuit is actually
 doing, concept by concept.
@@ -419,12 +417,21 @@ class GameManager:
 
     # --- game phases -------------------------------------------------------
     def breed_phase(self):
+        """
+        Pair up birds that currently share a COOP SIDE (not a fixed
+        species) and let them breed. This is the mechanic that makes
+        player and Hive moves matter: a bird that has crossed the fence
+        breeds with its new neighbors, and the chick's species follows
+        the genetic majority vote of THOSE parents -- which is how a
+        coop can gradually convert from Crows to Hens (or vice versa)
+        over the course of the game.
+        """
         self.phase_message = "Breeding phase: two birds on each side are pairing up..."
         self.draw()
         time.sleep(0.6)
 
-        for species in (True, False):
-            group = [s for s in self.sprites if s.bird.species == species]
+        for side in (True, False):
+            group = [s for s in self.sprites if s.bird.side == side]
             if len(group) >= 2:
                 parents = sample(group, 2)
                 chick_bird = parents[0].bird.breed(parents[1].bird)
@@ -434,12 +441,17 @@ class GameManager:
         self.animate_until_settled()
 
     def molt_phase(self):
+        """
+        Retire one aging bird from EACH COOP SIDE (not each species),
+        weighted by age. This keeps population pressure tied to physical
+        location on the field, matching how breed_phase now works.
+        """
         self.phase_message = "Molt phase: the oldest birds on each side may retire from the flock..."
         self.draw()
         time.sleep(0.6)
 
-        for species in (True, False):
-            group = [s for s in self.sprites if s.bird.species == species]
+        for side in (True, False):
+            group = [s for s in self.sprites if s.bird.side == side]
             weighted = []
             for s in group:
                 weighted.extend([s] * max(s.bird.age, 1))
