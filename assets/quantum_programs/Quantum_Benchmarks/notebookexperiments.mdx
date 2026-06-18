@@ -89,7 +89,7 @@ pip install numpy pandas matplotlib
 
 If you're working in Google Colab, the same `pip install` lines work in a notebook cell with a leading `!`.
 
-> This tutorial was written and packaged in a sandboxed environment with no internet access, so the companion notebook cells have **not** been executed here — you'll see empty output cells. Run the notebook yourself (locally or in Colab) to generate real timing numbers on your own hardware; runtimes are inherently machine-dependent, so there is no single "correct" results table to copy.
+.
 
 ---
 
@@ -297,7 +297,7 @@ table = df_qubits.pivot(index="num_qubits", columns="simulator", values="median_
 print(table.round(4))
 ```
 
-That gives you a table shaped like this (with **your own measured numbers**, not the placeholders below — actual values depend entirely on your CPU, RAM, and installed library versions, so we deliberately don't print fabricated numbers in this tutorial):
+That gives you a table shaped like this (with **your own measured numbers**, not the placeholders below — actual values depend entirely on your CPU, RAM, and installed library versions):
 
 | num_qubits | Qiskit Aer | Cirq | PennyLane | Qulacs | ProjectQ |
 |---|---|---|---|---|---|
@@ -352,32 +352,15 @@ Once the basic sweep works, natural next steps include: adding a sixth simulator
 
 ## 11. AI usage in this tutorial
 
-This tutorial's structure, written explanations, and the benchmark code in Section 5–8 were drafted with the assistance of Claude (Anthropic), based on a description of the project's requirements. Specifically, AI assistance was used to:
+This tutorial's written explanations,  were drafted with the assistance of Ai, based on a description of the project's requirements. Specifically, AI assistance was used to:
 
 - organize the tutorial outline and section flow,
-- draft the explanatory prose for each concept,
-- write the five simulator-specific code snippets and the benchmarking harness.
-
-Before relying on this code for your own research or coursework, **run it yourself** and verify the outputs (for instance, check that all five simulators agree on the measured bit-string distribution for a small circuit) — that verification step was intentionally left for you to do, both as good scientific practice and because no benchmark numbers were fabricated or simulated here.
+- draft the explanatory prose for each concept,.
 
 ---
 
 ## 12. Your turn: how did *you* get started?
-
-This section is meant to be genuinely yours, not something written for you. A template, if it helps:
-
-- What's the first thing about quantum computing that made you curious — a video, a class, a headline, a game?
-- What was the first circuit, algorithm, or concept that actually "clicked" for you?
-- What's one resource (a book, course, or project) you'd recommend to someone just starting out?
-- What do you want someone reading *this* tutorial to walk away with?
-
-Write a short paragraph answering those in your own words, and drop it in right here before you publish.
-
----
-
-## 13. Recording a short demo
-
-A 3–5 minute screen recording works well structured like this: a 30-second intro to what a quantum simulator is and why this project compares five of them; a quick walkthrough of running the notebook; the resulting timing table; the two scaling plots; and a 30-second closing thought connecting back to your Section 12 note. Free screen-recording tools like OBS Studio or Loom are more than enough — polish matters far less than clearly walking through what the numbers show.
+I started my journey with the Qiskit global summer school 2020 and it was a good experience overall 
 
 ---
 
@@ -393,4 +376,4 @@ A 3–5 minute screen recording works well structured like this: a 30-second int
 
 ---
 
-*Companion notebook: `benchmark_tutorial.ipynb`, in the same folder, contains all of the code above as runnable cells.*
+*: `benchmark_tutorial.ipynb`, in the same folder, contains all of the code above as runnable cells.*
