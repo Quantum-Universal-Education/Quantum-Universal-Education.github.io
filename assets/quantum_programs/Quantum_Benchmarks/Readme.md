@@ -383,4 +383,4 @@ I started in quantum computing after the qiskit summmer school 2020
 
 ---
 
-*Companion notebook: `benchmark_tutorial.ipynb`, in the same folder, contains all of the code above as runnable cells.*
+*: `benchmark_tutorial.ipynb`, in the same folder, contains all of the code above as runnable cells.*
