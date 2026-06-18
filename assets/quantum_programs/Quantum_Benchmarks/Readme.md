@@ -357,7 +357,7 @@ This tutorial's structure, written explanations, and the benchmark code in Secti
 - organize the tutorial outline and section flow,
 - draft the explanatory prose for each concept,
 
-Before relying on this code for your own research or coursework, **run it yourself** and verify the outputs (for instance, check that all five simulators agree on the measured bit-string distribution for a small circuit) — that verification step was intentionally left for you to do, both as good scientific practice and because no benchmark numbers were fabricated or simulated here.
+.
 
 ---
 
