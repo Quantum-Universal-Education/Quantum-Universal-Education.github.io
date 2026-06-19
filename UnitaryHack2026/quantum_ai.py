@@ -3,7 +3,7 @@ quantum_ai.py
 -------------
 The brain of the Quantum Crows. This module is the "tutorial spine" of the
 whole project: every function below corresponds to one teachable quantum
-computing concept,.
+computing concept, in the order you'd encounter it in an intro course.
 
 THE BIG IDEA
 ============
@@ -51,6 +51,8 @@ The chosen split tells the Crows where they'd ideally like every bird to be.
 The AI then makes the single legal move (flip one of its own birds) that
 gets the flock closest to that target -- this is `pick_best_move()`.
 """
+
+import random
 
 import numpy as np
 import networkx as nx
@@ -343,7 +345,7 @@ class QuantumFlockMind:
           constructive interference has more rounds to reinforce the truly
           good splits. The distribution sharpens around the best answer(s)
           -- i.e. more "converged," more confidently optimal play.
-    T low time_steps makes
+    This is exposed in the UI as a difficulty control: low time_steps makes
     for a beatable, somewhat erratic Hive; high time_steps makes for a
     sharper, more consistently optimal one.
     """
@@ -361,6 +363,19 @@ class QuantumFlockMind:
             for var, _ in clause:
                 if var not in self.variables:
                     self.variables.append(var)
+        # Bugfix: a bird whose genes are all unshared with any other bird
+        # (e.g. a freshly bred chick with a rare gene combination) never
+        # appears in any NAE-3 clause, and so never became a graph
+        # variable here -- meaning the quantum circuit never produced a
+        # measured bit for it, and pick_best_move() had to fall back to
+        # picking blindly (effectively ignoring the quantum result for
+        # that bird). Every bird is now added as a variable explicitly,
+        # so every bird always gets two graph nodes (with the usual
+        # heavy consistency edge between them) and always gets a real
+        # measured bit, even when it has no NAE clause edges of its own.
+        for bird in birds:
+            if bird not in self.variables:
+                self.variables.append(bird)
 
         self.graph = nae3_to_graph(self.variables, self.nae3_clauses)
         self.weights, self.node_order, self.node_index = get_weight_matrix(self.graph)
@@ -400,6 +415,14 @@ class QuantumFlockMind:
         Of the birds the AI is allowed to move, pick the one whose current
         side most disagrees with the quantum-annealed target -- i.e. the
         single legal move that brings the flock closest to equilibrium.
+
+        With every bird now guaranteed to be a graph variable (see the
+        fix in __init__), every movable bird should have a real
+        quantum-derived target. The random fallback below only exists as
+        a defensive last resort (e.g. an empty graph with zero qubits)
+        and intentionally does NOT default to movable_birds[0], since
+        always picking the same list position isn't actually random and
+        would silently look like a deterministic "non-quantum" policy.
         """
         best_bird, best_gap = None, -1
         for bird in movable_birds:
@@ -409,4 +432,6 @@ class QuantumFlockMind:
             gap = 1 if bird.side != target else 0
             if gap > best_gap:
                 best_gap, best_bird = gap, bird
-        return best_bird or (movable_birds[0] if movable_birds else None)
+        if best_bird is not None:
+            return best_bird
+        return random.choice(movable_birds) if movable_birds else None
