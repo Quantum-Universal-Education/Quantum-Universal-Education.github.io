@@ -1,0 +1,325 @@
+# Quantum Computing in Cluck & Crow
+
+This document is the deep dive: what's actually happening, physically and
+mathematically, every time the Crow Hive "thinks." It's written for anyone
+encountering quantum computing for the first time who'd like the real
+concepts, not just an analogy. Each section maps directly to one function
+or class in `quantum_ai.py`, and to one tutorial step you'll see in-game
+(toggle Full Tutorial Mode with `T`).
+
+.
+
+## The big picture
+
+Every Crow turn, the game needs to answer one question: *given the current
+positions of every bird on the field, which single move should a Crow make
+to push the flock toward the most stable arrangement?*
+
+"Most stable" here has a precise meaning, borrowed from game theory: a
+**Nash equilibrium** of the underlying congestion game, the arrangement
+where no single bird could improve its own side's position by moving away
+from it unilaterally. Finding that arrangement exactly means checking every
+possible way to split the birds between the two coops — and the number of
+possible splits doubles with every additional bird. Ten birds means 1,024
+splits; twenty birds means over a million; thirty means over a billion.
+This doubling, called **exponential scaling**, is precisely the kind of
+wall that quantum algorithms are designed to push against (not eliminate —
+push against) using superposition and interference, which is the actual
+reason this game routes the decision through a quantum circuit instead of
+just looping over every possibility classically.
+
+The pipeline has six stages. Stages 1-2 are classical preprocessing
+(encoding the problem so a quantum computer can use it). Stages 3-6 happen
+on an actual quantum circuit, simulated locally via Qiskit's Aer backend.
+
+```
+Flock state
+   │  STEP 1: encoding
+   ▼
+Boolean logic clauses (NAE-SAT)
+   │  STEP 2: reduction
+   ▼
+Max-Cut graph
+   │  STEP 3: superposition
+   ▼
+Quantum circuit, all qubits in equal superposition
+   │  STEP 4: entanglement
+   ▼
+Qubits linked via RZZ gates along graph edges
+   │  STEP 5: annealing / interference
+   ▼
+Distribution sharpened toward good splits
+   │  STEP 6: measurement
+   ▼
+One classical bitstring (the Hive's answer)
+   │  classical post-processing
+   ▼
+Single legal Crow move
+```
+
+---
+
+## Step 1: Encoding the problem
+
+**Function:** `state_to_nae_clauses()`
+
+Quantum computers (like classical ones) don't understand "cows" or "hens"
+or "coops." Before any of this can become a circuit, the real-world
+situation has to become **boolean logic** — true/false statements about
+variables.
+
+For every feather-gene value (e.g. "gene A is Hen-colored"), the game
+gathers every bird that currently expresses that exact value into a group.
+Each group becomes what's called a **Not-All-Equal (NAE) clause**: a
+constraint saying "these variables should not all end up assigned the same
+boolean value." Practically, this encodes flock cohesion — birds sharing a
+visible trait are linked, and the optimizer will try to keep them from
+being split in a perfectly even, disorganized way.
+
+This first move — turning a real situation into formal logic — is the same
+first step you'd take for *any* real combinatorial optimization problem:
+flight scheduling becomes constraints about which flights can't overlap;
+chip layout becomes constraints about which wires can't cross; vaccine
+distribution becomes constraints about which routes can't conflict. The
+specific problem changes; the move of "write it as logic clauses over
+boolean variables" doesn't.
+
+## Step 2: Problem reduction
+
+**Functions:** `nae_to_nae3()`, `nae3_to_graph()`
+
+Computer scientists love proving that two problems which look totally
+different are secretly the same problem wearing different clothes. This
+step performs two such reductions back to back.
+
+**NAE-SAT → NAE-3-SAT.** The clauses from Step 1 can have any number of
+birds in them. But there's a well-studied special case — NAE-3-SAT — where
+every clause has *exactly* three variables. Any larger clause can be
+rewritten as a chain of 3-variable clauses by introducing temporary
+**auxiliary variables** (the `AuxVar` class) that don't correspond to any
+real bird; they only exist to make the chain of logic work out, the same
+way you might introduce a helper variable when solving an algebra problem
+by substitution.
+
+**NAE-3-SAT → Max-Cut.** It turns out NAE-3-SAT is *exactly* equivalent to
+a graph problem called **Max-Cut**: given a graph, split its nodes into two
+groups so that the heaviest possible total weight of edges ends up
+connecting the two groups ("cut" between them). The reduction works like
+this:
+
+- Every boolean variable becomes **two** graph nodes: one representing "this
+  variable is true," one representing "this variable is false." These two
+  nodes are joined by a deliberately very heavy edge, so that any good
+  split is essentially forced to put them on opposite sides — a variable
+  can't sensibly be both true and false at once.
+- Every 3-variable clause becomes a small triangle of light edges between
+  its three literal-nodes, because "not all three can be equal" turns out
+  to be mathematically the same condition as "at least one edge of this
+  triangle must be cut."
+
+A huge number of real NP-hard problems — scheduling, circuit layout,
+portfolio selection, vaccine routing — are secretly Max-Cut, or reduce to
+it in a few steps like this one. It's one of the most heavily studied
+"universal" combinatorial problems precisely because so many other things
+collapse into it.
+
+## Step 3: Superposition
+
+**Function:** `build_annealing_circuit()` (the Hadamard layer)
+
+Now we leave classical preprocessing behind. Every graph node from Step 2
+becomes one **qubit** in a real quantum circuit. The first thing that
+happens to each qubit is a **Hadamard gate** (`qc.h(q)` in the code).
+
+Classically, a bit is either 0 or 1 — one value at a time, full stop. A
+qubit can be placed into a **superposition**: a genuine combination of |0⟩
+and |1⟩ simultaneously, not "we don't know which it is yet" but
+"both, with the math to prove it." A Hadamard gate applied to a qubit
+starting at |0⟩ produces an equal-weighted superposition of |0⟩ and |1⟩.
+
+Here's the part that matters: apply that to *every* qubit in the circuit,
+and the whole system enters a superposition of **all 2ⁿ possible
+combinations at once**, where n is the number of qubits. With, say, 16
+qubits (a typical graph size for a Medium game), the circuit is now
+representing 65,536 different possible Max-Cut splits *simultaneously*,
+in one quantum state. This is the seed of the speedup: instead of checking
+splits one at a time, the circuit is, in a very real physical sense,
+exploring every split in parallel.
+
+## Step 4: Entanglement and phase
+
+**Function:** `build_annealing_circuit()` (the RZZ gates)
+
+Superposition alone doesn't solve anything — you need a way to make the
+*good* splits more prominent than the bad ones. That requires
+**entanglement**: gates that link two qubits together so that what happens
+to one affects the other.
+
+The circuit applies an **RZZ gate** between every pair of qubits that are
+connected by an edge in the Max-Cut graph. RZZ doesn't just correlate the
+two qubits' eventual measured values — it links their **relative quantum
+phase**, a property of the wave-like math underlying the qubit's state
+that doesn't show up directly when you measure a single qubit, but
+critically affects how different parts of the superposition interfere with
+each other later. The strength of the rotation applied by each RZZ gate is
+scaled by that edge's weight in the graph — heavily-weighted edges (like
+the "this variable can't be both true and false" consistency edges from
+Step 2) get pushed harder toward ending up on opposite sides.
+
+Entanglement is the property that has no classical analogue at all — there
+is no equivalent "linked coin flip" in ordinary probability that behaves
+the way entangled qubits do. It's also the resource that makes Step 5
+possible: without entangled phases, there would be nothing for
+interference to act on.
+
+## Step 5: Quantum annealing and interference
+
+**Function:** `build_annealing_circuit()` (the alternating RX/RZZ loop),
+controlled by the `time_steps` parameter
+
+This is where the Hive actually "thinks," in the sense of converging
+toward a good answer rather than a random one. The circuit alternates,
+over several rounds (`time_steps`), between two kinds of gates:
+
+- **Mixing gates** (`qc.rx`): keep exploring broadly, similar in spirit to
+  re-randomizing.
+- **Cost gates** (the same `RZZ` gates from Step 4, now applied repeatedly):
+  reinforce the actual Max-Cut objective.
+
+The *ratio* between how strongly each type is applied shifts smoothly over
+the rounds — early on, mixing dominates (explore broadly); by the final
+round, the cost Hamiltonian dominates (commit to good answers). This
+schedule is a simplified version of **quantum annealing** and is closely
+related to the physical principle behind **adiabatic quantum computing**:
+if you change a quantum system's "rules" slowly enough, it tends to stay
+in (or near) its lowest-energy, most-stable configuration the whole way
+through — which here corresponds to a good Max-Cut split.
+
+The mechanism that actually sorts good splits from bad ones is
+**interference**. Because every possible split exists simultaneously in
+superposition (Step 3) with phases linked by entanglement (Step 4), the
+contributions from different splits can reinforce each other
+(**constructive interference**, amplifying the probability of measuring
+that outcome) or cancel each other out (**destructive interference**,
+suppressing it). Good Max-Cut splits, shaped by the cost gates, tend to
+constructively interfere with each other; bad splits tend to destructively
+cancel. This is the same fundamental phenomenon — interference between
+superposed quantum amplitudes — that powers **Grover's search algorithm**,
+just applied here to an annealing schedule instead of Grover's specific
+"amplitude amplification" recipe.
+
+**This is also the Hive's literal difficulty dial.** `time_steps` controls
+how many rounds this schedule gets to run before measurement:
+
+- **Few steps** (e.g. 2): the schedule barely leaves "explore broadly"
+  before time runs out. The cost Hamiltonian never gets to dominate, so
+  interference doesn't have enough rounds to meaningfully sharpen the
+  distribution. The measured outcome stays close to a noisy coin-flip
+  across many candidate splits — an "Erratic" Hive, more beatable.
+- **Many steps** (e.g. 14+): the schedule has plenty of room to ramp the
+  cost Hamiltonian's strength way up relative to mixing, giving
+  constructive interference many rounds to reinforce the genuinely best
+  splits. The resulting distribution sharpens hard around the optimum — a
+  "Ruthless" Hive, much harder to outmaneuver.
+
+You can watch this difference directly: raise or lower the Hive's
+annealing steps mid-game with `+`/`-`, then look at the probability bar
+chart after the next measurement. Low settings show several similarly-
+sized bars (a flat, uncertain distribution); high settings show one
+dominant bar towering over the rest (a sharp, confident distribution).
+
+## Step 6: Measurement and collapse
+
+**Functions:** `run_circuit()`, `best_bitstring()`, `top_results()`
+
+Up to this point, nothing about the circuit's state is "real" in the
+classical sense — it's a single quantum state representing many candidate
+answers superposed together, with their relative likelihoods shaped by the
+annealing schedule. **Measurement** is the step that forces this into one
+concrete, classical answer: each qubit collapses to a definite 0 or 1, and
+you get one bitstring.
+
+Crucially, measurement is probabilistic, not deterministic. A good
+annealing schedule makes the best splits *much more likely* to be the
+measured outcome — but never the *only possible* outcome (short of a
+perfect, idealized, infinitely long schedule). This is why the game runs
+the circuit 2000 times (`shots=2000`) rather than once: with enough
+repeated measurements, you build up a real statistical picture — a
+**probability distribution** over outcomes — instead of trusting a single
+roll of the dice. `best_bitstring()` picks the single most-frequent
+outcome as the Hive's working answer, but `top_results()` keeps the next
+several runner-ups too, specifically so the in-game probability chart can
+show you that distribution honestly: "this was the most likely outcome, at
+roughly this percentage, with these other candidates not far behind" — not
+"this is THE answer, full stop."
+
+This distinction — *likely* versus *certain* — is arguably the single most
+important intuition to walk away with about how real quantum computers
+work. They are not magic deterministic oracles. They reshape probability
+distributions so that good answers become likely, then you sample from
+that distribution (possibly many times) and act on what comes up most.
+
+### A practical, unglamorous detail: transpilation
+
+Before the circuit actually runs, `run_circuit()` passes it through
+Qiskit's **transpiler** with `optimization_level=3`. Transpilation rewrites
+a circuit into an equivalent one that's cheaper to execute — fusing gates
+together, removing redundant operations, and (on real hardware)
+rearranging things to respect a chip's limited qubit connectivity. It
+doesn't change what the circuit computes, only how efficiently it gets
+there. As the flock grows (more birds → more NAE-3-SAT clauses → more
+graph edges → more RZZ gates), an unoptimized circuit's depth grows fast;
+aggressive transpilation is what keeps the simulator snappy as games scale
+up to Hard difficulty.
+
+## After measurement: turning an answer into a move
+
+**Functions:** `target_side_for_bird()`, `pick_best_move()` (also see the
+alternative implementation in `cost_function.py`)
+
+The measured bitstring tells the Hive its ideal arrangement — which side
+of the Max-Cut split every bird-variable landed on. But the Hive can only
+make one *legal* move per turn: flip a single Crow-species bird's coop
+side. The final step is purely classical bookkeeping: check every Crow
+bird the Hive is allowed to move, see whether its current side matches or
+disagrees with the quantum-annealed target, and pick whichever single move
+resolves the biggest disagreement. This is the bridge from "the math says
+this configuration would be ideal" to "therefore, move this specific
+bird" — the quantum circuit decided *what's good*; this last step decides
+*what to actually do about it*, within the game's rules.
+
+## Why use quantum at all, here?
+
+Worth being honest about: at the bird-counts this game actually reaches (a
+few dozen qubits at most), a classical laptop can brute-force the *exact*
+best Max-Cut split in well under a second — that's exactly what
+`brute_force_best_cut()` in `quantum_ai.py` does, included specifically so
+you can compare it against the quantum circuit's answer if you're curious.
+The quantum approach isn't faster *at this scale*; classical brute force
+hasn't hit the exponential wall hard enough yet to need rescuing.
+
+What this game demonstrates instead is the *technique*, end to end, using
+exactly the same conceptual pipeline that real quantum-optimization
+research uses on much larger problems where the exponential wall is a
+genuine obstacle: encode as logic, reduce to Max-Cut, superpose, entangle,
+anneal, measure, sample. Every piece here is a real, legitimate quantum
+operation running on a real (simulated) quantum circuit via Qiskit — just
+deliberately kept small enough that you can watch every step happen, and
+small enough to sanity-check against a brute-force answer when you want
+to see how close the quantum result actually got.
+
+## Glossary
+
+| Term | Plain-language meaning |
+|---|---|
+| **Qubit** | The quantum analogue of a bit; can be placed in superposition rather than only 0 or 1. |
+| **Superposition** | A genuine combination of multiple states at once, not just uncertainty about which one it "really" is. |
+| **Entanglement** | A link between qubits where their combined state can't be described by treating them separately — what happens to one is tied to the other. |
+| **Phase** | A property of a quantum state's wave-like description that affects how it interferes with other states, even though it isn't directly visible in a single measurement. |
+| **Interference** | Combining amplitudes from different parts of a superposition so they reinforce (constructive) or cancel (destructive) each other. |
+| **Quantum annealing** | Gradually shifting a quantum circuit's "rules" from broad exploration toward a specific objective, so the final state is likely to represent a good (ideally optimal) solution. |
+| **Measurement / collapse** | Forcing a quantum superposition into one definite classical outcome; the chance of any specific outcome depends on how the superposition was shaped beforehand. |
+| **Max-Cut** | A graph problem: split nodes into two groups maximizing the total weight of edges between the groups. |
+| **NAE-SAT / NAE-3-SAT** | Boolean satisfiability variants where the constraint is "not all of these variables are equal," restricted to 3-variable clauses in the "-3" version. |
+| **Transpilation** | Rewriting a quantum circuit into an equivalent but more efficient one before running it. |
+| **Shots** | The number of times a quantum circuit is run and measured, to build up a statistical picture of its output distribution. |
