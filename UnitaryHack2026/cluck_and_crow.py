@@ -5,9 +5,7 @@ MAIN GAME FILE. Run this one:  python cluck_and_crow.py
 
 CLUCK & CROW: THE QUANTUM COOP
 -------------------------------
-A  to
-run on current Qiskit (Aer simulator, no deprecated APIs) and built as a
-guided quantum-computing tutorial: every time the Quantum Crow Hive "thinks,"
+A  every time the Quantum Crow Hive "thinks,"
 the game pauses and walks you through what the quantum circuit is actually
 doing, concept by concept.
 
@@ -648,6 +646,16 @@ class GameManager:
         Retire one aging bird from EACH COOP SIDE (not each species),
         weighted by age. This keeps population pressure tied to physical
         location on the field, matching how breed_phase now works.
+
+        Bugfix: molting used to fire whenever a side had >=1 bird, with no
+        floor -- a side sitting at exactly 1 bird (very common once the
+        player starts moving birds across the fence) could be emptied
+        entirely with no replacement, since breed_phase requires >=2
+        birds on a side to produce a chick. Repeated over several turns
+        this could shrink the whole flock toward extinction instead of
+        toward a clean win/loss. Molting now only fires on a side that
+        has MORE than 1 bird, so a lone bird on a side is always safe
+        until either it crosses the fence again or a chick joins it.
         """
         self.phase_message = "Molt phase: the oldest birds on each side may retire from the flock..."
         self.draw()
@@ -655,6 +663,8 @@ class GameManager:
 
         for side in (True, False):
             group = [s for s in self.sprites if s.bird.side == side]
+            if len(group) <= 1:
+                continue  # never empty a side via molting
             weighted = []
             for s in group:
                 weighted.extend([s] * max(s.bird.age, 1))
@@ -696,23 +706,35 @@ class GameManager:
     def take_full_turn(self):
         """Called right after the player moves: runs the Crows' quantum
         turn, advances the move counter, and handles breed/molt phases
-        and win-checking on every second move (mirroring the original
-        game's pacing)."""
+        and win-checking on every turn.
+
+        Bugfix: this used to gate breed_phase/molt_phase/check_winner
+        behind `move_counter % 2 == 0`, meaning the flock's species
+        composition only had a chance to shift once every TWO full turns
+        (one player move + one Hive move). Combined with fairly gene-pure
+        starting birds, that pacing meant real games routinely needed on
+        the order of 100+ turns to converge to an all-Hen or all-Crow
+        result -- effectively indistinguishable from "the game never
+        ends" for a player. Running these phases every turn cuts the
+        number of player actions needed to reach a result roughly in
+        half on its own, and combines with the gene-diversity and
+        molt-floor fixes elsewhere to bring typical games down to a much
+        more reasonable handful of rounds.
+        """
         self.run_quantum_turn()
         self.player_turn = True
         self.move_counter += 1
 
-        if self.move_counter % 2 == 0:
-            self.age_all()
-            self.breed_phase()
-            self.molt_phase()
+        self.age_all()
+        self.breed_phase()
+        self.molt_phase()
 
-            winner = self.check_winner()
-            if winner is not None:
-                self.phase_message = "You win! All birds are Hens." if winner else "The Crows have taken the farm..."
-                self.draw()
-                time.sleep(4)
-                self.game_over = True
+        winner = self.check_winner()
+        if winner is not None:
+            self.phase_message = "You win! All birds are Hens." if winner else "The Crows have taken the farm..."
+            self.draw()
+            time.sleep(4)
+            self.game_over = True
 
     # --- the quantum AI turn, fully narrated -------------------------------------------------------
     def run_quantum_turn(self):
@@ -927,8 +949,19 @@ def main():
 
     manager = GameManager(screen, full_tutorial=True, time_steps=time_steps)
 
-    starter_genes_hen = [(True, True, True), (True, True, None), (True, None, None), (True, None, None), (True, True, None)]
-    starter_genes_crow = [(False, False, False), (False, False, None), (False, None, None), (False, None, None), (False, False, None)]
+    # Bugfix/tuning: the previous first entries here were maximally
+    # gene-pure (True, True, True) / (False, False, False) with zero
+    # unexpressed genes. Since Easy mode (2 vs 2) only ever uses the
+    # first two entries of each list, every Easy game started with
+    # birds that were nearly impossible to flip to the other species via
+    # breeding -- a same-side cross-species pair needed a 2-1 majority
+    # against a fully-pure parent, which a single None slot makes much
+    # more achievable. Every starting bird now carries at least one
+    # unexpressed gene, making genuine species drift (and therefore a
+    # real win/loss) reachable in a reasonable number of rounds even at
+    # the smallest flock size.
+    starter_genes_hen = [(True, True, None), (True, None, True), (True, None, None), (None, True, True), (True, True, None)]
+    starter_genes_crow = [(False, False, None), (False, None, False), (False, None, None), (None, False, False), (False, False, None)]
     for i in range(flock_size):
         manager.add_bird(True, starter_genes_hen[i % len(starter_genes_hen)])
         manager.add_bird(False, starter_genes_crow[i % len(starter_genes_crow)])
