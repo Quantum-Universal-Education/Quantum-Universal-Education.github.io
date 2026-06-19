@@ -3,9 +3,10 @@ cost_function.py
 -----------------
 Concept: distance in state-space.
 
-This module is a STANDALONE,  way to turn the quantum-annealed
+This module  way to turn the quantum-annealed
 target arrangement into a single legal move, operating on the whole flock
-as one bitstring and Euclidean distance  uses QuantumFlockMind.pick_best_move().
+as one bitstring and Euclidean distance  uses
+the simpler per-bird comparison in QuantumFlockMind.pick_best_move().
 
 Given the flock's current arrangement and the quantum-annealed "ideal"
 arrangement, this finds which single legal flip (one bird crossing to the
