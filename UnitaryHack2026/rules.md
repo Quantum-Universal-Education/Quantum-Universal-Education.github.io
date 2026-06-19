@@ -50,10 +50,11 @@ suggests. See `QUANTUM_COMPUTING.mdx` for exactly how this decision gets
 made. If Full Tutorial Mode is on, a non-blocking corner overlay walks
 through each stage of that process while it happens.
 
-### 2. Breed Phase (every other round)
+### 2. Breed Phase (every round)
 
-Breeding and molting happen once every **two** flap-phase turns (one from
-you, one from the Hive) — so roughly every other round, not every round.
+Breeding and molting happen after every single flap-phase turn — your move
+and the Hive's response both count as one full round, and breeding/molting
+follows immediately after.
 
 On each coop side, if there are two or more birds present, a chick is
 born. The chick's three feather genes are inherited from its two parents:
@@ -84,25 +85,34 @@ colored parents — or left to chance if you skip.
 
 ### 3. Molt Phase (same rounds as Breed)
 
-Right after breeding, one bird "retires" from each coop side. Older birds
-are more likely to be picked: the chance of being chosen for retirement is
-weighted by each bird's age (every bird ages by one each cycle). A
-brand-new chick (age 0, weighted minimum of 1) can still occasionally be
-picked, but it's far less likely than an old-timer.
+Right after breeding, one bird "retires" from each coop side that has
+**more than one bird present**. Older birds are more likely to be picked:
+the chance of being chosen for retirement is weighted by each bird's age
+(every bird ages by one each cycle). A brand-new chick (age 0, weighted
+minimum of 1) can still occasionally be picked, but it's far less likely
+than an old-timer.
+
+A coop side with only one bird never molts — it's protected until either
+that bird crosses the fence again or a chick joins it through breeding.
+This keeps the flock from accidentally dwindling to nothing on one side
+while play is still in progress.
 
 ## Winning and Losing
 
-The game checks, after every Breed+Molt cycle, whether every single bird
-remaining on the field is now the same species. If every bird is a Hen,
-**you win**. If every bird is a Crow, **you lose**. If both species are
-still present, play continues to the next round.
+The game checks, after every Breed+Molt cycle (i.e. after every round),
+whether every single bird remaining on the field is now the same species.
+If every bird is a Hen, **you win**. If every bird is a Crow, **you
+lose**. If both species are still present, play continues to the next
+round.
 
 Because breeding pairs by coop side rather than fixed species, and because
-one bird of each species is removed every cycle while one chick is added
-to each side, species composition really can converge over time — usually
-within a few dozen rounds, though it depends heavily on luck (random
-pairing, random molt victim) and on how well you use your breeding choices
-to reinforce the species you want to win.
+every starting bird has at least one unexpressed gene (making cross-
+species chicks genuinely possible rather than vanishingly rare), species
+composition converges fairly quickly in practice — typically within about
+5-15 rounds on Easy, and proportionally longer for bigger flocks (Medium
+and Hard), though it still depends on luck (random pairing when you skip a
+breeding choice, random molt victim) and on how well you use your
+breeding choices to reinforce the species you want to win.
 
 ## On-Screen Information
 
