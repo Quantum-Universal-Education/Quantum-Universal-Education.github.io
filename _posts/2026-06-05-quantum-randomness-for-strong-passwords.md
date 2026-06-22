@@ -12,36 +12,33 @@ author:
   - rijojose999
 ---
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+Every password generator has one basic job: choose something an attacker cannot
+guess. That job starts with randomness. If the random numbers are predictable,
+the password or key can look strong while still being weak.
 
-Passwords, encryption keys, recovery codes, and session tokens all depend on one
-quiet ingredient: randomness. If the random numbers are predictable, the rest of
-the security system can look strong while still being easy to attack.
+In this tutorial we will build a small quantum random number generator (QRNG)
+simulation and use it for two security examples:
 
-In this tutorial we will build a beginner-friendly quantum random number
-generator (QRNG) simulation and use it for two daily-life security tasks:
+- making a password from simulated quantum measurement bits;
+- making a toy one-time-pad style key for a short message.
 
-- generating a password from quantum measurement bits;
-- building a toy one-time-pad style key for a short message.
-
-The code is intentionally small and runs with only Python's standard library.
-That makes it easier to focus on the quantum idea before using a real quantum
-device or a full quantum software development kit.
+The code uses only Python's standard library. That keeps the setup simple, so we
+can focus on the quantum idea before bringing in a real device or a full quantum
+software toolkit.
 
 ## Learning Goals
 
-By the end of the tutorial, you should be able to:
+After working through the tutorial, you should be able to:
 
 1. Explain why randomness matters for passwords and encryption keys.
-2. Describe how a Hadamard gate turns \(|0\rangle\) into a 50/50 quantum
-   measurement.
+2. Describe how a Hadamard gate makes a qubit behave like a fair random bit.
 3. Generate ideal quantum measurement bits in Python.
 4. Convert random bits into password characters without modulo bias.
 5. Explain the difference between an educational simulator and a real QRNG.
 
 ## Demo Video
 
-The short walkthrough below summarizes the full project.
+The short walkthrough below shows the project running from start to finish.
 
 <video controls width="100%" poster="/assets/images/qrng_passwords/qrng_password_demo_cover.png">
   <source src="/assets/images/qrng_passwords/qrng_password_demo.mp4" type="video/mp4">
@@ -68,7 +65,7 @@ From the repository root:
 python assets/quantum_programs/qrng_passwords/qrng_passwords.py
 ```
 
-You can also change the password length and the number of sample bits:
+You can also choose a different password length or sample size:
 
 ```bash
 python assets/quantum_programs/qrng_passwords/qrng_passwords.py --password-length 20 --bits 2048
@@ -76,9 +73,9 @@ python assets/quantum_programs/qrng_passwords/qrng_passwords.py --password-lengt
 
 ## Why Randomness Is a Security Tool
 
-A password generator should not "feel random." It should actually make each
-allowed password hard to guess. If a generator uses a weak pattern, an attacker
-can search the likely outputs first.
+A password generator should not just "feel random." It needs to make every
+allowed password hard to guess. If the generator follows a pattern, an attacker
+can try those likely outputs first.
 
 For example, these passwords may look different:
 
@@ -88,9 +85,9 @@ Summer2027!
 Summer2028!
 ```
 
-but they follow a human pattern. A good generator should avoid that kind of
-structure. It should produce values that are unpredictable even when an attacker
-knows the program.
+but they all follow the same human pattern. A good generator avoids that kind of
+structure. Its output should stay unpredictable even if an attacker knows the
+program.
 
 Randomness also matters for encryption. A one-time pad, for example, can hide a
 message only when the key is:
@@ -99,14 +96,14 @@ message only when the key is:
 - at least as long as the message;
 - never reused.
 
-That is why random number generation is not a side detail in cryptography. It
-is one of the foundations.
+That is why random number generation is not a small detail in cryptography. It
+is part of the foundation.
 
 ## The Quantum Idea
 
-A classical coin can be biased by its shape, weight, or the way it is thrown. A
-quantum measurement can be random for a deeper reason: before measurement, the
-state can be in a superposition.
+A classical coin can be biased by its shape, weight, or the way someone throws
+it. A quantum measurement gives us a cleaner classroom example: before we
+measure the qubit, the state can be in a superposition.
 
 Start with one qubit in the state:
 
@@ -120,16 +117,10 @@ $$
 H|0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}} = |+\rangle
 $$
 
-This state has two amplitudes:
+This state has the same amplitude for the two possible measurement outcomes:
 
 $$
-\frac{1}{\sqrt{2}} \quad \text{for } |0\rangle
-$$
-
-and
-
-$$
-\frac{1}{\sqrt{2}} \quad \text{for } |1\rangle
+\frac{1}{\sqrt{2}} \quad \text{for both } |0\rangle \text{ and } |1\rangle
 $$
 
 The probability of a measurement outcome is the squared magnitude of its
@@ -147,25 +138,26 @@ So one measured qubit gives one fair random bit.
 
 ## Simulator Versus Real QRNG
 
-The program below is a teaching simulator. It samples the ideal 50/50 result
-with Python's `secrets` module so that the tutorial can run on any laptop.
+The program below is a teaching simulator. It uses Python's `secrets` module to
+sample the ideal half-and-half result, which means the tutorial can run on any
+laptop.
 
-A real QRNG is different. It measures a physical quantum process, checks the
-device behavior, estimates entropy, and usually applies extraction or
-conditioning before the bits are used in security systems. Standards such as
+A real QRNG is a hardware system. It measures a physical quantum process,
+checks the device behavior, estimates entropy, and usually applies extraction
+or conditioning before the bits are used in security systems. Standards such as
 NIST SP 800-90B discuss how entropy sources should be analyzed for random bit
 generation.
 
-This distinction matters:
+Keep that distinction in mind:
 
-- use this tutorial to understand the workflow;
-- do not claim that the simulator produces hardware quantum randomness;
-- for production security, use a vetted operating-system or hardware random
+- use this tutorial to learn the workflow;
+- do not claim that this simulator produces hardware quantum randomness;
+- for production security, use a vetted operating system or hardware random
   source.
 
 ## Step 1: Measure One Ideal Qubit
 
-Here is the core of the simulator:
+The simulator starts with one measured qubit:
 
 ```python
 import math
@@ -184,9 +176,9 @@ def measure_hadamard_qubit() -> int:
     return secrets.randbelow(2)
 ```
 
-The first part computes the ideal quantum probabilities. The final line samples
-one bit. In a hardware QRNG, this final line would be replaced by a measurement
-from a real physical device.
+The first part computes the ideal probabilities. The final line samples one
+bit. In a hardware QRNG, that last line would be replaced by a measurement from
+a real physical device.
 
 ## Step 2: Generate Many Bits
 
@@ -201,9 +193,9 @@ def quantum_bits(length: int) -> list[int]:
     return [measure_hadamard_qubit() for _ in range(length)]
 ```
 
-If we generate 1024 bits, we should expect the number of zeros and ones to be
-close, but not exactly equal. Randomness does not mean perfect alternation. It
-means the output is unpredictable.
+If we generate 1024 bits, the number of zeros and ones should usually be close,
+but not exactly equal. Randomness does not mean perfect alternation. It means
+the next output is hard to predict.
 
 The script includes a small balance check:
 
@@ -226,24 +218,23 @@ def monobit_report(bits: list[int]) -> str:
     )
 ```
 
-This is not a complete randomness test suite. It is a first sanity check for
-students: the result should usually stay reasonably close to balanced when the
-sample is large.
+This is not a complete randomness test suite. It is just a quick sanity check:
+with a large enough sample, the counts should usually stay reasonably balanced.
 
 ## Step 3: Avoid Modulo Bias
 
-Suppose a password alphabet has 74 possible characters. We might try to turn
-random bits into an integer and then do:
+Suppose a password alphabet has 74 possible characters. A tempting shortcut is
+to turn random bits into an integer and then do:
 
 ```python
 index = random_value % 74
 ```
 
-That looks simple, but it creates a subtle bias. If we draw 7 bits, we get 128
-possible values from 0 to 127. Since 128 is not evenly divisible by 74, some
-password characters will appear more often than others.
+That looks simple, but it creates a small bias. If we draw 7 bits, we get 128
+possible values, from 0 through 127. Since 128 is not evenly divisible by 74,
+some password characters will appear more often than others.
 
-The fix is rejection sampling:
+Rejection sampling avoids that:
 
 1. Compute how many bits are needed to cover the alphabet.
 2. Draw that many bits.
@@ -275,11 +266,12 @@ def sample_alphabet_index(alphabet_size: int) -> int:
             return candidate
 ```
 
-This keeps every character equally likely.
+Now every character is equally likely.
 
 ## Step 4: Generate a Password
 
-Now we choose an alphabet and sample one unbiased index per password character:
+Now we choose an alphabet and sample one unbiased index for each password
+character:
 
 ```python
 import string
@@ -307,7 +299,7 @@ First 32 bits: 10001011011100101001100110101100
 Example password: V4gW*7Eb%Em_#9NE
 ```
 
-Your result will be different when you run the script.
+Your output will be different when you run the script.
 
 ## Step 5: Use Random Bytes as a Toy Key
 
@@ -338,7 +330,7 @@ def quantum_key_bytes(length: int) -> bytes:
     return bytes(output)
 ```
 
-Then try it on a short message:
+Now try it on a short message:
 
 ```python
 message = b"meet at 5"
@@ -352,9 +344,9 @@ print(f"Ciphertext bytes: {ciphertext.hex()}")
 print(f"Recovered message: {recovered!r}")
 ```
 
-This demonstrates the shape of the idea, but remember the real security rules:
-the key must come from a trusted random source, must be at least as long as the
-message, and must never be reused.
+This is only a toy example, but the real security rules are the same: the key
+must come from a trusted random source, must be at least as long as the message,
+and must never be reused.
 
 ## Full Demo Function
 
@@ -382,7 +374,7 @@ def demo(password_length: int, bit_count: int) -> None:
 
 ## What To Try Next
 
-Here are a few extensions:
+Here are a few good next experiments:
 
 - Increase the sample size and watch how the zero/one balance changes.
 - Try different password alphabets and confirm the rejection sampler still
@@ -390,20 +382,19 @@ Here are a few extensions:
 - Add a histogram for character frequencies.
 - Replace the ideal simulator with measurements from a real quantum backend or
   a public QRNG service.
-- Study how randomness extraction turns noisy physical measurements into
-  cleaner random bits.
+- Read about randomness extraction, which turns noisy physical measurements
+  into cleaner random bits.
 
 ## How This Tutorial Started
 
-This tutorial started from a simple security question: where does a strong
-password actually get its unpredictability? That question is a friendly entry
-point into quantum computing because a single Hadamard gate already shows one
-of the field's most important ideas: measurement can turn a carefully prepared
+I started this tutorial from a simple security question: where does a strong
+password actually get its unpredictability? That question turned out to be a
+useful way into quantum computing, because a single Hadamard gate already shows
+one of the field's important ideas: measurement can turn a carefully prepared
 quantum state into a random classical bit.
 
-For students, QRNGs are a useful bridge. They connect abstract notation like
-\(|+\rangle\) and \(P(0)=P(1)=1/2\) to something people use every day:
-passwords, keys, and secure communication.
+For students, QRNGs are a useful bridge. They connect the math of qubit states
+to something people use every day: passwords, keys, and secure communication.
 
 ## AI Assistance Disclosure
 
