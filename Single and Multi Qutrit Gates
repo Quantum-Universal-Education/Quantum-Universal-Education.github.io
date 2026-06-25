@@ -1,0 +1,14 @@
+Today Quantum computing has gained importance, as we need to have more computing power for transmitting large amount of data. Use of bits to transfer data, 
+limits the amount of data and power as bits are capable of transmitting data in only two states namely 0 and 1. Qubits and Qutrits facilitate transmitting data in multiple states. 
+This approach creates more states compared to those provided by bits. 
+
+By the end of this post you will be familiar with,
+    > Single Qutrit Gates 
+    > Multi Qutrit Gates
+    > Why do we need them?
+    > Implementation using NumPy
+    > Representation of Qutrits
+    
+    
+    
+    Note: The above mentioned list may change :)
