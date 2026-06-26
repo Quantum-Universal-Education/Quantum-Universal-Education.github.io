@@ -1,0 +1,10 @@
+qiskit==2.4.1
+qiskit-aer==0.17.2
+qiskit-ibm-runtime==0.47.0
+numpy==2.3.5
+matplotlib==3.10.8
+pandas==2.2.3
+jupyter==1.1.1
+nbconvert==7.17.1
+ipykernel==7.2.0
+pylatexenc==2.10
