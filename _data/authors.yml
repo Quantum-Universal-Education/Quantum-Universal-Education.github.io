@@ -154,3 +154,10 @@ Samanvay Sharma Q:
 Sanskruti Wathare Q:
   name: "Sanskruti Wathare"
 
+rijojose999:
+  name: "rijojose999"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/rijojose999"
+
