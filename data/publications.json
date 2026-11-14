@@ -1,0 +1,66 @@
+[
+  {
+    "year": 2026,
+    "title": "A Quantum Approach to Stochastic Optimization in Insurance Underwriting",
+    "authors": "Bordelon, M., Garfinkel, M., Dixit, V. et al., incl. Maldonado Romo, A.",
+    "venue": "arXiv:2605.01169",
+    "url": "https://arxiv.org/abs/2605.01169"
+  },
+  {
+    "year": 2026,
+    "title": "Towards Natural Gas Contract Selection via Quantum-Guided Independent Set Reduction",
+    "authors": "Dixit, V. et al., incl. Maldonado Romo, A.",
+    "venue": "arXiv:2609.00881",
+    "url": "https://arxiv.org/abs/2609.00881"
+  },
+  {
+    "year": 2026,
+    "title": "A Hybrid Classical-Quantum Approach for Multi-Constrained Location Optimization Problem",
+    "authors": "Saavedra-Benavides, J., Montañez-Barrera, J.A., Maldonado-Romo, A., Sierra-Sosa, D.",
+    "venue": "arXiv:2607.16277",
+    "url": "https://arxiv.org/abs/2607.16277"
+  },
+  {
+    "year": 2025,
+    "title": "Evaluating the Role of Noise Mitigation in QAOA: A Study of Zero-Noise Extrapolation and CVaR",
+    "authors": "Lusso, A., Venere, M., Onofre, V., Maldonado-Romo, A., Montañez-Barrera, A. et al.",
+    "venue": "IEEE Quantum Week (QCE25)",
+    "url": "https://ieeexplore.ieee.org/document/11249897"
+  },
+  {
+    "year": 2024,
+    "title": "Forging Pathways: Quantum Computing Initiatives in Mexico",
+    "authors": "Maldonado-Romo, A., Maldonado-Romo, J.",
+    "venue": "IEEE QCE24",
+    "award": "Best Paper Award, QSEEC 2024",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10821124"
+  },
+  {
+    "year": 2024,
+    "title": "Characterizing the Effects of Zero-Noise Extrapolation on a QAOA Workflow",
+    "authors": "Venere, M., Lusso, A., Onofre, V., Maldonado-Romo, A., Santambrogio, M.D.",
+    "venue": "IEEE Quantum Week (QCE24), poster",
+    "url": "https://ieeexplore.ieee.org/document/10821216"
+  },
+  {
+    "year": 2024,
+    "title": "Quantum Mini-Apps for Engineering Applications: A Case Study",
+    "authors": "Margărit, H., Bowman, A., Karuppasamy, K., Maldonado-Romo, A. et al.",
+    "venue": "arXiv:2411.12920",
+    "url": "https://arxiv.org/abs/2411.12920"
+  },
+  {
+    "year": 2024,
+    "title": "Quantum Block-Matching Algorithm Using Dissimilarity Measure",
+    "authors": "Martínez-Felipe, M., Montiel-Pérez, J., Onofre, V., Maldonado-Romo, A., Young, R.",
+    "venue": "ICSOC 2023 Workshops, Springer LNCS 14518",
+    "url": "https://doi.org/10.1007/978-981-97-0989-2_15"
+  },
+  {
+    "year": 2022,
+    "title": "Quantum Computing Online Workshops and Hackathon for Spanish Speakers: A Case Study",
+    "authors": "Maldonado-Romo, A., Yeh, L.",
+    "venue": "IEEE QCE22 (QSEEC 2022)",
+    "url": "https://arxiv.org/abs/2302.12119"
+  }
+]

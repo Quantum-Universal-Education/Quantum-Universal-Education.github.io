@@ -1,0 +1,178 @@
+[
+  {
+    "date": "2026-11-16",
+    "upcoming": true,
+    "type": "Talk",
+    "title": "Identifying problems that could benefit from quantum computing",
+    "event": "Qiskit Fall Fest 2026, The Catholic University of America",
+    "location": "Washington, DC",
+    "summary": "How to assess whether an application suits a quantum approach."
+  },
+  {
+    "date": "2026-01-01",
+    "dateLabel": "2026",
+    "type": "Workshop",
+    "title": "Introduction to Quantum Computing and Quantum Machine Learning",
+    "event": "University of Arkansas at Little Rock",
+    "location": "Little Rock, AR",
+    "summary": "Two-day workshop with 150+ in-person and online participants, supported by the NSF DART program."
+  },
+  {
+    "date": "2026-07-01",
+    "dateLabel": "2025 & 2026",
+    "type": "Lab",
+    "title": "Noise Lab instructor",
+    "event": "Qiskit Global Summer School",
+    "links": [
+      {
+        "label": "2026 lab",
+        "url": "https://github.com/qiskit-community/qgss-2026/blob/main/lab-2/QGSS2026_Lab2.ipynb"
+      },
+      {
+        "label": "2025 lab",
+        "url": "https://github.com/qiskit-community/qgss-2025/blob/main/lab-2/Lab2.ipynb"
+      }
+    ]
+  },
+  {
+    "date": "2025-11-06",
+    "type": "Workshop",
+    "title": "Introducción a Qiskit 101",
+    "event": "Destino Innovación 2025, Instituto de Física, UNAM",
+    "location": "Mexico City",
+    "links": [
+      {
+        "label": "Event",
+        "url": "https://www.fisica.unam.mx/vinculacion/innovacion/2025/"
+      }
+    ]
+  },
+  {
+    "date": "2025-11-05",
+    "type": "Talk",
+    "title": "QubitHub Qiskit Fall Fest 2025",
+    "event": "QubitHub (virtual)",
+    "links": [
+      {
+        "label": "Event",
+        "url": "https://qubithub.org/fallfest.html"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-15",
+    "dateLabel": "2025",
+    "type": "Talk",
+    "title": "Qiskit Fall Fest 2025",
+    "event": "Universidad del Valle",
+    "location": "Colombia"
+  },
+  {
+    "date": "2025-10-01",
+    "dateLabel": "Oct 2025",
+    "type": "Keynote",
+    "title": "Estado del arte de la computación cuántica",
+    "event": "CONACIC 2025 — Congreso Nacional de Ciencias de la Computación"
+  },
+  {
+    "date": "2025-09-04",
+    "type": "Session",
+    "title": "Quantum Education unconference session",
+    "event": "unitaryCON 2025, Unitary Foundation",
+    "links": [
+      {
+        "label": "Recap",
+        "url": "https://unitary.foundation/posts/2025_ucon_recap/"
+      }
+    ]
+  },
+  {
+    "date": "2024-09-20",
+    "type": "Workshop",
+    "title": "Academic and Professional Training in Quantum Computing: The Importance of Open-Source",
+    "event": "IEEE Quantum Week QCE24 (WKS35), organizer",
+    "links": [
+      {
+        "label": "Program",
+        "url": "https://qce.quantum.ieee.org/2024/workshops-program/"
+      }
+    ]
+  },
+  {
+    "date": "2024-09-16",
+    "dateLabel": "Sep 2024",
+    "type": "Tutorial",
+    "title": "Exploring a Virtual and Customised Laboratory for Quantum Computing Software",
+    "event": "QSEEC 2024, IEEE Quantum Week — with Ricky Young (qBraid)",
+    "links": [
+      {
+        "label": "QSEEC",
+        "url": "https://ed.quantum.ieee.org/qseec-24"
+      }
+    ]
+  },
+  {
+    "date": "2024-03-13",
+    "type": "Talk",
+    "title": "QOSF (México-Canadá)",
+    "event": "Coloquio Internacional: Oportunidades en la Computación Cuántica, BUAP-IPN-UNAM",
+    "location": "Puebla, Mexico",
+    "links": [
+      {
+        "label": "Timetable",
+        "url": "https://indico.buap.mx/event/97/timetable/"
+      }
+    ]
+  },
+  {
+    "date": "2023-10-23",
+    "type": "Lectures",
+    "title": "Analogía clásica-cuántica · Uso de hardware cuántico · Qiskit Runtime",
+    "event": "Escuela de Computación Cuántica en Español (Qiskit Fall Fest 2023)",
+    "links": [
+      {
+        "label": "Program",
+        "url": "https://lpca.univ-littoral.fr/wp-content/uploads/2023/11/Flyer_s1.pdf"
+      }
+    ]
+  },
+  {
+    "date": "2023-09-18",
+    "type": "Talks",
+    "title": "Voluntary mentoring initiative to enhance quantum computing abilities · Utilizing automated quantum software management tools",
+    "event": "QSEEC 2023, IEEE Quantum Week — with QOSF and qBraid",
+    "links": [
+      {
+        "label": "Program",
+        "url": "https://legacy.cs.indiana.edu/~dgerman/2023/QuTE/materials/QSEEC_2023_Program_Book-3.pdf"
+      }
+    ]
+  },
+  {
+    "date": "2022-04-01",
+    "dateLabel": "Apr 2022",
+    "type": "Bootcamp",
+    "title": "Speaker and mentor, Quantum Information Bootcamp",
+    "event": "Physics REBoot Venezuela (ICTP-supported)",
+    "links": [
+      {
+        "label": "Material",
+        "url": "https://indico.ictp.it/event/9969/material/0/0.pdf"
+      }
+    ]
+  },
+  {
+    "date": "2021-10-15",
+    "dateLabel": "2021",
+    "type": "Workshop",
+    "title": "Introducción al Aprendizaje de Máquina Cuántico · Introduction to Quantum Computing (Spanish edition)",
+    "event": "Qiskit Fall Fest 2021, CIC-IPN",
+    "location": "Mexico City",
+    "links": [
+      {
+        "label": "Case study",
+        "url": "https://arxiv.org/abs/2302.12119"
+      }
+    ]
+  }
+]

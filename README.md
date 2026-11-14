@@ -1,16 +1,35 @@
-[![Unitary Fund](https://img.shields.io/badge/Supported%20By-UNITARY%20FUND-brightgreen.svg?style=for-the-badge)](http://unitary.fund)
+# maldoalberto.github.io
 
-  The ECL-2.0 license (boilerplate notice below) consists of the Apache 2.0 license, modified to be specific to the needs of the education communities using this license.  Therefore this site abides by the Apache code of conduct at: http://apache.org/foundation/policies/conduct.html
+Personal site of Alberto Maldonado Romo: research products, talks, and publications.
+Plain HTML, CSS, and JavaScript served by GitHub Pages. No build step.
 
-  Copyright 2020 fullstackquantumcomputation.tech Licensed under the
-  Educational Community License, Version 2.0 (the "License"); you may
-  not use this file except in compliance with the License. You may
-  obtain a copy of the License at
-  
-  http://opensource.org/licenses/ECL-2.0
+## Add content
 
-  Unless required by applicable law or agreed to in writing,
-  software distributed under the License is distributed on an "AS IS"
-  BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-  or implied. See the License for the specific language governing
-  permissions and limitations under the License.
+Edit the JSON files in `data/`. The page renders them automatically.
+
+- `data/products.json`: research products. Set `"featured": true` to show one at the top.
+- `data/talks.json`: talks and workshops. `date` (YYYY-MM-DD) sorts the list; `dateLabel` overrides the shown date; `"upcoming": true` adds a badge.
+- `data/publications.json`: selected publications.
+
+Example talk:
+
+```json
+{
+  "date": "2027-03-10",
+  "type": "Talk",
+  "title": "Talk title",
+  "event": "Event name",
+  "location": "City",
+  "links": [{ "label": "Slides", "url": "https://..." }]
+}
+```
+
+## Preview locally
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000.
+
+The previous site (2022) lives on the `legacy-2022` branch.
