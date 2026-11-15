@@ -3,54 +3,157 @@
     "name": "qregime",
     "featured": true,
     "year": 2026,
-    "tags": ["FTQC", "QEC", "Error mitigation", "Python"],
+    "tags": [
+      "FTQC",
+      "QEC",
+      "Error mitigation",
+      "Python"
+    ],
     "summary": "Open-source tool that decides whether a circuit should run with error mitigation, partial QEC, or full fault tolerance.",
     "details": [
       "Rotated surface-code memory experiments with Stim and PyMatching, with a threshold consistent with the published ~1%.",
       "FTQC resource estimation in physical qubits and runtime, cross-checked against Azure Quantum Resource Estimator and CUDA-Q.",
       "10,000+ lines of Python with CI tests. Apache 2.0."
     ],
-    "links": [{ "label": "GitHub", "url": "https://github.com/MaldoAlberto/qregime" }]
+    "links": [
+      {
+        "label": "Live demo",
+        "url": "qregime.html"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/MaldoAlberto/qregime"
+      }
+    ]
+  },
+  {
+    "name": "Quantum Circuit Playground",
+    "year": 2026,
+    "tags": [
+      "React",
+      "OpenQASM",
+      "Education"
+    ],
+    "summary": "Interactive statevector simulator in React: build circuits on up to four qubits, read Pauli expectation values, export OpenQASM 2.0 for qregime, and see a qregime-style noise estimate across hardware profiles.",
+    "links": [
+      {
+        "label": "Open playground",
+        "url": "playground.html"
+      }
+    ]
+  },
+  {
+    "name": "Qaly the Quantum Cat",
+    "year": 2026,
+    "tags": [
+      "Python",
+      "Manim",
+      "Kokoro TTS",
+      "Outreach"
+    ],
+    "summary": "Open-source educational series of 60-second animated explainers on quantum computing, hardware, and gates, built with Python, Manim, and Kokoro TTS.",
+    "links": [
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/qalycat/"
+      }
+    ]
   },
   {
     "name": "Differentiable Quantum Circuits tutorial",
     "year": 2026,
-    "tags": ["PennyLane", "Catalyst", "JAX", "QEC"],
+    "tags": [
+      "PennyLane",
+      "Catalyst",
+      "JAX",
+      "QEC"
+    ],
     "summary": "Trains a parameterized circuit to solve the ODE y'' + w²y = 0 with parameter-shift derivatives and no training data, then examines hardware noise with a Steane [[7,1,3]] error-correction module, an IBM calibration-based noise model, and error mitigation.",
-    "links": [{ "label": "GitHub", "url": "https://github.com/MaldoAlberto/dqc-qem-qec-tutorial" }]
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/MaldoAlberto/dqc-qem-qec-tutorial"
+      }
+    ]
   },
   {
     "name": "Qiskit Global Summer School 2026 — Noise Lab",
     "year": 2026,
-    "tags": ["Education", "Qiskit", "Noise"],
+    "tags": [
+      "Education",
+      "Qiskit",
+      "Noise"
+    ],
     "summary": "Co-created and taught the Noise Lab for ~12,000 registrants: 155 GitHub stars, 88 forks, translated into Japanese.",
-    "links": [{ "label": "Notebook", "url": "https://github.com/qiskit-community/qgss-2026/blob/main/lab-2/QGSS2026_Lab2.ipynb" }]
+    "links": [
+      {
+        "label": "Notebook",
+        "url": "https://github.com/qiskit-community/qgss-2026/blob/main/lab-2/QGSS2026_Lab2.ipynb"
+      }
+    ]
   },
   {
     "name": "Qiskit Global Summer School 2025 — Noise Lab",
     "year": 2025,
-    "tags": ["Education", "Qiskit", "Noise"],
+    "tags": [
+      "Education",
+      "Qiskit",
+      "Noise"
+    ],
     "summary": "Co-created and taught the Noise Lab for 8,000+ registrants from 115 countries, translated into Japanese and Korean.",
-    "links": [{ "label": "Notebook", "url": "https://github.com/qiskit-community/qgss-2025/blob/main/lab-2/Lab2.ipynb" }]
+    "links": [
+      {
+        "label": "Notebook",
+        "url": "https://github.com/qiskit-community/qgss-2025/blob/main/lab-2/Lab2.ipynb"
+      }
+    ]
   },
   {
     "name": "Quantum Counselor for Portfolio Investment",
     "year": 2022,
-    "tags": ["QHack 2022", "QAOA", "VQE", "QML"],
+    "tags": [
+      "QHack 2022",
+      "QAOA",
+      "VQE",
+      "QML"
+    ],
     "summary": "Co-developed. 1st place, QHack 2022 Financial challenge. Hybrid LSTM and quantum neural network forecasting feeding a multi-period portfolio optimization formulated as a QUBO, solved with QAOA and VQE and benchmarked against CPLEX.",
-    "links": [{ "label": "GitHub", "url": "https://github.com/alejomonbar/Quantum-Counselor-for-Portfolio-Investment" }]
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/alejomonbar/Quantum-Counselor-for-Portfolio-Investment"
+      }
+    ]
   },
   {
     "name": "Quantum Supply Chain Manager",
     "year": 2022,
-    "tags": ["CDL 2022", "QML", "QAOA"],
+    "tags": [
+      "CDL 2022",
+      "QML",
+      "QAOA"
+    ],
     "summary": "Co-developed at Creative Destruction Lab 2022. Backorder prediction on 1.69M products with a quantum neural network, plus vehicle routing with QAOA and VQE benchmarked against Docplex.",
-    "links": [{ "label": "GitHub", "url": "https://github.com/MaldoAlberto/Quantum-Supply-Chain-Manager" }]
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/MaldoAlberto/Quantum-Supply-Chain-Manager"
+      }
+    ]
   },
   {
     "name": "Quantum K-NN",
-    "tags": ["QML", "Qiskit", "GPU"],
+    "tags": [
+      "QML",
+      "Qiskit",
+      "GPU"
+    ],
     "summary": "Quantum k-nearest-neighbors implementation with Qiskit and GPU.",
-    "links": [{ "label": "GitHub", "url": "https://github.com/MaldoAlberto/QKnn" }]
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/MaldoAlberto/QKnn"
+      }
+    ]
   }
 ]

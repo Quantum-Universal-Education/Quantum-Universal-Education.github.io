@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>qregime demo</title>
+  <meta name="description" content="qregime: decide whether a quantum circuit should run with error mitigation, partial QEC, or full fault tolerance. Live demo, example results, and tutorial.">
+  <meta property="og:title" content="qregime — QEM, QEC or FTQC?">
+  <meta property="og:description" content="Live demo and example results for qregime, an open decision layer for quantum error handling.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%2315803d' stroke-width='3'/><circle cx='16' cy='16' r='4' fill='%2315803d'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a class="brand" href="index.html">AMR<span class="dot">⟩</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#products">Research</a></li>
+        <li><a href="index.html#talks">Talks</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow mono">research product · open source · Apache 2.0</p>
+      <h1 class="mono">qregime</h1>
+      <p class="lede">QEM, QEC or FTQC? Before you run a quantum circuit, someone has to decide how errors will be handled. qregime makes that choice explicit: give it an OpenQASM 2 circuit and a hardware profile, and it returns the cheapest regime that meets your reliability target, or a quantified gap if none does.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="playground.html">Build a circuit</a>
+        <a class="btn" href="https://github.com/MaldoAlberto/qregime" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="https://colab.research.google.com/github/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noopener">Open tutorial in Colab ↗</a>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head">
+        <h2>Three regimes</h2>
+        <p>The choice decides whether a circuit needs 16 physical qubits or 30,000.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><span class="meta">QEM</span><h3>Error mitigation</h3><p>Run on raw physical qubits and correct the statistics afterward. Cheapest in qubits, limited by circuit depth and noise.</p></article>
+        <article class="card"><span class="meta">PARTIAL QEC</span><h3>Small-distance codes</h3><p>Encode with a surface code smaller than full fault tolerance needs. The best reliability reachable with the qubits you actually have.</p></article>
+        <article class="card"><span class="meta">FTQC</span><h3>Full fault tolerance</h3><p>Surface code plus magic-state factories, sized to the logical error budget. Cost reported in physical qubits and runtime.</p></article>
+      </div>
+    </section>
+
+    <section id="demo" class="section wrap">
+      <div class="section-head">
+        <h2>Live demo</h2>
+        <p>The hosted demo is coming soon. Meanwhile, build a circuit in the <a href="playground.html">Quantum Circuit Playground</a>, export its OpenQASM, and run qregime locally or in the <a href="https://colab.research.google.com/github/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noopener">Colab tutorial ↗</a>.</p>
+      </div>
+      <pre class="pg-qasm mono">pip install git+https://github.com/MaldoAlberto/qregime.git
+qregime decide circuit.qasm --hardware trapped_ion_quantinuum_h2 --budget 5000</pre>
+      <!-- Hugging Face Space embed goes here once published:
+      <div class="demo-frame"><iframe src="https://__SPACE_HOST__.hf.space" title="qregime live demo" loading="lazy"></iframe></div>
+      -->
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head">
+        <h2>Results on example circuits</h2>
+        <p id="results-caption">Precomputed with qregime at a 50% reliability target.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="results" id="results"></table>
+      </div>
+      <p class="demo-note">Budgets: 1,121 physical qubits on IBM heavy-hex, 5,000 on trapped ions. GAP means no regime meets the target within the budget; it is a real answer, not an error.</p>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Home</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const n = (x) => (typeof x === "number" ? x.toLocaleString("en-US") : "—");
+    const cls = (r) => (r.startsWith("GAP") ? "gap" : r.startsWith("PARTIAL") ? "pqec" : r.startsWith("FTQC") ? "ftqc" : "qem");
+    fetch("data/qregime-results.json")
+      .then((r) => r.json())
+      .then((d) => {
+        const hw = Object.entries(d.hardware);
+        document.getElementById("results-caption").textContent =
+          `Precomputed with qregime (commit ${d.qregime_commit}) at a ${Math.round(d.reliability_target * 100)}% reliability target.`;
+        const head = `<thead><tr><th>Circuit</th><th>Qubits</th><th>T-count</th>${hw
+          .map(([, h]) => `<th>${esc(h.name)}<br><span class="mono">p₂q = ${h.p_2q}</span></th>`)
+          .join("")}</tr></thead>`;
+        const body = d.circuits
+          .map((c) => `<tr><td>${esc(c.circuit)}</td><td>${c.qubits}</td><td>${n(c.tcount)}</td>${hw
+            .map(([k]) => {
+              const r = c.results[k];
+              return `<td><span class="regime ${cls(r.regime)}">${esc(r.regime)}</span>${r.cost != null ? `<br><span class="mono">${n(r.cost)} qubits</span>` : ""}</td>`;
+            })
+            .join("")}</tr>`)
+          .join("");
+        document.getElementById("results").innerHTML = head + `<tbody>${body}</tbody>`;
+      })
+      .catch((e) => console.error(e));
+  </script>
+</body>
+</html>

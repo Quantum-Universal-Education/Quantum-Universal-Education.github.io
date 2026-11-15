@@ -1,0 +1,230 @@
+{
+  "qregime_commit": "f045546",
+  "reliability_target": 0.5,
+  "hardware": {
+    "superconductor_ibm": {
+      "name": "Superconducting (IBM heavy-hex)",
+      "p_2q": 0.0032
+    },
+    "trapped_ion_quantinuum_h2": {
+      "name": "Trapped-ion Quantinuum H2",
+      "p_2q": 0.001
+    },
+    "trapped_ion_ionq_oxford": {
+      "name": "Trapped-ion IonQ/Oxford Ionics",
+      "p_2q": 0.0001
+    }
+  },
+  "circuits": [
+    {
+      "circuit": "QAOA (farm)",
+      "file": "qaoa_farm.qasm",
+      "qubits": 17,
+      "gates": 151,
+      "tcount": 56,
+      "results": {
+        "superconductor_ibm": {
+          "regime": "QEM",
+          "cost": 17,
+          "budget": 1121,
+          "qem_reliability": 0.7788,
+          "ftqc_qubits": null
+        },
+        "trapped_ion_quantinuum_h2": {
+          "regime": "QEM",
+          "cost": 17,
+          "budget": 5000,
+          "qem_reliability": 0.9249,
+          "ftqc_qubits": 2744
+        },
+        "trapped_ion_ionq_oxford": {
+          "regime": "QEM",
+          "cost": 17,
+          "budget": 5000,
+          "qem_reliability": 0.9922,
+          "ftqc_qubits": 504
+        }
+      }
+    },
+    {
+      "circuit": "VQE ansatz",
+      "file": "vqe_ansatz.qasm",
+      "qubits": 8,
+      "gates": 254,
+      "tcount": 48,
+      "results": {
+        "superconductor_ibm": {
+          "regime": "QEM",
+          "cost": 8,
+          "budget": 1121,
+          "qem_reliability": 0.9561,
+          "ftqc_qubits": null
+        },
+        "trapped_ion_quantinuum_h2": {
+          "regime": "QEM",
+          "cost": 8,
+          "budget": 5000,
+          "qem_reliability": 0.9861,
+          "ftqc_qubits": 1862
+        },
+        "trapped_ion_ionq_oxford": {
+          "regime": "QEM",
+          "cost": 8,
+          "budget": 5000,
+          "qem_reliability": 0.9986,
+          "ftqc_qubits": 342
+        }
+      }
+    },
+    {
+      "circuit": "Grover",
+      "file": "grover.qasm",
+      "qubits": 5,
+      "gates": 893,
+      "tcount": 172,
+      "results": {
+        "superconductor_ibm": {
+          "regime": "QEM",
+          "cost": 5,
+          "budget": 1121,
+          "qem_reliability": 0.6303,
+          "ftqc_qubits": null
+        },
+        "trapped_ion_quantinuum_h2": {
+          "regime": "QEM",
+          "cost": 5,
+          "budget": 5000,
+          "qem_reliability": 0.8658,
+          "ftqc_qubits": 1568
+        },
+        "trapped_ion_ionq_oxford": {
+          "regime": "QEM",
+          "cost": 5,
+          "budget": 5000,
+          "qem_reliability": 0.9857,
+          "ftqc_qubits": 288
+        }
+      }
+    },
+    {
+      "circuit": "QFT, 10 qubits",
+      "file": "qft10.qasm",
+      "qubits": 10,
+      "gates": 830,
+      "tcount": 135,
+      "results": {
+        "superconductor_ibm": {
+          "regime": "QEM",
+          "cost": 10,
+          "budget": 1121,
+          "qem_reliability": 0.7142,
+          "ftqc_qubits": null
+        },
+        "trapped_ion_quantinuum_h2": {
+          "regime": "QEM",
+          "cost": 10,
+          "budget": 5000,
+          "qem_reliability": 0.9003,
+          "ftqc_qubits": 3402
+        },
+        "trapped_ion_ionq_oxford": {
+          "regime": "QEM",
+          "cost": 10,
+          "budget": 5000,
+          "qem_reliability": 0.9896,
+          "ftqc_qubits": 378
+        }
+      }
+    },
+    {
+      "circuit": "8-bit adder",
+      "file": "adder8.qasm",
+      "qubits": 18,
+      "gates": 273,
+      "tcount": 112,
+      "results": {
+        "superconductor_ibm": {
+          "regime": "QEM",
+          "cost": 18,
+          "budget": 1121,
+          "qem_reliability": 0.7533,
+          "ftqc_qubits": null
+        },
+        "trapped_ion_quantinuum_h2": {
+          "regime": "QEM",
+          "cost": 18,
+          "budget": 5000,
+          "qem_reliability": 0.9133,
+          "ftqc_qubits": 4698
+        },
+        "trapped_ion_ionq_oxford": {
+          "regime": "QEM",
+          "cost": 18,
+          "budget": 5000,
+          "qem_reliability": 0.9933,
+          "ftqc_qubits": 1450
+        }
+      }
+    },
+    {
+      "circuit": "Kicked Ising, 16 qubits",
+      "file": "kicked_ising_analog_16q.qasm",
+      "qubits": 16,
+      "gates": 244,
+      "tcount": 124,
+      "results": {
+        "superconductor_ibm": {
+          "regime": "QEM",
+          "cost": 16,
+          "budget": 1121,
+          "qem_reliability": 0.6807,
+          "ftqc_qubits": null
+        },
+        "trapped_ion_quantinuum_h2": {
+          "regime": "QEM",
+          "cost": 16,
+          "budget": 5000,
+          "qem_reliability": 0.8869,
+          "ftqc_qubits": 4374
+        },
+        "trapped_ion_ionq_oxford": {
+          "regime": "QEM",
+          "cost": 16,
+          "budget": 5000,
+          "qem_reliability": 0.9881,
+          "ftqc_qubits": 1350
+        }
+      }
+    },
+    {
+      "circuit": "Shor-like sequential",
+      "file": "shor_like_sequential.qasm",
+      "qubits": 16,
+      "gates": 28618,
+      "tcount": 3930,
+      "results": {
+        "superconductor_ibm": {
+          "regime": "GAP",
+          "cost": null,
+          "budget": 1121,
+          "qem_reliability": 0.0,
+          "ftqc_qubits": null
+        },
+        "trapped_ion_quantinuum_h2": {
+          "regime": "PARTIAL_QEC (d=7)",
+          "cost": 2646,
+          "budget": 5000,
+          "qem_reliability": 0.1,
+          "ftqc_qubits": 6534
+        },
+        "trapped_ion_ionq_oxford": {
+          "regime": "QEM",
+          "cost": 16,
+          "budget": 5000,
+          "qem_reliability": 0.8333,
+          "ftqc_qubits": 1350
+        }
+      }
+    }
+  ]
+}

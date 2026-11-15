@@ -9,7 +9,7 @@
   <meta property="og:description" content="Research products, talks, and publications on quantum optimization, error mitigation, and fault tolerance.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://maldoalberto.github.io/">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%237c5cff' stroke-width='3'/><circle cx='16' cy='16' r='4' fill='%237c5cff'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%2315803d' stroke-width='3'/><circle cx='16' cy='16' r='4' fill='%2315803d'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -22,6 +22,7 @@
       <ul class="nav-links">
         <li><a href="#products">Research</a></li>
         <li><a href="#talks">Talks</a></li>
+        <li><a href="#news">News</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -62,6 +63,52 @@
       <ol id="talk-list" class="timeline"></ol>
     </section>
 
+    <section id="videos" class="section wrap" hidden>
+      <div class="section-head">
+        <h2>Videos</h2>
+        <p>Recorded talks, tutorials, and interviews.</p>
+      </div>
+      <div id="video-grid" class="video-grid"></div>
+    </section>
+
+    <section id="news" class="section wrap">
+      <div class="section-head">
+        <h2>News &amp; media</h2>
+        <p>Features, awards, and outreach.</p>
+      </div>
+      <ul id="news-list" class="news"></ul>
+    </section>
+
+    <section id="posts" class="section wrap">
+      <div class="section-head">
+        <h2>Featured posts</h2>
+        <p>Quantum computing outreach on LinkedIn, Instagram, and TikTok. Follow <a href="https://www.instagram.com/qalycat/">Qaly the Quantum Cat</a> for 60-second explainers.</p>
+      </div>
+      <div id="post-grid" class="post-grid"></div>
+    </section>
+
+    <section id="photos" class="section wrap" hidden>
+      <div class="section-head">
+        <h2>Photos</h2>
+        <p>Talks, workshops, and community events.</p>
+      </div>
+      <div id="photo-grid" class="photo-grid"></div>
+    </section>
+
+    <section id="impact" class="section wrap" hidden>
+      <div class="section-head">
+        <h2>Impact</h2>
+        <p id="impact-asof"></p>
+      </div>
+      <div class="impact">
+        <figure class="cite-chart">
+          <figcaption id="cite-caption">Citations per year</figcaption>
+          <div id="cite-bars" class="cite-bars" role="img"></div>
+        </figure>
+        <ul id="impact-tiles" class="impact-tiles"></ul>
+      </div>
+    </section>
+
     <section id="publications" class="section wrap">
       <div class="section-head">
         <h2>Selected publications</h2>
@@ -84,6 +131,7 @@
   </main>
 
   <footer class="footer wrap">
+    <div id="share" class="share"></div>
     <p>© <span id="year"></span> Alberto Maldonado Romo</p>
   </footer>
 

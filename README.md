@@ -24,6 +24,12 @@ Example talk:
 }
 ```
 
+## Pages
+
+- `index.html`: home, rendered from `data/*.json` by `assets/main.js`.
+- `qregime.html`: qregime showcase, live demo embed, and precomputed results (`data/qregime-results.json`).
+- `playground.html`: Quantum Circuit Playground, a React 18 app (`assets/playground.js`, loaded from CDN with htm, no build step).
+
 ## Preview locally
 
 ```bash

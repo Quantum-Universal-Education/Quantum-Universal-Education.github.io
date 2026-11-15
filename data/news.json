@@ -1,0 +1,167 @@
+[
+  {
+    "date": "2026-11",
+    "title": "Featured by IBM Quantum for the Qiskit Global Summer School Noise Lab",
+    "source": "IBM Quantum on LinkedIn",
+    "summary": "IBM Quantum highlighted the Noise Lab I co-created for making quantum computing accessible to learners worldwide.",
+    "url": "https://www.linkedin.com/posts/ibmquantum-quantumcomputing-ibmresearch-share-7527007363954941952-YH0r/"
+  },
+  {
+    "date": "2026-10",
+    "title": "Launched Qaly the Quantum Cat",
+    "source": "Instagram & TikTok",
+    "summary": "A weekly series of 60-second, equation-free quantum computing explainers for a general audience.",
+    "url": "https://www.instagram.com/qalycat/"
+  },
+  {
+    "date": "2026-08",
+    "title": "#LikeAnIBMer video series",
+    "source": "IBM on LinkedIn",
+    "summary": "Explained basic quantum computing concepts, such as superposition, and how to use IBM quantum hardware.",
+    "url": "https://www.linkedin.com/posts/likeanibmer-ugcPost-7494014973443031040-E8It/"
+  },
+  {
+    "date": "2026",
+    "title": "LinkedIn technical post series on quantum noise and error correction",
+    "source": "LinkedIn",
+    "summary": "20+ original posts on noise, error mitigation, error correction, compilation, and hardware tradeoffs.",
+    "url": "https://linkedin.com/in/albertomaldonadoromo/recent-activity/all/"
+  },
+  {
+    "date": "2025",
+    "title": "Building the Future of Quantum Computing in Mexico and Latin America",
+    "source": "International Year of Quantum (IYQ 2025)",
+    "summary": "Featured as the organizer of Mexico's first Qiskit Fall Fest, credited with helping kickstart the country's quantum computing community.",
+    "url": "https://quantum2025.org/news-link/building-the-future-of-quantum-computing-in-mexico-latin-america/"
+  },
+  {
+    "date": "2024-09",
+    "title": "Best Paper Award, QSEEC 2024",
+    "source": "IEEE Quantum Week",
+    "summary": "For “Forging Pathways: Quantum Computing Initiatives in Mexico.”",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10821124"
+  },
+  {
+    "date": "2022-12",
+    "title": "Universidad de Concepción team wins the hackathon at Qiskit Fall Fest Mexico-IPN 2022",
+    "source": "El Mostrador",
+    "summary": "Coverage of the hackathon I organized, with a Quantum Universal Education prize category.",
+    "url": "https://www.elmostrador.cl/cultura/2022/12/07/estudiantes-de-u-de-concepcion-ganan-hackathon-internacional-de-computacion-cuantica/"
+  },
+  {
+    "date": "2022-06",
+    "title": "Estudiante del IPN gana tres primeros lugares en el concurso internacional Hackathon QHack",
+    "source": "IPN press release C-069-2022",
+    "summary": "QHack 2022: 1st Financial, 1st QAOA, 1st Entrepreneur, and 2nd in the Google Quantum AI Research Challenge.",
+    "url": "https://www.ipn.mx/imageninstitucional/comunicados/ver-comunicado.html?y=2022&n=69&t=6",
+    "extra": [
+      {
+        "label": "English PDF",
+        "url": "https://www.ipn.mx/assets/files/ccs/docs/comunicados-ingles/2022/06/C-069-2022-en.pdf"
+      },
+      {
+        "label": "La Crónica",
+        "url": "https://www.cronica.com.mx/academia/estudiante-ipn-gana-tres-primeros-lugares-hackathon-qhack.html"
+      },
+      {
+        "label": "Universidad de Guanajuato",
+        "url": "https://www.ugto.mx/noticias/quehacer-institucional/103-orgullo-ug/17624-con-proyecto-de-computacion-cuantica-dupla-ug-ipn-ganan-tres-categorias-en-evento-internacional-qhack-2022"
+      },
+      {
+        "label": "Vértigo Político",
+        "url": "https://www.vertigopolitico.com/columnas/j-alberto-castro-innovacion/notas/experto-mexicano-en-computacion-cuantica-gana-en-hackathon-qhack"
+      },
+      {
+        "label": "Ovaciones",
+        "url": "https://ovaciones.com/estudiantes-mexicanos-ganan-concurso-internacional-hackathon-qhack/"
+      },
+      {
+        "label": "Milenio",
+        "url": "https://www.milenio.com/opinion/fernando-fuentes/fronteras-de-la-ciencia/estudiantes-ganan-concurso-internacional"
+      }
+    ]
+  },
+  {
+    "date": "2021-12",
+    "title": "IBM Quantum Challenge Fall 2021: 7th place of 3,100+ participants",
+    "source": "CIC-IPN",
+    "summary": "News feature on the result and my Qiskit Advocate work.",
+    "url": "https://www.cic.ipn.mx/media/attachments/2021/12/08/alberto-maldonado-romo.pdf",
+    "extra": [
+      {
+        "label": "IBM Quantum blog",
+        "url": "https://www.ibm.com/quantum/blog/fall-2021-quantum-challenge-results"
+      }
+    ]
+  },
+  {
+    "date": "2020",
+    "title": "These Qiskitters are starting an open-source quantum education not-for-profit",
+    "source": "Qiskit blog",
+    "summary": "Featured as a founding contributor of Quantum Universal Education.",
+    "url": "https://medium.com/qiskit/these-qiskitters-are-starting-an-open-source-quantum-education-not-for-profit-bd752be17bb0"
+  },
+  {
+    "date": "2025-11",
+    "title": "Ocurre 8va edición de “Destino: Innovación”",
+    "source": "Instituto de Física, UNAM",
+    "summary": "Presented Qiskit 101 as IBM Quantum at the Instituto de Física, UNAM.",
+    "url": "https://www.fisica.unam.mx/organizacion/comunicacion/noticia.php?id=2417"
+  },
+  {
+    "date": "2025-07",
+    "title": "Cómputo cuántico transformará industrias en todos los campos: especialista",
+    "source": "Amexi",
+    "summary": "Interview on quantum computing education and accessibility.",
+    "url": "https://amexi.com.mx/nacional/computo-cuantico-transformara-industrias-en-todos-los-campos-especialista/"
+  },
+  {
+    "date": "2024-11-28",
+    "title": "Best Paper Award a tercia de docentes",
+    "source": "Gaceta UNAM",
+    "summary": "Coverage of the QSEEC 2024 Best Paper Award for “Forging Pathways: Quantum Computing Initiatives in Mexico.”",
+    "url": "https://www.gaceta.unam.mx/best-paper-award-a-tercia-de-docentes/"
+  },
+  {
+    "date": "2024-11-12",
+    "title": "Académicos mexicanos, premiados por promover la computación cuántica",
+    "source": "La Jornada",
+    "summary": "National coverage of the QSEEC 2024 Best Paper Award.",
+    "url": "https://www.jornada.com.mx/noticia/2024/11/12/ciencia-y-tecnologia/academicos-mexicanos-premiados-por-promover-la-computacion-cuantica-7560"
+  },
+  {
+    "date": "2021-04",
+    "title": "QCHack 2021: 1st place with Boulder Opal pulse-level control",
+    "source": "CIC-IPN",
+    "summary": "Single-qubit gate fidelity to 99 percent at the Quantum Coalition hackathon.",
+    "url": "https://www.cic.ipn.mx/index.php/noticias/n2021/242-hackaton-drpi"
+  },
+  {
+    "date": "2024-11-30",
+    "title": "Reconocen a alumno del IPN por artículo sobre ciencia cuántica",
+    "source": "Gaceta Politécnica, Selección No. 179",
+    "summary": "Profile and recognition for the QSEEC 2024 Best Paper.",
+    "url": "https://www.ipn.mx/assets/files/imageninstitucional/docs/gaceta-seleccion/2024/11/g-179.pdf"
+  },
+  {
+    "date": "2024-12-18",
+    "title": "Computación cuántica (dossier)",
+    "source": "Revista Sistemas, ACIS, No. 173",
+    "summary": "Participation and career profile in the issue on quantum technologies.",
+    "url": "https://sistemas.acis.org.co/index.php/sistemas/article/view/Cara%20y%20Sello%20173"
+  },
+  {
+    "date": "2022-12",
+    "title": "Unitary Fund ambassadors announced",
+    "source": "Unitary Foundation",
+    "summary": "Named a Unitary Fund Ambassador for work with Quantum Universal Education and QOSF.",
+    "url": "https://unitary.foundation/posts/2022_ambassadors/"
+  },
+  {
+    "date": "2020",
+    "title": "Founding team",
+    "source": "Quantum Universal Education",
+    "summary": "Biography on the founding team page.",
+    "url": "https://quantumuniversal.org/about-us/"
+  }
+]

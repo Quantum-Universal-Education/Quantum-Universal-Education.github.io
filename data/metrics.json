@@ -1,0 +1,33 @@
+{
+  "as_of": "2026-11",
+  "citations_per_year": {
+    "source": "Google Scholar",
+    "url": "https://scholar.google.com/citations?user=vW75Y6QAAAAJ",
+    "years": {
+      "2020": 5,
+      "2021": 7,
+      "2022": 41,
+      "2023": 52,
+      "2024": 88,
+      "2025": 157
+    }
+  },
+  "tiles": [
+    {
+      "value": "192",
+      "label": "citations across 14 works (ResearchGate)"
+    },
+    {
+      "value": "320+",
+      "label": "QOSF mentorship alumni · 30 mentors · 400 applicants per cohort"
+    },
+    {
+      "value": "3,000",
+      "label": "attendees at the largest event I organized"
+    },
+    {
+      "value": "40,000+",
+      "label": "LinkedIn impressions on technical posts in 2026"
+    }
+  ]
+}

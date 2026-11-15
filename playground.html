@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum Circuit Playground</title>
+  <meta name="description" content="Build a quantum circuit in your browser and watch the state vector and measurement probabilities update live. Made with React by Alberto Maldonado Romo.">
+  <meta property="og:title" content="Quantum Circuit Playground">
+  <meta property="og:description" content="Build a quantum circuit in your browser and share it with a link.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%2315803d' stroke-width='3'/><circle cx='16' cy='16' r='4' fill='%2315803d'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a class="brand" href="index.html">AMR<span class="dot">⟩</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#products">Research</a></li>
+        <li><a href="index.html#talks">Talks</a></li>
+        <li><a href="index.html#news">News</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap pg-hero">
+      <p class="eyebrow mono">interactive · built with React</p>
+      <h1>Quantum Circuit Playground</h1>
+      <p class="lede">Build a circuit on up to four qubits and watch the state vector, measurement probabilities, and Pauli expectation values update as you go. Export it as OpenQASM 2.0, see a qregime-style noise estimate, and share any circuit with a link.</p>
+    </section>
+    <section class="wrap">
+      <div id="playground"><noscript>This playground needs JavaScript.</noscript></div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Home</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+  <script src="assets/playground.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

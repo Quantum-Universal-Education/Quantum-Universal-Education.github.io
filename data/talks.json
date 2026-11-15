@@ -51,7 +51,7 @@
     "date": "2025-11-05",
     "type": "Talk",
     "title": "QubitHub Qiskit Fall Fest 2025",
-    "event": "QubitHub (virtual)",
+    "event": "QubitHub",
     "links": [
       {
         "label": "Event",
@@ -68,11 +68,17 @@
     "location": "Colombia"
   },
   {
-    "date": "2025-10-01",
-    "dateLabel": "Oct 2025",
+    "date": "2025-10-10",
+    "dateLabel": "Oct 10, 2025",
     "type": "Keynote",
     "title": "Estado del arte de la computación cuántica",
-    "event": "CONACIC 2025 — Congreso Nacional de Ciencias de la Computación"
+    "event": "CONACIC 2025 — Congreso Nacional de Ciencias de la Computación",
+    "links": [
+      {
+        "label": "Program",
+        "url": "https://conacic2025.siycise.org/program"
+      }
+    ]
   },
   {
     "date": "2025-09-04",
@@ -126,10 +132,18 @@
   },
   {
     "date": "2023-10-23",
-    "type": "Lectures",
+    "type": "Lecture",
     "title": "Analogía clásica-cuántica · Uso de hardware cuántico · Qiskit Runtime",
     "event": "Escuela de Computación Cuántica en Español (Qiskit Fall Fest 2023)",
     "links": [
+      {
+        "label": "Video: Uso de hardware cuántico",
+        "url": "https://www.youtube.com/watch?v=ZelwmKtT0C8"
+      },
+      {
+        "label": "Video: Qiskit Runtime",
+        "url": "https://www.youtube.com/watch?v=hXilHo3Fe3E"
+      },
       {
         "label": "Program",
         "url": "https://lpca.univ-littoral.fr/wp-content/uploads/2023/11/Flyer_s1.pdf"
@@ -138,7 +152,7 @@
   },
   {
     "date": "2023-09-18",
-    "type": "Talks",
+    "type": "Talk",
     "title": "Voluntary mentoring initiative to enhance quantum computing abilities · Utilizing automated quantum software management tools",
     "event": "QSEEC 2023, IEEE Quantum Week — with QOSF and qBraid",
     "links": [
@@ -170,8 +184,155 @@
     "location": "Mexico City",
     "links": [
       {
+        "label": "Video: QML (ES)",
+        "url": "https://www.youtube.com/watch?v=YVfUrGcUxVQ"
+      },
+      {
+        "label": "Video: Intro QC (ES)",
+        "url": "https://www.youtube.com/watch?v=hMH2jJO3Xq8"
+      },
+      {
+        "label": "Video: Intro QC (EN)",
+        "url": "https://www.youtube.com/watch?v=x0RMjEdHOmw"
+      },
+      {
         "label": "Case study",
         "url": "https://arxiv.org/abs/2302.12119"
+      }
+    ]
+  },
+  {
+    "date": "2025-11-07",
+    "type": "Talk",
+    "title": "Uso de hardware cuántico & Qiskit Runtime",
+    "event": "Qiskit Fall Fest FIUBA, Universidad de Buenos Aires",
+    "location": "Argentina",
+    "links": [
+      {
+        "label": "Video",
+        "url": "https://www.youtube.com/watch?v=IRNj8OgQwUQ"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-10",
+    "dateLabel": "Oct 2025",
+    "type": "Talk",
+    "title": "IBM Quantum speaker, Day 5",
+    "event": "University of Ibadan Qiskit Fall Fest 2025",
+    "location": "Nigeria",
+    "links": [
+      {
+        "label": "Video",
+        "url": "https://www.youtube.com/watch?v=LYkH94OUmT0"
+      }
+    ]
+  },
+  {
+    "date": "2025-01-13",
+    "dateLabel": "Jan 2025",
+    "type": "Interview",
+    "title": "Explorando la computación cuántica y ciberseguridad",
+    "event": "Ciberseguridad en español (YouTube)",
+    "links": [
+      {
+        "label": "Video (1 h 30 min)",
+        "url": "https://www.youtube.com/watch?v=AudH_GiP_Zg"
+      },
+      {
+        "label": "Short (58 s)",
+        "url": "https://www.youtube.com/watch?v=VJK9bJIK8XQ"
+      }
+    ]
+  },
+  {
+    "date": "2024-10-14",
+    "dateLabel": "Oct 2024",
+    "type": "Tutorial",
+    "title": "Tutorial Qiskit: Resolviendo un Tic-Tac-Toe",
+    "event": "Qiskit Fall Fest 2024, Quantum Colombia",
+    "links": [
+      {
+        "label": "Video",
+        "url": "https://www.youtube.com/watch?v=hgc2p_7afPo"
+      }
+    ]
+  },
+  {
+    "date": "2023-12-18",
+    "type": "Video",
+    "title": "¿Cómo usar una computadora cuántica antes de que acabe el 2023?",
+    "event": "YouTube tutorial: Qiskit Runtime, Sampler and Estimator with the Draper adder",
+    "links": [
+      {
+        "label": "Video",
+        "url": "https://www.youtube.com/watch?v=NK2RHtiJTr8"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-30",
+    "type": "Organizer",
+    "title": "Quantum Together",
+    "event": "CECAv, UNAM — Auditorio Raúl J. Marsal, Ciudad Universitaria",
+    "location": "Mexico City",
+    "links": [
+      {
+        "label": "Event",
+        "url": "https://cecav.unam.mx/qtogether/2025/"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-01",
+    "dateLabel": "2022",
+    "type": "Organizer",
+    "title": "Coloquio de Cómputo Cuántico, 3rd edition — organizing committee chair",
+    "event": "CIC-IPN",
+    "location": "Mexico City",
+    "links": [
+      {
+        "label": "Event",
+        "url": "https://proyectosrym.cic.ipn.mx/qcoloquio/"
+      }
+    ]
+  },
+  {
+    "date": "2026-04-08",
+    "type": "Keynote",
+    "title": "Keynote",
+    "event": "Nordic Qiskit User Group",
+    "location": "Europe",
+    "links": [
+      {
+        "label": "Video",
+        "url": "https://www.youtube.com/watch?v=ZJyUPuZ93wQ"
+      }
+    ]
+  },
+  {
+    "date": "2022-10-18",
+    "dateLabel": "Oct 2022",
+    "type": "Workshop",
+    "title": "Resolviendo puzzles usando computación cuántica",
+    "event": "Qiskit Fall Fest CIC-IPN Mexico 2022",
+    "location": "Mexico City",
+    "links": [
+      {
+        "label": "Video",
+        "url": "https://www.youtube.com/watch?v=xC9EC-N6h9I"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-29",
+    "type": "Video",
+    "title": "PIQUE: Grant Winner Video Series",
+    "event": "Unitary Foundation — with Lia Yeh and Sam Sharma",
+    "links": [
+      {
+        "label": "Video",
+        "url": "https://www.youtube.com/watch?v=wSFmtkS-AP8"
       }
     ]
   }
