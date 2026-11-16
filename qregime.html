@@ -72,7 +72,18 @@ qregime decide circuit.qasm --hardware trapped_ion_quantinuum_h2 --budget 5000</
       </div>
       <p class="demo-note">Budgets: 1,121 physical qubits on IBM heavy-hex, 5,000 on trapped ions. GAP means no regime meets the target within the budget; it is a real answer, not an error.</p>
     </section>
-  </main>
+  
+    <section class="section wrap case-study">
+      <div class="section-head"><div><p class="section-kicker">Case study / Scientific software</p><h2>From an error budget to an explicit engineering decision.</h2><p>qregime explores a decision layer for selecting an error-handling strategy under reliability and resource constraints.</p></div></div>
+      <div class="qaly-principles">
+        <article><span>01 · PROBLEM</span><h3>One circuit, different execution regimes</h3><p>Mitigation, small-distance error correction, and full fault tolerance have different resource and reliability trade-offs. The project makes that choice explicit instead of treating error handling as an afterthought.</p></article>
+        <article><span>02 · APPROACH</span><h3>Inputs, constraints, and comparison</h3><p>Provide an OpenQASM 2 circuit, a hardware profile, a reliability target, and a resource budget. qregime compares candidate regimes and reports a feasible option or a quantified gap.</p></article>
+        <article><span>03 · EVIDENCE</span><h3>Reproducible examples</h3><p>The page includes precomputed example-circuit results with a stated qregime commit and reliability target. The repository and Colab tutorial provide paths to inspect and reproduce the workflow.</p></article>
+      </div>
+      <p class="demo-note">Scope note: qregime is an evolving research/software project. Its outputs depend on the assumptions and hardware profiles supplied; they should not be interpreted as universal hardware performance guarantees.</p>
+      <p class="hero-actions"><a class="btn primary" href="https://github.com/MaldoAlberto/qregime" target="_blank" rel="noreferrer">Inspect source code ↗</a><a class="btn" href="https://colab.research.google.com/github/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noreferrer">Reproduce with tutorial ↗</a></p>
+    </section>
+</main>
 
   <footer class="footer wrap">
     <p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Home</a></p>
