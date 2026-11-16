@@ -18,12 +18,12 @@ export default defineConfig({
     emptyOutDir:true,
     rollupOptions:{
       input:{
-        home:resolve(__dirname,"index.html"),
-        research:resolve(__dirname,"research.html"),
-        publications:resolve(__dirname,"publications.html"),
-        talks:resolve(__dirname,"talks.html"),
-        updates:resolve(__dirname,"updates.html"),
-        about:resolve(__dirname,"about.html")
+        home:resolve(process.cwd(),"index.html"),
+        research:resolve(process.cwd(),"research.html"),
+        publications:resolve(process.cwd(),"publications.html"),
+        talks:resolve(process.cwd(),"talks.html"),
+        updates:resolve(process.cwd(),"updates.html"),
+        about:resolve(process.cwd(),"about.html")
       }
     }
   }
