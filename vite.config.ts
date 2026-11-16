@@ -10,6 +10,7 @@ export default defineConfig({
       cpSync("assets","dist/assets",{recursive:true});
       cpSync("qregime.html","dist/qregime.html");
       cpSync("playground.html","dist/playground.html");
+      cpSync("qaly.html","dist/qaly.html");
     }
   }],
   base:"/",
