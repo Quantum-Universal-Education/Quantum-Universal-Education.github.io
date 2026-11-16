@@ -549,3 +549,18 @@ body { background: radial-gradient(ellipse at 86% 0%, rgba(113,134,109,.12), tra
   .focus-card h3 { font-size: 14px; }
   .hero-visual, .hero-visual img { min-height: 240px; height: 240px; }
 }
+
+/* Career-positioning layer: evidence-led, editorial, responsive */
+.positioning .section-head p:not(.section-kicker),.featured-work .section-head p:not(.section-kicker){max-width:720px;color:var(--muted)}
+.position-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.position-grid article,.proof{padding:22px 20px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.position-grid article>span,.proof .meta{font:500 10px var(--mono);letter-spacing:.1em;color:var(--accent)}
+.position-grid h3,.proof h3{margin:17px 0 10px;font-size:19px;line-height:1.28;letter-spacing:-.03em}
+.position-grid p,.proof p{margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.7}
+.position-grid a,.proof a{font-size:13px;font-weight:600}
+.proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.proof-main{background:linear-gradient(145deg,var(--surface-raised),var(--surface))}
+.proof-links{display:flex;gap:18px;flex-wrap:wrap}
+.proof a{display:inline-block;margin-top:2px}
+@media(max-width:900px){.position-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.position-grid,.proof-grid{grid-template-columns:1fr}.position-grid article,.proof{padding:19px}}
