@@ -564,3 +564,30 @@ body { background: radial-gradient(ellipse at 86% 0%, rgba(113,134,109,.12), tra
 .proof a{display:inline-block;margin-top:2px}
 @media(max-width:900px){.position-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.position-grid,.proof-grid{grid-template-columns:1fr}.position-grid article,.proof{padding:19px}}
+
+
+/* Qaly project page */
+.qaly-page{overflow:hidden}
+.qaly-hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px;padding-top:86px;padding-bottom:58px}
+.qaly-copy h1{max-width:680px;margin:0;font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-.075em}
+.qaly-copy h1 span{color:var(--accent)}
+.qaly-copy .lede{max-width:620px}
+.qaly-note{margin-top:22px;color:var(--subtle);font:11px var(--mono);letter-spacing:.04em}
+.qaly-art{position:relative;display:grid;place-items:center;min-height:370px;border:1px solid var(--border);border-radius:28px;background:radial-gradient(circle at 50% 46%,rgba(105,160,125,.22),transparent 62%),var(--surface-soft);overflow:hidden}
+.qaly-art svg{width:min(100%,490px);height:auto;filter:drop-shadow(0 24px 45px rgba(0,0,0,.22))}
+.art-caption{position:absolute;bottom:18px;left:22px;color:var(--muted);font:11px var(--mono);letter-spacing:.06em}
+.qaly-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.qaly-principles article{padding-top:17px;border-top:1px solid var(--border)}
+.qaly-principles article>span,.qaly-pipeline span{color:var(--accent);font:11px var(--mono);letter-spacing:.1em}
+.qaly-principles h3,.qaly-pipeline h3{margin:12px 0 7px;font-size:18px;letter-spacing:-.03em}
+.qaly-principles p,.qaly-pipeline p,.qaly-next p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}
+.qaly-pipeline{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:start;gap:16px}
+.qaly-pipeline>div{padding-top:16px;border-top:1px solid var(--border)}
+.qaly-pipeline>b{padding-top:22px;color:var(--accent);font-weight:400}
+.qaly-content .btn{margin-top:4px}
+.qaly-next{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:48px;margin-bottom:40px;padding-top:30px;padding-bottom:30px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.qaly-next>div{max-width:700px}
+.qaly-next h2{margin:0 0 12px;font-size:clamp(27px,4vw,38px);line-height:1.15;letter-spacing:-.05em}
+.qaly-next .section-kicker{margin-bottom:12px}
+@media(max-width:850px){.qaly-hero{grid-template-columns:1fr;gap:28px;padding-top:62px}.qaly-art{min-height:300px}.qaly-pipeline{grid-template-columns:1fr 1fr;gap:22px}.qaly-pipeline>b{display:none}}
+@media(max-width:560px){.qaly-principles{grid-template-columns:1fr;gap:20px}.qaly-pipeline{grid-template-columns:1fr}.qaly-next{align-items:flex-start;flex-direction:column}.qaly-art{min-height:260px}.qaly-copy h1{font-size:clamp(44px,14vw,64px)}}
