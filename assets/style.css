@@ -432,3 +432,31 @@ a:focus-visible, button:focus-visible { outline-color: var(--award); }
 :root[data-theme="light"] .hero-orbit:after { border-color: rgba(168,135,69,.25); }
 :root[data-theme="light"] .hero-orbit span { box-shadow: 0 0 16px rgba(104,117,106,.32); }
 :root[data-theme="light"] .pg-result { color: var(--text); }
+
+
+/* Green-led accents: remove gold from both themes */
+:root {
+  --award: #A5B58A;
+  --accent: #9BAA7B;
+  --accent-strong: #B4C394;
+  --accent-soft: rgba(155, 170, 123, .15);
+}
+:root[data-theme="light"] {
+  --award: #647D62;
+  --accent: #71866D;
+  --accent-strong: #586F57;
+  --accent-soft: rgba(113, 134, 109, .12);
+}
+:root[data-theme="light"] .featured {
+  border-color: rgba(100, 125, 98, .34);
+}
+:root[data-theme="light"] .featured::after {
+  background: radial-gradient(circle, rgba(113, 134, 109, .10), transparent 68%);
+}
+:root[data-theme="light"] .hero-orbit:before,
+:root[data-theme="light"] .hero-orbit:after {
+  border-color: rgba(113, 134, 109, .22);
+}
+:root[data-theme="light"] .hero::before {
+  background: radial-gradient(circle, rgba(143, 160, 137, .18), rgba(143, 160, 137, .06) 44%, transparent 70%);
+}
