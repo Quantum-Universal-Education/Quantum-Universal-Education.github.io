@@ -1,19 +1,19 @@
 :root {
   color-scheme: dark;
-  --bg: #07111f;
-  --surface: #0c1929;
-  --surface-raised: #102137;
-  --surface-soft: #0a1625;
-  --text: #edf4ff;
-  --muted: #9aacc2;
-  --subtle: #6f849d;
-  --border: #20364f;
-  --accent: #5bd6f5;
-  --accent-strong: #26b8e4;
-  --accent-soft: rgba(91, 214, 245, .12);
-  --violet: #a99aff;
-  --award: #ffd27a;
-  --danger: #ff8f9b;
+  --bg: #171b19;
+  --surface: #202622;
+  --surface-raised: #29322c;
+  --surface-soft: #1b211d;
+  --text: #f1f2ed;
+  --muted: #b5bcb4;
+  --subtle: #879187;
+  --border: #39443c;
+  --accent: #9ab49a;
+  --accent-strong: #78967b;
+  --accent-soft: rgba(154, 180, 154, .13);
+  --violet: #b6aa96;
+  --award: #c4b79a;
+  --danger: #c58e83;
   --radius: 18px;
   --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
@@ -23,12 +23,12 @@
 html { scroll-behavior: smooth; scroll-padding-top: 88px; background: var(--bg); }
 body {
   margin: 0; color: var(--text); background:
-    radial-gradient(ellipse at 82% 0%, rgba(50, 112, 169, .13), transparent 34rem),
+    radial-gradient(ellipse at 82% 0%, rgba(125, 151, 127, .12), transparent 34rem),
     var(--bg);
   font: 16px/1.7 var(--font); -webkit-font-smoothing: antialiased;
 }
 a { color: var(--accent); text-decoration: none; text-underline-offset: 4px; }
-a:hover { color: #a1edff; text-decoration: underline; }
+a:hover { color: #c3d8c1; text-decoration: underline; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 img { max-width: 100%; }
 button { font: inherit; }
