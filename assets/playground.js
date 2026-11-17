@@ -708,9 +708,12 @@ function App() {
         </div>
         <${Palette} selected=${selected} onSelect=${setSelected} />
         <p class="pg-hint">Choose a gate and click a cell to place it. Click again to remove it. ● controls the other gates in its column: ● + ⊕ is a CNOT, two ● + ⊕ a Toffoli.</p>
-        <${Circuit} grid=${grid} onCell=${onCell} />
-        ${encode(grid) === encode(presetGrid(SHOR_KEY)) && html`<${ShorPanel} state=${state} />`}
-        <${NoiseSimulation} grid=${grid} ideal=${state} />
+        <div class="pg-circuit-noise">
+          <div class="pg-circuit-live-label"><span class="pg-eyebrow">ONE CIRCUIT · TWO EXECUTIONS</span><span class="pg-section-status">IDEAL + NOISY</span></div>
+          <${Circuit} grid=${grid} onCell=${onCell} />
+          ${encode(grid) === encode(presetGrid(SHOR_KEY)) && html`<${ShorPanel} state=${state} />`}
+          <${NoiseSimulation} grid=${grid} ideal=${state} />
+        </div>
         <${Results} state=${state} />
         <${Expectations} state=${state} n=${grid.length} fidelity=${Math.pow(1 - HARDWARE[0].p2q, gateCounts(grid).twoQ)} />
         <${NoiseEstimate} grid=${grid} />
