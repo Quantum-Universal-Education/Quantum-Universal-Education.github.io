@@ -710,18 +710,11 @@ function App() {
         <p class="pg-hint">Choose a gate and click a cell to place it. Click again to remove it. ● controls the other gates in its column: ● + ⊕ is a CNOT, two ● + ⊕ a Toffoli.</p>
         <${Circuit} grid=${grid} onCell=${onCell} />
         ${encode(grid) === encode(presetGrid(SHOR_KEY)) && html`<${ShorPanel} state=${state} />`}
+        <${NoiseSimulation} grid=${grid} ideal=${state} />
         <${Results} state=${state} />
         <${Expectations} state=${state} n=${grid.length} fidelity=${Math.pow(1 - HARDWARE[0].p2q, gateCounts(grid).twoQ)} />
-        <${QasmPanel} grid=${grid} />
-      </section>
-      <section class="pg-noise-workspace">
-        <div class="pg-section-heading">
-          <div><span class="pg-eyebrow">NOISE LAB</span><h3>Explore noise & fidelity</h3><p>Keep the circuit and ideal output in view while comparing noisy trajectories.</p></div>
-          <span class="pg-section-status noise">IDEAL vs NOISY</span>
-        </div>
-        <${NoiseSimulation} grid=${grid} ideal=${state} />
         <${NoiseEstimate} grid=${grid} />
-      </section>
+        <${QasmPanel} grid=${grid} />
     </div>`;
 }
 
