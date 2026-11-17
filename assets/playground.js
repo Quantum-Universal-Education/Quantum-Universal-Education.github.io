@@ -715,6 +715,7 @@ function App() {
         <${Expectations} state=${state} n=${grid.length} fidelity=${Math.pow(1 - HARDWARE[0].p2q, gateCounts(grid).twoQ)} />
         <${NoiseEstimate} grid=${grid} />
         <${QasmPanel} grid=${grid} />
+      </section>
     </div>`;
 }
 
