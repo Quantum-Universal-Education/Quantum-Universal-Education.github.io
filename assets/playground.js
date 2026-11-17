@@ -523,11 +523,11 @@ function NoiseSimulation({ grid, ideal }) {
     <div class="pg-panel pg-noise-lab">
       <div class="pg-noise-intro">
         <div><span class="pg-eyebrow">INTERACTIVE EXPERIMENT</span><h3>Noise Lab · see coherence degrade</h3>
-          <p class="pg-note">Change the noise strength and watch the output-state fidelity and measurement distribution respond.</p></div>
+          <p class="pg-note">Noise is applied during the execution of this exact circuit, after its gates. The ideal result is kept as the reference.</p></div>
         <span class="pg-lab-chip"><i></i> LIVE SIMULATION</span>
       </div>
       <div class="pg-noise-flow" aria-label="Simulation flow">
-        <div class="pg-flow-node"><span class="pg-flow-icon">Ψ</span><b>Ideal circuit</b><small>Target state</small></div>
+        <div class="pg-flow-node"><span class="pg-flow-icon">Ψ</span><b>Same circuit</b><small>Ideal reference</small></div>
         <span class="pg-flow-arrow">→</span>
         <div class="pg-flow-node active"><span class="pg-flow-icon">〰</span><b>Noise channel</b><small>${names[type]}</small></div>
         <span class="pg-flow-arrow">→</span>
