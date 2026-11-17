@@ -517,17 +517,20 @@ function NoiseSimulation({ grid, ideal }) {
             ${Object.entries(names).map(([key, name]) => html`<option key=${key} value=${key}>${name}</option>`)}
           </select>
         </label>
-        <label>Single-qubit error probability
-          <strong class="mono">${(p1 * 100).toFixed(2)}%</strong>
-          <input type="range" min="0" max="0.2" step="0.001" value=${p1} onInput=${(e) => setP1(Number(e.target.value))} />
+        <label class="pg-slider-field">
+          <span class="pg-slider-heading"><span><i class="pg-slider-dot cyan"></i>Single-qubit noise</span><strong class="mono">${(p1 * 100).toFixed(1)}%</strong></span>
+          <input class="pg-range cyan" type="range" min="0" max="0.2" step="0.001" value=${p1} style=${{"--range-progress": `${p1 / 0.2 * 100}%`}} onInput=${(e) => setP1(Number(e.target.value))} />
+          <span class="pg-slider-scale"><span>0%</span><span>10%</span><span>20%</span></span>
         </label>
-        <label>Two-qubit error probability
-          <strong class="mono">${(p2 * 100).toFixed(2)}%</strong>
-          <input type="range" min="0" max="0.2" step="0.001" value=${p2} onInput=${(e) => setP2(Number(e.target.value))} />
+        <label class="pg-slider-field">
+          <span class="pg-slider-heading"><span><i class="pg-slider-dot violet"></i>Two-qubit noise</span><strong class="mono">${(p2 * 100).toFixed(1)}%</strong></span>
+          <input class="pg-range violet" type="range" min="0" max="0.2" step="0.001" value=${p2} style=${{"--range-progress": `${p2 / 0.2 * 100}%`}} onInput=${(e) => setP2(Number(e.target.value))} />
+          <span class="pg-slider-scale"><span>0%</span><span>10%</span><span>20%</span></span>
         </label>
-        <label>Monte Carlo trajectories / shots
-          <strong class="mono">${shots.toLocaleString()}</strong>
-          <input type="range" min="100" max="2000" step="100" value=${shots} onInput=${(e) => setShots(Number(e.target.value))} />
+        <label class="pg-slider-field">
+          <span class="pg-slider-heading"><span><i class="pg-slider-dot gold"></i>Monte Carlo shots</span><strong class="mono">${shots.toLocaleString()}</strong></span>
+          <input class="pg-range gold" type="range" min="100" max="2000" step="100" value=${shots} style=${{"--range-progress": `${(shots - 100) / 1900 * 100}%`}} onInput=${(e) => setShots(Number(e.target.value))} />
+          <span class="pg-slider-scale"><span>100</span><span>1,000</span><span>2,000</span></span>
         </label>
       </div>
       <div class="pg-noise-fidelity">
