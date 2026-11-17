@@ -103,14 +103,16 @@ function simulate(grid, noise = null) {
   const applyNoiseChannel = (q, p, type) => {
     if (!noise || p <= 0) return;
     if (type === "amplitude_damping") { applyDamping(q, p); return; }
+    if (type === "phase_damping") {
+      const phaseError = (1 - Math.sqrt(1 - p)) / 2;
+      if (Math.random() < phaseError) apply1(q, GATES.Z.m);
+      return;
+    }
     if (Math.random() >= p) return;
     if (type === "bit_flip") apply1(q, GATES.X.m);
     else if (type === "phase_flip") apply1(q, GATES.Z.m);
     else if (type === "bit_phase_flip") apply1(q, GATES.Y.m);
-    else if (type === "phase_damping") {
-      const phaseError = (1 - Math.sqrt(1 - p)) / 2;
-      if (Math.random() < phaseError) apply1(q, GATES.Z.m);
-    } else {
+    else {
       const pauli = ["X", "Y", "Z"][Math.floor(Math.random() * 3)];
       apply1(q, GATES[pauli].m);
     }
