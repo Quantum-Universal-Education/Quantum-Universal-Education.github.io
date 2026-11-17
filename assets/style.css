@@ -819,3 +819,13 @@ a:hover { color: var(--accent-strong); }
 .pg-noise-lab .pg-amps { min-width:520px; }
 .pg-noise-lab .pg-amps th,.pg-noise-lab .pg-amps td { vertical-align:middle; }
 @media(max-width:720px) { .pg-noise-controls { grid-template-columns:1fr; gap:12px; } }
+
+/* Integrated circuit + noise workspace */
+.pg-section-heading { display:flex; align-items:center; justify-content:space-between; gap:14px; margin:22px 0 12px; }
+.pg-section-heading h3 { margin:0; color:var(--text); font-size:17px; }
+.pg-section-heading p { margin:4px 0 0; color:var(--muted); font-size:11px; }
+.pg-section-status { flex:none; padding:6px 9px; border:1px solid rgba(91,214,245,.2); border-radius:99px; color:#9deaff; font:700 9px var(--mono); letter-spacing:.08em; }
+.pg-section-status.noise { border-color:rgba(173,150,255,.28); color:#c5b6ff; }
+.pg-noise-workspace { margin-top:28px; padding-top:10px; border-top:1px solid var(--border); }
+.pg-noise-workspace .pg-section-heading { margin-bottom:14px; }
+@media(max-width:560px) { .pg-section-heading { align-items:flex-start; } .pg-section-status { margin-top:5px; font-size:8px; } }
