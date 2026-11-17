@@ -533,27 +533,28 @@ function NoiseSimulation({ grid, ideal }) {
         <span class="pg-flow-arrow">→</span>
         <div class="pg-flow-node"><span class="pg-flow-icon">▥</span><b>Output</b><small>Fidelity + shots</small></div>
       </div>
-      <div class="pg-noise-controls">
-        <label>Noise channel
-          <select value=${type} onChange=${(e) => setType(e.target.value)}>
-            ${Object.entries(names).map(([key, name]) => html`<option key=${key} value=${key}>${name}</option>`)}
-          </select>
-        </label>
-        <label class="pg-slider-field">
-          <span class="pg-slider-heading"><span><i class="pg-slider-dot cyan"></i>Single-qubit noise</span><strong class="mono">${(p1 * 100).toFixed(1)}%</strong></span>
-          <input class="pg-range cyan" type="range" min="0" max="0.2" step="0.001" value=${p1} style=${{"--range-progress": `${p1 / 0.2 * 100}%`}} onInput=${(e) => setP1(Number(e.target.value))} />
-          <span class="pg-slider-scale"><span>0%</span><span>10%</span><span>20%</span></span>
-        </label>
-        <label class="pg-slider-field">
-          <span class="pg-slider-heading"><span><i class="pg-slider-dot violet"></i>Two-qubit noise</span><strong class="mono">${(p2 * 100).toFixed(1)}%</strong></span>
-          <input class="pg-range violet" type="range" min="0" max="0.2" step="0.001" value=${p2} style=${{"--range-progress": `${p2 / 0.2 * 100}%`}} onInput=${(e) => setP2(Number(e.target.value))} />
-          <span class="pg-slider-scale"><span>0%</span><span>10%</span><span>20%</span></span>
-        </label>
-        <label class="pg-slider-field">
-          <span class="pg-slider-heading"><span><i class="pg-slider-dot gold"></i>Monte Carlo shots</span><strong class="mono">${shots.toLocaleString()}</strong></span>
-          <input class="pg-range gold" type="range" min="100" max="2000" step="100" value=${shots} style=${{"--range-progress": `${(shots - 100) / 1900 * 100}%`}} onInput=${(e) => setShots(Number(e.target.value))} />
-          <span class="pg-slider-scale"><span>100</span><span>1,000</span><span>2,000</span></span>
-        </label>
+      <div class="pg-noise-console">
+        <div class="pg-channel-picker" aria-label="Select noise channel">
+          ${Object.entries(names).map(([key, name]) => {
+            const symbols = { depolarizing:"✳", bit_flip:"X", phase_flip:"Z", bit_phase_flip:"Y", amplitude_damping:"↓", phase_damping:"≋" };
+            return html`<button type="button" title=${name} aria-label=${name} aria-pressed=${type === key} className=${"pg-channel-symbol " + (type === key ? "active" : "")} onClick=${() => setType(key)}><span>${symbols[key]}</span></button>`;
+          })}
+        </div>
+        <div class="pg-compact-sliders">
+          <label class="pg-mini-slider cyan" title="Single-qubit error probability">
+            <span>1Q <b>${(p1 * 100).toFixed(1)}%</b></span>
+            <input class="pg-range cyan" aria-label="Single-qubit noise" type="range" min="0" max="0.2" step="0.001" value=${p1} style=${{"--range-progress": `${p1 / 0.2 * 100}%`}} onInput=${(e) => setP1(Number(e.target.value))} />
+          </label>
+          <label class="pg-mini-slider violet" title="Two-qubit error probability">
+            <span>2Q <b>${(p2 * 100).toFixed(1)}%</b></span>
+            <input class="pg-range violet" aria-label="Two-qubit noise" type="range" min="0" max="0.2" step="0.001" value=${p2} style=${{"--range-progress": `${p2 / 0.2 * 100}%`}} onInput=${(e) => setP2(Number(e.target.value))} />
+          </label>
+          <label class="pg-mini-slider gold" title="Monte Carlo trajectories">
+            <span>MC <b>${shots}</b></span>
+            <input class="pg-range gold" aria-label="Monte Carlo shots" type="range" min="100" max="2000" step="100" value=${shots} style=${{"--range-progress": `${(shots - 100) / 1900 * 100}%`}} onInput=${(e) => setShots(Number(e.target.value))} />
+          </label>
+        </div>
+        <div class="pg-channel-caption"><b>${names[type]}</b><span>${short}</span></div>
       </div>
       <div class="pg-noise-explainer">
         <div class="pg-explainer-symbol">${type === "amplitude_damping" ? "↓" : type === "phase_damping" ? "≈" : type === "depolarizing" ? "✳" : "↗"}</div>
