@@ -829,3 +829,45 @@ a:hover { color: var(--accent-strong); }
 .pg-noise-workspace { margin-top:28px; padding-top:10px; border-top:1px solid var(--border); }
 .pg-noise-workspace .pg-section-heading { margin-bottom:14px; }
 @media(max-width:560px) { .pg-section-heading { align-items:flex-start; } .pg-section-status { margin-top:5px; font-size:8px; } }
+
+
+/* One shared surface: the editable circuit and its noise execution are inseparable. */
+.pg-circuit-noise {
+  display:grid;
+  gap:14px;
+  margin-top:8px;
+  padding:16px;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--surface);
+}
+.pg-circuit-live-label {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding-bottom:2px;
+}
+.pg-circuit-live-label .pg-eyebrow { margin:0; }
+.pg-circuit-noise > .pg-circuit {
+  padding:4px 0 14px;
+  border:0;
+  border-radius:0;
+  border-bottom:1px solid var(--border);
+  background:transparent;
+}
+.pg-circuit-noise > .pg-noise-lab {
+  gap:12px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.pg-circuit-noise .pg-noise-intro { margin-top:2px; }
+.pg-circuit-noise .pg-noise-flow { margin:8px 0; }
+.pg-circuit-noise .pg-noise-console { margin:8px 0 12px; }
+@media(max-width:560px) {
+  .pg-circuit-noise { padding:11px; gap:11px; }
+  .pg-circuit-live-label { align-items:flex-start; }
+}
