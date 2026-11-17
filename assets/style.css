@@ -591,3 +591,16 @@ body { background: radial-gradient(ellipse at 86% 0%, rgba(113,134,109,.12), tra
 .qaly-next .section-kicker{margin-bottom:12px}
 @media(max-width:850px){.qaly-hero{grid-template-columns:1fr;gap:28px;padding-top:62px}.qaly-art{min-height:300px}.qaly-pipeline{grid-template-columns:1fr 1fr;gap:22px}.qaly-pipeline>b{display:none}}
 @media(max-width:560px){.qaly-principles{grid-template-columns:1fr;gap:20px}.qaly-pipeline{grid-template-columns:1fr}.qaly-next{align-items:flex-start;flex-direction:column}.qaly-art{min-height:260px}.qaly-copy h1{font-size:clamp(44px,14vw,64px)}}
+
+
+/* Public photo and media references */
+.media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.media-card{overflow:hidden;border:1px solid var(--border);border-radius:14px;background:var(--surface)}
+.media-image{display:block;aspect-ratio:16/10;overflow:hidden;background:var(--surface-raised)}
+.media-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.media-image:hover img{transform:scale(1.025)}
+.media-copy{display:grid;gap:10px;padding:20px}
+.media-copy h2{font-size:20px;line-height:1.3;margin:0}
+.media-copy p,.media-copy small{color:var(--muted);line-height:1.55;margin:0}
+.media-copy small{font-size:11px}
+@media(max-width:680px){.media-grid{grid-template-columns:1fr}}
