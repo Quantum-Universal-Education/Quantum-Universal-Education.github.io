@@ -25,6 +25,15 @@ for (const file of requiredData) {
 const assetFiles = readdirSync(join("dist","assets"));
 if (!assetFiles.some(file => file.endsWith(".css"))) failures.push("No compiled CSS file found in dist/assets.");
 if (!assetFiles.some(file => file.endsWith(".js"))) failures.push("No compiled JavaScript file found in dist/assets.");
+// React entry pages must contain Vite's production bundles, never raw TSX source paths.
+const reactEntryPages = ["index.html","research.html","publications.html","talks.html","updates.html","about.html","media.html"];
+for (const page of reactEntryPages) {
+  const path=join("dist",page);
+  if (!existsSync(path)) continue;
+  const html=readFileSync(path,"utf8");
+  if (html.includes("/src/main.tsx")) failures.push("Unbuilt React entrypoint found in "+page+"; deploy the Vite dist output, not repository source.");
+  if (!/src=["'][^"']*assets\/[^"']+\.js["']/.test(html)) failures.push("No compiled JavaScript entry bundle found in "+page);
+}
 for (const page of requiredPages.slice(0,7)) {
   const html=readFileSync(join("dist",page),"utf8");
   if (!html.includes("assets/") && !html.includes("/assets/")) failures.push("No built asset references in "+page);
