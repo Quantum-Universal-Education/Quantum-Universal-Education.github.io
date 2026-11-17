@@ -871,3 +871,47 @@ a:hover { color: var(--accent-strong); }
   .pg-circuit-noise { padding:11px; gap:11px; }
   .pg-circuit-live-label { align-items:flex-start; }
 }
+
+
+/* Compact in-circuit noise controls and per-gate channel markers */
+.pg-noise-toggle {
+  display:inline-flex; align-items:center; gap:7px; white-space:nowrap;
+  padding:7px 10px; border:1px solid var(--border); border-radius:9px;
+  color:var(--muted); background:rgba(255,255,255,.025); font:700 10px var(--mono);
+  cursor:pointer;
+}
+.pg-noise-toggle.active { color:#b7f6df; border-color:rgba(84,230,176,.42); background:rgba(84,230,176,.08); }
+.pg-noise-toggle-dot { width:7px; height:7px; border-radius:50%; background:var(--muted); }
+.pg-noise-toggle.active .pg-noise-toggle-dot { background:#54e6b0; box-shadow:0 0 8px #54e6b0; }
+.pg-circuit-noise .pg-noise-console {
+  grid-template-columns:auto auto minmax(180px,1fr);
+  gap:8px 12px; margin:8px 0; padding:9px 10px;
+}
+.pg-circuit-noise .pg-channel-caption { grid-column:1/-1; display:flex; align-items:center; gap:8px; margin:0; }
+.pg-circuit-noise .pg-channel-caption span { font-size:10px; }
+.pg-circuit-noise .pg-noise-intro { align-items:center; }
+.pg-circuit-noise .pg-noise-intro h3 { font-size:14px; }
+.pg-circuit-noise .pg-noise-intro p,
+.pg-circuit-noise .pg-noise-flow,
+.pg-circuit-noise .pg-noise-explainer { display:none; }
+.pg-circuit-noise .pg-fidelity-layout { grid-template-columns: minmax(100px,.45fr) 1fr; gap:12px; margin:8px 0; }
+.pg-circuit-noise .pg-fidelity-card { padding:10px; }
+.pg-circuit-noise .pg-fidelity-ring { width:76px; height:76px; }
+.pg-circuit-noise .pg-fidelity-card p { display:none; }
+.pg-circuit-noise .pg-fidelity-detail { padding:8px 10px; }
+.pg-circuit-noise .pg-fidelity-detail .pg-actions { margin-top:6px; }
+.pg-cell { overflow:visible; }
+.pg-gate-noise-mark {
+  position:absolute; z-index:4; top:-8px; right:-7px; display:grid; place-items:center;
+  width:16px; height:16px; border:1px solid rgba(191,170,255,.65); border-radius:50%;
+  color:#e5dcff; background:#34265d; font:700 9px/1 var(--mono);
+  box-shadow:0 0 0 2px var(--surface), 0 0 10px rgba(173,150,255,calc(.15 + var(--noise-strength,0) * .55));
+  transform:scale(calc(.86 + var(--noise-strength,0) * .22));
+  pointer-events:none;
+}
+.pg-cell.noise-active { box-shadow:0 0 0 1px rgba(173,150,255,.15); }
+@media(max-width:680px) {
+  .pg-circuit-noise .pg-noise-console { grid-template-columns:auto 1fr; }
+  .pg-circuit-noise .pg-compact-sliders { grid-column:1/-1; }
+  .pg-circuit-noise .pg-channel-caption { grid-column:1/-1; }
+}
