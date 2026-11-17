@@ -23,3 +23,12 @@
  .hero-meta{display:grid;gap:8px}
  .hero-meta span+span:before{display:none}
 }
+
+/* Featured result on the home page */
+.highlight-grid { display: grid; grid-template-columns: 240px 1fr; gap: 32px; align-items: center; padding: 28px; border: 1px solid var(--border); border-radius: var(--radius, 16px); background: var(--surface); }
+.highlight-num { display: grid; gap: 6px; }
+.highlight-num strong { font-size: 52px; line-height: 1; color: var(--accent); }
+.highlight-num span { color: var(--muted); font-size: 14px; }
+.highlight-num .highlight-vs { font-weight: 600; color: var(--text); }
+.highlight h2 { margin: 6px 0 10px; }
+@media (max-width: 640px) { .highlight-grid { grid-template-columns: 1fr; gap: 18px; padding: 20px; } }
