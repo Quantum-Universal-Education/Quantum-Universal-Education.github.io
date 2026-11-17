@@ -660,6 +660,7 @@ function ShorPanel({ state }) {
 function App() {
   const [grid, setGrid] = useState(() => decode(location.hash) || presetGrid("Bell state"));
   const [selected, setSelected] = useState("H");
+  const [activeView, setActiveView] = useState("circuit");
   const [copied, setCopied] = useState(false);
   const state = useMemo(() => simulate(grid), [grid]);
 
@@ -700,15 +701,30 @@ function App() {
         <button type="button" class="btn" onClick=${() => setGrid(emptyGrid(grid.length))}>Clear</button>
         <button type="button" class="btn primary" onClick=${share}>${copied ? "Link copied ✓" : "Share circuit"}</button>
       </div>
-      <${Palette} selected=${selected} onSelect=${setSelected} />
-      <p class="pg-hint">Pick a gate, then click a cell to place it. Click it again to remove it. ● controls every other gate in its column: ● + ⊕ is a CNOT, two ● + ⊕ a Toffoli, ● + S† a controlled-S†.</p>
-      <${Circuit} grid=${grid} onCell=${onCell} />
-      ${encode(grid) === encode(presetGrid(SHOR_KEY)) && html`<${ShorPanel} state=${state} />`}
-      <${Results} state=${state} />
-      <${Expectations} state=${state} n=${grid.length} fidelity=${Math.pow(1 - HARDWARE[0].p2q, gateCounts(grid).twoQ)} />
-      <${NoiseSimulation} grid=${grid} ideal=${state} />
-      <${NoiseEstimate} grid=${grid} />
-      <${QasmPanel} grid=${grid} />
+      <div class="pg-workspace-tabs" role="tablist" aria-label="Playground workspace">
+        <button type="button" role="tab" aria-selected=${activeView === "circuit"} className=${"pg-workspace-tab " + (activeView === "circuit" ? "active" : "")} onClick=${() => setActiveView("circuit")}>
+          <span class="pg-tab-icon">⌘</span><span><b>Build circuit</b><small>Gates & simulation</small></span>
+        </button>
+        <button type="button" role="tab" aria-selected=${activeView === "noise"} className=${"pg-workspace-tab " + (activeView === "noise" ? "active" : "")} onClick=${() => setActiveView("noise")}>
+          <span class="pg-tab-icon">〰</span><span><b>Explore noise</b><small>Channels & fidelity</small></span>
+        </button>
+      </div>
+      ${activeView === "circuit" ? html`
+        <section class="pg-workspace-view" role="tabpanel">
+          <${Palette} selected=${selected} onSelect=${setSelected} />
+          <p class="pg-hint">Choose a gate and click a cell to place it. Click again to remove it. ● controls the other gates in its column: ● + ⊕ is a CNOT, two ● + ⊕ a Toffoli.</p>
+          <${Circuit} grid=${grid} onCell=${onCell} />
+          ${encode(grid) === encode(presetGrid(SHOR_KEY)) && html`<${ShorPanel} state=${state} />`}
+          <${Results} state=${state} />
+          <${Expectations} state=${state} n=${grid.length} fidelity=${Math.pow(1 - HARDWARE[0].p2q, gateCounts(grid).twoQ)} />
+          <${QasmPanel} grid=${grid} />
+        </section>
+      ` : html`
+        <section class="pg-workspace-view" role="tabpanel">
+          <${NoiseSimulation} grid=${grid} ideal=${state} />
+          <${NoiseEstimate} grid=${grid} />
+        </section>
+      `}
     </div>`;
 }
 
