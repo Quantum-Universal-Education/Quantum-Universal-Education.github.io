@@ -1,6 +1,9 @@
 name: Deploy portfolio to GitHub Pages
+# PR #12 now builds on top of the merged portfolio case studies.
 on:
   push:
+    branches: [master]
+  pull_request:
     branches: [master]
   workflow_dispatch:
 permissions:
@@ -20,10 +23,13 @@ jobs:
           node-version: 22
       - run: npm install
       - run: npm run build
+      - name: Verify production pages and data
+        run: node scripts/verify-build.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
