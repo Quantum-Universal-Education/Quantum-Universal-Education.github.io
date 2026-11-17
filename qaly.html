@@ -13,20 +13,14 @@
 <link rel="canonical" href="https://maldoalberto.github.io/qaly.html"/>
 <meta property="og:title" content="Qaly the Quantum Cat — Educational Project by Alberto Maldonado Romo"/>
 <meta property="og:description" content="Qaly is an educational project creating accessible animated explainers about quantum computing, hardware, and algorithms."/>
-<meta property="og:image" content="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&h=630&q=85"/>
-<meta property="og:image:alt" content="Speaker presenting a technical talk at a conference"/>
 <meta property="og:url" content="https://maldoalberto.github.io/qaly.html"/>
 <meta property="og:type" content="website"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Qaly the Quantum Cat — Educational Project by Alberto Maldonado Romo"/>
 <meta name="twitter:description" content="Qaly is an educational project creating accessible animated explainers about quantum computing, hardware, and algorithms."/>
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&h=630&q=85"/>
 </head>
 <body>
-  <header class="site-header"><nav class="nav wrap">
-    <a class="brand" href="index.html">AMR<span class="dot">⟩</span></a>
-    <ul class="nav-links"><li><a href="research.html">Research</a></li><li><a href="work.html">Work</a></li><li><a href="blog.html">Blog</a></li><li><a href="qaly.html" aria-current="page">Qaly</a></li><li><a href="talks.html">Community</a></li><li><a href="about.html">About</a></li></ul>
-  </nav></header>
+  <header class="site-header"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html">AMR<span class="dot">⟩</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button><ul class="nav-links" id="primary-navigation"><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="work.html">Work</a></li><li><a href="blog.html">Blog</a></li><li><a href="qaly.html" aria-current="page">Qaly</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="updates.html">News</a></li><li><a href="about.html">About</a></li></ul></nav></header>
   <main>
     <section class="qaly-hero wrap">
       <div>
@@ -36,7 +30,7 @@
         <p class="case-study" style="margin-top:24px">Qaly is an educational project that brings together quantum concepts, visual storytelling, and a code-driven production workflow. The goal is not to simplify away the science, but to give people an inviting first step into it.</p>
         <div class="case-links"><a class="btn primary" href="https://www.instagram.com/qalycat/" target="_blank" rel="noopener">Follow Qaly on Instagram ↗</a><a class="btn" href="research.html">Explore other projects</a></div>
       </div>
-      <div class="qaly-art"><div style="padding:32px;text-align:center"><div style="font-size:clamp(90px,18vw,180px);line-height:1">🐈</div><p class="eyebrow mono" style="margin-top:20px">Curiosity is the first quantum state.</p><p style="color:var(--muted);font-size:13px">Character artwork and episode visuals can be added here as the project gallery is prepared.</p></div></div>
+      <div class="qaly-art qaly-art-placeholder" role="img" aria-label="Qaly visual identity artwork will be added here"><div class="qaly-art-mark"><span class="qaly-orbit" aria-hidden="true"></span><p class="qaly-art-kicker">QALY / QUANTUM CAT</p><strong>Curiosity<br/>in every qubit.</strong><p>Character artwork and episode visuals will appear here once the original assets are added to the project.</p></div></div>
     </section>
     <section class="section wrap">
       <div class="section-head"><div><p class="section-kicker">01 / The idea</p><h2>Technical ideas, with a character people can follow.</h2><p>Qaly gives the educational series a recognizable voice and visual identity, creating a bridge between abstract quantum concepts and approachable explanations.</p></div></div>
@@ -76,5 +70,25 @@
   </main>
   <footer class="footer wrap"><p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Portfolio home</a></p></footer>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+(() => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-links");
+  if (!toggle || !menu) return;
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    toggle.setAttribute("aria-label", expanded ? "Open navigation" : "Close navigation");
+    menu.classList.toggle("open", !expanded);
+  });
+  menu.addEventListener("click", event => {
+    if (event.target.closest("a")) {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
+    }
+  });
+})();
+</script>
 </body>
 </html>

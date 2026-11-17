@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head><body>
-<header class="site-header"><nav class="nav wrap"><a class="brand" href="index.html">AMR<span class="dot">⟩</span></a><ul class="nav-links"><li><a href="research.html">Research</a></li><li><a href="work.html">Work</a></li><li><a href="blog.html" aria-current="page">Blog</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="about.html">About</a></li></ul></nav></header>
+<header class="site-header"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html">AMR<span class="dot">⟩</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button><ul class="nav-links" id="primary-navigation"><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="work.html">Work</a></li><li><a href="blog.html" aria-current="page">Blog</a></li><li><a href="qaly.html">Qaly</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="updates.html">News</a></li><li><a href="about.html">About</a></li></ul></nav></header>
 <main class="knowledge-hub">
 <section class="hero wrap blog-hero">
   <p class="eyebrow mono">Knowledge hub · Articles · Research notes · Executable notebooks</p>
@@ -56,4 +56,24 @@
 </section>
 <section class="section wrap"><div class="case-study"><p class="eyebrow mono">Notebook philosophy</p><h2>Not just code cells.</h2><p>A useful notebook should tell a coherent story: the question, the mathematical idea, the implementation, the experiment, and the interpretation. The goal is that each resource remains understandable even before the first cell is run.</p><div class="case-links"><a class="btn primary" href="work.html">Explore projects →</a><a class="btn" href="https://github.com/MaldoAlberto" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
 </main><footer class="footer wrap"><p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Home</a> · <a href="work.html">Work</a></p></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+<script>
+(() => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-links");
+  if (!toggle || !menu) return;
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    toggle.setAttribute("aria-label", expanded ? "Open navigation" : "Close navigation");
+    menu.classList.toggle("open", !expanded);
+  });
+  menu.addEventListener("click", event => {
+    if (event.target.closest("a")) {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
+    }
+  });
+})();
+</script>
 </body></html>

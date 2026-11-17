@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head><body>
-<header class="site-header"><nav class="nav wrap"><a class="brand" href="index.html">AMR<span class="dot">⟩</span></a><ul class="nav-links"><li><a href="research.html">Research</a></li><li><a href="work.html" aria-current="page">Work</a></li><li><a href="blog.html">Blog</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="about.html">About</a></li></ul></nav></header>
+<header class="site-header"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html">AMR<span class="dot">⟩</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button><ul class="nav-links" id="primary-navigation"><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="work.html" aria-current="page">Work</a></li><li><a href="blog.html">Blog</a></li><li><a href="qaly.html">Qaly</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="updates.html">News</a></li><li><a href="about.html">About</a></li></ul></nav></header>
 <main>
 <section class="hero wrap"><p class="eyebrow mono">Selected work · research · engineering · community</p><h1>Ideas made <span class="accent">tangible.</span></h1><p class="lede">A selection of projects where I have researched, designed, implemented, taught, or helped build technical experiences. Each case study distinguishes the problem, my contribution, the approach, and the available evidence.</p><div class="hero-actions"><a class="btn primary" href="#projects">Explore projects ↓</a><a class="btn" href="https://github.com/MaldoAlberto" target="_blank" rel="noopener">GitHub ↗</a></div></section>
 <section id="projects" class="section wrap"><div class="section-head"><div><p class="section-kicker">01 / Scientific software</p><h2>Tools and technical products</h2><p>Software that makes research workflows more explicit, reproducible, and accessible.</p></div></div>
@@ -30,4 +30,24 @@
 </div></section>
 <section class="section wrap"><div class="case-study"><p class="eyebrow mono">How to read this portfolio</p><h2>Contribution, not just affiliation.</h2><p>Project descriptions should make clear what I personally contributed, what was collaborative, and what can be independently verified. Where a project has a runnable notebook, source code, paper, or demo, those artifacts are linked directly.</p><div class="case-links"><a class="btn primary" href="research.html">Research overview →</a><a class="btn" href="blog.html">Read technical notes →</a></div></div></section>
 </main><footer class="footer wrap"><p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Home</a> · <a href="blog.html">Blog</a></p></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+<script>
+(() => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-links");
+  if (!toggle || !menu) return;
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    toggle.setAttribute("aria-label", expanded ? "Open navigation" : "Close navigation");
+    menu.classList.toggle("open", !expanded);
+  });
+  menu.addEventListener("click", event => {
+    if (event.target.closest("a")) {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
+    }
+  });
+})();
+</script>
 </body></html>
