@@ -696,3 +696,13 @@ a:hover { color: var(--accent-strong); }
 @media (prefers-reduced-motion: reduce) {
   .nav-links a, .btn, .blog-index a { transition: none; }
 }
+
+/* Audit 2026-11-17: keep decorative glows and wide widgets from causing horizontal page scroll */
+.hero { overflow-x: clip; }
+.card.featured { overflow: hidden; }
+.table-scroll { min-width: 0; max-width: 100%; }
+.pg { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 640px) {
+  .pg-amps th, .pg-amps td { padding: 8px 8px; }
+  .pg-rel { width: 56px; }
+}
