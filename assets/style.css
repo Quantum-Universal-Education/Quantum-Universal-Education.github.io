@@ -706,3 +706,13 @@ a:hover { color: var(--accent-strong); }
   .pg-amps th, .pg-amps td { padding: 8px 8px; }
   .pg-rel { width: 56px; }
 }
+
+
+/* Interactive noise lab controls */
+.pg-noise-controls { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin:18px 0 22px; }
+.pg-noise-controls label { display:flex; flex-direction:column; gap:9px; color:var(--muted); font-size:12px; }
+.pg-noise-controls strong { color:var(--accent); font-size:14px; }
+.pg-noise-controls input[type="range"] { width:100%; accent-color:var(--accent); cursor:pointer; }
+.pg-noise-lab .pg-amps { min-width:520px; }
+.pg-noise-lab .pg-amps th,.pg-noise-lab .pg-amps td { vertical-align:middle; }
+@media(max-width:720px) { .pg-noise-controls { grid-template-columns:1fr; gap:12px; } }
