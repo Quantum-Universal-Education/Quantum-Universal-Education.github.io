@@ -12,6 +12,7 @@ export default defineConfig({
       cpSync("playground.html","dist/playground.html");
       cpSync("qaly.html","dist/qaly.html");
       cpSync("timeline.html","dist/timeline.html");
+      cpSync("quantum-pipeline.html","dist/quantum-pipeline.html");
     }
   }],
   base:"/",
