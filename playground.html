@@ -3,15 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quantum Circuit Playground</title>
-  <meta name="description" content="Build a quantum circuit in your browser and watch the state vector and measurement probabilities update live. Made with React by Alberto Maldonado Romo.">
-  <meta property="og:title" content="Quantum Circuit Playground">
-  <meta property="og:description" content="Build a quantum circuit in your browser and share it with a link.">
+<script>try{const t=localStorage.getItem("portfolio-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(_){}</script>
+  <title>Quantum Circuit Playground — Alberto Maldonado Romo</title>
+  <meta name="description" content="Build quantum circuits in your browser, inspect statevectors and measurement probabilities, and export OpenQASM 2.0."/>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%2315803d' stroke-width='3'/><circle cx='16' cy='16' r='4' fill='%2315803d'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+<link rel="canonical" href="https://maldoalberto.github.io/playground.html"/>
+<meta property="og:title" content="Quantum Circuit Playground — Alberto Maldonado Romo"/>
+<meta property="og:description" content="Build quantum circuits in your browser, inspect statevectors and measurement probabilities, and export OpenQASM 2.0."/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&h=630&q=85"/>
+<meta property="og:image:alt" content="Speaker presenting a technical talk at a conference"/>
+<meta property="og:url" content="https://maldoalberto.github.io/playground.html"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Quantum Circuit Playground — Alberto Maldonado Romo"/>
+<meta name="twitter:description" content="Build quantum circuits in your browser, inspect statevectors and measurement probabilities, and export OpenQASM 2.0."/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&h=630&q=85"/>
 </head>
 <body>
   <header class="site-header">
@@ -19,6 +29,8 @@
       <a class="brand" href="index.html">AMR<span class="dot">⟩</span></a>
       <ul class="nav-links">
         <li><a href="research.html">Research</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="talks.html">Talks</a></li>
         <li><a href="index.html#news">News</a></li>
         <li><a href="about.html">Contact</a></li>
@@ -35,18 +47,21 @@
     <section class="wrap">
       <div id="playground"><noscript>This playground needs JavaScript.</noscript></div>
     </section>
-  
-    <section class="section wrap case-study">
-      <div class="section-head"><div><p class="section-kicker">Case study / Interactive product</p><h2>Make circuit behavior inspectable while you build.</h2><p>Quantum Circuit Playground is a browser-based environment for constructing small circuits and inspecting their simulated behavior without setting up a local quantum SDK.</p></div></div>
-      <div class="qaly-principles">
-        <article><span>01 · USER NEED</span><h3>Reduce the setup barrier</h3><p>Give learners and developers a quick way to experiment with gates, states, and measurements directly in the browser.</p></article>
-        <article><span>02 · INTERACTION</span><h3>Connect edits to outcomes</h3><p>The interface supports circuits of up to four qubits and updates the state vector, measurement probabilities, and Pauli expectation values as the circuit changes.</p></article>
-        <article><span>03 · WORKFLOW</span><h3>Move beyond the interface</h3><p>Export circuits as OpenQASM 2.0, share circuit configurations through links, and inspect a qregime-style noise estimate.</p></article>
+
+    <section id="engineering-notes" class="section wrap">
+      <div class="case-study">
+        <p class="eyebrow mono">Product engineering case study</p>
+        <h2>Make quantum circuits inspectable, testable, and shareable</h2>
+        <div class="case-study-grid">
+          <article><h3>User workflow</h3><p>Build a circuit of up to four qubits, add gates, and inspect how the statevector, measurement probabilities, and Pauli expectation values change as the circuit evolves.</p></article>
+          <article><h3>Technical surface</h3><ul><li>React-based browser interface</li><li>Statevector simulation and measurement probabilities</li><li>Pauli expectation values</li><li>OpenQASM 2.0 export</li><li>Noise estimate across hardware profiles</li><li>Shareable circuit links</li></ul></article>
+          <article><h3>Why it matters</h3><p>The playground connects visual experimentation with a portable circuit representation. Users can inspect a circuit in the browser and export OpenQASM for a downstream workflow such as qregime.</p></article>
+          <article><h3>Scope & limitations</h3><p>The current interface is designed for up to four qubits. Its noise estimate is a lightweight exploratory aid, not a replacement for hardware calibration, a full noise simulation, or a performance guarantee.</p></article>
+        </div>
+        <div class="case-links"><a class="btn primary" href="#playground">Open the interactive builder ↑</a><a class="btn" href="https://github.com/MaldoAlberto/maldoalberto.github.io" target="_blank" rel="noopener">Portfolio source ↗</a></div>
       </div>
-      <p class="demo-note">Scope note: the playground is a small-circuit educational simulator, not a replacement for hardware execution or a general-purpose quantum SDK. Its current feature set is described above; broader backend support is not implied.</p>
-      <p class="hero-actions"><a class="btn primary" href="#playground">Start building</a><a class="btn" href="https://github.com/MaldoAlberto/maldoalberto.github.io" target="_blank" rel="noreferrer">Portfolio repository ↗</a></p>
     </section>
-</main>
+  </main>
 
   <footer class="footer wrap">
     <p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Home</a></p>

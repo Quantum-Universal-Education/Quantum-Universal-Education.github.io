@@ -3,15 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>qregime demo</title>
-  <meta name="description" content="qregime: decide whether a quantum circuit should run with error mitigation, partial QEC, or full fault tolerance. Live demo, example results, and tutorial.">
-  <meta property="og:title" content="qregime — QEM, QEC or FTQC?">
-  <meta property="og:description" content="Live demo and example results for qregime, an open decision layer for quantum error handling.">
+<script>try{const t=localStorage.getItem("portfolio-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(_){}</script>
+  <title>qregime — Quantum Error-Handling Decision Layer</title>
+  <meta name="description" content="An open-source decision tool for choosing between quantum error mitigation, partial quantum error correction, and fault-tolerant computing."/>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%2315803d' stroke-width='3'/><circle cx='16' cy='16' r='4' fill='%2315803d'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+<link rel="canonical" href="https://maldoalberto.github.io/qregime.html"/>
+<meta property="og:title" content="qregime — Quantum Error-Handling Decision Layer"/>
+<meta property="og:description" content="An open-source decision tool for choosing between quantum error mitigation, partial quantum error correction, and fault-tolerant computing."/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&h=630&q=85"/>
+<meta property="og:image:alt" content="Speaker presenting a technical talk at a conference"/>
+<meta property="og:url" content="https://maldoalberto.github.io/qregime.html"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="qregime — Quantum Error-Handling Decision Layer"/>
+<meta name="twitter:description" content="An open-source decision tool for choosing between quantum error mitigation, partial quantum error correction, and fault-tolerant computing."/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&h=630&q=85"/>
 </head>
 <body>
   <header class="site-header">
@@ -19,6 +29,8 @@
       <a class="brand" href="index.html">AMR<span class="dot">⟩</span></a>
       <ul class="nav-links">
         <li><a href="research.html">Research</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="talks.html">Talks</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="about.html">Contact</a></li>
@@ -52,14 +64,21 @@
 
     <section id="demo" class="section wrap">
       <div class="section-head">
-        <h2>Live demo</h2>
-        <p>The hosted demo is coming soon. Meanwhile, build a circuit in the <a href="playground.html">Quantum Circuit Playground</a>, export its OpenQASM, and run qregime locally or in the <a href="https://colab.research.google.com/github/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noopener">Colab tutorial ↗</a>.</p>
+        <h2>Run the interactive notebook</h2>
+        <p>The reproducible, hands-on entry point is the Jupyter tutorial. It explains the decision workflow step by step, lets you inspect the assumptions and parameters, and runs the example analysis in a hosted Python environment. You can also inspect every cell and its outputs on GitHub.</p>
+      </div>
+      <div class="case-study">
+        <p class="eyebrow mono">Executable tutorial · Jupyter</p>
+        <h3>Explore qregime without installing it first</h3>
+        <p>Start in Google Colab to execute the notebook, or open the source on GitHub to review the explanations, code, and saved outputs. For custom circuits and local experiments, install the package and use the CLI.</p>
+        <div class="case-links">
+          <a class="btn primary" href="https://colab.research.google.com/github/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noopener">Run in Google Colab ↗</a>
+          <a class="btn" href="https://github.com/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noopener">Read notebook on GitHub ↗</a>
+          <a class="btn" href="playground.html">Build a circuit →</a>
+        </div>
       </div>
       <pre class="pg-qasm mono">pip install git+https://github.com/MaldoAlberto/qregime.git
 qregime decide circuit.qasm --hardware trapped_ion_quantinuum_h2 --budget 5000</pre>
-      <!-- Hugging Face Space embed goes here once published:
-      <div class="demo-frame"><iframe src="https://__SPACE_HOST__.hf.space" title="qregime live demo" loading="lazy"></iframe></div>
-      -->
     </section>
 
     <section class="section wrap">
@@ -72,18 +91,21 @@ qregime decide circuit.qasm --hardware trapped_ion_quantinuum_h2 --budget 5000</
       </div>
       <p class="demo-note">Budgets: 1,121 physical qubits on IBM heavy-hex, 5,000 on trapped ions. GAP means no regime meets the target within the budget; it is a real answer, not an error.</p>
     </section>
-  
-    <section class="section wrap case-study">
-      <div class="section-head"><div><p class="section-kicker">Case study / Scientific software</p><h2>From an error budget to an explicit engineering decision.</h2><p>qregime explores a decision layer for selecting an error-handling strategy under reliability and resource constraints.</p></div></div>
-      <div class="qaly-principles">
-        <article><span>01 · PROBLEM</span><h3>One circuit, different execution regimes</h3><p>Mitigation, small-distance error correction, and full fault tolerance have different resource and reliability trade-offs. The project makes that choice explicit instead of treating error handling as an afterthought.</p></article>
-        <article><span>02 · APPROACH</span><h3>Inputs, constraints, and comparison</h3><p>Provide an OpenQASM 2 circuit, a hardware profile, a reliability target, and a resource budget. qregime compares candidate regimes and reports a feasible option or a quantified gap.</p></article>
-        <article><span>03 · EVIDENCE</span><h3>Reproducible examples</h3><p>The page includes precomputed example-circuit results with a stated qregime commit and reliability target. The repository and Colab tutorial provide paths to inspect and reproduce the workflow.</p></article>
+
+    <section class="section wrap">
+      <div class="case-study">
+        <p class="eyebrow mono">Engineering case study</p>
+        <h2>From circuit requirements to an explicit error-handling decision</h2>
+        <div class="case-study-grid">
+          <article><h3>Problem & approach</h3><p>qregime makes the error-handling choice explicit. It accepts an OpenQASM 2 circuit and a hardware profile, then compares error mitigation, partial surface-code QEC, and full fault tolerance against a reliability target and physical-qubit budget.</p></article>
+          <article><h3>Evidence & validation</h3><p>The project includes rotated surface-code memory experiments using Stim and PyMatching, resource estimates in physical qubits and runtime, and precomputed comparisons across example circuits and hardware profiles. The repository includes automated tests and an Apache 2.0 license.</p></article>
+          <article><h3>Engineering surface</h3><ul><li>Command-line decision workflow</li><li>OpenQASM input and hardware profiles</li><li>Reliability target and resource-budget constraints</li><li>Colab tutorial and reproducible example outputs</li></ul></article>
+          <article><h3>Current limitation</h3><p>The hosted interactive demo is not yet available. The current reproducible path is the local CLI and Colab tutorial; the results shown on this page are precomputed for the documented configurations.</p></article>
+        </div>
+        <div class="case-links"><a class="btn primary" href="https://github.com/MaldoAlberto/qregime" target="_blank" rel="noopener">Inspect source code ↗</a><a class="btn" href="https://colab.research.google.com/github/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noopener">Run the tutorial ↗</a></div>
       </div>
-      <p class="demo-note">Scope note: qregime is an evolving research/software project. Its outputs depend on the assumptions and hardware profiles supplied; they should not be interpreted as universal hardware performance guarantees.</p>
-      <p class="hero-actions"><a class="btn primary" href="https://github.com/MaldoAlberto/qregime" target="_blank" rel="noreferrer">Inspect source code ↗</a><a class="btn" href="https://colab.research.google.com/github/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noreferrer">Reproduce with tutorial ↗</a></p>
     </section>
-</main>
+  </main>
 
   <footer class="footer wrap">
     <p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Home</a></p>

@@ -17,7 +17,7 @@
     ],
     "links": [
       {
-        "label": "Live demo",
+        "label": "Case study",
         "url": "qregime.html"
       },
       {
@@ -53,6 +53,10 @@
     ],
     "summary": "Open-source educational series of 60-second animated explainers on quantum computing, hardware, and gates, built with Python, Manim, and Kokoro TTS.",
     "links": [
+      {
+        "label": "Project case study",
+        "url": "qaly.html"
+      },
       {
         "label": "Instagram",
         "url": "https://www.instagram.com/qalycat/"

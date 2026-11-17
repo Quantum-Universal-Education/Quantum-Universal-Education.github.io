@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script>try{const t=localStorage.getItem("portfolio-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(_){}</script>
+<title>Blog & Notebooks — Alberto Maldonado Romo</title>
+<meta name="description" content="Technical notes, research explainers, and executable notebooks on quantum computing, optimization, and scientific software.">
+<link rel="canonical" href="https://maldoalberto.github.io/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="site-header"><nav class="nav wrap"><a class="brand" href="index.html">AMR<span class="dot">⟩</span></a><ul class="nav-links"><li><a href="research.html">Research</a></li><li><a href="work.html">Work</a></li><li><a href="blog.html" aria-current="page">Blog</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="about.html">About</a></li></ul></nav></header>
+<main class="knowledge-hub">
+<section class="hero wrap blog-hero">
+  <p class="eyebrow mono">Knowledge hub · Articles · Research notes · Executable notebooks</p>
+  <h1>Understand it. <span class="accent">Run it.</span></h1>
+  <p class="lede">A technical knowledge space connecting the ideas behind my work with implementations that readers can inspect, modify, and execute. Some resources are guided tutorials; others are research artifacts and teaching material.</p>
+  <div class="hero-actions"><a class="btn primary" href="#notebooks">Explore notebooks ↓</a><a class="btn" href="#articles">Explore articles ↓</a><a class="btn" href="https://github.com/MaldoAlberto" target="_blank" rel="noopener">Browse GitHub ↗</a></div>
+  <div class="blog-principles"><div><strong>01 / Concept</strong><span>What problem are we solving?</span></div><div><strong>02 / Implementation</strong><span>How does the method work?</span></div><div><strong>03 / Evidence</strong><span>What can be reproduced?</span></div></div>
+</section>
+<section class="blog-index wrap" aria-label="Blog categories">
+  <a href="#articles"><span class="blog-index-no">01</span><strong>Articles</strong><small>Explanations and perspectives</small></a>
+  <a href="#research-notes"><span class="blog-index-no">02</span><strong>Research notes</strong><small>Methods, findings and caveats</small></a>
+  <a href="#notebooks"><span class="blog-index-no">03</span><strong>Executable notebooks</strong><small>Read, run and experiment</small></a>
+</section>
+<section id="articles" class="section wrap blog-section">
+  <div class="section-head"><div><p class="section-kicker">01 / Articles</p><h2>Ideas explained beyond the code.</h2><p>Long-form explanations and technical perspectives. This section is intentionally reserved for finished articles; planned topics are listed separately below.</p></div></div>
+  <div class="blog-empty"><span class="blog-status">EDITORIAL SPACE</span><h3>Articles are being developed.</h3><p>The goal is to publish explanations that stand on their own, with references and clear technical context—not short posts that simply repeat project descriptions.</p></div>
+</section>
+<section id="research-notes" class="section wrap blog-section">
+  <div class="section-head"><div><p class="section-kicker">02 / Research notes</p><h2>Questions, methods, and evidence.</h2><p>Research-oriented material that documents assumptions, limitations, and the reasoning behind an implementation.</p></div></div>
+  <div class="grid blog-cards">
+    <article class="card blog-card"><span class="blog-kind">RESEARCH NOTE · QREGIME</span><h3>When is error correction worth its resource cost?</h3><p>A guided explanation of the trade-offs between error mitigation, partial QEC, and fault tolerance, using qregime's assumptions and examples. The project case study and paper provide the current technical references.</p><div class="card-links"><a href="qregime.html">Explore qregime →</a><a href="https://github.com/MaldoAlberto/qregime/blob/main/paper/paper_en.pdf" target="_blank" rel="noopener">Read the paper ↗</a></div></article>
+    <article class="card blog-card"><span class="blog-kind">RESEARCH NOTE · OPTIMIZATION</span><h3>Quantum optimization: from QUBO to QAOA</h3><p>A planned practical walkthrough from a combinatorial problem to an Ising/QUBO formulation, variational circuit, and classical baselines. It will distinguish mathematical formulation from claims about computational advantage.</p><div class="card-links"><a href="research.html">Explore related research →</a></div></article>
+    <article class="card blog-card"><span class="blog-kind">ENGINEERING NOTE · REPRODUCIBILITY</span><h3>Making scientific notebooks reproducible</h3><p>A planned engineering note on environments, dependencies, assumptions, intermediate outputs, and the checks that help readers rerun computational experiments.</p><div class="card-links"><a href="work.html">Explore engineering work →</a></div></article>
+  </div>
+</section>
+<section id="notebooks" class="section wrap blog-section">
+  <div class="section-head"><div><p class="section-kicker">03 / Executable notebooks</p><h2>Learn by running the code.</h2><p>These notebooks link to their source on GitHub and, where available, a one-click Google Colab runtime. Check each repository for dependencies, hardware requirements, and the scope of stored results.</p></div></div>
+  <div class="notebook-feature">
+    <div><span class="blog-kind">FEATURED TUTORIAL · QREGIME</span><h3>From a quantum circuit to an error-handling decision</h3><p>Inspect an OpenQASM circuit, select a hardware profile and resource budget, then compare error mitigation, partial QEC, and full fault tolerance against a reliability target. The notebook includes cases where no available regime meets the target.</p><ul class="tags"><li>QEM</li><li>QEC</li><li>FTQC</li><li>OpenQASM</li></ul></div>
+    <div class="notebook-actions"><a class="btn primary" href="https://colab.research.google.com/github/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noopener">Run in Colab ↗</a><a href="https://github.com/MaldoAlberto/qregime/blob/main/tutorial/qregime_tutorial.ipynb" target="_blank" rel="noopener">Read notebook on GitHub ↗</a><a href="https://github.com/MaldoAlberto/qregime" target="_blank" rel="noopener">Source repository ↗</a></div>
+  </div>
+  <div class="notebook-group"><div class="notebook-group-head"><div><p class="section-kicker">A / Research tutorials</p><h3>Experiments and technical walkthroughs</h3></div><p>Longer tutorials that connect a question, an implementation, and an interpretation of results.</p></div>
+    <div class="grid blog-cards">
+      <article class="card blog-card"><span class="blog-kind">DIFFERENTIABLE QUANTUM CIRCUITS · 2026</span><h3>Solving an ODE on a noisy quantum computer</h3><p>Follow a differentiable quantum circuit from an ideal simulator to realistic noise, then examine what error mitigation and error correction actually change. Includes plain-language chapter summaries and a glossary.</p><ul class="tags"><li>PennyLane</li><li>Qiskit</li><li>QEM / QEC</li></ul><div class="card-links"><a href="https://colab.research.google.com/github/MaldoAlberto/dqc-qem-qec-tutorial/blob/main/dqc_ode_qem_qec_tutorial.ipynb" target="_blank" rel="noopener">Run in Colab ↗</a><a href="https://github.com/MaldoAlberto/dqc-qem-qec-tutorial/blob/main/dqc_ode_qem_qec_tutorial.ipynb" target="_blank" rel="noopener">Read on GitHub ↗</a><a href="https://github.com/MaldoAlberto/dqc-qem-qec-tutorial" target="_blank" rel="noopener">Repository ↗</a></div></article>
+      <article class="card blog-card"><span class="blog-kind">QUANTUM MACHINE LEARNING · QKNN</span><h3>Quantum K-Nearest Neighbors</h3><p>Executable experiments exploring QRAM-based angle encoding, Grover search, and the SWAP test for quantum nearest-neighbor classification, with RY and RZ encoding variants.</p><ul class="tags"><li>Qiskit</li><li>QRAM</li><li>Grover</li><li>SWAP test</li></ul><div class="card-links"><a href="https://colab.research.google.com/github/MaldoAlberto/QKnn/blob/main/experiments/knn/QK-NN_RY.ipynb" target="_blank" rel="noopener">Run RY in Colab ↗</a><a href="https://github.com/MaldoAlberto/QKnn/blob/main/experiments/knn/QK-NN_RY.ipynb" target="_blank" rel="noopener">Read RY notebook ↗</a><a href="https://colab.research.google.com/github/MaldoAlberto/QKnn/blob/main/experiments/knn/QK-NN_RZ.ipynb" target="_blank" rel="noopener">Run RZ in Colab ↗</a><a href="https://github.com/MaldoAlberto/QKnn" target="_blank" rel="noopener">Repository ↗</a></div></article>
+    </div>
+  </div>
+  <div class="notebook-group"><div class="notebook-group-head"><div><p class="section-kicker">B / Teaching notebooks</p><h3>Learning material for the community</h3></div><p>Hands-on resources developed for structured learning experiences and global audiences.</p></div>
+    <div class="grid blog-cards">
+      <article class="card blog-card"><span class="blog-kind">QISKIT GLOBAL SUMMER SCHOOL · 2026</span><h3>Noise Lab</h3><p>Hands-on learning material for exploring noise in quantum circuits. Read the notebook or open it in Colab to work through the lab.</p><ul class="tags"><li>Qiskit</li><li>Noise</li><li>Education</li></ul><div class="card-links"><a href="https://colab.research.google.com/github/qiskit-community/qgss-2026/blob/main/lab-2/QGSS2026_Lab2.ipynb" target="_blank" rel="noopener">Run in Colab ↗</a><a href="https://github.com/qiskit-community/qgss-2026/blob/main/lab-2/QGSS2026_Lab2.ipynb" target="_blank" rel="noopener">Read on GitHub ↗</a></div></article>
+      <article class="card blog-card"><span class="blog-kind">QISKIT GLOBAL SUMMER SCHOOL · 2025</span><h3>Noise Lab</h3><p>Previous edition of the noise-focused lab, useful for comparing the learning progression and exercises across editions.</p><ul class="tags"><li>Qiskit</li><li>Noise</li><li>Education</li></ul><div class="card-links"><a href="https://colab.research.google.com/github/qiskit-community/qgss-2025/blob/main/lab-2/Lab2.ipynb" target="_blank" rel="noopener">Run in Colab ↗</a><a href="https://github.com/qiskit-community/qgss-2025/blob/main/lab-2/Lab2.ipynb" target="_blank" rel="noopener">Read on GitHub ↗</a></div></article>
+    </div>
+  </div>
+</section>
+<section class="section wrap"><div class="case-study"><p class="eyebrow mono">Notebook philosophy</p><h2>Not just code cells.</h2><p>A useful notebook should tell a coherent story: the question, the mathematical idea, the implementation, the experiment, and the interpretation. The goal is that each resource remains understandable even before the first cell is run.</p><div class="case-links"><a class="btn primary" href="work.html">Explore projects →</a><a class="btn" href="https://github.com/MaldoAlberto" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
+</main><footer class="footer wrap"><p>© <span id="year"></span> Alberto Maldonado Romo · <a href="index.html">Home</a> · <a href="work.html">Work</a></p></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body></html>

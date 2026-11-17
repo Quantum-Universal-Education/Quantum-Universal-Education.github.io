@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://maldoalberto.github.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://maldoalberto.github.io/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://maldoalberto.github.io/research.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://maldoalberto.github.io/work.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://maldoalberto.github.io/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://maldoalberto.github.io/publications.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://maldoalberto.github.io/talks.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maldoalberto.github.io/updates.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maldoalberto.github.io/qaly.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://maldoalberto.github.io/qregime.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://maldoalberto.github.io/playground.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

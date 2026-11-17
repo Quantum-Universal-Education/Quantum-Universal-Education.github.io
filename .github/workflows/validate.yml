@@ -3,7 +3,9 @@ on:
   pull_request:
     branches: [master]
   push:
-    branches: [redesign-portfolio]
+    branches:
+      - master
+      - "portfolio/**"
 permissions:
   contents: read
 jobs:
@@ -16,3 +18,5 @@ jobs:
           node-version: 22
       - run: npm install
       - run: npm run build
+      - name: Verify production pages and data
+        run: node scripts/verify-build.mjs
