@@ -507,10 +507,32 @@ function NoiseSimulation({ grid, ideal }) {
     amplitude_damping: "Amplitude damping",
     phase_damping: "Phase damping",
   };
+  const info = {
+    depolarizing: ["Random errors", "The qubit can be disturbed along the X, Y or Z axis. The state loses its resemblance to the ideal output.", "Think of a small random rotation or flip that scrambles the quantum information.", "Random Pauli errors"],
+    bit_flip: ["Bit errors", "The |0⟩ and |1⟩ populations can be exchanged. The measurement probabilities may change directly.", "Like a classical bit accidentally changing 0 into 1, or 1 into 0.", "X error"],
+    phase_flip: ["Phase errors", "Relative phase changes while computational-basis populations can remain the same. Interference is affected.", "The information is still there, but its phase reference is disturbed.", "Z error"],
+    bit_phase_flip: ["Bit + phase errors", "This channel combines a bit flip and a phase flip, changing both the state orientation and its phase.", "A combined disturbance: both the bit and phase information are affected.", "Y error"],
+    amplitude_damping: ["Energy relaxation · T₁", "Excited-state population decays toward |0⟩. This models energy leaking from the qubit.", "Like a spinning top gradually losing energy until it settles down.", "Energy loss"],
+    phase_damping: ["Dephasing · T₂-like effect", "Coherence between |0⟩ and |1⟩ decays, reducing interference without requiring energy loss.", "The quantum phase becomes uncertain, even if the populations stay similar.", "Coherence loss"],
+  };
+  const [heading, explanation, analogy, short] = info[type];
+  const fidelity = Math.max(0, Math.min(1, result.fidelity));
+  const quality = fidelity > .95 ? "High state fidelity" : fidelity > .8 ? "Moderate degradation" : fidelity > .5 ? "Strong degradation" : "Severe degradation";
+  const maxProb = Math.max(.0001, ...rows.map((r) => Math.max(r.ideal, r.probability)));
   return html`
     <div class="pg-panel pg-noise-lab">
-      <h3>Noise Lab · noise channels & fidelity</h3>
-      <p class="pg-note">Choose a noise channel and its error probability. The simulator uses stochastic pure-state trajectories (quantum jumps / Pauli errors), then averages state fidelity and measurement outcomes over independent runs. This is a pedagogical channel model, not a hardware-calibrated noise simulator.</p>
+      <div class="pg-noise-intro">
+        <div><span class="pg-eyebrow">INTERACTIVE EXPERIMENT</span><h3>Noise Lab · see coherence degrade</h3>
+          <p class="pg-note">Change the noise strength and watch the output-state fidelity and measurement distribution respond.</p></div>
+        <span class="pg-lab-chip"><i></i> LIVE SIMULATION</span>
+      </div>
+      <div class="pg-noise-flow" aria-label="Simulation flow">
+        <div class="pg-flow-node"><span class="pg-flow-icon">Ψ</span><b>Ideal circuit</b><small>Target state</small></div>
+        <span class="pg-flow-arrow">→</span>
+        <div class="pg-flow-node active"><span class="pg-flow-icon">〰</span><b>Noise channel</b><small>${names[type]}</small></div>
+        <span class="pg-flow-arrow">→</span>
+        <div class="pg-flow-node"><span class="pg-flow-icon">▥</span><b>Output</b><small>Fidelity + shots</small></div>
+      </div>
       <div class="pg-noise-controls">
         <label>Noise channel
           <select value=${type} onChange=${(e) => setType(e.target.value)}>
@@ -533,28 +555,38 @@ function NoiseSimulation({ grid, ideal }) {
           <span class="pg-slider-scale"><span>100</span><span>1,000</span><span>2,000</span></span>
         </label>
       </div>
-      <div class="pg-noise-fidelity">
-        <span>Average state fidelity</span>
-        <strong class="mono">${(result.fidelity * 100).toFixed(2)}%</strong>
-        <span class="pg-rel"><span style=${{ width: `${result.fidelity * 100}%` }}></span></span>
-        <small>Ideal circuit = 100% · estimated over ${shots.toLocaleString()} trajectories</small>
+      <div class="pg-noise-explainer">
+        <div class="pg-explainer-symbol">${type === "amplitude_damping" ? "↓" : type === "phase_damping" ? "≈" : type === "depolarizing" ? "✳" : "↗"}</div>
+        <div><span class="pg-eyebrow">${short}</span><b>${heading}</b><p>${explanation}</p><small>${analogy}</small></div>
       </div>
-      <div class="pg-actions"><button type="button" class="btn" onClick=${() => setRun((v) => v + 1)}>Run again ↻</button></div>
-      <div class="pg-table-scroll">
-        <table class="pg-amps">
-          <thead><tr><th>Outcome</th><th>Ideal probability</th><th>Noisy counts</th><th>Observed probability</th></tr></thead>
-          <tbody>
-            ${rows.map((r) => html`<tr key=${r.i}>
-              <td class="mono">|${r.ket}⟩</td>
-              <td class="mono">${(r.ideal * 100).toFixed(1)}%</td>
-              <td class="mono">${r.count.toLocaleString()} / ${shots.toLocaleString()}</td>
-              <td><span class="pg-rel"><span style=${{ width: `${r.probability * 100}%` }}></span></span>
-                <span class="mono">${(r.probability * 100).toFixed(1)}%</span></td>
-            </tr>`)}
-          </tbody>
-        </table>
+      <div class="pg-fidelity-layout">
+        <div class="pg-fidelity-card">
+          <span class="pg-eyebrow">STATE OVERLAP</span>
+          <div class="pg-fidelity-ring" style=${{"--fidelity": `${fidelity * 100}%`}}>
+            <div><strong>${(fidelity * 100).toFixed(1)}<small>%</small></strong><span>FIDELITY</span></div>
+          </div>
+          <b class="pg-fidelity-quality">${quality}</b>
+          <p>Ideal output compared with noisy trajectories</p>
+        </div>
+        <div class="pg-fidelity-detail">
+          <div class="pg-detail-row"><span>Ideal reference</span><strong>100%</strong></div>
+          <div class="pg-comparison-track"><span class="ideal-track"></span></div>
+          <div class="pg-detail-row"><span>Noisy state</span><strong>${(fidelity * 100).toFixed(1)}%</strong></div>
+          <div class="pg-comparison-track"><span class="noisy-track" style=${{width:`${fidelity * 100}%`}}></span></div>
+          <div class="pg-detail-row"><span>Fidelity loss</span><strong class="loss-value">${((1 - fidelity) * 100).toFixed(1)}%</strong></div>
+          <div class="pg-loss-note">The larger the noise, the further the final state can move away from the ideal state.</div>
+          <div class="pg-actions"><button type="button" class="btn" onClick=${() => setRun((v) => v + 1)}>Resample trajectories ↻</button></div>
+        </div>
       </div>
-      <p class="pg-note">Fidelity is the average pure-state overlap squared between each noisy trajectory and the ideal output state. It is not the same as shot-distribution similarity. Increase the trajectory count for a less noisy Monte Carlo estimate.</p>
+      <div class="pg-distribution-heading"><div><span class="pg-eyebrow">MEASUREMENT VIEW</span><h4>Ideal vs noisy output</h4></div><span class="pg-distribution-key"><i class="ideal-key"></i>Ideal <i class="noisy-key"></i>Noisy</span></div>
+      <div class="pg-outcome-bars">
+        ${rows.map((r) => html`<div class="pg-outcome-row" key=${r.i}>
+          <code>|${r.ket}⟩</code>
+          <div class="pg-outcome-bar"><span class="ideal-bar" style=${{width:`${r.ideal / maxProb * 100}%`}}></span><span class="noisy-bar" style=${{width:`${r.probability / maxProb * 100}%`}}></span></div>
+          <small>${(r.ideal * 100).toFixed(0)}% / ${(r.probability * 100).toFixed(0)}%</small>
+        </div>`)}
+      </div>
+      <p class="pg-note">Each trajectory is simulated independently. The fidelity shown is the Monte Carlo average of the squared overlap with the ideal pure output state. Measurement-distribution similarity and state fidelity are different quantities. This is an educational channel model, not a hardware-calibrated simulator.</p>
     </div>`;
 }
 
