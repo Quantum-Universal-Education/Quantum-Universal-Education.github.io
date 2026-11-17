@@ -14,29 +14,14 @@
 <link rel="canonical" href="https://maldoalberto.github.io/qregime.html"/>
 <meta property="og:title" content="qregime — Quantum Error-Handling Decision Layer"/>
 <meta property="og:description" content="An open-source decision tool for choosing between quantum error mitigation, partial quantum error correction, and fault-tolerant computing."/>
-<meta property="og:image" content="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&h=630&q=85"/>
-<meta property="og:image:alt" content="Speaker presenting a technical talk at a conference"/>
 <meta property="og:url" content="https://maldoalberto.github.io/qregime.html"/>
 <meta property="og:type" content="website"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="qregime — Quantum Error-Handling Decision Layer"/>
 <meta name="twitter:description" content="An open-source decision tool for choosing between quantum error mitigation, partial quantum error correction, and fault-tolerant computing."/>
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&h=630&q=85"/>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav wrap">
-      <a class="brand" href="index.html">AMR<span class="dot">⟩</span></a>
-      <ul class="nav-links">
-        <li><a href="research.html">Research</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="talks.html">Talks</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="about.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header class="site-header"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html">AMR<span class="dot">⟩</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button><ul class="nav-links" id="primary-navigation"><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="work.html">Work</a></li><li><a href="blog.html">Blog</a></li><li><a href="qaly.html">Qaly</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="updates.html">News</a></li><li><a href="about.html">About</a></li></ul></nav></header>
 
   <main>
     <section class="hero wrap">
@@ -137,5 +122,25 @@ qregime decide circuit.qasm --hardware trapped_ion_quantinuum_h2 --budget 5000</
       })
       .catch((e) => console.error(e));
   </script>
+<script>
+(() => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-links");
+  if (!toggle || !menu) return;
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    toggle.setAttribute("aria-label", expanded ? "Open navigation" : "Close navigation");
+    menu.classList.toggle("open", !expanded);
+  });
+  menu.addEventListener("click", event => {
+    if (event.target.closest("a")) {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
+    }
+  });
+})();
+</script>
 </body>
 </html>
