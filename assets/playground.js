@@ -59,7 +59,7 @@ function presetGrid(name) {
 }
 
 // ---- simulator ----
-function simulate(grid) {
+function simulate(grid, noise = null) {
   const n = grid.length;
   const dim = 1 << n;
   let re = new Float64Array(dim), im = new Float64Array(dim);
@@ -79,17 +79,39 @@ function simulate(grid) {
     }
   };
 
+  const applyOneQubitNoise = (q, p) => {
+    if (!noise || p <= 0 || Math.random() >= p) return;
+    const pauli = ["X", "Y", "Z"][Math.floor(Math.random() * 3)];
+    apply1(q, GATES[pauli].m);
+  };
+  const applyTwoQubitNoise = (qa, qb, p) => {
+    if (!noise || p <= 0 || Math.random() >= p) return;
+    // Two-qubit depolarizing channel: choose uniformly from the 15
+    // non-identity Pauli products {I,X,Y,Z} ⊗ {I,X,Y,Z}.
+    const choice = 1 + Math.floor(Math.random() * 15);
+    const a = Math.floor(choice / 4);
+    const b = choice % 4;
+    const paulis = ["I", "X", "Y", "Z"];
+    if (paulis[a] !== "I") apply1(qa, GATES[paulis[a]].m);
+    if (paulis[b] !== "I") apply1(qb, GATES[paulis[b]].m);
+  };
+
   for (let c = 0; c < COLS; c++) {
     let ctrlMask = 0;
+    const controls = [];
     const targets = [];
     for (let q = 0; q < n; q++) {
       const g = grid[q][c];
-      if (g === "CTRL") ctrlMask |= 1 << q;
+      if (g === "CTRL") { ctrlMask |= 1 << q; controls.push(q); }
       else if (g === "TARG") targets.push(q);
     }
     for (let q = 0; q < n; q++) {
       const g = grid[q][c];
-      if (g && GATES[g].m) apply1(q, GATES[g].m, ctrlMask);
+      if (g && GATES[g].m) {
+        apply1(q, GATES[g].m, ctrlMask);
+        if (controls.length) controls.forEach((control) => applyTwoQubitNoise(control, q, noise?.p2 || 0));
+        else applyOneQubitNoise(q, noise?.p1 || 0);
+      }
     }
     for (const t of targets) {
       const bit = 1 << t;
@@ -99,6 +121,8 @@ function simulate(grid) {
         [re[i], re[j]] = [re[j], re[i]];
         [im[i], im[j]] = [im[j], im[i]];
       }
+      if (controls.length) controls.forEach((control) => applyTwoQubitNoise(control, t, noise?.p2 || 0));
+      else applyOneQubitNoise(t, noise?.p1 || 0);
     }
   }
   return Array.from({ length: dim }, (_, i) => ({
@@ -107,6 +131,28 @@ function simulate(grid) {
     re: Math.abs(re[i]) < 1e-12 ? 0 : re[i],
     im: Math.abs(im[i]) < 1e-12 ? 0 : im[i],
     p: re[i] * re[i] + im[i] * im[i],
+  }));
+}
+
+// Monte Carlo shots: each shot gets an independent stochastic noise trajectory
+// followed by a computational-basis measurement.
+function runNoisyShots(grid, p1, p2, shots) {
+  const counts = Array(1 << grid.length).fill(0);
+  for (let shot = 0; shot < shots; shot++) {
+    const state = simulate(grid, { p1, p2 });
+    let r = Math.random();
+    let outcome = state[state.length - 1].i;
+    for (const item of state) {
+      r -= item.p;
+      if (r <= 0) { outcome = item.i; break; }
+    }
+    counts[outcome]++;
+  }
+  return counts.map((count, i) => ({
+    i,
+    ket: i.toString(2).padStart(grid.length, "0"),
+    count,
+    probability: count / shots,
   }));
 }
 
@@ -392,6 +438,54 @@ function Expectations({ state, n, fidelity }) {
     </div>`;
 }
 
+function NoiseSimulation({ grid, ideal }) {
+  const [p1, setP1] = useState(0.001);
+  const [p2, setP2] = useState(0.01);
+  const [shots, setShots] = useState(1000);
+  const noisy = useMemo(() => runNoisyShots(grid, p1, p2, shots), [grid, p1, p2, shots]);
+  const rows = noisy.map((item) => ({
+    ...item,
+    ideal: ideal[item.i]?.p || 0,
+  }));
+  return html`
+    <div class="pg-panel pg-noise-lab">
+      <h3>Noise Lab · stochastic simulation</h3>
+      <p class="pg-note">Each shot runs an independent noisy circuit trajectory and then measures in the computational basis. The model applies single-qubit depolarizing noise after one-qubit gates and two-qubit depolarizing noise after entangling operations. This is a configurable toy noise model, not a hardware-calibrated simulator.</p>
+      <div class="pg-noise-controls">
+        <label>Single-qubit depolarizing probability
+          <strong class="mono">${(p1 * 100).toFixed(2)}%</strong>
+          <input type="range" min="0" max="0.05" step="0.001" value=${p1}
+            onInput=${(e) => setP1(Number(e.target.value))} />
+        </label>
+        <label>Two-qubit depolarizing probability
+          <strong class="mono">${(p2 * 100).toFixed(2)}%</strong>
+          <input type="range" min="0" max="0.1" step="0.001" value=${p2}
+            onInput=${(e) => setP2(Number(e.target.value))} />
+        </label>
+        <label>Measurement shots
+          <strong class="mono">${shots.toLocaleString()}</strong>
+          <input type="range" min="100" max="2000" step="100" value=${shots}
+            onInput=${(e) => setShots(Number(e.target.value))} />
+        </label>
+      </div>
+      <div class="pg-table-scroll">
+        <table class="pg-amps">
+          <thead><tr><th>Outcome</th><th>Ideal</th><th>Noisy shots</th><th>Observed</th></tr></thead>
+          <tbody>
+            ${rows.map((r) => html`<tr key=${r.i}>
+              <td class="mono">|${r.ket}⟩</td>
+              <td class="mono">${(r.ideal * 100).toFixed(1)}%</td>
+              <td class="mono">${r.count.toLocaleString()} / ${shots.toLocaleString()}</td>
+              <td><span class="pg-rel"><span style=${{ width: `${r.probability * 100}%` }}></span></span>
+                <span class="mono">${(r.probability * 100).toFixed(1)}%</span></td>
+            </tr>`)}
+          </tbody>
+        </table>
+      </div>
+      <p class="pg-note">The ideal column is the noiseless statevector probability. The observed column is a finite-shot Monte Carlo result, so it fluctuates between runs. Move either noise slider or change the shot count to rerun the experiment.</p>
+    </div>`;
+}
+
 function NoiseEstimate({ grid }) {
   const { oneQ, twoQ, depth, unsupported } = gateCounts(grid);
   return html`
@@ -508,6 +602,7 @@ function App() {
       ${encode(grid) === encode(presetGrid(SHOR_KEY)) && html`<${ShorPanel} state=${state} />`}
       <${Results} state=${state} />
       <${Expectations} state=${state} n=${grid.length} fidelity=${Math.pow(1 - HARDWARE[0].p2q, gateCounts(grid).twoQ)} />
+      <${NoiseSimulation} grid=${grid} ideal=${state} />
       <${NoiseEstimate} grid=${grid} />
       <${QasmPanel} grid=${grid} />
     </div>`;
