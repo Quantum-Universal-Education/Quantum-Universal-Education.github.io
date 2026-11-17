@@ -79,21 +79,69 @@ function simulate(grid, noise = null) {
     }
   };
 
-  const applyOneQubitNoise = (q, p) => {
-    if (!noise || p <= 0 || Math.random() >= p) return;
-    const pauli = ["X", "Y", "Z"][Math.floor(Math.random() * 3)];
-    apply1(q, GATES[pauli].m);
+  const applyDamping = (q, p) => {
+    if (p <= 0) return;
+    const bit = 1 << q;
+    let excited = 0;
+    for (let i = 0; i < dim; i++) if (i & bit) excited += re[i] ** 2 + im[i] ** 2;
+    const jumpProbability = p * excited;
+    if (Math.random() < jumpProbability && excited > 0) {
+      for (let i = 0; i < dim; i++) if (!(i & bit)) {
+        const j = i | bit;
+        re[i] = Math.sqrt(p) * re[j];
+        im[i] = Math.sqrt(p) * im[j];
+        re[j] = 0; im[j] = 0;
+      }
+    } else {
+      const scale = Math.sqrt(1 - p);
+      for (let i = 0; i < dim; i++) if (i & bit) { re[i] *= scale; im[i] *= scale; }
+    }
+    let norm = 0;
+    for (let i = 0; i < dim; i++) norm += re[i] ** 2 + im[i] ** 2;
+    if (norm > 0) { const inv = 1 / Math.sqrt(norm); for (let i = 0; i < dim; i++) { re[i] *= inv; im[i] *= inv; } }
   };
+  const applyNoiseChannel = (q, p, type) => {
+    if (!noise || p <= 0) return;
+    if (type === "amplitude_damping") { applyDamping(q, p); return; }
+    if (Math.random() >= p) return;
+    if (type === "bit_flip") apply1(q, GATES.X.m);
+    else if (type === "phase_flip") apply1(q, GATES.Z.m);
+    else if (type === "bit_phase_flip") apply1(q, GATES.Y.m);
+    else if (type === "phase_damping") {
+      const phaseError = (1 - Math.sqrt(1 - p)) / 2;
+      if (Math.random() < phaseError) apply1(q, GATES.Z.m);
+    } else {
+      const pauli = ["X", "Y", "Z"][Math.floor(Math.random() * 3)];
+      apply1(q, GATES[pauli].m);
+    }
+  };
+  const applyOneQubitNoise = (q, p) => applyNoiseChannel(q, p, noise?.type || "depolarizing");
   const applyTwoQubitNoise = (qa, qb, p) => {
-    if (!noise || p <= 0 || Math.random() >= p) return;
-    // Two-qubit depolarizing channel: choose uniformly from the 15
-    // non-identity Pauli products {I,X,Y,Z} ⊗ {I,X,Y,Z}.
-    const choice = 1 + Math.floor(Math.random() * 15);
-    const a = Math.floor(choice / 4);
-    const b = choice % 4;
+    if (!noise || p <= 0) return;
+    const type = noise.type || "depolarizing";
+    if (type === "amplitude_damping") {
+      applyDamping(qa, p); applyDamping(qb, p); return;
+    }
+    if (type === "phase_damping") {
+      applyNoiseChannel(qa, p, type); applyNoiseChannel(qb, p, type); return;
+    }
+    if (Math.random() >= p) return;
     const paulis = ["I", "X", "Y", "Z"];
-    if (paulis[a] !== "I") apply1(qa, GATES[paulis[a]].m);
-    if (paulis[b] !== "I") apply1(qb, GATES[paulis[b]].m);
+    if (type === "bit_flip") {
+      if (Math.random() < 0.5) apply1(qa, GATES.X.m);
+      else apply1(qb, GATES.X.m);
+    } else if (type === "phase_flip") {
+      if (Math.random() < 0.5) apply1(qa, GATES.Z.m);
+      else apply1(qb, GATES.Z.m);
+    } else if (type === "bit_phase_flip") {
+      if (Math.random() < 0.5) apply1(qa, GATES.Y.m);
+      else apply1(qb, GATES.Y.m);
+    } else {
+      const choice = 1 + Math.floor(Math.random() * 15);
+      const a = Math.floor(choice / 4), b = choice % 4;
+      if (paulis[a] !== "I") apply1(qa, GATES[paulis[a]].m);
+      if (paulis[b] !== "I") apply1(qb, GATES[paulis[b]].m);
+    }
   };
 
   for (let c = 0; c < COLS; c++) {
@@ -136,24 +184,27 @@ function simulate(grid, noise = null) {
 
 // Monte Carlo shots: each shot gets an independent stochastic noise trajectory
 // followed by a computational-basis measurement.
-function runNoisyShots(grid, p1, p2, shots) {
+function runNoisyShots(grid, ideal, type, p1, p2, shots) {
   const counts = Array(1 << grid.length).fill(0);
+  let fidelitySum = 0;
   for (let shot = 0; shot < shots; shot++) {
-    const state = simulate(grid, { p1, p2 });
-    let r = Math.random();
-    let outcome = state[state.length - 1].i;
-    for (const item of state) {
-      r -= item.p;
-      if (r <= 0) { outcome = item.i; break; }
+    const state = simulate(grid, { type, p1, p2 });
+    let overlapRe = 0, overlapIm = 0;
+    for (let i = 0; i < state.length; i++) {
+      overlapRe += ideal[i].re * state[i].re + ideal[i].im * state[i].im;
+      overlapIm += ideal[i].re * state[i].im - ideal[i].im * state[i].re;
     }
+    fidelitySum += overlapRe * overlapRe + overlapIm * overlapIm;
+    let r = Math.random(), outcome = state[state.length - 1].i;
+    for (const item of state) { r -= item.p; if (r <= 0) { outcome = item.i; break; } }
     counts[outcome]++;
   }
-  return counts.map((count, i) => ({
-    i,
-    ket: i.toString(2).padStart(grid.length, "0"),
-    count,
-    probability: count / shots,
-  }));
+  return {
+    fidelity: fidelitySum / shots,
+    rows: counts.map((count, i) => ({
+      i, ket: i.toString(2).padStart(grid.length, "0"), count, probability: count / shots,
+    })),
+  };
 }
 
 // ---- OpenQASM 2.0 export ----
@@ -439,38 +490,54 @@ function Expectations({ state, n, fidelity }) {
 }
 
 function NoiseSimulation({ grid, ideal }) {
+  const [type, setType] = useState("depolarizing");
   const [p1, setP1] = useState(0.001);
   const [p2, setP2] = useState(0.01);
-  const [shots, setShots] = useState(1000);
-  const noisy = useMemo(() => runNoisyShots(grid, p1, p2, shots), [grid, p1, p2, shots]);
-  const rows = noisy.map((item) => ({
-    ...item,
-    ideal: ideal[item.i]?.p || 0,
-  }));
+  const [shots, setShots] = useState(500);
+  const [run, setRun] = useState(0);
+  const result = useMemo(() => runNoisyShots(grid, ideal, type, p1, p2, shots), [grid, ideal, type, p1, p2, shots, run]);
+  const rows = result.rows.map((item) => ({ ...item, ideal: ideal[item.i]?.p || 0 }));
+  const names = {
+    depolarizing: "Depolarizing",
+    bit_flip: "Bit flip (X)",
+    phase_flip: "Phase flip (Z)",
+    bit_phase_flip: "Bit-phase flip (Y)",
+    amplitude_damping: "Amplitude damping",
+    phase_damping: "Phase damping",
+  };
   return html`
     <div class="pg-panel pg-noise-lab">
-      <h3>Noise Lab · stochastic simulation</h3>
-      <p class="pg-note">Each shot runs an independent noisy circuit trajectory and then measures in the computational basis. The model applies single-qubit depolarizing noise after one-qubit gates and two-qubit depolarizing noise after entangling operations. This is a configurable toy noise model, not a hardware-calibrated simulator.</p>
+      <h3>Noise Lab · noise channels & fidelity</h3>
+      <p class="pg-note">Choose a noise channel and its error probability. The simulator uses stochastic pure-state trajectories (quantum jumps / Pauli errors), then averages state fidelity and measurement outcomes over independent runs. This is a pedagogical channel model, not a hardware-calibrated noise simulator.</p>
       <div class="pg-noise-controls">
-        <label>Single-qubit depolarizing probability
+        <label>Noise channel
+          <select value=${type} onChange=${(e) => setType(e.target.value)}>
+            ${Object.entries(names).map(([key, name]) => html`<option key=${key} value=${key}>${name}</option>`)}
+          </select>
+        </label>
+        <label>Single-qubit error probability
           <strong class="mono">${(p1 * 100).toFixed(2)}%</strong>
-          <input type="range" min="0" max="0.05" step="0.001" value=${p1}
-            onInput=${(e) => setP1(Number(e.target.value))} />
+          <input type="range" min="0" max="0.2" step="0.001" value=${p1} onInput=${(e) => setP1(Number(e.target.value))} />
         </label>
-        <label>Two-qubit depolarizing probability
+        <label>Two-qubit error probability
           <strong class="mono">${(p2 * 100).toFixed(2)}%</strong>
-          <input type="range" min="0" max="0.1" step="0.001" value=${p2}
-            onInput=${(e) => setP2(Number(e.target.value))} />
+          <input type="range" min="0" max="0.2" step="0.001" value=${p2} onInput=${(e) => setP2(Number(e.target.value))} />
         </label>
-        <label>Measurement shots
+        <label>Monte Carlo trajectories / shots
           <strong class="mono">${shots.toLocaleString()}</strong>
-          <input type="range" min="100" max="2000" step="100" value=${shots}
-            onInput=${(e) => setShots(Number(e.target.value))} />
+          <input type="range" min="100" max="2000" step="100" value=${shots} onInput=${(e) => setShots(Number(e.target.value))} />
         </label>
       </div>
+      <div class="pg-noise-fidelity">
+        <span>Average state fidelity</span>
+        <strong class="mono">${(result.fidelity * 100).toFixed(2)}%</strong>
+        <span class="pg-rel"><span style=${{ width: `${result.fidelity * 100}%` }}></span></span>
+        <small>Ideal circuit = 100% · estimated over ${shots.toLocaleString()} trajectories</small>
+      </div>
+      <div class="pg-actions"><button type="button" class="btn" onClick=${() => setRun((v) => v + 1)}>Run again ↻</button></div>
       <div class="pg-table-scroll">
         <table class="pg-amps">
-          <thead><tr><th>Outcome</th><th>Ideal</th><th>Noisy shots</th><th>Observed</th></tr></thead>
+          <thead><tr><th>Outcome</th><th>Ideal probability</th><th>Noisy counts</th><th>Observed probability</th></tr></thead>
           <tbody>
             ${rows.map((r) => html`<tr key=${r.i}>
               <td class="mono">|${r.ket}⟩</td>
@@ -482,7 +549,7 @@ function NoiseSimulation({ grid, ideal }) {
           </tbody>
         </table>
       </div>
-      <p class="pg-note">The ideal column is the noiseless statevector probability. The observed column is a finite-shot Monte Carlo result, so it fluctuates between runs. Move either noise slider or change the shot count to rerun the experiment.</p>
+      <p class="pg-note">Fidelity is the average pure-state overlap squared between each noisy trajectory and the ideal output state. It is not the same as shot-distribution similarity. Increase the trajectory count for a less noisy Monte Carlo estimate.</p>
     </div>`;
 }
 
