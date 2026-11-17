@@ -350,7 +350,7 @@ function Palette({ selected, onSelect }) {
     </div>`;
 }
 
-function Circuit({ grid, onCell }) {
+function Circuit({ grid, onCell, noise }) {
   return html`
     <div class="pg-circuit">
       ${grid.map(
@@ -365,8 +365,10 @@ function Circuit({ grid, onCell }) {
                 return html`
                   <button key=${c} type="button" class=${"pg-cell" + (g ? " has-gate" : "") + (linked ? " is-linked" : "") + (g === "CTRL" || g === "TARG" ? " is-ctrl" : "")}
                     aria-label=${`qubit ${q}, step ${c + 1}${g ? ": " + GATES[g].info : ""}`}
+                    style=${noise?.enabled && g ? {"--noise-strength": `${Math.max(noise.p1, noise.p2) / 0.2}`} : {}}
                     onClick=${() => onCell(q, c)}>
                     ${g ? GATES[g].label : ""}
+                    ${noise?.enabled && g ? html`<span class="pg-gate-noise-mark" title=${noise.type}>${({depolarizing:"✳",bit_flip:"X",phase_flip:"Z",bit_phase_flip:"Y",amplitude_damping:"↓",phase_damping:"≋"})[noise.type]}</span>` : ""}
                   </button>`;
               })}
             </div>
@@ -491,13 +493,11 @@ function Expectations({ state, n, fidelity }) {
     </div>`;
 }
 
-function NoiseSimulation({ grid, ideal }) {
-  const [type, setType] = useState("depolarizing");
-  const [p1, setP1] = useState(0.001);
-  const [p2, setP2] = useState(0.01);
-  const [shots, setShots] = useState(500);
+function NoiseSimulation({ grid, ideal, noise, onNoiseChange }) {
+  const { enabled, type, p1, p2, shots } = noise;
+  const updateNoise = (patch) => onNoiseChange({ ...noise, ...patch });
   const [run, setRun] = useState(0);
-  const result = useMemo(() => runNoisyShots(grid, ideal, type, p1, p2, shots), [grid, ideal, type, p1, p2, shots, run]);
+  const result = useMemo(() => runNoisyShots(grid, ideal, type, enabled ? p1 : 0, enabled ? p2 : 0, shots), [grid, ideal, type, enabled, p1, p2, shots, run]);
   const rows = result.rows.map((item) => ({ ...item, ideal: ideal[item.i]?.p || 0 }));
   const names = {
     depolarizing: "Depolarizing",
@@ -534,27 +534,28 @@ function NoiseSimulation({ grid, ideal }) {
         <div class="pg-flow-node"><span class="pg-flow-icon">▥</span><b>Output</b><small>Fidelity + shots</small></div>
       </div>
       <div class="pg-noise-console">
+        <button type="button" class=${"pg-noise-toggle " + (enabled ? "active" : "")} aria-pressed=${enabled} onClick=${() => updateNoise({ enabled:!enabled })}><span class="pg-noise-toggle-dot"></span> Noise ${enabled ? "ON" : "OFF"}</button>
         <div class="pg-channel-picker" aria-label="Select noise channel">
           ${Object.entries(names).map(([key, name]) => {
             const symbols = { depolarizing:"✳", bit_flip:"X", phase_flip:"Z", bit_phase_flip:"Y", amplitude_damping:"↓", phase_damping:"≋" };
-            return html`<button type="button" title=${name} aria-label=${name} aria-pressed=${type === key} className=${"pg-channel-symbol " + (type === key ? "active" : "")} onClick=${() => setType(key)}><span>${symbols[key]}</span></button>`;
+            return html`<button type="button" title=${name} aria-label=${name} aria-pressed=${type === key} className=${"pg-channel-symbol " + (type === key ? "active" : "")} onClick=${() => updateNoise({ type:key })}><span>${symbols[key]}</span></button>`;
           })}
         </div>
         <div class="pg-compact-sliders">
           <label class="pg-mini-slider cyan" title="Single-qubit error probability">
             <span>1Q <b>${(p1 * 100).toFixed(1)}%</b></span>
-            <input class="pg-range cyan" aria-label="Single-qubit noise" type="range" min="0" max="0.2" step="0.001" value=${p1} style=${{"--range-progress": `${p1 / 0.2 * 100}%`}} onInput=${(e) => setP1(Number(e.target.value))} />
+            <input class="pg-range cyan" aria-label="Single-qubit noise" type="range" min="0" max="0.2" step="0.001" value=${p1} style=${{"--range-progress": `${p1 / 0.2 * 100}%`}} onInput=${(e) => updateNoise({ p1:Number(e.target.value) })} />
           </label>
           <label class="pg-mini-slider violet" title="Two-qubit error probability">
             <span>2Q <b>${(p2 * 100).toFixed(1)}%</b></span>
-            <input class="pg-range violet" aria-label="Two-qubit noise" type="range" min="0" max="0.2" step="0.001" value=${p2} style=${{"--range-progress": `${p2 / 0.2 * 100}%`}} onInput=${(e) => setP2(Number(e.target.value))} />
+            <input class="pg-range violet" aria-label="Two-qubit noise" type="range" min="0" max="0.2" step="0.001" value=${p2} style=${{"--range-progress": `${p2 / 0.2 * 100}%`}} onInput=${(e) => updateNoise({ p2:Number(e.target.value) })} />
           </label>
           <label class="pg-mini-slider gold" title="Monte Carlo trajectories">
             <span>MC <b>${shots}</b></span>
-            <input class="pg-range gold" aria-label="Monte Carlo shots" type="range" min="100" max="2000" step="100" value=${shots} style=${{"--range-progress": `${(shots - 100) / 1900 * 100}%`}} onInput=${(e) => setShots(Number(e.target.value))} />
+            <input class="pg-range gold" aria-label="Monte Carlo shots" type="range" min="100" max="2000" step="100" value=${shots} style=${{"--range-progress": `${(shots - 100) / 1900 * 100}%`}} onInput=${(e) => updateNoise({ shots:Number(e.target.value) })} />
           </label>
         </div>
-        <div class="pg-channel-caption"><b>${names[type]}</b><span>${short}</span></div>
+        <div class="pg-channel-caption"><b>${names[type]}</b><span>${enabled ? short : "Disabled"}</span></div>
       </div>
       <div class="pg-noise-explainer">
         <div class="pg-explainer-symbol">${type === "amplitude_damping" ? "↓" : type === "phase_damping" ? "≈" : type === "depolarizing" ? "✳" : "↗"}</div>
@@ -662,6 +663,7 @@ function App() {
   const [grid, setGrid] = useState(() => decode(location.hash) || presetGrid("Bell state"));
   const [selected, setSelected] = useState("H");
   const [copied, setCopied] = useState(false);
+  const [noise, setNoise] = useState({ enabled:false, type:"depolarizing", p1:0.001, p2:0.01, shots:500 });
   const state = useMemo(() => simulate(grid), [grid]);
 
   useEffect(() => {
@@ -710,9 +712,9 @@ function App() {
         <p class="pg-hint">Choose a gate and click a cell to place it. Click again to remove it. ● controls the other gates in its column: ● + ⊕ is a CNOT, two ● + ⊕ a Toffoli.</p>
         <div class="pg-circuit-noise">
           <div class="pg-circuit-live-label"><span class="pg-eyebrow">ONE CIRCUIT · TWO EXECUTIONS</span><span class="pg-section-status">IDEAL + NOISY</span></div>
-          <${Circuit} grid=${grid} onCell=${onCell} />
+          <${Circuit} grid=${grid} onCell=${onCell} noise=${noise} />
           ${encode(grid) === encode(presetGrid(SHOR_KEY)) && html`<${ShorPanel} state=${state} />`}
-          <${NoiseSimulation} grid=${grid} ideal=${state} />
+          <${NoiseSimulation} grid=${grid} ideal=${state} noise=${noise} onNoiseChange=${setNoise} />
         </div>
         <${Results} state=${state} />
         <${Expectations} state=${state} n=${grid.length} fidelity=${Math.pow(1 - HARDWARE[0].p2q, gateCounts(grid).twoQ)} />
