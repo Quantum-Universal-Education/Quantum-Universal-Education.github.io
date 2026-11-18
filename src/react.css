@@ -32,3 +32,7 @@
 .highlight-num .highlight-vs { font-weight: 600; color: var(--text); }
 .highlight h2 { margin: 6px 0 10px; }
 @media (max-width: 640px) { .highlight-grid { grid-template-columns: 1fr; gap: 18px; padding: 20px; } }
+
+/* Media page photos */
+.media-card { overflow: hidden; }
+.media-photo { display: block; width: calc(100% + 2 * var(--card-pad, 24px)); max-width: none; margin: calc(-1 * var(--card-pad, 24px)) calc(-1 * var(--card-pad, 24px)) 16px; aspect-ratio: 1 / 1; height: auto; object-fit: cover; }

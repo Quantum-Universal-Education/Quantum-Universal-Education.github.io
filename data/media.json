@@ -8,7 +8,8 @@
     "source": "https://www.fisica.unam.mx/vinculacion/innovacion/2025/",
     "sourceLabel": "Official UNAM event profile",
     "credit": "Instituto de Física, UNAM",
-    "usage": "Externally hosted image; retain source credit and verify reuse permission before redistributing."
+    "usage": "Externally hosted image; retain source credit and verify reuse permission before redistributing.",
+    "localImage": "photos/alberto-unam-2025.jpg"
   },
   {
     "id": "qiskit-fall-fest-cdmx-2024",
@@ -20,5 +21,15 @@
     "sourceLabel": "Event website and organizer bio",
     "credit": "Qiskit Fall Fest CDMX 2024 organizers",
     "usage": "Externally hosted image; retain source credit and verify reuse permission before redistributing."
+  },
+  {
+    "id": "unitary-fund-ambassadors-2022",
+    "title": "Unitary Fund Ambassadors 2022",
+    "date": "2022-12",
+    "role": "Ambassador",
+    "localImage": "photos/alberto-unitary-2022.jpg",
+    "source": "https://unitary.foundation/posts/2022_ambassadors/",
+    "sourceLabel": "Ambassadors announcement",
+    "credit": "Unitary Foundation"
   }
 ]
