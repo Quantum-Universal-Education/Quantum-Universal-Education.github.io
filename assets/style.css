@@ -915,3 +915,32 @@ a:hover { color: var(--accent-strong); }
   .pg-circuit-noise .pg-compact-sliders { grid-column:1/-1; }
   .pg-circuit-noise .pg-channel-caption { grid-column:1/-1; }
 }
+
+/* Qaly visuals 2026-11-18 */
+.qaly-art-cat { margin: 0; padding: 24px; background: #edf4fb; }
+.qaly-art-cat img { max-height: 400px; border-radius: 12px; }
+.qaly-episodes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.qaly-ep { display: flex; flex-direction: column; gap: 8px; padding: 12px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); color: var(--text); text-decoration: none; transition: transform .2s, border-color .2s; }
+.qaly-ep:hover, .qaly-ep:focus-visible { transform: translateY(-3px); border-color: var(--accent); }
+.qaly-ep img { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; }
+.qaly-ep .meta { color: var(--subtle); font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.qaly-ep strong { font-size: 16px; line-height: 1.35; }
+.card-thumb .thumb-link { display: block; margin: -23px -23px 4px; background: #edf4fb; border-radius: 12px 12px 0 0; overflow: hidden; }
+.card-thumb .thumb-link img { display: block; width: 100%; height: 180px; object-fit: contain; padding: 12px; }
+@media (max-width: 640px) { .qaly-episodes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+.qaly-episodes { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 960px; }
+.qaly-count { display: inline-block; margin-left: 6px; color: var(--accent); font: 12px var(--mono); }
+.qaly-inside { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 40px; align-items: center; }
+.qaly-inside h2 { margin: 8px 0 14px; }
+.qaly-inside p { color: var(--muted); }
+.qaly-frame { margin: 0; padding: 14px; border: 1px solid var(--border); border-radius: 18px; background: #edf4fb; }
+.qaly-frame img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.qaly-frame figcaption { margin-top: 10px; color: #3a4a5c; font: 12px var(--mono); }
+.qaly-steps { display: grid; gap: 6px; margin: 18px 0; padding: 0; list-style: none; counter-reset: s; font-size: 14px; color: var(--muted); }
+.qaly-steps li { counter-increment: s; }
+.qaly-steps li::before { content: "0" counter(s) " "; color: var(--accent); font: 12px var(--mono); }
+.qaly-steps b { color: var(--text); margin-right: 6px; }
+@media (max-width: 760px) { .qaly-inside { grid-template-columns: 1fr; gap: 24px; } }
+.qaly-next { justify-content: center; align-items: center; text-align: center; border-style: dashed; background: transparent; }
+.qaly-next-mark { display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 6px; border: 1px solid var(--border); border-radius: 50%; color: var(--accent); font-size: 28px; }
+@media (max-width: 640px) { .qaly-episodes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
